@@ -1,0 +1,882 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BasicSettings.Text">
+    <value xml:space="preserve">Configurações Básicas</value>
+  </data>
+  <data name="BasicSettingsHelp.Text">
+    <value xml:space="preserve">Nesta seção, você pode definir as configurações básicas para o seu portal.</value>
+  </data>
+  <data name="SiteDetails.Text">
+    <value xml:space="preserve">Detalhes do Portal</value>
+  </data>
+  <data name="plPortalName.Text">
+    <value xml:space="preserve">Título:</value>
+  </data>
+  <data name="plPortalName.Help">
+    <value xml:space="preserve">Este é o título para o seu portal. O texto que você fornecer será exibido na barra de título do navegador.</value>
+  </data>
+  <data name="plDescription.Text">
+    <value xml:space="preserve">Descrição:</value>
+  </data>
+  <data name="plDescription.Help">
+    <value xml:space="preserve">Entre aqui uma descrição sobre seu portal.</value>
+  </data>
+  <data name="plKeyWords.Text">
+    <value xml:space="preserve">Palavras-chave:</value>
+  </data>
+  <data name="plKeyWords.Help">
+    <value xml:space="preserve">Insira algumas palavras-chave para o seu portal (separadas por vírgulas). Estas palavras-chave serão utilizadas pelos mecanismos de pesquisa para ajudar a indexar o seu portal.</value>
+  </data>
+  <data name="plGUID.Text">
+    <value xml:space="preserve">GUID:</value>
+  </data>
+  <data name="plGUID.Help">
+    <value xml:space="preserve">O identificador único global que pode ser usado para identificar este portal.</value>
+  </data>
+  <data name="Submission.Text">
+    <value xml:space="preserve">Enviar portal</value>
+  </data>
+  <data name="plSearchEngine.Text">
+    <value xml:space="preserve">Mecanismo de pesquisa:</value>
+  </data>
+  <data name="plSearchEngine.Help">
+    <value xml:space="preserve">Envie seu portal para indexação pelo mecanismo de pesquisa selecionado.</value>
+  </data>
+  <data name="Submit.Text">
+    <value xml:space="preserve">Enviar</value>
+  </data>
+  <data name="plSiteMap.Text">
+    <value xml:space="preserve">Endereço do mapa do portal:</value>
+  </data>
+  <data name="plSiteMap.Help">
+    <value xml:space="preserve">Envie seu mapa do portal (SiteMap) para o Google para melhor optimização. Clique "Enviar" para pegar uma conta de Ferramentas Webmaster Google e verifique seu portal (usando a opção Verificação abaixo). Uma vez verificado, você pode selecionar a opção Add Sitemap Web General na guia de Sitemaps do Google, e colar o endereço do SiteMap mostrado.</value>
+  </data>
+  <data name="cmdSiteMap.Text">
+    <value xml:space="preserve">Enviar</value>
+  </data>
+  <data name="plVerification.Text">
+    <value xml:space="preserve">Verificação:</value>
+  </data>
+  <data name="plVerification.Help">
+    <value xml:space="preserve">Ao se inscrever nas Ferramentas Webmaster Google você precisará verificar seu portal. Escolha o método "Enviar um arquivo HTML" na tela Verificação Google. Entre o nome de arquivo mostrado (ex. google53c0cef435b2b81e.html) na caixa de texto Verificação e clique em Criar. Retorne ao Google e selecione o botão Verificar.</value>
+  </data>
+  <data name="cmdVerification.Text">
+    <value xml:space="preserve">Criar</value>
+  </data>
+  <data name="plBanners.Text">
+    <value xml:space="preserve">Publicidade:</value>
+  </data>
+  <data name="plBanners.Help">
+    <value xml:space="preserve">Indique o tipo de publicidade que você deseja mostrar no seu portal.</value>
+  </data>
+  <data name="Appearance.Text">
+    <value xml:space="preserve">Aparência</value>
+  </data>
+  <data name="plLogo.Text">
+    <value xml:space="preserve">Logo:</value>
+  </data>
+  <data name="plPortalContainer.Text">
+    <value xml:space="preserve">Moldura do portal:</value>
+  </data>
+  <data name="plPortalContainer.Help">
+    <value xml:space="preserve">A moldura selecionada será aplicada a todos os módulos do portal, a menos que seja substituída por outra a nível de página ou de módulo.</value>
+  </data>
+  <data name="plAdminContainer.Text">
+    <value xml:space="preserve">Moldura para edição:</value>
+  </data>
+  <data name="plAdminContainer.Help">
+    <value xml:space="preserve">A moldura selecionada será aplicada a todos os módulos do portal no modo de edição.</value>
+  </data>
+  <data name="plBackground.Text">
+    <value xml:space="preserve">Fundo:</value>
+  </data>
+  <data name="plFavIcon.Text">
+    <value xml:space="preserve">Ícone (favicon.ico):</value>
+  </data>
+  <data name="plFavIcon.Help">
+    <value xml:space="preserve">O ícone favorito selecionado será aplicado em todas as páginas do portal.</value>
+  </data>
+  <data name="AdvancedSettings.Text">
+    <value xml:space="preserve">Configurações Avançadas</value>
+  </data>
+  <data name="AdvancedSettingsHelp.Text">
+    <value xml:space="preserve">Nesta seção, você pode definir mais configurações avançadas para o seu portal.</value>
+  </data>
+  <data name="SecuritySettings.Text">
+    <value xml:space="preserve">Configurações de Segurança</value>
+  </data>
+  <data name="plUserRegistration.Text">
+    <value xml:space="preserve">Cadastro de usuário:</value>
+  </data>
+  <data name="plUserRegistration.Help">
+    <value xml:space="preserve">Tipo de cadastro permitido neste portal.</value>
+  </data>
+  <data name="None.Text">
+    <value xml:space="preserve">Nenhum</value>
+  </data>
+  <data name="Private.Text">
+    <value xml:space="preserve">Privado</value>
+  </data>
+  <data name="Public.Text">
+    <value xml:space="preserve">Público</value>
+  </data>
+  <data name="Verified.Text">
+    <value xml:space="preserve">Verificado</value>
+  </data>
+  <data name="Pages.Text">
+    <value xml:space="preserve">Gerenciamento de Páginas</value>
+  </data>
+  <data name="plSplashTabId.Text">
+    <value xml:space="preserve">Apresentação:</value>
+  </data>
+  <data name="plSplashTabId.Help">
+    <value xml:space="preserve">A página de apresentação para o seu portal.</value>
+  </data>
+  <data name="plHomeTabId.Text">
+    <value xml:space="preserve">Inicial:</value>
+  </data>
+  <data name="plHomeTabId.Help">
+    <value xml:space="preserve">A página inicial do seu portal.</value>
+  </data>
+  <data name="plLoginTabId.Text">
+    <value xml:space="preserve">Conexão:</value>
+  </data>
+  <data name="plUserTabId.Text">
+    <value xml:space="preserve">Perfil de usuário:</value>
+  </data>
+  <data name="plUserTabId.Help">
+    <value xml:space="preserve">A página de usuário para o seu portal.</value>
+  </data>
+  <data name="Payment.Text">
+    <value xml:space="preserve">Configurações de Pagamento</value>
+  </data>
+  <data name="plCurrency.Text">
+    <value xml:space="preserve">Moeda:</value>
+  </data>
+  <data name="plCurrency.Help">
+    <value xml:space="preserve">A moeda utilizada no portal.</value>
+  </data>
+  <data name="plProcessor.Text">
+    <value xml:space="preserve">Processador:</value>
+  </data>
+  <data name="plProcessor.Help">
+    <value xml:space="preserve">O processador de pagamentos utilizado para receber pagamentos no seu portal.</value>
+  </data>
+  <data name="ProcessorWebSite.Text">
+    <value xml:space="preserve">Ir para o portal do processador de pagamentos</value>
+  </data>
+  <data name="plUserId.Text">
+    <value xml:space="preserve">ID de usuário:</value>
+  </data>
+  <data name="plUserId.Help">
+    <value xml:space="preserve">O ID de usuário no processador de pagamentos.</value>
+  </data>
+  <data name="plPassword.Text">
+    <value xml:space="preserve">Senha:</value>
+  </data>
+  <data name="plPassword.Help">
+    <value xml:space="preserve">A senha de usuário para o  processador de pagamentos.</value>
+  </data>
+  <data name="Usability.Text">
+    <value xml:space="preserve">Configurações de Usabilidade</value>
+  </data>
+  <data name="plInlineEditor.Text">
+    <value xml:space="preserve">Ativar o editor inline?</value>
+  </data>
+  <data name="plInlineEditor.Help">
+    <value xml:space="preserve">Selecione esta opção se você deseja que a edição inline seja ativada no seu portal.</value>
+  </data>
+  <data name="plControlPanelMode.Text">
+    <value xml:space="preserve">Modo do painel de controle:</value>
+  </data>
+  <data name="plControlPanelMode.Help">
+    <value xml:space="preserve">Selecione o modo padrão do painel de controle para usuários autorizados do seu portal.</value>
+  </data>
+  <data name="ControlPanelModeView.Text">
+    <value xml:space="preserve">Visualização</value>
+  </data>
+  <data name="ControlPanelModeEdit.Text">
+    <value xml:space="preserve">Edição</value>
+  </data>
+  <data name="plControlPanelVisibility.Text">
+    <value xml:space="preserve">Visibilidade do painel de controle:</value>
+  </data>
+  <data name="plControlPanelVisibility.Help">
+    <value xml:space="preserve">Selecione a visibilidade padrão do painel de controle para usuários autorizados do seu portal.</value>
+  </data>
+  <data name="ControlPanelVisibilityMinimized.Text">
+    <value xml:space="preserve">Minimizado</value>
+  </data>
+  <data name="ControlPanelVisibilityMaximized.Text">
+    <value xml:space="preserve">Maximizado</value>
+  </data>
+  <data name="plControlPanelSecurity.Text">
+    <value xml:space="preserve">Segurança do painel de controle:</value>
+  </data>
+  <data name="plControlPanelSecurity.Help">
+    <value xml:space="preserve">Selecione se o painel de controle será exibido para editores de página ou editores de módulo.</value>
+  </data>
+  <data name="ControlPanelSecurityTab.Text">
+    <value xml:space="preserve">Editores de página</value>
+  </data>
+  <data name="ControlPanelSecurityModule.Text">
+    <value xml:space="preserve">Editores de módulo</value>
+  </data>
+  <data name="Other.Text">
+    <value xml:space="preserve">Outras Configurações</value>
+  </data>
+  <data name="plFooterText.Text">
+    <value xml:space="preserve">Direitos de cópia:</value>
+  </data>
+  <data name="Site.Text">
+    <value xml:space="preserve">Portal</value>
+  </data>
+  <data name="Host.Text">
+    <value xml:space="preserve">Servidor</value>
+  </data>
+  <data name="plAdministrator.Text">
+    <value xml:space="preserve">Administrador:</value>
+  </data>
+  <data name="plAdministrator.Help">
+    <value xml:space="preserve">O usuário administrador do portal.</value>
+  </data>
+  <data name="plDefaultLanguage.Text">
+    <value xml:space="preserve">Idioma padrão:</value>
+  </data>
+  <data name="plDefaultLanguage.Help">
+    <value xml:space="preserve">O idioma padrão para o portal.</value>
+  </data>
+  <data name="plTimeZone.Text">
+    <value xml:space="preserve">Fuso horário do portal:</value>
+  </data>
+  <data name="plTimeZone.Help">
+    <value xml:space="preserve">O fuso horário da localidade do portal.</value>
+  </data>
+  <data name="HostSettings.Text">
+    <value xml:space="preserve">Configurações do Servidor</value>
+  </data>
+  <data name="plPortalAlias.Text">
+    <value xml:space="preserve">Apelido do portal:</value>
+  </data>
+  <data name="plExpiryDate.Text">
+    <value xml:space="preserve">Data de expiração:</value>
+  </data>
+  <data name="plExpiryDate.Help">
+    <value xml:space="preserve">A data de expiração é a data na qual o contrato de hospedagem para o portal expira. </value>
+  </data>
+  <data name="plHostFee.Text">
+    <value xml:space="preserve">Tarifa de hospedagem:</value>
+  </data>
+  <data name="plHostFee.Help">
+    <value xml:space="preserve">A tarifa de hospedagem é o valor mensal para hospedar este portal.</value>
+  </data>
+  <data name="plHostSpace.Text">
+    <value xml:space="preserve">Espaço em disco:</value>
+  </data>
+  <data name="plHostSpace.Help">
+    <value xml:space="preserve">A quantidade de espaço em disco em MB permitida para este portal (entre 0 para espaço ilimitado).</value>
+  </data>
+  <data name="plSiteLogHistory.Text">
+    <value xml:space="preserve">Histórico do registros do portal (dias):</value>
+  </data>
+  <data name="plSiteLogHistory.Help">
+    <value xml:space="preserve">O número de dias de atividade do portal que é mantido em histórico.</value>
+  </data>
+  <data name="StylesheetEditor.Text">
+    <value xml:space="preserve">Editor de Folha de Estilo</value>
+  </data>
+  <data name="SaveStyleSheet.Text">
+    <value xml:space="preserve">Salvar folha de estilo</value>
+  </data>
+  <data name="RestoreDefaultStyleSheet.Text">
+    <value xml:space="preserve">Restaurar folha de estilo padrão</value>
+  </data>
+  <data name="LoginInstructions.Text">
+    <value xml:space="preserve">Instruções de conexão</value>
+  </data>
+  <data name="RegistrationInstructions.Text">
+    <value xml:space="preserve">Instruções de cadastro</value>
+  </data>
+  <data name="NewUserSignupMessage.Text">
+    <value xml:space="preserve">Mensagem de inscrição para novos usuários.</value>
+  </data>
+  <data name="DeleteMessage.Text">
+    <value xml:space="preserve">Tem certeza de que quer excluir este portal?</value>
+  </data>
+  <data name="SubmitGoogle.Text">
+    <value xml:space="preserve">Enviar portal ao Google</value>
+  </data>
+  <data name="plHomeDirectory.Text">
+    <value xml:space="preserve">Diretório inicial:</value>
+  </data>
+  <data name="plHomeDirectory.Help">
+    <value xml:space="preserve">O diretório inicial deste portal.</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Configurações do Portal</value>
+  </data>
+  <data name="ControlTitle_edit.Text">
+    <value xml:space="preserve">Editar Portais</value>
+  </data>
+  <data name="ContainerUpload.Text">
+    <value xml:space="preserve">Enviar moldura</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre Configurações do Portal&lt;/h1&gt;&lt;p&gt;O módulo de configurações do portal representa as opções locais para o seu portal. As configurações locais permitem personalizar seu portal para ir de encontro às suas necessidades de negócio.&lt;/p&gt;</value>
+  </data>
+  <data name="RestoreCCSMessage.Text">
+    <value xml:space="preserve">Você tem certeza que quer restaurar a folha de estilo padrão (todas as mudanças na folha de estilo serão perdidas)? </value>
+  </data>
+  <data name="valHostFee.Error">
+    <value xml:space="preserve">A tarifa está inválida, deve ser um valor moeda!</value>
+  </data>
+  <data name="plPageQuota.Help">
+    <value xml:space="preserve">Você pode especificar um número máximo de páginas por portal.</value>
+  </data>
+  <data name="plPageQuota.Text">
+    <value xml:space="preserve">Cota de páginas:</value>
+  </data>
+  <data name="plUserQuota.Help">
+    <value xml:space="preserve">Você pode especificar um número máximo de usuários por portal.</value>
+  </data>
+  <data name="plUserQuota.Text">
+    <value xml:space="preserve">Cota de usuários:</value>
+  </data>
+  <data name="SSLSettings.Text">
+    <value xml:space="preserve">Configurações do SSL</value>
+  </data>
+  <data name="plSSLEnabled.Text">
+    <value xml:space="preserve">SSL ativo?</value>
+  </data>
+  <data name="plSSLEnabled.Help">
+    <value xml:space="preserve">Especifique se um certificado SSL foi instalado para este portal.</value>
+  </data>
+  <data name="plSSLEnforced.Text">
+    <value xml:space="preserve">Forçar SSL?</value>
+  </data>
+  <data name="plSSLEnforced.Help">
+    <value xml:space="preserve">Quando esta opção está marcada as páginas que não estão marcadas como segura não serão acessíveis pelo SSL (HTTPS).</value>
+  </data>
+  <data name="plSSLURL.Text">
+    <value xml:space="preserve">Endereço do SSL:</value>
+  </data>
+  <data name="plSSLURL.Help">
+    <value xml:space="preserve">Opcionalmente especifique um endereço que será usado para conexões seguras neste portal. Isto é necessário apenas se você não tem um certificado SSL instalado para o endereço do seu portal. Um exemplo seria uma conta em um servidor compartilhado onde o servidor providencia a você um endereço de SSL compartilhado.</value>
+  </data>
+  <data name="plSTDURL.Text">
+    <value xml:space="preserve">Endereço padrão:</value>
+  </data>
+  <data name="plSTDURL.Help">
+    <value xml:space="preserve">Se um endereço do SSL é especificado acima você também precisará especificar um endereço padrão para conexões inseguras.</value>
+  </data>
+  <data name="lblBanners.Text">
+    <value xml:space="preserve">&lt;br&gt;Opção de publicidade como configurada pelo provedor de hospedagem, e não pode ser alterada.</value>
+  </data>
+  <data name="AddAllModules.Text">
+    <value xml:space="preserve">Adicionar todos os módulos</value>
+  </data>
+  <data name="AddModule.Text">
+    <value xml:space="preserve">Adicionar módulo</value>
+  </data>
+  <data name="ctlDesktopModules_Available.Text">
+    <value xml:space="preserve">Módulos disponíveis</value>
+  </data>
+  <data name="ctlDesktopModules_Selected.Text">
+    <value xml:space="preserve">Módulos selecionados</value>
+  </data>
+  <data name="RemoveAllModules.Text">
+    <value xml:space="preserve">Remover todos os módulos</value>
+  </data>
+  <data name="RemoveModule.Text">
+    <value xml:space="preserve">Remover módulo</value>
+  </data>
+  <data name="PortalAliases.Text">
+    <value xml:space="preserve">Apelidos do Portal</value>
+  </data>
+  <data name="valPortalName.ErrorMessage">
+    <value xml:space="preserve">Você deve fornecer um título para o seu portal!</value>
+  </data>
+  <data name="plPayPaylCancelURL.Help">
+    <value xml:space="preserve">Por padrão um assinante é redirecionado para a página inicial do portal ao cancelar um pagamento. Se você usa o recurso de assinatura, você pode criar uma página com informações para mostrar ao usuário se o pagamento for cancelado. Entre o endereço completo desta página.</value>
+  </data>
+  <data name="plPayPaylCancelURL.Text">
+    <value xml:space="preserve">Endereço de cancelamento do PayPal:</value>
+  </data>
+  <data name="plPayPaylReturnURL.Help">
+    <value xml:space="preserve">Por padrão um assinante é redirecionado para a página inicial do portal quando um pagamento é inválidado. Se você usa o recurso de assinatura, você pode redirecionar o assinante para uma página específica. Entre o endereço completo desta página</value>
+  </data>
+  <data name="plPayPaylReturnURL.Text">
+    <value xml:space="preserve">Endereço de retorno do PayPal:</value>
+  </data>
+  <data name="plPayPalSandboxEnabled.Help">
+    <value xml:space="preserve">Marque para usar a caixa de areia da PayPal no lugar do servidor real de pagamentos, para realizar testes.</value>
+  </data>
+  <data name="plPayPalSandboxEnabled.Text">
+    <value xml:space="preserve">Usar caixa de areia?</value>
+  </data>
+  <data name="plHideSystemFolders.Help">
+    <value xml:space="preserve">Marque para previnir a adição de pastas ocultas ou pastas que começam com sublinhado ao efetuar a sincronização de pastas.</value>
+  </data>
+  <data name="plHideSystemFolders.Text">
+    <value xml:space="preserve">Esconder pastas do sistema?</value>
+  </data>
+  <data name="plRegisterTabId.Help">
+    <value xml:space="preserve">A página de cadastro de usuários no seu portal.</value>
+  </data>
+  <data name="plRegisterTabId.Text">
+    <value xml:space="preserve">Cadastro:</value>
+  </data>
+  <data name="EnglishName.Text">
+    <value xml:space="preserve">Nome inglês</value>
+  </data>
+  <data name="NativeName.Text">
+    <value xml:space="preserve">Nome nativo</value>
+  </data>
+  <data name="plLanguageSelector.Help">
+    <value xml:space="preserve">Selecione o idioma que você deseja atualizar as configurações. Você pode escolher se o idioma na lista será exibido em inglês ou na língua nativa.</value>
+  </data>
+  <data name="plLanguageSelector.Text">
+    <value xml:space="preserve">Selecione o idioma:</value>
+  </data>
+  <data name="plSearchTabId.Help">
+    <value xml:space="preserve">A página com os resultados das pesquisas no seu portal.</value>
+  </data>
+  <data name="plSearchTabId.Text">
+    <value xml:space="preserve">Resultados de pesquisa:</value>
+  </data>
+  <data name="portalAliasModeButtonListLabel.Text">
+    <value xml:space="preserve">Modo de mapeamento do apelido do portal:</value>
+  </data>
+  <data name="Canonical.Text">
+    <value xml:space="preserve">Canônico</value>
+  </data>
+  <data name="Redirect.Text">
+    <value xml:space="preserve">Redirecionamento</value>
+  </data>
+  <data name="plAutoAddPortalAlias.Text">
+    <value xml:space="preserve">Auto adicionar apelido do portal?</value>
+  </data>
+  <data name="defaultAliasDropDownLabel.Help">
+    <value xml:space="preserve">O apelido padrão é usado em conjunto com o modo de mapeamento. Se o modo está configurado para canônico então o apelido padrão é usado como o apelido canônico para os motores de busca. Se o modo é de redirecionamento então o apelido padrão é usado como o redirecionamento permanente.</value>
+  </data>
+  <data name="defaultAliasDropDownLabel.Text">
+    <value xml:space="preserve">Apelido padrão:</value>
+  </data>
+  <data name="enablePopUpsLabel.Help">
+    <value xml:space="preserve">Marque esta caixa para ativar a nova interface de usuário em janelas modais.</value>
+  </data>
+  <data name="enablePopUpsLabel.Text">
+    <value xml:space="preserve">Ativar janelas?</value>
+  </data>
+  <data name="Marketing.Text">
+    <value xml:space="preserve">Divulgar Portal</value>
+  </data>
+  <data name="ExpandAll.Text">
+    <value xml:space="preserve">Expandir tudo</value>
+  </data>
+  <data name="valExpiryDate.ErrorMessage">
+    <value xml:space="preserve">Data de expiração inválida!</value>
+  </data>
+  <data name="ClientResourceManagement.Text">
+    <value xml:space="preserve">Gerenciamento de Recursos do Navegador</value>
+  </data>
+  <data name="plEnableCompositeFiles.Help">
+    <value xml:space="preserve">Arquivos compostos são combinações de recursos (CSS e JavaScript) criados para reduzir o número de requerimentos de arquivos pelo navegador. Isto aumentará significativamente a velocidade de carregamento da página.</value>
+  </data>
+  <data name="plEnableCompositeFiles.Text">
+    <value xml:space="preserve">Ativar arquivos compostos?</value>
+  </data>
+  <data name="plCrmVersion.Help">
+    <value xml:space="preserve">Este é o número da versão dos recursos do navegador no seu portal. Quando este número de versão muda, cada usuário será forçado a baixar novas versões dos arquivos. É recomendado que a versão seja aumentada apenas quando necessário.</value>
+  </data>
+  <data name="plCrmVersion.Text">
+    <value xml:space="preserve">Versão do portal:</value>
+  </data>
+  <data name="MessagingSettings.Text">
+    <value xml:space="preserve">Configurações de Mensagens</value>
+  </data>
+  <data name="plMsgThrottlingInterval.Text">
+    <value xml:space="preserve">Intervalo entre mensagens, em minutos:</value>
+  </data>
+  <data name="plMsgThrottlingInterval.Help">
+    <value xml:space="preserve">Quantidade de minutos após um usuário poder enviar a próxima mensagem. Zero indica sem restrições. Não se aplica a administradores de portal ou servidor.</value>
+  </data>
+  <data name="plMsgRecipientLimit.Text">
+    <value xml:space="preserve">Limite de destinatários:</value>
+  </data>
+  <data name="plMsgRecipientLimit.Help">
+    <value xml:space="preserve">Número máximo de destinatários permitidos no campo Para. Mensagem para um regra é considerada como um destinatário único.</value>
+  </data>
+  <data name="plMsgProfanityFilters.Text">
+    <value xml:space="preserve">Ativar filtros de profanidades?</value>
+  </data>
+  <data name="plMsgProfanityFilters.Help">
+    <value xml:space="preserve">Ativar esta configuração automaticamente converte palavras profanas (inapropriadas) em algo equivalente. A lista é gerenciada em Servidor &gt; Listas &gt; Filtros de profanidade ou Portal &gt; Listas &gt; Filtros de profanidade.</value>
+  </data>
+  <data name="MsgProfanityFiltersYes.Text">
+    <value xml:space="preserve">Sim</value>
+  </data>
+  <data name="MsgProfanityFiltersNo.Text">
+    <value xml:space="preserve">Não</value>
+  </data>
+  <data name="plMsgAllowAttachments.Text">
+    <value xml:space="preserve">Permitir anexos?</value>
+  </data>
+  <data name="plMsgAllowAttachments.Help">
+    <value xml:space="preserve">Selecione se anexos são permitidos ou não.</value>
+  </data>
+  <data name="MsgAllowAttachmentsYes.Text">
+    <value xml:space="preserve">Sim</value>
+  </data>
+  <data name="MsgAllowAttachmentsNo.Text">
+    <value xml:space="preserve">Não</value>
+  </data>
+  <data name="plMsgSendEmail.Text">
+    <value xml:space="preserve">Enviar emails?</value>
+  </data>
+  <data name="plMsgSendEmail.Help">
+    <value xml:space="preserve">Selecione se os emails são enviados para destinatários a cada mensagem e notificação.</value>
+  </data>
+  <data name="plOverrideDefaultSettings.Help">
+    <value xml:space="preserve">Quando esta opção está ativa este portal usará suas próprias configurações de recursos de navegador no lugar das configurações a nível de servidor. Marque esta caixa para exibir as configurações que estão disponíveis para configurar seu portal.</value>
+  </data>
+  <data name="plOverrideDefaultSettings.Text">
+    <value xml:space="preserve">Sobreescrever configurações do servidor?</value>
+  </data>
+  <data name="IncrementCrmVersionButton.Text">
+    <value xml:space="preserve">Aumentar versão do portal</value>
+  </data>
+  <data name="IncrementCrmVersionConfirm.Text">
+    <value xml:space="preserve">&lt;p&gt;Esta ação forçará a todos os visitantes do portal a baixarem novas versões dos arquivos CSS e JavaScript. Você só deveria fazer isto se tiver certeza de que os arquivos foram alterados e você quer que estas mudanças se reflitam nos navegadores dos visitantes.&lt;/p&gt;&lt;p&gt;Você tem certeza de que quer aumentar o número da versão do seu portal?&lt;/p&gt;</value>
+  </data>
+  <data name="IncrementCrmVersionError.Text">
+    <value xml:space="preserve">Ocorreu um erro ao aumentar a versão dos recursos do navegador!</value>
+  </data>
+  <data name="plMinifyCss.Help">
+    <value xml:space="preserve">A minificação de CSS reduzirá o tamanho do código CSS usando expressões regulares para remover comentários, espaços em branco e 'CSS morto'. Isto só estará disponível quando os arquivos compostos estiverem ativados.</value>
+  </data>
+  <data name="plMinifyCss.Text">
+    <value xml:space="preserve">Minificar CSS?</value>
+  </data>
+  <data name="plMinifyJs.Help">
+    <value xml:space="preserve">A minificação de JS reduzirá o tamanho do código JavaScript ao usar JSMin. Isto só estará disponível quando os arquivos compostos estiverem ativados.</value>
+  </data>
+  <data name="plMinifyJs.Text">
+    <value xml:space="preserve">Minificar JS?</value>
+  </data>
+  <data name="DebugEnabled.Text">
+    <value xml:space="preserve">O modo de depuração está atualmente ativo a nível de aplicação (isto é especificado no arquivo 'web.config'). Isto significa que os arquivos não serão combinados, mesmo se a combinação de arquivos esteja ativada aqui ou a nível de servidor.</value>
+  </data>
+  <data name="DebugEnabled.Title">
+    <value xml:space="preserve">Nota importante sobre modo de depuração de aplicação</value>
+  </data>
+  <data name="MinificationSettingsInfo.Text">
+    <value xml:space="preserve">Se as configurações de minificação são alteradas quando os arquivos compostos estão ativos, você deve primeiro salvar as configurações de minificação clicando em 'Atualizar' e depois aumentar o número de versão. Isto emitirá novos arquivos compostos usando a nova configuração de minificação.</value>
+  </data>
+  <data name="MinificationSettingsInfo.Title">
+    <value xml:space="preserve">Nota importante sobre configurações de minificação</value>
+  </data>
+  <data name="Login.Text">
+    <value xml:space="preserve">Configurações de Conexão</value>
+  </data>
+  <data name="Profile.Text">
+    <value xml:space="preserve">Configurações de Perfil</value>
+  </data>
+  <data name="Registration.Text">
+    <value xml:space="preserve">Configurações de Cadastro</value>
+  </data>
+  <data name="UserAccountSettings.Text">
+    <value xml:space="preserve">Configurações de Conta de Usuário</value>
+  </data>
+  <data name="registrationFormTypeLabel.Help">
+    <value xml:space="preserve">Selecione o tipo de formulário de cadastro que você quer usar.</value>
+  </data>
+  <data name="registrationFormTypeLabel.Text">
+    <value xml:space="preserve">Tipo de formulário de cadastro:</value>
+  </data>
+  <data name="Registration_ExcludeTerms.Help">
+    <value xml:space="preserve">Você pode definir uma lista de termos delimitada por vírgula que um usuário não pode usar em seu nome de usuário ou nome de exibição.</value>
+  </data>
+  <data name="Registration_ExcludeTerms.Text">
+    <value xml:space="preserve">Termos excluídos:</value>
+  </data>
+  <data name="registrationFieldsLabel.Help">
+    <value xml:space="preserve">Você pode especificar a lista de campos que você deseja incluir como uma lista delimitada por vírgula. Se esta configuração for usada ela terá precedência sobre outras configurações. Os possíveis campos incluem nome de usuário (Username), email, senha (Password), confirmação de senha (ConfirmPassword), nome de exibição (DisplayName) e todas as propriedades de perfil.</value>
+  </data>
+  <data name="registrationFieldsLabel.Text">
+    <value xml:space="preserve">Campos de cadastro:</value>
+  </data>
+  <data name="Registration_RequireUniqueDisplayName.Help">
+    <value xml:space="preserve">Opcionalmente você pode obrigar seus usuários a usar nomes de exibição únicos. Se um usuário escolher um nome que já exista isto sugerirá um nome modificado.</value>
+  </data>
+  <data name="Registration_RequireUniqueDisplayName.Text">
+    <value xml:space="preserve">Obrigar nome de exibição único?</value>
+  </data>
+  <data name="Registration_UseAuthProviders.Help">
+    <value xml:space="preserve">Selecione esta opção para usar provedores de autenticação durante o cadastro. Nota: nem todos os provedores suportam esta opção.</value>
+  </data>
+  <data name="Registration_UseAuthProviders.Text">
+    <value xml:space="preserve">Usar provedores de autenticação?</value>
+  </data>
+  <data name="Registration_UseEmailAsUserName.Help">
+    <value xml:space="preserve">Marque esta opção para usar o endereço de email como um nome de usuário. Se esta opção estiver ativa o campo de entrada de nome de usuário não é exibido no formulário de cadastro.</value>
+  </data>
+  <data name="Registration_UseEmailAsUserName.Text">
+    <value xml:space="preserve">Usar endereço de email como nome de usuário?</value>
+  </data>
+  <data name="Registration_UseProfanityFilter.Help">
+    <value xml:space="preserve">Selecionar esta opção forçará o filtro de profanidade no nome de usuário e nome de exibição durante o cadastro.</value>
+  </data>
+  <data name="Registration_UseProfanityFilter.Text">
+    <value xml:space="preserve">Usar filtro de profanidade?</value>
+  </data>
+  <data name="RequiresUniqueEmail.Help">
+    <value xml:space="preserve">Se isto estiver marcado então cada usuário será obrigado a fornecer um endereço de email único. Isto significa que um usuário não pode se registrar várias vezes com o mesmo endereço de email.</value>
+  </data>
+  <data name="RequiresUniqueEmail.Text">
+    <value xml:space="preserve">Exigir email único?</value>
+  </data>
+  <data name="Security_DisplayNameFormat.Help">
+    <value xml:space="preserve">Você pode opcionalmente especificar um formato para o nome de exibição dos usuários. O formato pode incluir elementos para substituição dinâmica como [FIRSTNAME] [LASTNAME]. Se um formato de nome de exibição é especificado, o nome de exibição não será mais editável através da interface do usuário.</value>
+  </data>
+  <data name="Security_DisplayNameFormat.Text">
+    <value xml:space="preserve">Formato do nome de exibição:</value>
+  </data>
+  <data name="Security_EmailValidation.Help">
+    <value xml:space="preserve">Você pode modificar a expressão de validação de email, a qual é usada para checar a validade do endereço de email fornecido.</value>
+  </data>
+  <data name="Security_EmailValidation.Text">
+    <value xml:space="preserve">Validação do endereço de email:</value>
+  </data>
+  <data name="Security_UserNameValidation.Help">
+    <value xml:space="preserve">Adicione sua própria expressão de validação,  qual é usada para checar a validade do nome de usuário fornecido. Se você alterar este valor do padrão você deverá atualizar a mensagem que um usuário verá quando entrar um nome de usuário inválido usando o editor de idioma. (SharedResources.resx - Username.RegExError)</value>
+  </data>
+  <data name="Security_UserNameValidation.Text">
+    <value xml:space="preserve">Validação de nome de usuário:</value>
+  </data>
+  <data name="Custom.Text">
+    <value xml:space="preserve">Personalizado</value>
+  </data>
+  <data name="Standard.Text">
+    <value xml:space="preserve">Padrão</value>
+  </data>
+  <data name="MaxInvalidPasswordAttempts.Help">
+    <value xml:space="preserve">O número máximo de tentativas de conexão falhas dentro de uma janela de tempo especificada.</value>
+  </data>
+  <data name="MaxInvalidPasswordAttempts.Text">
+    <value xml:space="preserve">Número máximo de tentativas inválidas:</value>
+  </data>
+  <data name="MinNonAlphanumericCharacters.Help">
+    <value xml:space="preserve">A quantidade mínima obrigatória de caracteres não-alfanuméricos em uma senha.</value>
+  </data>
+  <data name="MinNonAlphanumericCharacters.Text">
+    <value xml:space="preserve">Quantidade mínima de caracteres especiais:</value>
+  </data>
+  <data name="MinPasswordLength.Help">
+    <value xml:space="preserve">A quantidade mínima obrigatória de caracteres em uma senha.</value>
+  </data>
+  <data name="MinPasswordLength.Text">
+    <value xml:space="preserve">Tamanho mínimo da senha:</value>
+  </data>
+  <data name="PasswordAttemptWindow.Help">
+    <value xml:space="preserve">A janela de tempo (em minutos) para a quantidade máxima de tentativas de conexão.</value>
+  </data>
+  <data name="PasswordAttemptWindow.Text">
+    <value xml:space="preserve">Janela de tentativas inválidas (em minutos):</value>
+  </data>
+  <data name="PasswordFormat.Help">
+    <value xml:space="preserve">O formato da senha.</value>
+  </data>
+  <data name="PasswordFormat.Text">
+    <value xml:space="preserve">Formato da senha:</value>
+  </data>
+  <data name="PasswordResetEnabled.Help">
+    <value xml:space="preserve">O administrador pode reiniciar a senha do usuário?</value>
+  </data>
+  <data name="PasswordResetEnabled.Text">
+    <value xml:space="preserve">Ativar reinício de senha?</value>
+  </data>
+  <data name="PasswordRetrievalEnabled.Help">
+    <value xml:space="preserve">O usuário pode recuperar sua senha?</value>
+  </data>
+  <data name="PasswordRetrievalEnabled.Text">
+    <value xml:space="preserve">Ativada recuperação de senha?</value>
+  </data>
+  <data name="PasswordStrengthRegularExpression.Help">
+    <value xml:space="preserve">Uma expressão regular usada para validar a senha.</value>
+  </data>
+  <data name="PasswordStrengthRegularExpression.Text">
+    <value xml:space="preserve">Expressão regular da senha:</value>
+  </data>
+  <data name="Registration_RandomPassword.Help">
+    <value xml:space="preserve">Marque esta caixa para gerar senhas aleatórias durante o cadastro, ao invés de exibir um campo para entrada da senha.</value>
+  </data>
+  <data name="Registration_RandomPassword.Text">
+    <value xml:space="preserve">Usar senha aleatória?</value>
+  </data>
+  <data name="Registration_RequireConfirmPassword.Help">
+    <value xml:space="preserve">Marque esta caixa para obrigar o formulário de cadastro a exibir uma caixa de confirmação de senha.</value>
+  </data>
+  <data name="Registration_RequireConfirmPassword.Text">
+    <value xml:space="preserve">Obrigar confirmação de senha?</value>
+  </data>
+  <data name="RequiresQuestionAndAnswer.Help">
+    <value xml:space="preserve">O usuário obrigatoriamente tem que fornecer uma pergunta e resposta para modificar ou recuperar uma senha? </value>
+  </data>
+  <data name="RequiresQuestionAndAnswer.Text">
+    <value xml:space="preserve">Exigir pergunta e resposta?</value>
+  </data>
+  <data name="Redirect_AfterRegistration.Help">
+    <value xml:space="preserve">Você pode selecionar uma página para redirecionar o usuário após um cadastro com sucesso.</value>
+  </data>
+  <data name="Redirect_AfterRegistration.Text">
+    <value xml:space="preserve">Redirecionar após cadastro:</value>
+  </data>
+  <data name="Security_CaptchaRegister.Help">
+    <value xml:space="preserve">Indica se este portal deve usar CAPTCHA para cadastro.</value>
+  </data>
+  <data name="Security_CaptchaRegister.Text">
+    <value xml:space="preserve">Usar CAPTCHA para cadastro?</value>
+  </data>
+  <data name="Security_RequireValidProfile.Help">
+    <value xml:space="preserve">Você pode opcionalmente exigir que um novo usuário entre um perfil válido durante o cadastro.</value>
+  </data>
+  <data name="Security_RequireValidProfile.Text">
+    <value xml:space="preserve">Exigir um perfil válido no cadastro?</value>
+  </data>
+  <data name="Profile_DefaultVisibility.Help">
+    <value xml:space="preserve">Selecione o modo padrão de visibilidade de perfil para o perfil do usuário.</value>
+  </data>
+  <data name="Profile_DefaultVisibility.Text">
+    <value xml:space="preserve">Modo padrão de visibilidade de perfil:</value>
+  </data>
+  <data name="Profile_DisplayVisibility.Help">
+    <value xml:space="preserve">Marque para exibir o controle de visibilidade de perfil no perfil de usuário.</value>
+  </data>
+  <data name="Profile_DisplayVisibility.Text">
+    <value xml:space="preserve">Exibir visibilidade de perfil?</value>
+  </data>
+  <data name="Redirect_AfterLogin.Help">
+    <value xml:space="preserve">Você pode selecionar uma página para redirecionar o usuário depois de uma conexão com sucesso.</value>
+  </data>
+  <data name="Redirect_AfterLogin.Text">
+    <value xml:space="preserve">Redirecionar após conexão:</value>
+  </data>
+  <data name="Redirect_AfterLogout.Help">
+    <value xml:space="preserve">Você pode selecionar uma página para redirecionar o usuário depois de desconectado.</value>
+  </data>
+  <data name="Redirect_AfterLogout.Text">
+    <value xml:space="preserve">Redirecionar após desconexão:</value>
+  </data>
+  <data name="Security_CaptchaLogin.Help">
+    <value xml:space="preserve">Indica se este portal deve usar CAPTCHA para conexões associadas, ex: OpenID, LiveID, CardSpace...</value>
+  </data>
+  <data name="Security_CaptchaLogin.Text">
+    <value xml:space="preserve">Usar CAPTCHA para conexões associadas?</value>
+  </data>
+  <data name="Security_CaptchaRetrivePassword.Help">
+    <value xml:space="preserve">Selecione para adicionar um controle CAPTCHA para recuperar senha.</value>
+  </data>
+  <data name="Security_CaptchaRetrivePassword.Text">
+    <value xml:space="preserve">Usar CAPTCHA para recuperar senha?</value>
+  </data>
+  <data name="Security_RequireValidProfileAtLogin.Help">
+    <value xml:space="preserve">Você pode opcionalmente exigir que um usuário atualize seu perfil antes de se conectar, se o perfil não estiver válido.</value>
+  </data>
+  <data name="Security_RequireValidProfileAtLogin.Text">
+    <value xml:space="preserve">Exigir um perfil válido na conexão?</value>
+  </data>
+  <data name="InvalidRegularExpression.Text">
+    <value xml:space="preserve">A expressão regular  - {1} - fornecida para {0} é inválida!</value>
+  </data>
+  <data name="InvalidFields.Text">
+    <value xml:space="preserve">Campo(s) - {0} - inválido(s) na lista de campos de cadastro. Isto é porque o campo é um tipo de imagem ou você digitou o nome do campo incorretamente.</value>
+  </data>
+  <data name="NoEmail.Text">
+    <value xml:space="preserve">Você deve, no mínimo, incluir o campo 'email'.</value>
+  </data>
+  <data name="NoDisplayName.Text">
+    <value xml:space="preserve">Você selecionou a opção de obrigação de nome de exibição único, mas não incluiu o nome de exibição na lista de campos.</value>
+  </data>
+  <data name="MaxInvalidPasswordAttemptsTitle.Help">
+    <value xml:space="preserve">Especifica o número máximo de vezes que a senha errada pode ser fornecida antes que a conta seja bloqueada. Pode ser alterada apenas no arquivo 'web.config'.</value>
+  </data>
+  <data name="MaxInvalidPasswordAttemptsTitle.Text">
+    <value xml:space="preserve">Máximo de tentativas de senha errada:</value>
+  </data>
+  <data name="MinNonAlphanumericCharactersTitle.Help">
+    <value xml:space="preserve">Especifica a quantidade mínima obrigatória de caracteres não-alfanuméricos em uma senha. Pode ser alterado apenas no arquivo 'web.config'.</value>
+  </data>
+  <data name="MinNonAlphanumericCharactersTitle.Text">
+    <value xml:space="preserve">Quantidade mínima de caracteres especiais:</value>
+  </data>
+  <data name="MinPasswordLengthTitle.Help">
+    <value xml:space="preserve">Especifica a quantidade mínima obrigatória de caracteres em uma senha. Pode ser alterado apenas no arquivo 'web.config'.</value>
+  </data>
+  <data name="MinPasswordLengthTitle.Text">
+    <value xml:space="preserve">Tamanho mínimo da senha:</value>
+  </data>
+  <data name="PasswordAttemptWindowTitle.Help">
+    <value xml:space="preserve">Especifica a quantidade de tempo que uma conta é bloqueada depois de falhar as tentativas de conexão. Pode ser alterado apenas no arquivo 'web.config'.</value>
+  </data>
+  <data name="PasswordAttemptWindowTitle.Text">
+    <value xml:space="preserve">Janela de tentativa de senha:</value>
+  </data>
+  <data name="PasswordFormatTitle.Help">
+    <value xml:space="preserve">A senha será limpa, hasheada ou criptografada. Pode ser alterado apenas no arquivo 'web.config'.</value>
+  </data>
+  <data name="PasswordFormatTitle.Text">
+    <value xml:space="preserve">Formato da senha:</value>
+  </data>
+  <data name="PasswordResetEnabledTitle.Help">
+    <value xml:space="preserve">Especifica se um usuário pode ou não pedir o reinício de sua senha. Pode ser alterada apenas no arquivo 'web.config'.</value>
+  </data>
+  <data name="PasswordResetEnabledTitle.Text">
+    <value xml:space="preserve">Ativado reinício de senha?</value>
+  </data>
+  <data name="PasswordRetrievalEnabledTitle.Help">
+    <value xml:space="preserve">Especifica se o usuário pode ou não pedir que sua senha seja enviada para seu email. Pode ser alterada apenas no arquivo 'web.config'.</value>
+  </data>
+  <data name="PasswordRetrievalEnabledTitle.Text">
+    <value xml:space="preserve">Ativada recuperação de senha?</value>
+  </data>
+  <data name="PasswordStrengthRegularExpressionTitle.Text">
+    <value xml:space="preserve">Expressão regular da força da senha:</value>
+  </data>
+  <data name="RequiresQuestionAndAnswerTitle.Help">
+    <value xml:space="preserve">Especifica se uma pergunta e resposta são usadas como parte do processo de cadastro. Pode ser alterada apenas no arquivo 'web.config'.</value>
+  </data>
+  <data name="RequiresQuestionAndAnswerTitle.Text">
+    <value xml:space="preserve">Exigir pergunta e resposta?</value>
+  </data>
+  <data name="MsgSendEmailsNo.Text">
+    <value xml:space="preserve">Não</value>
+  </data>
+  <data name="MsgSendEmailYes.Text">
+    <value xml:space="preserve">Sim</value>
+  </data>
+  <data name="plHideLoginControl.Help">
+    <value xml:space="preserve">Marque esta caixa para esconder o atalho de conexão na página.</value>
+  </data>
+  <data name="plHideLoginControl.Text">
+    <value xml:space="preserve">Esconder controle de conexão?</value>
+  </data>
+  <data name="plEnableRegisterNotification.Help">
+    <value xml:space="preserve">Se ativado o administrador do portal receberá uma notificação por email durante o cadastro de um novo usuário.</value>
+  </data>
+  <data name="plEnableRegisterNotification.Text">
+    <value xml:space="preserve">Receber notificação de cadastro de usuário?</value>
+  </data>
+</root>

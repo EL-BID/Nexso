@@ -1,0 +1,19 @@
+.eds_socialEventsWidget.eds_style_dark .eds_signUpActionBarWrapper {
+  background: url("images/double-dotted-line.png") repeat-x left bottom;
+}
+.eds_socialEventsWidget.eds_style_dark .eds_signUpActionBarWrapper > .eds_title {
+  border-bottom: 1px solid white;
+  color: white;
+}
+.eds_socialEventsWidget.eds_style_dark .eds_eventUsersWrapper {
+  background-color: #001722;
+}
+.eds_socialEventsWidget.eds_style_dark .eds_eventUsersWrapper > .eds_title {
+  color: white;
+}
+.eds_socialEventsWidget.eds_style_dark .eds_eventUsers + .eds_eventUsers {
+  border-top: solid 1px white;
+}
+.eds_socialEventsWidget.eds_style_dark .eds_eventUsers > .eds_title {
+  color: white;
+}

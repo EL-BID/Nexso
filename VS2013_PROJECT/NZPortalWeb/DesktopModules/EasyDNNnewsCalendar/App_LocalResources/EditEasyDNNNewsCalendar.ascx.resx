@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCancelResource1.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="btnSaveCloseResource1.Text" xml:space="preserve">
+    <value>Save &amp; Close</value>
+  </data>
+  <data name="btnSaveSettingsResource1.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="cbAutoAddCatChildsResource1.Text" xml:space="preserve">
+    <value>Auto select all child categories.</value>
+  </data>
+  <data name="cbdisplayallcatsResource1.Text" xml:space="preserve">
+    <value>Display all categories and subcategories</value>
+  </data>
+  <data name="cbModulesResource1.Text" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="cbPageResource1.Text" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="ControlTitle_edit.Text" xml:space="preserve">
+    <value>Edit EasyDNNNewsCalendar</value>
+  </data>
+  <data name="cvThemeSelectResource1.ErrorMessage" xml:space="preserve">
+    <value> Please select theme</value>
+  </data>
+  <data name="lblArchiveMonthlyModuleErrorResource1.Text" xml:space="preserve">
+    <value>Please select.</value>
+  </data>
+  <data name="lblContent.Help" xml:space="preserve">
+    <value>Enter the Content</value>
+  </data>
+  <data name="lblContent.Text" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="lblModuleErrorResource1.Text" xml:space="preserve">
+    <value>Please select.</value>
+  </data>
+  <data name="lblPageErrorResource1.Text" xml:space="preserve">
+    <value>Please select.</value>
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Portal</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="ListItemResource6.Text" xml:space="preserve">
+    <value>Select theme</value>
+  </data>
+  <data name="ListItemResource7.Text" xml:space="preserve">
+    <value>Select display stlye</value>
+  </data>
+  <data name="ModuleHelp.Text" xml:space="preserve">
+    <value>&lt;P&gt;A EasyDNNNewsCalendar module</value>
+  </data>
+  <data name="tvCatAndSubCatResource1.CollapseImageToolTip" xml:space="preserve">
+    <value>Collapse {0}</value>
+  </data>
+  <data name="tvCatAndSubCatResource1.ExpandImageToolTip" xml:space="preserve">
+    <value>Expand {0}</value>
+  </data>
+  <data name="tvCatAndSubCatResource1.SkipLinkText" xml:space="preserve">
+    <value>Skip Navigation Links.</value>
+  </data>
+  <data name="valContent.ErrorMessage" xml:space="preserve">
+    <value>&lt;br&gt;Content is required</value>
+  </data>
+  <data name="lblDisplayHeader.HelpText" xml:space="preserve">
+    <value>Display header:</value>
+  </data>
+  <data name="lblDisplayHeader.Text" xml:space="preserve">
+    <value>Display header:</value>
+  </data>
+  <data name="lblFilterAuthors.HelpText" xml:space="preserve">
+    <value>Display articles from all authors in the portal.</value>
+  </data>
+  <data name="lblFilterAuthors.Text" xml:space="preserve">
+    <value>Display articles from all authors in the portal:</value>
+  </data>
+  <data name="lblModuleTheme.HelpText" xml:space="preserve">
+    <value>Select theme.</value>
+  </data>
+  <data name="lblModuleTheme.Text" xml:space="preserve">
+    <value>Module theme:</value>
+  </data>
+  <data name="lblPermissionSource.HelpText" xml:space="preserve">
+    <value>Category menu will inherit permission from selected source. Articles from allow categories will be shown in module.</value>
+  </data>
+  <data name="lblPermissionSource.Text" xml:space="preserve">
+    <value>Select permission source:</value>
+  </data>
+  <data name="lblSelectAuthors.HelpText" xml:space="preserve">
+    <value>Select authors to include in search:</value>
+  </data>
+  <data name="lblSelectAuthors.Text" xml:space="preserve">
+    <value>Select authors to include in search:</value>
+  </data>
+  <data name="lblSelectCategories.HelpText" xml:space="preserve">
+    <value>Show all categories or make category selection in the tree view selection list.</value>
+  </data>
+  <data name="lblSelectCategories.Text" xml:space="preserve">
+    <value>Select categories to display articles from:</value>
+  </data>
+  <data name="lblSelectDisplayStyle.HelpText" xml:space="preserve">
+    <value>Select display style.</value>
+  </data>
+  <data name="lblSelectDisplayStyle.Text" xml:space="preserve">
+    <value>Module display style:</value>
+  </data>
+  <data name="lblSelectModule.HelpText" xml:space="preserve">
+    <value>Select news module instance to open articles.</value>
+  </data>
+  <data name="lblSelectModule.Text" xml:space="preserve">
+    <value>Open articles in news module instance:</value>
+  </data>
+  <data name="lblShowCalendar.HelpText" xml:space="preserve">
+    <value>Displays calendar with marked article publish dates or event start dates.</value>
+  </data>
+  <data name="lblShowCalendar.Text" xml:space="preserve">
+    <value>Display calendar:</value>
+  </data>
+  <data name="lblShowMonthArchiveModule.HelpText" xml:space="preserve">
+    <value>Open monthly archive articles in news module instance.</value>
+  </data>
+  <data name="lblShowMonthArchiveModule.Text" xml:space="preserve">
+    <value>Open monthly archive articles in news module instance:</value>
+  </data>
+  <data name="lblShowMonthlyArchive.HelpText" xml:space="preserve">
+    <value>Displays articles archive.</value>
+  </data>
+  <data name="lblShowMonthlyArchive.Text" xml:space="preserve">
+    <value>Display archive:</value>
+  </data>
+  <data name="Calendarsettings.Text" xml:space="preserve">
+    <value>Calendar settings</value>
+  </data>
+  <data name="SelectArchive.Text" xml:space="preserve">
+    <value>Please select calendar archive , monthly archive or events archive</value>
+  </data>
+  <data name="lblNumberOfEvents.HelpText" xml:space="preserve">
+    <value>Number of upcoming events.</value>
+  </data>
+  <data name="lblNumberOfEvents.Text" xml:space="preserve">
+    <value>Number of upcoming events:</value>
+  </data>
+  <data name="lblShowEventArchive.HelpText" xml:space="preserve">
+    <value>Displays upcoming events.</value>
+  </data>
+  <data name="lblShowEventArchive.Text" xml:space="preserve">
+    <value>Display upcoming events:</value>
+  </data>
+  <data name="rfvNumberOfEventsResource1.ErrorMessage" xml:space="preserve">
+    <value>This filed is required.</value>
+  </data>
+  <data name="lblEventArticleOpen.HelpText" xml:space="preserve">
+    <value>Open event articles in news module instance. </value>
+  </data>
+  <data name="lblEventArticleOpen.Text" xml:space="preserve">
+    <value>Open event articles in news module instance:</value>
+  </data>
+  <data name="cbShowArticlesCalendarArchiveResource1.Text" xml:space="preserve">
+    <value>Articles</value>
+  </data>
+  <data name="cbShowEventsCalendarArchiveResource1.Text" xml:space="preserve">
+    <value>Events (Start to end date)</value>
+  </data>
+  <data name="lblLimitBackwordsEvents.HelpText" xml:space="preserve">
+    <value>Set the criteria to display events whose start date has ended. The option 'Show all' will display all events, disregarding the fact that they have already ended. We can enter the number of days to be set in the past for past events in the field 'Limit to number of days in the past'. If the set value is 0, the criterion for the event's listing will be the current date. In that case, neither of the past events will be displayed.</value>
+  </data>
+  <data name="lblLimitBackwordsEvents.Text" xml:space="preserve">
+    <value>Displaying of past events:</value>
+  </data>
+  <data name="liLimitNumber.Text" xml:space="preserve">
+    <value>Limit to a number of days</value>
+  </data>
+  <data name="liShowAll.Text" xml:space="preserve">
+    <value>Show all</value>
+  </data>
+  <data name="lblPortalSharing.HelpText" xml:space="preserve">
+    <value>Select data source portal.</value>
+  </data>
+  <data name="lblPortalSharing.Text" xml:space="preserve">
+    <value>Select portal:</value>
+  </data>
+  <data name="NoNewsInstance.Text" xml:space="preserve">
+    <value>No News Instance, please add news module instance. &lt;br /&gt;</value>
+  </data>
+  <data name="NoNewsInstancePortal.Text" xml:space="preserve">
+    <value>No news instance with selected portal sharing. Please edit news module instance settings and set portal sharing. &lt;br /&gt;</value>
+  </data>
+  <data name="NoSharingPortalInstance.Text" xml:space="preserve">
+    <value>No news instance with selected portal sharing. Please edit news module instance settings and set portal sharing. &lt;br /&gt;</value>
+  </data>
+  <data name="NoSharingPortalInstance2.Text" xml:space="preserve">
+    <value>No News Instance, please add news module instance. &lt;br /&gt;</value>
+  </data>
+  <data name="cvAuthorsTreeview.ErrorMessage" xml:space="preserve">
+    <value>Please select at least one author.</value>
+  </data>
+  <data name="cvCategoriesTreeview.ErrorMessage" xml:space="preserve">
+    <value>Please select at least one category.</value>
+  </data>
+  <data name="lblDisplayUpcomingEventsExportIcon.HelpText" xml:space="preserve">
+    <value>Display iCalendar export link.</value>
+  </data>
+  <data name="lblDisplayUpcomingEventsExportIcon.Text" xml:space="preserve">
+    <value>Display iCalendar export link:</value>
+  </data>
+  <data name="lblDisplayUpcomingEventsRSSIcon.HelpText" xml:space="preserve">
+    <value>Display link to RSS feed.</value>
+  </data>
+  <data name="lblDisplayUpcomingEventsRSSIcon.Text" xml:space="preserve">
+    <value>Display RSS link:</value>
+  </data>
+  <data name="lblCalendarEventsExportIcon.HelpText" xml:space="preserve">
+    <value>Display iCalendar export link.</value>
+  </data>
+  <data name="lblCalendarEventsExportIcon.Text" xml:space="preserve">
+    <value>Display iCalendar export link:</value>
+  </data>
+  <data name="lblDisplayUpcomingEventsRSSlinks.HelpText" xml:space="preserve">
+    <value>Select links to display.</value>
+  </data>
+  <data name="lblDisplayUpcomingEventsRSSlinks.Text" xml:space="preserve">
+    <value>Display link:</value>
+  </data>
+  <data name="lblSelectArticleEvents.HelpText" xml:space="preserve">
+    <value>This option allows for displaying articles only, or events only, or both.</value>
+  </data>
+  <data name="lblSelectArticleEvents.Text" xml:space="preserve">
+    <value>Display articles and events:</value>
+  </data>
+  <data name="lblShowListLink.HelpText" xml:space="preserve">
+    <value>Display link to the news instance to list articles.</value>
+  </data>
+  <data name="lblShowListLink.Text" xml:space="preserve">
+    <value>Display aricle list link:</value>
+  </data>
+  <data name="lblShowNewsRSSLink.HelpText" xml:space="preserve">
+    <value>Select links to display.</value>
+  </data>
+  <data name="lblShowNewsRSSLink.Text" xml:space="preserve">
+    <value>Display link:</value>
+  </data>
+  <data name="cbShowEventsBypublishDate.Text" xml:space="preserve">
+    <value>Events (Publish date)</value>
+  </data>
+  <data name="cbCalendarEventsExportIcon.Text" xml:space="preserve">
+    <value>iCalendar export</value>
+  </data>
+  <data name="cbShowEventRSSLink.Text" xml:space="preserve">
+    <value>Events RSS</value>
+  </data>
+  <data name="cbShowListLink.Text" xml:space="preserve">
+    <value>Articles/events list</value>
+  </data>
+  <data name="cbShowNewsRSSLink.Text" xml:space="preserve">
+    <value>News RSS</value>
+  </data>
+  <data name="cbShowUpcomingEventsExportIcon.Text" xml:space="preserve">
+    <value>iCalendar export</value>
+  </data>
+  <data name="cbShowUpcomingRSSIcon.Text" xml:space="preserve">
+    <value>Events RSS</value>
+  </data>
+  <data name="Filter.Text" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="lblCalendarTooltipSummaryLenght.HelpText" xml:space="preserve">
+    <value>Limit lenght of summary in tooltip to specified num of characters (0 - show all).</value>
+  </data>
+  <data name="lblCalendarTooltipSummaryLenght.Text" xml:space="preserve">
+    <value>Limit lenght of tooltip article/event summary:</value>
+  </data>
+  <data name="lblCellHeight.HelpText" xml:space="preserve">
+    <value>Minimal height of calendar content cell.</value>
+  </data>
+  <data name="lblCellHeight.Text" xml:space="preserve">
+    <value>Minimal calendar cell height (px):</value>
+  </data>
+  <data name="lblFirstDayOfTheWeek.HelpText" xml:space="preserve">
+    <value>Select the first day of the week to show in calendar.</value>
+  </data>
+  <data name="lblFirstDayOfTheWeek.Text" xml:space="preserve">
+    <value>Select the first day of the week:</value>
+  </data>
+  <data name="lblHideUnlocalizedItems.HelpText" xml:space="preserve">
+    <value>Articles that do not have content for selected language won't be shown. For example on the sites with three different languages: English (default), German and Italian. Article is localized to Italian language. When selecting German language article won’t be visible because there is no localization. Article will only be shown on Italian and English language which is default. 
+Hint: You can also turn off displaying languages on the default language. For articles that you do not want to show on the default language you need to go to Edit article &gt; Content localization and Turn on option “Do not show articles on the default language”.</value>
+  </data>
+  <data name="lblHideUnlocalizedItems.Text" xml:space="preserve">
+    <value>Do not show articles if they do not have content for selected language:</value>
+  </data>
+  <data name="lblIsTooltipEnabled.HelpText" xml:space="preserve">
+    <value>On calendar cell mouse hover short details are displayed in tooltip.</value>
+  </data>
+  <data name="lblIsTooltipEnabled.Text" xml:space="preserve">
+    <value>Enable tooltip:</value>
+  </data>
+  <data name="lblNumOfItemsInCell.HelpText" xml:space="preserve">
+    <value>Limit number of items to display in cell. 0 is for all.</value>
+  </data>
+  <data name="lblNumOfItemsInCell.Text" xml:space="preserve">
+    <value>Limit cell items per day:</value>
+  </data>
+  <data name="lblSelectCalendarType.HelpText" xml:space="preserve">
+    <value>Select type of calendar to display.</value>
+  </data>
+  <data name="lblSelectCalendarType.Text" xml:space="preserve">
+    <value>Calendar type:</value>
+  </data>
+  <data name="lblTitleLenght.HelpText" xml:space="preserve">
+    <value>Limit lenght of title in cell to specified num of characters (0 - show all).</value>
+  </data>
+  <data name="lblTitleLenght.Text" xml:space="preserve">
+    <value>Limit lenght of article/event title:</value>
+  </data>
+  <data name="lblUpcomingEventsToolTip.HelpText" xml:space="preserve">
+    <value>Items are shown in tooltip.</value>
+  </data>
+  <data name="lblUpcomingEventsToolTip.Text" xml:space="preserve">
+    <value>Enable tooltip:</value>
+  </data>
+  <data name="lblUpcomingEventsTTSummaryLenght.HelpText" xml:space="preserve">
+    <value>Limit lenght of summary in tooltip to specified num of characters (0 - show all).</value>
+  </data>
+  <data name="lblUpcomingEventsTTSummaryLenght.Text" xml:space="preserve">
+    <value>Limit lenght of tooltip article/event summary:</value>
+  </data>
+  <data name="liFriday.Text" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="liMonday.Text" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="liSaturday.Text" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="liSunday.Text" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="liThursday.Text" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="liTuesday.Text" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="liWednesday.Text" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="LocalizationText.Text" xml:space="preserve">
+    <value>Localization:</value>
+  </data>
+  <data name="Modulespecificoptions.Text" xml:space="preserve">
+    <value>Module specific options:</value>
+  </data>
+  <data name="Permissions.Text" xml:space="preserve">
+    <value>Permissions:</value>
+  </data>
+  <data name="Portalsharing.Text" xml:space="preserve">
+    <value>Portal sharing:</value>
+  </data>
+  <data name="Theme.Text" xml:space="preserve">
+    <value>Theme:</value>
+  </data>
+  <data name="lblIsSocialInstance.HelpText" xml:space="preserve">
+    <value>Displays user's and group's articles on the Activity feed. The articles are filtered by the UserID or GroupID querystring. If this option is enabled and the querystring
+				UserID or GroupID is missing, then the articles won't show up.</value>
+  </data>
+  <data name="lblIsSocialInstance.Text" xml:space="preserve">
+    <value>Community mode:</value>
+  </data>
+  <data name="lblArchiveExpandMode.HelpText" xml:space="preserve">
+    <value>Select expand mode.</value>
+  </data>
+  <data name="lblArchiveExpandMode.Text" xml:space="preserve">
+    <value>Expand mode:</value>
+  </data>
+  <data name="lblArchiveTemplate.HelpText" xml:space="preserve">
+    <value>Select template.</value>
+  </data>
+  <data name="lblArchiveTemplate.Text" xml:space="preserve">
+    <value>Template:</value>
+  </data>
+  <data name="lblArchiveType.HelpText" xml:space="preserve">
+    <value>Select type of view.</value>
+  </data>
+  <data name="lblArchiveType.Text" xml:space="preserve">
+    <value>Type of view:</value>
+  </data>
+  <data name="liArchiveByMonth.Text" xml:space="preserve">
+    <value>By month</value>
+  </data>
+  <data name="liArchiveByYear.Text" xml:space="preserve">
+    <value>By year</value>
+  </data>
+  <data name="liArchiveCollapsAll.Text" xml:space="preserve">
+    <value>Collapse all</value>
+  </data>
+  <data name="liArchiveExpandAll.Text" xml:space="preserve">
+    <value>Expand all</value>
+  </data>
+  <data name="liArchiveExpandCurrentYear.Text" xml:space="preserve">
+    <value>Expand current year</value>
+  </data>
+  <data name="liAdvanced.Text" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="liSimple.Text" xml:space="preserve">
+    <value>Simple</value>
+  </data>
+  <data name="lblArchiveFilterBy.HelpText" xml:space="preserve">
+    <value>This option allows for displaying articles only, or events only, or both.</value>
+  </data>
+  <data name="lblArchiveFilterBy.Text" xml:space="preserve">
+    <value>Display articles and events:</value>
+  </data>
+  <data name="Visibility.Text" xml:space="preserve">
+    <value>Visibility</value>
+  </data>
+  <data name="lblShowCalendarPortalTimeZone.HelpText" xml:space="preserve">
+    <value>Display Portal Time Zone.</value>
+  </data>
+  <data name="lblShowCalendarPortalTimeZone.Text" xml:space="preserve">
+    <value>Display Portal Time Zone:</value>
+  </data>
+  <data name="lblShowUpcomingEventsPortalTimeZone.HelpText" xml:space="preserve">
+    <value>Display Portal Time Zone.</value>
+  </data>
+  <data name="lblShowUpcomingEventsPortalTimeZone.Text" xml:space="preserve">
+    <value>Display Portal Time Zone:</value>
+  </data>
+  <data name="CalendarUserIDInLink.HelpText" xml:space="preserve">
+    <value>If this option is switched on, the userID parameter will be forwarded in the article's link. This option is used within a DNN user profile to display the user's articles.</value>
+  </data>
+  <data name="CalendarUserIDInLink.Text" xml:space="preserve">
+    <value>Pass userID querystring in article link:</value>
+  </data>
+  <data name="UpcomingEventsUserIDInLink.HelpText" xml:space="preserve">
+    <value>If this option is switched on, the userID parameter will be forwarded in the article's link. This option is used within a DNN user profile to display the user's articles.</value>
+  </data>
+  <data name="UpcomingEventsUserIDInLink.Text" xml:space="preserve">
+    <value>Pass userID querystring in article link:</value>
+  </data>
+</root>

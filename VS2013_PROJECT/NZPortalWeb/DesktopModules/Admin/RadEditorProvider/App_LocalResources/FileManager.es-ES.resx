@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ErrorCodes.AddFolder_NoPermission">
+    <value xml:space="preserve">El usuario no tiene permisos para añadir en la carpeta</value>
+  </data>
+  <data name="ErrorCodes.AddFolder_NotInsecureFolder">
+    <value xml:space="preserve">El usuario no puede añadir un archivo o carpeta en una carpeta marcada como base de datos o segura</value>
+  </data>
+  <data name="ErrorCodes.CannotCopyFolder_ChildrenVisible">
+    <value xml:space="preserve">El usuario no tiene permisos para copiar la carpeta porque no todos los archivos están visibles en el diálogo.</value>
+  </data>
+  <data name="ErrorCodes.CannotDeleteFolder_ChildrenVisible">
+    <value xml:space="preserve">El usuario no tiene permisos para eliminar la carpeta porque no todos los archivos están visibles en el diálogo.</value>
+  </data>
+  <data name="ErrorCodes.CannotMoveFolder_ChildrenVisible">
+    <value xml:space="preserve">El usuario no tiene permisos para mover la carpeta porque no todos los archivos están visibles en el diálogo.</value>
+  </data>
+  <data name="ErrorCodes.CopyFolder_NoPermission">
+    <value xml:space="preserve">El usuario no tiene permisos para copiar en la carpeta</value>
+  </data>
+  <data name="ErrorCodes.CopyFolder_NotInsecureFolder">
+    <value xml:space="preserve">El usuario no puede copiar una carpeta o archivo en una carpeta marcada como base de datos o segura</value>
+  </data>
+  <data name="ErrorCodes.DeleteFolder_NoPermission">
+    <value xml:space="preserve">El usuario no tiene permisos para eliminar la carpeta o archivo</value>
+  </data>
+  <data name="ErrorCodes.DeleteFolder_NotInsecureFolder">
+    <value xml:space="preserve">El usuario no puede eliminar una carpeta o archivo desde una carpeta marcada como base de datos o segura</value>
+  </data>
+  <data name="ErrorCodes.DeleteFolder_Protected">
+    <value xml:space="preserve">El usuario no tiene permisos para eliminar la carpeta porque está marcada como protegida</value>
+  </data>
+  <data name="ErrorCodes.DeleteFolder_Root">
+    <value xml:space="preserve">No puede eliminar la carpeta raíz</value>
+  </data>
+  <data name="ErrorCodes.DirectoryAlreadyExists">
+    <value xml:space="preserve">La carpeta ya existe. Actualice la lista de carpetas.</value>
+  </data>
+  <data name="ErrorCodes.FileDoesNotExist">
+    <value xml:space="preserve">El archivo no existe. Actualice la lista de carpetas.</value>
+  </data>
+  <data name="ErrorCodes.FolderDoesNotExist">
+    <value xml:space="preserve">La carpeta no existe. Actualice la lista de carpetas.</value>
+  </data>
+  <data name="ErrorCodes.General_PermissionDenied">
+    <value xml:space="preserve">No tiene suficientes permisos para completar la acción. Póngase en contacto con el administrador del sistema para más información.</value>
+  </data>
+  <data name="ErrorCodes.InvalidCharactersInPath">
+    <value xml:space="preserve">Hay caracteres incorrectos en la ruta.</value>
+  </data>
+  <data name="ErrorCodes.NewFileAlreadyExists">
+    <value xml:space="preserve">El archivo ya existe. Actualice la lista de carpetas.</value>
+  </data>
+  <data name="ErrorCodes.RenameFolder_Root">
+    <value xml:space="preserve">No puede renombrar la carpeta raíz</value>
+  </data>
+  <data name="FolderDoesNotExist.Text">
+    <value xml:space="preserve">La carpeta no existe. Actualice la lista de carpetas.</value>
+  </data>
+  <data name="MyFolder.Text">
+    <value xml:space="preserve">Mi carpeta</value>
+  </data>
+  <data name="Root.Text">
+    <value xml:space="preserve">Raíz</value>
+  </data>
+  <data name="SystemError.Text">
+    <value xml:space="preserve">Incapaz de completar la operación. Ocurrió un error desconocido.</value>
+  </data>
+</root>

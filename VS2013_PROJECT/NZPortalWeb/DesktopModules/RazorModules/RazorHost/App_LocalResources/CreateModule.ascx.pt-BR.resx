@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ControlTitle_createmodule.Text">
+    <value xml:space="preserve">Criar Módulo</value>
+  </data>
+  <data name="SourceFile.Text">
+    <value xml:space="preserve">Código fonte do programa: {0}</value>
+  </data>
+  <data name="plSource.Text">
+    <value xml:space="preserve">Código fonte do programa:</value>
+  </data>
+  <data name="scriptsLabel.Help">
+    <value xml:space="preserve">Selecione o programa que você quer usar desta lista.</value>
+  </data>
+  <data name="scriptsLabel.Text">
+    <value xml:space="preserve">Selecione o programa:</value>
+  </data>
+  <data name="plAddPage.Help">
+    <value xml:space="preserve">Marque esta caixa para criar uma página de teste para seu novo módulo.</value>
+  </data>
+  <data name="plAddPage.Text">
+    <value xml:space="preserve">Adicionar uma página de teste?</value>
+  </data>
+  <data name="plDescription.Help">
+    <value xml:space="preserve">Você pode informar uma descrição para seu módulo.</value>
+  </data>
+  <data name="plDescription.Text">
+    <value xml:space="preserve">Descrição:</value>
+  </data>
+  <data name="plFolder.Help">
+    <value xml:space="preserve">Entre o nome da pasta para o seu novo módulo. Esta pasta será filha de "DesktopModules/RazorModules".</value>
+  </data>
+  <data name="plFolder.Text">
+    <value xml:space="preserve">Pasta:</value>
+  </data>
+  <data name="plName.Help">
+    <value xml:space="preserve">Entre um nome amigável para seu módulo.</value>
+  </data>
+  <data name="plName.Text">
+    <value xml:space="preserve">Nome do módulo:</value>
+  </data>
+  <data name="cmdCreate.Text">
+    <value xml:space="preserve">Criar módulo</value>
+  </data>
+  <data name="SourceControl.Text">
+    <value xml:space="preserve">Controle do módulo: {0}</value>
+  </data>
+  <data name="valFolder.Text">
+    <value xml:space="preserve">A pasta é obrigatória!&lt;br/&gt;</value>
+  </data>
+  <data name="valName.Text">
+    <value xml:space="preserve">O nome é obrigatório!&lt;br/&gt;</value>
+  </data>
+  <data name="FolderExists.Text">
+    <value xml:space="preserve">A pasta que você selecionou já existe. Por favor selecione outro nome.</value>
+  </data>
+  <data name="ManifestCreationError.Text">
+    <value xml:space="preserve">Ocorreu um erro inesperado ao criar o manifesto, por favor veja os registros de eventos para mais informações.</value>
+  </data>
+  <data name="ModuleControlCreationError.Text">
+    <value xml:space="preserve">Ocorreu um erro inesperado ao criar o controle do módulo, por favor veja os registros de eventos para mais informações.</value>
+  </data>
+  <data name="ModuleControlText.Text">
+    <value xml:space="preserve">&lt;%@ Control AutoEventWireup="false" Inherits="DotNetNuke.Web.Razor.RazorModuleBase" %&gt;</value>
+  </data>
+  <data name="ScriptCopyError.Text">
+    <value xml:space="preserve">Ocorreu um erro inesperado ao copiar o programa para a pasta destino, por favor veja os registros de eventos para mais informações.</value>
+  </data>
+  <data name="ImportControl.ErrorMessage">
+    <value xml:space="preserve">Ocorreu um erro ao importar o controle do módulo, por favor veja os registros de eventos para maiores detalhes.</value>
+  </data>
+  <data name="TabExists.Text">
+    <value xml:space="preserve">O nome de página já existe, o módulo será criado mas a página de testes não será gerada.</value>
+  </data>
+</root>

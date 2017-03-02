@@ -1,0 +1,45 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsSocialSecurity]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsSocialSecurity]', N'{objectQualifier}EasyDNNNewsSocialSecurity', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsSocialSecurity', N'PK_{objectQualifier}EasyDNNNewsSocialSecurity', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsSocialSecurity_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsSocialSecurity_EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNews]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNews]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNews]', N'{objectQualifier}EasyDNNNews', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNews', N'PK_{objectQualifier}EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+	INSERT INTO {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity]
+	SELECT n.ArticleID, 'E' FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as n WHERE n.ArticleID NOT IN (SELECT DISTINCT ArticleID FROM {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity])
+END TRY
+BEGIN CATCH
+END CATCH

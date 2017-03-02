@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="btnSaveClose.Text" xml:space="preserve">
+    <value>Save &amp; Close</value>
+  </data>
+  <data name="btnSaveSettings.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="cbAutoAddCatChilds.Text" xml:space="preserve">
+    <value>Auto select all child categories.</value>
+  </data>
+  <data name="cbdisplayallcats.Text" xml:space="preserve">
+    <value>Display all categories and subcategories</value>
+  </data>
+  <data name="Filter.Text" xml:space="preserve">
+    <value>Filter section:</value>
+  </data>
+  <data name="FilterMenuSpecificOptions.Text" xml:space="preserve">
+    <value>Filter menu specific options</value>
+  </data>
+  <data name="lblAuthorFilter.Help" xml:space="preserve">
+    <value>Filter by author.</value>
+  </data>
+  <data name="lblAuthorFilter.Text" xml:space="preserve">
+    <value>All Authors:</value>
+  </data>
+  <data name="lblExpandAllAuthors2.Help" xml:space="preserve">
+    <value>All author groups are expanded.</value>
+  </data>
+  <data name="lblExpandAllAuthors2.Text" xml:space="preserve">
+    <value>Expand all author groups:</value>
+  </data>
+  <data name="lblExpandAllCategories2.Help" xml:space="preserve">
+    <value>All categories are expanded.</value>
+  </data>
+  <data name="lblExpandAllCategories2.Text" xml:space="preserve">
+    <value>Expand all categories:</value>
+  </data>
+  <data name="lblOrderBySection2.Help" xml:space="preserve">
+    <value>Display order by section only if template contains walid token.</value>
+  </data>
+  <data name="lblOrderBySection2.Text" xml:space="preserve">
+    <value>Display order by section:</value>
+  </data>
+  <data name="lblPortalSharing.Help" xml:space="preserve">
+    <value>Select data source portal.</value>
+  </data>
+  <data name="lblPortalSharing.Text" xml:space="preserve">
+    <value>Select portal:</value>
+  </data>
+  <data name="lblPostBackType2.Help" xml:space="preserve">
+    <value>Choose type of filter menu post back.</value>
+  </data>
+  <data name="lblPostBackType2.Text" xml:space="preserve">
+    <value>Refresh article list:</value>
+  </data>
+  <data name="lblSelectCats.Help" xml:space="preserve">
+    <value>Show all categories or make category selection in the tree view selection list.</value>
+  </data>
+  <data name="lblSelectCats.Text" xml:space="preserve">
+    <value>Select categories to display:</value>
+  </data>
+  <data name="lblSelectModule.Help" xml:space="preserve">
+    <value>Select news module instance to open articles.</value>
+  </data>
+  <data name="lblSelectModule.Text" xml:space="preserve">
+    <value>Select module to display results:</value>
+  </data>
+  <data name="lblShowAuthorFilter2.Help" xml:space="preserve">
+    <value>Show author filter.</value>
+  </data>
+  <data name="lblShowAuthorFilter2.Text" xml:space="preserve">
+    <value>Show author filter:</value>
+  </data>
+  <data name="lblShowAuthorsArticleCount2.Help" xml:space="preserve">
+    <value>Show articles count by author.</value>
+  </data>
+  <data name="lblShowAuthorsArticleCount2.Text" xml:space="preserve">
+    <value>Show articles count by author:</value>
+  </data>
+  <data name="lblShowCategoryArticleCount2.Help" xml:space="preserve">
+    <value>Show articles count by category.</value>
+  </data>
+  <data name="lblShowCategoryArticleCount2.Text" xml:space="preserve">
+    <value>Show articles count by category:</value>
+  </data>
+  <data name="lblShowCategoryFilter2.Help" xml:space="preserve">
+    <value>Show category filter.</value>
+  </data>
+  <data name="lblShowCategoryFilter2.Text" xml:space="preserve">
+    <value>Show category filter:</value>
+  </data>
+  <data name="lblTheme.Help" xml:space="preserve">
+    <value>Select theme</value>
+  </data>
+  <data name="lblTheme.Text" xml:space="preserve">
+    <value>Theme:</value>
+  </data>
+  <data name="lblThemeHTMLTemplate.Help" xml:space="preserve">
+    <value>Select HTML template.</value>
+  </data>
+  <data name="lblThemeHTMLTemplate.Text" xml:space="preserve">
+    <value>HTML template:</value>
+  </data>
+  <data name="lblThemeStyle2.Help" xml:space="preserve">
+    <value>Theme style.</value>
+  </data>
+  <data name="lblThemeStyle2.Text" xml:space="preserve">
+    <value>Theme style:</value>
+  </data>
+  <data name="liButtonClick.Text" xml:space="preserve">
+    <value>Manually by clicking the filter button</value>
+  </data>
+  <data name="liCurrentportal.Text" xml:space="preserve">
+    <value>Current portal</value>
+  </data>
+  <data name="liPerSelection.Text" xml:space="preserve">
+    <value>Automatically as filters change</value>
+  </data>
+  <data name="OrderBy.Text" xml:space="preserve">
+    <value>Order by:</value>
+  </data>
+  <data name="Settingsfailedtosave.Text" xml:space="preserve">
+    <value>Settings failed to save.</value>
+  </data>
+  <data name="Settingssaved.Text" xml:space="preserve">
+    <value>Settings saved.</value>
+  </data>
+  <data name="SettingsTitle.Text" xml:space="preserve">
+    <value>Filter menu settings</value>
+  </data>
+  <data name="PortalSharing.Text" xml:space="preserve">
+    <value>Portal sharing</value>
+  </data>
+  <data name="lblFilterBy.HelpText" xml:space="preserve">
+    <value>This option allows for displaying articles only, or events only, or both.</value>
+  </data>
+  <data name="lblFilterBy.Text" xml:space="preserve">
+    <value>Display articles and events:</value>
+  </data>
+  <data name="lblShowOnlyEventsLimit.HelpText" xml:space="preserve">
+    <value>Set the criteria to display events whose start date has ended. The option 'Show all' will display all events, disregarding the fact that they have already ended. We can enter the number of days to be set in the past for past events in the field 'Limit to number of days in the past'. If the set value is 0, the criterion for the event's listing will be the current date. In that case, neither of the past events will be displayed.</value>
+  </data>
+  <data name="lblShowOnlyEventsLimit.Text" xml:space="preserve">
+    <value>Displaying of past events:</value>
+  </data>
+  <data name="lblUseAndOperatorByCategory2.HelpText" xml:space="preserve">
+    <value>Content must be in all selected categories if AND operator is used.</value>
+  </data>
+  <data name="lblUseAndOperatorByCategory2.Text" xml:space="preserve">
+    <value>Use AND operator when filtering:</value>
+  </data>
+</root>

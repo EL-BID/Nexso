@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Actions.Header">
+    <value xml:space="preserve">Acciones</value>
+  </data>
+  <data name="CannotDeleteIPInUse.Text">
+    <value xml:space="preserve">No puede eliminar esta regla puesto que causaría el bloqueo de la IP actual.</value>
+  </data>
+  <data name="CannotDeleteLocalhost.Text">
+    <value xml:space="preserve">No se puede crear una regla de bloqueo para localhost (127.0.0.1)</value>
+  </data>
+  <data name="cmdCancel.Text">
+    <value xml:space="preserve">Cancelar edición</value>
+  </data>
+  <data name="cmdSave.Text">
+    <value xml:space="preserve">Guardar</value>
+  </data>
+  <data name="Delete.Text">
+    <value xml:space="preserve">Borrar filtro</value>
+  </data>
+  <data name="Edit.Text">
+    <value xml:space="preserve">Editar filtro</value>
+  </data>
+  <data name="IPAllow.Text">
+    <value xml:space="preserve">Permitir</value>
+  </data>
+  <data name="IPDeny.Text">
+    <value xml:space="preserve">Bloquear</value>
+  </data>
+  <data name="IPFilter.Header">
+    <value xml:space="preserve">Filtro IP</value>
+  </data>
+  <data name="IPRange.Text">
+    <value xml:space="preserve">Rango IP</value>
+  </data>
+  <data name="IPSingle.Text">
+    <value xml:space="preserve">IP única</value>
+  </data>
+  <data name="IPValidation.ErrorMessage">
+    <value xml:space="preserve">Introduzca un valor válido de IP/máscara</value>
+  </data>
+  <data name="plFirstIP.Help">
+    <value xml:space="preserve">Este valor puede ser un valor único de filtro de IP o una máscara de red para calcular un rango de IPs.</value>
+  </data>
+  <data name="plFirstIP.Text">
+    <value xml:space="preserve">Primera IP</value>
+  </data>
+  <data name="plRuleSpecifity.Help">
+    <value xml:space="preserve">Indica si la regla se aplica a una única IP o a un rango de direcciones IP.</value>
+  </data>
+  <data name="plRuleSpecifity.Text">
+    <value xml:space="preserve">Ámbito de la regla</value>
+  </data>
+  <data name="plRuleType.Help">
+    <value xml:space="preserve">Indica si la regla permite o bloquea el acceso</value>
+  </data>
+  <data name="plRuleType.Text">
+    <value xml:space="preserve">Tipo de regla</value>
+  </data>
+  <data name="plSubnet.Help">
+    <value xml:space="preserve">La máscara de red se combinará con la primera IP para calcular el rango de IPs a filtrar.</value>
+  </data>
+  <data name="plSubnet.Text">
+    <value xml:space="preserve">Máscara</value>
+  </data>
+  <data name="saveRule.Text">
+    <value xml:space="preserve">Actualizar filtro</value>
+  </data>
+  <data name="valFirstIP.ErrorMessage">
+    <value xml:space="preserve">Tiene que entrar la IP inicial.</value>
+  </data>
+</root>

@@ -1,0 +1,228 @@
+﻿/*** Remove tags that are not assigned to any article ***/
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsNewTags]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsNewTags]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsNewTags]', N'{objectQualifier}EasyDNNNewsNewTags', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsItemTags', N'PK_{objectQualifier}EasyDNNNewsItemTags', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsItemTags', N'IX_{objectQualifier}EasyDNNNewsItemTags', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsNewTags_DateCreated', N'DF_{objectQualifier}EasyDNNNewsNewTags_DateCreated', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsTagsItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsTagsItems]', N'{objectQualifier}EasyDNNNewsTagsItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsTagsItems', N'PK_{objectQualifier}EasyDNNNewsTagsItems', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsTagsItems_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsTagsItems_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsTagsItems_EasyDNNNewsNewTags', N'FK_{objectQualifier}EasyDNNNewsTagsItems_EasyDNNNewsNewTags', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsTagsItems_DateAdded', N'DF_{objectQualifier}EasyDNNNewsTagsItems_DateAdded', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+;WITH NotExistingAtricleTags (TagID) AS(
+	SELECT DISTINCT nt.[TagID]
+	FROM {databaseOwner}[{objectQualifier}EasyDNNNewsNewTags] AS nt LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] AS ti ON nt.TagID = ti.TagID
+	WHERE ti.TagID IS NULL
+ )
+ DELETE nt FROM {databaseOwner}[{objectQualifier}EasyDNNNewsNewTags] AS nt INNER JOIN NotExistingAtricleTags AS neat ON nt.TagID = neat.TagID
+ GO
+
+
+/*** Alter template and theme column lenght on portal and module settings tables ***/
+/*** Alter template column on chameleon settings ***/
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsModuleSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsModuleSettings]', N'{objectQualifier}EasyDNNNewsModuleSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsModuleSettings', N'PK_{objectQualifier}EasyDNNNewsModuleSettings', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsModuleSettings', N'IX_{objectQualifier}EasyDNNNewsModuleSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsModuleSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsModuleSettings_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleDetailsTemplate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN ArticleDetailsTemplate nvarchar(150)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleListTemplate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN ArticleListTemplate nvarchar(150)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TemplatesFolder')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN TemplatesFolder nvarchar(150)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleListTheme')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN ArticleListTheme nvarchar(250)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TemplatesFolderDetails')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN TemplatesFolderDetails nvarchar(150)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleDetailsTheme')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN ArticleDetailsTheme nvarchar(250)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleCommentsTemplate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN ArticleCommentsTemplate nvarchar(250)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleDetailsDisplayStyle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN ArticleDetailsDisplayStyle nvarchar(150)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'CommentsTheme')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN CommentsTheme nvarchar(250)
+END
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsPortalSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsPortalSettings]', N'{objectQualifier}EasyDNNNewsPortalSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsPortalSettings', N'PK_{objectQualifier}EasyDNNNewsPortalSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsPortalSettings_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleDetailsTemplate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN ArticleDetailsTemplate nvarchar(150)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleListTemplate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN ArticleListTemplate nvarchar(150)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'TemplatesFolder')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN TemplatesFolder nvarchar(150)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleListTheme')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN ArticleListTheme nvarchar(250)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'TemplatesFolderDetails')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN TemplatesFolderDetails nvarchar(150)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleDetailsTheme')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN ArticleDetailsTheme nvarchar(250)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleCommentsTemplate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN ArticleCommentsTemplate nvarchar(250)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleDetailsDisplayStyle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN ArticleDetailsDisplayStyle nvarchar(150)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'CommentsTheme')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN CommentsTheme nvarchar(250)
+END
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsChameleonNestedSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsChameleonNestedSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsChameleonNestedSettings]', N'{objectQualifier}EasyDNNNewsChameleonNestedSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsChameleonNestedSettings', N'PK_{objectQualifier}EasyDNNNewsChameleonNestedSettings', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsChameleonNestedSettings', N'IX_{objectQualifier}EasyDNNNewsChameleonNestedSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsChameleonNestedSettings_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsChameleonNestedSettings_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsChameleonNestedSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsChameleonNestedSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsChameleonNestedSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsChameleonNestedSettings_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsChameleonSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsChameleonSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsChameleonSettings]', N'{objectQualifier}EasyDNNNewsChameleonSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsChameleonSettings', N'PK_{objectQualifier}EasyDNNNewsChameleonSettings', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsChameleonSettings', N'IX_{objectQualifier}EasyDNNNewsChameleonSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsChameleonSettings_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsChameleonSettings_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsChameleonSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsChameleonSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsChameleonSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsChameleonSettings_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsChameleonNestedSettings' and column_name = 'Template')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsChameleonNestedSettings] ALTER COLUMN Template nvarchar(150)
+END
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsChameleonSettings' and column_name = 'Template')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsChameleonSettings] ALTER COLUMN Template nvarchar(150)
+END

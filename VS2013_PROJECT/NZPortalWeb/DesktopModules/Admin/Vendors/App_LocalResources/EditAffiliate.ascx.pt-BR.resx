@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plStartDate.Text">
+    <value xml:space="preserve">Data inicial</value>
+  </data>
+  <data name="plStartDate.Help">
+    <value xml:space="preserve">Utilize as datas inicial e final para controlar a taxa de agendamento para o contrato.</value>
+  </data>
+  <data name="plEndDate.Text">
+    <value xml:space="preserve">Data final</value>
+  </data>
+  <data name="plCPC.Text">
+    <value xml:space="preserve">Custo por clique (CPC)</value>
+  </data>
+  <data name="plCPC.Help">
+    <value xml:space="preserve">Custo por clique (CPC) é a comissão paga ao anunciante quando um visitante é referenciado para o seu portal.</value>
+  </data>
+  <data name="CPC.ErrorMessage">
+    <value xml:space="preserve">Você deve entrar um CPC válido</value>
+  </data>
+  <data name="plCPA.Text">
+    <value xml:space="preserve">Custo por aquisicão (CPA)</value>
+  </data>
+  <data name="plCPA.Help">
+    <value xml:space="preserve">Custo por aquisição (CPA) é a comissão paga ao anunciante quando um visitante se torna membro do portal.</value>
+  </data>
+  <data name="CPA.ErrorMessage">
+    <value xml:space="preserve">Você deve entrar um CPA válido</value>
+  </data>
+  <data name="cmdSend.Text">
+    <value xml:space="preserve">Enviar notificação</value>
+  </data>
+  <data name="ControlTitle_affiliate.Text">
+    <value xml:space="preserve">Editar Anunciante</value>
+  </data>
+  <data name="NotificationSuccess.Text">
+    <value xml:space="preserve">Notificação enviada</value>
+  </data>
+  <data name="NotificationFailure.Text">
+    <value xml:space="preserve">Notificação não enviada: {0}</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre Anunciantes&lt;/h1&gt;&lt;p&gt;Administradores podem gerenciar os anunciantes e publicidades associadas ao portal. Este módulo permite cadastrar um novo anunciante, modificar ou apagar um anunciante existente.&lt;/p&gt;</value>
+  </data>
+</root>

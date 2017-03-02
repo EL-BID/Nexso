@@ -1,0 +1,48 @@
+﻿/* ==========================================================================
+   Helpers - extends + custom vars
+   ========================================================================== */
+
+.visually-hidden {
+  border: 0 none;
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Extends - re-usabe CSS */
+
+.title-xl {
+  color: $header-font-color;
+  font-size: rem-calc(48);
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+.title-l {
+  color: $header-font-color;
+  font-size: rem-calc(32);
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+.title-m {
+  color: $header-font-color;
+  font-size: rem-calc(24);
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  margin-top: 0.25rem;
+}
+.title-s {
+  color: $header-font-color;
+  font-size: rem-calc(18);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  margin-top: 0.25rem;
+}

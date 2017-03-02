@@ -1,0 +1,44 @@
+.edn_widget_filtermenu_box.Light {
+  background: white;
+  border: 1px solid #bebebe;
+  padding: 1px;
+}
+.edn_widget_filtermenu_box.Light > h2.edn_module_title {
+  background: url(../images/light/module_title_background.png) repeat-x #979797;
+}
+.edn_widget_filtermenu_box.Light > h2.edn_module_title span {
+  color: #222222;
+}
+.edn_widget_filtermenu_box.Light h3 {
+  border-top-color: #dddddd;
+  color: white;
+  background-color: #8b8b8b;
+}
+.edn_widget_filtermenu_box.Light > div select {
+  border-color: white;
+  border-width: 1px;
+  background: white;
+  box-shadow: 0 3px 6px #cccccc inset;
+  color: #3d3d3d;
+  text-shadow: none;
+}
+.edn_widget_filtermenu_box.Light .edn_filter_menu li ul li > div {
+  background: #efefef;
+  border: 0;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid whitesmoke;
+}
+.edn_widget_filtermenu_box.Light .edn_filter_menu li > div {
+  border: 0;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid #b5b5b5;
+  background: url(../images/light/item_bg.png) repeat-x 0 bottom #e8e8e8;
+}
+.edn_widget_filtermenu_box.Light .edn_filter_menu li > div label {
+  color: #5f5f5f;
+}
+.edn_widget_filtermenu_box.Light .EDN_button-wrapper .edn_filter_button {
+  background-color: #434343;
+  border-color: #b4b4b4 #7a7979 #7a7979 #b4b4b4;
+  color: white;
+}

@@ -1,0 +1,36 @@
+<!--TemplateGroup:listArticleSidebarBox-->
+<!--ArticleRepeat:Before:-->
+<div class="edn_module_box EDN_sidebar_box_container">
+	<h2 class="edn_module_title">
+		<span>[EasyDNNnewsLocalizedText:LatestNews]</span>
+	</h2>
+	[EasyDNNnews:IfExists:RSS]
+	<div class="EDN_article_rss_wrapper">
+		<a href="[EasyDNNnews:RSSLink]" target="_blank" title="[EasyDNNnewsLocalizedText:RSSLinkText]"><span>[EasyDNNnewsLocalizedText:RSSLinkText]</span></a>
+	</div>
+	[EasyDNNnews:EndIf:RSS]
+	<div class="DNNModuleContent">
+		<div>
+<!--RepeatEnd:Before:-->
+
+<!--ArticleTemplate-->
+<div class="EDN_article EDN_sidebar_box [EasyDNNnews:ItemOrderClasses] [EasyDNNnews:ActiveArticle]">
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	<h2>
+		<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:IfExists:Image]<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:80:Height:80:Resize:Crop]" width="80" height="80"/>[EasyDNNnews:EndIf:Image][EasyDNNnews:Title:Limit:80]</a>
+	</h2>
+	<div class="EDN_article_content">[EasyDNNnews:Summary:Limit:100]</div>
+</div>
+<!--ArticleEnd-->
+
+<!--ArticleRepeat:After:-->
+		</div>
+	</div>
+</div>
+<!--RepeatEnd:After:-->

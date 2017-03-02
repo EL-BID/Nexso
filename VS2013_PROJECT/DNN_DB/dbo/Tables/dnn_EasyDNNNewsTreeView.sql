@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[dnn_EasyDNNNewsTreeView] (
+    [ModuleID]                  INT            NOT NULL,
+    [SharingPortalID]           INT            NULL,
+    [Theme]                     NVARCHAR (250) NOT NULL,
+    [ThemeStyle]                NVARCHAR (250) NOT NULL,
+    [ShowRssLink]               BIT            NOT NULL,
+    [ShowAllCategories]         BIT            NOT NULL,
+    [ExpandAllCategories]       BIT            NOT NULL,
+    [AutoAddChildCategories]    BIT            NOT NULL,
+    [OpenInModuleID]            INT            NOT NULL,
+    [PermissionSource]          TINYINT        NOT NULL,
+    [PermissionSourceID]        INT            NOT NULL,
+    [DisplayAllAuthors]         BIT            NOT NULL,
+    [DisplayHeader]             BIT            NOT NULL,
+    [IsSocialInstance]          BIT            NOT NULL,
+    [PassAuthorUserID]          BIT            NOT NULL,
+    [HideUnlocalizedItems]      BIT            NOT NULL,
+    [ShowArticles]              BIT            NOT NULL,
+    [Imported]                  BIT            CONSTRAINT [DF_dnn_EasyDNNNewsTreeView_Imported] DEFAULT ((0)) NOT NULL,
+    [FilterByArticles]          BIT            CONSTRAINT [DF_dnn_EasyDNNNewsTreeView_FilterByArticles] DEFAULT ((1)) NOT NULL,
+    [FilterByEvents]            BIT            CONSTRAINT [DF_dnn_EasyDNNNewsTreeView_FilterByEvents] DEFAULT ((1)) NOT NULL,
+    [FilterByEventsLimitByDays] INT            NULL,
+    CONSTRAINT [PK_dnn_EasyDNNNewsTreeView] PRIMARY KEY CLUSTERED ([ModuleID] ASC),
+    CONSTRAINT [FK_dnn_EasyDNNNewsTreeView_Modules] FOREIGN KEY ([ModuleID]) REFERENCES [dbo].[dnn_Modules] ([ModuleID]) ON DELETE CASCADE
+);
+

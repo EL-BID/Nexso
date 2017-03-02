@@ -1,0 +1,224 @@
+﻿IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSharing]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSharing](
+		[PortalIDFrom] [int] NOT NULL,
+		[PortalIDTo] [int] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsPortalSharing] PRIMARY KEY CLUSTERED ([PortalIDFrom] ASC,[PortalIDTo] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsPortalSharing_Portals1]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSharing]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSharing]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsPortalSharing_Portals1] FOREIGN KEY([PortalIDFrom])
+REFERENCES {databaseOwner}{objectQualifier}Portals ([PortalID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsPortalSharing_Portals1]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSharing]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSharing] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsPortalSharing_Portals1]
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNews]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNews]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNews]', N'{objectQualifier}EasyDNNNews', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNews', N'PK_{objectQualifier}EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'DetailMediaType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD DetailMediaType nvarchar(30) NOT NULL DEFAULT('Image')
+END
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'DetailMediaData')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD DetailMediaData [nvarchar](1000) NULL
+END
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRSSFeedImport]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRSSFeedImport]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRSSFeedImport]', N'{objectQualifier}EasyDNNNewsRSSFeedImport', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRSSFeedImport', N'PK_{objectQualifier}EasyDNNNewsRSSFeedImport', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRSSFeedImport' and column_name = 'RSSType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRSSFeedImport] ADD RSSType nvarchar(20) NOT NULL DEFAULT('Standard')
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings](
+		[ModuleID] [int] NOT NULL,
+		[SharingPortalID] [int] NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsTagCloudSettings] PRIMARY KEY CLUSTERED ([ModuleID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
+		CONSTRAINT [IX_{objectQualifier}EasyDNNNewsTagCloudSettings] UNIQUE NONCLUSTERED ([ModuleID] ASC,[SharingPortalID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings](
+		[ModuleID] [int] NOT NULL,
+		[SharingPortalID] [int] NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsSearchSettings] PRIMARY KEY CLUSTERED ([ModuleID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
+		CONSTRAINT [IX_{objectQualifier}EasyDNNNewsSearchSettings] UNIQUE NONCLUSTERED ([ModuleID] ASC,[SharingPortalID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings](
+		[ModuleID] [int] NOT NULL,
+		[SharingPortalID] [int] NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsModuleSettings] PRIMARY KEY CLUSTERED ([ModuleID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
+		CONSTRAINT [IX_{objectQualifier}EasyDNNNewsModuleSettings] UNIQUE NONCLUSTERED ([ModuleID] ASC,[SharingPortalID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings](
+		[ModuleID] [int] NOT NULL,
+		[SharingPortalID] [int] NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsMenuSettings] PRIMARY KEY CLUSTERED ([ModuleID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
+		CONSTRAINT [IX_{objectQualifier}EasyDNNNewsMenuSettings] UNIQUE NONCLUSTERED ([ModuleID] ASC,[SharingPortalID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings](
+		[ModuleID] [int] NOT NULL,
+		[SharingPortalID] [int] NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsCalendarSettings] PRIMARY KEY CLUSTERED ([ModuleID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
+		CONSTRAINT [IX_{objectQualifier}EasyDNNNewsCalendarSettings] UNIQUE NONCLUSTERED ([ModuleID] ASC,[SharingPortalID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsCalendarSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsCalendarSettings_Modules] FOREIGN KEY([ModuleID])
+REFERENCES {databaseOwner}{objectQualifier}Modules ([ModuleID])
+ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsCalendarSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsCalendarSettings_Modules]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsCalendarSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsCalendarSettings_Portals] FOREIGN KEY([SharingPortalID])
+REFERENCES {databaseOwner}{objectQualifier}Portals ([PortalID])
+ON DELETE SET NULL
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsCalendarSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsCalendarSettings_Portals]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsMenuSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsMenuSettings_Modules] FOREIGN KEY([ModuleID])
+REFERENCES {databaseOwner}{objectQualifier}Modules ([ModuleID])
+ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsMenuSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsMenuSettings_Modules]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsMenuSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsMenuSettings_Portals] FOREIGN KEY([SharingPortalID])
+REFERENCES {databaseOwner}{objectQualifier}Portals ([PortalID])
+ON DELETE SET NULL
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsMenuSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsMenuSettings_Portals]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsModuleSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsModuleSettings_Modules] FOREIGN KEY([ModuleID])
+REFERENCES {databaseOwner}{objectQualifier}Modules ([ModuleID])
+ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsModuleSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsModuleSettings_Modules]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsModuleSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsModuleSettings_Portals] FOREIGN KEY([SharingPortalID])
+REFERENCES {databaseOwner}{objectQualifier}Portals ([PortalID])
+ON DELETE SET NULL
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsModuleSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsModuleSettings_Portals]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsPortalSharing_Portals1]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSharing]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSharing]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsPortalSharing_Portals1] FOREIGN KEY([PortalIDFrom])
+REFERENCES {databaseOwner}{objectQualifier}Portals ([PortalID])
+ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsPortalSharing_Portals1]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSharing]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSharing] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsPortalSharing_Portals1]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsSearchSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSearchSettings_Modules] FOREIGN KEY([ModuleID])
+REFERENCES {databaseOwner}{objectQualifier}Modules ([ModuleID])
+ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsSearchSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSearchSettings_Modules]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsSearchSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSearchSettings_Portals] FOREIGN KEY([SharingPortalID])
+REFERENCES {databaseOwner}{objectQualifier}Portals ([PortalID])
+ON DELETE SET NULL
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsSearchSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSearchSettings_Portals]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsTagCloudSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsTagCloudSettings_Modules] FOREIGN KEY([ModuleID])
+REFERENCES {databaseOwner}{objectQualifier}Modules ([ModuleID])
+ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsTagCloudSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsTagCloudSettings_Modules]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsTagCloudSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsTagCloudSettings_Portals] FOREIGN KEY([SharingPortalID])
+REFERENCES {databaseOwner}{objectQualifier}Portals ([PortalID])
+ON DELETE SET NULL
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsTagCloudSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsTagCloudSettings_Portals]

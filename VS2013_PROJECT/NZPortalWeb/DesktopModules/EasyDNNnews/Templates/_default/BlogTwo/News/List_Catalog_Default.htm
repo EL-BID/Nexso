@@ -1,0 +1,76 @@
+<!--TemplateGroup:newsListCatalogDefault-->
+<!--CatalogArticleTemplate-->
+<!--BreadCrumbTemplate-->
+<a href="[EasyDNNnews:CatalogBreadCrumbLink]">[EasyDNNnews:CatalogBreadCrumbTitle]</a> &gt;
+<!--BreadCrumbEnd-->
+<!--CatalogArticleEnd-->
+
+<!--CatalogArticleTemplate-->
+<!--HeaderTemplate-->
+<div class="category_info">
+	<h1>[EasyDNNnews:CatalogCategoryTitle]</h1>
+	<div class="description">
+		[EasyDNNnews:CatalogCategoryDescription]
+	</div>
+</div>
+<!--HeaderEnd-->
+<!--CatalogArticleEnd-->
+
+<!--CatalogArticleTemplate-->
+<!--CategoryTemplate-->
+<div class="category in_list left">
+	<a href="[EasyDNNnews:CatalogCategoryURL]">
+		<img alt="[EasyDNNnews:CatalogCategoryTitle]" src="[EasyDNNnews:CatalogCategoryImage:Width:195:Height:130:Resize:Crop]" [EasyDNNnews:CatalogCategoryImage:Visibility] width="195" height="130"/>
+		<span>[EasyDNNnews:CatalogCategoryTitle]</span>
+	</a>
+	[EasyDNNnews:EditCategory]
+</div>
+<!--CategoryEnd-->
+<!--CatalogArticleEnd-->
+
+<!--CatalogArticleTemplate-->
+<!--ArticleTemplate-->
+<div class="article in_list span">
+	<p class="date_box">
+	[EasyDNNnews:IfNotExists:Event]
+		<span class="day">[EasyDNNnews:PublishDay]</span>
+		<span class="month">[EasyDNNnews:PublishMonthString]</span>
+		<span class="year">[EasyDNNnews:PublishYear]</span>
+	[EasyDNNnews:EndIf:Event]
+	[EasyDNNnews:IfExists:Event]
+		<span class="day">[EasyDNNnews:EventStartDay]</span>
+		<span class="month">[EasyDNNnews:EventStartMonthNameShort]</span>
+		<span class="year">[EasyDNNnews:EventStartYear]</span>
+	[EasyDNNnews:EndIf:Event]
+	</p>
+	<div class="content_wrapper">
+		<h1><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h1>
+		<div class="content">
+			[EasyDNNnews:IfExists:Image]
+			<img class="article_image" alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]" />
+			[EasyDNNnews:EndIf:Image]
+			<div class="summary">
+				[EasyDNNnews:Summary]
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="meta_text"><div class="attribute author"><strong>[EasyDNNnewsLocalizedText:Author]:</strong> [EasyDNNnews:Author:Link]</div><div class="attribute comments">[EasyDNNnews:Comments] [EasyDNNnewsLocalizedText:Comments]</div><div class="attribute rating">[EasyDNNnews:ArticleRating]</div></div>
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+</div>
+<!--ArticleEnd-->
+<!--CatalogArticleEnd-->
+
+<!--ArticleRepeat:After:-->
+[EasyDNNnews:IfExists:RSS]
+<div class="article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

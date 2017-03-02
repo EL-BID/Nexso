@@ -1,0 +1,72 @@
+﻿<dotnetnuke type="Package" version="5.0">
+	<packages>
+		<package name="NZRegistrationWizard" type="Module" version="03.00.01">
+			<friendlyName>NZ Registration Wizard</friendlyName>
+			<description>Nexso registration wizard</description>
+			<iconFile>Resources/iconnexso.png</iconFile>
+			<owner>
+				<name>IADB MIF NEXSO</name>
+				<organization>Interamerican Development Bank</organization>
+				<url>https://www.nexso.org</url>
+				<email>jairoa@iadb.org</email>
+			</owner>
+			<license src="License.txt"></license>
+			<releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+			<dependencies>
+				<dependency type="CoreVersion">06.00.00</dependency>
+			</dependencies>
+
+			<components>
+
+
+				<component type="Module">
+					<desktopModule>
+						<moduleName>NXRegistrationWizard</moduleName>
+						<foldername>NXRegistrationWizard</foldername>
+
+						<supportedFeatures />
+						<moduleDefinitions>
+							<moduleDefinition>
+								<friendlyName>NZ Registration Wizard</friendlyName>
+								<defaultCacheTime>0</defaultCacheTime>
+								<moduleControls>
+									<moduleControl>
+										<controlKey />
+										<controlSrc>DesktopModules/Nexso/NZRegistrationWizard/NZRegistrationWizard.ascx</controlSrc>
+										<supportsPartialRendering>False</supportsPartialRendering>
+										<controlTitle />
+										<controlType>View</controlType>
+										<iconFile />
+										<helpUrl />
+										<viewOrder>0</viewOrder>
+									</moduleControl>
+									<moduleControl>
+										<controlKey>Edit</controlKey>
+										<controlSrc>DesktopModules/Nexso/NZRegistrationWizard/Edit.ascx</controlSrc>
+										<supportsPartialRendering>False</supportsPartialRendering>
+										<controlTitle>Edit Content</controlTitle>
+										<controlType>Edit</controlType>
+										<iconFile />
+										<helpUrl />
+										<viewOrder>0</viewOrder>
+										<supportsPopUps>True</supportsPopUps>
+									</moduleControl>
+									<moduleControl>
+										<controlKey>Settings</controlKey>
+										<controlSrc>DesktopModules/Nexso/NZRegistrationWizard/Settings.ascx</controlSrc>
+										<supportsPartialRendering>False</supportsPartialRendering>
+										<controlTitle>Wizard Settings</controlTitle>
+										<controlType>Edit</controlType>
+										<iconFile />
+										<helpUrl />
+										<viewOrder>0</viewOrder>
+									</moduleControl>
+								</moduleControls>
+							</moduleDefinition>
+						</moduleDefinitions>
+					</desktopModule>
+				</component>
+			</components>
+		</package>
+	</packages>
+</dotnetnuke>

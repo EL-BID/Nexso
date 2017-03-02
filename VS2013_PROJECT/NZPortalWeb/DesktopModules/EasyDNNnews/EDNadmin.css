@@ -1,0 +1,4847 @@
+@charset "UTF-8";
+html {
+  overflow: visible !important;
+}
+
+#Body {
+  overflow: visible;
+}
+#Body > #Form.removeTopMargin {
+  margin-top: 0 !important;
+}
+
+.pac-container {
+  z-index: 999999 !important;
+}
+
+#EDNadmin {
+  width: 800px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #464646;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 1.5;
+}
+#EDNadmin input,
+#EDNadmin a,
+#EDNadmin p,
+#EDNadmin img,
+#EDNadmin span,
+#EDNadmin div,
+#EDNadmin li,
+#EDNadmin td,
+#EDNadmin th,
+#EDNadmin dl,
+#EDNadmin dt {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+}
+#EDNadmin label {
+  font-weight: normal;
+}
+#EDNadmin p {
+  line-height: 1.5;
+}
+#EDNadmin a {
+  color: #0770B1;
+  text-decoration: none;
+}
+#EDNadmin a:hover {
+  color: #C10505;
+}
+#EDNadmin .dnnLabel {
+  width: inherit;
+}
+#EDNadmin .actions {
+  width: auto;
+}
+#EDNadmin .content {
+  background: none;
+}
+#EDNadmin .content div {
+  border: none;
+  box-shadow: none;
+  left: 0;
+  opacity: 1;
+  position: none;
+  top: 0;
+  transition: opacity 0.1s linear 0s;
+  z-index: 1;
+}
+#EDNadmin .content table:last-child .dnnFormHelpContent,
+#EDNadmin .content table:last-child .dnnFormItem .dnnFormHelpContent {
+  top: auto;
+  bottom: 90%;
+}
+#EDNadmin .content .dnnTooltip {
+  position: relative;
+  z-index: unset;
+}
+#EDNadmin .content .dnnFormHelpContent,
+#EDNadmin .content .dnnFormItem .dnnFormHelpContent {
+  left: 95%;
+  max-width: 30em;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 275px;
+  z-index: 25;
+  border: 2px solid #46a3d3;
+}
+#EDNadmin img {
+  vertical-align: baseline;
+}
+#EDNadmin h1, #EDNadmin h2, #EDNadmin h3, #EDNadmin h4 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#EDNadmin a.link-button {
+  background: -moz-linear-gradient(center top, #358eea 0%, #2170cd 100%) repeat scroll 0 0 #358eea;
+  background: #358EEA;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.6), 0 1px 0 0 rgba(255, 255, 255, 0.4) inset;
+  color: #efefef;
+  border: 1px solid #858585;
+  border-color: #0d569e;
+  text-shadow: 0 -1px 0 #185b93;
+  border-radius: 3px;
+  font-size: 12px;
+  margin: 2px 0 0;
+  display: inline-block;
+  padding: 2px 4px;
+  text-align: center;
+}
+#EDNadmin a.link-button:hover {
+  background: -moz-linear-gradient(center top, #6CB6F3 0%, #4387D2 100%) repeat scroll 0 0 transparent;
+  border-color: #0D569E;
+  color: #FFFFFF;
+}
+#EDNadmin .silver_button {
+  display: inline-block;
+  background: url(images/silver_button_left.png) no-repeat 0 0;
+  height: 26px;
+  border: 0;
+  margin: 0;
+  padding: 0 0 0 9px;
+  color: #333;
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 18px;
+}
+#EDNadmin .silver_button span {
+  display: inline-block;
+  background: url(images/silver_button_right.png) repeat-x right top;
+  height: 21px;
+  padding: 5px 9px 0 0;
+  overflow: hidden;
+}
+#EDNadmin .silver_button:hover {
+  background-position: 0 -26px;
+}
+#EDNadmin .silver_button:hover span {
+  background-position: right -26px;
+}
+#EDNadmin .rounded_button {
+  background: #7dc0f2;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background-color 200ms ease 0s;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  text-decoration: none;
+}
+#EDNadmin .rounded_button:hover {
+  background-color: #559ED2;
+}
+#EDNadmin .rounded_button > span {
+  background: none;
+  margin: 0;
+  padding: 6px 10px;
+  border: 0;
+  font: bold 14px/1.3 "Trebuchet MS", Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+  text-shadow: none;
+  box-shadow: none;
+}
+#EDNadmin .rounded_button.gradient {
+  background-image: url(images/button_gradient_bg.png);
+  background-position: left bottom;
+  background-repeat: repeat-x;
+}
+#EDNadmin .rounded_button.icon.document_in_folder > span {
+  background: url(images/icons/document_in_folder.png) 3px center no-repeat;
+  padding-left: 30px;
+}
+#EDNadmin .rounded_button.icon.orange_plus > span {
+  background: url(images/icons/orange_plus.png) 5px 8px no-repeat;
+  padding-left: 23px;
+}
+#EDNadmin .rounded_button.olive_green {
+  background-color: #7AC287;
+}
+#EDNadmin .rounded_button.olive_green:hover {
+  background-color: #61A36D;
+}
+#EDNadmin .info_box {
+  overflow: hidden;
+  margin: 5px 0;
+}
+#EDNadmin .info_box p {
+  color: #194a19;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 0;
+  padding: 8px 0 5px;
+}
+#EDNadmin .info_box a.action {
+  display: block;
+  height: 23px;
+  border: 0 none;
+  font-size: 14px;
+  font-weight: bold;
+  float: right;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 0 5px;
+  text-decoration: none;
+}
+#EDNadmin .info_box a.action.remove_btn {
+  background: url(images/remove_box_bg.png) no-repeat right center #a6a6a6;
+  padding: 7px 33px 0 10px;
+}
+#EDNadmin .info_box a.action.add_gallery {
+  background: url(images/add_gallery_box_bg.png) no-repeat right center #8fc400;
+  padding: 7px 40px 0 15px;
+}
+#EDNadmin .info_box a.action.add {
+  background: url(images/add_box_bg.png) no-repeat right center #8fc400;
+  padding: 7px 40px 0 15px;
+}
+#EDNadmin .info_box a.action.edit {
+  background: url(images/edit_box_bg.png) no-repeat left top #8fc400;
+  padding: 7px 15px 0 29px;
+}
+#EDNadmin .info_box.attention {
+  background: url(images/icons/attention_green.png) no-repeat 10px center #ddebdf;
+  padding: 0 0 0 45px;
+}
+#EDNadmin .info_box.warning {
+  background: url(images/icons/attention_green.png) no-repeat 10px center #F39E9E;
+  padding: 0 0 0 45px;
+}
+#EDNadmin .info_box.warning p {
+  color: #000;
+}
+#EDNadmin .info_box.check_sign {
+  background: url(images/icons/green_check_sign.png) no-repeat 10px center #ddebdf;
+  padding: 0 0 0 30px;
+}
+#EDNadmin .info_box.red_cross {
+  background: url(images/icons/red_cross.png) no-repeat 10px center #ddebdf;
+  padding: 0 0 0 30px;
+}
+#EDNadmin .module_action_title_box {
+  border: 1px solid #e2e1e1;
+  border-bottom: 1px solid #fff;
+  padding: 0;
+  margin: 0;
+  background: url(images/blueraster.png) repeat-x #c5e8fa;
+  overflow: hidden;
+}
+#EDNadmin .module_action_title_box .module_navigation_menu {
+  overflow: hidden;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+#EDNadmin .module_action_title_box .module_navigation_menu li {
+  background: url(images/module_navigation_bg.png) no-repeat 0 0;
+  padding: 0;
+  margin: 0;
+  float: left;
+  display: block;
+  width: 49px;
+  height: 42px;
+  overflow: hidden;
+}
+#EDNadmin .module_action_title_box .module_navigation_menu li:hover {
+  background-position: 0 -84px;
+}
+#EDNadmin .module_action_title_box .module_navigation_menu li a {
+  padding: 12px 0 0;
+  display: block;
+  text-align: center;
+  height: 30px;
+  width: 100%;
+}
+#EDNadmin .module_action_title_box .module_navigation_menu li.active {
+  background-position: 0 -42px;
+}
+#EDNadmin .module_action_title_box .module_navigation_menu li.active a {
+  background: url(images/module_navigation_arrow.png) no-repeat bottom center;
+}
+#EDNadmin .module_action_title_box .module_navigation_menu li.power_off {
+  background-position: 0 -126px;
+  width: 30px;
+}
+#EDNadmin .module_action_title_box .module_navigation_menu li.power_off a {
+  padding: 10px 0 0 1px;
+}
+#EDNadmin .module_action_title_box .module_navigation_menu li.power_off:hover {
+  background-position: 0 -168px;
+}
+#EDNadmin .module_action_title_box h1 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 23px;
+  color: #054570;
+  padding: 7px 20px 6px;
+  margin: 0;
+  line-height: normal;
+}
+#EDNadmin .module_action_title_box h1 span {
+  text-transform: none;
+  font-size: 16px;
+}
+#EDNadmin .collapsible_box {
+  margin: 20px 0 0;
+}
+#EDNadmin .collapsible_box.no_margin {
+  margin: 0;
+}
+#EDNadmin .collapsible_box.top_margin_3 {
+  margin: 3px 0 0;
+}
+#EDNadmin .collapsible_box.advanced_settings {
+  margin-bottom: 20px;
+}
+#EDNadmin .collapsible_box h1.collapsible_box_title {
+  font-weight: bold;
+  font-size: 15px;
+  color: #555;
+  margin: 0;
+  padding: 5px 10px 5px 30px;
+  background: url(images/icons/down_arrows.png) no-repeat 12px 8px #e6e6e6;
+  border: 1px solid #fff;
+  cursor: pointer;
+  line-height: normal;
+}
+#EDNadmin .collapsible_box h1.collapsible_box_title.close {
+  background-image: url(images/icons/up_arrows.png);
+  float: none;
+  opacity: 1;
+}
+#EDNadmin .collapsible_box h1.collapsible_box_title:hover {
+  color: #878787;
+}
+#EDNadmin .collapsible_box .content {
+  display: none;
+  background: #e6e6e6;
+  overflow: hidden;
+  border: 1px solid #fff;
+  border-top: 0;
+  padding: 0 20px 20px;
+}
+#EDNadmin .collapsible_box .content .text_input_set input.text {
+  width: 667px;
+}
+#EDNadmin .collapsible_box .content .text_input_set input.text.narrow {
+  width: 527px;
+}
+#EDNadmin .collapsible_box .content .text_input_set textarea {
+  width: 667px;
+  padding: 5px;
+  font-size: 12px;
+}
+#EDNadmin .collapsible_box .content.article_history {
+  padding: 20px;
+}
+#EDNadmin .collapsible_box .content.article_history p {
+  font-size: 14px;
+  padding: 5px 0 0;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  height: 19px;
+}
+#EDNadmin .collapsible_box .content.article_history p a.icon {
+  padding: 22px 23px 0 0;
+  margin: 0 0 0 2px;
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+  top: 6px;
+}
+#EDNadmin .collapsible_box .content.article_history p a.icon.load_version {
+  background: url(images/icons/reload_btn.png) no-repeat;
+  margin: 0 0 0 8px;
+}
+#EDNadmin .collapsible_box .content.article_history p a.icon.delete_version {
+  background: url(images/icons/delete_btn.png) no-repeat;
+}
+#EDNadmin .collapsible_box.visible .content {
+  display: block;
+}
+#EDNadmin .main_content {
+  padding: 1px 32px 32px;
+  margin: 0;
+  border: 1px solid #e2e1e1;
+  border-top: 0 none;
+  background: #f4f4f4;
+}
+#EDNadmin .main_content input {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 2px 2px 0;
+  background: #f4f4f4;
+  color: #464646;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+#EDNadmin .main_content input.grey {
+  background: #D3D3D3;
+}
+#EDNadmin .main_content input.light {
+  color: #363636;
+  background: #f1f1f1;
+  border: 1px solid #D0D0D0;
+  border-radius: 2px;
+  padding: 2px;
+}
+#EDNadmin .main_content input[type="submit"] {
+  background: -moz-linear-gradient(center top, #358EEA 0%, #2170CD 100%) repeat scroll 0 0 transparent;
+  background-color: #358EEA;
+  border-color: #0D569E;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.6), 0 1px 0 0 rgba(255, 255, 255, 0.4) inset;
+  color: #EFEFEF;
+  text-shadow: 0 -1px 0 #185B93;
+}
+#EDNadmin .main_content input[type="submit"]:hover {
+  background: -moz-linear-gradient(center top, #6CB6F3 0%, #4387D2 100%) repeat scroll 0 0 transparent;
+  border-color: #0D569E;
+  color: #FFFFFF;
+}
+#EDNadmin .main_content input[type="checkbox"] {
+  border: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 3px 0 0;
+  padding: 0;
+}
+#EDNadmin .main_content select {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 2px 0 0;
+  background: #f4f4f4;
+  color: #464646;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+#EDNadmin .main_content.dashboard {
+  padding: 0 0 32px 16px;
+  border-bottom: none;
+}
+#EDNadmin .main_content.dashboard.customfields {
+  overflow: hidden;
+}
+#EDNadmin .main_content.dashboard.customfields ul.links {
+  overflow: visible;
+}
+#EDNadmin .main_content.dashboard.eventmanager {
+  padding: 0;
+  border: none;
+}
+#EDNadmin .main_content.dashboard.eventmanager ul.links {
+  width: auto;
+}
+#EDNadmin .main_content.dashboard ul.links {
+  padding: 0 0 5px;
+  overflow: hidden;
+  width: 755px;
+  margin: 0 auto;
+}
+#EDNadmin .main_content.dashboard ul.links.bigger_margin {
+  margin-top: 50px;
+}
+#EDNadmin .main_content.dashboard ul.links li {
+  display: block;
+  list-style-type: none;
+  display: block;
+  float: left;
+  margin: 32px 18px 0 0;
+  background: url(images/dashboard_icons_bg.png) no-repeat 0 0;
+}
+#EDNadmin .main_content.dashboard ul.links li.activelink {
+  background-position: -131px 0;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 1px 1px 3px #888888;
+  border: 1px solid #bae9ff;
+}
+#EDNadmin .main_content.dashboard ul.links li.activelink a {
+  color: #094A78;
+}
+#EDNadmin .main_content.dashboard ul.links li:hover {
+  background-position: -131px 0;
+}
+#EDNadmin .main_content.dashboard ul.links li a {
+  display: block;
+  width: 123px;
+  height: 40px;
+  overflow: hidden;
+  padding: 84px 4px 1px;
+  color: #808080;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+#EDNadmin .main_content.dashboard ul.links li a:hover {
+  text-decoration: none;
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon {
+  background: no-repeat center 15px;
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.global_settings {
+  background-image: url(images/icons/dashboard_global_settings.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.general_settings {
+  background-image: url(images/icons/dashboard_genera_settings.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.module_settings {
+  background-image: url(images/icons/dashboard_module_settings.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.tags {
+  background-image: url(images/icons/dashboard_tags.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.category_manager {
+  background-image: url(images/icons/dashboard_categories.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.comments {
+  background-image: url(images/icons/dashboard_comments.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.approve_articles {
+  background-image: url(images/icons/dashboard_approve_articles.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.article_manager {
+  background-image: url(images/icons/dashboard_articles.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.event_manager {
+  background-image: url(images/icons/dashboard_eventregistration.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.event_list {
+  background-image: url(images/icons/dashboard_eventlist.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.event_reminder {
+  background-image: url(images/icons/dashboard_reminder.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.event_invitation {
+  background-image: url(images/icons/dashboard_invitations.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.event_settings {
+  background-image: url(images/icons/dashboard_emailsettings.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.add_article {
+  background-image: url(images/icons/dashboard_add_article.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.tokens {
+  background-image: url(images/icons/dashboard_tokens.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.gallery {
+  background-image: url(images/icons/dashboard_gallery.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.gallery.not_installed {
+  background-image: url(images/icons/dashboard_gallery_not_installed.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.authors {
+  background-image: url(images/icons/dashboard_authors.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.atom {
+  background-image: url(images/icons/dashboard_atom.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.cross {
+  background-image: url(images/icons/dashboard_crossportal.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.snotifications {
+  background-image: url(images/icons/dashboard_systemnotifications.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.apiconnections {
+  background-image: url(images/icons/dashboard_apiconnections.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.customfileds {
+  background-image: url(images/icons/dashboard_custom_fileds.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.customfiledsadd {
+  background-image: url(images/icons/dashboard_custom_fileds_add.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.customfields_group {
+  background-image: url(images/icons/dashboard_customfields_group.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.customfields_currency {
+  background-image: url(images/icons/dashboard_customfields_currency.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.customfields_export {
+  background-image: url(images/icons/dashboard_custom_fileds_export.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.content_export {
+  background-image: url(images/icons/export-icon.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.content_import {
+  background-image: url(images/icons/import-icon.png);
+}
+#EDNadmin .main_content.dashboard ul.links li a.icon.excel_import {
+  background-image: url(images/icons/excel_import.png);
+}
+#EDNadmin .main_content .article_content_bottom_actions {
+  text-align: right;
+  margin: 3px 20px 4px;
+  padding: 0;
+}
+#EDNadmin .main_content .article_content_bottom_actions a {
+  margin: 0 0 0 10px;
+}
+#EDNadmin .main_content .avalible_article_tokens {
+  display: none;
+  margin: 0 0 10px 30px;
+}
+#EDNadmin .main_content .timezoneinfo {
+  font-size: 10px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+#EDNadmin .main_content .customfields-group {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#EDNadmin .main_content .customfields-group td.leftcol {
+  width: 140px;
+  text-align: right;
+  vertical-align: top;
+}
+#EDNadmin .main_content .customfields-group td.leftcol .dnnLabel {
+  margin: 0;
+}
+#EDNadmin .main_content .customfields-group td.leftcol .dnnLabel span {
+  font-weight: bold;
+}
+#EDNadmin .main_content .customfields-group td.rightcol {
+  text-align: left;
+  vertical-align: top;
+  padding-left: 10px;
+}
+#EDNadmin .main_content .customfields-group select {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 2px 0 0;
+  background: #f4f4f4;
+  color: #464646;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+#EDNadmin .main_content .emanager .dnnLabel {
+  padding-right: 0;
+}
+#EDNadmin .main_content .customfields-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#EDNadmin .main_content .customfields-table td.leftcol {
+  width: 140px;
+  text-align: right;
+  vertical-align: top;
+}
+#EDNadmin .main_content .customfields-table td.leftcol .dnnLabel {
+  margin: 0 0 8px;
+}
+#EDNadmin .main_content .customfields-table td.rightcol {
+  text-align: left;
+  vertical-align: top;
+  padding-left: 10px;
+}
+#EDNadmin .main_content .customfields-table td input {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 2px 0 0;
+  background: #f4f4f4;
+  color: #464646;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+  min-width: 150px;
+}
+#EDNadmin .main_content .customfields-table td input.interval {
+  min-width: inherit;
+  width: 30px;
+}
+#EDNadmin .main_content .customfields-table td textarea {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 2px 0 0;
+  background: #ffffff;
+  color: #464646;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+  min-width: 300px;
+  height: 100px;
+}
+#EDNadmin .main_content .customfields-table td input[type="submit"] {
+  background: -moz-linear-gradient(center top, #358EEA 0%, #2170CD 100%) repeat scroll 0 0 transparent;
+  background-color: #358EEA;
+  border-color: #0D569E;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.6), 0 1px 0 0 rgba(255, 255, 255, 0.4) inset;
+  color: #EFEFEF;
+  text-shadow: 0 -1px 0 #185B93;
+}
+#EDNadmin .main_content .customfields-table td input[type="submit"]:hover {
+  background: -moz-linear-gradient(center top, #6CB6F3 0%, #4387D2 100%) repeat scroll 0 0 transparent;
+  border-color: #0D569E;
+  color: #FFFFFF;
+}
+#EDNadmin .main_content .customfields-table td input[type="checkbox"] {
+  border: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-right: 3px;
+  padding: 0;
+  min-width: 0 !important;
+}
+#EDNadmin .main_content .customfields-table td input[type="radio"] {
+  min-width: 0 !important;
+  margin-right: 3px;
+}
+#EDNadmin .main_content .customfields-table td select {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 2px 0 0;
+  background: #f4f4f4;
+  color: #464646;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+#EDNadmin .main_content .customfields-table td .HTMLeditor {
+  margin-bottom: 10px;
+}
+#EDNadmin .main_content .customfields-table td .HTMLeditor .RadEditor {
+  width: 100% !important;
+}
+#EDNadmin .main_content .customfields-table td span.requiredfield {
+  color: red;
+  font-size: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#EDNadmin .main_content .rounded_inset_text_box {
+  font: 12px/1.3 Arial;
+  color: #363636;
+  display: inline-block;
+  background: #f1f1f1;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) inset;
+  margin: 0;
+  padding: 3px 7px 2px;
+}
+#EDNadmin .main_content .grid_view_table {
+  margin: 20px 0 0;
+  background: #f2f2f2;
+  table-layout: fixed;
+  border: 1px solid #999;
+  box-shadow: 3px 3px 2px -3px #000;
+  -webkit-box-shadow: 3px 3px 2px -3px #000;
+  -moz-box-shadow: 3px 3px 2px -3px #000;
+}
+#EDNadmin .main_content .grid_view_table.eventmanager tr td {
+  font-size: 12px;
+}
+#EDNadmin .main_content .grid_view_table.eventmanager tr td .date > span {
+  font-size: 11px !important;
+}
+#EDNadmin .main_content .grid_view_table.eventmanager th.dates {
+  width: 110px !important;
+}
+#EDNadmin .main_content .grid_view_table.eventmanager a.aspNetDisabled {
+  color: #8C8C8C;
+  cursor: not-allowed;
+}
+#EDNadmin .main_content .grid_view_table.eventmanager .title > span {
+  font-size: 13px;
+}
+#EDNadmin .main_content .grid_view_table.customfields {
+  margin-top: 10px !important;
+  margin-bottom: 15px !important;
+}
+#EDNadmin .main_content .grid_view_table.customfields tr td {
+  font-size: 13px;
+}
+#EDNadmin .main_content .grid_view_table tr.row {
+  display: table-row;
+}
+#EDNadmin .main_content .grid_view_table tr.row:before, #EDNadmin .main_content .grid_view_table tr.row:after {
+  content: none !important;
+}
+#EDNadmin .main_content .grid_view_table tr.header_row {
+  background: url("images/gallery_items_header_bg.png") repeat-x #63ADD5;
+}
+#EDNadmin .main_content .grid_view_table tr.header_row th {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  height: 30px;
+  padding: 2px 0 0 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+#EDNadmin .main_content .grid_view_table tr td {
+  overflow: hidden;
+  font-size: 10px;
+  color: #333;
+  padding: 2px 0 2px 10px;
+}
+#EDNadmin .main_content .grid_view_table tr td.actions {
+  padding-left: 3px;
+}
+#EDNadmin .main_content .grid_view_table tr td.actions .action_btn {
+  display: block;
+  height: 26px;
+  float: left;
+}
+#EDNadmin .main_content .grid_view_table tr td.actions .action_btn.tripple.edit {
+  background: url(images/icons/rounded_box_set_edit.png);
+  width: 28px;
+}
+#EDNadmin .main_content .grid_view_table tr td.actions .action_btn.tripple.delete {
+  background: url(images/icons/rounded_box_set_delete_right_end.png);
+  width: 29px;
+}
+#EDNadmin .main_content .grid_view_table tr td.actions .action_btn.tripple.edittime {
+  background: url(images/icons/rounded_box_set_time.png);
+  width: 29px;
+}
+#EDNadmin .main_content .grid_view_table tr td.actions .action_btn.edit {
+  width: 27px;
+  background: url(images/icons/pencil_rounded_left.png) no-repeat;
+}
+#EDNadmin .main_content .grid_view_table tr td.actions .action_btn.red_x {
+  width: 30px;
+  background: url(images/icons/red_x_rounded_right.png) no-repeat;
+}
+#EDNadmin .main_content .grid_view_table tr td.actions .action_btn.save {
+  width: 27px;
+  background: url(images/icons/save_rounded_left.png) no-repeat;
+}
+#EDNadmin .main_content .grid_view_table tr td.actions .action_btn.cancel {
+  width: 30px;
+  background: url(images/icons/cancel_rounded_right.png) no-repeat;
+}
+#EDNadmin .main_content .grid_view_table tr td.title {
+  font-size: 12px;
+}
+#EDNadmin .main_content .grid_view_table tr td.filename {
+  color: #807e7e;
+}
+#EDNadmin .main_content .grid_view_table tr td.arrows .arrow {
+  display: block;
+  width: 13px;
+  height: 17px;
+  float: left;
+}
+#EDNadmin .main_content .grid_view_table tr td.arrows .arrow.down {
+  background: url(images/icons/arrow_down_orange.png) no-repeat;
+}
+#EDNadmin .main_content .grid_view_table tr td.arrows .arrow.up {
+  background: url(images/icons/arrow_up_green.png) no-repeat;
+}
+#EDNadmin .main_content .grid_view_table tr .footer_actions {
+  background: url(images/light_blue_gradient.png) repeat-x #86a9c0;
+  height: 34px;
+  overflow: hidden;
+  padding: 0;
+  vertical-align: top;
+}
+#EDNadmin .main_content .grid_view_table tr .footer_actions div {
+  float: left;
+  cloear: left;
+}
+#EDNadmin .main_content .grid_view_table tr .footer_actions .arrow_icon {
+  background: url(images/icons/blue_arrow.png) no-repeat 4px 13px;
+  height: 100%;
+  width: 22px;
+}
+#EDNadmin .main_content .grid_view_table tr .footer_actions .silver_button {
+  margin: 5px 0 0 2px;
+  float: left;
+}
+#EDNadmin .main_content .grid_view_table tr .footer_actions .seperator {
+  background: url(images/light_blue_to_white_gradient.png);
+  width: 1px;
+  height: 35px;
+  line-height: 0;
+  font-size: 0;
+  margin: 0 0 0 8px;
+}
+#EDNadmin .main_content .grid_view_table tr .footer_actions select {
+  float: left;
+  margin: 8px 0 0 10px;
+}
+#EDNadmin .main_content .grid_view_table tr .footer_actions .run_action {
+  background: url(images/light_blue_ok.png);
+  display: block;
+  height: 26px;
+  width: 36px;
+  margin: 6px 0 0 9px;
+  padding: 0;
+  border: 0;
+  float: left;
+  cursor: pointer;
+  min-width: 36px;
+  box-shadow: none;
+}
+#EDNadmin .main_content .grid_view_table tr .footer_actions select {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 6px 0 0;
+  background: #f4f4f4;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+#EDNadmin .main_content .grid_view_table tr .footer_actions .nomber_of_rows_selection {
+  float: right;
+  position: relative;
+  overflow: hidden;
+  padding: 9px 5px 0 0;
+}
+#EDNadmin .main_content .grid_view_table tr .footer_actions .nomber_of_rows_selection select {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 2px 0 0;
+  background: #f4f4f4;
+  border: 1px solid #858585;
+  float: none;
+}
+#EDNadmin .main_content .grid_view_table tr .footer_actions .nomber_of_rows_selection label {
+  position: relative;
+  top: -1px;
+  color: #fff;
+}
+#EDNadmin .main_content .grid_view_table tr .footer_actions div.expirepublish {
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+#EDNadmin .main_content .grid_view_table tr.pagination {
+  background: #afcde1;
+  position: relative;
+}
+#EDNadmin .main_content .grid_view_table tr.pagination td {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+#EDNadmin .main_content .grid_view_table tr.pagination td table {
+  padding: 0 4px 5px 5px;
+  float: right;
+}
+#EDNadmin .main_content .grid_view_table tr.pagination td table td {
+  padding: 5px 0px 0 0;
+}
+#EDNadmin .main_content .grid_view_table tr.pagination td span {
+  display: inline-block;
+  width: 25px;
+  height: 21px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  font-style: normal;
+  font-variant: normal;
+  margin-left: 1px;
+  margin-right: 1px;
+  text-decoration: none;
+  background: url(images/pagination_active_bg.png) no-repeat;
+  padding: 3px 0 0;
+  font-weight: bold;
+  text-align: center;
+}
+#EDNadmin .main_content .grid_view_table tr.pagination td a {
+  display: inline-block;
+  width: 25px;
+  height: 21px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #333;
+  font-style: normal;
+  font-variant: normal;
+  margin-left: 1px;
+  margin-right: 1px;
+  background: url(images/pagination_bg.png) no-repeat;
+  padding: 3px 0 0;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+#EDNadmin .main_content .grid_view_table tr.pagination td a:hover, #EDNadmin .main_content .grid_view_table tr.pagination td a:active, #EDNadmin .main_content .grid_view_table tr.pagination td a:visited {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  font-style: normal;
+  font-variant: normal;
+  text-decoration: none;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+#EDNadmin .main_content .grid_view_table tr.second {
+  background: #e6e6e6;
+}
+#EDNadmin .main_content .grid_view_table.olive_green tr.header_row {
+  background: url("images/olive_green_section_box_title_bg.png") top left repeat-x #479454;
+}
+#EDNadmin .main_content .grid_view_table.orange tr.header_row {
+  background: url("images/orange_section_box_title_bg.png") top left repeat-x #fd8a28;
+}
+#EDNadmin .main_content .text_input_set {
+  margin: 20px 0 0;
+  overflow: hidden;
+}
+#EDNadmin .main_content .text_input_set.overflow_visible {
+  overflow: visible;
+}
+#EDNadmin .main_content .text_input_set.no_margin {
+  margin: 0;
+}
+#EDNadmin .main_content .text_input_set .dnnTooltip {
+  display: inline;
+}
+#EDNadmin .main_content .text_input_set .dnnTooltip label {
+  font-size: 14px;
+  margin: 0 7px 0;
+}
+#EDNadmin .main_content .text_input_set .dnnTooltip label a {
+  display: inline;
+}
+#EDNadmin .main_content .text_input_set .dnnTooltip label a span {
+  display: inline;
+  padding: 0 17px 0 0;
+}
+#EDNadmin .main_content .text_input_set span.input_validation_error {
+  color: #FF2929;
+  margin: 0 0 0 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+#EDNadmin .main_content .text_input_set input.text, #EDNadmin .main_content .text_input_set textarea {
+  background: url(images/textboxbgrd.png) repeat-x #fff;
+  font-size: 14px;
+  color: #464646;
+  margin: 5px 0 0;
+  padding: 0 10px;
+  display: block;
+  height: 26px;
+  border: 1px #dbdbdb solid;
+  width: 712px;
+  clear: both;
+}
+#EDNadmin .main_content .text_input_set input.text.s18, #EDNadmin .main_content .text_input_set textarea.s18 {
+  font-size: 18px;
+  height: 29px;
+}
+#EDNadmin .main_content .text_input_set input.text.narrow, #EDNadmin .main_content .text_input_set textarea.narrow {
+  width: 500px;
+}
+#EDNadmin .main_content .text_input_set input.text.left, #EDNadmin .main_content .text_input_set textarea.left {
+  float: left;
+}
+#EDNadmin .main_content .text_input_set textarea {
+  height: 100px;
+  padding: 4px;
+}
+#EDNadmin .main_content .text_input_set .reset_url_btn {
+  float: left;
+  margin: 0 0 0 5px;
+}
+#EDNadmin .main_content .text_input_set .content_localization_btn {
+  background: url(images/content_localization_left_bg.png) no-repeat;
+  padding: 0 0 0 25px;
+  display: block;
+  margin: 0;
+  text-decoration: none;
+  float: right;
+  height: 24px;
+  overflow: hidden;
+}
+#EDNadmin .main_content .text_input_set .content_localization_btn span {
+  background: url(images/content_localization_right_bg.png) no-repeat right top;
+  padding: 5px 10px 4px 3px;
+  font-size: 12px;
+  margin: 0;
+  color: #555;
+  display: inline-block;
+}
+#EDNadmin .main_content .section_box_title {
+  background: url(images/section_box_title_bg.png) repeat-x;
+  height: 32px;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+#EDNadmin .main_content .section_box_title span {
+  display: block;
+  background: url(images/section_box_title_arrow.png) no-repeat right top;
+  padding: 7px 30px 7px 17px;
+  margin: 0 3px 0 0;
+  font-size: 18px;
+  color: #fff;
+  font-weight: normal;
+  line-height: 18px;
+}
+#EDNadmin .main_content .section_box {
+  margin: 25px 0 0;
+  overflow: hidden;
+}
+#EDNadmin .main_content .section_box.padded_20 {
+  padding: 0 20px 20px;
+}
+#EDNadmin .main_content .section_box.cyan {
+  background: #cef1fc;
+}
+#EDNadmin .main_content .section_box.grey {
+  background: #e5e6e6;
+}
+#EDNadmin .main_content .section_box.dark_grey {
+  background: #d8d9d9;
+}
+#EDNadmin .main_content .section_box.white_border_1 {
+  border: 1px solid #fff;
+}
+#EDNadmin .main_content .section_box.dark_blue {
+  background: #afcde1;
+}
+#EDNadmin .main_content .section_box.tabbed {
+  background: transparent;
+}
+#EDNadmin .main_content .section_box.no_top_margin {
+  margin-top: 0;
+}
+#EDNadmin .main_content .section_box .tabs {
+  list-style-type: none;
+  margin: 0 0 0 15px;
+  padding: 0;
+  overflow: hidden;
+  float: left;
+}
+#EDNadmin .main_content .section_box .tabs li {
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+}
+#EDNadmin .main_content .section_box .tabs li a {
+  display: block;
+  width: 107px;
+  height: 24px;
+  background: url(images/gallery_tab_grey.png) no-repeat;
+  text-transform: uppercase;
+  padding: 8px 0 0;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: #26455f;
+  position: relative;
+}
+#EDNadmin .main_content .section_box .tabs li a.active, #EDNadmin .main_content .section_box .tabs li a:hover {
+  background: url(images/gallery_tab_blue.png) no-repeat;
+}
+#EDNadmin .main_content .section_box .tabs li a .dot {
+  width: 9px;
+  height: 10px;
+  position: absolute;
+  top: 3px;
+  right: 4px;
+}
+#EDNadmin .main_content .section_box .tabs li a .dot.blue {
+  background: url(images/icons/blue_dot.png) no-repeat;
+}
+#EDNadmin .main_content .section_box .tabs li a .dot.yellow {
+  background: url(images/icons/yellow_dot.png) no-repeat;
+}
+#EDNadmin .main_content .section_box table.radio_button_list {
+  padding: 3px 0 0 15px;
+  margin: 0;
+  list-style-type: none;
+  border-collapse: separate;
+}
+#EDNadmin .main_content .section_box table.radio_button_list td {
+  padding: 0 20px 0 0;
+}
+#EDNadmin .main_content .section_box .content {
+  clear: both;
+  overflow: hidden;
+}
+#EDNadmin .main_content .section_box .content.dark_blue {
+  background: #afcde1;
+}
+#EDNadmin .main_content .section_box .content .padded {
+  padding: 5px;
+}
+#EDNadmin .main_content .section_box .content .section_actions {
+  background: #93bad1;
+  padding: 3px 10px;
+  border: 0;
+  border-top: 2px solid #c0d8e7;
+  text-align: right;
+}
+#EDNadmin .main_content .section_box .content .section_actions a {
+  text-decoration: none;
+  color: #d7eefa;
+  font-size: 14px;
+  font-weight: bold;
+}
+#EDNadmin .main_content .section_box .content .section_actions a:hover {
+  color: white;
+}
+#EDNadmin .main_content .section_box .content .section_actions a.icon.down_arrows {
+  background: url(images/icons/down_arrows.png) no-repeat right 2px;
+  padding: 0 19px 0 0;
+}
+#EDNadmin .main_content .section_box .content .section_actions a.icon.up_arrows {
+  background: url(images/icons/up_arrows.png) no-repeat right 2px;
+  padding: 0 19px 0 0;
+}
+#EDNadmin .main_content .section_box .content .section_actions a.icon.laptop {
+  background: url(images/icons/laptop.png) no-repeat right 2px;
+  padding: 4px 27px 4px 0;
+}
+#EDNadmin .main_content .section_box .content .section_actions_mainimage {
+  background: #B5DEEB;
+  padding: 3px 10px;
+  border: 0;
+  border-top: 1px solid #f4f9fc;
+  text-align: right;
+  clear: both !important;
+}
+#EDNadmin .main_content .section_box .content .section_actions_mainimage a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+#EDNadmin .main_content .section_box .content .section_actions_mainimage a:hover {
+  color: white;
+}
+#EDNadmin .main_content .section_box .content .section_actions_mainimage a.icon.down_arrows {
+  background: url(images/icons/down_arrows.png) no-repeat right 2px;
+  padding: 0 19px 0 0;
+}
+#EDNadmin .main_content .section_box .content .section_actions_mainimage a.icon.up_arrows {
+  background: url(images/icons/up_arrows.png) no-repeat right 2px;
+  padding: 0 19px 0 0;
+}
+#EDNadmin .main_content .section_box .content .section_actions_mainimage a.icon.laptop {
+  background: url(images/icons/laptop.png) no-repeat right 2px;
+  padding: 4px 27px 4px 0;
+}
+#EDNadmin .main_content .section_box .content .section_actions_mainimage a.icon.close {
+  opacity: 1;
+  text-shadow: none;
+  float: none;
+}
+#EDNadmin .main_content .section_box .content .section_actions_mainimage .edit_fields input,
+#EDNadmin .main_content .section_box .content .section_actions_mainimage .edit_fields textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(images/textboxbgrd.png) repeat-x #fff;
+  font-size: 14px;
+  color: #464646;
+  margin: 5px 0 0;
+  padding: 2px 2px;
+  display: block;
+  height: 20px;
+  border: 1px #dbdbdb solid;
+  width: 200px;
+}
+#EDNadmin .main_content .section_box .content .section_actions_mainimage .edit_fields textarea {
+  width: 300px;
+  height: 100px;
+}
+#EDNadmin .main_content .section_box .content.category_selection .category_tree_view {
+  margin: 12px 20px;
+  padding: 0;
+}
+#EDNadmin .main_content .section_box .content.category_selection .category_tree_view .category_node input {
+  margin: 0 5px 0 0;
+}
+#EDNadmin .main_content .section_box .content.category_selection p.expand_collapse_container {
+  margin: 10px 0 0 30px;
+  padding: 0;
+  border: 0;
+  font: 10px/1.3 Arial;
+  color: #2E6491;
+}
+#EDNadmin .main_content .section_box .content.category_selection p.expand_collapse_container > a {
+  font: 10px/1.3 Arial;
+  color: #2E6491;
+}
+#EDNadmin .main_content .section_box .content.category_selection p.expand_collapse_container > a:hover {
+  text-decoration: underline;
+}
+#EDNadmin .main_content .section_box .content.category_selection > div > a {
+  display: none;
+}
+#EDNadmin .main_content .section_box .content.main_article_image .left_col {
+  float: left;
+  width: 156px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0 20px 20px;
+}
+#EDNadmin .main_content .section_box .content.main_article_image .left_col img {
+  border: 3px solid #fff;
+  float: right;
+  max-height: 150px;
+  max-width: 150px;
+}
+#EDNadmin .main_content .section_box .content.main_article_image .right_col {
+  float: right;
+  width: 520px;
+  margin: 0 17px 17px 0;
+}
+#EDNadmin .main_content .section_box .content.main_article_image .right_col p {
+  margin: 10px 0 0;
+  font-size: 12px;
+  padding: 0;
+}
+#EDNadmin .main_content .section_box .content.main_article_image .right_col .info_box {
+  margin: 20px 0 0;
+  border: 1px solid #fff;
+}
+#EDNadmin .main_content .section_box .content.main_article_image .right_col .info_box p {
+  margin: 0;
+  font-size: 12px;
+  padding: 8px 0 5px;
+}
+#EDNadmin .main_content .section_box .content.main_article_image .right_col .info_box .remove_img {
+  display: block;
+  background: url(images/remove_box_bg.png) no-repeat right center #a6a6a6;
+  height: 30px;
+  padding: 0 33px 0 6px;
+  border: 0 none;
+  font-size: 14px;
+  font-weight: bold;
+  float: right;
+  color: #fff;
+  text-transform: uppercase;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul {
+  margin: 20px auto;
+  padding: 0;
+  list-style-type: none;
+  width: 620px;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li {
+  overflow: hidden;
+  cursor: move;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .left {
+  background: url(images/gallery_list_left_bg.png) no-repeat;
+  float: left;
+  width: 6px;
+  height: 27px;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .middle {
+  background: url(images/gallery_list_middle_bg.png) repeat-x;
+  float: left;
+  width: 590px;
+  height: 27px;
+  overflow: hidden;
+  position: relative;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .middle p {
+  margin: 0;
+  padding: 0;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .middle .gallery_title {
+  float: left;
+  font-family: Verdana;
+  font-size: 12px;
+  padding: 6px 0 0 20px;
+  height: 19px;
+  width: 490px;
+  overflow: hidden;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .middle .gallery_title span {
+  font-size: 10px;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .middle .gallery_title.blue_dot {
+  background: url(images/icons/blue_dot.png) no-repeat 5px 10px;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .middle .gallery_title.yellow_dot {
+  background: url(images/icons/yellow_dot.png) no-repeat 5px 10px;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .middle .gallery_actions {
+  float: right;
+  height: 23px;
+  padding: 0 0 0 5px;
+  background: url(images/gallery_list_actions_left_bg.png) no-repeat 0 0;
+  margin: 2px 0 0;
+  overflow: hidden;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .middle .gallery_actions .border {
+  background: url(images/gallery_list_actions_border_bg.png) no-repeat 0 0;
+  margin: 2px 0 0;
+  display: block;
+  height: 21px;
+  width: 2px;
+  float: left;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .middle .gallery_actions .gallery_settings {
+  background: url(images/icons/edit.png) no-repeat 0 0;
+  display: block;
+  float: left;
+  height: 16px;
+  width: 16px;
+  margin: 4px 2px 0 0;
+  padding: 0;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .middle .gallery_actions .up_down_arrows {
+  background: url(images/icons/up_down_arrows.png) no-repeat center center;
+  display: block;
+  float: left;
+  height: 15px;
+  width: 10px;
+  margin: 2px 0 0;
+  padding: 2px 5px 1px;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .middle .gallery_actions .remove {
+  background: url(images/icons/red_cross.png) no-repeat right 3px;
+  display: block;
+  float: left;
+  height: 15px;
+  margin: 2px 0 0;
+  padding: 2px 17px 2px 5px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #808080;
+  overflow: hidden;
+  max-width: 85px;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .middle .gallery_actions .remove:hover {
+  color: #666;
+}
+#EDNadmin .main_content .section_box .content.included_galleries ul li .right {
+  background: url(images/gallery_list_right_bg.png) no-repeat;
+  float: left;
+  width: 6px;
+  height: 27px;
+}
+#EDNadmin .main_content .section_box .content .uploadify_container {
+  padding: 0;
+  margin: 20px 40px;
+  overflow: hidden;
+}
+#EDNadmin .main_content .section_box .content .uploadify_container span.dnnSecondaryAction {
+  display: none !important;
+}
+#EDNadmin .main_content .section_box .content .uploadify_container .start_upload {
+  display: block;
+  background: url(images/icons/start_upload.png) no-repeat 5px center #6eafd7;
+  border: 1px solid #c6dbea;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  padding: 11px 10px 0 72px;
+  height: 38px;
+  max-width: 130px;
+  overflow: hidden;
+  line-height: 30px;
+  float: left;
+}
+#EDNadmin .main_content .section_box .content .add_video_by_url {
+  border: 0;
+  display: block;
+  margin: 15px 0 0;
+  padding: 0 15px 0;
+  overflow: hidden;
+  clear: both;
+}
+#EDNadmin .main_content .section_box .content .add_video_by_url > p {
+  border: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+#EDNadmin .main_content .section_box .content .add_video_by_url > p span {
+  font: 11px Arial;
+  line-height: 1.3;
+  color: #12587d;
+  font-weight: bold;
+}
+#EDNadmin .main_content .section_box .content .add_video_by_url > p > input[type="text"] {
+  background: #f1f1f1;
+  border: 1px solid #fff;
+  padding: 3px;
+  width: 200px;
+  font-size: 11px;
+  color: #626262;
+  display: inline-block;
+  margin: 3px;
+  -webkit-box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  height: 15px;
+}
+#EDNadmin .main_content .section_box .content .add_video_by_url > p .add_video {
+  display: inline-block;
+  border: 0;
+  margin: 0 0 -32px;
+  padding: 0;
+  width: 25px;
+  height: 24px;
+  background: url(images/add_video_by_url_btn.png) no-repeat;
+  text-decoration: none;
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+  top: -16px;
+}
+#EDNadmin .main_content .section_box .content .add_video_by_url > p .add_video:hover {
+  text-decoration: none;
+}
+#EDNadmin .main_content .section_box .content .add_video_by_url > p.validators {
+  margin: 0;
+}
+#EDNadmin .main_content .section_box .content .add_video_by_url > p.validators span {
+  color: #f00;
+}
+#EDNadmin .main_content .section_box .content .edg_gallery_selection_container {
+  margin: 20px 40px;
+  padding: 0;
+  overflow: hidden;
+}
+#EDNadmin .main_content .section_box .content .edg_gallery_selection_container .category_and_gallery_selection {
+  width: 382px;
+  position: relative;
+  float: left;
+}
+#EDNadmin .main_content .section_box .content .edg_gallery_selection_container .category_and_gallery_selection .selection {
+  width: 368px;
+  height: 37px;
+  position: relative;
+}
+#EDNadmin .main_content .section_box .content .edg_gallery_selection_container .category_and_gallery_selection .selection.category {
+  background: url(images/gallery_selection_blue_bg.png);
+}
+#EDNadmin .main_content .section_box .content .edg_gallery_selection_container .category_and_gallery_selection .selection.gallery {
+  background: url(images/gallery_selection_green_bg.png);
+  margin: 3px 0 0;
+}
+#EDNadmin .main_content .section_box .content .edg_gallery_selection_container .category_and_gallery_selection .selection span {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+#EDNadmin .main_content .section_box .content .edg_gallery_selection_container .category_and_gallery_selection .selection select {
+  position: absolute;
+  top: 8px;
+  left: 150px;
+  padding: 2px 3px;
+  font-size: 14px;
+  width: 200px;
+}
+#EDNadmin .main_content .section_box .content .edg_gallery_selection_container .category_and_gallery_selection .refresh {
+  width: 26px;
+  height: 27px;
+  background: url(images/icons/refresh.png) no-repeat;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  z-index: 1;
+}
+#EDNadmin .main_content .section_box .content .edg_gallery_selection_container .actions {
+  float: left;
+  margin: 0 0 0 10px;
+}
+#EDNadmin .main_content .section_box .content .edg_gallery_selection_container .actions .add_gallery_to_article {
+  display: block;
+  width: 162px;
+  background: url(images/add_selected_gallery_bg.png) no-repeat #8fc400 right bottom;
+  height: 37px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 16px 0 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 20px 4px 5px;
+  border: 1px solid #fff;
+  overflow: hidden;
+}
+#EDNadmin .main_content .section_box .content .info_box {
+  border: 1px solid #fff;
+}
+#EDNadmin .main_content .section_box .content .info_box.add_gallery {
+  margin: 40px 30px;
+  height: 30px;
+}
+#EDNadmin .main_content .section_box .content .info_box.red_cross {
+  background-color: #e6e7e6;
+  background-color: rgba(230, 230, 230, 0.7);
+}
+#EDNadmin .main_content .section_box .content .info_box.check_sign {
+  background-color: #a3e136;
+  background-color: rgba(163, 225, 54, 0.7);
+}
+#EDNadmin .main_content .section_box .content .info_box .action {
+  border-left: 1px solid #fff;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table {
+  border: 1px solid #6d7d88;
+  box-shadow: 3px 3px 2px -3px #000;
+  -webkit-box-shadow: 3px 3px 2px -3px #000;
+  -moz-box-shadow: 3px 3px 2px -3px #000;
+  margin: 10px auto;
+  width: 700px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row {
+  background: #fff;
+  border: 1px solid #bed8e5;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row > td {
+  padding: 4px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row.second {
+  background: #e5f0f6;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td {
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.edit_fields input,
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.edit_fields textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(images/textboxbgrd.png) repeat-x #fff;
+  font-size: 14px;
+  color: #464646;
+  margin: 5px 0 0;
+  padding: 2px 2px;
+  display: block;
+  height: 20px;
+  border: 1px #dbdbdb solid;
+  width: 200px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.edit_fields textarea {
+  width: 300px;
+  margin: 0 0 0 10px;
+  height: 100px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.token_wrapper {
+  padding: 4px 0 0;
+  overflow: hidden;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.token_wrapper .start_token_generator {
+  display: block;
+  width: 97px;
+  height: 24px;
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
+  float: left;
+  background: url(images/token_editor_btn.png) no-repeat;
+  position: relative;
+  top: -4px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.token_wrapper .token_box {
+  background: url(images/token_box_pixel_bg.png) repeat-x #f1f1f1;
+  border: 0;
+  border-top: 1px solid #bdbdbd;
+  border-left: 1px solid #bdbdbd;
+  border-bottom: 1px solid #E0E0E0;
+  border-right: 1px solid #E0E0E0;
+  padding: 2px;
+  width: 575px;
+  font-size: 9px;
+  display: block;
+  margin: 0 5px 0 0;
+  float: left;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.action {
+  width: 170px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.action .image_localization {
+  position: relative;
+  top: 2px;
+  margin: 0 0 0 15px;
+  padding: 0 0 0 12px;
+  background: url(images/icons/localization_flag.png) no-repeat;
+  font-size: 10px;
+  font-family: Verdana;
+  color: #639dc3;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.action .image_localization:hover {
+  color: #316b91;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.action .action_btn {
+  display: block;
+  float: left;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.action .action_btn.article_img {
+  background: url(images/set_as_article_img_bg.png) no-repeat;
+  width: 97px;
+  height: 39px;
+  padding: 6px 0 0 42px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #317ea6;
+  text-decoration: none;
+  margin: 0;
+  line-height: normal;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.action .action_btn.article_img:hover {
+  color: #fff;
+  background-image: url(images/set_as_article_img_active_bg.png);
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.action .action_btn.edit {
+  background: url(images/icons/edit_vertical_box.png) no-repeat;
+  width: 24px;
+  height: 22px;
+  float: right;
+  clear: right;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.action .action_btn.delete {
+  background: url(images/icons/delete_vertical_box.png) no-repeat;
+  width: 24px;
+  height: 22px;
+  float: right;
+  clear: right;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.action .action_btn.update {
+  background: url(images/icons/save_rounded_left.png) no-repeat;
+  width: 27px;
+  height: 26px;
+  float: left;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.action .action_btn.cancel {
+  background: url(images/icons/cancel_rounded_right.png) no-repeat;
+  width: 30px;
+  height: 26px;
+  float: left;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.image {
+  width: 64px;
+  padding: 0 0 0 10px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.image .wrapper {
+  border: 1px solid #b8b9b9;
+  background: #fafafa;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 1px;
+  max-height: 60px;
+  max-width: 60px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.image .wrapper img {
+  border: 0;
+  padding: 0;
+  margin: auto;
+  max-height: 60px;
+  max-width: 60px;
+  display: block;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.title {
+  width: 165px;
+  padding: 0 0 0 10px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.description {
+  width: 170px;
+  padding: 0 0 0 10px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.position_show_type {
+  padding: 0 0 0 10px;
+  font-size: 10px;
+  color: #317ea6;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.position_show_type .action_box {
+  overflow: hidden;
+  margin: 0 0 5px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.position_show_type .action_box .action_wrapper {
+  float: right;
+  margin: 0 0 0 4px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.position_show_type .action_box .action_wrapper .item_state_checkbox {
+  background: url(images/icons/unchecked.png) no-repeat 0 0;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 16px;
+  height: 14px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.position_show_type .action_box .action_wrapper .item_state_checkbox.checked {
+  background-image: url(images/icons/checked.png);
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.position_show_type .action_box .action_wrapper .position_btn {
+  margin: 0;
+  padding: 0;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.position_show_type .action_box .action_wrapper .media_type {
+  display: block;
+  background: url(images/icons/media_type_icons.png) no-repeat 0 0;
+  width: 12px;
+  height: 16px;
+  font-size: 0;
+  line-height: 0;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.position_show_type .action_box .action_wrapper .media_type.image {
+  background-position: -24px 0;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.position_show_type .action_box .action_wrapper .media_type.audio {
+  background-position: -12px 0;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_row table td.position_show_type .action_box span.text {
+  margin: 0;
+  padding: 0;
+  float: right;
+  position: relative;
+  top: 1px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_table_header {
+  border-bottom: 2px solid #bed8e5;
+  background: url(images/gallery_items_header_bg.png) repeat-x bottom #63add5;
+  height: 35px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_table_header > th {
+  padding: 4px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_table_header > th table {
+  margin: 3px 0 0;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_table_header .header_field {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_table_header .header_field.action {
+  width: 170px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_table_header .header_field.image {
+  width: 74px;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_table_header .header_field.title {
+  width: 165px;
+  padding: 0 0 0 10px;
+  text-align: left;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .main_table_header .header_field.description {
+  width: 170px;
+  padding: 0 0 0 10px;
+  text-align: left;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .pagination span {
+  display: inline-block;
+  width: 25px;
+  height: 21px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  font-style: normal;
+  font-variant: normal;
+  margin-left: 1px;
+  margin-right: 1px;
+  text-decoration: none;
+  background: url(images/pagination_active_bg.png) no-repeat;
+  padding: 3px 0 0;
+  font-weight: bold;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .pagination a {
+  display: inline-block;
+  width: 25px;
+  height: 21px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #333;
+  font-style: normal;
+  font-variant: normal;
+  margin-left: 1px;
+  margin-right: 1px;
+  background: url(images/pagination_bg.png) no-repeat;
+  padding: 3px 0 0;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .pagination a:hover, #EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .pagination a:active, #EDNadmin .main_content .section_box .content .gallery_items_container .gallery_items_table .pagination a:visited {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  font-style: normal;
+  font-variant: normal;
+  text-decoration: none;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+#EDNadmin .main_content .section_box .content .rounded3dBox {
+  border: 1px solid #eceded;
+  background: #cccdcd;
+  box-shadow: 3px 3px 2px -3px #000;
+  -webkit-box-shadow: 3px 3px 2px -3px #000;
+  -moz-box-shadow: 3px 3px 2px -3px #000;
+  border-radius: 3px 3px 3px 3px;
+  margin: 5px 20px 20px;
+  padding: 10px;
+}
+#EDNadmin .main_content .section_box .content .rounded3dBox .aspNetDisabled span {
+  color: #A0A0A0;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox {
+  margin: 20px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox .documents_fine_uploader > .uploader {
+  display: none;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox .documents_fine_uploader > .uploadControls {
+  margin: 0;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox .documents_fine_uploader > .uploadControls > .actions {
+  margin-left: 137px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox .documents_fine_uploader > .uploadControls > .actions > .action.fileSelection {
+  margin: 0 15px 0 0;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox .documents_fine_uploader > .uploadDetails > .fileUploadList {
+  margin: 0 39px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox .documents_fine_uploader > .uploadDetails > .fileUploadList > li {
+  border-color: #8B8B8B;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox .documents_standard_uploader {
+  padding: 12px;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox .documents_standard_uploader > .file_selection {
+  margin-right: 10px;
+  vertical-align: top;
+  overflow: hidden;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox .documents_standard_uploader > .file_selection > .dnnInputFileWrapper {
+  float: none !important;
+  display: inline-block !important;
+  overflow: visible !important;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox .documents_standard_uploader > .file_selection > .dnnInputFileWrapper > .dnnSecondaryAction {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  color: #FFFFFF;
+  display: inline-block !important;
+  font: bold 14px/1.3 "Trebuchet MS", Arial, sans-serif;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: uppercase;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox .documents_standard_uploader > .upload_message {
+  color: #333;
+  font: 12px/1.3 Arial;
+  padding: 0;
+  margin: 0 0 8px;
+  border: 0;
+  text-align: center;
+  display: block;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox .documents_standard_uploader > .upload_message.error {
+  color: #D00000;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox > .documents_add_existing_container > div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox > .documents_add_existing_container > div > p {
+  font: 13px/1.3 Arial;
+  color: #464646;
+  padding: 0;
+  margin: 0 0 3px;
+  border: 0;
+  display: block;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox > .documents_add_existing_container > div > input {
+  font-size: 14px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox > .documents_add_existing_container > div.messages > p {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox > .documents_add_existing_container > div.messages span {
+  color: #333;
+  font: 12px/1.3 Arial;
+  display: block;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox > .documents_add_existing_container > div.messages span.error {
+  color: #D00000;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox > .documents_add_existing_container > .add_button {
+  margin: 14px 0 0;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox > .documents_add_existing_container > .search_by_document_title {
+  display: inline-block;
+  width: 300px;
+  float: left;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox > .documents_add_existing_container > .search_by_document_title > input {
+  width: 280px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox > .documents_add_existing_container > .search_by_document_id {
+  display: inline-block;
+  width: 150px;
+  float: left;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox > .documents_add_existing_container > .search_by_document_id > input {
+  width: 80px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .rounded3dBox > .documents_add_existing_container > .clear_float {
+  clear: both;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table {
+  margin: 0 auto 20px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table th.actions {
+  width: 62px;
+  text-align: center;
+  padding-left: 0;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table th.title_dscription {
+  width: 240px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table th.info {
+  width: 205px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table th.language {
+  width: 40px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table th.show {
+  width: 40px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table th.position {
+  width: 22px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table th.arrows {
+  width: 20px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td {
+  padding: 4px 0 4px 10px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.actions {
+  padding: 10px 0 0 4px;
+  vertical-align: top;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.title_dscription {
+  vertical-align: top;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.title_dscription > span {
+  font: 11px/1.3 Verdana, sans-serif;
+  color: #333;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.title_dscription > span.title {
+  margin: 0 0 5px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.title_dscription > span.description {
+  font-size: 10px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.title_dscription > input {
+  font: 11px/1.3 Arial, sans-serif;
+  margin: 5px 0 0;
+  width: 170px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info {
+  vertical-align: top;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info p,
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info p span,
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info p a {
+  font: 10px/1.3 Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info p {
+  display: block;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info p.document_link {
+  margin-bottom: 3px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info p.document_link a {
+  color: #003471;
+  text-decoration: none;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info p.document_link a:hover {
+  text-decoration: none;
+  color: #0074FF;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info p.document_link.already_in_use {
+  text-indent: 20px;
+  background: url(images/icons/chain.png) no-repeat 0 4px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info p.document_link.already_in_use a {
+  color: #d80e0e;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info p.document_link.already_in_use a:hover {
+  color: #FF3333;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info .replace_file {
+  margin: 5px 0 0;
+  padding: 0;
+  border: 0;
+  display: block;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info .replace_file p {
+  margin: 0 0 3px;
+  padding: 0;
+  border: 0;
+  display: block;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.info .replace_file p span {
+  font: 10px/1.3 Arial;
+  color: #333;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.language {
+  padding: 10px 0 0 5px;
+  text-align: center;
+  vertical-align: top;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.language span {
+  color: #333;
+  font: 10px/1.3 Verdana, sans-serif;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.language .language_selection_container {
+  text-align: left;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.language .language_selection_container span {
+  font-size: 0;
+  line-height: 0;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.language .language_selection_container span .ui-dropdownchecklist-text {
+  font: 11px/11px Arial;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.language .language_selection_container span .ui-dropdownchecklist-text .empty {
+  font: 11px/11px Arial;
+  color: #888;
+  font-style: italic;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.show {
+  vertical-align: top;
+  padding: 11px 0 0 17px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.position {
+  vertical-align: top;
+  padding: 9px 0 0;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.position span.rounded_inset_text_box {
+  font: 11px/1.3 Arial;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.position input {
+  width: 15px;
+  font: 11px/1.3 Arial, sans-serif;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table td.arrows {
+  vertical-align: top;
+  padding: 10px 0 0;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table.row_editing th.title_dscription {
+  width: 200px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table.row_editing th.info {
+  width: 164px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table.row_editing th.language {
+  width: 125px;
+}
+#EDNadmin .main_content .section_box .content.document_upload .grid_view_table.row_editing td.title_dscription > input {
+  width: 193px;
+}
+#EDNadmin .main_content .section_box .content.links_manager {
+  position: relative;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox {
+  margin: 10px 20px 20px;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox > a {
+  margin: 14px 0 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox > .new_link_settings {
+  width: 560px;
+  margin: 0;
+  float: left;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox > .new_link_settings > div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox > .new_link_settings > div > .field {
+  float: left;
+  margin: 0 15px 0 0;
+  padding: 0;
+  border: 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox > .new_link_settings > div > .field > label {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  border: 0;
+  font: 12px/1.3 Arial, Helvetica, sans-serif;
+  color: #333;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox > .new_link_settings > div > .field > input {
+  display: block;
+  width: 170px;
+  margin: 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox > .new_link_settings > div > .field > .urlControl {
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox > .new_link_settings > div > .field > .urlControl span {
+  font: 12px/1.3 Arial, ÔÇő Helvetica, ÔÇő sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox > .new_link_settings > div > .field > .urlControl select {
+  font: 12px/1.3 Arial, ÔÇőHelvetica, ÔÇősans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox > .new_link_settings > div > .field > .urlControl select > option {
+  padding: 2px;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox > .new_link_settings > div > .field.title > input {
+  width: 140px;
+}
+#EDNadmin .main_content .section_box .content.links_manager > .rounded3dBox > .new_link_settings > div.page > .field.title > input {
+  width: 130px;
+}
+#EDNadmin .main_content .section_box .content.links_manager > p.user_messages {
+  margin: 20px 0 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content.links_manager > p.user_messages span {
+  font: 12px/1.3 Arial;
+  color: #E80505;
+}
+#EDNadmin .main_content .section_box .content.links_manager > p.user_messages span.positive {
+  color: #30A02E;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table {
+  margin: 0 auto 20px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table th.actions {
+  width: 62px;
+  text-align: center;
+  padding-left: 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table th.title_description {
+  width: 200px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table th.link {
+  width: 250px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table th.language {
+  width: 45px;
+  padding-left: 0;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table th.target {
+  width: 45px;
+  padding-left: 0;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table th.position {
+  width: 22px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table th.arrows {
+  width: 20px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td {
+  padding: 4px 0 4px 6px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.actions {
+  padding: 10px 0 0 4px;
+  vertical-align: top;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.reccuring {
+  padding: 5px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.title_description {
+  vertical-align: top;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.title_description > span {
+  font: 11px/1.3 Verdana, sans-serif;
+  color: #333;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.title_description > span.title {
+  margin: 0 0 5px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.title_description > span.description {
+  font-size: 10px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.title_description > input {
+  font: 11px/1.3 Arial, sans-serif;
+  margin: 5px 0 0;
+  width: 150px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.link {
+  vertical-align: top;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.link p.link,
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.link p.link a {
+  font: 10px/1.3 Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.link p.link a {
+  color: #235c0d;
+  text-decoration: none;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.link p.link a:hover {
+  text-decoration: none;
+  color: #4DB725;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.link p.link.already_in_use {
+  text-indent: 20px;
+  background: url(images/icons/chain.png) no-repeat 0 4px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.link p.link.already_in_use a {
+  color: #d80e0e;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.link p.link.already_in_use a:hover {
+  color: #FF3333;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.link input {
+  font-size: 10px;
+  margin-top: 5px;
+  width: 146px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.link .urlControl {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.link .urlControl span {
+  font: 10px/1.3 Arial;
+  color: #333;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.link .urlControl select {
+  width: 150px !important;
+  margin: 5px auto 0;
+  display: block;
+  padding: 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.language {
+  padding: 10px 0 0 0;
+  text-align: center;
+  vertical-align: top;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.language span {
+  color: #333;
+  font: 10px/1.3 Verdana, sans-serif;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.language .language_selection_container {
+  text-align: left;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.language .language_selection_container span {
+  font-size: 0;
+  line-height: 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.language .language_selection_container span .ui-dropdownchecklist-text {
+  font: 11px/11px Arial;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.language .language_selection_container span .ui-dropdownchecklist-text .empty {
+  font: 11px/11px Arial;
+  color: #888;
+  font-style: italic;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.target {
+  vertical-align: top;
+  padding: 10px 0 0 0;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.target span {
+  color: #333;
+  font: 10px/1.3 Verdana, sans-serif;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.target select {
+  margin: 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.position {
+  vertical-align: top;
+  padding: 9px 0 0;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.position span.rounded_inset_text_box {
+  font: 11px/1.3 Arial;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.position input {
+  width: 15px;
+  font: 11px/1.3 Arial, sans-serif;
+  text-align: center;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table td.arrows {
+  vertical-align: top;
+  padding: 10px 0 0;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table.row_editing th.title_description {
+  width: 160px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table.row_editing th.link {
+  width: 155px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table.row_editing th.language {
+  width: 135px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table.row_editing th.target {
+  width: 95px;
+}
+#EDNadmin .main_content .section_box .content.links_manager .grid_view_table.row_editing td.title_description > input {
+  width: 153px;
+}
+#EDNadmin .main_content .section_box.light_green {
+  background-color: #dbf5cd;
+}
+#EDNadmin .main_content .section_box.light_green .section_box_title {
+  background-image: url(images/green_section_box_title_bg.png);
+}
+#EDNadmin .main_content .section_box.light_green .section_box_title span {
+  background-image: url(images/green_section_box_title_arrow.png);
+}
+#EDNadmin .main_content .section_box.light_green .section_actions {
+  background-color: #c5efae;
+  border-top: 1px solid #fff;
+}
+#EDNadmin .main_content .section_box.light_green .content .section_actions a {
+  color: #71ab32;
+}
+#EDNadmin .main_content .section_box.light_green .content .section_actions a:hover {
+  color: #5D8930;
+}
+#EDNadmin .main_content .section_box.light_green .content .section_actions a.icon.green_globe {
+  background: url(images/icons/globe_map_small_green.png) no-repeat right top;
+  padding: 0 40px 0 0;
+}
+#EDNadmin .main_content .section_box.light_green .content .info_box {
+  margin: 30px;
+}
+#EDNadmin .main_content .section_box.light_green .content .info_box p {
+  font-weight: bold;
+  color: #303030;
+}
+#EDNadmin .main_content .section_box.light_green .content .info_box .action.remove_btn {
+  margin: 0;
+}
+#EDNadmin .main_content .section_box.olive_green .section_box_title {
+  background-image: url(images/olive_green_section_box_title_bg.png);
+  background-color: #479454;
+}
+#EDNadmin .main_content .section_box.olive_green .section_box_title span {
+  background-image: url(images/olive_green_section_box_title_arrow.png);
+}
+#EDNadmin .main_content .section_box.orange .section_box_title {
+  background-image: url(images/orange_section_box_title_bg.png);
+  background-color: #479454;
+}
+#EDNadmin .main_content .section_box.orange .section_box_title span {
+  background-image: url(images/orange_section_box_title_arrow.png);
+}
+#EDNadmin .main_content .section_box.green_globe {
+  background-image: url(images/icons/globe_map_big_green.png);
+  background-repeat: no-repeat;
+  background-position: 28px 44px;
+}
+#EDNadmin .main_content .settings_table {
+  margin: 15px 0 0;
+}
+#EDNadmin .main_content .settings_table.no_margin {
+  margin: 0;
+}
+#EDNadmin .main_content .settings_table.w700 {
+  width: 700px;
+}
+#EDNadmin .main_content .settings_table.w700 .dnnLabel {
+  margin: 0;
+}
+#EDNadmin .main_content .settings_table .text_left {
+  text-align: left;
+  padding: 0 0 0 10px;
+}
+#EDNadmin .main_content .settings_table.eventregistration td.left {
+  width: 190px;
+}
+#EDNadmin .main_content .settings_table tr {
+  margin: 0 0 10px;
+  padding: 0;
+}
+#EDNadmin .main_content .settings_table tr td.left {
+  text-align: right;
+  width: 140px;
+  padding: 0 7px 12px 0;
+  float: none;
+}
+#EDNadmin .main_content .settings_table tr td.right {
+  text-align: left;
+  float: none;
+  padding: 0 0 12px;
+  float: none;
+}
+#EDNadmin .main_content .settings_table tr td input {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 0 2px 0 0;
+  background: #f4f4f4;
+  color: #464646;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+#EDNadmin .main_content .settings_table tr td input[type="submit"] {
+  background: -moz-linear-gradient(center top, #358EEA 0%, #2170CD 100%) repeat scroll 0 0 transparent;
+  background-color: #358EEA;
+  border-color: #0D569E;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.6), 0 1px 0 0 rgba(255, 255, 255, 0.4) inset;
+  color: #EFEFEF;
+  text-shadow: 0 -1px 0 #185B93;
+}
+#EDNadmin .main_content .settings_table tr td input[type="submit"]:hover {
+  background: -moz-linear-gradient(center top, #6CB6F3 0%, #4387D2 100%) repeat scroll 0 0 transparent;
+  border-color: #0D569E;
+  color: #FFFFFF;
+}
+#EDNadmin .main_content .settings_table tr td input[type="checkbox"] {
+  border: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 4px 0 0;
+  padding: 0;
+}
+#EDNadmin .main_content .settings_table tr td select {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 2px 0 0;
+  background: #f4f4f4;
+  color: #464646;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+#EDNadmin .main_content.category_manager .list_and_actions {
+  margin: 20px 0 0;
+  overflow: hidden;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .title {
+  font-size: 16px;
+  margin: 0 0 5px;
+  padding: 0;
+  color: #464646;
+  font-weight: normal;
+}
+#EDNadmin .main_content.category_manager .list_and_actions select {
+  float: left;
+  font-size: 14px;
+  color: #707070;
+  background: #fff;
+  border: 1px solid #cfd1d1;
+  height: 300px;
+  width: 400px;
+  padding: 0;
+  margin: 0;
+}
+#EDNadmin .main_content.category_manager .list_and_actions select option {
+  margin: 0 0 3px;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .actions {
+  float: left;
+  width: 150px;
+  height: 300px;
+  margin: 0 0 0 10px;
+  padding: 0;
+  overflow: hidden;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .actions .delete_msg {
+  clear: both;
+  display: block;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  color: #E60000;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .actions .action {
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  height: 26px;
+  width: 30px;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .actions .action.move_up {
+  margin-left: 30px;
+  background: url(images/icons/rounded_btn_up.png) no-repeat;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .actions .action.move_left {
+  background: url(images/icons/rounded_btn_left.png) no-repeat;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .actions .action.move_right {
+  background: url(images/icons/rounded_btn_right.png) no-repeat;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .actions .action.move_down {
+  background: url(images/icons/rounded_btn_down.png) no-repeat;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .actions .action.edit {
+  background: url(images/icons/rounded_btn_edit.png) no-repeat;
+  margin: 15px 0 0;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .actions .action.delete {
+  background: url(images/icons/rounded_btn_delete.png) no-repeat;
+  margin: 5px 0 0;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .actions .action.add {
+  background: url(images/icons/rounded_btn_add.png) no-repeat;
+  margin: 150px 0 0;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .actions .bottom_move_actions {
+  width: 90px;
+  height: 26px;
+  overflow: hidden;
+}
+#EDNadmin .main_content.category_manager .list_and_actions .actions .bottom_move_actions .action {
+  float: left;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper {
+  padding: 0 20px 20px;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .grey_box {
+  overflow: hidden;
+  margin: 20px 0 0;
+  border: 1px solid #fff;
+  background: #d9d9d9;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .grey_box h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 10px 10px 0 20px;
+  padding: 0;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .grey_box.category_image .left_col img {
+  max-width: 150px;
+  max-height: 100px;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .grey_box.category_image .right_col {
+  width: 485px;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .grey_box.category_image .right_col .upload {
+  margin: 20px 0 10px;
+  padding: 0;
+  overflow: hidden;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .grey_box.category_image .right_col .upload .image_selector {
+  float: left;
+  margin: 3px 0 0;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .grey_box.category_link {
+  padding: 10px 15px;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .grey_box.category_link ul {
+  margin: 15px 20px;
+  padding: 0;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .grey_box.category_link ul li {
+  list-style-type: none;
+  display: inline;
+  margin: 0 5px 0 0;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .text_input_set select.dropdown {
+  font-size: 14px;
+  color: #464646;
+  margin: 5px 0 0;
+  padding: 0;
+  display: block;
+  border: 1px #dbdbdb solid;
+  min-width: 200px;
+  max-width: 350px;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .text_input_set input.text {
+  width: 670px;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .main_actions {
+  margin: 30px 0 0;
+  overflow: hidden;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .main_actions input {
+  border: 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  float: left;
+  height: 36px;
+  cursor: pointer;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .main_actions .submit_btn {
+  display: inline-block;
+  height: 36px;
+  background: url(images/blue_add_left_bg.png) no-repeat;
+  margin: 0;
+  padding: 0 0 0 23px;
+  overflow: hidden;
+  text-decoration: none;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .main_actions .submit_btn:hover {
+  text-decoration: none;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .main_actions .submit_btn span {
+  font-size: 14px;
+  background: url(images/blue_add_right_bg.png) no-repeat right top;
+  display: inline-block;
+  padding: 8px 9px 10px 3px;
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .main_actions .cancel_btn {
+  background: url(images/grey_generic_btn_bg.png) no-repeat;
+  padding: 8px 0 0;
+  margin: 0;
+  width: 132px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  overflow: hidden;
+  height: 28px;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .main_actions .cancel_btn:hover {
+  text-decoration: none;
+}
+#EDNadmin .main_content.category_manager .section_box .add_edit_category .padded_wrapper .added_msg {
+  display: block;
+  margin: 20px 0 -15px 13px;
+  font-size: 16px;
+  color: #22A71F;
+  font-weight: bold;
+}
+#EDNadmin .main_content.gridview_content_manager {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper {
+  box-shadow: 3px 3px 2px -3px #000;
+  -webkit-box-shadow: 3px 3px 2px -3px #000;
+  -moz-box-shadow: 3px 3px 2px -3px #000;
+  border: 1px solid #999;
+  padding: 0;
+  margin: 32px 0 0;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper.eventmanager {
+  margin: 0;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .no_content_matched_filter {
+  text-align: center;
+  padding: 10px;
+  background: url(images/light_blue_gradient.png) repeat-x #86a9c0;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_toggle {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_toggle .filter_toggle {
+  display: block;
+  background: url(images/icons/down_arrows.png) no-repeat 10px 7px #d9e7f1;
+  padding: 0;
+  padding: 5px 10px 5px 30px;
+  font-size: 12px;
+  color: #555;
+  text-decoration: none;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_toggle .filter_toggle:hover {
+  color: #232334;
+  background-color: #e0eef8;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_toggle .filter_toggle.open {
+  background-image: url(images/icons/up_arrows.png);
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_settings {
+  padding: 8px 5px 5px;
+  margin: 0;
+  overflow: hidden;
+  background: #d9e7f1;
+  display: none;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_settings select {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 2px 0 0;
+  background: #f4f4f4;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_settings.open {
+  display: block;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_settings .filter_list {
+  float: left;
+  width: 400px;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_settings .filter_list div {
+  margin: 0 0 5px;
+  padding: 0;
+  font-size: 14px;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_settings .filter_list div .checkbox {
+  display: block;
+  float: left;
+  position: relative;
+  top: 0;
+  width: 180px;
+  text-align: right;
+  padding: 0 3px 0 0;
+  font-size: 12px;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_settings .filter_list div select {
+  margin: 0 0 0 5px;
+  max-width: 200px;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_settings .filter_list div.dis_box {
+  font-weight: bold;
+  color: #555555;
+  margin: 2px 0;
+  padding: 5px;
+  background: #e6e6e6;
+  border: 1px solid #fff;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_settings .filter_list div.enbl_box {
+  font-weight: bold;
+  color: #555555;
+  margin: 2px 0;
+  padding: 5px;
+  background: #D6E4e1;
+  border: 1px solid #fff;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_settings .order_list {
+  float: left;
+  width: 265px;
+  padding: 0 0 0 15px;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_settings .order_list p {
+  font-size: 14px;
+  margin: 0 0 5px;
+  padding: 0;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .content_filter_settings .order_list .actions {
+  margin: 0;
+  padding: 35px 0 0;
+  clear: both;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table {
+  border: 0;
+  box-shadow: 0 0 0 -3px #000;
+  -webkit-box-shadow: 0 0 0 -3px #000;
+  -moz-box-shadow: 0 0 0 -3px #000;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-top: 1px solid #999;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.header_row th.check_content {
+  width: 22px;
+  padding: 0;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.header_row th a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row {
+  background: #f2f2f2;
+  border: 1px solid #fff;
+  display: table-row;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row:before, #EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row:after {
+  content: none !important;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td {
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+  color: #464646;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td .clear_floated {
+  overflow: hidden;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td.check_content {
+  background: #e1e1e1;
+  padding: 0 0 0 4px;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td.check_content input {
+  margin: 0;
+  position: relative;
+  top: 2px;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td a.action_set {
+  display: block;
+  height: 26px;
+  float: left;
+  position: relative;
+  z-index: 10;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td a.action_set.tripple.edit {
+  background: url(images/icons/rounded_box_set_edit.png);
+  width: 28px;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td a.action_set.tripple.delete {
+  background: url(images/icons/rounded_box_set_delete.png);
+  width: 29px;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td a.action_set.tripple.view {
+  background: url(images/icons/rounded_box_set_view.png);
+  width: 29px;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td a.action_set.pair.edit {
+  width: 27px;
+  background: url(images/icons/pencil_rounded_left.png) no-repeat;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td a.action_set.pair.delete {
+  width: 30px;
+  background: url(images/icons/red_x_rounded_right.png) no-repeat;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td a.action_set.pair.save {
+  width: 27px;
+  background: url(images/icons/save_rounded_left.png) no-repeat;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td a.action_set.pair.cancel {
+  width: 30px;
+  background: url(images/icons/cancel_rounded_right.png) no-repeat;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td div.action_set.underbuttons {
+  position: relative;
+  z-index: 9;
+  top: -3px;
+  margin: 0;
+  overflow: hidden;
+  clear: both;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td div.action_set.underbuttons a {
+  display: block;
+  height: 24px;
+  float: left;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td div.action_set.underbuttons a.tripple.comments {
+  width: 25px;
+  background: url(images/icons/comments_under_left.png) no-repeat;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td div.action_set.underbuttons a.tripple.create_as_new {
+  width: 26px;
+  background: url(images/icons/new_content_under_middle.png) no-repeat;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td div.action_set.underbuttons a.tripple.localization {
+  width: 29px;
+  background: url(images/icons/localization_under_right.png) no-repeat;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td .checkbox_action {
+  display: block;
+  width: 90px;
+  height: 18px;
+  background: url(images/rounded_box_grey.png) no-repeat;
+  padding: 0;
+  margin: 0 auto 1px;
+  text-decoration: none;
+  line-height: normal;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td .checkbox_action:hover {
+  text-decoration: none;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td .checkbox_action .icon {
+  display: block;
+  font-size: 12px;
+  color: #363636;
+  padding: 2px 0 0 7px;
+  width: 78px;
+  height: 18px;
+  background: no-repeat right 2px;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td .checkbox_action .icon.unchecked {
+  background-image: url(images/icons/unchecked.png);
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td .checkbox_action .icon.checked {
+  background-image: url(images/icons/checked.png);
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td .checkbox_action.button .icon {
+  text-align: center;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row td .checkbox_action.button:hover .icon {
+  color: #000;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row.second {
+  background: #e6e6e6;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row.second td.check_content {
+  background: #d9d9d9;
+}
+#EDNadmin .main_content.gridview_content_manager .content_wrapper .grid_view_table tr.row:hover td.check_content {
+  background: #c5d3dd;
+}
+#EDNadmin .main_content.gridview_content_manager .standalone_message {
+  overflow: hidden;
+  text-align: center;
+  margin: 30px 0 0;
+}
+#EDNadmin .main_content.gridview_content_manager.approve_comments .grid_view_table tr.header_row th.actions {
+  width: 90px;
+}
+#EDNadmin .main_content.gridview_content_manager.approve_comments .grid_view_table tr.header_row th.author {
+  width: 90px;
+}
+#EDNadmin .main_content.gridview_content_manager.approve_comments .grid_view_table tr.header_row th.stats {
+  width: 100px;
+}
+#EDNadmin .main_content.gridview_content_manager.approve_comments .grid_view_table tr.header_row th.article_title {
+  width: 100px;
+}
+#EDNadmin .main_content.gridview_content_manager.approve_comments .grid_view_table tr.row {
+  display: table-row;
+}
+#EDNadmin .main_content.gridview_content_manager.approve_comments .grid_view_table tr.row:before, #EDNadmin .main_content.gridview_content_manager.approve_comments .grid_view_table tr.row:after {
+  content: none !important;
+}
+#EDNadmin .main_content.gridview_content_manager.approve_comments .grid_view_table tr.row td .checkbox_action {
+  margin: 5px 0 0;
+}
+#EDNadmin .main_content.gridview_content_manager.approve_comments .grid_view_table tr.row td.comment {
+  font-size: 12px;
+}
+#EDNadmin .main_content.gridview_content_manager.approve_comments .grid_view_table tr.row td.comment textarea {
+  min-height: 135px;
+  min-width: 300px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .eventmanager .eventtitle {
+  font-size: 20px;
+  color: #707070;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .eventmanager .controltitle {
+  font-size: 20px;
+  color: #959595;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .eventmanager .breadcrumbs {
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .eventmanager .breadcrumbs a {
+  font-size: 13px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.header_row th.check_article {
+  width: 22px;
+  padding: 0;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.header_row th.actions {
+  width: 90px;
+  padding-left: 0;
+  text-align: center;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.header_row th.title {
+  width: 225px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.header_row th.dates {
+  width: 147px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.header_row th.author {
+  width: 80px;
+  text-align: center;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.header_row th.stats {
+  width: 71px;
+  padding-left: 0;
+  text-align: center;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.header_row th.state_actions {
+  text-align: center;
+  padding-left: 0;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row {
+  display: table-row;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row:before, #EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row:after {
+  content: none !important;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td div.action_set.underbuttons {
+  margin: 0 0 0 6px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.title {
+  font-size: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.title .article_img {
+  padding: 1px;
+  border: 1px solid #b5b5b5;
+  background: #fff;
+  font-size: 0;
+  line-height: 0;
+  margin: 3px 0 2px 5px;
+  max-height: 40px;
+  max-width: 40px;
+  overflow: hidden;
+  float: right;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.title .article_img img {
+  max-height: 40px;
+  max-width: 40px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.dates {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.dates .date {
+  display: block;
+  width: 147px;
+  height: 15px;
+  background: url(images/rounded_box_white_big.png) no-repeat;
+  padding: 0;
+  margin: 0 0 2px;
+  line-height: normal;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.dates .date .icon {
+  font-size: 10px;
+  color: #a1a1a1;
+  padding: 0 0 0 16px;
+  background: url(images/icons/calendar_green.png) no-repeat 4px 1px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.dates .date .icon.red {
+  background-image: url(images/icons/calendar_red.png);
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.dates .date .icon.blue {
+  background-image: url(images/icons/calendar_blue.png);
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.dates .date .icon.orange {
+  background-image: url(images/icons/calendar_orange.png);
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.author .user {
+  background: url(images/icons/person.png) no-repeat left top;
+  margin: 0;
+  padding: 0 0 0 20px;
+  text-align: left;
+  color: #333;
+  height: 20px;
+  line-height: 10px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.author .EventArticle {
+  background: url(images/icons/article_event_icon.png) no-repeat left center;
+  display: block;
+  margin: 0;
+  padding: 0 0 0 20px;
+  height: 20px;
+  text-align: left;
+  line-height: 20px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.author .PermissionsPerArticle {
+  background: url(images/icons/article_permissions_icon.png) no-repeat left center;
+  display: block;
+  margin: 0;
+  padding: 0 0 0 20px;
+  height: 20px;
+  text-align: left;
+  line-height: 20px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.stats {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.stats .stat {
+  display: block;
+  width: 61px;
+  height: 15px;
+  background: url(images/rounded_box_white_small.png) no-repeat;
+  padding: 0;
+  margin: 0 0 2px;
+  text-align: left;
+  line-height: normal;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.stats .stat .icon {
+  font-size: 10px;
+  color: #333;
+  padding: 0 0 0 16px;
+  background: no-repeat 4px 1px;
+  font-size: 10px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.stats .stat .icon.views {
+  background-image: url(images/icons/eye.png);
+  background-position: 3px 2px;
+  padding-left: 22px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.stats .stat .icon.stars {
+  background-image: url(images/icons/star.png);
+  background-position: 4px 0;
+  padding-left: 20px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.stats .stat .icon.comments {
+  background-image: url(images/icons/comments.png);
+  padding-left: 20px;
+}
+#EDNadmin .main_content.gridview_content_manager.article_manager .content_wrapper .grid_view_table tr.row td.state_actions {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#EDNadmin .main_content.gridview_content_manager.tag_editor td {
+  font-size: 14px;
+}
+#EDNadmin .main_content.token_editor .grid_view_table {
+  margin: 0;
+  width: 712px;
+}
+#EDNadmin .main_content.token_editor .grid_view_table .header_row .actions {
+  width: 53px;
+}
+#EDNadmin .main_content.token_editor .grid_view_table .token_info {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#EDNadmin .main_content.token_editor .grid_view_table .token_info p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  padding: 0;
+}
+#EDNadmin .main_content.token_editor .grid_view_table .token_info p.title {
+  font-weight: bold;
+  font-size: 12px;
+  margin: 0;
+}
+#EDNadmin .main_content.token_editor .grid_view_table .token_info p input.token {
+  padding: 2px;
+  font-size: 12px;
+  width: 500px;
+  color: #666;
+}
+#EDNadmin .main_content.token_editor .grid_view_table .token_info p textarea {
+  width: 624px;
+  font-size: 12px;
+  padding: 3px;
+  color: #666;
+}
+#EDNadmin .main_content.token_editor .section_box .padded_wrapper {
+  padding: 0 20px 20px;
+}
+#EDNadmin .main_content.token_editor .section_box .padded_wrapper .text_input_set input.text, #EDNadmin .main_content.token_editor .section_box .padded_wrapper .text_input_set textarea {
+  width: 660px;
+}
+#EDNadmin .main_content.token_editor .section_box .padded_wrapper .main_actions {
+  margin: 30px 0 0;
+  overflow: hidden;
+}
+#EDNadmin .main_content.token_editor .section_box .padded_wrapper .main_actions .submit_btn {
+  display: inline-block;
+  height: 36px;
+  background: url(images/blue_add_left_bg.png) no-repeat;
+  margin: 0;
+  padding: 0 0 0 23px;
+  overflow: hidden;
+  text-decoration: none;
+}
+#EDNadmin .main_content.token_editor .section_box .padded_wrapper .main_actions .submit_btn:hover {
+  text-decoration: none;
+}
+#EDNadmin .main_content.token_editor .section_box .padded_wrapper .main_actions .submit_btn span {
+  font-size: 14px;
+  background: url(images/blue_add_right_bg.png) no-repeat right top;
+  display: inline-block;
+  padding: 8px 9px 10px 3px;
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+#EDNadmin .main_content .tabbed_container {
+  width: 100%;
+  margin: 25px 0 0;
+}
+#EDNadmin .main_content .tabbed_container .tabs {
+  text-align: center;
+  position: relative;
+  top: 1px;
+}
+#EDNadmin .main_content .tabbed_container .tabs a {
+  color: #252525;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 4px 10px;
+  border: 0;
+  border-left: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+#EDNadmin .main_content .tabbed_container .tabs a.active, #EDNadmin .main_content .tabbed_container .tabs a:hover {
+  background: #e3e3e3;
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+#EDNadmin .main_content .tabbed_container .content {
+  padding: 10px;
+  border: 1px solid #fff;
+  background: #e3e3e3;
+}
+#EDNadmin .main_content .main_action_buttons {
+  margin: 30px -32px -32px;
+  background: url(images/main_actions_bg.png) repeat-x #f4f4f4;
+  padding: 10px;
+  position: relative;
+}
+#EDNadmin .main_content .main_action_buttons .social_sharing_box {
+  position: absolute;
+  left: auto;
+  right: 15px;
+  background: url(images/post_on_social_bg.png) repeat-x #f4f4f4;
+  padding: 6px 10px 5px;
+  border: 1px solid #c1c1c1;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 205px;
+  bottom: 100%;
+  margin-bottom: -45px;
+}
+#EDNadmin .main_content .main_action_buttons .social_sharing_box p {
+  margin: 0 0 5px;
+  padding: 0;
+  border: 0;
+  display: block;
+  font: 12px Arial;
+  color: #464646;
+  line-height: 14px;
+  overflow: hidden;
+}
+#EDNadmin .main_content .main_action_buttons .social_sharing_box p input {
+  margin: 0 4px 0 0;
+  padding: 0;
+  border: 0;
+  position: relative;
+}
+#EDNadmin .main_content .main_action_buttons .social_sharing_box p select {
+  margin: 0;
+  padding: 0;
+  font: 11px Arial;
+  float: right;
+  width: 130px;
+}
+#EDNadmin .main_content .main_action_buttons .button_list {
+  width: 100%;
+  margin: 25px auto 5px;
+  overflow: hidden;
+}
+#EDNadmin .main_content .main_action_buttons .button_list.right {
+  text-align: right;
+}
+#EDNadmin .main_content .main_action_buttons .button_list.center {
+  text-align: center;
+}
+#EDNadmin .main_content .main_action_buttons .button_list.no_margin {
+  margin: 0;
+}
+#EDNadmin .main_content .main_action_buttons .button_list.w_565 {
+  width: 565px;
+}
+#EDNadmin .main_content .main_action_buttons .checkbox_list {
+  margin: 0 0 0 115px;
+}
+#EDNadmin .main_content .main_action_buttons .checkbox_list td {
+  width: 120px;
+}
+#EDNadmin .main_content .main_action_buttons .delete_article_btn {
+  display: inline-block;
+  height: 24px;
+  padding: 0 9px 0 0;
+  background: url(images/main_action_red_x_bg_right.png) no-repeat right top;
+  border: 0;
+  text-decoration: none;
+}
+#EDNadmin .main_content .main_action_buttons .delete_article_btn span {
+  color: #6e6e6e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  background: url(images/main_action_red_x_bg_left.png) no-repeat left top;
+  padding: 5px 0px 4px 26px;
+  margin: 0;
+  display: inline-block;
+  font-weight: bold;
+}
+#EDNadmin .main_content .urlControl .dnnClear span, #EDNadmin .main_content .urlControl .dnnClear div, #EDNadmin .main_content .urlControl .dnnClear select {
+  margin: 5px 0 0;
+}
+#EDNadmin .module_settings {
+  background: #fafafa;
+  border-radius: 10px 10px 10px 10px;
+}
+#EDNadmin .module_settings h1 {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  padding: 0;
+  margin: 10px 0 10px 10px;
+  padding: 10px 0 0;
+}
+#EDNadmin .module_settings .expand_collapse_buttons {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 12px;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  right: 0;
+}
+#EDNadmin .module_settings .expand_collapse_buttons a {
+  font-size: 14px;
+  color: #000;
+}
+#EDNadmin .module_settings .settings_source_selection {
+  min-height: 50px;
+  position: relative;
+  margin: 0 10px 10px;
+  font-size: 14px;
+}
+#EDNadmin .module_settings .settings_source_selection .enable_global_editing {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #f00;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#EDNadmin .module_settings .settings_crossportal_selection {
+  margin: 0 10px 10px;
+  font-size: 14px;
+}
+#EDNadmin .module_settings .settings_category_container {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#EDNadmin .module_settings .settings_category_container .cfmultielements {
+  border: 1px solid #CCCCCC;
+  box-shadow: 3px 3px 2px -3px black;
+  margin: auto auto 20px;
+  padding-bottom: 10px;
+  width: 740px;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #F6F6F6;
+}
+#EDNadmin .module_settings .settings_category_container .category_toggle {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  background: url(images/module_settings_cat_toggle_bg.png) repeat-x 0 0;
+  overflow: hidden;
+  height: 34px;
+}
+#EDNadmin .module_settings .settings_category_container .category_toggle h2 {
+  color: #3399cc;
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+  font-weight: normal;
+  margin: 6px 0 0 7px;
+  padding: 0;
+  float: left;
+  line-height: normal;
+}
+#EDNadmin .module_settings .settings_category_container .category_toggle h2.paging {
+  float: right;
+  margin-right: 10px;
+}
+#EDNadmin .module_settings .settings_category_container .category_toggle .section_number {
+  float: left;
+  width: 26px;
+  padding: 6px 0 0 0;
+  height: 21px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  background: url(images/module_settings_cat_num_bg.png) no-repeat 0 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 4px 0 0 4px;
+  line-height: normal;
+}
+#EDNadmin .module_settings .settings_category_container .category_toggle table {
+  padding: 0;
+  float: right;
+  margin: 9px 5px 0 0;
+}
+#EDNadmin .module_settings .settings_category_container .category_toggle table td {
+  padding: 0 15px 0 0;
+}
+#EDNadmin .module_settings .settings_category_container .category_toggle table td input {
+  margin: 0 2px 0 0;
+  position: relative;
+  top: 2px;
+}
+#EDNadmin .module_settings .settings_category_container .category_toggle:hover {
+  cursor: pointer;
+}
+#EDNadmin .module_settings .settings_category_container .category_toggle:hover h2 {
+  color: #0d70a1;
+}
+#EDNadmin .module_settings .settings_category_container .category_content {
+  padding: 10px 0 0;
+  background: url(images/module_settings_cat_content_bg.png) repeat-x;
+  border-top: 1px solid #ccc;
+  margin: 0 0 20px;
+}
+#EDNadmin .module_settings .settings_category_container .category_content .subsections {
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 8px 0 0;
+  padding: 0 10px;
+}
+#EDNadmin .module_settings .settings_category_container.collapsed .category_content {
+  display: none;
+}
+#EDNadmin .module_settings .settings_category_container.last.collapsed .category_toggle {
+  border: 1px solid #ccc;
+}
+#EDNadmin .module_settings .settings_category_container.last.opening .category_toggle {
+  border-bottom: 0;
+}
+#EDNadmin .module_settings span.msgCFgroup {
+  color: #066AA3;
+  background-color: #EFEFEF;
+  border: 1px solid #CCCCCC;
+  display: block;
+  font-weight: bold;
+  margin: auto;
+  padding: 2px;
+  text-align: center;
+  width: 98%;
+  border-radius: 3px 3px 3px 3px;
+}
+#EDNadmin .module_settings .settings_table {
+  width: 100%;
+}
+#EDNadmin .module_settings .settings_table .publishdateselect {
+  float: left;
+  margin-right: 5px;
+  padding-bottom: 3px;
+}
+#EDNadmin .module_settings .settings_table .desPublishDate {
+  float: left;
+  margin-right: 5px;
+}
+#EDNadmin .module_settings .settings_table .desPublishTime {
+  float: left;
+}
+#EDNadmin .module_settings .settings_table.customfileds {
+  margin-bottom: 10px;
+}
+#EDNadmin .module_settings .settings_table.customfileds td.left {
+  width: 180px;
+}
+#EDNadmin .module_settings .settings_table tr.second {
+  background: #f1f1f1;
+}
+#EDNadmin .module_settings .settings_table tr.subheader {
+  background-color: #e6f2f8;
+  border-top: 1px solid #c8dff4;
+  border-bottom: 1px solid #c8dff4;
+}
+#EDNadmin .module_settings .settings_table tr.subheader h4 {
+  line-height: 36px;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  color: #245e88;
+}
+#EDNadmin .module_settings .settings_table tr .hidden_coll {
+  display: none;
+}
+#EDNadmin .module_settings .settings_table tr td.center_text {
+  text-align: center;
+}
+#EDNadmin .module_settings .settings_table tr td input {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 2px 0 0;
+  background: #f4f4f4;
+  color: #464646;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+#EDNadmin .module_settings .settings_table tr td input[type="submit"] {
+  background: -moz-linear-gradient(center top, #358EEA 0%, #2170CD 100%) repeat scroll 0 0 transparent;
+  background-color: #358EEA;
+  border-color: #0D569E;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.6), 0 1px 0 0 rgba(255, 255, 255, 0.4) inset;
+  color: #EFEFEF;
+  text-shadow: 0 -1px 0 #185B93;
+}
+#EDNadmin .module_settings .settings_table tr td input[type="submit"]:hover {
+  background: -moz-linear-gradient(center top, #6CB6F3 0%, #4387D2 100%) repeat scroll 0 0 transparent;
+  border-color: #0D569E;
+  color: #FFFFFF;
+}
+#EDNadmin .module_settings .settings_table tr td input[type="checkbox"] {
+  border: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 3px 0 0;
+  padding: 0;
+}
+#EDNadmin .module_settings .settings_table tr td select {
+  font-size: 12px;
+  padding: 2px 4px;
+  margin: 2px 0 0;
+  background: #f4f4f4;
+  color: #464646;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+#EDNadmin .module_settings .settings_table tr td.left {
+  text-align: right;
+  width: 300px;
+  padding: 5px 10px 4px 0;
+  float: none;
+  vertical-align: top;
+}
+#EDNadmin .module_settings .settings_table tr td.right {
+  text-align: left;
+  padding: 5px 0 4px;
+  float: none;
+}
+#EDNadmin .module_settings .settings_table.permissions {
+  width: auto;
+  border: 0;
+  background: #fff;
+  margin: 5px 0 0;
+}
+#EDNadmin .module_settings .settings_table.permissions tbody {
+  border: 0;
+}
+#EDNadmin .module_settings .settings_table.permissions tbody tr {
+  border: 0;
+}
+#EDNadmin .module_settings .settings_table.permissions tbody tr td {
+  border: 0;
+  padding: 3px;
+  vertical-align: top;
+  text-align: center;
+}
+#EDNadmin .module_settings .settings_table.permissions tbody tr td .permissions_show_all_items,
+#EDNadmin .module_settings .settings_table.permissions tbody tr td .permissions_show_manual_item_selection,
+#EDNadmin .module_settings .settings_table.permissions tbody tr td .permissions_show_no_items {
+  display: block;
+  text-align: left;
+  width: 120px;
+}
+#EDNadmin .module_settings .settings_table.permissions tbody tr td .permissions_show_all_items label,
+#EDNadmin .module_settings .settings_table.permissions tbody tr td .permissions_show_manual_item_selection label,
+#EDNadmin .module_settings .settings_table.permissions tbody tr td .permissions_show_no_items label {
+  font-size: 10px;
+}
+#EDNadmin .module_settings .settings_table.permissions tbody tr td .permissions_show_all_items input[type="radio"],
+#EDNadmin .module_settings .settings_table.permissions tbody tr td .permissions_show_manual_item_selection input[type="radio"],
+#EDNadmin .module_settings .settings_table.permissions tbody tr td .permissions_show_no_items input[type="radio"] {
+  border: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+#EDNadmin .module_settings .settings_table.permissions tbody tr td .permissions_manual_item_selection {
+  padding: 10px 0 0;
+  overflow: hidden;
+}
+#EDNadmin .module_settings .settings_table.permissions tbody tr td .permissions_manual_item_selection .permissions_show_selection_dialog {
+  float: left;
+  font-size: 10px;
+}
+#EDNadmin .module_settings .settings_table.permissions tbody tr td .permissions_manual_item_selection .selected_categories {
+  width: 100px;
+  height: 100px;
+  border: 0;
+  background: transparent;
+  resize: none;
+  float: left;
+  margin: 5px 0 0;
+  overflow: scroll;
+  font-size: 10px;
+}
+#EDNadmin .module_settings .settings_table.permissions tbody tr th {
+  border: 0;
+  font-size: 9px;
+  vertical-align: bottom;
+  padding: 0 0 3px;
+}
+#EDNadmin .module_settings .settings_table.permissionsNotifications {
+  width: auto;
+  border: 0;
+  background: #fff;
+  margin: 5px 0 0;
+}
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody {
+  border: 0;
+}
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody tr {
+  border: 0;
+}
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody tr td {
+  border: 0;
+  padding: 7px;
+  vertical-align: top;
+  text-align: center;
+}
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody tr td .permissions_show_all_items,
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody tr td .permissions_show_manual_item_selection,
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody tr td .permissions_show_no_items {
+  display: block;
+  text-align: left;
+  width: 120px;
+}
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody tr td .permissions_show_all_items label,
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody tr td .permissions_show_manual_item_selection label,
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody tr td .permissions_show_no_items label {
+  font-size: 12px;
+}
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody tr td .permissions_manual_item_selection {
+  padding: 10px 0 0;
+  overflow: hidden;
+}
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody tr td .permissions_manual_item_selection .permissions_show_selection_dialog {
+  float: left;
+  font-size: 12px;
+}
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody tr td .permissions_manual_item_selection .selected_categories {
+  width: 100px;
+  height: 100px;
+  border: 0;
+  background: transparent;
+  resize: none;
+  float: left;
+  margin: 5px 0 0;
+  overflow: scroll;
+  font-size: 12px;
+}
+#EDNadmin .module_settings .settings_table.permissionsNotifications tbody tr th {
+  border: 0;
+  font-size: 12px;
+}
+#EDNadmin .module_settings .first_coll_fixed_table {
+  overflow: hidden;
+}
+#EDNadmin .module_settings .first_coll_fixed_table .fixed_table {
+  width: 95px;
+  overflow: hidden;
+  float: left;
+  padding: 0;
+  box-shadow: 5px 0 4px -5px #000;
+  -webkit-box-shadow: 5px 0 4px -5px #000;
+  -moz-box-shadow: 5px 0 4px -5px #000;
+  position: relative;
+  z-index: 1;
+}
+#EDNadmin .module_settings .first_coll_fixed_table .fixed_table tr {
+  background: #E6EDF4;
+}
+#EDNadmin .module_settings .first_coll_fixed_table .fixed_table tr th.header_cell {
+  background: #fff;
+}
+#EDNadmin .module_settings .first_coll_fixed_table .fixed_table tr td {
+  text-align: right !important;
+  vertical-align: middle !important;
+  padding: 3px 6px 3px 3px !important;
+}
+#EDNadmin .module_settings .first_coll_fixed_table .fixed_table tr td span {
+  font-size: 10px;
+  font-weight: normal;
+  color: #434343;
+  text-shadow: 1px 1px #FFF;
+}
+#EDNadmin .module_settings .first_coll_fixed_table .fixed_table tr td p {
+  width: 86px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#EDNadmin .module_settings .first_coll_fixed_table .fixed_table tr.second {
+  background: #D1DEE8;
+}
+#EDNadmin .module_settings .first_coll_fixed_table .fixed_table tr.second td span {
+  text-shadow: 1px 1px #E8E8E8;
+}
+#EDNadmin .module_settings .first_coll_fixed_table .second_table_viewport {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 705px;
+  overflow: hidden;
+}
+#EDNadmin .module_settings .first_coll_fixed_table.permissionsNotifications > .second_table_viewport {
+  width: 639px;
+}
+#EDNadmin .module_settings .main_actions {
+  margin: 15px 0 0;
+}
+#EDNadmin .module_settings .main_actions p {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin: 0 0 5px;
+}
+#EDNadmin .module_settings .main_actions .buttons {
+  text-align: center;
+}
+#EDNadmin .module_settings .main_actions .buttons input {
+  font-size: 12px;
+  padding: 5px 10px;
+  margin: 4px 0 0;
+  background: #f4f4f4;
+  border: 1px solid #858585;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+  background: -moz-linear-gradient(center top, #358EEA 0%, #2170CD 100%) repeat scroll 0 0 transparent;
+  background-color: #358EEA;
+  border-color: #0D569E;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.6), 0 1px 0 0 rgba(255, 255, 255, 0.4) inset;
+  color: #EFEFEF;
+  text-shadow: 0 -1px 0 #185B93;
+}
+#EDNadmin .module_settings .main_actions .buttons input:hover {
+  background: -moz-linear-gradient(center top, #6CB6F3 0%, #4387D2 100%) repeat scroll 0 0 transparent;
+  border-color: #0D569E;
+  color: #FFFFFF;
+}
+#EDNadmin .module_settings .load_presets {
+  margin: 15px 0 0;
+}
+#EDNadmin .module_settings .load_presets .center {
+  text-align: center;
+}
+#EDNadmin .module_settings .load_presets .settings_table tr td.left {
+  vertical-align: top;
+}
+#EDNadmin .main_action_button {
+  background-repeat: no-repeat;
+  background-position: right top;
+  border: 0;
+  margin-right: 3px;
+  padding: 0 8px 0 0;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  height: 37px;
+  float: left;
+}
+#EDNadmin .main_action_button span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 11px 5px 10px 12px;
+  margin: 0;
+  display: block;
+  font-weight: bold;
+  line-height: normal;
+}
+#EDNadmin .main_action_button.red {
+  height: 37px;
+  background-image: url(images/main_action_red_bg_right.png);
+}
+#EDNadmin .main_action_button.red span {
+  background-image: url(images/main_action_red_bg_left.png);
+}
+#EDNadmin .main_action_button.orange {
+  height: 37px;
+  background-image: url(images/main_action_orange_bg_right.png);
+}
+#EDNadmin .main_action_button.orange span {
+  background-image: url(images/main_action_orange_bg_left.png);
+}
+#EDNadmin .main_action_button.yellow {
+  height: 37px;
+  background-image: url(images/main_action_yellow_bg_right.png);
+}
+#EDNadmin .main_action_button.yellow span {
+  background-image: url(images/main_action_yellow_bg_left.png);
+}
+#EDNadmin .main_action_button.grey {
+  height: 37px;
+  background-image: url(images/main_action_grey_bg_right.png);
+}
+#EDNadmin .main_action_button.grey span {
+  background-image: url(images/main_action_grey_bg_left.png);
+}
+#EDNadmin .main_action_button.w140 {
+  width: 140px;
+}
+#EDNadmin .main_action_button.w100 {
+  width: 100px;
+}
+#EDNadmin .settings_bottom {
+  margin: 20px 0 0;
+}
+#EDNadmin .settings_bottom .settings_main_table {
+  width: 100%;
+}
+#EDNadmin .settings_bottom .settings_main_table .left_cell {
+  text-align: right;
+  padding: 0 10px 0 0;
+  width: 26%;
+}
+#EDNadmin .settings_bottom .settings_main_table .right_cell {
+  text-align: left;
+}
+#EDNadmin input.text_generic {
+  background: url(images/token_box_pixel_bg.png) repeat-x #e6e6e6;
+  border: 0;
+  border-top: 1px solid #b8b8b8;
+  border-left: 1px solid #b8b8b8;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  padding: 2px;
+  font-size: 12px;
+}
+#EDNadmin input.text_generic.center {
+  text-align: center;
+}
+#EDNadmin .tag_collection {
+  margin: 20px 0 0;
+}
+#EDNadmin .tag_collection .tag_selection_menu {
+  margin: 0 0 10px;
+  padding: 4px 8px 3px;
+  background: #efefef;
+  overflow: hidden;
+  border-radius: 3px 3px 3px 3px;
+  border: 1px solid #D4D4D4;
+}
+#EDNadmin .tag_collection .tag_selection_menu li {
+  list-style-type: none;
+  display: inline-block;
+  float: left;
+  margin: 0 15px 0 0;
+}
+#EDNadmin .tag_collection .tag_selection_menu li a {
+  font-size: 12px;
+  color: #000;
+}
+#EDNadmin .tag_collection .tag_selection_menu li a:hover {
+  color: #cb0000;
+}
+#EDNadmin .tag_collection .existing_tag_list {
+  width: 100%;
+}
+#EDNadmin .tag_collection .existing_tag_list a {
+  font-size: 12px;
+  color: #454545;
+}
+#EDNadmin .tag_collection .existing_tag_list a:hover {
+  color: #000;
+  text-decoration: none;
+}
+#EDNadmin .tag_collection .existing_tag_list a:hover span.addtag {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  width: 20px;
+  background: url(images/icons/green_plus.png) no-repeat center 3px;
+  text-indent: -1000px;
+  cursor: pointer;
+}
+#EDNadmin .tag_collection .existing_tag_list td {
+  padding: 4px 25px 0 0;
+  text-align: left;
+}
+#EDNadmin .tag_collection .existing_tag_list .tag_link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 3px 25px 2px 5px;
+  border-radius: 5px 5px 5px 5px;
+  border: 0;
+  float: left;
+  background: #fff;
+  border: 1px solid #D4D4D4;
+}
+#EDNadmin .tag_collection .existing_article_list {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#EDNadmin .tag_collection .existing_article_list a {
+  font-size: 12px;
+  color: #454545;
+}
+#EDNadmin .tag_collection .existing_article_list a:hover {
+  color: #000;
+  text-decoration: none;
+}
+#EDNadmin .tag_collection .existing_article_list a:hover span.addarticle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  width: 20px;
+  background: url(images/icons/green_plus.png) no-repeat center 3px;
+  text-indent: -1000px;
+  cursor: pointer;
+}
+#EDNadmin .tag_collection .existing_article_list td {
+  padding: 4px 25px 0 0;
+  text-align: left;
+}
+#EDNadmin .tag_collection .existing_article_list .articleid_link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 3px 25px 2px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 5px 0 0;
+  border: 0;
+  float: left;
+  background: #fff;
+  border: 1px solid #D4D4D4;
+}
+#EDNadmin .tag_collection .existing_tag_list_pagination {
+  margin: 10px auto -10px;
+}
+#EDNadmin .tag_collection .tags_selection_wrapper {
+  margin: 0 0 10px;
+  padding: 6px 8px 7px;
+  background: #efefef;
+  border-radius: 3px 3px 3px 3px;
+  border: 1px solid #D4D4D4;
+}
+#EDNadmin .tag_collection .tags_selection_wrapper.article_list {
+  clear: left;
+}
+#EDNadmin .tag_collection .tags_selection_wrapper > p {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font: 12px Arial;
+  line-height: 1.3;
+}
+#EDNadmin .tag_collection .tags_selection_wrapper > p.please_select_tags {
+  margin: 5px 0 0;
+  text-align: center;
+}
+#EDNadmin .tag_collection .tags_selection_wrapper > ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
+  overflow: hidden;
+}
+#EDNadmin .tag_collection .tags_selection_wrapper > ul > li {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 3px 25px 2px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 5px 0 0;
+  border: 0;
+  float: left;
+  background: #fff;
+  border: 1px solid #D4D4D4;
+}
+#EDNadmin .tag_collection .tags_selection_wrapper > ul > li > span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  width: 20px;
+  background: url(images/icons/red_cross.png) no-repeat center 3px;
+  text-indent: -1000px;
+  cursor: pointer;
+}
+#EDNadmin .tag_collection .tags_selection_wrapper > ul > li:hover {
+  color: #fff;
+  background: #333;
+  border: 1px solid #fff;
+}
+#EDNadmin .tag_collection .tags_selection_wrapper > ul > li.already_present {
+  text-shadow: -1px -1px #1A7CB1;
+  background: #3399CC;
+  color: #fff;
+  border: 1px solid #fff;
+}
+#EDNadmin .per_article_permissions {
+  position: relative;
+  margin-bottom: 80px !important;
+}
+#EDNadmin .per_article_permissions .permission_warning {
+  background: url(images/icons/red_exclamation.png) no-repeat 10px center #fedada;
+  border: 2px solid #fd8c8c;
+  border-radius: 2px;
+  display: block;
+  color: #cc2329;
+  font: 13px Arial;
+  line-height: 16px;
+  padding: 10px 20px 10px 30px;
+  margin: 0 0 10px;
+}
+#EDNadmin .rounded_box {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background: #e6e6e6;
+  box-shadow: inset 1px 1px 0 0 #bcbcbc;
+  -webkit-box-shadow: inset 1px 1px 0 0 #bcbcbc;
+  -moz-box-shadow: inset 1px 1px 0 0 #bcbcbc;
+  margin: 0;
+  padding: 20px;
+}
+#EDNadmin .rounded_box .permissions_table th {
+  text-align: center;
+  padding: 0 10px 0 0;
+}
+#EDNadmin .rounded_box .permissions_table td {
+  width: 100px;
+  text-align: center;
+  padding: 0 10px 0 0;
+}
+#EDNadmin .rounded_box .permissions_table td.subject {
+  text-align: right;
+}
+#EDNadmin .rounded_box .permissions_table td input[type="text"] {
+  box-shadow: inset 1px 1px 0 0 #bcbcbc;
+  -webkit-box-shadow: inset 1px 1px 0 0 #bcbcbc;
+  -moz-box-shadow: inset 1px 1px 0 0 #bcbcbc;
+  width: 100px;
+  font-size: 12px;
+  padding: 2px;
+  background: #e6e6e6;
+  border: 1px solid #fff;
+  margin: 0;
+}
+#EDNadmin .rounded_box .permissions_table th.subject,
+#EDNadmin .rounded_box .permissions_table td.subject {
+  width: 150px;
+}
+#EDNadmin .social_sharing_stats_container {
+  background: url(images/main_actions_bg.png) repeat-x #F4F4F4;
+  padding: 0;
+  margin: 1px 0 0;
+  border: 0;
+}
+#EDNadmin .social_sharing_stats_container ul {
+  padding: 25px 30px 25px 75px;
+  margin: 0;
+  background: url(images/icons/information.png) no-repeat 23px 23px transparent;
+  border: 0;
+}
+#EDNadmin .social_sharing_stats_container ul li {
+  list-style-type: none;
+  font: 10px Arial;
+  line-height: 12px;
+  color: #464646;
+}
+#EDNadmin .custom_drop_down_style {
+  border: 1px solid #A0A0A0;
+  background: #fff;
+  color: #333;
+}
+#EDNadmin .ui-dropdownchecklist.ui-dropdownchecklist-selector-wrapper {
+  padding: 3px 18px 2px 4px;
+  margin: 0;
+  border: 1px solid #A0A0A0;
+  background: url(images/drop_down_checkbox_btn.png) no-repeat right top #fff;
+  font-size: 0;
+  line-height: 0;
+  float: right;
+}
+#EDNadmin .ui-dropdownchecklist.ui-dropdownchecklist-selector-wrapper:hover {
+  background-position: right bottom;
+}
+#EDNadmin .ui-dropdownchecklist.ui-dropdownchecklist-selector-wrapper > .ui-dropdownchecklist-selector {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-size: 0;
+  line-height: 0;
+}
+#EDNadmin .ui-dropdownchecklist.ui-dropdownchecklist-selector-wrapper > .ui-dropdownchecklist-selector > .ui-dropdownchecklist-text {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  font: 11px Arial;
+  line-height: 11px;
+  color: #333;
+}
+#EDNadmin .ui-dropdownchecklist.ui-dropdownchecklist-selector-wrapper > .ui-dropdownchecklist-selector > .ui-dropdownchecklist-text span.empty {
+  font-style: italic;
+  color: #888;
+}
+#EDNadmin .ui-dropdownchecklist.ui-dropdownchecklist-dropcontainer-wrapper {
+  border: 0;
+  margin: 0;
+  margin-top: -1px;
+  padding: 0 0 1px;
+  background: #fff;
+  font-size: 0;
+  line-height: 0;
+  float: right;
+}
+#EDNadmin .ui-dropdownchecklist.ui-dropdownchecklist-dropcontainer-wrapper > div.ui-dropdownchecklist-dropcontainer {
+  border: 1px solid #A0A0A0;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+#EDNadmin .ui-dropdownchecklist.ui-dropdownchecklist-dropcontainer-wrapper > div.ui-dropdownchecklist-dropcontainer > div.ui-dropdownchecklist-item {
+  border: 0;
+  margin: 0;
+  padding: 2px 3px 0;
+  background: none;
+  overflow: hidden;
+}
+#EDNadmin .ui-dropdownchecklist.ui-dropdownchecklist-dropcontainer-wrapper > div.ui-dropdownchecklist-dropcontainer > div.ui-dropdownchecklist-item label {
+  display: inline;
+  font: 12px Arial;
+  line-height: 14px;
+  color: #333;
+}
+#EDNadmin .edn_advanced_tree_view {
+  padding: 0;
+  margin: 0 auto 10px;
+  max-width: 600px;
+  border-radius: 5px 5px 5px 5px;
+}
+#EDNadmin .edn_advanced_tree_view ul {
+  padding: 0;
+  margin: 0;
+}
+#EDNadmin .edn_advanced_tree_view li {
+  list-style: none;
+  font-size: 0;
+  line-height: 0;
+}
+#EDNadmin .edn_advanced_tree_view li > div {
+  border: 0;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #dedede;
+  background-color: #ebeaea;
+  overflow: hidden;
+  padding: 2px 25px 2px 100px;
+  position: relative;
+}
+#EDNadmin .edn_advanced_tree_view li > div a {
+  display: none;
+}
+#EDNadmin .edn_advanced_tree_view li > div .expand_collapse {
+  display: block;
+  text-indent: -10000px;
+  background: url(images/advanced_tree_view/expand_collapse.png) no-repeat 4px 4px;
+  height: 13px;
+  width: 21px;
+  margin: 2px 2px 0 4px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  left: auto;
+}
+#EDNadmin .edn_advanced_tree_view li > div .expand_collapse:hover {
+  background-position: -13px 4px;
+}
+#EDNadmin .edn_advanced_tree_view li > div .expand_collapse.collapse {
+  background-position: 4px -8px;
+}
+#EDNadmin .edn_advanced_tree_view li > div .expand_collapse.collapse:hover {
+  background-position: -13px -8px;
+}
+#EDNadmin .edn_advanced_tree_view li > div > span {
+  font-size: 12px;
+  color: #333;
+  display: inline;
+  line-height: 18px;
+}
+#EDNadmin .edn_advanced_tree_view li > div > span.category_selection input {
+  margin: 0 2px 0 0;
+  position: relative;
+  top: 2px;
+}
+#EDNadmin .edn_advanced_tree_view li > div > span.drop_down_selector {
+  float: right;
+  font-size: 10px;
+}
+#EDNadmin .edn_advanced_tree_view li > div > span.drop_down_selector > select {
+  width: 180px;
+  height: 18px;
+  font-size: 11px;
+  padding: 0;
+  color: #333;
+}
+#EDNadmin .edn_advanced_tree_view li > div > a.category {
+  font-size: 11px;
+  color: #333;
+  display: inline;
+  line-height: 10px;
+}
+#EDNadmin .edn_advanced_tree_view li > div > a.category span {
+  color: #898989;
+}
+#EDNadmin .edn_advanced_tree_view li > div > a.category:hover {
+  color: #B50909;
+}
+#EDNadmin .edn_advanced_tree_view li > div > img, #EDNadmin .edn_advanced_tree_view li > div > a.image > img {
+  border-radius: 4px;
+  float: left;
+  margin: 0 7px 5px 0;
+}
+#EDNadmin .edn_advanced_tree_view li > div > a.image {
+  float: left;
+  display: block;
+  margin: 0 7px 5px 0;
+}
+#EDNadmin .edn_advanced_tree_view li > div > a.image > img {
+  margin: 0;
+  float: none;
+}
+#EDNadmin .edn_advanced_tree_view li.active > div > a.category {
+  font-weight: bold;
+}
+#EDNadmin .edn_advanced_tree_view > li > div {
+  padding-left: 20px;
+  vertical-align: middle;
+}
+#EDNadmin .edn_advanced_tree_view > li ul li > div {
+  background-color: #f0f0f0;
+  vertical-align: middle;
+}
+#EDNadmin .edn_advanced_tree_view > li li.level_1 > div {
+  padding-left: 30px;
+}
+#EDNadmin .edn_advanced_tree_view > li li.level_2 > div {
+  padding-left: 40px;
+}
+#EDNadmin .edn_advanced_tree_view > li li.level_3 > div {
+  padding-left: 50px;
+}
+#EDNadmin .edn_advanced_tree_view > li li.level_4 > div {
+  padding-left: 60px;
+}
+#EDNadmin .edn_advanced_tree_view > li li.level_5 > div {
+  padding-left: 70px;
+}
+#EDNadmin .edn_advanced_tree_view > li li.level_6 > div {
+  padding-left: 80px;
+}
+#EDNadmin .edn_advanced_tree_view > li li.level_7 > div {
+  padding-left: 90px;
+}
+#EDNadmin .edn_advanced_tree_view > li li.level_8 > div {
+  padding-left: 100px;
+}
+#EDNadmin .article_pager {
+  margin: 10px 0;
+  text-align: center;
+}
+#EDNadmin .article_pager span {
+  display: inline-block;
+  background: #e7e7e7;
+  color: #696969;
+  font: 12px;
+  line-height: 15px;
+  box-shadow: inset 1px 1px 3px 0 #ADADAD;
+  border: 1px solid #cdcdcd;
+  margin: 0 2px 5px 0;
+  padding: 3px 7px 2px;
+  border-radius: 4px;
+}
+#EDNadmin .article_pager a {
+  display: inline-block;
+  background: #e7e7e7;
+  color: #696969;
+  font: 12px;
+  line-height: 15px;
+  box-shadow: 0 0 2px 0 #CDCDCD, inset 1px 1px 3px 0 white;
+  border: 1px solid #cdcdcd;
+  margin: 0 2px 5px 0;
+  padding: 3px 7px 2px;
+  border-radius: 4px;
+}
+#EDNadmin .article_pager a.active {
+  box-shadow: inset 1px 1px 3px 0 #ADADAD;
+}
+#EDNadmin .article_pager a.first, #EDNadmin .article_pager a.prev, #EDNadmin .article_pager a.next, #EDNadmin .article_pager a.last {
+  text-transform: lowercase;
+  color: #3e3e3e;
+  margin: 0 5px 0 0;
+}
+#EDNadmin .article_pager a.first:hover, #EDNadmin .article_pager a.prev:hover, #EDNadmin .article_pager a.next:hover, #EDNadmin .article_pager a.last:hover {
+  box-shadow: 0 0 2px #737373, inset 1px 1px 3px 0 white;
+}
+#EDNadmin .article_pager a .prev {
+  margin: 0 2px 0 0;
+}
+#EDNadmin .article_pager .article_list {
+  padding: 20px 0 0;
+}
+#EDNadmin .article_pager .firstButton,
+#EDNadmin .article_pager .lastButton {
+  background-color: #009900;
+  margin: 3px;
+  padding: 3px;
+}
+#EDNadmin .article_pager .nextButton,
+#EDNadmin .article_pager .previoustButton {
+  background-color: #99ff33;
+  margin: 3px;
+  padding: 3px;
+}
+#EDNadmin .article_pager .activepager {
+  background-color: yellow;
+  margin: 3px;
+  padding: 3px;
+}
+#EDNadmin .article_pager .pager {
+  background-color: #ffffcc;
+  margin: 3px;
+  padding: 3px;
+}
+#EDNadmin .edn_admin_progress_overlay_container {
+  position: relative;
+}
+#EDNadmin .edn_admin_progress_overlay_container .edn_admin_progress_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff url("images/inProgress.gif") center center no-repeat;
+  opacity: 0.8;
+  width: 100%;
+  z-index: 999;
+}
+#EDNadmin .EDN_info,
+#EDNadmin .EDN_success,
+#EDNadmin .EDN_warning,
+#EDNadmin .EDN_error {
+  border: solid 1px;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  padding: 12px 12px 12px 50px;
+  margin: 10px 0;
+  display: block;
+}
+#EDNadmin .EDN_info {
+  background-image: url(images/Info-message.png);
+  border-color: #007CFF;
+  background-color: #C0DCFE;
+  color: #0072CF;
+}
+#EDNadmin .EDN_success {
+  background-image: url(images/Valid.png);
+  border-color: #109300;
+  background-color: #B3F7B2;
+  color: #028800;
+}
+#EDNadmin .EDN_warning {
+  background-image: url(images/Warning.png);
+  border-color: #FFA900;
+  background-color: #FCF0BF;
+  color: #DC7A5D;
+}
+#EDNadmin .EDN_error {
+  background-image: url(images/Error.png);
+  border-color: #FF0000;
+  background-color: #FF9999;
+  color: #CF000E;
+}
+
+.permission_selection_dialog {
+  max-width: 500px;
+  max-height: 450px;
+}
+.permission_selection_dialog ul {
+  margin: 0;
+  padding: 0;
+}
+.permission_selection_dialog ul li {
+  list-style-type: none !important;
+}
+
+.content_token_generator {
+  display: none;
+}
+.content_token_generator .dialog_wrapper {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+.content_token_generator .dialog_wrapper input[type="text"],
+.content_token_generator .dialog_wrapper textarea,
+.content_token_generator .dialog_wrapper select {
+  padding: 1px 3px 2px;
+  font: 12px Arial;
+  line-height: 15px;
+  border: 1px solid #939393;
+}
+.content_token_generator .dialog_wrapper select {
+  padding: 1px;
+}
+.content_token_generator .dialog_wrapper .pages_container {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+.content_token_generator .dialog_wrapper .pages_container .page {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.content_token_generator .dialog_wrapper h1 {
+  font-size: 16px;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.content_token_generator .dialog_wrapper p.option {
+  margin: 0 0 10px;
+  padding: 0;
+}
+.content_token_generator .dialog_wrapper p.option.no_margin {
+  margin: 0;
+}
+.content_token_generator .dialog_wrapper p.option.margin_3 {
+  margin-bottom: 3px;
+}
+.content_token_generator .dialog_wrapper p.option.required_field {
+  color: #D50000;
+  display: none;
+  font-weight: bold;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .location_search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .location_search #map_location_search {
+  padding: 1px 3px 2px;
+  border: 1px solid #939393;
+  font-size: 12px;
+  line-height: 15px;
+  width: 300px;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .map_container {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .map_container .the_map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 0;
+  width: 250px;
+  margin: 0 0 0 10px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings.left_side {
+  right: auto;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .ui-button {
+  cursor: pointer;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper textarea.html {
+  padding: 2px;
+  width: 220px;
+  height: 200px;
+  font-size: 12px;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container {
+  position: relative;
+  display: none;
+  background: #DDE8EF;
+  padding: 2px;
+  overflow: hidden;
+  border: 1px solid #C5D3F7;
+  border-radius: 5px;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container h2 {
+  font-size: 16px;
+  padding: 0;
+  margin: 0 0 7px 3px;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .delete_selected {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 12px;
+  display: none;
+  color: #f00;
+  text-decoration: underline;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .delete_selected:hover {
+  color: #B90000;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .marker_list {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .marker_list .marker {
+  margin: 0 0 5px;
+  padding: 3px;
+  border-radius: 5px;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .marker_list .marker:nth-child(even) {
+  background: #CDDEEF;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .marker_list .marker input[type="checkbox"] {
+  position: relative;
+  top: 2px;
+  margin: 0 2px 0 0;
+  padding: 0;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .marker_list .marker .marker_title {
+  text-decoration: none;
+  font-size: 14px;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .marker_list .marker .marker_title:hover {
+  text-decoration: underline;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .marker_list .marker .edit {
+  font-size: 12px;
+  font-weight: bold;
+  color: #1086CF;
+  text-decoration: none;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .marker_list .marker .edit:hover {
+  text-decoration: underline;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .marker_list .marker:last-child {
+  margin: 0;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .marker_list .marker:hover, .content_token_generator.google_maps .dialog_wrapper .pages_container .token_settings .settings_wrapper .map_marker_container .marker_list .marker.hover {
+  background: #FBFFBA;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_area {
+  position: absolute;
+  top: -100%;
+  left: auto;
+  right: -100%;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_area .token_message {
+  padding: 0 0 7px;
+  margin: 0;
+}
+.content_token_generator.google_maps .dialog_wrapper .pages_container .token_area .the_token {
+  width: 394px;
+  height: 250px;
+  padding: 3px;
+  margin: 0 0 7px;
+}
+.content_token_generator.gallery_item .dialog_wrapper .token_area {
+  margin: 0 0 10px 10px;
+  padding: 0;
+  float: right;
+  width: 328px;
+}
+.content_token_generator.gallery_item .dialog_wrapper .token_area .the_token {
+  width: 320px;
+  height: 100px;
+  padding: 3px;
+  font-size: 13px;
+  border: 1px dashed #CFCFCF;
+  color: #696969;
+}
+.content_token_generator.gallery_item .dialog_wrapper .token_area .the_token:hover {
+  border: 1px solid #999;
+  color: #2c2c2c;
+  resize: vertical;
+}
+.content_token_generator.gallery_item .dialog_wrapper .token_area p {
+  color: #777;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+.content_token_generator.gallery_item .dialog_wrapper .indented {
+  margin: 0 0 10px 20px;
+}
+.content_token_generator.gallery_item .dialog_wrapper .indented p.small_grey {
+  color: #777;
+  font-size: 11px;
+}
+
+.EDN_addeditArticleAutoCompleate {
+  padding: 0px;
+  border: 1px solid #cdcdcd;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  z-index: 9999999;
+  padding: 3px;
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.27);
+  margin: 0 20px;
+}
+.EDN_addeditArticleAutoCompleate ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-position: outside;
+  list-style: none;
+}
+.EDN_addeditArticleAutoCompleate ul li {
+  margin: 0px;
+  padding: 2px 5px;
+  display: block;
+  font: Arial;
+  font-size: 12px;
+  color: #333333;
+  border: solid 1px transparent;
+}
+.EDN_addeditArticleAutoCompleate ul li span a {
+  color: #333333;
+  text-decoration: none;
+}
+.EDN_addeditArticleAutoCompleate ul li span a:hover {
+  text-decoration: none;
+  color: black;
+  text-decoration: none;
+}
+.EDN_addeditArticleAutoCompleate .acSelect {
+  background-color: #e4e4e4;
+  color: #333333;
+  cursor: pointer;
+}
+.EDN_addeditArticleAutoCompleate .acSelect a {
+  color: #333333;
+}
+
+.acLoading {
+  background-image: url("images/indicator.gif") !important;
+  background-position: 85% center !important;
+  background-repeat: no-repeat !important;
+}
+
+/*# sourceMappingURL=EDNadmin.css.map */

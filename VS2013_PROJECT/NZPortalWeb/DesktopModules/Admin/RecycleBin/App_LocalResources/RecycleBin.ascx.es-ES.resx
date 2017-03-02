@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="allLocales.Text">
+    <value xml:space="preserve">Mostrar las páginas y módulos de todos los idiomas</value>
+  </data>
+  <data name="ChildTab.ErrorMessage">
+    <value xml:space="preserve">No se puede recuperar la página "&lt;strong&gt;{0}&lt;/strong&gt;"  hasta que se haya recuperado la página madre.</value>
+  </data>
+  <data name="cmdDeleteModule.Help">
+    <value xml:space="preserve">Eliminar permanentemente el módulo seleccionado</value>
+  </data>
+  <data name="cmdDeleteModule.Text">
+    <value xml:space="preserve">Eliminar módulo seleccionado</value>
+  </data>
+  <data name="cmdDeleteTab.Help">
+    <value xml:space="preserve">Eliminar la página seleccionada</value>
+  </data>
+  <data name="cmdDeleteTab.Text">
+    <value xml:space="preserve">Eliminar la página seleccionada</value>
+  </data>
+  <data name="cmdEmpty.Text">
+    <value xml:space="preserve">Vaciar la papelera de reciclaje</value>
+  </data>
+  <data name="cmdRestoreModule.Help">
+    <value xml:space="preserve">Recuperar los módulos seleccionados</value>
+  </data>
+  <data name="cmdRestoreModule.Text">
+    <value xml:space="preserve">Recuperar los módulos seleccionados</value>
+  </data>
+  <data name="cmdRestoreTab.Help">
+    <value xml:space="preserve">Recuperar la página seleccionada</value>
+  </data>
+  <data name="cmdRestoreTab.Text">
+    <value xml:space="preserve">Recuperar la página seleccionada</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Papelera de reciclaje</value>
+  </data>
+  <data name="DeleteAll.Text">
+    <value xml:space="preserve">¿Está seguro que desea eliminar definitivamente todas las páginas y módulos?</value>
+  </data>
+  <data name="DeleteModule.Text">
+    <value xml:space="preserve">¿Está seguro que desea eliminar definitivamente este módulo?</value>
+  </data>
+  <data name="DeleteTab.Text">
+    <value xml:space="preserve">¿Está seguro que desea eliminar definitivamente esta página?</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Acerca de la papelera de reciclaje&lt;/h1&gt;&lt;p&gt;La papelera de reciclaje provee una interfaz desde la cual poder recuperar o eliminar permanentemente páginas y módulos.&lt;/p&gt;</value>
+  </data>
+  <data name="Modules.Text">
+    <value xml:space="preserve">Módulos</value>
+  </data>
+  <data name="NoTabSelected.Text">
+    <value xml:space="preserve">No ha seleccionado ninguna página para restaurar.</value>
+  </data>
+  <data name="ParentTab.ErrorMessage">
+    <value xml:space="preserve">La página "&lt;strong&gt;{0}&lt;/strong&gt;" no se puede eliminar hasta que se hayan eliminado sus páginas hijas.</value>
+  </data>
+  <data name="RestoreTab.Text">
+    <value xml:space="preserve">¿Quiere restaurar también las páginas descendientes de las seleccionadas?</value>
+  </data>
+  <data name="singleLocale.Text">
+    <value xml:space="preserve">Mostrar solo las páginas y módulos del idioma actual</value>
+  </data>
+  <data name="TabDeleted.ErrorMessage">
+    <value xml:space="preserve">El módulo &lt;strong&gt;{0}&lt;/strong&gt; no se puede restaurar hasta que la página donde se encuentra se restaure antes.</value>
+  </data>
+  <data name="Tabs.Text">
+    <value xml:space="preserve">Páginas</value>
+  </data>
+</root>

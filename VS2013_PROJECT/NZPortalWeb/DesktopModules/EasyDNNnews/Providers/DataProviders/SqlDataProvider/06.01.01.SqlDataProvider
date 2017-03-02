@@ -1,0 +1,101 @@
+﻿IF NOT EXISTS (SELECT UpdateVersion FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate] WHERE UpdateVersion = '06.01.01')
+BEGIN
+	INSERT {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate]([UpdateVersion],[Finished]) VALUES(N'06.01.01',0)
+END
+GO
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleListTemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN ArticleListTemplateGroup nvarchar(150) NULL;
+END
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleDetailsTemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN ArticleDetailsTemplateGroup nvarchar(150) NULL;
+END
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleListTemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN ArticleListTemplateGroup nvarchar(150) NULL;
+END
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleDetailsTemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN ArticleDetailsTemplateGroup nvarchar(150) NULL;
+END
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'TemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ALTER COLUMN TemplateGroup nvarchar(150) NULL;
+END
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ArchiveTemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ALTER COLUMN ArchiveTemplateGroup nvarchar(150) NULL;
+END
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'TemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ALTER COLUMN TemplateGroup nvarchar(150) NULL;
+END
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleListTemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN ArticleListTemplateGroup nvarchar(150) NULL;
+END
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleDetailsTemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ALTER COLUMN ArticleDetailsTemplateGroup nvarchar(150) NULL;
+END
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleListTemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN ArticleListTemplateGroup nvarchar(150) NULL;
+END
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleDetailsTemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ALTER COLUMN ArticleDetailsTemplateGroup nvarchar(150) NULL;
+END
+GO
+
+UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] SET ArticleListTemplateGroup = NULL, ArticleDetailsTemplateGroup = NULL;
+GO
+UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] SET ArticleListTemplateGroup = NULL, ArticleDetailsTemplateGroup = NULL;
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'TemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ALTER COLUMN TemplateGroup nvarchar(150) NULL;
+END
+GO
+
+UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] SET TemplateGroup = NULL;
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ArchiveTemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ALTER COLUMN ArchiveTemplateGroup nvarchar(150) NULL;
+END
+GO
+
+UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] SET ArchiveTemplateGroup = NULL;
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'TemplateGroup')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ALTER COLUMN TemplateGroup nvarchar(150) NULL;
+END
+GO
+
+UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] SET TemplateGroup = NULL;
+GO

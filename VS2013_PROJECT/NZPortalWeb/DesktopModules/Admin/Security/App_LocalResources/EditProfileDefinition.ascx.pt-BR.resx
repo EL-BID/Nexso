@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EditProperty.Text">
+    <value xml:space="preserve">Editar Definição de Propriedade de Perfil</value>
+  </data>
+  <data name="AddContent.Action">
+    <value xml:space="preserve">Adicionar nova propriedade de perfil</value>
+  </data>
+  <data name="ProfilePropertyDefinition_DataType.Text">
+    <value xml:space="preserve">Tipo de dados:</value>
+  </data>
+  <data name="ProfilePropertyDefinition_DataType.Help">
+    <value xml:space="preserve">Selecione o tipo de dados para este campo.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_DefaultValue.Text">
+    <value xml:space="preserve">Valor padrão:</value>
+  </data>
+  <data name="ProfilePropertyDefinition_DefaultValue.Help">
+    <value xml:space="preserve">Você pode informar um valor padrão para essa propriedade.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_PropertyCategory.Text">
+    <value xml:space="preserve">Categoria da propriedade:</value>
+  </data>
+  <data name="ProfilePropertyDefinition_PropertyCategory.Help">
+    <value xml:space="preserve">Entre a categoria desta propriedade. Isto permitirá as propriedades relacionadas serem agrupadas quando mostradas ao usuário.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_PropertyName.Text">
+    <value xml:space="preserve">Nome da propriedade:</value>
+  </data>
+  <data name="ProfilePropertyDefinition_PropertyName.Help">
+    <value xml:space="preserve">Entre o nome da propriedade.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_ValidationExpression.Text">
+    <value xml:space="preserve">Expressão de validação:</value>
+  </data>
+  <data name="ProfilePropertyDefinition_ValidationExpression.Help">
+    <value xml:space="preserve">Você pode informar uma expressão regular para validar os dados entrados nesta propriedade.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_ViewOrder.Text">
+    <value xml:space="preserve">Ordem de visualização:</value>
+  </data>
+  <data name="ProfilePropertyDefinition_ViewOrder.Help">
+    <value xml:space="preserve">Entre uma ordem de visualização para esta propriedade.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_Visible.Text">
+    <value xml:space="preserve">Visível?</value>
+  </data>
+  <data name="ProfilePropertyDefinition_Visible.Help">
+    <value xml:space="preserve">Você pode opcionalmente mostrar essa propriedade para o usuário.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_Required.Text">
+    <value xml:space="preserve">Obrigatório?</value>
+  </data>
+  <data name="ProfilePropertyDefinition_Required.Help">
+    <value xml:space="preserve">Defina se esta propriedade é obrigatória.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_Length.Text">
+    <value xml:space="preserve">Tamanho:</value>
+  </data>
+  <data name="ProfilePropertyDefinition_Length.Help">
+    <value xml:space="preserve">Entre o tamanho máximo para esta propriedade. Isto será aplicável apenas para tipos de dados específicos.</value>
+  </data>
+  <data name="DuplicateName.Text">
+    <value xml:space="preserve">Esta propriedade já existe. Nomes de propriedade devem ser únicos. Por favor selecione um nome diferente para esta propriedade.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_PropertyCategory.Required">
+    <value xml:space="preserve">A categoria é obrigatória!</value>
+  </data>
+  <data name="ProfilePropertyDefinition_PropertyName.Required">
+    <value xml:space="preserve">O nome da propriedade é obrigatório!</value>
+  </data>
+  <data name="plCategoryName.Help">
+    <value xml:space="preserve">Entre o texto para o nome da categoria no idioma selecionado.</value>
+  </data>
+  <data name="plCategoryName.Text">
+    <value xml:space="preserve">Nome da categoria:</value>
+  </data>
+  <data name="plLocales.Help">
+    <value xml:space="preserve">Selecione o idioma</value>
+  </data>
+  <data name="plLocales.Text">
+    <value xml:space="preserve">Escolha o idioma:</value>
+  </data>
+  <data name="plPropertyHelp.Help">
+    <value xml:space="preserve">no idioma selecionado</value>
+  </data>
+  <data name="plPropertyHelp.Text">
+    <value xml:space="preserve">Ajuda da propriedade:</value>
+  </data>
+  <data name="plPropertyName.Help">
+    <value xml:space="preserve">Entre o texto para o nome da propriedade no idioma selecionado.</value>
+  </data>
+  <data name="plPropertyName.Text">
+    <value xml:space="preserve">Nome da propriedade:</value>
+  </data>
+  <data name="cmdCreate.Text">
+    <value xml:space="preserve">Criar nova propriedade</value>
+  </data>
+  <data name="cmdUpdate.Text">
+    <value xml:space="preserve">Atualizar propriedade</value>
+  </data>
+  <data name="Introduction.Help">
+    <value xml:space="preserve">O primeiro passo para editar uma propriedade de perfil é atualizar os detalhes da propriedade. Faça as alterações que você precisa nos campos desta página e clique em "Próxima" para salvar as mudanças e continuar para o próximo passo.</value>
+  </data>
+  <data name="Introduction.Title">
+    <value xml:space="preserve">Editar Detalhes da Propriedade</value>
+  </data>
+  <data name="List.Help">
+    <value xml:space="preserve">Os detalhes da propriedade foram atualizados. Esta propriedade é uma propriedade do tipo Lista. O próximo passo é definir as entradas da lista.</value>
+  </data>
+  <data name="List.Title">
+    <value xml:space="preserve">Gerenciar Entradas na Lista</value>
+  </data>
+  <data name="Introduction_Add.Help">
+    <value xml:space="preserve">O primeiro passo para criar uma propriedade de perfil é definir os detalhes da propriedade. Entre os detalhes nesta página e clique em "Próxima" para criar a propriedade. &lt;b&gt;Nota:&lt;/b&gt; Os campos com a flecha vermelha invertida são obrigatórios.</value>
+  </data>
+  <data name="Introduction_Add.Title">
+    <value xml:space="preserve">Adicionar Novos Detalhes da Propriedade</value>
+  </data>
+  <data name="Localization.Help">
+    <value xml:space="preserve">O próximo passo é gerenciar a tradução desta propriedade. Selecione o idioma que você quer atualizar, adicione o texto ou modifique o texto existente e clique em 'Salvar texto traduzido'.</value>
+  </data>
+  <data name="Localization.Title">
+    <value xml:space="preserve">Gerenciar Tradução</value>
+  </data>
+  <data name="cmdCancel.Text">
+    <value xml:space="preserve">Voltar para a lista de propriedades de perfil</value>
+  </data>
+  <data name="ProfilePropertyDefinition_PropertyName.Validation">
+    <value xml:space="preserve">O nome da propriedade não pode conter espaços!</value>
+  </data>
+  <data name="plPropertyRequired.Help">
+    <value xml:space="preserve">Entre a mensagem de erro exibida para este campo quando a propriedade for obrigatória mas está ausente.</value>
+  </data>
+  <data name="plPropertyRequired.Text">
+    <value xml:space="preserve">Mensagem para erro de campo obrigatório:</value>
+  </data>
+  <data name="plPropertyValidation.Help">
+    <value xml:space="preserve">Entre a mensagem de erro exibida para este campo quando a propriedade falhar na validação da expressão regular.</value>
+  </data>
+  <data name="plPropertyValidation.Text">
+    <value xml:space="preserve">Mensagem para erro de validação:</value>
+  </data>
+  <data name="RequiredTextBox.Text">
+    <value xml:space="preserve">Se você usar um campo caixa de texto, o tamanho obrigatório deve ser maior que zero.</value>
+  </data>
+  <data name="AddProperty.Text">
+    <value xml:space="preserve">Adicionar Definição de Propriedade de Perfil</value>
+  </data>
+  <data name="ProfilePropertyDefinition_DefaultVisibility.Help">
+    <value xml:space="preserve">Você pode definir a visibilidade padrão da propriedade do perfil. Este é o valor inicial da visibilidade e se aplica se o usuário não modificá-lo quando editando seu perfil.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_DefaultVisibility.Text">
+    <value xml:space="preserve">Visibilidade padrão:</value>
+  </data>
+  <data name="ProfilePropertyDefinition_ReadOnly.Help">
+    <value xml:space="preserve">Você pode tornar somente leitura uma propriedade do seu perfil. Uma propriedade somente leitura pode ser editada pelo administrador e é somente leitura para o usuário final.</value>
+  </data>
+  <data name="ProfilePropertyDefinition_ReadOnly.Text">
+    <value xml:space="preserve">Somente leitura:</value>
+  </data>
+  <data name="Cancel.Text">
+    <value xml:space="preserve">Cancelar</value>
+  </data>
+  <data name="Return.Text">
+    <value xml:space="preserve">Atualizar</value>
+  </data>
+  <data name="valPropertyName.ErrorMessage">
+    <value xml:space="preserve">Você precisa entrar um nome para esta propriedade!</value>
+  </data>
+</root>

@@ -1,0 +1,160 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUserPremissionSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUserPremissionSettings]', N'{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUserPremissionSettings', N'PK_{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionSettings_Users', N'FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Users', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUserPremissionsAddToCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUserPremissionsAddToCategories]', N'{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUserPremissionsAddToCategories', N'PK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList1', N'FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList1', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsUserPremissionSettings1', N'FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsUserPremissionSettings1', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRolePremissionSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRolePremissionSettings]', N'{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRolePremissionSettings', N'PK_{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionSettings_Roles', N'FK_{objectQualifier}EasyDNNNewsRolePremissionSettings_Roles', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRolePremissionsAddToCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRolePremissionsAddToCategories]', N'{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRolePremissionsAddToCategories', N'PK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList1', N'FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList1', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings1', N'FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings1', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+DECLARE @RowsToProcess int;
+DECLARE @CurrentRow int;
+DECLARE @UserID int;
+DECLARE @RoleID int;
+DECLARE @PortalID int;
+DECLARE @PremissionSettingsID int;
+
+IF OBJECT_ID('tempdb..#UserPermissions') IS NOT NULL
+BEGIN
+DROP TABLE #UserPermissions;
+END
+
+CREATE TABLE #UserPermissions
+( 
+	RowID int not null primary key identity(1,1),
+	UserID int not null,
+	PortalID int not null,
+	PremissionSettingsID int not null
+)
+IF OBJECT_ID('tempdb..#RolePermissions') IS NOT NULL
+BEGIN
+DROP TABLE #RolePermissions;
+END
+
+CREATE TABLE #RolePermissions
+( 
+	RowID int not null primary key identity(1,1),
+	RoleID int not null,
+	PortalID int not null,
+	PremissionSettingsID int not null
+)
+SET NOCOUNT ON 
+BEGIN TRY
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'AddEditArticles')
+BEGIN
+	INSERT INTO #UserPermissions (UserID, PortalID, PremissionSettingsID) SELECT up.[UserID],up.[PortalID],up.[PremissionSettingsID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] as up WHERE up.AddEditArticles = 'False' ORDER BY PortalID;
+	SET @RowsToProcess=@@ROWCOUNT;
+	SET @CurrentRow = 0
+	WHILE @CurrentRow < @RowsToProcess
+	BEGIN TRY
+		SET @CurrentRow = @CurrentRow + 1;
+		SELECT @UserID = up.UserID, @PortalID = up.PortalID, @PremissionSettingsID = up.PremissionSettingsID FROM #UserPermissions as up WHERE up.RowID=@CurrentRow;
+		UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] SET [AddArticleToAll] = 'False' WHERE UserID = @UserID AND PortalID = @PortalID;
+		DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories] WHERE PremissionSettingsID = @PremissionSettingsID;
+	END TRY
+	BEGIN CATCH
+	END CATCH
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] DROP COLUMN AddEditArticles; 
+END
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'AddEditArticles')
+BEGIN
+	INSERT INTO #RolePermissions (RoleID, PortalID, PremissionSettingsID) SELECT rp.[RoleID],rp.[PortalID],rp.[PremissionSettingsID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rp WHERE rp.AddEditArticles = 'False' ORDER BY PortalID;
+	SET @RowsToProcess=@@ROWCOUNT;
+	SET @CurrentRow = 0
+	WHILE @CurrentRow < @RowsToProcess
+	BEGIN TRY
+		SET @CurrentRow = @CurrentRow + 1;
+		SELECT @RoleID = rp.RoleID, @PortalID = rp.PortalID, @PremissionSettingsID = rp.PremissionSettingsID FROM #RolePermissions as rp WHERE rp.RowID=@CurrentRow;
+		UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] SET [AddArticleToAll] = 'False' WHERE RoleID = @RoleID AND PortalID = @PortalID;
+		DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] WHERE PremissionSettingsID = @PremissionSettingsID;
+	END TRY
+	BEGIN CATCH
+	END CATCH
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings]
+	DROP COLUMN AddEditArticles;
+END
+END TRY
+BEGIN CATCH
+END CATCH;
+
+IF OBJECT_ID('tempdb..#UserPermissions') IS NOT NULL
+BEGIN
+DROP TABLE #UserPermissions;
+END
+IF OBJECT_ID('tempdb..#RolePermissions') IS NOT NULL
+BEGIN
+DROP TABLE #RolePermissions;
+END  

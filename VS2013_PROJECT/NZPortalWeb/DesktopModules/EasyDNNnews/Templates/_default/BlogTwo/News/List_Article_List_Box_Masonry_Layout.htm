@@ -1,0 +1,73 @@
+<!--TemplateGroup:newsListBox-->
+
+<!--ArticleRepeat:Before:-->
+<script src="[EasyDNNnews:ClientBasePath]/DesktopModules/EasyDNNnews/static/isotope2/isotope.v2.0.0-beta.4.min.js"></script>
+<script src="[EasyDNNnews:ClientBasePath]/DesktopModules/EasyDNNnews/static/imagesLoaded/imagesLoaded_3.1.4.min.js"></script>
+<script>
+	eds1_8(function ($) {
+		var $articleListContainer = $('.edn_[EasyDNNnews:ModuleID]_article_list_wrapper'),
+			imageLoadedKey = 'imageLoaded';
+
+		$articleListContainer
+			.isotope({
+				itemSelector: '.edn_articleWrapper',
+				sortBy: 'original-order',
+				masonry: {
+					isFitWidth: true
+				}
+			})
+			.find('img').imagesLoaded()
+				.progress(function (instance, image) {
+					var $img = $(image.img);
+
+					if ($img.data(imageLoadedKey))
+						return;
+
+					$img.data(imageLoadedKey, true);
+
+					$articleListContainer.isotope('layout');
+				});
+	});
+</script>
+<div class="edn_isotopeLayout articles_row">
+<!--RepeatEnd:Before:-->
+
+<!--ArticleTemplate-->
+<div class="article in_list big box edn_articleWrapper" style="width:[EasyDNNnews:MainArticleImageWidth]">
+	[EasyDNNnews:IfExists:Image]
+	<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]" />
+	[EasyDNNnews:EndIf:Image]
+	<h1><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h1>
+	<div class="summary">[EasyDNNnews:Summary]</div>
+	<p class="date_box">
+	[EasyDNNnews:IfNotExists:Event]
+		<span class="day">[EasyDNNnews:PublishDay]</span>
+		<span class="month">[EasyDNNnews:PublishMonthString]</span>
+		<span class="year">[EasyDNNnews:PublishYear]</span>
+	[EasyDNNnews:EndIf:Event]
+	[EasyDNNnews:IfExists:Event]
+		<span class="day">[EasyDNNnews:EventStartDay]</span>
+		<span class="month">[EasyDNNnews:EventStartMonthNameShort]</span>
+		<span class="year">[EasyDNNnews:EventStartYear]</span>
+	[EasyDNNnews:EndIf:Event]
+	</p>
+	[EasyDNNnews:HasArticlePermissions]
+	<div class="admin_actions">
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="shadow_box"></div>
+</div>
+<!--ArticleEnd-->
+
+
+<!--ArticleRepeat:After:-->
+</div>
+[EasyDNNnews:IfExists:RSS]
+<div class="article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

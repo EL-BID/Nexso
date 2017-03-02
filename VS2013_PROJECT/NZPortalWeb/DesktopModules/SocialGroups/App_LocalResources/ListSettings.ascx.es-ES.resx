@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ControlTitle_settings.Text">
+    <value xml:space="preserve">Configuración del módulo de grupos</value>
+  </data>
+  <data name="DefaultRoleGroup.Help">
+    <value xml:space="preserve">Seleccione el grupo de roles que contiene los roles que quiere mostrar.</value>
+  </data>
+  <data name="DefaultRoleGroup.Text">
+    <value xml:space="preserve">Grupo de roles por omisión</value>
+  </data>
+  <data name="GroupCreatePage.Help">
+    <value xml:space="preserve">Seleccione la página donde los usuarios podrán crear nuevos grupos.</value>
+  </data>
+  <data name="GroupListEnableSearch.Help">
+    <value xml:space="preserve">Active esta opción para permitir a los usuarios filtrar los grupos mostrados.</value>
+  </data>
+  <data name="GroupListEnableSearch.Text">
+    <value xml:space="preserve">Activar búsqueda de grupos</value>
+  </data>
+  <data name="GroupListPageSize.Help">
+    <value xml:space="preserve">Indique el número de grupos a mostrar en cada página.</value>
+  </data>
+  <data name="GroupListPageSize.Text">
+    <value xml:space="preserve">Número de grupos por página</value>
+  </data>
+  <data name="GroupListSortDirField.Help">
+    <value xml:space="preserve">Indique la dirección de ordenación de la lista.</value>
+  </data>
+  <data name="GroupListSortDirField.Text">
+    <value xml:space="preserve">Sentido de ordenación</value>
+  </data>
+  <data name="GroupListSortField.Help">
+    <value xml:space="preserve">Indique el campo que se utilizará para ordenar la lista de grupos.</value>
+  </data>
+  <data name="GroupListSortField.Text">
+    <value xml:space="preserve">Ordenar por</value>
+  </data>
+  <data name="GroupListTemplateText.Help">
+    <value xml:space="preserve">Puede modificar la plantilla por omisión para personalizar la visualización de la lista de grupos.  Puede utilizar las etiquetas: &lt;br /&gt;
+[groupitem:GroupName]&lt;br /&gt;
+[groupitem:GroupDescription]&lt;br /&gt;
+[groupitem:PhotoURL]&lt;br /&gt;
+[groupviewurl]&lt;br /&gt;</value>
+  </data>
+  <data name="GroupListTemplateText.Text">
+    <value xml:space="preserve">Plantilla de lista de grupos</value>
+  </data>
+  <data name="GroupListUserGroups.Help">
+    <value xml:space="preserve">Marque esta opción para mostrar solamente los grupos de los que el usuario es miembro.</value>
+  </data>
+  <data name="GroupListUserGroups.Text">
+    <value xml:space="preserve">Mostrar solo grupos del usuario</value>
+  </data>
+  <data name="GroupModeration.Help">
+    <value xml:space="preserve">Marque esta opción si quiere que la creación de grupos requiera la aprobación de un moderador de grupos.</value>
+  </data>
+  <data name="GroupModeration.Text">
+    <value xml:space="preserve">La creación de grupos require aprobación</value>
+  </data>
+  <data name="GroupViewPage.Help">
+    <value xml:space="preserve">Seleccione la página donde los usuarios podrán ver un grupo en concreto.</value>
+  </data>
+  <data name="GroupViewTemplateText.Help">
+    <value xml:space="preserve">Puede modificar la plantilla de visualización de la lista de grupos. Las opciones disponibles son: &lt;br /&gt;
+[groupitem:GroupName]&lt;br /&gt;
+[groupitem:GroupDescription]&lt;br /&gt;
+[groupitem:PhotoURL]&lt;br /&gt;
+[groupviewurl]&lt;br /&gt;</value>
+  </data>
+  <data name="PageSizeValidation.Text">
+    <value xml:space="preserve">Tamaño de página incorrecto (tiene que estar entre 1-9999).</value>
+  </data>
+  <data name="ViewMode.Help">
+    <value xml:space="preserve">Seleccione el modo de visualización del módulo.</value>
+  </data>
+  <data name="ViewMode.Text">
+    <value xml:space="preserve">Modo de visualización</value>
+  </data>
+</root>

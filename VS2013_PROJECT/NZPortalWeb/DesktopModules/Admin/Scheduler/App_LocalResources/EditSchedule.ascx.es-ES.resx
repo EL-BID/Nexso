@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="APPLICATION_START.Text">
+    <value xml:space="preserve">APPLICATION_START </value>
+  </data>
+  <data name="cmdRun.Text">
+    <value xml:space="preserve">Ejecutar ahora</value>
+  </data>
+  <data name="ContentOptions.Action">
+    <value xml:space="preserve">Ver estado del programador</value>
+  </data>
+  <data name="ControlTitle_edit.Text">
+    <value xml:space="preserve">Editar tarea programada</value>
+  </data>
+  <data name="Days.Text">
+    <value xml:space="preserve">Días</value>
+  </data>
+  <data name="DeleteSuccess.Text">
+    <value xml:space="preserve">La tarea programada ha sido eliminada.</value>
+  </data>
+  <data name="Hours.Text">
+    <value xml:space="preserve">Horas</value>
+  </data>
+  <data name="InvalidFrequencyAndRetry.Text">
+    <value xml:space="preserve">Los valores de frecuencia y reintentos no son correctos. El valor de la frecuencia tiene que ser superior al de los reintentos.</value>
+  </data>
+  <data name="Minutes.Text">
+    <value xml:space="preserve">Minutos</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Acerca del programador de tareas&lt;/h1&gt;&lt;p&gt;Permite programar tareas para ser ejecutadas a intervalos establecidos.&lt;/p&gt;</value>
+  </data>
+  <data name="Months.Text">
+    <value xml:space="preserve">Meses</value>
+  </data>
+  <data name="None.Text">
+    <value xml:space="preserve">Ninguna</value>
+  </data>
+  <data name="plAttachToEvent.Help">
+    <value xml:space="preserve">Ejemplo: Seleccione "Application Start" para que se ejecute esta tarea cuando arranca la aplicación. NOTA: los eventos programados para APPLICATION_END puede que no se ejecuten de forma fiable en algunos entornos.</value>
+  </data>
+  <data name="plAttachToEvent.Text">
+    <value xml:space="preserve">Ejecutar durante:</value>
+  </data>
+  <data name="plCatchUpEnabled.Help">
+    <value xml:space="preserve">Si esta opción está marcada, cuando el servidor vuelva a estar en ejecución después de un periodo de inactividad, ejecutará la tarea una vez para cada repetición que no se haya ejecutado durante el periodo de inactividad.</value>
+  </data>
+  <data name="plCatchUpEnabled.Text">
+    <value xml:space="preserve">Recuperación habilitada:</value>
+  </data>
+  <data name="plEnabled.Help">
+    <value xml:space="preserve">Marque está casilla para activar la programación.</value>
+  </data>
+  <data name="plEnabled.Text">
+    <value xml:space="preserve">Tarea activada:</value>
+  </data>
+  <data name="plFriendlyName.Help">
+    <value xml:space="preserve">Indique un nombre para la tarea programada.</value>
+  </data>
+  <data name="plFriendlyName.Text">
+    <value xml:space="preserve">Nombre:</value>
+  </data>
+  <data name="plObjectDependencies.Help">
+    <value xml:space="preserve">Escriba las tablas u objetos de los cuales depende este evento. Ejemplo: "SiteLog,Users,UsersOnline"</value>
+  </data>
+  <data name="plObjectDependencies.Text">
+    <value xml:space="preserve">Dependencias de objetos:</value>
+  </data>
+  <data name="plRetainHistoryNum.Help">
+    <value xml:space="preserve">Ejemplo: Seleccione "10" para conservar las diez filas más recientes de la historia del programador.</value>
+  </data>
+  <data name="plRetainHistoryNum.Text">
+    <value xml:space="preserve">Conservar histórico del programador:</value>
+  </data>
+  <data name="plRetryTimeLapse.Help">
+    <value xml:space="preserve">Ejemplo: "5" y seleccione "Minutos" para que se reintente la tarea cada 5 minutos después de fallar.</value>
+  </data>
+  <data name="plRetryTimeLapse.Text">
+    <value xml:space="preserve">Frecuencia de reintentos:</value>
+  </data>
+  <data name="plScheduleStartDate.Help">
+    <value xml:space="preserve">Introduzca la fecha/hora de inicio de la tarea. Atención: Si el servidor no está activo en este momento o hay otras tareas ejecutándose, esta tarea se ejecutará tan pronto como el servidor esté disponible de nuevo.</value>
+  </data>
+  <data name="plScheduleStartDate.Text">
+    <value xml:space="preserve">Fecha/hora inicio programador:</value>
+  </data>
+  <data name="plServers.Help">
+    <value xml:space="preserve">Seleccione los servidores web en los que tiene que ejecutarse esta tarea.</value>
+  </data>
+  <data name="plServers.Text">
+    <value xml:space="preserve">Ejecutar en servidores:</value>
+  </data>
+  <data name="plTimeLapse.Help">
+    <value xml:space="preserve">Ejemplo: "5" y seleccione "Minutos" para que la tarea se ejecute cada cinco minutos. </value>
+  </data>
+  <data name="plTimeLapse.Text">
+    <value xml:space="preserve">Frecuencia:</value>
+  </data>
+  <data name="plType.Help">
+    <value xml:space="preserve">El nombre completo de clase seguidop or el nombre de ensamblado. Ejemplo: "DotNetNuke.Entities.Users.PurgeUsersOnline, DOTNETNUKE"</value>
+  </data>
+  <data name="plType.Text">
+    <value xml:space="preserve">Nombre completo de clase y ensamblado</value>
+  </data>
+  <data name="RetryTimeLapseRequired.ErrorMessage">
+    <value xml:space="preserve">Tiene que entrar el valor de la frecuencia de reintentos</value>
+  </data>
+  <data name="RetryTimeLapseValidator.ErrorMessage">
+    <value xml:space="preserve">El rango válido para la frecuencia de reintentos es entre 1 y 999999</value>
+  </data>
+  <data name="RunNow.Text">
+    <value xml:space="preserve">Elemento agregado a la programación para su ejecución inmediata.</value>
+  </data>
+  <data name="ScheduleHistory.Action">
+    <value xml:space="preserve">Ver histórico del programador</value>
+  </data>
+  <data name="Seconds.Text">
+    <value xml:space="preserve">Segundos</value>
+  </data>
+  <data name="TimeLapseRequired.ErrorMessage">
+    <value xml:space="preserve">Tiene que entrar el valor para la frecuencia</value>
+  </data>
+  <data name="TimeLapseValidator.ErrorMessage">
+    <value xml:space="preserve">El rango válido para la frecuencia es entre 1 y 999999</value>
+  </data>
+  <data name="TypeRequired.Text">
+    <value xml:space="preserve">El tipo de elemento del programador es obligatorio.</value>
+  </data>
+  <data name="UpdateSuccess.Text">
+    <value xml:space="preserve">Sus cambios han sido guardados.</value>
+  </data>
+  <data name="Weeks.Text">
+    <value xml:space="preserve">Semanas</value>
+  </data>
+  <data name="Years.Text">
+    <value xml:space="preserve">Años</value>
+  </data>
+</root>

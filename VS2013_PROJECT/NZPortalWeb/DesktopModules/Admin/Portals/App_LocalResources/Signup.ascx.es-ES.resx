@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddPortal.Text">
+    <value xml:space="preserve">Añadir sitio nuevo</value>
+  </data>
+  <data name="AdminMissing.Text">
+    <value xml:space="preserve">El archivo admin.template no se encontró y debe ser subido al sitio.&lt;br/&gt;</value>
+  </data>
+  <data name="AutoGenerate.Text">
+    <value xml:space="preserve">Generar automáticamente</value>
+  </data>
+  <data name="Child.Text">
+    <value xml:space="preserve">Hijo</value>
+  </data>
+  <data name="ChildExists.Text">
+    <value xml:space="preserve">El nombre del sitio utilizado ya existe. Introduzca un nombre diferente.</value>
+  </data>
+  <data name="cmdUpdate.Text">
+    <value xml:space="preserve">Crear sitio</value>
+  </data>
+  <data name="ControlTitle_signup.Text">
+    <value xml:space="preserve">Añadir sitio</value>
+  </data>
+  <data name="CreateError.Text">
+    <value xml:space="preserve">Se ha producido un error durante la creación del sitio. Puede haberse debido al escribir una contraseña incorrecta para una cuenta de usuario existente. Revise los datos proporcionados antes de intentarlo nuevamente.</value>
+  </data>
+  <data name="Customize.Text">
+    <value xml:space="preserve">Personalizar</value>
+  </data>
+  <data name="DemoMessage.Text">
+    <value xml:space="preserve">El sitio de prueba le permitirá crear su propio sitio web y experimentar con sus funcionalidades avanzadas {0}. En cualquier momento durante o luego de finalizar el período de prueba, podrá convertir su portal de pruebas en un portal registrado. Para ello deberá iniciar sesión con su cuenta de administrador y seleccionar la opción de "Renovar/Extender la Suscripción del sitio" en la página 
+"Administración". Los Portales Registrados tienen el beneficio adicional de poder utilizar el nombre de dominio propio (p.ej.: www.sudominio.com) como la dirección Web de acceso.&lt;br /&gt;&lt;br /&gt;&lt;strong&gt;*Nota:&lt;/strong&gt; El nombre de su sitio debe ser un nombre simple y no podrá contener espacios o caracteres de puntuación. La URL de su portal tomará la forma de &lt;strong&gt;{1}/nombredelsitio&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="DisallowedExtension.Warning">
+    <value xml:space="preserve">La plantilla contiene archivos de los siguientes tipos que no están permitidos normalmente: {0}.  Dado que son parte integral de la plantilla se han copiado a su sitio. Revise el visor de eventos para ver más detalles.</value>
+  </data>
+  <data name="DuplicatePortalAlias.Text">
+    <value xml:space="preserve">El alias que ha especificado ya existe. Introduzca un nombre de alias diferente.</value>
+  </data>
+  <data name="DuplicateWithTab.Text">
+    <value xml:space="preserve">Ya existe una página con el mismo nombre que ha entrado en un alias del sitio. Cambie el alias del sitio y vuelva a intentarlo.</value>
+  </data>
+  <data name="InvalidHomeFolder.Text">
+    <value xml:space="preserve">La carpeta de inicio que ha especificado no es válida</value>
+  </data>
+  <data name="InvalidName.Text">
+    <value xml:space="preserve">El nombre del sitio no puede contener espacios o caracteres de puntuación.</value>
+  </data>
+  <data name="InvalidPassword.Text">
+    <value xml:space="preserve">Los valores de las contraseñas introducidas no coinciden.</value>
+  </data>
+  <data name="InvalidTemplate.Text">
+    <value xml:space="preserve">{0} no es un archivo de plantilla de portal válido.</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;p&gt;Existen dos tipos de sitio que pueden ser creados con esta aplicaci&amp;oacute;n:&lt;/p&gt;
+&lt;br /&gt;
+&lt;li&gt;&lt;strong&gt;Sitios Padre&lt;/strong&gt; son sitios que tienen asociada una &amp;uacute;nica URL ( p.ej.: www.dominio.com ). Generalmente esto requiere que se haya comprado previamente el dominio y se haya configurado correctamente los servidores DNS de manera que su dominio apunte a la direcci&amp;oacute;n IP designada por su proveedor de alojamiento. Un ejemplo de nombre de portal padre v&amp;aacute;lido es: www.midominio.com.&amp;nbsp; Tambi&amp;eacute;n puede utilizar como&amp;nbsp;nombre v&amp;aacute;lido la direcci&amp;oacute;n IP directamente, sin necesidad de un nombre de&amp;nbsp; dominio ( p.ej.: &lt;strong&gt;65.174.86.217&lt;/strong&gt; ). Si necesita que varios nombres de dominio apunten al mismo portal, escriba sus nombnres separados por comas ( p.ej.: &lt;strong&gt;www.dominio1.com,www.dominio2.com&lt;/strong&gt; ). No se recomienda crear un portal padre hasta tanto se disponga de todas las&amp;nbsp;correspondencias en&amp;nbsp;DNS, ya que de lo contrario, no ser&amp;aacute; posible acceder a su portal desde Internet.&lt;br /&gt;
+&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sitios Hijo&lt;/strong&gt; son directorios virtuales bajo el dominio principal. Esencialmente se crea un directorio virtual en el servidor Web, permitiendo acceder al sitio mediante la URL que contiene el nombre de dominio padre y el directorio virtual correspondiente al hijo (&amp;nbsp;p.ej.: www.dominio.com/directorio ). Un ejemplo de nombre de portal hijo es&amp;nbsp; &lt;strong&gt;" &amp;amp; GetDomainName(Request) &amp;amp; "/nombreDePortal&lt;/strong&gt;. Un sitio hijo siempre puede ser convertido posteriormente en un sitio padre, simplemente modificando el alias respectivo.&lt;br /&gt;
+&lt;br /&gt;
+*NOTA: Los sitios en general se crear&amp;aacute;n tomando las propiedades definidas en el m&amp;oacute;dulo Configuraci&amp;oacute;n del sistema (Tarifa, Espacio en disco, etc.) o en la plantilla seleccionada.&amp;nbsp;Una vez que el sitio haya sido creado, estas propiedades podr&amp;aacute;n modificarse en la&amp;nbsp;opci&amp;oacute;n de men&amp;uacute; Administraci&amp;oacute;n -&amp;gt;Configuraci&amp;oacute;n del Sitio.&lt;br /&gt;
+&lt;br /&gt;
+&lt;/li&gt;</value>
+  </data>
+  <data name="Note.Text">
+    <value xml:space="preserve">&lt;strong&gt;*Nota:&lt;/strong&gt; Una vez que su sitio haya sido creado necesitará iniciar sesión utilizando el nombre de usuario y contraseña introducidos más arriba en la sección Configuraciones de Seguridad.</value>
+  </data>
+  <data name="Parent.Text">
+    <value xml:space="preserve">Padre</value>
+  </data>
+  <data name="plAnswer.Help">
+    <value xml:space="preserve">Escriba la respuesta para la pregunta anterior.</value>
+  </data>
+  <data name="plAnswer.Text">
+    <value xml:space="preserve">Respuesta contraseña:</value>
+  </data>
+  <data name="plConfirm.Help">
+    <value xml:space="preserve">Repita su contraseña para confirmar que ha sido escrita correctamente.</value>
+  </data>
+  <data name="plConfirm.Text">
+    <value xml:space="preserve">Confirme:</value>
+  </data>
+  <data name="plDescription.Help">
+    <value xml:space="preserve">Escriba una descripción para su sitio.</value>
+  </data>
+  <data name="plDescription.Text">
+    <value xml:space="preserve">Descripción:</value>
+  </data>
+  <data name="plEmail.Help">
+    <value xml:space="preserve">Escriba una dirección de email para la cuenta del  administrador de este sitio.</value>
+  </data>
+  <data name="plEmail.Text">
+    <value xml:space="preserve">Email: </value>
+  </data>
+  <data name="plFirstName.Help">
+    <value xml:space="preserve">Escriba su nombre. </value>
+  </data>
+  <data name="plFirstName.Text">
+    <value xml:space="preserve">Nombre:</value>
+  </data>
+  <data name="plHomeDirectory.Help">
+    <value xml:space="preserve">Escriba el directorio de inicio para este portal</value>
+  </data>
+  <data name="plHomeDirectory.Text">
+    <value xml:space="preserve">Directorio de Inicio:</value>
+  </data>
+  <data name="plKeyWords.Help">
+    <value xml:space="preserve">Escriba algunas palabras clave separadas por comas. Estas serán agregadas a la página como metadata y ayudan a los motores de búsqueda a indizar su sitio.</value>
+  </data>
+  <data name="plKeyWords.Text">
+    <value xml:space="preserve">Palabras clave:</value>
+  </data>
+  <data name="plLastName.Help">
+    <value xml:space="preserve">Escriba su apellido.</value>
+  </data>
+  <data name="plLastName.Text">
+    <value xml:space="preserve">Apellido:</value>
+  </data>
+  <data name="plPassword.Help">
+    <value xml:space="preserve">Escriba una contraseña para la cuenta del administrador del nuevo portal.</value>
+  </data>
+  <data name="plPassword.Text">
+    <value xml:space="preserve">Contraseña:</value>
+  </data>
+  <data name="plPortalAlias.Help">
+    <value xml:space="preserve">Escriba el alias para este portal</value>
+  </data>
+  <data name="plPortalAlias.Text">
+    <value xml:space="preserve">Alias del portal :</value>
+  </data>
+  <data name="plPortalName.Help">
+    <value xml:space="preserve">Escriba un nombre para el Portal/Sitio</value>
+  </data>
+  <data name="plPortalName.Text">
+    <value xml:space="preserve">Nombre del portal:</value>
+  </data>
+  <data name="plQuestion.Help">
+    <value xml:space="preserve">Escriba una pregunta que será utilizada para recuperar la contraseña.</value>
+  </data>
+  <data name="plQuestion.Text">
+    <value xml:space="preserve">Pregunta para contraseña:</value>
+  </data>
+  <data name="plSiteGroups.Help">
+    <value xml:space="preserve">Puede añadir el nuevo sitio a un grupo de sitios (opcional)</value>
+  </data>
+  <data name="plSiteGroups.Text">
+    <value xml:space="preserve">Añadir a grupo de sitios:</value>
+  </data>
+  <data name="plTemplate.Help">
+    <value xml:space="preserve">Elija una plantilla para el nuevo portal.</value>
+  </data>
+  <data name="plTemplate.Text">
+    <value xml:space="preserve">Plantilla:</value>
+  </data>
+  <data name="plTitle.Help">
+    <value xml:space="preserve">Escriba un título para el sitio.</value>
+  </data>
+  <data name="plTitle.Text">
+    <value xml:space="preserve">Título:</value>
+  </data>
+  <data name="plType.Help">
+    <value xml:space="preserve">Existen dos tipos de portales que pueden ser creados con esta aplicación. Vea la ayuda del módulo disponible en el menú de acciones para más detalles.</value>
+  </data>
+  <data name="plType.Text">
+    <value xml:space="preserve">Tipo de portal:</value>
+  </data>
+  <data name="plUsername.Help">
+    <value xml:space="preserve">Escriba el nombre de usuario para la cuenta del administrador del nuevo portal.</value>
+  </data>
+  <data name="plUsername.Text">
+    <value xml:space="preserve">Nombre de usuario:</value>
+  </data>
+  <data name="PortalMissing.Text">
+    <value xml:space="preserve">El archivo portal.template con la plantilla no fue encontrado y debe ser subido al sitio.&lt;br/&gt;</value>
+  </data>
+  <data name="PortalSetup.Text">
+    <value xml:space="preserve">Configuración del portal.</value>
+  </data>
+  <data name="SecuritySettings.Text">
+    <value xml:space="preserve">Configuraciones de seguridad.</value>
+  </data>
+  <data name="SendMail.Error">
+    <value xml:space="preserve">Ha ocurrido un error enviando los mensajes de confirmación - {0}. No obstante, el sitio web se ha creado correctamente. &lt;a href='{0}'&gt;Haga clic aquí para acceder al nuevo sitio&lt;/a&gt;</value>
+  </data>
+  <data name="UnknownSendMail.Error">
+    <value xml:space="preserve">Ha ocurrido un error enviando los mensajes de confirmación - {0}. No obstante, el sitio web se ha creado correctamente. &lt;a href='{0}'&gt;Haga clic aquí para acceder al nuevo sitio&lt;/a&gt;</value>
+  </data>
+  <data name="useCurrentLabel.Help">
+    <value xml:space="preserve">Marque esta casilla si quiere utilizar el Superusuario actual como el administrador del sitio. Si esta casilla está desmarcada será necesario que indique las credenciales para el administrador.</value>
+  </data>
+  <data name="useCurrentLabel.Text">
+    <value xml:space="preserve">Utilice el usuario actual como Administrador:</value>
+  </data>
+  <data name="valConfirm.ErrorMessage">
+    <value xml:space="preserve">Se requiere la confirmación de la contraseña.</value>
+  </data>
+  <data name="valEmail.ErrorMessage">
+    <value xml:space="preserve">El campo Email es necesario.</value>
+  </data>
+  <data name="valEmail2.ErrorMessage">
+    <value xml:space="preserve">Dirección email no válida</value>
+  </data>
+  <data name="valFirstName.ErrorMessage">
+    <value xml:space="preserve">El nombre es obligatorio</value>
+  </data>
+  <data name="ValidationResults.Text">
+    <value xml:space="preserve">Resultados validación</value>
+  </data>
+  <data name="valLastName.ErrorMessage">
+    <value xml:space="preserve">El apellido es obligatorio</value>
+  </data>
+  <data name="valPassword.ErrorMessage">
+    <value xml:space="preserve">El campo Contraseña es necesario.</value>
+  </data>
+  <data name="valPortalAlias.ErrorMessage">
+    <value xml:space="preserve">Alias de sitio obligatorio.</value>
+  </data>
+  <data name="valPortalName.ErrorMessage">
+    <value xml:space="preserve">El nombre del sitio es obligatorio</value>
+  </data>
+  <data name="valTemplate.ErrorMessage">
+    <value xml:space="preserve">Seleccione un archivo de plantilla</value>
+  </data>
+  <data name="valUsername.ErrorMessage">
+    <value xml:space="preserve">El nombre de usuario es obligatorio</value>
+  </data>
+</root>

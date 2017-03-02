@@ -1,0 +1,63 @@
+<!--TemplateGroup:listCatalogDefault-->
+<!--CatalogArticleTemplate-->
+<!--BreadCrumbTemplate-->
+<a href="[EasyDNNnews:CatalogBreadCrumbLink]">[EasyDNNnews:CatalogBreadCrumbTitle]</a> &gt;
+<!--BreadCrumbEnd-->
+<!--CatalogArticleEnd-->
+<!--CatalogArticleTemplate-->
+<!--HeaderTemplate-->
+<div class="EDN_category_info">
+	<h1 class="articleTitle">[EasyDNNnews:CatalogCategoryTitle]</h1>
+	<div class="EDN_categoryDescription">
+		[EasyDNNnews:CatalogCategoryDescription]
+	</div>
+</div>
+<!--HeaderEnd-->
+<!--CatalogArticleEnd-->
+
+<!--CatalogArticleTemplate-->
+<!--CategoryTemplate-->
+<div class="EDN_catalog-item">
+	<a href="[EasyDNNnews:CatalogCategoryURL]" title="[EasyDNNnews:CatalogCategoryTitle]"><img alt="[EasyDNNnews:CatalogCategoryTitle]" src="[EasyDNNnews:CatalogCategoryImage:Width:260:Height:160:Resize:Crop]" [EasyDNNnews:CatalogCategoryImage:Visibility] width="260" height="160"/><span>[EasyDNNnews:CatalogCategoryTitle]</span></a>
+</div>
+<!--CategoryEnd-->
+<!--CatalogArticleEnd-->
+
+<!--CatalogArticleTemplate-->
+<!--ArticleTemplate-->
+<div class="EDN_article EDN_articleBox">
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	[EasyDNNnews:IfExists:Image]
+	<div class="EDN_imageContainerBox">
+		<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]"/></a>
+		<ul class="EDN_metaDetailsBox">
+			<li class="EDN_number-views">[EasyDNNnews:NumberOfViews]</li>
+			<li class="EDN_rating">[EasyDNNnews:ArticleRating]</li>
+		</ul>
+	</div>
+	[EasyDNNnews:EndIf:Image]
+	<h2><a class="articleTitle" href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+	[EasyDNNnews:IfExists:SubTitle]
+	<h3 class="articleTitle articleSubTitle">[EasyDNNnews:SubTitle]</h3>
+	[EasyDNNnews:EndIf:SubTitle]
+	<div class="EDN_article_content">
+		[EasyDNNnews:Summary]
+		<div class="EDN_readMoreButtonWrapper"><a class="EDN_readmore EDN_readMoreButton" href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:IfNotExists:EventRegistration][EasyDNNnewsLocalizedText:Read][EasyDNNnews:EndIf:EventRegistration][EasyDNNnews:IfExists:EventRegistration][EasyDNNnewsLocalizedText:Register][EasyDNNnews:EndIf:EventRegistration]</a></div>
+	</div>
+</div>
+<!--ArticleEnd-->
+<!--CatalogArticleEnd-->
+
+<!--ArticleRepeat:After:-->
+[EasyDNNnews:IfExists:RSS]
+<div class="EDN_article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

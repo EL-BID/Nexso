@@ -1,0 +1,87 @@
+09/09/2015 18:03:20 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Applying Upgrade Script 07.04.01
+09/09/2015 18:03:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Providers\DataProviders\SqlDataProvider\07.04.01.SqlDataProvider
+09/09/2015 18:03:20 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start ExecuteScript:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Providers\DataProviders\SqlDataProvider\07.04.01.SqlDataProvider
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End ExecuteScript:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Providers\DataProviders\SqlDataProvider\07.04.01.SqlDataProvider
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpgradeVersion:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Providers\DataProviders\SqlDataProvider\07.04.01.SqlDataProvider
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application to 7.4.1
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start Application Upgrades: 7.4.1
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Updating Config for 7.4.1
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:07.04.01
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start UpdateConfig:7.4.1
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:7.4.1
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade End UpdateConfig:07.04.01
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Deleting Older Files for 7.4.1
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start DeleteFiles:07.04.01
+09/09/2015 18:03:21 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Upgrading Application
+09/09/2015 18:03:22 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DDRMenu_07.04.01_Install.zip
+09/09/2015 18:03:22 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DDRMenu_07.04.01_Install.zip
+09/09/2015 18:03:23 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+09/09/2015 18:03:24 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_CoreMessaging_07.04.01_Install.zip
+09/09/2015 18:03:24 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DNNCE_CoreMessaging_07.04.01_Install.zip
+09/09/2015 18:03:27 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_DigitalAssetsManagement_07.04.01_Install.zip
+09/09/2015 18:03:27 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DNNCE_DigitalAssetsManagement_07.04.01_Install.zip
+09/09/2015 18:03:30 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_HtmlEditorManager_07.04.00_Install.zip
+09/09/2015 18:03:30 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DNNCE_HtmlEditorManager_07.04.00_Install.zip
+09/09/2015 18:03:31 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_HTML_07.04.01_Install.zip
+09/09/2015 18:03:31 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DNNCE_HTML_07.04.01_Install.zip
+09/09/2015 18:03:33 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_Journal_07.04.01_Install.zip
+09/09/2015 18:03:33 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DNNCE_Journal_07.04.01_Install.zip
+09/09/2015 18:03:35 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_MemberDirectory_07.04.01_Install.zip
+09/09/2015 18:03:35 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DNNCE_MemberDirectory_07.04.01_Install.zip
+09/09/2015 18:03:37 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_MobileManagement_07.04.01_Install.zip
+09/09/2015 18:03:37 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DNNCE_MobileManagement_07.04.01_Install.zip
+09/09/2015 18:03:40 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_PreviewProfileManagement_07.04.01_Install.zip
+09/09/2015 18:03:40 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DNNCE_PreviewProfileManagement_07.04.01_Install.zip
+09/09/2015 18:03:41 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=key
+09/09/2015 18:03:41 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_RazorHost_07.04.01_Install.zip
+09/09/2015 18:03:42 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DNNCE_RazorHost_07.04.01_Install.zip
+09/09/2015 18:03:44 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_SocialGroups_07.04.01_Install.zip
+09/09/2015 18:03:44 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DNNCE_SocialGroups_07.04.01_Install.zip
+09/09/2015 18:03:45 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - DNNCE_Taxonomy_07.04.01_Install.zip
+09/09/2015 18:03:45 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DNNCE_Taxonomy_07.04.01_Install.zip
+09/09/2015 18:03:47 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Library - DNNCE_UrlManagement_07.04.01_Install.zip
+09/09/2015 18:03:47 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\DNNCE_UrlManagement_07.04.01_Install.zip
+09/09/2015 18:03:48 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Module - SecurityAnalyzer_01.00.00_Install.zip
+09/09/2015 18:03:48 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\SecurityAnalyzer_01.00.00_Install.zip
+09/09/2015 18:03:49 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Library - Telerik_07.03.04_Install.zip
+09/09/2015 18:03:49 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Module\Telerik_07.03.04_Install.zip
+09/09/2015 18:03:50 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+09/09/2015 18:03:50 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+09/09/2015 18:03:50 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+09/09/2015 18:03:51 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing JavaScript_Library - jQuery.zip
+09/09/2015 18:03:51 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\JavaScriptLibrary\jQuery.zip
+09/09/2015 18:03:52 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing JavaScript_Library - Knockout.zip
+09/09/2015 18:03:52 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\JavaScriptLibrary\Knockout.zip
+09/09/2015 18:03:52 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Provider - DNNMenuNavigationProvider_07.04.01_Install.zip
+09/09/2015 18:03:52 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Provider\DNNMenuNavigationProvider_07.04.01_Install.zip
+09/09/2015 18:03:53 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+09/09/2015 18:03:53 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Provider - FiftyOneClientCapabilityProvider_07.04.01_Install.zip
+09/09/2015 18:03:53 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Provider\FiftyOneClientCapabilityProvider_07.04.01_Install.zip
+09/09/2015 18:03:56 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+09/09/2015 18:03:56 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+09/09/2015 18:03:56 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+09/09/2015 18:03:56 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=defaultProvider
+09/09/2015 18:03:57 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing Provider - RadEditorProvider_07.04.01_Install.zip
+09/09/2015 18:03:57 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\Provider\RadEditorProvider_07.04.01_Install.zip
+09/09/2015 18:03:59 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+09/09/2015 18:03:59 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateAttribute:attributeName=settingsControlPath
+09/09/2015 18:03:59 [INFO] DotNetNuke.Services.Installer.XmlMerge Start UpdateNode: keyAttribute=name
+09/09/2015 18:04:00 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing JavaScript_Library - jQueryMigrate.zip
+09/09/2015 18:04:00 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\JavaScriptLibrary\jQueryMigrate.zip
+09/09/2015 18:04:01 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing JavaScript_Library - jQueryUI.zip
+09/09/2015 18:04:01 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\JavaScriptLibrary\jQueryUI.zip
+09/09/2015 18:04:02 [INFO] DotNetNuke.Services.Upgrade.Internals.Steps.BaseInstallationStep Installing JavaScript_Library - KnockoutMapping.zip
+09/09/2015 18:04:02 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start InstallPackage:D:\GitRepo\NZ_HONEYBEE2\VS2013_PROJECT\NZPortalWeb\Install\JavaScriptLibrary\KnockoutMapping.zip
+09/09/2015 18:04:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start RemoveHostPage:Device Detection Management
+09/09/2015 18:04:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddHostPage:Device Detection Management
+09/09/2015 18:04:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:Device Detection Management
+09/09/2015 18:04:23 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:147
+09/09/2015 18:04:24 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:147
+09/09/2015 18:04:25 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddHostPage:HTML Editor Manager
+09/09/2015 18:04:25 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:HTML Editor Manager
+09/09/2015 18:04:25 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddModuleToPage:148
+09/09/2015 18:04:25 [INFO] DotNetNuke.Services.Upgrade.Upgrade End AddModuleToPage:148
+09/09/2015 18:04:25 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddHostPage:HTML Editor Manager
+09/09/2015 18:04:25 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start AddPage:HTML Editor Manager
+09/09/2015 18:04:25 [INFO] DotNetNuke.Services.Upgrade.Upgrade Start RemoveModule:RadEditor Manager

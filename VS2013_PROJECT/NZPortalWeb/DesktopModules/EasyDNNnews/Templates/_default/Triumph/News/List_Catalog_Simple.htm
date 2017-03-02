@@ -1,0 +1,87 @@
+<!--TemplateGroup:listCatalogSimple-->
+<!--CatalogArticleTemplate-->
+<!--BreadCrumbTemplate-->
+<a href="[EasyDNNnews:CatalogBreadCrumbLink]">[EasyDNNnews:CatalogBreadCrumbTitle]</a> &gt;
+<!--BreadCrumbEnd-->
+<!--CatalogArticleEnd-->
+<!--CatalogArticleTemplate-->
+<!--HeaderTemplate-->
+<div class="EDN_category_info">
+	<h1>[EasyDNNnews:CatalogCategoryTitle]</h1>
+	<div class="description">
+		[EasyDNNnews:CatalogCategoryDescription]
+	</div>
+</div>
+<!--HeaderEnd-->
+<!--CatalogArticleEnd-->
+
+<!--CatalogArticleTemplate-->
+<!--CategoryTemplate-->
+<div class="EDN_catalog-item">
+	<div class="EDN_image-container">
+		<a class="EDN_moreIcon" href="[EasyDNNnews:CatalogCategoryURL]" title="[EasyDNNnews:CatalogCategoryTitle]"><span>[EasyDNNnews:CatalogCategoryTitle]</span></a>
+		<div class="EDN_image-overlay"></div>
+		<div class="EDN_arrow"></div>
+		<img alt="[EasyDNNnews:CatalogCategoryTitle]" src="[EasyDNNnews:CatalogCategoryImage:Width:224:Height:170:Resize:Crop]" [EasyDNNnews:CatalogCategoryImage:Visibility] width="224" height="170"/>
+	</div>
+	<h2><a href="[EasyDNNnews:CatalogCategoryURL]" title="[EasyDNNnews:CatalogCategoryTitle]">[EasyDNNnews:CatalogCategoryTitle]</a></h2>
+</div>
+<!--CategoryEnd-->
+<!--CatalogArticleEnd-->
+
+<!--CatalogArticleTemplate-->
+<!--ArticleTemplate-->
+<div class="EDN_article EDN_simpleArticle">
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	[EasyDNNnews:IfExists:Image]
+	<div class="EDN_image-container">
+		<a class="EDN_moreIcon" href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]" title="[EasyDNNnews:Title]"><span>[EasyDNNnews:Title]</span></a>
+		<div class="EDN_image-overlay"></div>
+		<div class="EDN_arrow"></div>
+		<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]"/>
+	</div>
+	[EasyDNNnews:EndIf:Image]
+	[EasyDNNnews:IfNotExists:Event]<span class="EDN_simpleDate">[EasyDNNnewsLocalizedText:Posted]: [EasyDNNnews:FormatedDate: MMM d, yyyy]</span>[EasyDNNnews:EndIf:Event]
+	[EasyDNNnews:IfExists:Event]<span class="EDN_simpleDate">[EasyDNNnews:EventDate]</span>[EasyDNNnews:EndIf:Event]
+	<h2 class="simpleArticleTitle"><a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]" title="[EasyDNNnews:Title]">[EasyDNNnews:Title]</a></h2>
+	[EasyDNNnews:IfExists:SubTitle]
+	<h3 class="EDN_article-subtitle">[EasyDNNnews:SubTitle]</h3>
+	[EasyDNNnews:EndIf:SubTitle]
+	<div class="EDN_article_content">
+		[EasyDNNnews:Summary]
+	</div>
+	<a class="EDN_readmore" href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:IfNotExists:EventRegistration][EasyDNNnewsLocalizedText:Read][EasyDNNnews:EndIf:EventRegistration][EasyDNNnews:IfExists:EventRegistration][EasyDNNnewsLocalizedText:Register][EasyDNNnews:EndIf:EventRegistration]</a>
+	<ul class="EDN_articleMeta">
+		<li class="EDN_simpleNumberVievs">[EasyDNNnews:NumberOfViews]</li>
+		<li class="EDN_simpleNumberComments">[EasyDNNnews:Comments]</li>
+		<li class="EDN_simpleRating">[EasyDNNnews:ArticleRating]</li>
+	</ul>
+</div>
+<!--ArticleEnd-->
+<!--ArticleRepeat:Before:-->
+<!--RepeatEnd:Before:-->
+
+<!--ArticleRepeat:After:-->
+[EasyDNNnews:IfExists:RSS]
+<div class="EDN_article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span>[EasyDNNnewsLocalizedText:RSSLinkText]</span></a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->
+<!--ArticleEnd-->
+<!--ArticleRepeat:Before:-->
+<!--RepeatEnd:Before:-->
+
+<!--ArticleRepeat:After:-->
+[EasyDNNnews:IfExists:RSS]
+<div class="EDN_article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span>[EasyDNNnewsLocalizedText:RSSLinkText]</span></a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

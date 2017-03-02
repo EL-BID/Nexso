@@ -1,0 +1,30 @@
+<!--TemplateGroup:newsListArticleSidebarBox-->
+<!--ArticleRepeat:Before:-->
+<h1 class="edn_module_title no_margin"><span>[EasyDNNnewsLocalizedText:LatestNews]</span></h1>
+<!--RepeatEnd:Before:-->
+
+
+<!--ArticleTemplate-->
+<div class="article sidebar_box [EasyDNNnews:ItemOrderClasses]">
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="in_article_image left" [EasyDNNnews:Image:Visibility]>
+		<div class="image_wrapper no_text">
+			<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]">
+				<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:73:Height:47:Resize:Crop]" />
+			</a>
+		</div>
+	</div>
+	<h1 class="title"><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title:Limit:70]</a></h1>
+</div>
+<!--ArticleEnd-->
+
+
+
+<!--ArticleRepeat:After:-->
+<!--RepeatEnd:After:-->

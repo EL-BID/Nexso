@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblLevelPriority.Help">
+    <value xml:space="preserve">Se marcar esta caixa, a prioridade de cada página será calculada pelo nível da hierarquia da página. Páginas de nível alto terão valor 1, segundo nível 0.9, terceiro nível 0.8, assim por diante... Esta configuração não mudará o valor armazenado na página atual mas usará o valor calculado quando pedido.</value>
+  </data>
+  <data name="lblLevelPriority.Text">
+    <value xml:space="preserve">Usar prioridades baseadas no nível da página?</value>
+  </data>
+  <data name="MessageUpdated.Text">
+    <value xml:space="preserve">Sua configuração foi salva</value>
+  </data>
+  <data name="PageTitle.Header">
+    <value xml:space="preserve">Título da página</value>
+  </data>
+  <data name="Priority.Header">
+    <value xml:space="preserve">Prioridade</value>
+  </data>
+  <data name="lblMinPagePriority.Help">
+    <value xml:space="preserve">Quando "prioridades baseadas no nível da página" é usado, a prioridade mínina de páginas pode ser usada para definir a menor prioridade que será usada em páginas de nível baixo</value>
+  </data>
+  <data name="lblMinPagePriority.Text">
+    <value xml:space="preserve">Prioridade mínima para páginas:</value>
+  </data>
+  <data name="cmdSaveAll.Text">
+    <value xml:space="preserve">Salvar configuração do mapa do portal</value>
+  </data>
+  <data name="lblExcludePriority.Help">
+    <value xml:space="preserve">Esta opção pode ser usada para remover certas páginas do mapa do portal. Por exemplo você pode definir uma prioridade de -1 para uma página e entrar -1 aqui para fazer com que a página não seja incluída no mapa do portal.</value>
+  </data>
+  <data name="lblIncludeHidden.Help">
+    <value xml:space="preserve">Se marcar esta caixa as páginas ocultas (não visíveis no menu) também serão incluídas no mapa do portal. O padrão é não incluir páginas ocultas.</value>
+  </data>
+  <data name="lblIncludeHidden.Text">
+    <value xml:space="preserve">Incluir páginas ocultas?</value>
+  </data>
+  <data name="SectionGeneralSettings.Text">
+    <value xml:space="preserve">Configurações Gerais do Mapa do Portal</value>
+  </data>
+  <data name="valPriority.Text">
+    <value xml:space="preserve">Você deve fornecer um número válido entre 0.0 e 1.0.</value>
+  </data>
+  <data name="Description.Header">
+    <value xml:space="preserve">Descrição</value>
+  </data>
+  <data name="Keywords.Header">
+    <value xml:space="preserve">Palavras-chave da página</value>
+  </data>
+  <data name="Level.Header">
+    <value xml:space="preserve">Nível</value>
+  </data>
+  <data name="cmdRefresh.Text">
+    <value xml:space="preserve">Atualizar prioridades da página</value>
+  </data>
+  <data name="SectionProviderSettings.Text">
+    <value xml:space="preserve">Provedores de mapa de portal instalados</value>
+  </data>
+  <data name="ProviderDescription.Header">
+    <value xml:space="preserve">Descrição</value>
+  </data>
+  <data name="ProviderEnabled.Header">
+    <value xml:space="preserve">Ativo?</value>
+  </data>
+  <data name="ProviderName.Header">
+    <value xml:space="preserve">Nome do provedor</value>
+  </data>
+  <data name="ProviderOverride.Header">
+    <value xml:space="preserve">Substituir prioridade?</value>
+  </data>
+  <data name="lblCache.Text">
+    <value xml:space="preserve">Dias para armazenar o mapa:</value>
+  </data>
+  <data name="lnkResetCache.Text">
+    <value xml:space="preserve">Limpar cache</value>
+  </data>
+  <data name="ResetOK.Text">
+    <value xml:space="preserve">O cache do mapa do portal foi limpo com sucesso</value>
+  </data>
+  <data name="cmdVerification.Text">
+    <value xml:space="preserve">Criar</value>
+  </data>
+  <data name="lblSearchEngine.Help">
+    <value xml:space="preserve">Envie seu portal para o mecanismo de pesquisa selecionado para indexação.</value>
+  </data>
+  <data name="lblSearchEngine.Text">
+    <value xml:space="preserve">Mecanismo de pesquisa:</value>
+  </data>
+  <data name="lblSiteMap.Help">
+    <value xml:space="preserve">Envie o mapa do portal para o Google para uma melhor otimização da pesquisa. Clique 'Enviar' para obter uma conta Google Webmaster Tools e verificar a propriedade do seu portal (usando a opção 'Verificação' abaixo). Uma vez verificado, você pode selecionar a opção Add General Web Sitemap na guia Google Sitemaps, e colar o endereço exibido do mapa do portal.</value>
+  </data>
+  <data name="lblSiteMap.Text">
+    <value xml:space="preserve">Endereço do mapa do portal:</value>
+  </data>
+  <data name="lblVerification.Help">
+    <value xml:space="preserve">Ao inscrever-se no Google Webmaster Tools você precisará confirmar a propriedade do seu portal. Escolha o método "Enviar um arquivo HTML" na tela de verificação do Google. Entre o nome de arquivo exibido (ex: google53c0cef435b2b81e.html) na caixa de texto de verificação e clique em 'Criar'. Volte ao Google e mande verificar.</value>
+  </data>
+  <data name="lblVerification.Text">
+    <value xml:space="preserve">Verificação:</value>
+  </data>
+  <data name="lnkTestSitemap.Text">
+    <value xml:space="preserve">Visualizar atual mapa do portal</value>
+  </data>
+  <data name="SectionSubmissionSettings.Text">
+    <value xml:space="preserve">Enviar Portal</value>
+  </data>
+  <data name="NoCacheToReset.Text">
+    <value xml:space="preserve">Nenhum cache disponível para reiniciar</value>
+  </data>
+  <data name="Name.Header">
+    <value xml:space="preserve">Nome</value>
+  </data>
+  <data name="cmdSubmitToSearch.Text">
+    <value xml:space="preserve">Enviar</value>
+  </data>
+  <data name="SectionCoreSettingsLbl.Text">
+    <value xml:space="preserve">Modifique as configurações básicas que se aplicam às páginas gerais do DotNetNuke.</value>
+  </data>
+  <data name="SectionGeneralSettingsLbl.Text">
+    <value xml:space="preserve">Defina as configurações que se aplicarão a todos os endereços incluídos no mapa do portal.</value>
+  </data>
+  <data name="SectionSubmissionSettingsLbl.Text">
+    <value xml:space="preserve">Nesta seção você pode enviar seu portal para diferentes mecanismos de pesquisa.</value>
+  </data>
+  <data name="cmdSubmitToSearch.ToolTip">
+    <value xml:space="preserve">Enviar o mapa do portal para o mecanismo de pesquisa</value>
+  </data>
+  <data name="Edit.Cancel">
+    <value xml:space="preserve">Cancelar</value>
+  </data>
+  <data name="Edit.Edit">
+    <value xml:space="preserve">Editar</value>
+  </data>
+  <data name="Edit.Update">
+    <value xml:space="preserve">Atualizar</value>
+  </data>
+  <data name="Enabled.Header">
+    <value xml:space="preserve">Ativo</value>
+  </data>
+  <data name="OverridePriority.Header">
+    <value xml:space="preserve">Substituir prioridade</value>
+  </data>
+  <data name="1Day.Text">
+    <value xml:space="preserve">1 dia</value>
+  </data>
+  <data name="2Days.Text">
+    <value xml:space="preserve">2 dias</value>
+  </data>
+  <data name="3Days.Text">
+    <value xml:space="preserve">3 dias</value>
+  </data>
+  <data name="4Days.Text">
+    <value xml:space="preserve">4 dias</value>
+  </data>
+  <data name="5Days.Text">
+    <value xml:space="preserve">5 dias</value>
+  </data>
+  <data name="6Days.Text">
+    <value xml:space="preserve">6 dias</value>
+  </data>
+  <data name="7Days.Text">
+    <value xml:space="preserve">7 dias</value>
+  </data>
+  <data name="DisableCaching.Text">
+    <value xml:space="preserve">Desativar cache</value>
+  </data>
+</root>

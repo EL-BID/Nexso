@@ -1,0 +1,33 @@
+﻿/*** ShowCommentsFromAllPortals - option ***/
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'StripRSSHtml')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD StripRSSHtml BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsPortalSettings_StripRSSHtml DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'StripRSSHtml')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD StripRSSHtml BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsModuleSettings_StripRSSHtml DEFAULT(1) NOT NULL
+END
+GO
+/*** AutomaticallySetMainArticleImage - option ***/
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'AutomaticallySetMainArticleImage')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD AutomaticallySetMainArticleImage BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsPortalSettings_AutomaticallySetMainArticleImage DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'AutomaticallySetMainArticleImage')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD AutomaticallySetMainArticleImage BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsModuleSettings_AutomaticallySetMainArticleImage DEFAULT(1) NOT NULL
+END
+GO
+/*** AutomaticallyDisplayGalleryInArticle - option ***/
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'AutomaticallyDisplayGalleryInArticle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD AutomaticallyDisplayGalleryInArticle BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsPortalSettings_AutomaticallyDisplayGalleryInArticle DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'AutomaticallyDisplayGalleryInArticle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD AutomaticallyDisplayGalleryInArticle BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsModuleSettings_AutomaticallyDisplayGalleryInArticle DEFAULT(1) NOT NULL
+END
+GO

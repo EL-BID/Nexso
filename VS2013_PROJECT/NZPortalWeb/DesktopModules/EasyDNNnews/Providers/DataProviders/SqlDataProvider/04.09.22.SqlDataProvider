@@ -1,0 +1,124 @@
+﻿/****** Gallery integration cleanup and transformation scripts ******/
+/****** Article nodisplaystyle to empty string******/
+/****** Created two columns GalleryIntegrated, ShowGallery ******/
+/****** Created script for update article gallery integration settings ******/
+/****** Object:  ForeignKey [FK_EasyDNNNews_EasyGallery]    Script Date: 02/09/2013 09:31:33 ******/
+/****** Created script for delete unused columns ******/
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNews]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNews]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNews]', N'{objectQualifier}EasyDNNNews', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNews', N'PK_{objectQualifier}EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+UPDATE {databaseOwner}[{objectQualifier}EasyDNNNews] SET [DisplayStyle] = '' WHERE [DisplayStyle] = 'nodisplaystyle'
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'ShowGallery')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD ShowGallery bit NOT NULL DEFAULT(0)
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'ArticleGalleryID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD ArticleGalleryID int NULL
+END
+GO
+
+BEGIN TRY
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'ShowImageGallery')
+BEGIN
+	EXEC ('UPDATE {databaseOwner}[{objectQualifier}EasyDNNNews] SET [ShowGallery] = CASE WHEN ShowImageGallery = ''True'' AND GalleryIntegration > 0 THEN 1 ELSE 0 END');
+END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'ArtGalleryID')
+BEGIN
+	EXEC ('UPDATE {databaseOwner}[{objectQualifier}EasyDNNNews] SET [ArticleGalleryID] = ArtGalleryID;');
+END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'ArtGalleryID')
+BEGIN
+	EXEC ('UPDATE {databaseOwner}[{objectQualifier}EasyDNNNews] SET [ArticleGalleryID] = NULL WHERE ArticleGalleryID NOT IN (SELECT [GalleryID] FROM EasyGallery);');
+END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyGallery]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyGallery]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyGallery]', N'{objectQualifier}EasyGallery', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyGallery', N'PK_{objectQualifier}EasyGallery', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyGallery_EasyGalleryCategory', N'FK_{objectQualifier}EasyGallery_EasyGalleryCategory', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNews_EasyGallery]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNews]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNews_EasyGallery] FOREIGN KEY([ArticleGalleryID])
+	REFERENCES {databaseOwner}[{objectQualifier}EasyGallery] ([GalleryID]) ON DELETE SET NULL
+	IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNews_EasyGallery]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNews]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNews_EasyGallery]
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+	if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'ArtGalleryID')
+	BEGIN
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [ArtGalleryID]');
+	END
+	if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'ShowArtGAllery')
+	BEGIN
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [ShowArtGAllery]');
+	END
+	if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'ShowGalleryCheck')
+	BEGIN
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [ShowGalleryCheck]');
+	END
+	if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'ShowImageGallery')
+	BEGIN
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [ShowImageGallery]');
+	END
+	if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'GalleryIntegration')
+	BEGIN
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [GalleryIntegration]');
+	END
+END TRY
+BEGIN CATCH
+END CATCH

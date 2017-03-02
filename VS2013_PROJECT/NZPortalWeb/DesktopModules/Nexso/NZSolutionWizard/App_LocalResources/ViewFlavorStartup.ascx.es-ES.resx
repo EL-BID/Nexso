@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Approach.Text" xml:space="preserve">
+    <value>Descripción de la innovación de tu solución o producto</value>
+  </data>
+  <data name="ApproachDesc.Text" xml:space="preserve">
+    <value>Destaca como tu solución o producto marca la diferencia. Resalta las características que pueden atraer a posibles socios, clientes o inversionistas. Intenta contestar estas preguntas cuando describes tu Solución o producto:&lt;br/&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;¿Estás haciendo énfasis en el carácter innovador y único?&lt;/li&gt;
+
+&lt;li&gt;¿Está claramente explicada la metodología de tu solución o producto?&lt;/li&gt;
+
+&lt;li&gt;¿Tu Solución o producto está bien relacionada con el problema expresado?&lt;/li&gt;
+
+&lt;li&gt;¿Se puede realizar o poner en práctica?
+
+&lt;/li&gt;
+
+&lt;li&gt;¿Es replicable o escalable?
+
+&lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="AvailableResourcesDesc.Text" xml:space="preserve">
+    <value>Por favor selecciona los recursos que se encuentran listos para utilizar en la implementación de tu Solución. Esta selección realmente mejora la descripción de tu solucion y muestra el esfuerzo que has realizado para que sea escalable y replicable.</value>
+  </data>
+  <data name="Beneficiaries.Text" xml:space="preserve">
+    <value>Usuarios o beneficiarios de la Solución o producto</value>
+  </data>
+  <data name="BeneficiariesDesc.Text" xml:space="preserve">
+    <value>Identifica al usuario final o beneficiario de tu solución o producto. Pueden ser individuos, organizaciones o grupos de personas.</value>
+  </data>
+  <data name="BlockAdditionalInformationDesc.Text" xml:space="preserve">
+    <value>Describe los beneficios o impactos que puede generar la aplicación o uso de tu Solución. ¿Cuáles son las expectativas realistas de tu Solución?</value>
+  </data>
+  <data name="BlockBenefits.Text" xml:space="preserve">
+    <value>Impacto</value>
+  </data>
+  <data name="BlockBenefitsDesc.Text" xml:space="preserve">
+    <value>Describe cualitativamente y cuantitativamente el impacto de tu Solución o producto. Enfatiza el alcance de este impacto y como se puede mantener en el tiempo.</value>
+  </data>
+  <data name="BlockCostDetailsDesc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BlockDetails.Text" xml:space="preserve">
+    <value>Implementación</value>
+  </data>
+  <data name="BlockDetailsDesc.Text" xml:space="preserve">
+    <value>En esta sección describe brevemente los próximos pasos y actividades que piensas desarrollar para posicionar aún más tu solución o producto en el mercado y expandir su impacto. 
+Describe las actividades que se han hecho hasta ahora para implementar tu solución y cuáles son las nuevas actividades propuestas para crecer o llegar a una nueva etapa.
+Incluye información sobre el presupuesto y el tiempo asociado a dicha implementación. ¿Cuánto tienes presupuestado para las actividades mencionadas? ¿Cuánto tiempo tomará implementarlas?</value>
+  </data>
+  <data name="BlockDurationDetailsDesc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BlockEvidences.Text" xml:space="preserve">
+    <value>Evidencias</value>
+  </data>
+  <data name="BlockEvidencesDesc.Text" xml:space="preserve">
+    <value>¿Tu solución o producto ha sido probada por clientes o usuarios?, ¿Por cuanto tiempo?, ¿Tienes más información y documentos? Compártelo aquí.</value>
+  </data>
+  <data name="BlockFinish.Text" xml:space="preserve">
+    <value>Vista previa</value>
+  </data>
+  <data name="BlockFinishDesc.Text" xml:space="preserve">
+    <value>Un vistazo de cómo NEXSO presenta tu solución o producto antes de que la envíes. Solamente las soluciones finalistas serán publicadas a principios de julio.</value>
+  </data>
+  <data name="BlockInnovation.Text" xml:space="preserve">
+    <value>Innovación</value>
+  </data>
+  <data name="BlockInnovationDesc.Text" xml:space="preserve">
+    <value>Esta sección es clave. Utiliza tus habilidades de “vendedor” y explica porqué tu solución o producto es innovadora, única y replicable en otros contextos. No olvides relacionarla con el problema expuesto y explica en qué te diferencias.</value>
+  </data>
+  <data name="BlockOrganizationBasicDetailsDesc.Text" xml:space="preserve">
+    <value>Información de la Organización. Selecciona una existente o escribe un nombre para crear una nueva.</value>
+  </data>
+  <data name="BlockProblem.Text" xml:space="preserve">
+    <value>Problema</value>
+  </data>
+  <data name="BlockProblemDesc.Text" xml:space="preserve">
+    <value>Describe el problema específico o la necesidad que tu Solución o producto intenta solucionar. Este problema debe ser específico, localizado y preciso, no algo muy general como el cambio climático o la pobreza.</value>
+  </data>
+  <data name="BlockTitle.Text" xml:space="preserve">
+    <value>Empieza aquí dándole un nombre a tu solución o producto</value>
+  </data>
+  <data name="BlockTitleDesc.Text" xml:space="preserve">
+    <value>&lt;/br&gt;</value>
+  </data>
+  <data name="Challenge.Text" xml:space="preserve">
+    <value>Descripción del Problema</value>
+  </data>
+  <data name="ChallengeDesc.Text" xml:space="preserve">
+    <value>Intenta contestar estas preguntas cuando describas el problema:&lt;/br&gt;
+&lt;ul&gt;
+&lt;li&gt;¿Cuál es el contexto del problema y la situación actual de los beneficiarios que buscas apoyar con la Solución o producto?&lt;/li&gt;
+&lt;li&gt;¿Cuál es el problema específico que enfrentan ahora?&lt;/li&gt;
+&lt;li&gt;¿Cuál es la causa u origen de este problema?&lt;/li&gt;
+&lt;li&gt;¿Cual es la dimensión o magnitud de este problema? Recomendamos mencionar cifras o números&lt;/li&gt;
+&lt;li&gt;¿Quienes son los afectados por el problema?&lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="CostDesc.Text" xml:space="preserve">
+    <value>En esta sección debes dar un estimado del presupuesto para la consolidación y posicionamiento de tu solución o producto en el mercado.</value>
+  </data>
+  <data name="CostDetails.Text" xml:space="preserve">
+    <value>Justificación del presupuesto</value>
+  </data>
+  <data name="CostDetailsDesc.Text" xml:space="preserve">
+    <value>En este espacio puedes describir con más detalle todo lo relacionado con el estimado de costos, incluyendo la cantidad de unidades, viajes, materiales, etc. Trata de separar los costes fijos de los variables en tu descripcion.
+&lt;br/&gt;
+Toma en cuenta otros factores que pueden influir en el costo, tales como viajes, derechos de licencia, trabajo legal, hosting y otros servicios online para proyectos web y materiales.</value>
+  </data>
+  <data name="CostValue.Text" xml:space="preserve">
+    <value>Presupuesto estimado (USD)</value>
+  </data>
+  <data name="DeliveryFormat.Text" xml:space="preserve">
+    <value>Tipo de Solución o producto</value>
+  </data>
+  <data name="DeliveryFormatDesc.Text" xml:space="preserve">
+    <value>Hay muchos tipos de soluciones o productos. Selecciona el que mejor representa la tuya. (Debes seleccionar entre 1 y 3 tipos).</value>
+  </data>
+  <data name="DurationDetails.Text" xml:space="preserve">
+    <value>Justificación de la duración</value>
+  </data>
+  <data name="DurationDetailsDesc.Text" xml:space="preserve">
+    <value>Inversionistas y clientes potenciales necesitan una idea del tiempo requerido para lograr estos objetivos. Piensa cómo se relacionan estos tiempos con las actividades mencionadas anteriormente.</value>
+  </data>
+  <data name="Finish.Text" xml:space="preserve">
+    <value>Enviar solución o producto</value>
+  </data>
+  <data name="ImplementationDetails.Text" xml:space="preserve">
+    <value>Detalles de Implementación</value>
+  </data>
+  <data name="ImplementationDetailsDesc.Text" xml:space="preserve">
+    <value>Describe brevemente la secuencia de actividades y los detalles necesarios para la consolidación de tu modelo de negocio y su posicionamiento en el mercado. Esta información es muy importante para que un inversionista potencial entienda el esfuerzo requerido y luego lo pueda asociar con los costos y el tiempo de implementación presentados a continuación.</value>
+  </data>
+  <data name="Location.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationDesc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LongDescriptionDesc.Text" xml:space="preserve">
+    <value>¡Aquí tienes más espacio! Utiliza esta sección para compartir información relevante sobre la Solución, que aún no hayas compartido. Explica la Solución con más detalles o define mejor un área en particular. Puedes usar esta sección para resumir la historia de tu Solución o describir las credenciales necesarias. No hay necesidad de repetir la información de las otras secciones. Asegúrate que el lector tenga una visión completa de tu Solución.</value>
+  </data>
+  <data name="MailTemplateNewSolution.Text" xml:space="preserve">
+    <value>&lt;style type="text/css"&gt;
+    body {
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: none;
+        width: 100% !important;
+        height: 100%;
+        line-height: 1.6;
+    }
+
+    body {
+        background-color: #f6f6f6;
+    }
+
+    @media only screen and (max-width: 640px) {
+        #tdImg img {
+            width: 100%;
+        }
+
+        #mainTable {
+            width: 100% !important;
+        }
+
+        #link {
+            font-size: 9px !important;
+        }
+
+        #header {
+            font-size: 19px !important;
+        }
+
+        #logo img {
+            width: 110px !important;
+            height: 31pximportant;
+        }
+    }
+
+    @media only screen and (min-width: 640px) {
+        #mainTable {
+            width: 600px !important;
+        }
+    }
+&lt;/style&gt; &lt;div style="margin: 0px; padding: 0px; text-align: center; background: #f6f6f6 !important;" background="#f6f6f6"&gt;
+    &lt;link="" rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans"&gt;
+        &lt;table cellspacing="0" id="mainTable" style="width: 600px; border: 1px solid #e7e7e7; margin: 0px auto !important; clear: both !important; background-color: #ffffff;"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt; &lt;td id="logo" style="font-family: sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #333333; font-weight: 500; text-align: center; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-bottom-width: 4px; border-bottom-style: solid; border-bottom-color: #e9e9e9; margin: 0px; padding: 20px; background: #ffffff;" align="left" valign="top"&gt; &lt;img src="http://www.nexso.org/Portals/0/Images/logo.png" alt="¡Bienvenido a NEXSO!" width="150" height="38" style="display: block; float: left;" align="left"&gt; &lt;/td&gt; &lt;td style="font-family: sans-serif; box-sizing: border-box; font-size: 16px; color: #333333; font-weight: 500; text-align: right; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-bottom-width: 4px; border-bottom-style: solid; border-bottom-color: #e9e9e9; margin: 0px; padding: 20px; vertical-align: middle !important; background: #ffffff;" align="center"&gt; &lt;a id="link" href="http://www.nexso.org/es-es/My-Nexso" style="color: #a9a9a9; text-decoration: underline; margin: 0px; padding: 0px; font-size: 12px; font-family: sans-serif;"&gt;actualice su perfil&lt;/a&gt; - &lt;a id="link" href="http://www.nexso.org/es-es/" style="color: #a9a9a9; text-decoration: underline; margin: 0px; padding: 0px; font-size: 12px; font-family: sans-serif;"&gt;www.nexso.org&lt;/a&gt; &lt;/td&gt; &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td id="tdImg" colspan="2"&gt;&lt;img src="http://www.nexso.org/portals/0/Challenges/EXR2015-challenge-banner@2x-ES.png" alt="" width="600" height="200" style="display: block; max-width: 100%;"&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td id="middle" colspan="2" style="padding: 25px; line-height: 1.5; text-align: justify; color: #6a6b67; font-size: 14px; font-family: sans-serif;"&gt;
+
+                        &lt;table width="100%" cellpadding="0" cellspacing="0"&gt;
+                            &lt;tbody&gt;
+                                &lt;tr&gt;
+                                    &lt;td id="middle" colspan="2" id="middle" colspan="2" id="header" style="font-family: sans-serif; box-sizing: border-box; font-size: 22px; margin: 0px; padding: 0px; color: #545151; text-align: left;"&gt;
+                                        &lt;strong&gt;{SOLUTION:Title}&lt;/strong&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td valign="top" id="middle" colspan="2" id="middle" colspan="2" style="padding: 25px; line-height: 1.5; text-align: justify; color: #6a6b67; font-size: 14px; font-family: sans-serif;"&gt;
+                                        Felicitaciones, {USER:FirstName}. Has comenzado una nueva Solución en NEXSO. A continuación te proveemos una guía con lo que debes completar para presentar tu Solución.
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td id="middle" colspan="2" id="middle" colspan="2" style="padding: 25px; line-height: 1.5; text-align: justify; color: #6a6b67; font-size: 14px; font-family: sans-serif;"&gt;
+                                        &lt;p&gt;&lt;strong&gt;Lo que necesitas para que presentar tu Solución exitosamente &lt;/strong&gt;&lt;/p&gt;
+
+                                        &lt;p&gt;&lt;strong&gt;1. Empieza aquí&lt;/strong&gt;&lt;br&gt;El título, la propuesta de valor, la organización.&lt;/p&gt;
+                                        &lt;p&gt;&lt;strong&gt;2. Problema&lt;/strong&gt;&lt;br&gt;Describe el problema de desarrollo específico que tu Solución intenta solucionar.&lt;/p&gt;
+                                        &lt;p&gt;&lt;strong&gt;3. Innovación&lt;/strong&gt;&lt;br&gt;Demuestra cómo tu Solución es innovadora, cómo hace la diferencia y cómo aborda el problema específico que has descrito.&lt;/p&gt;
+                                        &lt;p&gt;&lt;strong&gt;4. Impacto&lt;/strong&gt;&lt;br&gt;Explica los resultados y efectos que un potencial interesado en tu Solución puede esperar al implementar tu Solución.&lt;/p&gt;
+                                        &lt;p&gt;&lt;strong&gt;5. Detalles&lt;/strong&gt;&lt;br&gt;Cualquier punto específico de interés que cualquier persona necesitaría conocer sobre la implementación para poder evaluar tu Solución y su potencial de replicabilidad.&lt;/p&gt;
+                                        &lt;p&gt;&lt;strong&gt;6. Evidencia&lt;/strong&gt;&lt;br&gt;Más información que pueda convencer a potenciales interesados en conectarse con tu Solución.&lt;/p&gt;
+                                        &lt;p&gt;&lt;strong&gt;7. Información Adicional&lt;/strong&gt;&lt;br&gt;Proevee más información para complementar tu Solución.&lt;/p&gt;
+                                        &lt;p&gt;&lt;strong&gt;8. Finalizar&lt;/strong&gt;&lt;br&gt;Envía tu Solución.&lt;/p&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td valign="top" id="middle" colspan="2" style="padding: 25px; line-height: 1.5; text-align: justify; color: #6a6b67; font-size: 14px; font-family: sans-serif;"&gt;
+                                        Para apoyo adicional sobre cómo enviar tu Solución por favor visita nuestra  &lt;a href="http://www.nexso.org/es-es/Apoyo" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #2993d4; text-decoration: underline; margin: 0; padding: 0;"&gt;página de ayuda&lt;/a&gt;.
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+
+                                &lt;tr&gt;
+                                    &lt;td valign="top"&gt;
+                                        &lt;a href="{SOLUTION:URL}" class="btn-primary" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background: #80b63f; margin: 0; padding: 0; border-color: #80b63f; border-style: solid; border-width: 10px 20px;"&gt;Edita tu Solución&lt;/a&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+
+
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td colspan="2" id="footer" style="font-family: sans-serif; box-sizing: border-box; font-size: 12px; margin: 0px; padding: 30px; line-height: 1.1; color: #ffffff; text-align: center; background-color: #2993d4;"&gt; Banco Interamericano de Desarrollo&lt;br&gt;Fondo Multilateral de Inversiones&lt;br&gt;&lt;a href="#" style="color: #ffffff; cursor: text; text-decoration: none; font-size: 12px; font-family: sans-serif;"&gt; 1300 New York Ave NW, Washington, DC 20577, USA&lt;/a&gt; &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;&lt;br&gt;&lt;br&gt;
+    &lt;/li&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="MailTemplateNewSolutionSubject.Text" xml:space="preserve">
+    <value>{USER:FirstName} Asegúrate de convertir tu borrador en una Solución!</value>
+  </data>
+  <data name="MailTemplatePublishedSolution.Text" xml:space="preserve">
+    <value>&lt;style type="text/css"&gt;
+    body {
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: none;
+        width: 100% !important;
+        height: 100%;
+        line-height: 1.6;
+    }
+
+    body {
+        background-color: #f6f6f6;
+    }
+
+    @media only screen and (max-width: 640px) {
+        #tdImg img {
+            width: 100%;
+        }
+
+        #mainTable {
+            width: 100% !important;
+        }
+
+        #link {
+            font-size: 9px !important;
+        }
+
+        #header {
+            font-size: 19px !important;
+        }
+
+        #logo img {
+            width: 110px !important;
+            height: 31pximportant;
+        }
+    }
+
+    @media only screen and (min-width: 640px) {
+        #mainTable {
+            width: 600px !important;
+        }
+    }
+&lt;/style&gt; &lt;div style="margin: 0px; padding: 0px; text-align: center; background: #f6f6f6 !important;" background="#f6f6f6"&gt;
+    &lt;li nk="" rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans"&gt;
+        &lt;table cellspacing="0" id="mainTable" style="width: 600px; border: 1px solid #e7e7e7; margin: 0px auto !important; clear: both !important; background-color: #ffffff;"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt; &lt;td id="logo" style="font-family: sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #333333; font-weight: 500; text-align: center; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-bottom-width: 4px; border-bottom-style: solid; border-bottom-color: #e9e9e9; margin: 0px; padding: 20px; background: #ffffff;" align="left" valign="top"&gt; &lt;img src="http://www.nexso.org/Portals/0/Images/logo.png" alt="¡Bienvenido a NEXSO!" width="150" height="38" style="display: block; float: left;" align="left"&gt; &lt;/td&gt; &lt;td style="font-family: sans-serif; box-sizing: border-box; font-size: 16px; color: #333333; font-weight: 500; text-align: right; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-bottom-width: 4px; border-bottom-style: solid; border-bottom-color: #e9e9e9; margin: 0px; padding: 20px; vertical-align: middle !important; background: #ffffff;" align="center"&gt; &lt;a id="link" href="http://www.nexso.org/es-es/My-Nexso" style="color: #a9a9a9; text-decoration: underline; margin: 0px; padding: 0px; font-size: 12px; font-family: sans-serif;"&gt;actualice su perfil&lt;/a&gt; - &lt;a id="link" href="http://www.nexso.org/es-es/" style="color: #a9a9a9; text-decoration: underline; margin: 0px; padding: 0px; font-size: 12px; font-family: sans-serif;"&gt;www.nexso.org&lt;/a&gt; &lt;/td&gt; &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td id="tdImg" colspan="2"&gt;&lt;img src="http://www.nexso.org/portals/0/Challenges/EXR2015-challenge-banner@2x-ES.png" alt="" width="600" height="200" style="display: block; max-width: 100%;"&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td id="middle" colspan="2" style="padding: 25px; line-height: 1.5; text-align: justify; color: #6a6b67; font-size: 14px; font-family: sans-serif;"&gt;
+
+
+                        &lt;p id="header" style="font-family: sans-serif; box-sizing: border-box; font-size: 22px; margin: 0px; padding: 0px; color: #545151; text-align: left;"&gt;&lt;strong&gt;{USER:FirstName},&lt;/strong&gt; &lt;/p&gt;
+                        &lt;p&gt; Gracias por presentar su aplicación a través de NEXSO a la Convocatoria de Idear Soluciones para mejorar vidas en ciudades 2015.  &lt;/p&gt;
+                        &lt;p&gt; Su aplicación para ser considerada entre las empresas Startups más innovadoras de América Latina y el Caribe fue recibida y estará siendo evaluada las próximas semanas. Las startups seleccionadas serán notificadas a mediados de agosto.    &lt;/p&gt;
+                        &lt;p&gt;
+                            &lt;a href="{SOLUTION:URL}" class="btn-primary" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background: #80b63f; margin: 0; padding: 0; border-color: #80b63f; border-style: solid; border-width: 10px 20px;"&gt;Ver mi Solución&lt;/a&gt;
+                        &lt;/p&gt;
+                        &lt;p&gt;Gracias, &lt;/p&gt;
+                        Idear Soluciones&lt;/br&gt;
+                         &lt;a href="http://www.iadb.org/idearsoluciones" style="color: #6a6b67; text-decoration: none; margin: 0px; padding: 0px; font-size: 14px; font-family: sans-serif;"&gt; www.iadb.org/idearsoluciones &lt;/a&gt; 
+
+
+
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td colspan="2" id="footer" style="font-family: sans-serif; box-sizing: border-box; font-size: 12px; margin: 0px; padding: 30px; line-height: 1.1; color: #ffffff; text-align: center; background-color: #2993d4;"&gt; Banco Interamericano de Desarrollo&lt;br&gt;Fondo Multilateral de Inversiones&lt;br&gt;&lt;a href="#" style="color: #ffffff; cursor: text; text-decoration: none; font-size: 12px; font-family: sans-serif;"&gt; 1300 New York Ave NW, Washington, DC 20577, USA&lt;/a&gt; &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;&lt;br&gt;&lt;br&gt;
+    &lt;/li&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="MailTemplatePublishedSolutionSubject.Text" xml:space="preserve">
+    <value>{USER:FirstName} Tu Solución es ahora elegible para participar en oportunidades de NEXSO!</value>
+  </data>
+  <data name="OrganizationAttached.Text" xml:space="preserve">
+    <value>Organización</value>
+  </data>
+  <data name="OrganizationAttachedDesc.Text" xml:space="preserve">
+    <value>Selecciona una organización de la lista o escribe un nombre para crear una nueva. La organización es tu empresa startup. Por ejemplo: ieetech es la Startup que produjo Chipsafer. Si tu Startup es tu producto, crea el perfil de la organización basado en el producto.</value>
+  </data>
+  <data name="ProjectDuration.Text" xml:space="preserve">
+    <value>Tiempo de implementación</value>
+  </data>
+  <data name="ProjectDurationDesc.Text" xml:space="preserve">
+    <value>Indica cuánto tiempo puede durar el proceso de consolidación y posicionamiento de tu solución o producto en esta nueva etapa.</value>
+  </data>
+  <data name="Results.Text" xml:space="preserve">
+    <value>Impacto de la Solución o producto</value>
+  </data>
+  <data name="ResultsDesc.Text" xml:space="preserve">
+    <value>Contesta estas preguntas cuando describas el impacto de tu Solución o producto:
+
+
+
+&lt;/br&gt;
+
+&lt;ul&gt;&lt;li&gt;¿Cómo cuantificas (usa números) el impacto de tu Solución o producto?&lt;/li&gt;
+
+&lt;li&gt;¿¿Cuál es el alcance actual y potencial de tu Solución o producto en el futuro?
+
+&lt;/li&gt;
+
+&lt;li&gt; ¿Cómo es tu modelo de negocio? Explica brevemente cómo tu empresa startup genera ingresos y es sostenible o lo será en el futuro?&lt;/li&gt;
+
+&lt;li&gt;¿Incluiste cifras para apoyar tus descripciones y mostrar evidencia de los resultados de tu solución o producto? 
+
+&lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="ShortDescription.Text" xml:space="preserve">
+    <value>Propuesta de valor</value>
+  </data>
+  <data name="ShortDescriptionDesc.Text" xml:space="preserve">
+    <value>Usa este espacio para ‘enganchar’ al lector. Ofrece detalles que complementen el nombre y haz tu solución o producto atractivo. Convence al lector con un mensaje claro y conciso de porque estás ofreciendo algo único y diferente. No repitas el nombre ya que se verán siempre juntos. Por ejemplo: (Nombre de la Solución) ChipSafer; (Descripción) Chipsafer es un sistema único que permite al ganadero seguir electrónicamente a sus animales, ubicarlos en tiempo real y colectar estadísticas vitales fundamentales para la producción eficiente.</value>
+  </data>
+  <data name="Step0.Text" xml:space="preserve">
+    <value>Empieza aquí</value>
+  </data>
+  <data name="Step1.Text" xml:space="preserve">
+    <value>Problema</value>
+  </data>
+  <data name="Step2.Text" xml:space="preserve">
+    <value>Innovación</value>
+  </data>
+  <data name="Step3.Text" xml:space="preserve">
+    <value>Impacto</value>
+  </data>
+  <data name="Step4.Text" xml:space="preserve">
+    <value>Implementación</value>
+  </data>
+  <data name="Step5.Text" xml:space="preserve">
+    <value>Evidencias</value>
+  </data>
+  <data name="Step6.Text" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="SubmissionTitle.Text" xml:space="preserve">
+    <value>Nombre de la solución o producto</value>
+  </data>
+  <data name="SubmissionTitleDesc.Text" xml:space="preserve">
+    <value>El nombre ideal es corto, atractivo, fácil de entender y recordar. Intenta limitar el nombre a 8 palabras o menos. Deja una impresión positiva con un nombre que la gente recuerde. Este es el nombre de lo que la startup ha creado y con lo que está postulando. Por ejemplo: Chipsafer</value>
+  </data>
+  <data name="SupportDocuments.Text" xml:space="preserve">
+    <value>Documentos de apoyo (visible a toda la comunidad)</value>
+  </data>
+  <data name="SupportDocumentsDesc.Text" xml:space="preserve">
+    <value>Usa este espacio para subir información adicional sobre tu solución o producto. Se recomienda, artículos de prensa, certificados, reconocimientos o cualquier material que te permita documentar más tu solución o producto.</value>
+  </data>
+  <data name="Theme.Text" xml:space="preserve">
+    <value>Temas</value>
+  </data>
+  <data name="ThemeDesc.Text" xml:space="preserve">
+    <value>Temas relacionados con el problema que tu solución o producto atiende</value>
+  </data>
+</root>

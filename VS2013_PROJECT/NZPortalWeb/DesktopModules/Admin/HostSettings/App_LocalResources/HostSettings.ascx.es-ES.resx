@@ -1,0 +1,1092 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="15Seconds.Text">
+    <value xml:space="preserve">15 segundos</value>
+  </data>
+  <data name="30Seconds.Text">
+    <value xml:space="preserve">30 segundos</value>
+  </data>
+  <data name="45Seconds.Text">
+    <value xml:space="preserve">45 segundos</value>
+  </data>
+  <data name="60Seconds.Text">
+    <value xml:space="preserve">60 segundos</value>
+  </data>
+  <data name="AdvancedSettings.Text">
+    <value xml:space="preserve">Configuración avanzada</value>
+  </data>
+  <data name="AdvancedSettingsHelp.Text">
+    <value xml:space="preserve">Configuración avanzada de su cuenta de alojamiento</value>
+  </data>
+  <data name="AlwaysUse.Text">
+    <value xml:space="preserve">Todas las URLs.</value>
+  </data>
+  <data name="Appearance.Text">
+    <value xml:space="preserve">Apariencia</value>
+  </data>
+  <data name="Authentication.Text">
+    <value xml:space="preserve">Configuración de autenticación</value>
+  </data>
+  <data name="BasicSettings.Text">
+    <value xml:space="preserve">Configuración básica</value>
+  </data>
+  <data name="BasicSettingsHelp.Text">
+    <value xml:space="preserve">Configuración básica de su cuenta de alojamiento</value>
+  </data>
+  <data name="btnCompactSearchIndex.Text">
+    <value xml:space="preserve">Compactar índice</value>
+  </data>
+  <data name="btnHostSearchReindex.Text">
+    <value xml:space="preserve">Reindexar</value>
+  </data>
+  <data name="CdnSettings.Text">
+    <value xml:space="preserve">CDN</value>
+  </data>
+  <data name="CharacterSubListLabel.Help">
+    <value xml:space="preserve">Seleccione el carácter a utilizar para unir URLs.</value>
+  </data>
+  <data name="CharacterSubListLabel.Text">
+    <value xml:space="preserve">Carácter:</value>
+  </data>
+  <data name="ClearCache.Text">
+    <value xml:space="preserve">Limpiar caché</value>
+  </data>
+  <data name="ClientResourceManagement.Text">
+    <value xml:space="preserve">Gestión de recursos de cliente</value>
+  </data>
+  <data name="cmdRestart.Text">
+    <value xml:space="preserve">Reiniciar aplicación</value>
+  </data>
+  <data name="CompactIndexConfirmationCancel.Text">
+    <value xml:space="preserve">Cancelar</value>
+  </data>
+  <data name="CompactIndexConfirmationMessage.Text">
+    <value xml:space="preserve">Compactar en índice puede requerir un uso intenso de la CPU y puede requerir el doble del espacio real durante el proceso. La compactación se ejecuta durante la indexación de sitio (en función de la frecuencia del programador de tareas). ¿Está seguro que desea continuar?</value>
+  </data>
+  <data name="CompactIndexConfirmationTitle.Text">
+    <value xml:space="preserve">Confirmar compactación</value>
+  </data>
+  <data name="CompactIndexConfirmationYes.Text">
+    <value xml:space="preserve">Continuar</value>
+  </data>
+  <data name="Configuration.Text">
+    <value xml:space="preserve">Configuración</value>
+  </data>
+  <data name="ConnectionLimitValidation.Text">
+    <value xml:space="preserve">Entre un número entre 1 y 2147483647.</value>
+  </data>
+  <data name="ContainerUpload.Text">
+    <value xml:space="preserve">Cargar container</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Configuración del sistema</value>
+  </data>
+  <data name="CrmIncrementCrmVersionButton.Text">
+    <value xml:space="preserve">Incrementar versión</value>
+  </data>
+  <data name="Database.Text">
+    <value xml:space="preserve">Base de datos</value>
+  </data>
+  <data name="DebugEnabled.Text">
+    <value xml:space="preserve">El modo de depuración (debug) está habilitado para la aplicació (especificado en el archivo web.config). Con esta configuración los archivos no se combinarán, incluso si la combinación de archivos está activada aquí o a nivel de sitio.</value>
+  </data>
+  <data name="DebugEnabled.Title">
+    <value xml:space="preserve">Nota importante sobre el modo de depuración</value>
+  </data>
+  <data name="Disk.Text">
+    <value xml:space="preserve">Disco</value>
+  </data>
+  <data name="EmailErrorMessage.Text">
+    <value xml:space="preserve">Ha ocurrido un error al enviar el email de prueba. El error es:&lt;br /&gt;{0}</value>
+  </data>
+  <data name="EmailSentMessage.Text">
+    <value xml:space="preserve">Se ha enviado el correo correctamente desde {0} a {0}</value>
+  </data>
+  <data name="EmailTest.Text">
+    <value xml:space="preserve">Prueba de configuración SMTP</value>
+  </data>
+  <data name="EmptyString.Text">
+    <value xml:space="preserve">&lt;&lt;Cadena vacía&gt;&gt;</value>
+  </data>
+  <data name="ExtensionLabel.Help">
+    <value xml:space="preserve">Introduzca la extensión incluyendo el punto inicial. La extensión predeterminada es .aspx.</value>
+  </data>
+  <data name="ExtensionLabel.Text">
+    <value xml:space="preserve">Extensión (valor predeterminado .aspx):</value>
+  </data>
+  <data name="FileSystem.Text">
+    <value xml:space="preserve">Sistema de archivos</value>
+  </data>
+  <data name="FrameworkDownLevel.Text">
+    <value xml:space="preserve">Atención: Está ejecutando la aplicación sobre una versión anterior de .NET Framework.  DNN Platform requiere el uso de .NET 4.0 o posterior.</value>
+  </data>
+  <data name="FriendlyUrl.Text">
+    <value xml:space="preserve">URLs amigables</value>
+  </data>
+  <data name="HeavyCaching.Text">
+    <value xml:space="preserve">Pesada</value>
+  </data>
+  <data name="Host.Text">
+    <value xml:space="preserve">Nombre del sistema</value>
+  </data>
+  <data name="HostDetails.Text">
+    <value xml:space="preserve">Detalles del sistema</value>
+  </data>
+  <data name="HostEmail.Error">
+    <value xml:space="preserve">Dirección email incorrecta</value>
+  </data>
+  <data name="Html5Doctype.Text">
+    <value xml:space="preserve">HTML 5</value>
+  </data>
+  <data name="IncrementCrmVersionButton.Text">
+    <value xml:space="preserve">Incrementar versión</value>
+  </data>
+  <data name="IncrementCrmVersionConfirm.Text">
+    <value xml:space="preserve">&lt;p&gt;Esta acción forzará que todos los visitantes del sitio descarguen una nueva versión de los archivos CSS y JavaScript. Sólo debería hacerlo si está seguro de que los archivos han cambiado y desea que estos cambios se reflejen en el navegador del cliente.&lt;/p&gt;&lt;p&gt;¿Está seguro que desea incrementar el número de versión?&lt;/p&gt;</value>
+  </data>
+  <data name="IncrementCrmVersionError.Text">
+    <value xml:space="preserve">Ocurrió un error al incrementar la versión de los recursos de cliente.</value>
+  </data>
+  <data name="IPFilters.Text">
+    <value xml:space="preserve">Filtro IP de inicio de sesión</value>
+  </data>
+  <data name="IPFiltersDisabled.Text">
+    <value xml:space="preserve">El filtro de autenticación por IP está desactivado. Para activarlo, marque la opción Activar verificación de IP en la configuración de Seguridad.</value>
+  </data>
+  <data name="IPFiltersDisabled.Title">
+    <value xml:space="preserve">Nota importante de filtro de direcciones IP</value>
+  </data>
+  <data name="IPFiltersInfo.Text">
+    <value xml:space="preserve">Al configurar el filtro de direcciones IP no podrá editar/borrar una entrada que resultaría en el bloqueo de la IP actual.</value>
+  </data>
+  <data name="IPFiltersInfo.Title">
+    <value xml:space="preserve">Nota importante de filtro de direcciones IP</value>
+  </data>
+  <data name="Items.Text">
+    <value xml:space="preserve">Elementos</value>
+  </data>
+  <data name="JQuery.Text">
+    <value xml:space="preserve">jQuery</value>
+  </data>
+  <data name="lblCustomAnalyzer.Help">
+    <value xml:space="preserve">&lt;p&gt;Si está vacío, el sistema utilizará el analizador predeterminado para indexar el contenido. Si quiere utilizar un analizador específico, indique el nombre completo de la clase del analizador en este campo. &lt;/p&gt;&lt;p&gt;&lt;b&gt;Atención:&lt;/b&gt; Si quiere que el contenido existente se analice con el nuevo analizador, tiene que ir a "Administrador &gt; Indexador de contenido" en cada sitio donde quiera realizar esta acción y a continuación pulsar el botón "Reindexar contenido".&lt;/p&gt;</value>
+  </data>
+  <data name="lblCustomAnalyzer.Text">
+    <value xml:space="preserve">Tipo de analizador personalizado:</value>
+  </data>
+  <data name="lblGetMoreInformation.Text">
+    <value xml:space="preserve">Obtener más información</value>
+  </data>
+  <data name="lblIndexWordMaxLength.Help">
+    <value xml:space="preserve">Introduzca la longitud máxima de palabra que se incluirá en el índice.</value>
+  </data>
+  <data name="lblIndexWordMaxLength.Text">
+    <value xml:space="preserve">Longitud máxima de palabra:</value>
+  </data>
+  <data name="lblIndexWordMinLength.Help">
+    <value xml:space="preserve">Introduzca la longitud mínima de palabra que se incluirá en el índice.</value>
+  </data>
+  <data name="lblIndexWordMinLength.Text">
+    <value xml:space="preserve">Longitud mínima de palabra:</value>
+  </data>
+  <data name="lblSearchIndexActiveDocuments.Help">
+    <value xml:space="preserve">Indica el número de documentos activos en el índice de búsqueda.</value>
+  </data>
+  <data name="lblSearchIndexActiveDocuments.Text">
+    <value xml:space="preserve">Documentos activos:</value>
+  </data>
+  <data name="lblSearchIndexDbSize.Help">
+    <value xml:space="preserve">Indica el tamaño total del los archivos de la base de datos de indexación.</value>
+  </data>
+  <data name="lblSearchIndexDbSize.Text">
+    <value xml:space="preserve">Tamaño del índice de búsqueda:</value>
+  </data>
+  <data name="lblSearchIndexDeletedDocuments.Help">
+    <value xml:space="preserve">Indica el número de documentos eliminados en el índice de búsqueda.</value>
+  </data>
+  <data name="lblSearchIndexDeletedDocuments.Text">
+    <value xml:space="preserve">Documentos eliminados:</value>
+  </data>
+  <data name="lblSearchIndexLastModifiedOn.Help">
+    <value xml:space="preserve">Última modificación de los archivos del índice de búsqueda.</value>
+  </data>
+  <data name="lblSearchIndexLastModifiedOn.Text">
+    <value xml:space="preserve">Última modificación:</value>
+  </data>
+  <data name="lblSearchIndexPath.Help">
+    <value xml:space="preserve">Carpeta donde se guarda el índice de búsqueda. Se puede cambiar manualmente creando un entrada con el nombre "Search_IndexFolder" en HostSettings. Se recomienda parar el App Pool antes de realizar el cambio. El contenido de la carpeta anterior tiene que copiarse manualmente a la nueva carpeta o bien tiene que ejecutarse una reindexación.</value>
+  </data>
+  <data name="lblSearchIndexPath.Text">
+    <value xml:space="preserve">Carpeta del índice:</value>
+  </data>
+  <data name="LegacyDoctype.Text">
+    <value xml:space="preserve">HTML 4 (obsoleto)</value>
+  </data>
+  <data name="LightCaching.Text">
+    <value xml:space="preserve">Ligera</value>
+  </data>
+  <data name="LogEmpty.Text">
+    <value xml:space="preserve">El archivo de registro está vacío para la versión de script especificada. Esto generalmente indica que el script se ejecutó correctamente.</value>
+  </data>
+  <data name="LogLocations.Text">
+    <value xml:space="preserve">Localización del registro</value>
+  </data>
+  <data name="LogSettings.Text">
+    <value xml:space="preserve">Registros</value>
+  </data>
+  <data name="LogSettingsHelp.Text">
+    <value xml:space="preserve">Mostrar registros de instalación y otros</value>
+  </data>
+  <data name="MaxIdleTimeValidation.Text">
+    <value xml:space="preserve">Entre un número entre 1 y 2147483647.</value>
+  </data>
+  <data name="maxUploadSize.Error">
+    <value xml:space="preserve">El tamaño máximo tiene que estar entre 12 y {0}</value>
+  </data>
+  <data name="Mb.Text">
+    <value xml:space="preserve">MB</value>
+  </data>
+  <data name="MembershipManagement.Text">
+    <value xml:space="preserve">Seguridad</value>
+  </data>
+  <data name="Memory.Text">
+    <value xml:space="preserve">Memoria</value>
+  </data>
+  <data name="MessageIndexWarning.Text">
+    <value xml:space="preserve">La &lt;strong&gt;compactación&lt;/strong&gt; del índice recupera espacio de los elementos borrados del almacen de búsquedas. La compactación es recomendable solo cuando haya muchos documentos eliminados en el índice. La compactación puede requerir el doble del espacio real durante el proceso. La reindexación borra todo el contenido del índice y vuelve a realizar la indexación. Ambas acciones, compactación y reindexación, se ejecutan automáticamente en la tarea "Site Search Crawler" del programador de tareas. &lt;strong&gt;Atención&lt;/strong&gt; La compactación y reindexación deben realizarse durante horas de poco uso puesto que requiren un uso intensivo de CPU del servidor.</value>
+  </data>
+  <data name="MinificationSettingsInfo.Text">
+    <value xml:space="preserve">Si los ajustes de minificación se cambian cuando los archivos compuestos están habilitados, primero debe guardar la configuración de minificación haciendo clic en Actualizar y luego incrementar el número de versión. Este emitirá los nuevos archivos compuestos usando la nueva configuración de minificación.</value>
+  </data>
+  <data name="MinificationSettingsInfo.Title">
+    <value xml:space="preserve">Nota importante acerca de la configuración de minificación</value>
+  </data>
+  <data name="ModerateCaching.Text">
+    <value xml:space="preserve">Moderada</value>
+  </data>
+  <data name="ModuleCacheProvider.Help">
+    <value xml:space="preserve">Seleccione el proveedor de caché de módulo por omisión. Esta configuración  puede ser sobrescrita por cada módulo individual.</value>
+  </data>
+  <data name="ModuleCacheProvider.Text">
+    <value xml:space="preserve">Proveedor de caché de módulo</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Acerca de la configuración del sistema&lt;/h1&gt;&lt;p&gt;El superusuario puede gestionar las configuraciones que se aplicarán a todo el sitio.&lt;/p&gt;</value>
+  </data>
+  <data name="Never.Text">
+    <value xml:space="preserve">Nunca</value>
+  </data>
+  <data name="NoCache.Text">
+    <value xml:space="preserve">Sin caché</value>
+  </data>
+  <data name="NoCaching.Text">
+    <value xml:space="preserve">Sin caché</value>
+  </data>
+  <data name="NoLog.Text">
+    <value xml:space="preserve">El archivo de registro no existe para la versión de script especificada. Esto generalmente indica que el script no ha sido ejecutado.</value>
+  </data>
+  <data name="NoPermissions.Text">
+    <value xml:space="preserve">Sin permisos</value>
+  </data>
+  <data name="Other.Text">
+    <value xml:space="preserve">Otras configuraciones</value>
+  </data>
+  <data name="OtherSettings.Text">
+    <value xml:space="preserve">Otras configuraciones</value>
+  </data>
+  <data name="Page.Text">
+    <value xml:space="preserve">Página</value>
+  </data>
+  <data name="PageCacheProvider.Help">
+    <value xml:space="preserve">Seleccione el proveedor de almacenamiento en caché de página por omisión. El proveedor de caché debe estar habilitado para configurar el tiempo de espera en cada página.</value>
+  </data>
+  <data name="PageCacheProvider.Text">
+    <value xml:space="preserve">Proveedor de caché de página</value>
+  </data>
+  <data name="PageOnly.Text">
+    <value xml:space="preserve">Solamente páginas sin parámetros.</value>
+  </data>
+  <data name="PasswordConfig_PasswordExpiry.Help">
+    <value xml:space="preserve">Indica cada cuando tiempo los usuarios tienen que cambiar la contraseña (0 indica que la contraseña no caduca nunca).</value>
+  </data>
+  <data name="PasswordConfig_PasswordExpiry.Text">
+    <value xml:space="preserve">Caducidad de contraseña (en días):</value>
+  </data>
+  <data name="PasswordConfig_PasswordExpiryReminder.Help">
+    <value xml:space="preserve">Indica el número de días antes de que caduque la contraseña, en que los usuarios recibirán el recordatorio para cambiar su contraseña.</value>
+  </data>
+  <data name="PasswordConfig_PasswordExpiryReminder.Text">
+    <value xml:space="preserve">Recordatorio de caducidad de contraseña (en días):</value>
+  </data>
+  <data name="Payment.Text">
+    <value xml:space="preserve">Formas de pago</value>
+  </data>
+  <data name="Performance.Text">
+    <value xml:space="preserve">Rendimiento</value>
+  </data>
+  <data name="plAdminContainer.Help">
+    <value xml:space="preserve">Seleccione el container que se aplicará a todos los módulos en modo de edición (ctl=)</value>
+  </data>
+  <data name="plAdminContainer.Text">
+    <value xml:space="preserve">Container de edición:</value>
+  </data>
+  <data name="plAdminResetLinkValidity.Help">
+    <value xml:space="preserve">Tiempo de validez de los enlaces de reinicio del administrador (en minutos).</value>
+  </data>
+  <data name="plAdminResetLinkValidity.Text">
+    <value xml:space="preserve">Tiempo de vida del enlace de reinicio de administrador (minutos)</value>
+  </data>
+  <data name="plAJAX.Help">
+    <value xml:space="preserve">Marque esta casilla para habilitar el soporte AJAX.</value>
+  </data>
+  <data name="plAJAX.Text">
+    <value xml:space="preserve">¿Activar AJAX?</value>
+  </data>
+  <data name="plApplicationMapPath.Help">
+    <value xml:space="preserve">La ruta física de la raíz del sitio en el servidor.</value>
+  </data>
+  <data name="plApplicationMapPath.Text">
+    <value xml:space="preserve">Ruta física:</value>
+  </data>
+  <data name="plApplicationPath.Help">
+    <value xml:space="preserve">La ubicación relativa de la aplicación en relación con la raíz del sitio.</value>
+  </data>
+  <data name="plApplicationPath.Text">
+    <value xml:space="preserve">Ruta relativa:</value>
+  </data>
+  <data name="plAsyncTimeout.Help">
+    <value xml:space="preserve">Indique el tiempo máximo, en segundos, que se mantendrá activa una llamada asíncrona antes de cerrar la petición. El valor tiene que estar entre 90-9999 segundos.</value>
+  </data>
+  <data name="plAsyncTimeout.Text">
+    <value xml:space="preserve">Tiempo de validez de petición asíncrona:</value>
+  </data>
+  <data name="plAutoAccountUnlock.Help">
+    <value xml:space="preserve">Después de que una cuenta se haya bloqueado debido a intentos de inicio de sesión incorrectos, ésta puede desbloquearse después de que haya pasado un cierto periodo de tiempo. Escriba el número de minutos que hay que esperar para que la cuenta se desbloquee automáticamente. Escriba "0" para desactivar la característica de autodesbloqueo</value>
+  </data>
+  <data name="plAutoAccountUnlock.Text">
+    <value xml:space="preserve">Autodesbloquear cuentas después de (minutos):</value>
+  </data>
+  <data name="plAutoSync.Help">
+    <value xml:space="preserve">Marque esta casilla para sincronizar automáticamente el sistema de archivos.</value>
+  </data>
+  <data name="plAutoSync.Text">
+    <value xml:space="preserve">¿Autosincronizar sistema de archivos?</value>
+  </data>
+  <data name="plAvailable.Help">
+    <value xml:space="preserve">Muestra un icono si una nueva versión de la aplicación está disponible</value>
+  </data>
+  <data name="plAvailable.Text">
+    <value xml:space="preserve">¿Actualización disponible?</value>
+  </data>
+  <data name="plBatch.Help">
+    <value xml:space="preserve">El número de mensajes enviados por el programador de tareas en cada ejecución.</value>
+  </data>
+  <data name="plBatch.Text">
+    <value xml:space="preserve">Número de mensajes enviados en cada lote:</value>
+  </data>
+  <data name="plBetaNotice.Help">
+    <value xml:space="preserve">Marque esta casilla para visualizar un mensaje indicando que la versión en ejecución es una Beta.</value>
+  </data>
+  <data name="plBetaNotice.Text">
+    <value xml:space="preserve">¿Mostrar mensaje de Beta?</value>
+  </data>
+  <data name="plCache.Help">
+    <value xml:space="preserve">Establezca el tiempo de duración de los objetos en la caché</value>
+  </data>
+  <data name="plCache.Text">
+    <value xml:space="preserve">Expiración de la caché (segundos)</value>
+  </data>
+  <data name="plCacheability.Help">
+    <value xml:space="preserve">Establece el valor de la directiva de cabecera HTTP Cache-Control para usuarios autenticados</value>
+  </data>
+  <data name="plCacheability.Text">
+    <value xml:space="preserve">Caché de usuarios autenticados:</value>
+  </data>
+  <data name="plCacheMethod.Help">
+    <value xml:space="preserve">La caché en memoria proporciona la máxima flexibilidad y es la que proporciona el máximo rendimiento, aunque es la que más recursos consume. La caché en disco es menos costosa en recursos, sin embargo no ofrece la misma flexibilidad.</value>
+  </data>
+  <data name="plCacheMethod.Text">
+    <value xml:space="preserve">Método de caché para módulo:</value>
+  </data>
+  <data name="plConnectionLimit.Help">
+    <value xml:space="preserve">Número máximo de conexiones permitidas en este ServidePoint. El valor predeterminado es 1 y el máximo 2147483647.</value>
+  </data>
+  <data name="plConnectionLimit.Text">
+    <value xml:space="preserve">Límite de conexiones:</value>
+  </data>
+  <data name="plContentLocalization.Help">
+    <value xml:space="preserve">Marque esta opción para habilitar la detección del idioma de los usuarios para proveer contenidos dinámicos en función del idioma</value>
+  </data>
+  <data name="plContentLocalization.Text">
+    <value xml:space="preserve">¿Activar la traducción de contenidos?</value>
+  </data>
+  <data name="plControlPanel.Help">
+    <value xml:space="preserve">Seleccione el panel de control que desee activar.</value>
+  </data>
+  <data name="plControlPanel.Text">
+    <value xml:space="preserve">Panel de control:</value>
+  </data>
+  <data name="plCopyright.Help">
+    <value xml:space="preserve">Seleccione esta opción para mostrar los derechos de copyright de DotNetNuke</value>
+  </data>
+  <data name="plCopyright.Text">
+    <value xml:space="preserve">¿Mostrar derechos de copyright?</value>
+  </data>
+  <data name="plCrmEnableCompositeFiles.Help">
+    <value xml:space="preserve">Los archivos compuestos son combinaciones de recursos (JavaScript y CSS) creados para reducir el número de solicitudes de archivos por el navegador. Esto aumentará significativamente la velocidad de carga de la página.</value>
+  </data>
+  <data name="plCrmEnableCompositeFiles.Text">
+    <value xml:space="preserve">Activar archivos compuestos</value>
+  </data>
+  <data name="plCrmMinifyCss.Help">
+    <value xml:space="preserve">La minificación CSS reducirá el tamaño del código CSS mediante el uso de expresiones regulares para eliminar los comentarios, espacios en blanco y css no utilizado. Solo está disponible cuando se activa la composición de archivos.</value>
+  </data>
+  <data name="plCrmMinifyCss.Text">
+    <value xml:space="preserve">Minificación CSS</value>
+  </data>
+  <data name="plCrmMinifyJs.Help">
+    <value xml:space="preserve">La minificación JS reducirá el tamaño del código JavaScript utilizando JSMin. Solo está disponible cuando se activa la composición de archivos.</value>
+  </data>
+  <data name="plCrmMinifyJs.Text">
+    <value xml:space="preserve">Minificación JS</value>
+  </data>
+  <data name="plCrmVersion.Help">
+    <value xml:space="preserve">Para gestionar el almacenamiento en caché del navegador, a los recursos de cliente se les asigna un número de versión. Este número se incrementa cuando se instala una extensión, se modifica el archivo portal.css, o cuando la memoria caché del servidor se borra. Se aplica a cualquier archivo que sea procesado (en combinación y/o minificado). Puede incrementar el número de versión manualmente par forzar los navegadores a descargar nuevas copias de los archivos de recursos.</value>
+  </data>
+  <data name="plCrmVersion.Text">
+    <value xml:space="preserve">Versión actual de recursos</value>
+  </data>
+  <data name="plDataProvider.Help">
+    <value xml:space="preserve">El nombre del proveedor de datos configurado en el archivo web.config</value>
+  </data>
+  <data name="plDataProvider.Text">
+    <value xml:space="preserve">Proveedor de datos:</value>
+  </data>
+  <data name="plDebugMode.Help">
+    <value xml:space="preserve">Si está activo, la instalación se ejecuta en modo de depuración. De esta manera algunas partes de la aplicación registrarán los errores de forma más extensa. Esto puede comportar una degradación del rendimiento.</value>
+  </data>
+  <data name="plDebugMode.Text">
+    <value xml:space="preserve">Modo depuración</value>
+  </data>
+  <data name="plDemoPeriod.Help">
+    <value xml:space="preserve">Escriba el número de días para la cuenta de demostración provisional</value>
+  </data>
+  <data name="plDemoPeriod.Text">
+    <value xml:space="preserve">Período de demo (días):</value>
+  </data>
+  <data name="plDemoSignup.Help">
+    <value xml:space="preserve">Seleccione si permitirá que los usuarios puedan registrar portales de prueba</value>
+  </data>
+  <data name="plDemoSignup.Text">
+    <value xml:space="preserve">¿Activar registro de portales de prueba?</value>
+  </data>
+  <data name="plebFarm.Text">
+    <value xml:space="preserve">¿Habilitar granja de servidores (web farm)?</value>
+  </data>
+  <data name="plEnableBannedList.Help">
+    <value xml:space="preserve">Indica si se comprobarán las contraseñas a partir de la lista de términos prohibidos.</value>
+  </data>
+  <data name="plEnableBannedList.Text">
+    <value xml:space="preserve">Activar la lista de contraseñas prohibidas</value>
+  </data>
+  <data name="plEnableCDN.Help">
+    <value xml:space="preserve">Si está activo, la URL asociada se utilizará para las librerias JavaScript. Si no se activa se utilizará la versión local del archivo.</value>
+  </data>
+  <data name="plEnableCDN.Text">
+    <value xml:space="preserve">¿Utilizar CDN para librerias JavaScript?</value>
+  </data>
+  <data name="plEnableContentLocalization.Help">
+    <value xml:space="preserve">Marque esta casilla para permitir a los administradores del sitio activar la traducción de contenido para sus sitios.</value>
+  </data>
+  <data name="plEnableContentLocalization.Text">
+    <value xml:space="preserve">¿Activar traducción de contenidos?</value>
+  </data>
+  <data name="plEnableHelp.Help">
+    <value xml:space="preserve">Puede activar o desactivar la ayuda en línea del menú de acciones del módulo. Si activa esta característica, necesitará proporcionar la URL de la ayuda para el módulo, aunque puede que el desarrollador del módulo ya lo haya tenido en cuenta.</value>
+  </data>
+  <data name="plEnableHelp.Text">
+    <value xml:space="preserve">Habilitar ayuda en línea de módulos:</value>
+  </data>
+  <data name="plEnableIPChecking.Help">
+    <value xml:space="preserve">Activa esta opción para validar la dirección IP desde la que se inicia la sesión.</value>
+  </data>
+  <data name="plEnableIPChecking.Text">
+    <value xml:space="preserve">Activar la validación de dirección IP</value>
+  </data>
+  <data name="plEnablePasswordHistory.Help">
+    <value xml:space="preserve">Indica si se guardará y utilizará una lista de contraseñas usadas anteriormente para evitar la repetición de contraseñas.</value>
+  </data>
+  <data name="plEnablePasswordHistory.Text">
+    <value xml:space="preserve">¿Activar historial de contraseñas?</value>
+  </data>
+  <data name="plEnableRequestFilters.Help">
+    <value xml:space="preserve">Marcar para habilitar filtros de solicitud.</value>
+  </data>
+  <data name="plEnableRequestFilters.Text">
+    <value xml:space="preserve">¿Activar filtros de solicitud?</value>
+  </data>
+  <data name="plEnableStrengthMeter.Help">
+    <value xml:space="preserve">Active esta opción para mostrar el medidor de seguridad de contraseñas en la pantalla de registro</value>
+  </data>
+  <data name="plEnableStrengthMeter.Text">
+    <value xml:space="preserve">Activar la validación de seguridad de contraseña</value>
+  </data>
+  <data name="plExcludedPaths.Help">
+    <value xml:space="preserve">Escriba una lista de rutas excluidas.</value>
+  </data>
+  <data name="plExcludedPaths.Text">
+    <value xml:space="preserve">Rutas excluidas:</value>
+  </data>
+  <data name="plFileExtensions.Help">
+    <value xml:space="preserve">Escriba las extensiones de archivos permitidas (separadas por comas)</value>
+  </data>
+  <data name="plFileExtensions.Text">
+    <value xml:space="preserve">Extensiones de archivos permitidas:</value>
+  </data>
+  <data name="plFramework.Help">
+    <value xml:space="preserve">La versión de la plataforma .NET Framework sobre la cuál corre la aplicación (especificado en IIS)</value>
+  </data>
+  <data name="plFramework.Text">
+    <value xml:space="preserve">Microsoft .NET Framework:</value>
+  </data>
+  <data name="plGUID.Help">
+    <value xml:space="preserve">El identificador único global que se puede usar para identificar esta aplicación.</value>
+  </data>
+  <data name="plGUID.Text">
+    <value xml:space="preserve">Código GUID:</value>
+  </data>
+  <data name="plHelpUrl.Help">
+    <value xml:space="preserve">Escriba la URL para la ayuda en línea que proporciona. Si deja el campo en blanco no se ofrecerá ayuda para las áreas Administración/Sistema de la aplicación.</value>
+  </data>
+  <data name="plHelpUrl.Text">
+    <value xml:space="preserve">URL ayuda:</value>
+  </data>
+  <data name="plHostContainer.Help">
+    <value xml:space="preserve">Seleccione el container por omisión de sus sitios web</value>
+  </data>
+  <data name="plHostContainer.Text">
+    <value xml:space="preserve">Container de sistema:</value>
+  </data>
+  <data name="plHostCurrency.Help">
+    <value xml:space="preserve">Seleccione la moneda en la que se expresarán los pagos</value>
+  </data>
+  <data name="plHostCurrency.Text">
+    <value xml:space="preserve">Moneda para los pagos:</value>
+  </data>
+  <data name="plHostEmail.Help">
+    <value xml:space="preserve">Escriba una cuenta de correo de soporte para su cuenta de alojamiento</value>
+  </data>
+  <data name="plHostEmail.Text">
+    <value xml:space="preserve">Email del sistema:</value>
+  </data>
+  <data name="plHostFee.Help">
+    <value xml:space="preserve">Escriba la tarifa básica para el alojamiento de sitios</value>
+  </data>
+  <data name="plHostFee.Text">
+    <value xml:space="preserve">Tarifa de alojamiento:</value>
+  </data>
+  <data name="plHostName.Help">
+    <value xml:space="preserve">El nombre del servidor</value>
+  </data>
+  <data name="plHostName.Text">
+    <value xml:space="preserve">Servidor:</value>
+  </data>
+  <data name="plHostPortal.Help">
+    <value xml:space="preserve">Seleccione el sitio por omisión</value>
+  </data>
+  <data name="plHostPortal.Text">
+    <value xml:space="preserve">Web del sistema:</value>
+  </data>
+  <data name="plHostSpace.Help">
+    <value xml:space="preserve">Escriba la cantidad de espacio en disco permitida para una cuenta</value>
+  </data>
+  <data name="plHostSpace.Text">
+    <value xml:space="preserve">Espacio de alojamiento (MB):</value>
+  </data>
+  <data name="plHostTitle.Help">
+    <value xml:space="preserve">Escriba el nombre de su cuenta de alojamiento</value>
+  </data>
+  <data name="plHostTitle.Text">
+    <value xml:space="preserve">Título del sistema:</value>
+  </data>
+  <data name="plHostURL.Help">
+    <value xml:space="preserve">Escriba la URL de su cuenta de alojamiento</value>
+  </data>
+  <data name="plHostURL.Text">
+    <value xml:space="preserve">URL del sistema:</value>
+  </data>
+  <data name="plIdentity.Help">
+    <value xml:space="preserve">La cuenta de usuario de Windows bajo la cuál corre la aplicación. Esta es la cuenta a la que se le deben asignar permisos sobre el sistema de archivos en el servidor.</value>
+  </data>
+  <data name="plIdentity.Text">
+    <value xml:space="preserve">Identidad de ASP.NET:</value>
+  </data>
+  <data name="plIPAddress.Help">
+    <value xml:space="preserve">Dirección IP del servidor.</value>
+  </data>
+  <data name="plIPAddress.Text">
+    <value xml:space="preserve">Dirección IP:</value>
+  </data>
+  <data name="plJQueryDebugVersion.Help">
+    <value xml:space="preserve">Si la opción está activada se utiliza el archivo estándar de script jQuery. Si está desmarcada se usa la versión minimizada que reduce el tamaño del archivo javascript pero reduce también la legibilidad del javascript.</value>
+  </data>
+  <data name="plJQueryDebugVersion.Text">
+    <value xml:space="preserve">¿Usar la versión debug de jQuery?</value>
+  </data>
+  <data name="plJQueryHostUrl.Help">
+    <value xml:space="preserve">URL completa para el script jQuery. Por omisión se configura a la última versión del script jQuery alojado en servidores Google para obtener rendimiento óptimo.</value>
+  </data>
+  <data name="plJQueryHostUrl.Text">
+    <value xml:space="preserve">URL de jQuery:</value>
+  </data>
+  <data name="plJQueryMigrateHostUrl.Help">
+    <value xml:space="preserve">URL del plugin jQuery Migrate. Si el campo está vacío se utilizará el archivo del propio sitio.</value>
+  </data>
+  <data name="plJQueryMigrateHostUrl.Text">
+    <value xml:space="preserve">URL del plugin jQuery Migrate:</value>
+  </data>
+  <data name="plJQueryUIHostUrl.Help">
+    <value xml:space="preserve">URL completa para el script jQuery UI. Por omisión se configura a la última versión del script jQuery alojado en servidores Google para obtener rendimiento óptimo.</value>
+  </data>
+  <data name="plJQueryUIHostUrl.Text">
+    <value xml:space="preserve">URL de jQuery UI:</value>
+  </data>
+  <data name="plJQueryUIVersion.Help">
+    <value xml:space="preserve">Identifica la cadena de versión incrustada en el script de jQuery UI local.</value>
+  </data>
+  <data name="plJQueryUIVersion.Text">
+    <value xml:space="preserve">Versión de jQuery UI instalada</value>
+  </data>
+  <data name="plJQueryUseHosted.Help">
+    <value xml:space="preserve">Si activa esta opción se utilizara la URL asociada para el archivo jQuery. Si está desmarcada se utilizará la copia local del archivo.</value>
+  </data>
+  <data name="plJQueryUseHosted.Text">
+    <value xml:space="preserve">¿Usar versión en red de jQuery?</value>
+  </data>
+  <data name="plJQueryVersion.Help">
+    <value xml:space="preserve">Identifica la versión del script jQuery local.</value>
+  </data>
+  <data name="plJQueryVersion.Text">
+    <value xml:space="preserve">Versión jQuery instalada:</value>
+  </data>
+  <data name="plLog.Help">
+    <value xml:space="preserve">Le permite consultar el registro de actualización de la base de datos para una versión específica.</value>
+  </data>
+  <data name="plLog.Text">
+    <value xml:space="preserve">Ver el registro de actualización de la versión:</value>
+  </data>
+  <data name="plLogBuffer.Help">
+    <value xml:space="preserve">Si marca esta casilla, las entradas del registro se grabarán en memoria y se guardarán al almacenamiento de datos en períodos regulares. Si la casilla queda sin marcar, las entradas del registro se grabarán inmediatamente en el almacenamiento de datos.</value>
+  </data>
+  <data name="plLogBuffer.Text">
+    <value xml:space="preserve">¿Habilitar búfer para el registro de eventos?</value>
+  </data>
+  <data name="plLogs.Help">
+    <value xml:space="preserve">Relación de archivos de registro disponibles para visualizar</value>
+  </data>
+  <data name="plLogs.Text">
+    <value xml:space="preserve">Archivos de registro</value>
+  </data>
+  <data name="plMaxIdleTime.Help">
+    <value xml:space="preserve">El tiempo, en milisegundos, que una una conexión asociada con el ServidePoint puede mantenerse inactiva antes de que se cierre para reutilizarla en otra conexión. El valor predeterminado es 0 y el máximo 2147483647.</value>
+  </data>
+  <data name="plMaxIdleTime.Text">
+    <value xml:space="preserve">Tiempo máximo en espera:</value>
+  </data>
+  <data name="plMaxUploadSize.Help">
+    <value xml:space="preserve">Indica el tamaño máximo de los archivos que se pueden cargar en el sitio. El valor mínimo de 10 MB.</value>
+  </data>
+  <data name="plMaxUploadSize.Text">
+    <value xml:space="preserve">Tamaño máximo de carga</value>
+  </data>
+  <data name="plMsAjaxCdn.Help">
+    <value xml:space="preserve">Indique si desea activar la CDN para la librería Ajax de Microsoft.</value>
+  </data>
+  <data name="plMsAjaxCdn.Text">
+    <value xml:space="preserve">¿Activar CDN para MS Ajax?</value>
+  </data>
+  <data name="plNotifyUpgrade.Help">
+    <value xml:space="preserve">Active esta opción para notificar las actualizaciones al email del sistema.</value>
+  </data>
+  <data name="plNotifyUpgrade.Text">
+    <value xml:space="preserve">¿Notificar al sistema?</value>
+  </data>
+  <data name="plNumberPasswords.Help">
+    <value xml:space="preserve">Indica el número de contraseñas anteriores que se guardarán para la validación de reuso</value>
+  </data>
+  <data name="plNumberPasswords.Text">
+    <value xml:space="preserve">Número de contraseñas a guardar</value>
+  </data>
+  <data name="plPageQuota.Help">
+    <value xml:space="preserve">Puede especificar un número máximo de páginas por sitio.</value>
+  </data>
+  <data name="plPageQuota.Text">
+    <value xml:space="preserve">Cuota de páginas:</value>
+  </data>
+  <data name="plPageState.Help">
+    <value xml:space="preserve">Seleccione el modelo a utilizar para guardar el estado de las páginas (Viewstate). Puede ser un campo oculto en la página (valor por omisión) o en memoria (caché). Atención: guardar el estado de la página en memoria puede causar problemas con Ajax</value>
+  </data>
+  <data name="plPageState.Text">
+    <value xml:space="preserve">Persistencia del estado de página:</value>
+  </data>
+  <data name="plPassword.Help">
+    <value xml:space="preserve">Escriba la contraseña para la pasarela de pagos</value>
+  </data>
+  <data name="plPassword.Text">
+    <value xml:space="preserve">Contraseña de la pasarela de pagos:</value>
+  </data>
+  <data name="plPerformance.Help">
+    <value xml:space="preserve">Seleccione cómo optimizar el rendimiento.</value>
+  </data>
+  <data name="plPerformance.Text">
+    <value xml:space="preserve">Configuración de caché:</value>
+  </data>
+  <data name="plPermissions.Help">
+    <value xml:space="preserve">Permisos de acceso de código disponibles en el entorno de alojamiento.</value>
+  </data>
+  <data name="plPermissions.Text">
+    <value xml:space="preserve">Permisos:</value>
+  </data>
+  <data name="plProcessor.Help">
+    <value xml:space="preserve">Seleccione la pasarela de pagos para aceptar pagos de los sitios clientes</value>
+  </data>
+  <data name="plProcessor.Text">
+    <value xml:space="preserve">Pasarela de pagos:</value>
+  </data>
+  <data name="plProduct.Help">
+    <value xml:space="preserve">Aplicación DotNetNuke que se está ejecutando</value>
+  </data>
+  <data name="plProduct.Text">
+    <value xml:space="preserve">Producto DotNetNuke:</value>
+  </data>
+  <data name="plProxyPassword.Help">
+    <value xml:space="preserve">Escriba la contraseña del servidor proxy</value>
+  </data>
+  <data name="plProxyPassword.Text">
+    <value xml:space="preserve">Contraseña del proxy:</value>
+  </data>
+  <data name="plProxyPort.Help">
+    <value xml:space="preserve">Escriba el puerto del servidor proxy</value>
+  </data>
+  <data name="plProxyPort.Text">
+    <value xml:space="preserve">Puerto del proxy:</value>
+  </data>
+  <data name="plProxyServer.Help">
+    <value xml:space="preserve">Escriba la dirección del servidor proxy</value>
+  </data>
+  <data name="plProxyServer.Text">
+    <value xml:space="preserve">Servidor proxy:</value>
+  </data>
+  <data name="plProxyUsername.Help">
+    <value xml:space="preserve">Escriba la cuenta de usuario del servidor proxy</value>
+  </data>
+  <data name="plProxyUsername.Text">
+    <value xml:space="preserve">Usuario del proxy:</value>
+  </data>
+  <data name="plPsWarning.Text">
+    <value xml:space="preserve">Atención: La persistencia del estado de página en memoria puede ocasionar problemas en AJAX</value>
+  </data>
+  <data name="plRememberMe.Help">
+    <value xml:space="preserve">Configura la casilla de verificación Recordar en los controles de acceso. Si activa esta opción los usuarios podrán crear cookies persistentes para recordar la identificación</value>
+  </data>
+  <data name="plRememberMe.Text">
+    <value xml:space="preserve">¿Habilitar recordar en controles de acceso?</value>
+  </data>
+  <data name="plResetLinkValidity.Help">
+    <value xml:space="preserve">Indica el tiempo (en minutos) durante el cual será válido el enlace para reiniciar la contraseña.</value>
+  </data>
+  <data name="plResetLinkValidity.Text">
+    <value xml:space="preserve">Tiempo de validez del enlace de reinicio (minutos)</value>
+  </data>
+  <data name="plServerTime.Help">
+    <value xml:space="preserve">Fecha y hora actual del servidor web</value>
+  </data>
+  <data name="plServerTime.Text">
+    <value xml:space="preserve">Hora del servidor</value>
+  </data>
+  <data name="plShowCriticalErrors.Help">
+    <value xml:space="preserve">Indica si los errores que se envíen como parámetros en las URLs se tienen que mostrar en línea en la página.</value>
+  </data>
+  <data name="plShowCriticalErrors.Text">
+    <value xml:space="preserve">¿Mostrar errores críticos en pantalla?</value>
+  </data>
+  <data name="plSiteLogBuffer.Help">
+    <value xml:space="preserve">Escriba el número de ítems a mantener en el búfer del registro del sitio</value>
+  </data>
+  <data name="plSiteLogBuffer.Text">
+    <value xml:space="preserve">Búfer del registro del sitio:</value>
+  </data>
+  <data name="plSiteLogHistory.Help">
+    <value xml:space="preserve">Escriba cuántos días de actividad desea mantener en el registro del sitio</value>
+  </data>
+  <data name="plSiteLogHistory.Text">
+    <value xml:space="preserve">Historia del registro del sitio:</value>
+  </data>
+  <data name="plSiteLogStorage.Help">
+    <value xml:space="preserve">Seleccione la ubicación de almacenamiento del registro del sitio</value>
+  </data>
+  <data name="plSiteLogStorage.Text">
+    <value xml:space="preserve">Almacenamiento del registro del sitio:</value>
+  </data>
+  <data name="plSMTPAuthentication.Help">
+    <value xml:space="preserve">Escriba el método de autenticación del servidor SMTP  (por omisión = Anónimo)</value>
+  </data>
+  <data name="plSMTPAuthentication.Text">
+    <value xml:space="preserve">Autenticación SMTP:</value>
+  </data>
+  <data name="plSMTPEnableSSL.Help">
+    <value xml:space="preserve">Usado por los servicios SMTP que requieren conexión segura (usualmente no es necesario)</value>
+  </data>
+  <data name="plSMTPEnableSSL.Text">
+    <value xml:space="preserve">Activar SSL para SMTP:</value>
+  </data>
+  <data name="plSMTPPassword.Help">
+    <value xml:space="preserve">Escriba la contraseña del servidor SMTP</value>
+  </data>
+  <data name="plSMTPPassword.Text">
+    <value xml:space="preserve">Contraseña SMTP:</value>
+  </data>
+  <data name="plSMTPServer.Help">
+    <value xml:space="preserve">Escriba la dirección del servidor SMTP. Puede especifiar un puerto alternativo añadiendo dos puntos y el número del puerto (por ejemplo: smtp.googlemail.com:587). Si utiliza el puerto por omisión (25) introduzca solo el nombre del servidor.</value>
+  </data>
+  <data name="plSMTPServer.Text">
+    <value xml:space="preserve">Servidor SMTP:</value>
+  </data>
+  <data name="plSMTPUsername.Help">
+    <value xml:space="preserve">Escriba la cuenta del servidor SMTP</value>
+  </data>
+  <data name="plSMTPUsername.Text">
+    <value xml:space="preserve">Cuenta SMTP:</value>
+  </data>
+  <data name="plSSLDomain.Help">
+    <value xml:space="preserve">Indica el dominio que se utilizará cuando el asistente de actualización se muestra en el canal SSL.</value>
+  </data>
+  <data name="plSSLDomain.Text">
+    <value xml:space="preserve">Dominio SSL</value>
+  </data>
+  <data name="plTelerikBasicUrl.Help">
+    <value xml:space="preserve">Indique la URL básica para la CDN de Telerik. Se utilizarán los archivos del servidor Telerik si deja este campo en blanco. Puede obtener más información &lt;a href="http://www.telerik.com/help/aspnet-ajax/cdn-custom-provider.html" target="_blank"&gt;aquí&lt;/a&gt;.</value>
+  </data>
+  <data name="plTelerikBasicUrl.Text">
+    <value xml:space="preserve">URL básica para CDN Telerik</value>
+  </data>
+  <data name="plTelerikCdn.Help">
+    <value xml:space="preserve">Indique si desea activar CDN para los controles de Telerik</value>
+  </data>
+  <data name="plTelerikCdn.Text">
+    <value xml:space="preserve">¿Activar CDN para Telerik?</value>
+  </data>
+  <data name="plTelerikSecureUrl.Help">
+    <value xml:space="preserve">Indique la URL segura para la CDN de Telerik. Indique la URL básica para la CDN de Telerik. Se utilizarán los archivos del servidor Telerik si deja este campo en blanco. Puede obtener más información &lt;a href="http://www.telerik.com/help/aspnet-ajax/cdn-custom-provider.html" target="_blank"&gt;aquí&lt;/a&gt;.</value>
+  </data>
+  <data name="plTelerikSecureUrl.Text">
+    <value xml:space="preserve">URL segura para CDN Telerik</value>
+  </data>
+  <data name="plThrowExceptions.Help">
+    <value xml:space="preserve">Marcar esta opción para activar las excepciones del núcleo debidas a campos de datos que no se encuentran. Si la opción no está marcada el error se registrará en el registro de eventos. Si la opción está marcada no se interceptará. Esta opción se usa principalmente en tiempo de desarrollo para diagnosticar problemas.</value>
+  </data>
+  <data name="plThrowExceptions.Text">
+    <value xml:space="preserve">Lanzar excepciones CBO:</value>
+  </data>
+  <data name="plUpgrade.Help">
+    <value xml:space="preserve">Seleccione esta opción para ver si hay actualizaciones disponibles.</value>
+  </data>
+  <data name="plUpgrade.Text">
+    <value xml:space="preserve">¿Comprobar actualizaciones?</value>
+  </data>
+  <data name="plUpgradeForceSSL.Help">
+    <value xml:space="preserve">Indica si el asistente de actualitzación tiene que ejecutarse utilizando SSL.</value>
+  </data>
+  <data name="plUpgradeForceSSL.Text">
+    <value xml:space="preserve">Utilizar SSL para el asistente de actulización</value>
+  </data>
+  <data name="plUseCustomErrorMessages.Help">
+    <value xml:space="preserve">Active la opción para usar mensajes de error personalizados</value>
+  </data>
+  <data name="plUseCustomErrorMessages.Text">
+    <value xml:space="preserve">¿Utilizar mensajes de error personalizados?</value>
+  </data>
+  <data name="plUseCustomModuleCssClass.Text">
+    <value xml:space="preserve">¿Usar clase CSS personalizada de módulo?</value>
+  </data>
+  <data name="plUserId.Help">
+    <value xml:space="preserve">Escriba el id de usuario para la pasarela de pagos</value>
+  </data>
+  <data name="plUserId.Text">
+    <value xml:space="preserve">Id de usuario de la pasarela:</value>
+  </data>
+  <data name="plUserQuota.Help">
+    <value xml:space="preserve">Puede especificar un máximo de usuarios por sitio.</value>
+  </data>
+  <data name="plUserQuota.Text">
+    <value xml:space="preserve">Cuota de usuarios:</value>
+  </data>
+  <data name="plUsersOnline.Help">
+    <value xml:space="preserve">Active esta opción para habilitar la característica de usuarios en línea</value>
+  </data>
+  <data name="plUsersOnline.Text">
+    <value xml:space="preserve">¿Habilitar usuarios en línea?</value>
+  </data>
+  <data name="plUsersOnlineTime.Help">
+    <value xml:space="preserve">Escriba el tamaño del búfer para usurios en línea</value>
+  </data>
+  <data name="plUsersOnlineTime.Text">
+    <value xml:space="preserve">Tiempo para usuarios en línea (minutos)</value>
+  </data>
+  <data name="plVersion.Help">
+    <value xml:space="preserve">La versión de la plataforma DotNetNuke que está ejecutando.</value>
+  </data>
+  <data name="plVersion.Text">
+    <value xml:space="preserve">Versión DotNetNuke:</value>
+  </data>
+  <data name="plWebFarm.Help">
+    <value xml:space="preserve">Indica si el sitio está corriendo en una configuración de granja web.</value>
+  </data>
+  <data name="plWebFarm.Text">
+    <value xml:space="preserve">¿Es una granja de servidores (web farm)?</value>
+  </data>
+  <data name="plWebRequestTimeout.Help">
+    <value xml:space="preserve">Escriba el valor de caducidad para una petición web al servidor</value>
+  </data>
+  <data name="plWebRequestTimeout.Text">
+    <value xml:space="preserve">Caducidad de petición web:</value>
+  </data>
+  <data name="plWhitespace.Help">
+    <value xml:space="preserve">Seleccione esta opción para eliminar el espacio en blanco de la respuesta enviada al cliente. Esto dará lugar a una transferencia directa más rápida (10-15%) pero hará el HTML menos legible.</value>
+  </data>
+  <data name="plWhitespace.Text">
+    <value xml:space="preserve">Usar filtro de espacios en blanco:</value>
+  </data>
+  <data name="plWhitespaceFilter.Help">
+    <value xml:space="preserve">Indique una expresión regular para eliminar espacios en blanco.</value>
+  </data>
+  <data name="plWhitespaceFilter.Text">
+    <value xml:space="preserve">Filtro de espacios en blanco:</value>
+  </data>
+  <data name="Portal.Text">
+    <value xml:space="preserve">Sitio</value>
+  </data>
+  <data name="Private.Text">
+    <value xml:space="preserve">Privado</value>
+  </data>
+  <data name="ProcessorWebSite.Text">
+    <value xml:space="preserve">Ir al sitio web de la pasarela de pagos</value>
+  </data>
+  <data name="Proxy.Text">
+    <value xml:space="preserve">Proxy</value>
+  </data>
+  <data name="Public.Text">
+    <value xml:space="preserve">Público</value>
+  </data>
+  <data name="ReIndexConfirmationCancel.Text">
+    <value xml:space="preserve">Cancelar</value>
+  </data>
+  <data name="ReIndexConfirmationMessage.Text">
+    <value xml:space="preserve">La reindexación borrará todo el contenido del índice de búsqueda. Esta acción la realiza la tarea de reindexación y depende de la frecuencia del programador de tareas. ¿Está seguro que desea continuar?</value>
+  </data>
+  <data name="ReIndexConfirmationTitle.Text">
+    <value xml:space="preserve">Confirmar reindexación</value>
+  </data>
+  <data name="ReIndexConfirmationYes.Text">
+    <value xml:space="preserve">Continuar</value>
+  </data>
+  <data name="RequestFilter.Text">
+    <value xml:space="preserve">Configuración filtro de solicitud</value>
+  </data>
+  <data name="SearchIndex.Text">
+    <value xml:space="preserve">Búsquedas</value>
+  </data>
+  <data name="SelectLog.Text">
+    <value xml:space="preserve">Seleccione un archivo de registro para visualizar</value>
+  </data>
+  <data name="Server.Text">
+    <value xml:space="preserve">Servidor</value>
+  </data>
+  <data name="ServerAndNoCache.Text">
+    <value xml:space="preserve">Servidor sin caché</value>
+  </data>
+  <data name="ServerAndPrivate.Text">
+    <value xml:space="preserve">Servidor privado</value>
+  </data>
+  <data name="SiteLogBufferValidation.Text">
+    <value xml:space="preserve">El tamaño de búfer tiene que ser mayor que 0.</value>
+  </data>
+  <data name="SMTP.Text">
+    <value xml:space="preserve">Servidor SMTP</value>
+  </data>
+  <data name="SMTPAnonymous.Text">
+    <value xml:space="preserve">Anónimo</value>
+  </data>
+  <data name="SMTPBasic.Text">
+    <value xml:space="preserve">Básica</value>
+  </data>
+  <data name="SMTPNTLM.Text">
+    <value xml:space="preserve">NTLM </value>
+  </data>
+  <data name="SmtpServerWarning.Text">
+    <value xml:space="preserve">Está intentando configurar un servidor SMTP con un puerto alternativo cuando la configuración del sistema es "Medium Trust". Debería ponerse en contacto con su proveedor de alojamiento para verificar si esta opción puede funcionar correctamente en el servidor.</value>
+  </data>
+  <data name="SpecifyHostEmailMessage.Text">
+    <value xml:space="preserve">Debe especificar la cuenta de correo del sistema</value>
+  </data>
+  <data name="StrictDoctype.Text">
+    <value xml:space="preserve">XHTML 1.0 estricto</value>
+  </data>
+  <data name="TransDoctype.Text">
+    <value xml:space="preserve">XHTML 1.0 transicional</value>
+  </data>
+  <data name="txtBatch.Help">
+    <value xml:space="preserve">Número de mensajes enviados por el programador de tareas en cada proceso.</value>
+  </data>
+  <data name="txtBatch.Text">
+    <value xml:space="preserve">Número de mensajes por envío:</value>
+  </data>
+  <data name="UpgradeFramework.Text">
+    <value xml:space="preserve">Actualizar el sitio a la versión actual de framework</value>
+  </data>
+  <data name="UpgradeLog.Text">
+    <value xml:space="preserve">Registro de actualización de la versión</value>
+  </data>
+  <data name="UpgradeNever.Text">
+    <value xml:space="preserve">Nunca</value>
+  </data>
+  <data name="UserRestart.Text">
+    <value xml:space="preserve">El usuario ha solicitado un reinicio de la aplicación</value>
+  </data>
+  <data name="valAdminResetLink.Error">
+    <value xml:space="preserve">El tiempo de vida de los enlaces de reinicio tiene que ser mayor que 0.</value>
+  </data>
+  <data name="valFileExtensions.Error">
+    <value xml:space="preserve">&lt;br/&gt;Las extensiones de archivos sólo pueden incluir letras, números y el guión subrayado, separadas por comas.</value>
+  </data>
+  <data name="valHostFee.Error">
+    <value xml:space="preserve">Tarifa no válida, debe indicar un valor monetario.</value>
+  </data>
+  <data name="valIndexWordMaxLengthCompare.Error">
+    <value xml:space="preserve">Tiene que entrar un número mayor que la longitud mínima.</value>
+  </data>
+  <data name="valIndexWordMaxLengthRequired.Error">
+    <value xml:space="preserve">Tiene que entrar la longitud máxima de palabra.</value>
+  </data>
+  <data name="valIndexWordMinLengthCompare.Error">
+    <value xml:space="preserve">Tiene que entrar un número mayor que 0.</value>
+  </data>
+  <data name="valIndexWordMinLengthRequired.Error">
+    <value xml:space="preserve">Tiene que entrar la longitud mínima de palabra.</value>
+  </data>
+  <data name="valResetLink.Error">
+    <value xml:space="preserve">El tiempo de validez tiene que ser mayor que 0.</value>
+  </data>
+</root>

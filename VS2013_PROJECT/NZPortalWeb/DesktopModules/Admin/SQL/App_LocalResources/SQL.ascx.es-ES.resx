@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllRows.Text">
+    <value xml:space="preserve">Todo</value>
+  </data>
+  <data name="btDelete.Text">
+    <value xml:space="preserve">Borrar consulta</value>
+  </data>
+  <data name="btSaveQuery.Text">
+    <value xml:space="preserve">Guardar consulta</value>
+  </data>
+  <data name="cmdExecute.Text">
+    <value xml:space="preserve">Ejecutar script</value>
+  </data>
+  <data name="cmdExecute.ToolTip">
+    <value xml:space="preserve">Puede incluir {directivas} y /*comentarios*/</value>
+  </data>
+  <data name="cmdUpload.Text">
+    <value xml:space="preserve">Cargar archivo</value>
+  </data>
+  <data name="cmdUpload.ToolTip">
+    <value xml:space="preserve">Cargar el archivo seleccionado.</value>
+  </data>
+  <data name="CnnStringNotFound.Text">
+    <value xml:space="preserve">La consulta se ha cargado pero la conexión asociada ("{0}") no se ha encontrado. La conexión predeterminada "SiteSqlServer" se ha seleccionado en su lugar.</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">SQL</value>
+  </data>
+  <data name="CopyButtonAlt.Text">
+    <value xml:space="preserve">Copiar al portapapeles</value>
+  </data>
+  <data name="CopyText.Text">
+    <value xml:space="preserve">El resultado se ha copiado al portapapeles.</value>
+  </data>
+  <data name="CopyTitle.Text">
+    <value xml:space="preserve">Resultado de la consulta SQL</value>
+  </data>
+  <data name="CopyToClipboard.Text">
+    <value xml:space="preserve">Copiar al portapapeles</value>
+  </data>
+  <data name="CSVButtonAlt.Text">
+    <value xml:space="preserve">Exportar a CSV</value>
+  </data>
+  <data name="Deleted.Text">
+    <value xml:space="preserve">La consulta se ha borrado.</value>
+  </data>
+  <data name="errorLabel.Help">
+    <value xml:space="preserve">Este es el error devuelto por SQL Server después de ejecutar el script.</value>
+  </data>
+  <data name="errorLabel.Text">
+    <value xml:space="preserve">Detalles del error</value>
+  </data>
+  <data name="lblName.Help">
+    <value xml:space="preserve">Introduzca un nombre para identificar la consulta.</value>
+  </data>
+  <data name="lblName.Text">
+    <value xml:space="preserve">Nombre:</value>
+  </data>
+  <data name="lblSavedQuery.Help">
+    <value xml:space="preserve">Puede seleccionar una consulta previamente guardada y ejecutarla, o modificarla y volver a guardarla. O bien puede seleccionar la opción para crear una nueva consulta.</value>
+  </data>
+  <data name="lblSavedQuery.Text">
+    <value xml:space="preserve">Consultas:</value>
+  </data>
+  <data name="lnkLoad.Text">
+    <value xml:space="preserve">Cargar consulta</value>
+  </data>
+  <data name="lnkSave.Text">
+    <value xml:space="preserve">Guardar</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Acerca de SQL&lt;/h1&gt;&lt;p&gt;Desde este módulo, el superusuario puede ejecutar sentencias SQL.&lt;/p&gt;</value>
+  </data>
+  <data name="NewQuery.Text">
+    <value xml:space="preserve">&lt; Nueva consulta &gt;</value>
+  </data>
+  <data name="NoDataReturned.Text">
+    <value xml:space="preserve">La consulta no devolvió ningún dato</value>
+  </data>
+  <data name="NoName.Text">
+    <value xml:space="preserve">Tiene que entrar un nombre para la consulta</value>
+  </data>
+  <data name="NoScript.Text">
+    <value xml:space="preserve">Escriba o cargue la consulta que quiere ejecutar.</value>
+  </data>
+  <data name="NumRowsReturned.Text">
+    <value xml:space="preserve">{0} filas</value>
+  </data>
+  <data name="PDFButtonAlt.Text">
+    <value xml:space="preserve">Exportar a PDF</value>
+  </data>
+  <data name="Placeholder.Text">
+    <value xml:space="preserve">Introduzca su consulta SQL...</value>
+  </data>
+  <data name="plConnection.Help">
+    <value xml:space="preserve">Seleccione la cadena de conexión que desea utilizar (a partir de la lista disponible en el archivo web.config)</value>
+  </data>
+  <data name="plConnection.Text">
+    <value xml:space="preserve">Conexión:</value>
+  </data>
+  <data name="plSqlScript.Help">
+    <value xml:space="preserve">Esta opción le permite cargar un archivo con instrucciones SQL en la caja de texto inferior.</value>
+  </data>
+  <data name="plSqlScript.Text">
+    <value xml:space="preserve">Archivo SQL:</value>
+  </data>
+  <data name="PopupButtonAlt.Text">
+    <value xml:space="preserve">Abrir en ventana emergente</value>
+  </data>
+  <data name="QueryError.Text">
+    <value xml:space="preserve">Hay un error en su consulta</value>
+  </data>
+  <data name="QuerySuccess.Text">
+    <value xml:space="preserve">La consulta se ha completado correctamente</value>
+  </data>
+  <data name="ResultTitle.Text">
+    <value xml:space="preserve">Consulta</value>
+  </data>
+  <data name="Saved.Text">
+    <value xml:space="preserve">La consulta se ha guardado.</value>
+  </data>
+  <data name="SaveDialogTitle.Text">
+    <value xml:space="preserve">Guardar consulta como...</value>
+  </data>
+  <data name="scriptLabel.Help">
+    <value xml:space="preserve">Indique el SQL que desea ejecutar.</value>
+  </data>
+  <data name="scriptLabel.Text">
+    <value xml:space="preserve">Script: </value>
+  </data>
+  <data name="sFirst.Text">
+    <value xml:space="preserve">Primera</value>
+  </data>
+  <data name="sInfo.Text">
+    <value xml:space="preserve">Viendo entradas desde _START_ a _END_ de _TOTAL_</value>
+  </data>
+  <data name="sInfoEmpty.Text">
+    <value xml:space="preserve">No hay ningún registro para mostrar</value>
+  </data>
+  <data name="sInfoFiltered.Text">
+    <value xml:space="preserve">(filtrado de _MAX_ entradas totales)</value>
+  </data>
+  <data name="sLast.Text">
+    <value xml:space="preserve">Última</value>
+  </data>
+  <data name="sLengthMenu.Text">
+    <value xml:space="preserve">Mostrar _MENU_ entradas</value>
+  </data>
+  <data name="sLoadingRecords.Text">
+    <value xml:space="preserve">Cargando...</value>
+  </data>
+  <data name="sNext.Text">
+    <value xml:space="preserve">Siguiente</value>
+  </data>
+  <data name="sPrevious.Text">
+    <value xml:space="preserve">Anterior</value>
+  </data>
+  <data name="sProcessing.Text">
+    <value xml:space="preserve">Procesando...</value>
+  </data>
+  <data name="sSearch.Text">
+    <value xml:space="preserve">Buscar:</value>
+  </data>
+  <data name="XLSButtonAlt.Text">
+    <value xml:space="preserve">Exportar a Excel</value>
+  </data>
+</root>

@@ -1,0 +1,254 @@
+/*
+
+RadTreeView Vista skin
+
+* For notes on some CSS class names, please check RadTreeView common skin file *
+
+*/
+
+/* general styles */
+
+.RadTreeView_Vista,
+.RadTreeView_Vista a.rtIn,
+.RadTreeView_Vista .rtEdit .rtIn input
+{
+	font:11px "Segoe UI",tahoma,verdana,sans-serif;
+	color:#000;
+	line-height:1.273em;
+}
+
+.RadTreeView_Vista .rtTop, 
+.RadTreeView_Vista .rtMid, 
+.RadTreeView_Vista .rtBot
+{
+	padding: 0 0 0 15px;
+}
+
+.RadTreeView_Vista .rtUL .rtLI .rtUL 
+{
+	padding-left: 15px;
+}
+
+.RadTreeView_Vista .rtPlus, 
+.RadTreeView_Vista .rtMinus
+{
+	margin:5px 1px 0 -10px;
+	width:9px;
+	height:9px;
+}
+
+.RadTreeView_Vista .rtPlus
+{
+	background: transparent url(Images/PlusMinus.gif) no-repeat 0 0;
+}
+
+.RadTreeView_Vista .rtMinus
+{
+	background: transparent url(Images/PlusMinus.gif) no-repeat 0 -9px;
+}
+
+.RadTreeView_Vista .rtSp
+{
+	height:20px;
+}
+
+.RadTreeView_Vista .rtChk
+{
+	margin: 0 2px;
+	padding:0;
+	width:12px;
+	height:12px;
+}
+
+.RadTreeView_Vista .rtIn
+{
+	margin-left:0;
+	padding: 2px 0;
+	text-decoration:none;
+	border: solid 1px transparent;
+}
+
+/* endof general styles */
+
+/*Three state checkboxes*/
+
+.RadTreeView_Vista .rtIndeterminate
+{
+    background: transparent url(Images/TriState.gif) no-repeat 0 -26px;
+}
+
+.RadTreeView_Vista .rtChecked
+{
+    background: transparent url(Images/TriState.gif) no-repeat 0 0;
+}
+
+.RadTreeView_Vista .rtUnchecked
+{
+    background: transparent url(Images/TriState.gif) no-repeat 0 -13px ;
+}
+/* node states */
+
+.RadTreeView_Vista .rtHover .rtIn
+{
+	padding: 1px 0;
+	color: #363636;
+	border: 1px solid #99defd;
+	background: #f6fbfd url(Images/ItemHoveredBg.gif) repeat-x left bottom;
+}
+
+.RadTreeView_Vista .rtSelected .rtIn
+{
+	padding: 1px 0;
+	color:#333;
+	border: 1px solid #99defd;
+	background: #f6fbfd url(Images/ItemSelectedBg.gif) repeat-x left bottom;
+}
+
+.RadTreeView_Vista_disabled .rtIn,
+.RadTreeView_Vista .rtDisabled .rtIn
+{
+	color:#ccc;
+}
+
+.RadTreeView_Vista .rtSelected .rtLoadingBelow
+{
+	color: #333;
+}
+
+/* endof node states */
+
+
+/* in-line editing */
+
+.RadTreeView_Vista .rtLI .rtEdit .rtIn
+{
+	border: 1px solid #99defd;
+	padding: 0 0;
+	height:1.2em;
+	background: #fff;
+	text-decoration: none;
+	text-decoration:none;
+}
+
+.RadTreeView_Vista .rtEdit .rtIn input
+{
+	height:1em;
+	line-height:1em;
+	border:0;
+	margin:0;
+	padding:0;
+	background:transparent;
+}
+
+/* endof in-line editing */
+
+
+/* drop targets */
+
+.rtDropAbove_Vista,
+.rtDropBelow_Vista
+{
+    border: 1px dotted black;
+    font-size: 3px;
+    line-height: 3px;
+    height: 3px;
+}
+
+.rtDropAbove_Vista
+{
+    border-bottom: 0;
+}
+
+.rtDropBelow_Vista
+{
+    border-top: 0;
+}
+
+/* endof drop targets */
+
+
+/* rtl-specific styles */
+
+.RadTreeView_Vista_rtl .rtPlus
+{
+	background: transparent url(Images/PlusMinus.gif) no-repeat -9px 0;
+}
+
+.RadTreeView_Vista_rtl .rtMinus
+{
+	background: transparent url(Images/PlusMinus.gif) no-repeat -9px -9px;
+}
+
+/* firefox */
+.RadTreeView_Vista_rtl .rtPlus,
+.RadTreeView_Vista_rtl .rtMinus,
+x:-moz-any-link
+{
+	margin-right:-9px;
+	right:-8px;
+}
+
+.RadTreeView_Vista_rtl .rtPlus,
+.RadTreeView_Vista_rtl .rtMinus,
+x:-moz-any-link, x:default
+{
+	margin-right:0;
+	right:-10px;
+}
+
+* html .RadTreeView_Vista_rtl .rtPlus,
+* html .RadTreeView_Vista_rtl .rtMinus
+{
+	margin-right:-10px;
+	right:0;
+}
+
+*+html .RadTreeView_Vista_rtl .rtPlus,
+*+html .RadTreeView_Vista_rtl .rtMinus
+{
+	margin-right:-10px;
+	right:0;
+}
+
+.RadTreeView_Vista_rtl .rtTop,
+.RadTreeView_Vista_rtl .rtMid, 
+.RadTreeView_Vista_rtl .rtBot
+{
+	padding: 0 15px 2px 0;
+	margin:0;
+}
+
+/* endof rtl-specific styles */
+
+
+/* hacks for Opera & Safari */
+@media screen and (min-width:550px)
+{
+	/* fixes for opera (changes the paddings/margins automatically in rtl mode) */
+
+	html:first-child .RadTreeView_Vista_rtl .rtPlus,
+	html:first-child .RadTreeView_Vista_rtl .rtMinus,
+	html:first-child .RadTreeView_Vista_rtl .rtFirst .rtLI .rtPlus,
+	html:first-child .RadTreeView_Vista_rtl .rtFirst .rtLI .rtMinus
+	{
+		margin:5px 1px 0 -10px;
+		right:0;
+	}
+	
+	/* fix for safari bug (inline-block positioned elements in rtl mode get no width) */
+	:root .RadTreeView_Vista_rtl .rtPlus,
+	:root .RadTreeView_Vista_rtl .rtMinus
+	{
+		right: 0;
+		margin-right: -10px;
+		margin-left: 1px;
+	}
+}
+
+/* endof hacks */
+.RadTreeView_Vista_designtime .rtPlus,
+.RadTreeView_Vista_designtime .rtMinus
+{
+	left:3px;
+	top:4px;
+}

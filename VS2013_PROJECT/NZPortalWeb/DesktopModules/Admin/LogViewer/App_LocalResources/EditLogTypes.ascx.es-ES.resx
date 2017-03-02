@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active.Header">
+    <value xml:space="preserve">Activo</value>
+  </data>
+  <data name="AddContent.Action">
+    <value xml:space="preserve">Añadir una configuración de registro</value>
+  </data>
+  <data name="ConfigAdded.Text">
+    <value xml:space="preserve">Se ha añadido la nueva configuración</value>
+  </data>
+  <data name="ConfigDeleted.Text">
+    <value xml:space="preserve">Se ha borrado la configuración del registro seleccionada</value>
+  </data>
+  <data name="ConfigUpdated.Text">
+    <value xml:space="preserve">Se ha guardado la configuración seleccionada</value>
+  </data>
+  <data name="ControlTitle_edit.Text">
+    <value xml:space="preserve">Configuración del registro de eventos</value>
+  </data>
+  <data name="DeleteError.Text">
+    <value xml:space="preserve">La configuración del registro seleccionada no se puede eliminar. Debe eliminar primero todas las entradas para este tipo de registro.</value>
+  </data>
+  <data name="Edit.EditText">
+    <value xml:space="preserve">Editar</value>
+  </data>
+  <data name="EmailSettings.Text">
+    <value xml:space="preserve">Configuración de notificación por email</value>
+  </data>
+  <data name="FileName.Header">
+    <value xml:space="preserve">Nombre de archivo</value>
+  </data>
+  <data name="In.Text">
+    <value xml:space="preserve">en</value>
+  </data>
+  <data name="LogEntries.Text">
+    <value xml:space="preserve"> entradas del registro</value>
+  </data>
+  <data name="LogEntry.Text">
+    <value xml:space="preserve"> entrada del registro</value>
+  </data>
+  <data name="LogType.Header">
+    <value xml:space="preserve">Tipo de evento</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Acerca del visor de eventos&lt;/h1&gt;&lt;p&gt;Permite administrar qué eventos del sitio se desean guardar en el registro.&lt;/p&gt;</value>
+  </data>
+  <data name="Occurence.Text">
+    <value xml:space="preserve"> repetición</value>
+  </data>
+  <data name="Occurences.Text">
+    <value xml:space="preserve"> repeticiones</value>
+  </data>
+  <data name="plEmailNotificationStatus.Help">
+    <value xml:space="preserve">¿Desea que se envíe un mensaje cuando ocurra este evento?</value>
+  </data>
+  <data name="plEmailNotificationStatus.Text">
+    <value xml:space="preserve">Notificación por email habilitada</value>
+  </data>
+  <data name="plFileName.Help">
+    <value xml:space="preserve">Escriba el nombre para el archivo de registro.</value>
+  </data>
+  <data name="plFileName.Text">
+    <value xml:space="preserve">Nombre</value>
+  </data>
+  <data name="plIsActive.Help">
+    <value xml:space="preserve">¿Desea habilitar el registro?</value>
+  </data>
+  <data name="plIsActive.Text">
+    <value xml:space="preserve">El registro está activado</value>
+  </data>
+  <data name="plKeepMostRecent.Text">
+    <value xml:space="preserve">Conservar los más recientes</value>
+  </data>
+  <data name="plLogTypeKey.Help">
+    <value xml:space="preserve">¿Qué tipo de evento corresponde a este tipo de registro?</value>
+  </data>
+  <data name="plLogTypeKey.Text">
+    <value xml:space="preserve">Tipo de evento</value>
+  </data>
+  <data name="plLogTypePortalID.Help">
+    <value xml:space="preserve">Indica con que sitio está relacionado este evento del registro</value>
+  </data>
+  <data name="plLogTypePortalID.Text">
+    <value xml:space="preserve">Sitio</value>
+  </data>
+  <data name="plMailFromAddress.Help">
+    <value xml:space="preserve">Dirección de email a usar como origen para el envío de notificaciones</value>
+  </data>
+  <data name="plMailFromAddress.Text">
+    <value xml:space="preserve">Dirección de email de origen</value>
+  </data>
+  <data name="plMailToAddress.Help">
+    <value xml:space="preserve">Dirección de email a usar como destino para el envío de notificaciones</value>
+  </data>
+  <data name="plMailToAddress.Text">
+    <value xml:space="preserve">Dirección de email de destino</value>
+  </data>
+  <data name="plThreshold.Text">
+    <value xml:space="preserve">Umbral de repetición</value>
+  </data>
+  <data name="Portal.Header">
+    <value xml:space="preserve">Sitio</value>
+  </data>
+  <data name="Settings.Text">
+    <value xml:space="preserve">Configuración del registro de eventos</value>
+  </data>
+  <data name="TimeType_1.Text">
+    <value xml:space="preserve">Segundos</value>
+  </data>
+  <data name="TimeType_2.Text">
+    <value xml:space="preserve">Minutos</value>
+  </data>
+  <data name="TimeType_3.Text">
+    <value xml:space="preserve">Horas</value>
+  </data>
+  <data name="TimeType_4.Text">
+    <value xml:space="preserve">Días</value>
+  </data>
+</root>

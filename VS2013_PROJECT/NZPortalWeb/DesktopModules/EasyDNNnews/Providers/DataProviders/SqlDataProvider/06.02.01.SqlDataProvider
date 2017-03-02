@@ -1,0 +1,113 @@
+﻿/*** ShowCommentsFromAllPortals - option ***/
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowCommentsFromAllPortals')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowCommentsFromAllPortals BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsPortalSettings_ShowCommentsFromAllPortals DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowCommentsFromAllPortals')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowCommentsFromAllPortals BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsModuleSettings_ShowCommentsFromAllPortals DEFAULT(1) NOT NULL
+END
+GO
+
+/*** CFShowOnlyFilledItems - option ***/
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'CFShowOnlyFilledItems')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD CFShowOnlyFilledItems BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsPortalSettings_CFShowOnlyFilledItems DEFAULT(0) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'CFShowOnlyFilledItems')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD CFShowOnlyFilledItems BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsModuleSettings_CFShowOnlyFilledItems DEFAULT(0) NOT NULL
+END
+GO
+
+/*** calendar archive articles or events selection ***/
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ArchiveOnlyArticles')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ArchiveOnlyArticles BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsCalendarSettings_ArchiveOnlyArticles DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ArchiveOnlyEvents')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ArchiveOnlyEvents BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsCalendarSettings_ArchiveOnlyEvents DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ArchiveCountEventsLimitByDays')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ArchiveCountEventsLimitByDays INT NULL
+	BEGIN TRY
+		EXEC dbo.sp_executesql @statement = N'UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] SET [ArchiveCountEventsLimitByDays] = 0';
+	END TRY
+	BEGIN CATCH
+	END CATCH
+END
+GO
+/*** end ***/
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+BEGIN TRY
+IF NOT EXISTS (SELECT * FROM sys.triggers WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsTCurrencyBaseCorrectOnDelete]'))
+BEGIN
+	DROP TRIGGER {databaseOwner}[{objectQualifier}EasyDNNnewsTCurrencyBaseCorrectOnDelete];
+END
+IF NOT EXISTS (SELECT * FROM sys.triggers WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsTCurrencyBaseCorrectOnDelete]'))
+EXEC dbo.sp_executesql @statement = N'
+CREATE TRIGGER {databaseOwner}[{objectQualifier}EasyDNNnewsTCurrencyBaseCorrectOnDelete] ON {databaseOwner}[{objectQualifier}EasyDNNfieldsCurrency]
+	AFTER DELETE
+AS
+DECLARE @CodeOld AS NVARCHAR(5);
+DECLARE @CodeBase AS NVARCHAR(5);
+BEGIN
+	SET NOCOUNT ON;
+	SET @CodeOld = (SELECT TOP (1) [ACode] FROM deleted)
+	SET @CodeBase = (SELECT TOP (1) [ACodeBase] FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsCurrencySettings] WHERE [ACodeBase] = @CodeOld)
+	IF(@CodeBase IS NOT NULL)
+	BEGIN
+		DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsCurrencySettings] WHERE [ACodeBase] = @CodeOld
+	END
+END;
+'
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+BEGIN TRY
+IF EXISTS (SELECT * FROM sys.triggers WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsTCurrencyBaseCorrectOnUpdate]'))
+BEGIN
+	DROP TRIGGER {databaseOwner}[{objectQualifier}EasyDNNnewsTCurrencyBaseCorrectOnUpdate];
+END
+IF NOT EXISTS (SELECT * FROM sys.triggers WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsTCurrencyBaseCorrectOnUpdate]'))
+EXEC dbo.sp_executesql @statement = N'
+CREATE TRIGGER {databaseOwner}[{objectQualifier}EasyDNNnewsTCurrencyBaseCorrectOnUpdate] ON {databaseOwner}[{objectQualifier}EasyDNNfieldsCurrency]
+	AFTER UPDATE
+AS
+DECLARE @CodeNew AS NVARCHAR(5);
+DECLARE @CodeOld AS NVARCHAR(5);
+DECLARE @CodeNewExists AS NVARCHAR(5);
+BEGIN
+	SET NOCOUNT ON;
+	SET @CodeNew = (SELECT TOP (1) [ACode] FROM inserted)
+	SET @CodeOld = (SELECT TOP (1) [ACode] FROM deleted)
+	SET @CodeNewExists = (SELECT TOP (1) [ACode] FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsCurrency] WHERE [ACode] = @CodeNew)
+	IF(@CodeNewExists IS NOT NULL)
+	BEGIN
+		IF(@CodeNew <> @CodeOld)
+		BEGIN
+			UPDATE {databaseOwner}[{objectQualifier}EasyDNNfieldsCurrencySettings] SET [ACodeBase] = @CodeNew WHERE [ACodeBase] = @CodeOld
+		END
+	END
+END;
+'
+END TRY
+BEGIN CATCH
+END CATCH
+GO

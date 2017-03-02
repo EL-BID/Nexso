@@ -1,0 +1,335 @@
+﻿/*** category menu articles or events count selection ***/
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'CountArticles')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD CountArticles BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsMenuSettings_CountArticles DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'CountEvents')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD CountEvents BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsMenuSettings_CountEvents DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'CountEventsLimitByDays')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD CountEventsLimitByDays INT NULL
+	BEGIN TRY
+		EXEC dbo.sp_executesql @statement = N'UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] SET [CountEventsLimitByDays] = 0';
+	END TRY
+	BEGIN CATCH
+	END CATCH
+END
+GO
+/*** end ***/
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowArticles')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowArticles BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsPortalSettings_ShowArticles DEFAULT(1) NOT NULL;
+	BEGIN TRY
+		EXEC dbo.sp_executesql @statement = N'UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] SET [ShowArticles] = 0 WHERE [ShowOnlyEvents] = 1; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] SET [ShowOnlyEvents] = 1, [PastEventsLimit] = ''Limit'', [PastEventsLimitDays] = 0 WHERE [ShowOnlyEvents] = 0;';
+	END TRY
+	BEGIN CATCH
+	END CATCH
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowArticles')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowArticles BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsModuleSettings_ShowArticles DEFAULT(1) NOT NULL;
+	BEGIN TRY
+		EXEC dbo.sp_executesql @statement = N'UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] SET [ShowArticles] = 0 WHERE [ShowOnlyEvents] = 1; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] SET [ShowOnlyEvents] = 1, [PastEventsLimit] = ''Limit'', [PastEventsLimitDays] = 0 WHERE [ShowOnlyEvents] = 0;';
+	END TRY
+	BEGIN CATCH
+	END CATCH
+END
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'Title')
+BEGIN
+	DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNews] WHERE Title IS NULL OR LEN([Title]) = 0
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ALTER COLUMN Title nvarchar(800) NOT NULL;
+	BEGIN TRY
+		IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE [name] = (N'chk_{objectQualifier}EasyDNNNews_Title_Lenght') AND type = 'C')
+		BEGIN
+			ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD CONSTRAINT [chk_{objectQualifier}EasyDNNNews_Title_Lenght] CHECK (LEN([Title]) > 0)
+		END
+	END TRY
+	BEGIN CATCH
+	END CATCH
+END
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData](
+	[ArticleID] [int] NOT NULL,
+	[RecurringID] [int] NOT NULL,
+	[StartDateTime] [datetime] NOT NULL,
+	[EndDateTime] [datetime] NOT NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNNewsEventsRecurringData] PRIMARY KEY CLUSTERED ([ArticleID] ASC, [RecurringID] ASC)WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData]') AND name = N'IX_{objectQualifier}EasyDNNNewsEventsRecurringData_EndDateTime')
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNewsEventsRecurringData_EndDateTime] ON {databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData] 
+([EndDateTime] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF)
+GO
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData]') AND name = N'IX_{objectQualifier}EasyDNNNewsEventsRecurringData_StartDateTime')
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNewsEventsRecurringData_StartDateTime] ON {databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData] 
+([StartDateTime] ASC)WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF)
+GO
+IF NOT EXISTS (SELECT * FROM sys.check_constraints WHERE object_id = OBJECT_ID(N'{databaseOwner}[chk_{objectQualifier}StartDateTimeEndDateTime]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData]  WITH CHECK ADD  CONSTRAINT [chk_{objectQualifier}StartDateTimeEndDateTime] CHECK  (([EndDateTime]>=[StartDateTime]))
+GO
+IF  EXISTS (SELECT * FROM sys.check_constraints WHERE object_id = OBJECT_ID(N'{databaseOwner}[chk_{objectQualifier}StartDateTimeEndDateTime]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData] CHECK CONSTRAINT [chk_{objectQualifier}StartDateTimeEndDateTime]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsEventsRecurringData_EasyDNNNewsEventsData]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsEventsRecurringData_EasyDNNNewsEventsData] FOREIGN KEY([ArticleID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ([ArticleID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsEventsRecurringData_EasyDNNNewsEventsData]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsRecurringData] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsEventsRecurringData_EasyDNNNewsEventsData]
+GO
+
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'Recurring')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD Recurring BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsEventsData_Recurring DEFAULT(0) NOT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringType TINYINT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringHour')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringHour INT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringDay')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringDay INT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringWeek')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringWeek INT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringWeekDays')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringWeekDays NVARCHAR(20) NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringMonthType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringMonthType TINYINT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringMonthDay')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringMonthDay TINYINT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringMonthDayOfWeek')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringMonthDayOfWeek TINYINT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringMonth')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringMonth INT NULL
+END
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringYearType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringYearType TINYINT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringYearMonthDay')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringYearMonthDay TINYINT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringYearDayOfWeek')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringYearDayOfWeek TINYINT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringYearMonth')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringYearMonth TINYINT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringYear')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringYear INT NULL
+END
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringEndType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringEndType TINYINT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'RecurringEndByDate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD RecurringEndByDate DATETIME NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'EndsAfterOccurrences')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD EndsAfterOccurrences INT NULL
+END
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsEventsData' and column_name = 'UpcomingOccurrences')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] ADD UpcomingOccurrences INT NULL
+END
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCalendarEventsArchive]') AND type in (N'P', N'PC'))
+	DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCalendarEventsArchive]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsGetValues]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNfieldsGetValues]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsGetValues]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNfieldsGetValues]
+(
+	@ArticleID int,
+	@FieldsTemplateID int,
+	@LocaleCode	nvarchar(20) = NULL,
+	@ShowHiddenFields BIT
+)
+AS
+SET NOCOUNT ON;    
+
+IF @LocaleCode IS NULL
+BEGIN
+	SELECT fv.[ArticleID], cf.[CustomFieldID],cf.[ControlTypeID],cf.[Token],cf.[ShowLabel],cf.[LabelValue],cf.[LabelHelp],cf.[IsParent],
+		cf.[IconURL],cf.[ACode],cf.[DisplayFormat],fv.[RText],fv.[Decimal],fv.[Int],fv.[Bit],NULL AS [FieldElementID],fv.[Text],gt.[Position],NULL AS [MEPosition]
+	FROM {databaseOwner}[{objectQualifier}EasyDNNfields] AS cf INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplateItems] AS gt ON cf.[CustomFieldID] = gt.[CustomFieldID]
+	 INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsValues] as fv ON cf.[CustomFieldID] = fv.[CustomFieldID]
+	  WHERE cf.[IsPublished] = ''1'' AND (@ShowHiddenFields = 1 OR cf.[IsHidden] = @ShowHiddenFields) AND gt.[FieldsTemplateID] = @FieldsTemplateID AND fv.[ArticleID] = @ArticleID
+	UNION ALL
+	SELECT fms.[ArticleID], cf.[CustomFieldID],cf.[ControlTypeID],cf.[Token],cf.[ShowLabel],cf.[LabelValue],cf.[LabelHelp],cf.[IsParent],cf.[IconURL],NULL AS [ACode],NULL AS [DisplayFormat],
+	 NULL as [RText], NULL AS [Decimal],NULL AS [Int],NULL AS [Bit],fme.[FieldElementID],fme.[Text],gt.[Position],fme.[Position] AS [MEPosition]
+	FROM {databaseOwner}[{objectQualifier}EasyDNNfields] as cf INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplateItems] AS gt ON cf.[CustomFieldID] = gt.[CustomFieldID]
+	 INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] as fme ON cf.[CustomFieldID] = fme.[CustomFieldID]
+	  LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiSelected] as fms ON cf.[CustomFieldID] = fms.[CustomFieldID] AND fme.[FieldElementID] = fms.[FieldElementID] AND ((cf.[ShowAllMultiElements] = 0 AND fms.[ArticleID] = @ArticleID) OR (cf.[ShowAllMultiElements] = 1 AND (fms.[ArticleID] = @ArticleID OR (fms.[ArticleID] IS NULL AND cf.[ControlTypeID] = 23))))
+	   WHERE cf.[IsPublished] = ''1'' AND (@ShowHiddenFields = 1 OR cf.[IsHidden] = @ShowHiddenFields) AND gt.[FieldsTemplateID] = @FieldsTemplateID AND ((cf.[ShowAllMultiElements] = 0 AND fms.[ArticleID] = @ArticleID) OR (cf.[ShowAllMultiElements] = 1 AND (fms.[ArticleID] = @ArticleID OR (fms.[ArticleID] IS NULL AND cf.[ControlTypeID] = 23))))
+	ORDER BY [Position], [MEPosition];
+END
+ELSE
+BEGIN
+	;WITH AllValues ([ArticleID],[CustomFieldID],[ControlTypeID],[Token],[ShowLabel],[LabelValue],[LabelHelp],[IsParent],
+		[IconURL],[ACode],[DisplayFormat],[RText],[Decimal],[Int],[Bit],[FieldElementID],[Text],[Position],[MEPosition])
+		AS (
+			SELECT fv.[ArticleID], cf.[CustomFieldID],cf.[ControlTypeID],cf.[Token],cf.[ShowLabel],cf.[LabelValue],cf.[LabelHelp],cf.[IsParent],
+				cf.[IconURL],cf.[ACode],cf.[DisplayFormat],fv.[RText],fv.[Decimal],fv.[Int],fv.[Bit],NULL AS [FieldElementID],fv.[Text],gt.[Position],NULL AS [MEPosition]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNfields] AS cf INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplateItems] AS gt ON cf.[CustomFieldID] = gt.[CustomFieldID]
+			 INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsValues] as fv ON cf.[CustomFieldID] = fv.[CustomFieldID]
+			  WHERE cf.[IsPublished] = ''1'' AND (@ShowHiddenFields = 1 OR cf.[IsHidden] = @ShowHiddenFields) AND gt.[FieldsTemplateID] = @FieldsTemplateID AND fv.[ArticleID] = @ArticleID
+			UNION ALL
+			SELECT fms.[ArticleID], cf.[CustomFieldID],cf.[ControlTypeID],cf.[Token],cf.[ShowLabel],cf.[LabelValue],cf.[LabelHelp],cf.[IsParent],cf.[IconURL],NULL AS [ACode],NULL AS [DisplayFormat],
+			 NULL as [RText], NULL AS [Decimal],NULL AS [Int],NULL AS [Bit],fme.[FieldElementID],fme.[Text],gt.[Position],fme.[Position] AS [MEPosition]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNfields] as cf INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplateItems] AS gt ON cf.[CustomFieldID] = gt.[CustomFieldID]
+			 INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] as fme ON cf.[CustomFieldID] = fme.[CustomFieldID]
+			  LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiSelected] as fms ON cf.[CustomFieldID] = fms.[CustomFieldID] AND fms.[FieldElementID] = fme.[FieldElementID] AND ((cf.[ShowAllMultiElements] = 0 AND fms.[ArticleID] = @ArticleID) OR (cf.[ShowAllMultiElements] = 1 AND (fms.[ArticleID] = @ArticleID OR (fms.[ArticleID] IS NULL AND cf.[ControlTypeID] = 23))))
+			   WHERE cf.[IsPublished] = ''1'' AND (@ShowHiddenFields = 1 OR cf.[IsHidden] = @ShowHiddenFields) AND gt.[FieldsTemplateID] = @FieldsTemplateID AND ((cf.[ShowAllMultiElements] = 0 AND fms.[ArticleID] = @ArticleID) OR (cf.[ShowAllMultiElements] = 1 AND (fms.[ArticleID] = @ArticleID OR (fms.[ArticleID] IS NULL AND cf.[ControlTypeID] = 23))))
+	),
+	LocalizedSingleValues ([ArticleID],[CustomFieldID],[ControlTypeID],[Token],[ShowLabel],[LabelValue],[LabelHelp],[IsParent],
+		[IconURL],[ACode],[DisplayFormat],[RText],[Decimal],[Int],[Bit],[FieldElementID],[Text],[Position],[MEPosition]) AS(
+		SELECT av.[ArticleID], av.[CustomFieldID],av.[ControlTypeID],av.[Token],av.[ShowLabel],av.[LabelValue],av.[LabelHelp],av.[IsParent],
+		av.[IconURL],av.[ACode],av.[DisplayFormat],av.[RText],av.[Decimal],av.[Int],av.[Bit],av.[FieldElementID],fvl.[Text],av.[Position],av.[MEPosition]
+		 FROM AllValues as av INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsValuesLocalization] AS fvl ON av.CustomFieldID = fvl.CustomFieldID AND fvl.ArticleID = @ArticleID AND fvl.LocaleCode = @LocaleCode AND av.[Text] IS NOT NULL
+		  WHERE (av.ControlTypeID = 1 OR av.ControlTypeID = 2)
+	),
+	LocalizedMultiValues ([ArticleID],[CustomFieldID],[ControlTypeID],[Token],[ShowLabel],[LabelValue],[LabelHelp],[IsParent],
+		[IconURL],[ACode],[DisplayFormat],[RText],[Decimal],[Int],[Bit],[FieldElementID],[Text],[Position],[MEPosition]) AS(
+		SELECT av.[ArticleID], av.[CustomFieldID],av.[ControlTypeID],av.[Token],av.[ShowLabel],av.[LabelValue],av.[LabelHelp],av.[IsParent],
+			av.[IconURL],av.[ACode],av.[DisplayFormat],av.[RText],av.[Decimal],av.[Int],av.[Bit],av.[FieldElementID],fmel.[Text],av.[Position],av.[MEPosition]
+		FROM AllValues as av
+		 INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElementsLocalization] AS fmel ON av.FieldElementID = fmel.FieldElementID AND fmel.LocaleCode = @LocaleCode AND av.[Text] IS NOT NULL --WHERE (av.ControlTypeID <> 1 OR av.ControlTypeID <> 2)
+	),
+	CombinedValues ([ArticleID],[CustomFieldID],[ControlTypeID],[Token],[ShowLabel],[LabelValue],[LabelHelp],[IsParent],
+		[IconURL],[ACode],[DisplayFormat],[RText],[Decimal],[Int],[Bit],[FieldElementID],[Text],[Position],[MEPosition]) AS(
+		--u zadnjem redu ovo field element is nul null to je zato jer se prilikom joina maknul,.. jer se pretpostavlja da je null
+		SELECT * FROM LocalizedSingleValues
+		UNION ALL
+		SELECT * FROM LocalizedMultiValues
+		UNION ALL
+		SELECT * FROM AllValues WHERE (CustomFieldID NOT IN (SELECT CustomFieldID FROM LocalizedSingleValues)) AND ((FieldElementID NOT IN (SELECT FieldElementID FROM LocalizedMultiValues)) OR FieldElementID IS NULL)
+	),
+	LocalizedLabelsAndFinalize ([ArticleID],[CustomFieldID],[ControlTypeID],[Token],[ShowLabel],[LabelValue],[LabelHelp],[IsParent],
+		[IconURL],[ACode],[DisplayFormat],[RText],[Decimal],[Int],[Bit],[FieldElementID],[Text],[Position],[MEPosition]) AS(
+		SELECT cv.[ArticleID],cv.[CustomFieldID],cv.[ControlTypeID],cv.[Token],cv.[ShowLabel],fl.[LabelValue],fl.[LabelHelp],cv.[IsParent],
+			cv.[IconURL],cv.[ACode],cv.[DisplayFormat],cv.[RText],cv.[Decimal],cv.[Int],cv.[Bit],cv.[FieldElementID],cv.[Text],cv.[Position],cv.[MEPosition]
+		FROM CombinedValues as cv
+		 INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsLocalization] AS fl ON cv.CustomFieldID = fl.CustomFieldID AND fl.LocaleCode = @LocaleCode
+	)
+	SELECT * FROM LocalizedLabelsAndFinalize
+	UNION ALL
+	SELECT * FROM CombinedValues WHERE CustomFieldID NOT IN (SELECT CustomFieldID FROM LocalizedLabelsAndFinalize)  ORDER BY [Position], [MEPosition];
+END' 
+END
+GO
+
+
+/*** remove old procedures ***/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForListDisplay]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForListDisplay]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCountForPageing]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCountForPageing]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCalendarAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCalendarAll]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCalendarOnlyEvents]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCalendarOnlyEvents]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCalendarOnlyNews]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCalendarOnlyNews]
+GO
+/*** end ***/
+
+/*** remove old calendar procedures ***/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCalendarAll]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCalendarAll]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCalendarOnlyEvents]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCalendarOnlyEvents]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCalendarOnlyNews]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCalendarOnlyNews]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetUpcomingEvents]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetUpcomingEvents]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForListDisplayByDateWithEventsRange]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForListDisplayByDateWithEventsRange]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCountForPageingDateWithEventsRange]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCountForPageingDateWithEventsRange]
+GO
+/*** end ***/
+
+/*** remove old calendar procedures ***/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCategoryMenu]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForCategoryMenu]
+GO
+/*** end ***/

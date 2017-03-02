@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Francois+One&subset=latin,latin-ext);
+.edn_widget_filtermenu_box {
+  margin: 0 0 10px 0;
+  border: solid 2px #ebebeb;
+  background-color: white;
+  overflow: hidden;
+}
+.edn_widget_filtermenu_box > h2.edn_module_title {
+  background: #ebebeb;
+  padding: 5px 10px;
+  margin: 0px;
+  border: none;
+  line-heignt: 28px;
+}
+.edn_widget_filtermenu_box > h2.edn_module_title span {
+  font-family: "Francois One", Arial, serif !important;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  color: #121212;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: normal;
+  border: none;
+}
+.edn_widget_filtermenu_box h3 {
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  border-style: none;
+  border-top-style: solid;
+  border-width: 1px 0 0;
+  border-color: #c9c9c9 transparent transparent;
+  margin: 0;
+  padding: 4px 10px;
+  background-color: #f8f8f8;
+  color: #636363;
+  line-height: 20px;
+}
+.edn_widget_filtermenu_box > div select {
+  background: none white;
+  border-color: white transparent #dedede;
+  border-image: none;
+  border-style: solid none;
+  border-width: 1px 0;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+  color: #333333;
+  font-size: 14px;
+  margin: 0;
+  padding: 6px 10px;
+  width: 100%;
+}
+.edn_widget_filtermenu_box .edn_filter_menu {
+  padding: 0;
+  margin: 0;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-top: solid 1px #ebebeb;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li ul {
+  margin: 0;
+  padding: 0;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li ul li.active > div label {
+  font-weight: normal;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div {
+  padding: 5px 0 4px 58px;
+  border: solid 1px white;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div:hover {
+  background: #eaeaea;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div .expand_collapse {
+  background: url(images/expand-collapse.png) no-repeat 0 0;
+  float: right;
+  width: 19px;
+  height: 19px;
+  text-indent: -9999px;
+  margin-right: 4px;
+  cursor: pointer;
+  display: inline;
+  float: right;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div .expand_collapse.collapse {
+  background-position: 0 -19px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div label {
+  color: #3c3c3c;
+  font-size: 12px;
+  line-height: 19px;
+  font-family: Arial;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_0 > div {
+  padding-left: 6px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_1 > div {
+  padding-left: 12px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_2 > div {
+  padding-left: 26px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_3 > div {
+  padding-left: 33px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_4 > div {
+  padding-left: 40px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_5 > div {
+  padding-left: 47px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.active > div label {
+  font-weight: bold;
+  color: #609509;
+}
+.edn_widget_filtermenu_box .EDN_two-column {
+  float: left;
+  width: 49%;
+  clear: none;
+}
+.edn_widget_filtermenu_box .EDN_two-column.EDN_right {
+  float: right;
+}
+.edn_widget_filtermenu_box .EDN_button-wrapper {
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+  padding: 8px;
+}
+.edn_widget_filtermenu_box .EDN_button-wrapper .edn_filter_button {
+  background: url(images/button-bg.png) repeat-x scroll 0 0 #fdfdfd;
+  border: 1px solid #b3b3b3;
+  color: #828282;
+  float: left;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0 11px;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px white;
+  text-transform: uppercase;
+}
+.edn_widget_filtermenu_box .EDN_button-wrapper .edn_filter_button:hover {
+  box-shadow: 0 0 4px 2px #e5e5e5;
+  text-decoration: none;
+}

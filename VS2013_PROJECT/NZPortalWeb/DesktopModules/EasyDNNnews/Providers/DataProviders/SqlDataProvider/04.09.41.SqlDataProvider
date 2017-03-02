@@ -1,0 +1,295 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNews]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNews]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNews]', N'{objectQualifier}EasyDNNNews', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNews', N'PK_{objectQualifier}EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNews_EasyGallery', N'FK_{objectQualifier}EasyDNNNews_EasyGallery', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArchive]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsArchive]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsArchive]', N'{objectQualifier}EasyDNNNewsArchive', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsArchive_1', N'PK_{objectQualifier}EasyDNNNewsArchive_1', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArchive_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsArchive_EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+-- Featured
+BEGIN TRY
+	DECLARE @ColumnType nvarchar(30);
+	SET @ColumnType = '';
+	SELECT @ColumnType = data_type FROM information_schema.columns WHERE table_name = '{objectQualifier}EasyDNNNews' AND column_name = 'Featured'
+
+	IF @ColumnType = 'varchar'
+	BEGIN
+		IF not exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'TempFeatured')
+		BEGIN
+			ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD TempFeatured BIT CONSTRAINT EDS_{objectQualifier}EasyDNNNews_Featured_df DEFAULT (0) NOT NULL
+		END
+		
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP CONSTRAINT [EDS_{objectQualifier}EasyDNNNews_Featured_df]; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNews] SET TempFeatured = CASE Featured WHEN ''True'' THEN 1 ELSE 0 END')
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [Featured]
+
+		EXEC sp_rename '{databaseOwner}[{objectQualifier}EasyDNNNews].[TempFeatured]', 'Featured', 'COLUMN'
+	END
+END TRY
+BEGIN CATCH
+END CATCH;
+
+-- Approved
+BEGIN TRY
+	DECLARE @ColumnType1 nvarchar(30);
+	SET @ColumnType1 = '';
+	SELECT @ColumnType1 = data_type FROM information_schema.columns WHERE table_name = '{objectQualifier}EasyDNNNews' AND column_name = 'Approved'
+
+	IF @ColumnType1 = 'varchar'
+	BEGIN
+		IF not exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'TempApproved')
+		BEGIN
+			ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD TempApproved BIT CONSTRAINT EDS_{objectQualifier}EasyDNNNews_Approved_df DEFAULT (0) NOT NULL
+		END
+		
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP CONSTRAINT [EDS_{objectQualifier}EasyDNNNews_Approved_df]; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNews] SET TempApproved = CASE Approved WHEN ''True'' THEN 1 ELSE 0 END')
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [Approved]
+
+		EXEC sp_rename '{databaseOwner}[{objectQualifier}EasyDNNNews].[TempApproved]', 'Approved', 'COLUMN'
+	END
+END TRY
+BEGIN CATCH
+END CATCH;
+
+-- AllowComments
+BEGIN TRY
+	DECLARE @ColumnType2 nvarchar(30);
+	SET @ColumnType2 = '';
+	SELECT @ColumnType2 = data_type FROM information_schema.columns WHERE table_name = '{objectQualifier}EasyDNNNews' AND column_name = 'AllowComments'
+
+	IF @ColumnType2 = 'varchar'
+	BEGIN
+		IF not exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'TempAllowComments')
+		BEGIN
+			ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD TempAllowComments BIT CONSTRAINT EDS_{objectQualifier}EasyDNNNews_AllowComments_df DEFAULT (0) NOT NULL
+		END
+		
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP CONSTRAINT [EDS_{objectQualifier}EasyDNNNews_AllowComments_df]; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNews] SET TempAllowComments = CASE AllowComments WHEN ''True'' THEN 1 ELSE 0 END')
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [AllowComments]
+
+		EXEC sp_rename '{databaseOwner}[{objectQualifier}EasyDNNNews].[TempAllowComments]', 'AllowComments', 'COLUMN'
+	END
+END TRY
+BEGIN CATCH
+END CATCH;
+
+-- Active
+BEGIN TRY
+	DECLARE @ColumnType3 nvarchar(30);
+	SET @ColumnType3 = '';
+	SELECT @ColumnType3 = data_type FROM information_schema.columns WHERE table_name = '{objectQualifier}EasyDNNNews' AND column_name = 'Active'
+
+	IF @ColumnType3 = 'varchar'
+	BEGIN
+		IF not exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'TempActive')
+		BEGIN
+			ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD TempActive BIT CONSTRAINT EDS_{objectQualifier}EasyDNNNews_Active_df DEFAULT (0) NOT NULL
+		END
+		
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP CONSTRAINT [EDS_{objectQualifier}EasyDNNNews_Active_df]; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNews] SET TempActive = CASE Active WHEN ''True'' THEN 1 ELSE 0 END')
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [Active]
+
+		EXEC sp_rename '{databaseOwner}[{objectQualifier}EasyDNNNews].[TempActive]', 'Active', 'COLUMN'
+	END
+END TRY
+BEGIN CATCH
+END CATCH;
+
+-- ShowMainImage
+BEGIN TRY
+	DECLARE @ColumnType4 nvarchar(30);
+	SET @ColumnType4 = '';
+	SELECT @ColumnType4 = data_type FROM information_schema.columns WHERE table_name = '{objectQualifier}EasyDNNNews' AND column_name = 'ShowMainImage'
+
+	IF @ColumnType4 = 'varchar'
+	BEGIN
+		IF not exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'TempShowMainImage')
+		BEGIN
+			ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD TempShowMainImage BIT CONSTRAINT EDS_{objectQualifier}EasyDNNNews_ShowMainImage_df DEFAULT (0) NOT NULL
+		END
+		
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP CONSTRAINT [EDS_{objectQualifier}EasyDNNNews_ShowMainImage_df]; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNews] SET TempShowMainImage = CASE ShowMainImage WHEN ''True'' THEN 1 ELSE 0 END')
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [ShowMainImage]
+
+		EXEC sp_rename '{databaseOwner}[{objectQualifier}EasyDNNNews].[TempShowMainImage]', 'ShowMainImage', 'COLUMN'
+	END
+END TRY
+BEGIN CATCH
+END CATCH;
+
+-- ShowMainImageFront
+BEGIN TRY
+	DECLARE @ColumnType5 nvarchar(30);
+	SET @ColumnType5 = '';
+	SELECT @ColumnType5 = data_type FROM information_schema.columns WHERE table_name = '{objectQualifier}EasyDNNNews' AND column_name = 'ShowMainImageFront'
+
+	IF @ColumnType5 = 'varchar'
+	BEGIN
+		IF not exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'TempShowMainImageFront')
+		BEGIN
+			ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD TempShowMainImageFront BIT CONSTRAINT EDS_{objectQualifier}EasyDNNNews_ShowMainImageFront_df DEFAULT (0) NOT NULL
+		END
+		
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP CONSTRAINT [EDS_{objectQualifier}EasyDNNNews_ShowMainImageFront_df]; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNews] SET TempShowMainImageFront = CASE ShowMainImageFront WHEN ''True'' THEN 1 ELSE 0 END')
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [ShowMainImageFront]
+
+		EXEC sp_rename '{databaseOwner}[{objectQualifier}EasyDNNNews].[TempShowMainImageFront]', 'ShowMainImageFront', 'COLUMN'
+	END
+END TRY
+BEGIN CATCH
+END CATCH;
+
+-- ArticleImageSet
+BEGIN TRY
+	DECLARE @ColumnType7 nvarchar(30);
+	SET @ColumnType7 = '';
+	SELECT @ColumnType7 = data_type FROM information_schema.columns WHERE table_name = '{objectQualifier}EasyDNNNews' AND column_name = 'ArticleImageSet'
+
+	IF @ColumnType7 = 'nvarchar'
+	BEGIN
+		IF not exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'TempArticleImageSet')
+		BEGIN
+			ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD TempArticleImageSet BIT CONSTRAINT EDS_{objectQualifier}EasyDNNNews_ArticleImageSet_df DEFAULT (0) NOT NULL
+		END
+		
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP CONSTRAINT [EDS_{objectQualifier}EasyDNNNews_ArticleImageSet_df]; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNews] SET TempArticleImageSet = CASE ArticleImageSet WHEN ''True'' THEN 1 ELSE 0 END')
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [ArticleImageSet]
+
+		EXEC sp_rename '{databaseOwner}[{objectQualifier}EasyDNNNews].[TempArticleImageSet]', 'ArticleImageSet', 'COLUMN'
+	END
+END TRY
+BEGIN CATCH
+END CATCH;
+
+-- EasyDNNNewsArchive
+-- Featured
+BEGIN TRY
+	DECLARE @ColumnType8 nvarchar(30);
+	SET @ColumnType8 = '';
+	SELECT @ColumnType8 = data_type FROM information_schema.columns WHERE table_name = '{objectQualifier}EasyDNNNewsArchive' AND column_name = 'Featured'
+
+	IF @ColumnType8 = 'nvarchar'
+	BEGIN
+		IF not exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsArchive' and column_name = 'TempFeatured')
+		BEGIN
+			ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] ADD TempFeatured BIT CONSTRAINT EDS_{objectQualifier}EasyDNNNewsArchive_Featured_df DEFAULT (0) NOT NULL
+		END
+		
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP CONSTRAINT [EDS_{objectQualifier}EasyDNNNewsArchive_Featured_df]; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] SET TempFeatured = CASE Featured WHEN ''True'' THEN 1 ELSE 0 END')
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [Featured]
+
+		EXEC sp_rename '{databaseOwner}[{objectQualifier}EasyDNNNewsArchive].[TempFeatured]', 'Featured', 'COLUMN'
+	END
+END TRY
+BEGIN CATCH
+END CATCH;
+
+-- AllowComments
+BEGIN TRY
+	DECLARE @ColumnType9 nvarchar(30);
+	SET @ColumnType9 = '';
+	SELECT @ColumnType9 = data_type FROM information_schema.columns WHERE table_name = '{objectQualifier}EasyDNNNewsArchive' AND column_name = 'AllowComments'
+
+	IF @ColumnType9 = 'nvarchar'
+	BEGIN
+		IF not exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsArchive' and column_name = 'TempAllowComments')
+		BEGIN
+			ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] ADD TempAllowComments BIT CONSTRAINT EDS_{objectQualifier}EasyDNNNewsArchive_AllowComments_df DEFAULT (0) NOT NULL
+		END
+		
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP CONSTRAINT [EDS_{objectQualifier}EasyDNNNewsArchive_AllowComments_df]; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] SET TempAllowComments = CASE AllowComments WHEN ''True'' THEN 1 ELSE 0 END')
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [AllowComments]
+
+		EXEC sp_rename '{databaseOwner}[{objectQualifier}EasyDNNNewsArchive].[TempAllowComments]', 'AllowComments', 'COLUMN'
+	END
+END TRY
+BEGIN CATCH
+END CATCH;
+
+-- ShowMainImage
+BEGIN TRY
+	DECLARE @ColumnType10 nvarchar(30);
+	SET @ColumnType10 = '';
+	SELECT @ColumnType10 = data_type FROM information_schema.columns WHERE table_name = '{objectQualifier}EasyDNNNewsArchive' AND column_name = 'ShowMainImage'
+
+	IF @ColumnType10 = 'nvarchar'
+	BEGIN
+		IF not exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsArchive' and column_name = 'TempShowMainImage')
+		BEGIN
+			ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] ADD TempShowMainImage BIT CONSTRAINT EDS_{objectQualifier}EasyDNNNewsArchive_ShowMainImage_df DEFAULT (0) NOT NULL
+		END
+		
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP CONSTRAINT [EDS_{objectQualifier}EasyDNNNewsArchive_ShowMainImage_df]; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] SET TempShowMainImage = CASE ShowMainImage WHEN ''True'' THEN 1 ELSE 0 END')
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [ShowMainImage]
+
+		EXEC sp_rename '{databaseOwner}[{objectQualifier}EasyDNNNewsArchive].[TempShowMainImage]', 'ShowMainImage', 'COLUMN'
+	END
+END TRY
+BEGIN CATCH
+END CATCH;
+
+-- AllowComments
+BEGIN TRY
+
+	DECLARE @ColumnType11 nvarchar(30);
+	SET @ColumnType11 = '';
+	SELECT @ColumnType11 = data_type FROM information_schema.columns WHERE table_name = '{objectQualifier}EasyDNNNewsArchive' AND column_name = 'ShowMainImageFront'
+
+	IF @ColumnType11 = 'nvarchar'
+	BEGIN
+		IF not exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsArchive' and column_name = 'TempShowMainImageFront')
+		BEGIN
+			ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] ADD TempShowMainImageFront BIT CONSTRAINT EDS_{objectQualifier}EasyDNNNewsArchive_ShowMainImageFront_df DEFAULT (0) NOT NULL
+		END
+		
+		EXEC ('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP CONSTRAINT [EDS_{objectQualifier}EasyDNNNewsArchive_ShowMainImageFront_df]; UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] SET TempShowMainImageFront = CASE ShowMainImageFront WHEN ''True'' THEN 1 ELSE 0 END')
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [ShowMainImageFront]
+
+		EXEC sp_rename '{databaseOwner}[{objectQualifier}EasyDNNNewsArchive].[TempShowMainImageFront]', 'ShowMainImageFront', 'COLUMN'
+	END
+		
+END TRY
+BEGIN CATCH
+END CATCH;

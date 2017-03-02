@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plBannerName.Text">
+    <value xml:space="preserve">Nome da publicidade</value>
+  </data>
+  <data name="plBannerName.Help">
+    <value xml:space="preserve">Insira um nome para a publicidade. O nome é exibido como texto alternativo à imagem mostrada.</value>
+  </data>
+  <data name="BannerName.ErrorMessage">
+    <value xml:space="preserve">Você deve inserir um nome para a publicidade!</value>
+  </data>
+  <data name="plBannerType.Text">
+    <value xml:space="preserve">Tipo de publicidade</value>
+  </data>
+  <data name="plBannerType.Help">
+    <value xml:space="preserve">Selecione o tipo de publicidade a exibir.</value>
+  </data>
+  <data name="plBannerGroup.Text">
+    <value xml:space="preserve">Grupo de publicidades</value>
+  </data>
+  <data name="plBannerGroup.Help">
+    <value xml:space="preserve">Insira um grupo de publicidades se pretender atualizar um conjunto de publicidades.</value>
+  </data>
+  <data name="plImage.Text">
+    <value xml:space="preserve">Imagem/atalho</value>
+  </data>
+  <data name="plImage.Help">
+    <value xml:space="preserve">Para publicidades gráficas você deve especificar a imagem da publicidade (enviando um arquivo de imagem ou criando um atalho para um arquivo de imagem remoto). Para publicidades de texto você deve especificar o endereço que você quer exibir no texto da publicidade.</value>
+  </data>
+  <data name="plWidth.Text">
+    <value xml:space="preserve">Largura</value>
+  </data>
+  <data name="plWidth.Help">
+    <value xml:space="preserve">Insira a largura da imagem da publicidade. Isto é opcional para publicidades de imagem mas é obrigatório para publicidades de Flash.</value>
+  </data>
+  <data name="plHeight.Text">
+    <value xml:space="preserve">Altura</value>
+  </data>
+  <data name="plHeight.Help">
+    <value xml:space="preserve">Insira a altura da imagem da publicidade. Isto é opcional para publicidades de imagem mas é obrigatório para publicidades de Flash.</value>
+  </data>
+  <data name="plDescription.Text">
+    <value xml:space="preserve">Texto/Comandos</value>
+  </data>
+  <data name="plDescription.Help">
+    <value xml:space="preserve">Insira uma descrição da publicidade. Isto é utilizado como texto alternativo às publicidades de imagens ou como o próprio texto das publicidades de texto.</value>
+  </data>
+  <data name="plURL.Text">
+    <value xml:space="preserve">Endereço</value>
+  </data>
+  <data name="plURL.Help">
+    <value xml:space="preserve">Insira o endereço para o qual quer que o visitante seja redirecionado se clicar na publicidade. Se não inserir um endereço, o endereço do anunciante será utilizado.</value>
+  </data>
+  <data name="plImpressions.Text">
+    <value xml:space="preserve">Impressões</value>
+  </data>
+  <data name="plImpressions.Help">
+    <value xml:space="preserve">Insira a quantidade de impressões a exibir. Para um número ilimitado de impressões insira zero (0).</value>
+  </data>
+  <data name="Impressions.ErrorMessage">
+    <value xml:space="preserve">&lt;br&gt;Insira uma quantidade válida de impressões!</value>
+  </data>
+  <data name="plCPM.Text">
+    <value xml:space="preserve">CPM/Custo</value>
+  </data>
+  <data name="plCPM.Help">
+    <value xml:space="preserve">CPM é o custo para 1000 impressões. O custo pode ser também uma tarifa fixa.</value>
+  </data>
+  <data name="CPM.ErrorMessage">
+    <value xml:space="preserve">Insira um CPM válido ou o custo!</value>
+  </data>
+  <data name="plStartDate.Text">
+    <value xml:space="preserve">Data inicial</value>
+  </data>
+  <data name="plStartDate.Help">
+    <value xml:space="preserve">Utilize a data inicial para controlar quando se dará inicio à campanha publicitária.</value>
+  </data>
+  <data name="plEndDate.Text">
+    <value xml:space="preserve">Data final</value>
+  </data>
+  <data name="plEndDate.Help">
+    <value xml:space="preserve">Utilize a data final para controlar quando a campanha deve terminar.</value>
+  </data>
+  <data name="plCriteria.Text">
+    <value xml:space="preserve">Critério</value>
+  </data>
+  <data name="plCriteria.Help">
+    <value xml:space="preserve">Especifique se a campanha deve terminar quando todas as impressões forem utilizadas e/ou a data de expiração for alcançada.</value>
+  </data>
+  <data name="cmdEmail.Text">
+    <value xml:space="preserve">Situação do email para o anunciante</value>
+  </data>
+  <data name="ControlTitle_banner.Text">
+    <value xml:space="preserve">Editar Publicidade</value>
+  </data>
+  <data name="EmailSuccess.Text">
+    <value xml:space="preserve">Email enviado</value>
+  </data>
+  <data name="EmailFailure.Text">
+    <value xml:space="preserve">Email não enviado: {0}</value>
+  </data>
+  <data name="cmdCopy.Text">
+    <value xml:space="preserve">Copiar</value>
+  </data>
+  <data name="and.Text">
+    <value xml:space="preserve">E</value>
+  </data>
+  <data name="or.Text">
+    <value xml:space="preserve">OU</value>
+  </data>
+</root>

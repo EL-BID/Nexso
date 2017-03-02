@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[dnn_EasyDNNNewsLightboxSettings] (
+    [Id]                      INT           IDENTITY (1, 1) NOT NULL,
+    [PortalID]                INT           NOT NULL,
+    [ModuleID]                INT           NULL,
+    [ArticleID]               INT           NULL,
+    [ThumbWidth]              INT           CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_ThumbWidth] DEFAULT ((100)) NOT NULL,
+    [ThumbHeight]             INT           CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_ThumbHeight] DEFAULT ((100)) NOT NULL,
+    [ItemsPerPage]            INT           CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_ItemsPerPage] DEFAULT ((20)) NOT NULL,
+    [NumOfColumns]            INT           CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_NumOfColumns] DEFAULT ((4)) NOT NULL,
+    [PagerType]               NVARCHAR (50) CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_PagerType] DEFAULT (N'Numeric') NOT NULL,
+    [GalleryTheme]            NVARCHAR (50) CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_GalleryTheme] DEFAULT (N'EDG_0_Shadow.css') NOT NULL,
+    [LightboxTheme]           NVARCHAR (50) CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_LightboxTheme] DEFAULT (N'light_rounded') NOT NULL,
+    [ShowTitle]               BIT           CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_ShowTitle] DEFAULT ((0)) NOT NULL,
+    [ShowDescription]         BIT           CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_ShowDescription] DEFAULT ((0)) NOT NULL,
+    [ShowLightBoxTitle]       BIT           CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_ShowLightBoxTitle] DEFAULT ((0)) NOT NULL,
+    [ShowLightBoxDescription] BIT           CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_ShowLightBoxDescription] DEFAULT ((0)) NOT NULL,
+    [Responsive]              BIT           CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_Responsive] DEFAULT ((0)) NOT NULL,
+    [ThumbnailResizeMethod]   TINYINT       CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_ThumbnailResizeMethod] DEFAULT ((0)) NOT NULL,
+    [GalleryLightbox]         TINYINT       CONSTRAINT [DF_dnn_EasyDNNNewsLightboxSettings_GalleryLightbox] DEFAULT ((0)) NOT NULL,
+    CONSTRAINT [PK_dnn_EasyDNNNewsLightboxSettings] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_dnn_EasyDNNNewsLightboxSettings_EasyDNNNews] FOREIGN KEY ([ArticleID]) REFERENCES [dbo].[dnn_EasyDNNNews] ([ArticleID]) ON DELETE CASCADE,
+    CONSTRAINT [FK_dnn_EasyDNNNewsLightboxSettings_Modules] FOREIGN KEY ([ModuleID]) REFERENCES [dbo].[dnn_Modules] ([ModuleID]) ON DELETE CASCADE,
+    CONSTRAINT [FK_dnn_EasyDNNNewsLightboxSettings_Portals] FOREIGN KEY ([PortalID]) REFERENCES [dbo].[dnn_Portals] ([PortalID]) ON DELETE CASCADE,
+    CONSTRAINT [IX_dnn_EasyDNNNewsLightboxSettings] UNIQUE NONCLUSTERED ([PortalID] ASC, [ModuleID] ASC, [ArticleID] ASC)
+);
+

@@ -1,0 +1,93 @@
+.organization-form .field {
+    position: relative;
+    width: 100% !important;
+}
+
+.loader {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 100000;
+}
+
+.deleteButton {
+    position: absolute;
+    right: 15px;
+    padding-top: 130px;
+    outline: none!important;
+    color: #CCCCCC !important;
+}
+
+.openPopUp {
+  position: absolute;
+  left: 15px;
+  padding-top: 140px;
+  outline: none!important;
+  color: #fff;
+  font-size:  14px!important;
+  font-weight: bold;
+  z-index: 999999999999;
+     width: 20%;
+    float: left;
+    text-align: left;
+}
+.openPopUp ::selection, a::selection, .link-action::selection {
+   
+      background: #818181!important;
+}
+a:visited, .link-action:visited {
+      color: #818181!important;
+}
+#header a {
+    outline: none!important;
+}
+
+.openPopUp:hover , .openPopUp:focus {
+    color: rgb(129, 129, 129)!important;
+}
+.openPopUp:visited {
+    color: rgb(129, 129, 129)!important;
+    outline: none!important;
+}
+.banner .step-navigation #header .custom {
+    width: 10% !important;
+}
+
+.banner .step-navigation .customHeader:before {
+    width: 83%!important;
+}
+
+.banner .step-navigation #header .custom2 {
+    width: 11% !important;
+}
+
+.fixBig label {
+    width: 90%;
+}
+
+.fixBig input {
+    vertical-align: top;
+}
+
+.no-sidebar .content-wrapper {
+    margin-top: 0px!important;
+}
+
+header.intro {
+    margin: 0!important;
+    padding-top: 0px!important;
+}
+
+a:focus {
+  outline: none!important;
+}
+
+.ckbList tr td input {
+    vertical-align: top;
+    margin-top: 7px;
+}
+
+.ckbList tr td label {
+    max-width: 93%;
+}
+

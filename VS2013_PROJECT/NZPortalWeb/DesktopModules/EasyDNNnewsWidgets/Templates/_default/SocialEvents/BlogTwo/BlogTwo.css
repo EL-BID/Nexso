@@ -1,0 +1,223 @@
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif&subset=latin,latin-ext);
+.eds_socialEventsWidget * {
+  box-sizing: border-box;
+}
+.eds_socialEventsWidget .eds_title {
+  font-family: "Bree Serif", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  letter-spacing: normal;
+  line-height: 1;
+  font-weight: bold;
+}
+.eds_socialEventsWidget .eds_signUpActionBarWrapper {
+  border: solid 1px #000;
+}
+.eds_socialEventsWidget .eds_signUpActionBarWrapper + div {
+  margin-top: 15px;
+}
+.eds_socialEventsWidget .eds_signUpActionBarWrapper > .eds_title {
+  background: url("images/module_title_background.png") repeat-x bottom left #000;
+  line-height: 21px;
+  display: block;
+  color: #bdbdbd;
+  font-size: 18px;
+  padding: 5px 8px 7px;
+  font-weight: normal;
+  padding: 5px 8px 7px;
+}
+.eds_socialEventsWidget .eds_signUpActionBar {
+  padding: 15px;
+  background-color: #151515;
+}
+.eds_socialEventsWidget .eds_signUpActionBar input[type=radio] {
+  display: none;
+}
+.eds_socialEventsWidget .eds_signUpActionBar input[type=radio]:checked + label {
+  color: #fff;
+  cursor: default;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5) inset;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.eds_socialEventsWidget .eds_signUpActionBar input[type=radio]:checked + label:after {
+  display: none;
+}
+.eds_socialEventsWidget .eds_signUpActionBar label {
+  display: inline-block;
+  margin: 5px 10px 5px 0;
+  background-color: #d5d5d5;
+  border: 1px solid #878787;
+  min-width: 60px;
+  border-radius: 3px;
+  color: #555;
+  font: normal 15px/1 Arial;
+  padding: 6px 9px;
+  text-decoration: none;
+  white-space: nowrap;
+  z-index: 0;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+}
+.eds_socialEventsWidget .eds_signUpActionBar label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  display: inline-block;
+  z-index: -1;
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  -ms-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+.eds_socialEventsWidget .eds_signUpActionBar label:hover {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.eds_socialEventsWidget .eds_signUpActionBar label:hover:after {
+  opacity: 1;
+}
+.eds_socialEventsWidget .eds_signUpActionBar .eds_optionValue1 label:hover {
+  border-color: #438243;
+}
+.eds_socialEventsWidget .eds_signUpActionBar .eds_optionValue1 label:after {
+  background-color: #5cb85c;
+  border-color: #438243;
+}
+.eds_socialEventsWidget .eds_signUpActionBar .eds_optionValue1 input[type=radio]:checked + label {
+  background-color: #5cb85c;
+  border-color: #438243;
+}
+.eds_socialEventsWidget .eds_signUpActionBar .eds_optionValue2 label:hover {
+  border-color: #8a3431;
+}
+.eds_socialEventsWidget .eds_signUpActionBar .eds_optionValue2 label:after {
+  background-color: #d9534f;
+}
+.eds_socialEventsWidget .eds_signUpActionBar .eds_optionValue2 input[type=radio]:checked + label {
+  background-color: #d9534f;
+  border-color: #8a3431;
+}
+.eds_socialEventsWidget .eds_signUpActionBar .eds_optionValue3 label:hover {
+  border-color: #a2773a;
+}
+.eds_socialEventsWidget .eds_signUpActionBar .eds_optionValue3 label:after {
+  background-color: #f0ad4e;
+}
+.eds_socialEventsWidget .eds_signUpActionBar .eds_optionValue3 input[type=radio]:checked + label {
+  background-color: #f0ad4e;
+  border-color: #a2773a;
+}
+.eds_socialEventsWidget .eds_eventUsersWrapper {
+  background-color: #2D2D2D;
+  border: solid 1px #000;
+}
+.eds_socialEventsWidget .eds_eventUsersWrapper > .eds_title {
+  color: #fff;
+  font-size: 17px;
+  border-bottom: solid 1px #000;
+  padding: 10px 15px;
+  background-color: #151515;
+  font-weight: normal;
+}
+.eds_socialEventsWidget .eds_eventUsers {
+  padding: 15px 15px 7px 15px;
+}
+.eds_socialEventsWidget .eds_eventUsers + .eds_eventUsers {
+  border-top: solid 1px #1f1f1f;
+}
+.eds_socialEventsWidget .eds_eventUsers > .eds_title {
+  color: #bdbdbd;
+  font-size: 14px;
+  font-weight: normal;
+}
+.eds_socialEventsWidget .eds_eventUsers > .eds_title > span {
+  color: #b50909;
+  font-weight: normal;
+}
+.eds_socialEventsWidget .eds_eventUsers > ul {
+  margin: 0;
+  padding: 7px 0 0 0;
+}
+.eds_socialEventsWidget .eds_eventUsers > ul li {
+  list-style-type: none;
+  margin: 0 8px 8px 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.eds_socialEventsWidget .eds_eventUsers > ul li > a {
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+}
+.eds_socialEventsWidget .eds_eventUsers > ul li > a:hover {
+  text-decoration: none;
+  color: #b50909;
+}
+.eds_socialEventsWidget .eds_eventUsers > ul li > a:hover > span {
+  font-size: 12px;
+  line-height: 1;
+  color: #bdbdbd;
+  opacity: 1;
+  visibility: visible;
+  top: 10px;
+  left: 10px;
+  padding: 5px 8px;
+  border: solid 1px #ddd;
+  border-radius: 2px;
+  box-shadow: 0 0 0px 2px rgba(0, 0, 0, 0.4);
+}
+.eds_socialEventsWidget .eds_eventUsers > ul li > a:hover > span:hover {
+  color: #b50909;
+}
+.eds_socialEventsWidget .eds_eventUsers > ul li > a > img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  z-index: 1;
+}
+.eds_socialEventsWidget .eds_eventUsers > ul li > a > span {
+  display: inline-block;
+  vertical-align: middle;
+  visibility: hidden;
+  opacity: 0;
+  top: 7px;
+  background-color: #fff;
+  color: #bdbdbd;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 0;
+  font-size: 0;
+  position: absolute;
+  z-index: 2;
+  white-space: nowrap;
+  -webkit-transition: top 500ms ease;
+  -moz-transition: top 500ms ease;
+  -ms-transition: top 500ms ease;
+  -o-transition: top 500ms ease;
+  transition: top 500ms ease;
+}
+.eds_socialEventsWidget .eds_lblRegistrationInfo {
+  background-color: #c0dcfe;
+  border: 1px solid #95c1f1;
+  border-radius: 4px;
+  color: #3b3b3b;
+  display: inline-block;
+  font-style: italic;
+  margin: 10px;
+  padding: 5px;
+}
+
+/*# sourceMappingURL=BlogTwo.css.map */

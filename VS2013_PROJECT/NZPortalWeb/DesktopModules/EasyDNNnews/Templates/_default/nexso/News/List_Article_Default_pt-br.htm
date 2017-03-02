@@ -1,0 +1,47 @@
+<!--ArticleRepeat:Before:-->
+<div class="row no-sidebar blog-article">
+<!--RepeatEnd:Before:-->
+
+<!--ArticleTemplate-->
+
+<div class="content-wrapper">
+[EasyDNNnews:IfExists:Image]
+  <article class="card" id='Blog-[EasyDNNnews:Categories separator="-" nolink]'>
+  <div class="card-media">
+  <a href="[EasyDNNnews:ArticleLink]" title="[EasyDNNnews:Title]">
+<img class="mainImage" src="[EasyDNNnews:Image:Width:600:Height:300:Resize:Crop]"/>
+  </a>
+  </div>
+    <header class="clearfix">
+<div class="blog-meta">
+    [EasyDNNnews:PublishDay] [EasyDNNnews:PublishMonthString] [EasyDNNnews:PublishYear]</dd>
+</div>
+<a href="[EasyDNNnews:ArticleLink]" title="View this blog post">
+        <h1>[EasyDNNnews:Title]</h1>    
+      </a>
+<h5 class="tagline">[EasyDNNnews:Summary]</h5>
+    </header>
+
+    <div class="main-content">
+      [EasyDNNnews:Article]
+    </div>
+</article>
+<div class="discussion">
+<div class="row">
+<div class="discussion-content">
+        <section class="comments" id="comment-container">
+      
+<h2><a href="[EasyDNNnews:ArticleLink]" title="View this blog post">[EasyDNNnews:Comments]</a></h2>
+
+</section>
+</div>
+</div>
+</div>
+</div>
+
+<!--ArticleEnd-->
+
+<!--ArticleRepeat:After:-->
+
+<!--RepeatEnd:After:-->
+</div>

@@ -1,0 +1,108 @@
+﻿IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsTags]') AND type in (N'U'))
+BEGIN
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsTags]') AND type in (N'U'))
+	BEGIN
+		EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsTags]', N'{objectQualifier}EasyDNNNewsTags', 'OBJECT'
+		BEGIN TRY
+		EXECUTE sp_rename N'FK_EasyDNNNewsTags_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsTags_EasyDNNNews', 'OBJECT'
+		END TRY
+		BEGIN CATCH
+		END CATCH
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+
+DECLARE @RowsToProcessByArticle  int;
+DECLARE @RowsToProcessByTagName  int;
+DECLARE @CurrentRowByArticles     int;
+DECLARE @CurrentRowByTagName    int;
+DECLARE @SelectCol1     int;
+DECLARE @DateInserted datetime;
+
+DECLARE @ArticleID int;
+DECLARE @PortalID int;
+DECLARE @TagName nvarchar(50);
+DECLARE @TempTagName nvarchar(50);
+DECLARE @TagID int;
+DECLARE @InsertedTagID int;
+DECLARE @DateAdded datetime;
+
+DECLARE @Articles TABLE
+(
+	RowID int not null primary key identity(1,1),
+	PortalID int,
+	ArticleID int
+)
+IF OBJECT_ID('tempdb..#ArticlesTags') IS NOT NULL
+BEGIN
+DROP TABLE #ArticlesTags;
+END
+CREATE TABLE #ArticlesTags
+( 
+	RowID int not null primary key identity(1,1),
+	Name nvarchar(50) not null,
+	DateAdded datetime not null
+)
+INSERT INTO @Articles SELECT DISTINCT nt.[PortalID],nt.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsTags] as nt ORDER BY PortalID , ArticleID;
+SET @RowsToProcessByArticle=@@ROWCOUNT;
+
+BEGIN TRY
+SET NOCOUNT ON 
+SET @CurrentRowByArticles = 0
+WHILE @CurrentRowByArticles < @RowsToProcessByArticle
+BEGIN
+    SET @CurrentRowByArticles = @CurrentRowByArticles + 1;
+    SELECT @ArticleID = a.ArticleID, @PortalID = a.PortalID FROM @Articles as a WHERE a.RowID=@CurrentRowByArticles;
+
+    TRUNCATE TABLE #ArticlesTags;
+    INSERT INTO #ArticlesTags (Name, DateAdded) SELECT DISTINCT LTRIM(RTRIM(nt.TagName)) AS Name, DateAdded FROM {databaseOwner}[{objectQualifier}EasyDNNNewsTags] nt WHERE nt.ArticleID = @ArticleID AND nt.PortalID = @PortalID;
+    SET @RowsToProcessByTagName = @@ROWCOUNT;
+    BEGIN TRY
+    SET @CurrentRowByTagName=0;
+    WHILE @CurrentRowByTagName < @RowsToProcessByTagName
+		BEGIN
+		SET @CurrentRowByTagName = @CurrentRowByTagName + 1;
+
+		SELECT @TagName = at.Name, @DateAdded = at.DateAdded FROM #ArticlesTags as at WHERE at.RowID=@CurrentRowByTagName;
+		IF EXISTS (SELECT it.[Name] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsNewTags] as it WHERE it.Name = @TagName)
+		BEGIN
+			BEGIN TRY
+			SELECT @TagID = it.TagID FROM {databaseOwner}[{objectQualifier}EasyDNNNewsNewTags] as it WHERE it.Name = @TagName;
+			INSERT INTO {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] ([ArticleID],[TagID],[DateAdded]) VALUES (@ArticleID,@TagID,@DateAdded)
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+		ELSE
+
+		BEGIN
+		INSERT INTO {databaseOwner}[{objectQualifier}EasyDNNNewsNewTags]([Name],[PortalID], [DateCreated]) VALUES(@TagName,@PortalID,@DateAdded) 
+		SELECT @InsertedTagID = SCOPE_IDENTITY();
+		INSERT INTO {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] ([ArticleID],[TagID],[DateAdded]) VALUES (@ArticleID,@InsertedTagID,@DateAdded)
+		END	
+		END
+    END TRY
+    BEGIN CATCH    
+    END CATCH 
+END
+IF OBJECT_ID('tempdb..#ArticlesTags') IS NOT NULL
+BEGIN
+DROP TABLE #ArticlesTags;
+END
+
+END TRY
+BEGIN CATCH
+END CATCH;
+
+BEGIN TRY
+	IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsTags_EasyDNNNews]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTags]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTags] DROP CONSTRAINT [FK_{objectQualifier}EasyDNNNewsTags_EasyDNNNews]
+	IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTags]') AND type in (N'U'))
+	DROP TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTags]
+END TRY
+BEGIN CATCH
+END CATCH
+END

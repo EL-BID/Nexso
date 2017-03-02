@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plSendTo.Text">
+    <value>Enviar para</value>
+  </data>
+  <data name="plSendTo.Help">
+    <value>Insira o Endereço de Email para o destinatário desta mensagem</value>
+  </data>
+  <data name="plWidth.Text">
+    <value>Largura</value>
+  </data>
+  <data name="plWidth.Help">
+    <value>Insira a largura (em pixels) para as caixas de texto</value>
+  </data>
+  <data name="plRows.Text">
+    <value>Linhas</value>
+  </data>
+  <data name="plRows.Help">
+    <value>Insira o número de linhas para a caixa de texto do corpo</value>
+  </data>
+  <data name="valWidth.ErrorMessage">
+    <value>&lt;br&gt;A Largura tem que ser um número inteiro válido</value>
+  </data>
+  <data name="valRows.ErrorMessage">
+    <value>&lt;br&gt;As Linhas tem que ser um número inteiro válido</value>
+  </data>
+  <data name="ControlTitle_settings.Text">
+    <value>Configurações de Feedback</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value>		&lt;h1&gt;Sobre o Módulo de Configurações de Feedback&lt;/h1&gt;&lt;p&gt;O Módulo de Feedback oferece aos usuários autorizados do Site a possibilidade de enviar uma mensagem para um Endereço de Email definido. Existem 3 configurações de Feedback que controlam a visualização e as ações realizadas dentro do módulo.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;div align="left"&gt;&lt;b&gt;Enviar para &lt;/b&gt;– Este é o Endereço de Email para onde a mensagem é enviada. O Email tem que estar num formato de Email válido.&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;div align="left"&gt;&lt;b&gt;Largura &lt;/b&gt;– define o número de pixels para o texto do corpo da mensagem. Note: tenha atenção que deve manter este valor dentro da largura definida do painel onde o Módulo será colocado, senão poderá não existir espaço suficiente para utilizar a configuração desejada. &lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;div align="left"&gt;&lt;b&gt;Linhas &lt;/b&gt;– defina o número de linhas para o texto disponível para a mensagem. Note: de novo, tenha atenção que deve manter este valor dentro da altura definida do painel onde o Módulo será colocado, senão poderá não existir espaço suficiente para utilizar a configuração desejada.&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="valSendTo.Text">
+    <value>&lt;br&gt;O Email tem que ser válido</value>
+  </data>
+</root>

@@ -1,0 +1,62 @@
+<!--TemplateGroup:newsListCatalogDefault-->
+<!--CatalogArticleTemplate-->
+<!--BreadCrumbTemplate-->
+<a href="[EasyDNNnews:CatalogBreadCrumbLink]">[EasyDNNnews:CatalogBreadCrumbTitle]</a> &gt;
+<!--BreadCrumbEnd-->
+<!--CatalogArticleEnd-->
+<!--CatalogArticleTemplate-->
+<!--HeaderTemplate-->
+<div class="category_info">
+	<h1>[EasyDNNnews:CatalogCategoryTitle]</h1>
+	<div class="description">
+		[EasyDNNnews:CatalogCategoryDescription]
+	</div>
+</div>
+<!--HeaderEnd-->
+<!--CatalogArticleEnd-->
+
+<!--CatalogArticleTemplate-->
+<!--CategoryTemplate-->
+<div class="catalog-item">
+	<a href="[EasyDNNnews:CatalogCategoryURL]"><img alt="[EasyDNNnews:CatalogCategoryTitle]" src="[EasyDNNnews:CatalogCategoryImage:Width:195:Height:130:Resize:Crop]" [EasyDNNnews:CatalogCategoryImage:Visibility] width="195" height="130"/></a>
+	<h2><a href="[EasyDNNnews:CatalogCategoryURL]">[EasyDNNnews:CatalogCategoryTitle]</a></h2>
+	[EasyDNNnews:EditCategory]
+</div>
+<!--CategoryEnd-->
+<!--CatalogArticleEnd-->
+
+<!--CatalogArticleTemplate-->
+<!--ArticleTemplate-->
+<div class="article">
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	[EasyDNNnews:IfExists:Image]
+	<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]" /></a>
+	[EasyDNNnews:EndIf:Image]
+	<h2><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+	<h3 class="article-subtitle">[EasyDNNnews:SubTitle]</h3>
+	<div class="summary">
+		[EasyDNNnews:Summary]
+	</div>
+	<div class="clear-content"></div>
+	<div class="meta-text-wraper">
+		<div class="meta_text">
+			<div class="attribute author"><strong>[EasyDNNnewsLocalizedText:Author]:</strong> [EasyDNNnews:Author:Link]</div><div class="newstwo-comments">[EasyDNNnews:Comments] [EasyDNNnewsLocalizedText:Comments]</div><div class="rating">[EasyDNNnews:ArticleRating]</div>
+		</div>
+	</div>
+</div>
+<!--ArticleEnd-->
+<!--CatalogArticleEnd-->
+
+<!--ArticleRepeat:After:-->
+[EasyDNNnews:IfExists:RSS]
+<div class="article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

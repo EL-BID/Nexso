@@ -1,0 +1,189 @@
+<!--TemplateGroup:newsListArticleMulti-->
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:Before:-->
+<div style="max-width: 621px;">
+<!--RepeatEnd:Before:-->
+<!--MultiArticleEnd-->
+
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:1:-->
+<div class="in_article_image has_article left" >
+[EasyDNNnews:HasArticlePermissions]
+	[EasyDNNnews:ArticlePermissions:Edit]
+	[EasyDNNnews:ArticlePermissions:Publish]
+	[EasyDNNnews:ArticlePermissions:Approve]
+[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="image_wrapper no_text">
+		<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:603:Height:400:Resize:Crop]" [EasyDNNnews:Image:Visibility] />
+		<div class="article_container">
+			<div class="overflow_hider">
+				<div class="date_box">
+				[EasyDNNnews:IfNotExists:Event]
+					<p class="day">[EasyDNNnews:PublishDay]</p>
+					<p class="month">[EasyDNNnews:PublishMonthString]</p>
+					<p class="year">[EasyDNNnews:PublishYear]</p>
+				[EasyDNNnews:EndIf:Event]
+				[EasyDNNnews:IfExists:Event]
+					<p class="day">[EasyDNNnews:EventStartDay]</p>
+					<p class="month">[EasyDNNnews:EventStartMonthNameShort]</p>
+					<p class="year">[EasyDNNnews:EventStartYear]</p>
+				[EasyDNNnews:EndIf:Event]
+				</div>
+				<h1><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title:Limit:100]</a></h1>
+				<div class="content">[EasyDNNnews:Summary:Limit:320]</div>
+			</div>
+		</div>
+		<a href="[EasyDNNnews:ReadMore]" class="open_article_btn" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:ReadMore:Title]</a>
+	</div>
+</div>
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:2:4:-->
+<div class="article multi_layout two_collumn big left">
+[EasyDNNnews:HasArticlePermissions]
+	[EasyDNNnews:ArticlePermissions:Edit]
+	[EasyDNNnews:ArticlePermissions:Publish]
+	[EasyDNNnews:ArticlePermissions:Approve]
+[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="in_article_image clear" [EasyDNNnews:Image:Visibility]>
+		<div class="image_wrapper no_text">
+			<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]">
+				<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:283:Height:180:Resize:Crop]" />
+			</a>
+		</div>
+	</div>
+	<div class="date_box">
+	[EasyDNNnews:IfNotExists:Event]
+		<p class="day">[EasyDNNnews:PublishDay]</p>
+		<p class="month">[EasyDNNnews:PublishMonthString]</p>
+		<p class="year">[EasyDNNnews:PublishYear]</p>
+	[EasyDNNnews:EndIf:Event]
+	[EasyDNNnews:IfExists:Event]
+		<p class="day">[EasyDNNnews:EventStartDay]</p>
+		<p class="month">[EasyDNNnews:EventStartMonthNameShort]</p>
+		<p class="year">[EasyDNNnews:EventStartYear]</p>
+	[EasyDNNnews:EndIf:Event]
+	</div>
+	<h1 class="title"><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title:Limit:150]</a></h1>
+	<h2>[EasyDNNnews:SubTitle:Limit:100]</h2>
+	<div class="content">
+		[EasyDNNnews:Summary:Limit:300]
+	</div>
+</div>
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:3:5:-->
+<div class="article multi_layout two_collumn big right">
+[EasyDNNnews:HasArticlePermissions]
+	[EasyDNNnews:ArticlePermissions:Edit]
+	[EasyDNNnews:ArticlePermissions:Publish]
+	[EasyDNNnews:ArticlePermissions:Approve]
+[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="in_article_image clear" [EasyDNNnews:Image:Visibility]>
+		<div class="image_wrapper no_text">
+			<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]">
+				<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:283:Height:180:Resize:Crop]" />
+			</a>
+		</div>
+	</div>
+	<div class="date_box">
+	[EasyDNNnews:IfNotExists:Event]
+		<p class="day">[EasyDNNnews:PublishDay]</p>
+		<p class="month">[EasyDNNnews:PublishMonthString]</p>
+		<p class="year">[EasyDNNnews:PublishYear]</p>
+	[EasyDNNnews:EndIf:Event]
+	[EasyDNNnews:IfExists:Event]
+		<p class="day">[EasyDNNnews:EventStartDay]</p>
+		<p class="month">[EasyDNNnews:EventStartMonthNameShort]</p>
+		<p class="year">[EasyDNNnews:EventStartYear]</p>
+	[EasyDNNnews:EndIf:Event]
+	</div>
+	<h1 class="title"><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title:Limit:100]</a></h1>
+	<h2>[EasyDNNnews:SubTitle:Limit:80]</h2>
+	<div class="content">
+		[EasyDNNnews:Summary:Limit:300]
+	</div>
+</div>
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:6:7:8:-->
+<div class="article multi_layout single_collumn">
+[EasyDNNnews:HasArticlePermissions]
+	[EasyDNNnews:ArticlePermissions:Edit]
+	[EasyDNNnews:ArticlePermissions:Publish]
+	[EasyDNNnews:ArticlePermissions:Approve]
+[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="in_article_image left" [EasyDNNnews:Image:Visibility]>
+		<div class="image_wrapper no_text">
+			<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]">
+				<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:150:Height:100:Resize:Crop]" />
+			</a>
+		</div>
+	</div>
+	<h1 class="title"><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title:Limit:80]</a></h1>
+	<h2>[EasyDNNnews:SubTitle:Limit:80]</h2>
+</div>
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:9:11:13:15:-->
+<div class="article multi_layout two_collumn small left">
+[EasyDNNnews:HasArticlePermissions]
+	[EasyDNNnews:ArticlePermissions:Edit]
+	[EasyDNNnews:ArticlePermissions:Publish]
+	[EasyDNNnews:ArticlePermissions:Approve]
+[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="in_article_image left" [EasyDNNnews:Image:Visibility]>
+		<div class="image_wrapper no_text">
+			<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]">
+				<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:100:Height:60:Resize:Crop]" />
+			</a>
+		</div>
+	</div>
+	<h1 class="title"><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title:Limit:100]</a></h1>
+</div>
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:10:12:14:16:-->
+<div class="article multi_layout two_collumn small right">
+[EasyDNNnews:HasArticlePermissions]
+	[EasyDNNnews:ArticlePermissions:Edit]
+	[EasyDNNnews:ArticlePermissions:Publish]
+	[EasyDNNnews:ArticlePermissions:Approve]
+[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="in_article_image left" [EasyDNNnews:Image:Visibility]>
+		<div class="image_wrapper no_text">
+			<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]">
+				<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:100:Height:60:Resize:Crop]" />
+			</a>
+		</div>
+	</div>
+	<h1 class="title"><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title:Limit:100]</a></h1>
+</div>
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+
+
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:After:-->
+</div>
+<div style="clear: both;"></div>
+[EasyDNNnews:IfExists:RSS]
+<div class="article_rss_wrapper">
+	<a class="article_rss" href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->
+<!--MultiArticleEnd-->

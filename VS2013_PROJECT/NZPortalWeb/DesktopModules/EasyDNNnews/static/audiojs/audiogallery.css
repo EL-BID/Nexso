@@ -1,0 +1,154 @@
+
+.audiojs audio {
+    left: -1px;
+    position: absolute;
+	display:none;
+}
+.audiojs {
+    background: -moz-linear-gradient(center top , #444444 0%, #555555 50%, #444444 51%, #444444 100%) repeat scroll 0 0 #404040;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    font-family: monospace;
+    font-size: 12px;
+    height: 36px;
+    width: 100%;
+    overflow: hidden;
+}
+.audiojs .play-pause {
+    border-right: 1px solid #000000;
+    float: left;
+    height: 36px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 8.04348%;
+}
+.audiojs .play-pause p {
+    cursor: pointer;
+    height: 36px;
+    margin: 0 auto;
+    width: 14px;
+}
+.audiojs .play {
+    display: block;
+}
+.audiojs .scrubber {
+    background: none repeat scroll 0 0 #5A5A5A;
+    border-bottom: 0 none;
+    border-left: 0 none;
+    border-top: 1px solid #3F3F3F;
+    float: left;
+    height: 14px;
+    margin: 10px 2.17391%;
+    overflow: hidden;
+    position: relative;
+    width: 60.8696%;
+}
+.audiojs .progress {
+    background: -moz-linear-gradient(center top , #CCCCCC 0%, #DDDDDD 50%, #CCCCCC 51%, #CCCCCC 100%) repeat scroll 0 0 #CCCCCC;
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: 1;
+}
+.audiojs .loaded {
+    background: -moz-linear-gradient(center top , #222222 0%, #333333 50%, #222222 51%, #222222 100%) repeat scroll 0 0 #000000;
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+.audiojs .time {
+    border-left: 1px solid #000000;
+    color: #DDDDDD;
+    float: left;
+    font-size: 12px;
+    height: 36px;
+    line-height: 18px;
+    margin: 1px 0 0;
+    max-width: 121px;
+    padding: 0;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+    width: 25%;
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 1.4;
+}
+.audiojs .time em {
+    border-bottom: 1px solid #000000;
+    color: #F9F9F9;
+    float: left;
+    font-style: normal;
+    max-width: 121px;
+    padding-top: 0;
+    width: 100%;
+}
+.audiojs .time strong {
+    float: left;
+    font-weight: normal;
+    color: #F9F9F9;
+    margin: 0;
+    max-width: 121px;
+    padding-top: 0;
+    width: 100%;
+}
+.audiojs .error-message {
+    color: #FFFFFF;
+    display: none;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 10px;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 86.956%;
+}
+.audiojs .error-message a {
+    border-bottom: 1px solid #999999;
+    color: #EEEEEE;
+    padding-bottom: 1px;
+    text-decoration: none;
+    white-space: normal;
+}
+.audiojs .play {
+    background: url("player-graphics.gif") no-repeat scroll 0 10px rgba(0, 0, 0, 0);
+}
+.audiojs .audiojsloading {
+    background: url("player-graphics.gif") no-repeat scroll 0 -20px rgba(0, 0, 0, 0);
+}
+.audiojs .error {
+    background: url("player-graphics.gif") no-repeat scroll 0 -50px rgba(0, 0, 0, 0);
+}
+.audiojs .pause {
+    background: url("player-graphics.gif") no-repeat scroll 0 -80px rgba(0, 0, 0, 0);
+}
+.playing .play, .playing .audiojsloading, .playing .error {
+    display: none;
+}
+.playing .pause {
+    display: block;
+}
+.audiojsloading .play, .audiojsloading .pause, .audiojsloading .error {
+    display: none;
+}
+.audiojsloading .audiojsloading {
+    display: block;
+}
+.error .time, .error .play, .error .pause, .error .scrubber, .error .audiojsloading {
+    display: none;
+}
+.error .error {
+    display: block;
+}
+.error .play-pause p {
+    cursor: auto;
+}
+.error .error-message {
+    display: block;
+}

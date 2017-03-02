@@ -1,0 +1,72 @@
+﻿body {
+}
+
+the overlayed element 
+.PopUpMap {
+    background-color: #333333;
+    border: 1px solid #666666;
+    height: 378px;
+       left: -230px;
+    margin: 0 auto;
+    min-height: 201px;
+    position: relative;
+    top: -380px;
+    width: 498px;
+    z-index: 10000;
+}
+
+     /*close button positioned on upper right corner*/ 
+    .close {
+        background-image: url(/media/img/overlay/close.png)!important;
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        cursor: pointer;
+     
+    }
+
+#googleMapZoom {
+    width: 100%;
+    height: 100%;
+}
+
+.buttonMap {
+    color: #999999;
+    border-bottom: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    padding: 10px;
+    font-family: Helvetica;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+
+.gm-style-iw {
+    height: auto!important;
+    max-width: 350px!important;
+    max-height: 300px!important;
+    min-width: 200px!important;
+    min-height: 120px!important;
+}
+
+
+/* close button */
+.gm-style > div:first-child > div + div > div:last-child > div > div:last-child {
+    
+    width: 39px!important;
+    height: 14px!important;
+    right: -9px!important;
+}
+
+    .gm-style > div:first-child > div + div > div:last-child > div > div:last-child > img {
+      
+        left: 9px!important;
+        top: -336px!important;
+        width: 98px!important;
+        height: 489px!important;
+      
+    }
+
+
+

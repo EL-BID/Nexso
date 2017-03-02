@@ -1,0 +1,6 @@
+﻿CREATE PROCEDURE [dbo].[dnn_GetDatabaseTime]
+AS
+BEGIN
+	SELECT GETDATE()
+END
+

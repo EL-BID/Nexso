@@ -1,0 +1,88 @@
+.rfv span {
+    background-color: #F04124;
+    color: #fff !important;
+    display: block;
+    font-weight: bold;
+    padding: 0.25rem;
+}
+ .RadComboBox_Default {
+        width: 96px!important;
+    }
+
+    .RadAjax_Default .raColor {
+        width: 100%!important;
+    }
+
+    #dvManageJudge, #dvBtn {
+        max-width: 73.75rem;
+        margin: 0 auto;
+        width: 100%;
+        z-index: 10;
+        position: relative;
+    }
+     
+    #dvSolutions::-webkit-scrollbar, #dvSolutionsSelect::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    #dvSolutions::-webkit-scrollbar-track, #dvSolutionsSelect::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+    }
+
+    #dvSolutions::-webkit-scrollbar-thumb, #dvSolutionsSelect::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    }
+
+    .dvSolutions {
+        max-height: 400px;
+        overflow: auto;
+        margin-bottom: 36px;
+    }
+
+    .titleSolutions {
+        text-align: center;
+    }
+
+    .dvSolutionsSelect {
+        max-height: 400px;
+        overflow: auto;
+        margin: 20px;
+    }
+
+    .dvContent {
+        margin: 20px;
+    }
+
+    .divbtn {
+        padding-bottom: 100px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+
+        .divbtn input {
+            float: right;
+            margin: 0 1em;
+        }
+
+    .ckbSolutions tr td label {
+        max-width: 90%;
+        display: inline-block;
+    }
+
+    .ckbSolutions tr td input {
+        display: inline-block;
+        margin: 5px 0 0 0;
+        vertical-align: top;
+    }

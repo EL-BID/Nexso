@@ -1,0 +1,925 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SyndicateModule.Action" xml:space="preserve">
+    <value>Divulgar</value>
+  </data>
+  <data name="ExportModule.Action" xml:space="preserve">
+    <value>Exportar conteúdo</value>
+  </data>
+  <data name="ImportModule.Action" xml:space="preserve">
+    <value>Importar conteúdo</value>
+  </data>
+  <data name="OnlineHelp.Action" xml:space="preserve">
+    <value>Ajuda online</value>
+  </data>
+  <data name="ModuleHelp.Action" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="ModuleSettings.Action" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="DeleteModule.Action" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="PrintModule.Action" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="ClearCache.Action" xml:space="preserve">
+    <value>Atualizar</value>
+  </data>
+  <data name="MoveTop.Action" xml:space="preserve">
+    <value>Mover para o topo</value>
+  </data>
+  <data name="MoveUp.Action" xml:space="preserve">
+    <value>Subir</value>
+  </data>
+  <data name="MoveDown.Action" xml:space="preserve">
+    <value>Descer</value>
+  </data>
+  <data name="MoveBottom.Action" xml:space="preserve">
+    <value>Mover para o final</value>
+  </data>
+  <data name="MovePane.Action" xml:space="preserve">
+    <value>Mover para</value>
+  </data>
+  <data name="MoveRoot.Action" xml:space="preserve">
+    <value>Mover</value>
+  </data>
+  <data name="//Admin.String" xml:space="preserve">
+    <value>Portal</value>
+  </data>
+  <data name="//Admin//SiteSettings.String" xml:space="preserve">
+    <value>Configurações do portal</value>
+  </data>
+  <data name="//Admin//Tabs.String" xml:space="preserve">
+    <value>Páginas</value>
+  </data>
+  <data name="//Admin//SecurityRoles.String" xml:space="preserve">
+    <value>Regras de segurança</value>
+  </data>
+  <data name="//Admin//UserAccounts.String" xml:space="preserve">
+    <value>Contas de usuários</value>
+  </data>
+  <data name="//Admin//Vendors.String" xml:space="preserve">
+    <value>Anunciantes</value>
+  </data>
+  <data name="//Admin//SiteLog.String" xml:space="preserve">
+    <value>Registros do portal</value>
+  </data>
+  <data name="//Admin//Newsletters.String" xml:space="preserve">
+    <value>Mala direta</value>
+  </data>
+  <data name="//Admin//FileManager.String" xml:space="preserve">
+    <value>Gerenciador de arquivos</value>
+  </data>
+  <data name="//Admin//RecycleBin.String" xml:space="preserve">
+    <value>Lixeira</value>
+  </data>
+  <data name="//Admin//LogViewer.String" xml:space="preserve">
+    <value>Visualizador de eventos</value>
+  </data>
+  <data name="//Host.String" xml:space="preserve">
+    <value>Servidor</value>
+  </data>
+  <data name="//Host//HostSettings.String" xml:space="preserve">
+    <value>Configurações do servidor</value>
+  </data>
+  <data name="//Host//SiteManagement.String" xml:space="preserve">
+    <value>Gerenciamento de portais</value>
+  </data>
+  <data name="//Host//ModuleDefinitions.String" xml:space="preserve">
+    <value>Definições de módulo</value>
+  </data>
+  <data name="//Host//SQL.String" xml:space="preserve">
+    <value>SQL</value>
+  </data>
+  <data name="//Host//Schedule.String" xml:space="preserve">
+    <value>Agenda de tarefas</value>
+  </data>
+  <data name="//Host//Languages.String" xml:space="preserve">
+    <value>Idiomas</value>
+  </data>
+  <data name="BannerType.Banner.String" xml:space="preserve">
+    <value>Faixa</value>
+  </data>
+  <data name="BannerType.MicroButton.String" xml:space="preserve">
+    <value>Micro Botão</value>
+  </data>
+  <data name="BannerType.Button.String" xml:space="preserve">
+    <value>Botão</value>
+  </data>
+  <data name="BannerType.Block.String" xml:space="preserve">
+    <value>Bloco</value>
+  </data>
+  <data name="BannerType.Skyscraper.String" xml:space="preserve">
+    <value>Coluna</value>
+  </data>
+  <data name="BannerType.Text.String" xml:space="preserve">
+    <value>Texto</value>
+  </data>
+  <data name="BannerType.Script.String" xml:space="preserve">
+    <value>Roteiro</value>
+  </data>
+  <data name="//Host//SearchAdmin.String" xml:space="preserve">
+    <value>Administrar pesquisas</value>
+  </data>
+  <data name="//Host//Lists.String" xml:space="preserve">
+    <value>Listas</value>
+  </data>
+  <data name="//Host//SuperuserAccounts.String" xml:space="preserve">
+    <value>Contas de super usuários</value>
+  </data>
+  <data name="//Admin//Solutions.String" xml:space="preserve">
+    <value>Explorador de soluções</value>
+  </data>
+  <data name="View.Permission" xml:space="preserve">
+    <value>Ver módulo</value>
+  </data>
+  <data name="Edit.Permission" xml:space="preserve">
+    <value>Editar módulo</value>
+  </data>
+  <data name="View Tab.Permission" xml:space="preserve">
+    <value>Ver página</value>
+  </data>
+  <data name="Edit Tab.Permission" xml:space="preserve">
+    <value>Editar página</value>
+  </data>
+  <data name="View Folder.Permission" xml:space="preserve">
+    <value>Abrir arquivos na pasta</value>
+  </data>
+  <data name="Write to Folder.Permission" xml:space="preserve">
+    <value>Salvar na pasta</value>
+  </data>
+  <data name="Browse Folder.Permission" xml:space="preserve">
+    <value>Navegar pelos arquivos na pasta</value>
+  </data>
+  <data name="EMAIL_SMTP_TEST_SUBJECT.Text" xml:space="preserve">
+    <value>Teste de configuração do SMTP do servidor [Host:HostTitle]</value>
+  </data>
+  <data name="EMAIL_PORTAL_SIGNUP_SUBJECT.Text" xml:space="preserve">
+    <value>Assinatura de portal no servidor [Host:HostTitle]</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_ADMINISTRATOR_SUBJECT.Text" xml:space="preserve">
+    <value>Registro de novo usuário no Portal [Portal:PortalName]</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_PRIVATE_SUBJECT.Text" xml:space="preserve">
+    <value>Registro de novo usuário no Portal [Portal:PortalName]
+</value>
+  </data>
+  <data name="EMAIL_ROLE_ASSIGNMENT_SUBJECT.Text" xml:space="preserve">
+    <value>Atualização de conta de usuário no Portal [Portal:PortalName]
+</value>
+  </data>
+  <data name="EMAIL_ROLE_UNASSIGNMENT_SUBJECT.Text" xml:space="preserve">
+    <value>Atualização de conta de usuário no Portal [Portal:PortalName]
+</value>
+  </data>
+  <data name="EMAIL_PASSWORD_REMINDER_SUBJECT.Text" xml:space="preserve">
+    <value>Lembrete de senha no Portal [Portal:PortalName]  
+</value>
+  </data>
+  <data name="EMAIL_PROFILE_UPDATED_SUBJECT.Text" xml:space="preserve">
+    <value>Aviso de atualização de perfil no Portal [Portal:PortalName]</value>
+  </data>
+  <data name="EMAIL_USER_UNREGISTER_SUBJECT.Text" xml:space="preserve">
+    <value>Usuário não registrado no Portal [Portal:PortalName]
+		</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_VERIFIED_SUBJECT.Text" xml:space="preserve">
+    <value>Registro de novo usuário no Portal [Portal:PortalName]</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_PUBLIC_SUBJECT.Text" xml:space="preserve">
+    <value>Registro de novo usuário no Portal [Portal:PortalName] 
+		</value>
+  </data>
+  <data name="EMAIL_AFFILIATE_NOTIFICATION_SUBJECT.Text" xml:space="preserve">
+    <value>Notificação de afiliação no Portal [Portal:PortalName]
+</value>
+  </data>
+  <data name="//Admin//SiteWizard.String" xml:space="preserve">
+    <value>Assistente do portal</value>
+  </data>
+  <data name="EMAIL_BANNER_NOTIFICATION_SUBJECT.Text" xml:space="preserve">
+    <value>[Custom:0]</value>
+  </data>
+  <data name="EMAIL_VENDOR_REGISTRATION_ADMINISTRATOR_SUBJECT.Text" xml:space="preserve">
+    <value>Registro de anunciante no Portal [Portal:PortalName] </value>
+  </data>
+  <data name="EMAIL_VENDOR_REGISTRATION_SUBJECT.Text" xml:space="preserve">
+    <value>Registro de anunciante no Portal [Portal:PortalName] </value>
+  </data>
+  <data name="EMAIL_USER_LOCKOUT_SUBJECT.Text" xml:space="preserve">
+    <value>Alerta de conta de usuário bloqueada no Portal [Portal:PortalName]</value>
+  </data>
+  <data name="500.Error" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="Error.Text" xml:space="preserve">
+    <value>Ocorreu um erro.</value>
+  </data>
+  <data name="EMAIL_BulkMailConf_Subject.Text" xml:space="preserve">
+    <value>Relatório de mala direita para '{0}'.</value>
+  </data>
+  <data name="NoErrorsSending.Text" xml:space="preserve">
+    <value>Não ocorreu nenhum erro durante o envio.</value>
+  </data>
+  <data name="Return.Text" xml:space="preserve">
+    <value>Retornar para o portal</value>
+  </data>
+  <data name="UnhandledError.Text" xml:space="preserve">
+    <value>Ocorreu um erro não previsto.</value>
+  </data>
+  <data name="TokenReplaceUnknownObject.Text" xml:space="preserve">
+    <value>Erro ao acessar [{0}:{1}], {0} é um elemento fonte de objeto desconhecido.</value>
+  </data>
+  <data name="TokenReplaceRestrictedProperty.Text" xml:space="preserve">
+    <value>Erro ao acessar [{0}:{1}], o acesso a {1} é restrito para a fonte de dados {0}.</value>
+  </data>
+  <data name="TokenReplaceUnknownProperty.Text" xml:space="preserve">
+    <value>Erro ao acessar [{0}:{1}], {1} é desconhecido para a fonte de dados {0}.</value>
+  </data>
+  <data name="Can Deploy.Permission" xml:space="preserve">
+    <value>Implantar Módulo</value>
+  </data>
+  <data name="//Admin//Languages.String" xml:space="preserve">
+    <value>Idiomas</value>
+  </data>
+  <data name="//Host//Vendors.String" xml:space="preserve">
+    <value>Anunciantes</value>
+  </data>
+  <data name="Authentication.String" xml:space="preserve">
+    <value>Autenticação</value>
+  </data>
+  <data name="//Admin//Extensions.String" xml:space="preserve">
+    <value>Extensões</value>
+  </data>
+  <data name="//Host//Extensions.String" xml:space="preserve">
+    <value>Extensões</value>
+  </data>
+  <data name="EMAIL_ROLE_UPDATE_SUBJECT.Text" xml:space="preserve">
+    <value>Atualização de conta de usuário do Portal [Portal:PortalName]</value>
+  </data>
+  <data name="//Host//WhatsNew.String" xml:space="preserve">
+    <value>O que mudou</value>
+  </data>
+  <data name="PurgeCacheUnsupported.Text" xml:space="preserve">
+    <value>Este provedor de cache não exige o recurso de PurgeCache.</value>
+  </data>
+  <data name="NoLoginControl.Text" xml:space="preserve">
+    <value>Você foi redirecionado para esta página de conexão padrão porque a página de conexão deste portal não contém um módulo válido de conexão de contas do DotNetNuke, ou as permissões não estão marcadas corretamente.</value>
+  </data>
+  <data name="EMAIL_USER_UPDATED_OWN_PASSWORD_SUBJECT.Text" xml:space="preserve">
+    <value>Senha no Portal [Portal:PortalName] atualizada.</value>
+  </data>
+  <data name="ViewSource.Action" xml:space="preserve">
+    <value>Desenvolvedor</value>
+  </data>
+  <data name="EnglishName.Text" xml:space="preserve">
+    <value>Nome inglês</value>
+  </data>
+  <data name="NativeName.Text" xml:space="preserve">
+    <value>Nome nativo</value>
+  </data>
+  <data name="NeutralCulture.Text" xml:space="preserve">
+    <value>Cultura neutra</value>
+  </data>
+  <data name="DeLocalize.Action" xml:space="preserve">
+    <value>Desfazer tradução</value>
+  </data>
+  <data name="Localize.Action" xml:space="preserve">
+    <value>Traduzir</value>
+  </data>
+  <data name="Translate.Action" xml:space="preserve">
+    <value>Marcar como traduzido</value>
+  </data>
+  <data name="UnTranslate.Action" xml:space="preserve">
+    <value>Marcar como não traduzido</value>
+  </data>
+  <data name="SearchCrawler Admin.String" xml:space="preserve">
+    <value>Administrar rastreador de pesquisa</value>
+  </data>
+  <data name="Manage.Text" xml:space="preserve">
+    <value>Gerenciar</value>
+  </data>
+  <data name="ModuleGenericActions.Action" xml:space="preserve">
+    <value>Administrar</value>
+  </data>
+  <data name="ModuleSpecificActions.Action" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="//AboutUs.String" xml:space="preserve">
+    <value>Sobre nós</value>
+  </data>
+  <data name="//Admin//ContentStaging.String" xml:space="preserve">
+    <value>Preparo de conteúdo</value>
+  </data>
+  <data name="//Admin//GoogleAnalytics.String" xml:space="preserve">
+    <value>Google Analytics</value>
+  </data>
+  <data name="//Admin//Pages.String" xml:space="preserve">
+    <value>Gerenciamento de páginas</value>
+  </data>
+  <data name="//Admin//SearchEngineSiteMap.String" xml:space="preserve">
+    <value>Motor de pesquisa do mapa do portal</value>
+  </data>
+  <data name="//Admin//Taxonomy.String" xml:space="preserve">
+    <value>Taxonomia</value>
+  </data>
+  <data name="//GettingStarted.String" xml:space="preserve">
+    <value>Guia de Introdução</value>
+  </data>
+  <data name="//Home.String" xml:space="preserve">
+    <value>Início</value>
+  </data>
+  <data name="//Host//ConfigurationManager.String" xml:space="preserve">
+    <value>Gerenciador de configurações</value>
+  </data>
+  <data name="//Host//Dashboard.String" xml:space="preserve">
+    <value>Painel de informações</value>
+  </data>
+  <data name="//Host//HTMLEditorManager.String" xml:space="preserve">
+    <value>Gerenciador do editor de textos</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures.String" xml:space="preserve">
+    <value>Recursos Profissionais</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//ActivateYourLicense.String" xml:space="preserve">
+    <value>Ativar sua licença</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//ApplicationIntegrity.String" xml:space="preserve">
+    <value>Integridade da aplicação</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//HealthMonitoring.String" xml:space="preserve">
+    <value>Monitoramento da saúde</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//KnowledgeBase.String" xml:space="preserve">
+    <value>Base de conhecimento</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//LicenseManagement.String" xml:space="preserve">
+    <value>Gerenciamento de licença</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//ManageWebServers.String" xml:space="preserve">
+    <value>Gerenciar servidores web</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//MySupportTickets.String" xml:space="preserve">
+    <value>Meus pedidos de suporte</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//SearchCrawlerAdmin.String" xml:space="preserve">
+    <value>Administração do rastreador de pesquisa</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//SecurityCenter.String" xml:space="preserve">
+    <value>Centro de segurança</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//SharePointConnector.String" xml:space="preserve">
+    <value>Conector SharePoint</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//SoftwareandDocumentation.String" xml:space="preserve">
+    <value>Programa e documentação</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//SpecialOffers.String" xml:space="preserve">
+    <value>Ofertas especiais</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//TechnicalSupport.String" xml:space="preserve">
+    <value>Suporte técnico</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//UserSwitcher.String" xml:space="preserve">
+    <value>Trocar usuário</value>
+  </data>
+  <data name="//SearchResults.String" xml:space="preserve">
+    <value>Resultados da Pesquisa</value>
+  </data>
+  <data name="//UserProfile.String" xml:space="preserve">
+    <value>Perfil do Usuário</value>
+  </data>
+  <data name="EMAIL_BulkMailStart_Body.Text" xml:space="preserve">
+    <value>Usuário {1} enviou email em lote '{0}' para {2} destinatário(s). Por favor reveja o relatório de envio para verificar falhas de transmissão e as caixas de entrada dos remententes para retornos.</value>
+  </data>
+  <data name="EMAIL_BulkMailStart_Subject.Text" xml:space="preserve">
+    <value>Enviado email em lote '{0}'</value>
+  </data>
+  <data name="//NewsPromotions.String" xml:space="preserve">
+    <value>Novidades e Promoções</value>
+  </data>
+  <data name="//Modules.Text" xml:space="preserve">
+    <value>Módulos</value>
+  </data>
+  <data name="//Pages.Text" xml:space="preserve">
+    <value>Páginas</value>
+  </data>
+  <data name="//Tools.Text" xml:space="preserve">
+    <value>Ferramentas</value>
+  </data>
+  <data name="//Admin//GoogleAnalyticsPro.String" xml:space="preserve">
+    <value>Google Analytics Pro</value>
+  </data>
+  <data name="//Admin//DevicePreviewManagement.String" xml:space="preserve">
+    <value>Gerenciamento de visualização por dispositivo</value>
+  </data>
+  <data name="//Admin//SiteRedirectionManagement.String" xml:space="preserve">
+    <value>Gerenciar redirecionamentos</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//SiteGroups.String" xml:space="preserve">
+    <value>Grupos de portais</value>
+  </data>
+  <data name="//Admin//Lists.String" xml:space="preserve">
+    <value>Listas</value>
+  </data>
+  <data name="RelationshipType_Added.Text" xml:space="preserve">
+    <value>Adicionado tipo de relacionamento {0}</value>
+  </data>
+  <data name="RelationshipType_Deleted.Text" xml:space="preserve">
+    <value>Excluído tipo de relacionamento {0} : ID {1}</value>
+  </data>
+  <data name="RelationshipType_Updated.Text" xml:space="preserve">
+    <value>Atualizado tipo de relacionamento {0}</value>
+  </data>
+  <data name="Relationship_Added.Text" xml:space="preserve">
+    <value>Adicionado relacionamento com {0}</value>
+  </data>
+  <data name="Relationship_Deleted.Text" xml:space="preserve">
+    <value>Excluído relacionamento com {0} : ID {1}</value>
+  </data>
+  <data name="Relationship_Updated.Text" xml:space="preserve">
+    <value>Atualizado relacionamento com {0}</value>
+  </data>
+  <data name="UserRelationshipPreference_Added.Text" xml:space="preserve">
+    <value>Adicionado UserRelationshipPreference ID {0} para User ID {1} e Relationship ID {2}</value>
+  </data>
+  <data name="UserRelationshipPreference_Deleted.Text" xml:space="preserve">
+    <value>Excluído UserRelationshipPreference ID {0} para User ID {1} e Relationship ID {2}</value>
+  </data>
+  <data name="UserRelationshipPreference_Updated.Text" xml:space="preserve">
+    <value>Atualizado UserRelationshipPreference ID {0} para User ID {1} e Relationship ID {2}</value>
+  </data>
+  <data name="UserRelationship_Added.Text" xml:space="preserve">
+    <value>Adicionado UserRelationship ID {0} para UserID {1}, RelatedUserID {2}</value>
+  </data>
+  <data name="UserRelationship_Deleted.Text" xml:space="preserve">
+    <value>Excluído UserRelationship ID {0} para UserID {1}, RelatedUserID {2}</value>
+  </data>
+  <data name="UserRelationship_Updated.Text" xml:space="preserve">
+    <value>Atualizado UserRelationship ID {0} para UserID {1}, RelatedUserID {2}</value>
+  </data>
+  <data name="AddFriendRequestSubject.Text" xml:space="preserve">
+    <value>{0} quer fazer amizade contigo</value>
+  </data>
+  <data name="AddFriendRequestBody.Text" xml:space="preserve">
+    <value>{0} quer fazer amizade contigo</value>
+  </data>
+  <data name="AddFollowerRequestSubject.Text" xml:space="preserve">
+    <value>{0} está agora te seguindo</value>
+  </data>
+  <data name="AddFollowerRequestBody.Text" xml:space="preserve">
+    <value>Você agora está sendo seguindo por {0}</value>
+  </data>
+  <data name="//Host//DeviceDetectionManagement.String" xml:space="preserve">
+    <value>Gerenciamento de detecção de dispositivo</value>
+  </data>
+  <data name="//ActivityFeed.String" xml:space="preserve">
+    <value>Atividades</value>
+  </data>
+  <data name="//ActivityFeed//Friends.String" xml:space="preserve">
+    <value>Amigos</value>
+  </data>
+  <data name="//ActivityFeed//Messages.String" xml:space="preserve">
+    <value>Mensagens</value>
+  </data>
+  <data name="//ActivityFeed//MyProfile.String" xml:space="preserve">
+    <value>Meu Perfil</value>
+  </data>
+  <data name="EMAIL_SUBJECT_FORMAT.Text" xml:space="preserve">
+    <value>Nova mensagem de {0}</value>
+  </data>
+  <data name="PortalLinks.Text" xml:space="preserve">
+    <value>Atalhos do portal</value>
+  </data>
+  <data name="LogClicks.Text" xml:space="preserve">
+    <value>Anote o usuário, data e hora de cada clique</value>
+  </data>
+  <data name="TrackClicks.Text" xml:space="preserve">
+    <value>Rastrear o número de vezes que este atalho é clicado</value>
+  </data>
+  <data name="//Admin//SharePointConnector.String" xml:space="preserve">
+    <value>Conector SharePoint</value>
+  </data>
+  <data name="ApplicationUpgrades.Text" xml:space="preserve">
+    <value>Atualizações da aplicação</value>
+  </data>
+  <data name="GeneralUpgrades.Text" xml:space="preserve">
+    <value>Executando atualizações gerais</value>
+  </data>
+  <data name="ExecutingScript.Text" xml:space="preserve">
+    <value>Executando programa</value>
+  </data>
+  <data name="LogStart.Text" xml:space="preserve">
+    <value>Início </value>
+  </data>
+  <data name="LogEnd.Text" xml:space="preserve">
+    <value>Fim </value>
+  </data>
+  <data name="ActivatingLicense.Text" xml:space="preserve">
+    <value>Ativando a licença</value>
+  </data>
+  <data name="ModulePermissions.Action" xml:space="preserve">
+    <value>Permissões</value>
+  </data>
+  <data name="MoveToPane.Action" xml:space="preserve">
+    <value>Para {0}</value>
+  </data>
+  <data name="DropModuleTarget.Text" xml:space="preserve">
+    <value>Solte o módulo aqui</value>
+  </data>
+  <data name="DragModuleHint.Text" xml:space="preserve">
+    <value>Arraste este módulo para uma nova posição.</value>
+  </data>
+  <data name="DraggingHintText.Text" xml:space="preserve">
+    <value>Mova o mouse sobre um painel.</value>
+  </data>
+  <data name="DropModuleHint.Text" xml:space="preserve">
+    <value>Solte o botão do mouse para colocar o módulo aqui.</value>
+  </data>
+  <data name="//AboutUs//StyleGuide.String" xml:space="preserve">
+    <value>Guia de Estilo</value>
+  </data>
+  <data name="//Admin//AdvancedSettings.String" xml:space="preserve">
+    <value>Configurações avançadas</value>
+  </data>
+  <data name="//ContactUs.String" xml:space="preserve">
+    <value>Contate-nos</value>
+  </data>
+  <data name="EMAIL_PASSWORD_REMINDER_BODY.Text" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+&lt;head&gt;
+&lt;meta name="viewport" content="width=device-width" /&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;title&gt;Senha&lt;/title&gt;
+
+
+&lt;style type="text/css"&gt;
+img {
+max-width: 100%;
+}
+body {
+-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6;
+}
+body {
+background-color: #f6f6f6;
+}
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h2 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h3 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h4 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h1 {
+    font-size: 22px !important;
+  }
+  h2 {
+    font-size: 18px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .container {
+    width: 100% !important;
+  }
+  .content {
+    padding: 10px !important;
+  }
+  .content-wrap {
+    padding: 10px !important;
+  }
+  .invoice {
+    width: 100% !important;
+  }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6; background: #fff; margin: 0; padding: 0;"&gt;
+
+&lt;table class="body-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background: #f6f6f6; margin: 0; padding: 0;"&gt;
+	&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+		&lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+		&lt;td class="container" width="600" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto; padding: 0;" valign="top"&gt;
+			&lt;div class="content" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;"&gt;
+				&lt;table class="main" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; background: #fff; margin: 0; padding: 0; border: 1px solid #e9e9e9;"&gt;
+					&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="alert alert-warning" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #333; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; border-bottom: 4px solid #e9e9e9; background: #ffffff; margin: 0; padding: 20px;" align="center" valign="top"&gt;
+							&lt;a href="http://www.nexso.org"&gt;&lt;img src="http://www.nexso.org/Portals/0/Images/logo.png" alt="Welcome to NEXSO!" width="150" height="38" style="display: block;" /&gt;&lt;/a&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="content-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px;" valign="top"&gt;
+							&lt;table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; margin: 0; padding: 0;"&gt;Caro (a), [User:DisplayName],&lt;/strong&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;								
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Usuário: &lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;[Membership:UserName]&lt;/strong&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Por favor, clique no seguinte link para recuperar sua senha.
+									&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;a href="http://[Portal:URL]/default.aspx?ctl=PasswordReset&amp;amp;resetToken=[Membership:PasswordResetToken]" class="btn-primary" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background: #80b63f; margin: 0; padding: 0; border-color: #80b63f; border-style: solid; border-width: 10px 20px;"&gt;Recuperar sua senha&lt;/a&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Se não solicitou a mudança da senha, por favor, desconsidere essa mensagem. 
+									&lt;/td&gt;
+								&lt;/tr&gt;
+							&lt;/table&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;div class="footer" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; clear: both; color: #999; margin: 0; padding: 20px;"&gt;
+					&lt;table width="100%" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+							&lt;td class="aligncenter content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px;" align="center" valign="top"&gt;Inter-American Development Bank&lt;br/&gt; Multilateral Investment Fund&lt;br/&gt; 1300 New York Ave NW, Washington, DC 205577, USA&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/table&gt;
+				&lt;/div&gt;&lt;/div&gt;
+		&lt;/td&gt;
+		&lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_PUBLIC_BODY.Text" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+&lt;head&gt;
+&lt;meta name="viewport" content="width=device-width" /&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;title&gt;Bem-vindo (a) a NEXSO!&lt;/title&gt;
+
+
+&lt;style type="text/css"&gt;
+img {
+max-width: 100%;
+}
+body {
+-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6;
+}
+body {
+background-color: #f6f6f6;
+}
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h2 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h3 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h4 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h1 {
+    font-size: 22px !important;
+  }
+  h2 {
+    font-size: 18px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .container {
+    width: 100% !important;
+  }
+  .content {
+    padding: 10px !important;
+  }
+  .content-wrap {
+    padding: 10px !important;
+  }
+  .invoice {
+    width: 100% !important;
+  }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6; background: #fff; margin: 0; padding: 0;"&gt;
+
+&lt;table class="body-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background: #f6f6f6; margin: 0; padding: 0;"&gt;
+	&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+		&lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+		&lt;td class="container" width="600" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto; padding: 0;" valign="top"&gt;
+			&lt;div class="content" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;"&gt;
+				&lt;table class="main" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; background: #fff; margin: 0; padding: 0; border: 1px solid #e9e9e9;"&gt;
+					&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="alert alert-warning" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #333; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; border-bottom: 4px solid #e9e9e9; background: #ffffff; margin: 0; padding: 20px;" align="center" valign="top"&gt;
+							&lt;a href="http://www.nexso.org"&gt;&lt;img src="http://www.nexso.org/Portals/0/Images/logo.png" alt="Welcome to NEXSO!" width="150" height="38" style="display: block;" /&gt;&lt;/a&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="content-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px;" valign="top"&gt;
+							&lt;table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; margin: 0; padding: 0;"&gt;[User:DisplayName], Bem-vindo (a) a NEXSO! &lt;/strong&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;								
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Você cadastrou seu usuário com sucesso.
+									&lt;/td&gt;
+								&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Nome de Usuário: &lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;[Membership:UserName]
+&lt;/strong&gt;&lt;br/&gt;&lt;a href="http://www.nexso.org/pt-br/My-Nexso" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #2993d4; text-decoration: underline; margin: 0; padding: 0;"&gt;Vista de perfil&lt;/a&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;a href="http://www.nexso.org/pt-br/promover" class="btn-primary" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background: #80b63f; margin: 0; padding: 0; border-color: #80b63f; border-style: solid; border-width: 10px 20px;"&gt;Promova sua solução&lt;/a&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Esperamos vê-lo (a) em breve na NEXSO.
+									&lt;/td&gt;
+								&lt;/tr&gt;
+							&lt;/table&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="alert alert-warning" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; color: #fff; font-weight: 500; text-align: left; border-radius: 0 0 3px 3px; border-top: 1px solid #e9e9e9; background: #2993d4; margin: 0; padding: 20px;" align="left" valign="top"&gt;
+							&lt;a href="http://www.nexso.org/pt-br/Login" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; color: #fff; text-decoration: underline; margin: 0; padding: 0;"&gt;Recuperar sua senha&lt;/a&gt;.
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;div class="footer" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; clear: both; color: #999; margin: 0; padding: 20px;"&gt;
+					&lt;table width="100%" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+							&lt;td class="aligncenter content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px;" align="center" valign="top"&gt;Inter-American Development Bank&lt;br/&gt; Multilateral Investment Fund&lt;br/&gt; 1300 New York Ave NW, Washington, DC 20577, USA&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/table&gt;
+				&lt;/div&gt;&lt;/div&gt;
+		&lt;/td&gt;
+		&lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_VERIFIED_BODY.Text" xml:space="preserve">
+    <value>Caro [User: DisplayName] 
+&lt;p&gt; &lt;/ p&gt; 
+&lt;p style="margin: 0cm 0cm 0.0001pt;"&gt; &lt;span&gt; Bem-vindo ao NEXSO! &lt;/ span&gt; &lt;/ p&gt; 
+&lt;p&gt; &lt;/ p&gt; 
+&lt;p&gt; &lt;/ p&gt; 
+&lt;p style="margin: 0cm 0cm 0.0001pt;"&gt; &lt;span&gt; Por favor, leia com atenção as seguintes informações para concluir o registro, e não se esqueça de salvar esta mensagem para referência futura. &lt;/ span&gt; &lt;/ p&gt; 
+&lt;p&gt; &lt;/ p&gt; 
+&lt;p&gt; Portal Endereço do site: [Portal: URL] &lt;/ p&gt; 
+&lt;p&gt; Usuário: [User: username] &lt;/ p&gt; 
+
+&lt;p&gt; &lt;/ p&gt; 
+&lt;p&gt; &lt;span&gt; NEXSO Team &lt;/ span&gt; &lt;/ p&gt; 
+&lt;p&gt; &lt;/ p&gt;</value>
+  </data>
+  <data name="MESSAGE_LOGIN_INSTRUCTIONS.Text" xml:space="preserve">
+    <value>Digite os dados informados em seu cadastro.</value>
+  </data>
+</root>

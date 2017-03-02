@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{05FE626C-F3F6-49E8-A39B-F7D485B3BF1F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NexsoProBLL</RootNamespace>
+    <AssemblyName>NexsoProBLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccreditationsComponent.cs" />
+    <Compile Include="AttributesComponent.cs" />
+    <Compile Include="BadgeComponent.cs" />
+    <Compile Include="CampaignComponent.cs" />
+    <Compile Include="CampaignLogComponent.cs" />
+    <Compile Include="CampaignTemplateComponent.cs" />
+    <Compile Include="ChallengeCustomDataComponent.cs" />
+    <Compile Include="ChallengeComponent.cs" />
+    <Compile Include="ChallengeFileComponent.cs" />
+    <Compile Include="ChallengeJudgeComponent.cs" />
+    <Compile Include="ChallengePageComponent.cs" />
+    <Compile Include="CustomDataLogComponent.cs" />
+    <Compile Include="DocumentComponent.cs" />
+    <Compile Include="IndexDataComponent.cs" />
+    <Compile Include="JudgesAssignationComponent.cs" />
+    <Compile Include="MailContainer.cs" />
+    <Compile Include="MailTrackerLogComponent.cs" />
+    <Compile Include="MessageComponent.cs" />
+    <Compile Include="NotificationComponent.cs" />
+    <Compile Include="OrganizationListComponent.cs" />
+    <Compile Include="PartnershipsComponent.cs" />
+    <Compile Include="PotentialUserComponent.cs" />
+    <Compile Include="ReferencesComponent.cs" />
+    <Compile Include="ScoreComponent.cs" />
+    <Compile Include="SocialMediaIndicatorComponent.cs" />
+    <Compile Include="SolutionLogComponent.cs" />
+    <Compile Include="UserNotificationConnectionComponent.cs" />
+    <Compile Include="UserPropertiesListComponent.cs" />
+    <Compile Include="SolutionCommentComponent.cs" />
+    <Compile Include="UserPropetyComponent.cs" />
+    <Compile Include="NexsoProBLLHelper.cs" />
+    <Compile Include="SolutionListComponent.cs" />
+    <Compile Include="ListComponent.cs" />
+    <Compile Include="OrganizationComponent.cs" />
+    <Compile Include="SolutionComponent.cs" />
+    <Compile Include="SolutionLocationComponent.cs" />
+    <Compile Include="UserOrganizationComponent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NexsoProDAL\NexsoProDAL.csproj">
+      <Project>{ED306CCA-19D5-4A5D-B30C-CE0EF916D4E9}</Project>
+      <Name>NexsoProDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

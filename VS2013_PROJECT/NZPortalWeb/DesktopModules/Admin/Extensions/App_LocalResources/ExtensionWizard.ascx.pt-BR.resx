@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cancel.Text">
+    <value xml:space="preserve">Voltar</value>
+  </data>
+  <data name="ControlTitle_newextension.Text">
+    <value xml:space="preserve">Assistente Para Nova Extensão</value>
+  </data>
+  <data name="Core.Text">
+    <value xml:space="preserve">Idioma do núcleo</value>
+  </data>
+  <data name="DuplicateName.Text">
+    <value xml:space="preserve">O nome '{0}' já existe.  Por favor providencie outro nome e tente novamente.</value>
+  </data>
+  <data name="IntroductionHelp.Text">
+    <value xml:space="preserve">No primeiro passo por favor providencie um nome único para a nova extensão, sendo recomendado que você use o formato &lt;b&gt;NomeCompanhia.NomeExtensão&lt;/b&gt; para evitar potenciais problemas se você pretende distribuir a extensão. Além disso, você deve fornecer um nome amigável para a extensão, uma descrição para a extensão e deve selecionar uma versão (ou será usado o número padrão de versão 0.0.0).</value>
+  </data>
+  <data name="Introduction.Help">
+    <value xml:space="preserve">O assistente de criação de nova extensão permite a você criar novas extensões. Entre as informações requisitadas em cada etapa. Por favor selecione o tipo da extensão a criar.</value>
+  </data>
+  <data name="Introduction.Title">
+    <value xml:space="preserve">Criar Nova Extensão</value>
+  </data>
+  <data name="OwnerInfo.Help">
+    <value xml:space="preserve">Nesta etapa final você opcionalmente pode fornecer detalhes sobre o proprietário da extensão. Esta informação é muito útil se você planeja distribuir sua extensão.</value>
+  </data>
+  <data name="OwnerInfo.Title">
+    <value xml:space="preserve">Detalhes do proprietário</value>
+  </data>
+  <data name="Package.Text">
+    <value xml:space="preserve">Idioma da extensão</value>
+  </data>
+  <data name="PackageType.Error">
+    <value xml:space="preserve">Você deve selecionar um tipo de pacote de idioma!</value>
+  </data>
+  <data name="plExtensionType.Help">
+    <value xml:space="preserve">Selecione o tipo da extensão a ser criada.</value>
+  </data>
+  <data name="plExtensionType.Text">
+    <value xml:space="preserve">Selecione o tipo da extensão:</value>
+  </data>
+  <data name="plPackageType.Help">
+    <value xml:space="preserve">Selecione se isto é um pacote de idioma do núcleo ou um pacote de idioma para outra extensão.</value>
+  </data>
+  <data name="plPackageType.Text">
+    <value xml:space="preserve">Selecione o tipo de pacote de idioma:</value>
+  </data>
+  <data name="Specific_CoreLanguagePack.Help">
+    <value xml:space="preserve">Nesta etapa por favor escolha o idioma do pacote.</value>
+  </data>
+  <data name="Specific_CoreLanguagePack.Title">
+    <value xml:space="preserve">Detalhes do pacote de idioma</value>
+  </data>
+  <data name="Specific_Module.Help">
+    <value xml:space="preserve">Nesta etapa por favor forneça quaisquer informações do módulo.</value>
+  </data>
+  <data name="Specific_Module.Title">
+    <value xml:space="preserve">Detalhes do módulo</value>
+  </data>
+  <data name="Specific_ExtensionLanguagePack.Help">
+    <value xml:space="preserve">Nesta etapa por favor escolha o idioma e a extensão para o pacote.</value>
+  </data>
+  <data name="Specific_ExtensionLanguagePack.Title">
+    <value xml:space="preserve">Detalhes do pacote de idioma</value>
+  </data>
+  <data name="ExtensionLanguageHelp.Text">
+    <value xml:space="preserve">&lt;b&gt;Nota:&lt;/b&gt; Se você está criando uma extensão de pacote de idioma a extensão já deve estar definida.</value>
+  </data>
+  <data name="LanguageHelp.Text">
+    <value xml:space="preserve">&lt;b&gt;Nota:&lt;/b&gt; Se você está criando um pacote de idioma o idioma já deve estar definido no módulo Portal &gt; Idiomas.</value>
+  </data>
+</root>

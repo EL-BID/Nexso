@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="and.Text">
+    <value xml:space="preserve">Y </value>
+  </data>
+  <data name="BannerName.ErrorMessage">
+    <value xml:space="preserve">Debe escribir un nombre para el anuncio</value>
+  </data>
+  <data name="cmdCopy.Text">
+    <value xml:space="preserve">Copiar</value>
+  </data>
+  <data name="cmdEmail.Text">
+    <value xml:space="preserve">Enviar correo de estado al anunciante</value>
+  </data>
+  <data name="ControlTitle_banner.Text">
+    <value xml:space="preserve">Administrar anuncios</value>
+  </data>
+  <data name="CPM.ErrorMessage">
+    <value xml:space="preserve">Debe escribir un CPM o coste válidos</value>
+  </data>
+  <data name="EmailFailure.Text">
+    <value xml:space="preserve">Email no enviado: {0}</value>
+  </data>
+  <data name="EmailSuccess.Text">
+    <value xml:space="preserve">Email enviado</value>
+  </data>
+  <data name="Impressions.ErrorMessage">
+    <value xml:space="preserve">&lt;br/&gt;Debe escribir un número válido de impactos</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Acerca del módulo de anuncios&lt;/h1&gt;
+&lt;p&gt;El Módulo de anuncios muestra de manera cíclica los anuncios del sitio y del sistema.&lt;/p&gt;
+&lt;h1&gt;Editar opciones de los anuncios&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Añada un módulo de &lt;strong&gt;Anuncios&lt;/strong&gt;, o seleccione un módulo de &lt;strong&gt;anuncios&lt;/strong&gt; existente. &lt;/li&gt;
+&lt;li&gt;Haga clic en &lt;strong&gt;Editar opciones del anuncio&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;En el origen del anuncio, seleccione &lt;strong&gt;Sitio&lt;/strong&gt; o &lt;strong&gt;Sistema&lt;/strong&gt;. &lt;/li&gt;
+&lt;li&gt;En el Tipo de anuncio, seleccione el tipo de anuncio&lt;/li&gt;
+&lt;li&gt;En la Cantidad de anuncios, seleccione el número de anuncios a mostrar. 
+&lt;/li&gt;
+&lt;li&gt;Haga clic en &lt;strong&gt;Actualizar&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;</value>
+  </data>
+  <data name="or.Text">
+    <value xml:space="preserve">O </value>
+  </data>
+  <data name="plBannerGroup.Help">
+    <value xml:space="preserve">Escriba un grupo de anuncios si desea relacionar un conjunto de anuncios</value>
+  </data>
+  <data name="plBannerGroup.Text">
+    <value xml:space="preserve">Grupo de anuncios</value>
+  </data>
+  <data name="plBannerName.Help">
+    <value xml:space="preserve">Escriba el nombre del anuncio. Este nombre se mostrará como texto alternativo para la imágen mostrada.</value>
+  </data>
+  <data name="plBannerName.Text">
+    <value xml:space="preserve">Nombre del anuncio</value>
+  </data>
+  <data name="plBannerType.Help">
+    <value xml:space="preserve">Seleccione un tipo de anuncio a mostrar</value>
+  </data>
+  <data name="plBannerType.Text">
+    <value xml:space="preserve">Tipo de anuncio</value>
+  </data>
+  <data name="plCPM.Help">
+    <value xml:space="preserve">Coste Por Mil (CPM) es el coste por 1000 impactos. El coste también puede ser un valor fijo.</value>
+  </data>
+  <data name="plCPM.Text">
+    <value xml:space="preserve">CPM/Coste</value>
+  </data>
+  <data name="plCriteria.Help">
+    <value xml:space="preserve">Indique si la campaña debe finalizar al alcanzar el número de impactos y/o si se ha alcanzado la fecha final.</value>
+  </data>
+  <data name="plCriteria.Text">
+    <value xml:space="preserve">Criterio</value>
+  </data>
+  <data name="plDescription.Help">
+    <value xml:space="preserve">Escriba la descripción del anuncio. Esto se utilizará como texto alternativo para los anuncios de tipo imágen, o como el texto a mostrar en el caso de anuncios de tipo texto.</value>
+  </data>
+  <data name="plDescription.Text">
+    <value xml:space="preserve">Texto/script</value>
+  </data>
+  <data name="plEndDate.Help">
+    <value xml:space="preserve">Utilice la fecha final para controlar cuándo debe finalizar la campaña publicitaria.</value>
+  </data>
+  <data name="plEndDate.Text">
+    <value xml:space="preserve">Fecha final</value>
+  </data>
+  <data name="plHeight.Help">
+    <value xml:space="preserve">Indique la altura de la imagen del anuncio. Esto es opcional para las imágenes pero es obligatorio para los anuncios en Flash.</value>
+  </data>
+  <data name="plHeight.Text">
+    <value xml:space="preserve">Altura</value>
+  </data>
+  <data name="plImage.Help">
+    <value xml:space="preserve">Para anuncios gráficos debe especificar la imagen del anuncio (suba una imagen archivada o un enlace a un archivo remoto vía URL). Para los anuncios de texto debe especificar la URL que desea mostrar en el texto del anuncio</value>
+  </data>
+  <data name="plImage.Text">
+    <value xml:space="preserve">Imagen/enlace</value>
+  </data>
+  <data name="plImpressions.Help">
+    <value xml:space="preserve">Escriba el número de impactos a mostrar. Si desea que sea ilimitado, escriba cero (0).</value>
+  </data>
+  <data name="plImpressions.Text">
+    <value xml:space="preserve">Impresiones</value>
+  </data>
+  <data name="plStartDate.Help">
+    <value xml:space="preserve">Utilice la fecha de inicio para indicar cuándo debe comenzar la campaña publicitaria.</value>
+  </data>
+  <data name="plStartDate.Text">
+    <value xml:space="preserve">Fecha de inicio</value>
+  </data>
+  <data name="plURL.Help">
+    <value xml:space="preserve">Escriba la URL a la que se debe dirigir a los usuarios que hagan clic en el anuncio. Si no especifica aquí ninguna, se los dirigirá a la URL del anunciante</value>
+  </data>
+  <data name="plURL.Text">
+    <value xml:space="preserve">URL </value>
+  </data>
+  <data name="plWidth.Help">
+    <value xml:space="preserve">Escriba el ancho de la imagen del anuncio. Es opcional para los anuncios de imagen, pero obligatorio para los anuncios en Flash.</value>
+  </data>
+  <data name="plWidth.Text">
+    <value xml:space="preserve">Anchura</value>
+  </data>
+</root>

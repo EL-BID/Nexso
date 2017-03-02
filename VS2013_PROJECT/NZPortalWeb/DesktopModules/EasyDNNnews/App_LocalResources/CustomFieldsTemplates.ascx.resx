@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="btnSaveField.Text" xml:space="preserve">
+    <value>Create Group</value>
+  </data>
+  <data name="btnUpdateField.Text" xml:space="preserve">
+    <value>Update Group</value>
+  </data>
+  <data name="gvcfTemplatesDescription.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="gvcfTemplatesId.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="gvcfTemplatesName.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="gvListOfCustomFieldsId.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="gvListOfCustomFieldsName.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="gvListOfCustomFieldsToken.HeaderText" xml:space="preserve">
+    <value>Token</value>
+  </data>
+  <data name="gvTemplateCustomFieldsCfId.HeaderText" xml:space="preserve">
+    <value>Cf Id</value>
+  </data>
+  <data name="gvTemplateCustomFieldsCfTId.HeaderText" xml:space="preserve">
+    <value>CfT Id</value>
+  </data>
+  <data name="gvTemplateCustomFieldsName.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="gvTemplateCustomFieldsPosition.HeaderText" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="gvTemplateCustomFieldsToken.HeaderText" xml:space="preserve">
+    <value>Token</value>
+  </data>
+  <data name="infoAddFailed1.Text" xml:space="preserve">
+    <value>Add failed. Item is already in group or insert failed.</value>
+  </data>
+  <data name="infoAddFailed2.Text" xml:space="preserve">
+    <value>Session expired, add failed.</value>
+  </data>
+  <data name="infoFieldAdded.Text" xml:space="preserve">
+    <value>Field is added to group.</value>
+  </data>
+  <data name="infoNoCustomFieldToAdd.Text" xml:space="preserve">
+    <value>No custom field to add.</value>
+  </data>
+  <data name="infoRemoveFailed.Text" xml:space="preserve">
+    <value>Session expired, remove failed.</value>
+  </data>
+  <data name="infoSessionExpired.Text" xml:space="preserve">
+    <value>Session expired, edit failed.</value>
+  </data>
+  <data name="lbAddToGroup.Text" xml:space="preserve">
+    <value>Add to group</value>
+  </data>
+  <data name="lbEditTemplate.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="lblcfTemplateDescription.HelpText" xml:space="preserve">
+    <value>Enter the description of the custom field group you wish to create.</value>
+  </data>
+  <data name="lblcfTemplateDescription.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="lblcfTemplateName.HelpText" xml:space="preserve">
+    <value>Enter the name of the custom field group you wish to create.</value>
+  </data>
+  <data name="lblcfTemplateName.Text" xml:space="preserve">
+    <value>Custom field group:</value>
+  </data>
+  <data name="lblCurrencyManager.Text" xml:space="preserve">
+    <value>Currency Setup</value>
+  </data>
+  <data name="lblCustomFieldsList.Text" xml:space="preserve">
+    <value>Available custom fields for adding to a group.</value>
+  </data>
+  <data name="lblCustomFieldsTemplates.Text" xml:space="preserve">
+    <value>Manage Custom Fields Groups</value>
+  </data>
+  <data name="lblTemplateFieldsList.Text" xml:space="preserve">
+    <value>Present custom fields in this group.</value>
+  </data>
+  <data name="lbRemoveFromGroup.Text" xml:space="preserve">
+    <value>Remove from group</value>
+  </data>
+  <data name="lbRemoveTemplate.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="rfvcfTemplateName.ErrorMessage" xml:space="preserve">
+    <value>Required Field.</value>
+  </data>
+  <data name="titleCFGgroups.Text" xml:space="preserve">
+    <value>Existing custom fields groups - ADMINISTRATION</value>
+  </data>
+  <data name="titleCFGroupAdministration.Text" xml:space="preserve">
+    <value>Custom fields Group administration</value>
+  </data>
+  <data name="titleCreateCFGroup.Text" xml:space="preserve">
+    <value>Create Custom fields group</value>
+  </data>
+  <data name="titleOfControle.Text" xml:space="preserve">
+    <value>Custom fields GROUP MANAGER</value>
+  </data>
+  <data name="gvTemplateCustomFieldsIsSearchable.HeaderText" xml:space="preserve">
+    <value>Searchable</value>
+  </data>
+  <data name="ibExportTemplate.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="lblCustomFieldsAdd.Text" xml:space="preserve">
+    <value>Add Custom Fields</value>
+  </data>
+  <data name="lblCustomFieldsEdit.Text" xml:space="preserve">
+    <value>Edit Custom Fields</value>
+  </data>
+  <data name="lblImportExport.Text" xml:space="preserve">
+    <value>Import/Export</value>
+  </data>
+  <data name="btnDeleteCFXMLFile.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="btnExportDownload.Text" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="btnExportToXML.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="btnImportfromXML.Text" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="btnUploadCFXMLData.Text" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="lblExportFileName.HelpText" xml:space="preserve">
+    <value>Enter an export file name.</value>
+  </data>
+  <data name="lblExportFileName.Text" xml:space="preserve">
+    <value>File name:</value>
+  </data>
+  <data name="lblExportGroupName.HelpText" xml:space="preserve">
+    <value>If the group name is not specifed then as the group name will be used the name of the group we are exporting.</value>
+  </data>
+  <data name="lblExportGroupName.Text" xml:space="preserve">
+    <value>New group name:</value>
+  </data>
+  <data name="lblExportPrefix.HelpText" xml:space="preserve">
+    <value>Enter a prefix that will be added to token ID. Optionaly you can add a prefix to token IDs. This can be usefull if you will import a group of custom fields on the portal where the custom field with the same token ID already exsist.</value>
+  </data>
+  <data name="lblExportPrefix.Text" xml:space="preserve">
+    <value>Prefix:</value>
+  </data>
+  <data name="lblImportFileUpload.HelpText" xml:space="preserve">
+    <value>Select the custom fields group import file that you want to upload.</value>
+  </data>
+  <data name="lblImportFileUpload.Text" xml:space="preserve">
+    <value>Upload new import file:</value>
+  </data>
+  <data name="rfExportFileName.ErrorMessage" xml:space="preserve">
+    <value>File name required.</value>
+  </data>
+  <data name="titleCFExport.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="titleCFImport.Text" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="infoCFGroupDoesNotExist.Text" xml:space="preserve">
+    <value>Custom fields group doesn't exist.</value>
+  </data>
+  <data name="infoFileDoesNotExist.Text" xml:space="preserve">
+    <value>File doesn't exist.</value>
+  </data>
+  <data name="infoGroupExportedSuccessfully.Text" xml:space="preserve">
+    <value>File name: {0}.xml  exported successfully.</value>
+  </data>
+  <data name="infoGroupExportFailed.Text" xml:space="preserve">
+    <value>Export failed.</value>
+  </data>
+  <data name="infoGroupImportingFinished.Text" xml:space="preserve">
+    <value>Importing finished.</value>
+  </data>
+  <data name="infoImportFileExists.Text" xml:space="preserve">
+    <value>File already exists.</value>
+  </data>
+  <data name="infoImportFileNotValid.Text" xml:space="preserve">
+    <value>The file is not valid.</value>
+  </data>
+  <data name="infoImportFileUploaded.Text" xml:space="preserve">
+    <value>File uploaded.</value>
+  </data>
+  <data name="infoImportXMLFileNotValid.Text" xml:space="preserve">
+    <value>XML file is not valid.</value>
+  </data>
+  <data name="infoInvalidPrefixCharacters.Text" xml:space="preserve">
+    <value>Invalid prefix characters.</value>
+  </data>
+  <data name="infoPrefixMaxCharacters.Text" xml:space="preserve">
+    <value>Prefix can have max 10 characters.</value>
+  </data>
+  <data name="infoSuccessfullyDeletedFile.Text" xml:space="preserve">
+    <value>Successfully deleted file {0}.</value>
+  </data>
+  <data name="infoWrongExportFileName.Text" xml:space="preserve">
+    <value>Wrong export file name.</value>
+  </data>
+  <data name="lblSelectCFGroup.HelpText" xml:space="preserve">
+    <value>Select the custom fields group that you want to export.</value>
+  </data>
+  <data name="lblSelectCFGroup.Text" xml:space="preserve">
+    <value>Custom fields group:</value>
+  </data>
+  <data name="lblSelectImportFile.HelpText" xml:space="preserve">
+    <value>Select the file that you want to import.</value>
+  </data>
+  <data name="lblSelectImportFile.Text" xml:space="preserve">
+    <value>Select available import file:</value>
+  </data>
+  <data name="infoDeletedFileFailItsPreset.Text" xml:space="preserve">
+    <value>Can't delete. It's a preset file {0}.</value>
+  </data>
+</root>

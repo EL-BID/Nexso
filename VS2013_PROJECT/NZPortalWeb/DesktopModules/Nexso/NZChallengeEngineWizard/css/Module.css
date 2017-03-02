@@ -1,0 +1,290 @@
+.banner .step-navigation #header li {
+    width: 8%!important;
+}
+
+.RadCombo .rcbInputCell {
+    background-size: 1148px 650px;
+}
+
+.banner .step-navigation #header:before {
+    width: 83%!important;
+}
+
+.box {
+    width: 22%;
+    float: left;
+    margin: 0px 30px 2px 0px;
+}
+
+.box2 {
+    clear: both;
+    width: 22%;
+    float: left;
+    margin: 0px 30px 2px 0px;
+}
+
+.box3 {
+    clear: both;
+}
+
+.RadUpload input.ruFakeInput, .hidden, .RadUpload_Default .ruFakeInput {
+    display: none;
+}
+
+
+.round {
+    border-radius: 50px!important;
+}
+
+.table {
+    border-spacing: 10px;
+    color: #666!important;
+    font-size: 16px!important;
+}
+
+    .table td {
+        padding: 10px;
+    }
+
+
+
+.cd-popup.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.cd-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(94, 110, 141, 0.9);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+}
+
+.is-visible .cd-popup-container {
+    transform: translateY(0);
+}
+
+/*.RadUpload .ruFileWrap {
+   
+    display: inline!important;
+}
+
+.RadUpload_Silk .ruRemove {
+    z-index: 20;
+    position: fixed!important;
+}*/
+
+.btnFile {
+    overflow: visible!important;
+}
+
+.contentpopup {
+    width: 97%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+
+.labelpopup {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.cd-popup-container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    background: #FFF;
+    border-radius: .25em .25em .4em .4em;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -webkit-backface-visibility: hidden;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.popup {
+    position: fixed !important;
+    width: 40%!important;
+    height: auto!important;
+    background: #fff!important;
+    left: 50%!important;
+    top: 10%!important;
+    border-radius: 5px!important;
+    /*padding: 25px 0!important;*/
+    box-shadow: 0 0 10px 0 #000!important;
+    margin-right: auto!important;
+    margin-left: -400px!important;
+    min-width: 800px!important;
+    padding: 0px 0!important;
+    padding-bottom: 9px!important;
+    max-height:80%!important;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+    .popup input[type="text"] {
+        height: 1.3125rem;
+    }
+
+    .popup .rfv span {
+        padding: 0.1rem!important;
+        font-size: 12px;
+    }
+
+.btnS {
+    margin-right: 86px!important;
+    position: absolute!important;
+    right: -16px!important;
+}
+
+.btnC {
+    margin-right: 86px!important;
+    position: absolute!important;
+    right: 80px!important;
+}
+
+.invisible {
+    display: none;
+}
+
+.divbtn {
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+    .divbtn input {
+        float: right;
+        margin: 0 1em;
+    }
+
+
+.RadUpload_Silk .ruUploadProgress {
+    display: inline-block!important;
+}
+
+.rteskin_office2010.rteskin_silver.rteskin_office2010_silver {
+    z-index: 9999!important;
+}
+
+.CuteEditorFrame.CuteEditorFrame {
+    min-height: 160px!important;
+    height: 160px!important;
+}
+
+
+
+/* *************/
+
+.wizard-form .RadComboBox_Silk .rcbFocused .rcbInputCell {
+    border-color: gray!important;
+    font-size: 11px!important;
+}
+
+
+.wizard-form .RadComboBox_Silk .rcbDisabled .rcbInput {
+    color: #b1b1b1!important;
+    background-color: #d7d7d7!important;
+    font-size: 11px!important;
+}
+
+.wizard-form .RadComboBox_Silk .rcbDisabled .rcbInputCell {
+    background-color: #d7d7d7!important;
+    font-size: 11px!important;
+}
+
+.wizard-form .RadComboBoxDropDown_Silk .rcbList {
+    font-size: 11px!important;
+}
+
+    .wizard-form .RadComboBoxDropDown_Silk .rcbList .rcbHovered {
+        background: gray!important;
+        font-weight: bold!important;
+        color: black!important;
+        font-size: 11px!important;
+    }
+
+.wizard-form .RadComboBox_Silk .rcbFocused .rcbArrowCell, .RadComboBox_Silk .rcbHovered .rcbArrowCell {
+    border-color: gray!important;
+    color: gray!important;
+    background-color: gray!important;
+    background-image: linear-gradient( gray 0, gray 100%)!important;
+    font-size: 11px!important;
+}
+
+.wizard-form .RadComboBox_Silk .rcbHovered .rcbInputCell {
+    border-color: gray!important;
+    color: gray!important;
+    font-size: 11px!important;
+}
+
+.wizard-form .RadComboBoxDropDown_Silk .rcbFocused .rcbArrowCell {
+    background-color: gray!important;
+    border-color: gray!important;
+    font-size: 11px!important;
+}
+
+
+
+.RadComboBoxDropDown_Silk .rcbHovered {
+    background: #FFF!important;
+}
+
+/*.RadComboBoxDropDown_Silk .rcbHovered {
+     
+    border-bottom: 1px solid #9B9797!important;
+}
+.RadComboBoxDropDown .rcbScroll {
+   
+    border: 1px solid gray!important;
+}*/
+.RadComboBoxDropDown_Silk, .RadComboBox_Silk {
+    border: 2px solid #ccc!important;
+}
+/*.RadComboBoxDropDown*/
+
+.RadComboBoxDropDown .rcbHeader {
+    border-bottom: 1px solid #ccc!important;
+}
+
+.RadComboBoxDropDown_Silk {
+   
+    border: 1px solid #ccc!important;
+}
+.RadComboBoxDropDown {
+    
+    border: 1px solid #ccc!important;
+}
+
+.RadGrid_MetroTouch .rgFilterBox, .RadGrid .rgFilterBox , input.rgFilterBox {
+   
+    width: 87%!important;
+    display: inline-block!important;
+}
+.RadGrid_MetroTouch .rgCommandRow {
+    background-color: #333!important;
+}
+.RadGrid_MetroTouch input.rgAdd {
+    border: 1px solid #7B7979!important;
+}
+.RadComboBox_Default .rcbInput {
+    
+    height: 20px!important;
+  
+}

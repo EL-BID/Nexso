@@ -1,0 +1,22 @@
+﻿IF NOT EXISTS (SELECT UpdateVersion FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate] WHERE UpdateVersion = '06.00.04')
+BEGIN
+	INSERT {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate]([UpdateVersion],[Finished]) VALUES(N'06.00.04',0)
+END
+GO
+/****Lightbox resize method ****/
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsLightboxSettings' and column_name = 'ThumbnailResizeMethod')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLightboxSettings] ADD ThumbnailResizeMethod TINYINT CONSTRAINT DF_{objectQualifier}EasyDNNNewsLightboxSettings_ThumbnailResizeMethod DEFAULT(0) NOT NULL
+END
+/****Lightbox resize method ****/
+
+/****Chameleon resize method ****/
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsChameleonSettings' and column_name = 'ResponsiveMainImageWidth')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsChameleonSettings] ADD ResponsiveMainImageWidth INT CONSTRAINT DF_{objectQualifier}EasyDNNNewsChameleonSettings_ResponsiveMainImageWidth DEFAULT(600) NOT NULL
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsChameleonNestedSettings' and column_name = 'ResponsiveMainImageWidth')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsChameleonNestedSettings] ADD ResponsiveMainImageWidth INT CONSTRAINT DF_{objectQualifier}EasyDNNNewsChameleonNestedSettings_ResponsiveMainImageWidth DEFAULT(600) NOT NULL
+END
+/****Chameleon resize method ****/

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plWorkflow1.Text">
+    <value xml:space="preserve">Fluxo de trabalho</value>
+  </data>
+  <data name="plWorkflow1.Help">
+    <value xml:space="preserve">Selecione um fluxo de trabalho para gerenciar.</value>
+  </data>
+  <data name="plWorkflow2.Text">
+    <value xml:space="preserve">Fluxo de trabalho</value>
+  </data>
+  <data name="plWorkflow2.Help">
+    <value xml:space="preserve">Entre um nome para o fluxo de trabalho.</value>
+  </data>
+  <data name="plDescription.Text">
+    <value xml:space="preserve">Descrição</value>
+  </data>
+  <data name="plDescription.Help">
+    <value xml:space="preserve">Entre uma descrição para o fluxo de trabalho.</value>
+  </data>
+  <data name="plHistory.Text">
+    <value xml:space="preserve">Histórico</value>
+  </data>
+  <data name="plHistory.Help">
+    <value xml:space="preserve">Especifique o número máximo de versões a reter.</value>
+  </data>
+  <data name="plDeleted.Text">
+    <value xml:space="preserve">Excluído</value>
+  </data>
+  <data name="plDeleted.Help">
+    <value xml:space="preserve">Especifique se este fluxo de trabalho está ativo.</value>
+  </data>
+  <data name="cmdAddWorkflow.Text">
+    <value xml:space="preserve">Adicionar novo fluxo de trabalho</value>
+  </data>
+  <data name="WorkflowExists.Text">
+    <value xml:space="preserve">Um fluxo de trabalho com o nome especificado já existe neste portal.</value>
+  </data>
+  <data name="dshStates.Text">
+    <value xml:space="preserve">Estados</value>
+  </data>
+  <data name="State.Header">
+    <value xml:space="preserve">Estado</value>
+  </data>
+  <data name="Active.Header">
+    <value xml:space="preserve">Ativar</value>
+  </data>
+  <data name="cmdAddState.Text">
+    <value xml:space="preserve">Adicionar novo estado</value>
+  </data>
+  <data name="dshPermissions.Text">
+    <value xml:space="preserve">Configuração de Estado</value>
+  </data>
+  <data name="plState.Text">
+    <value xml:space="preserve">Estado</value>
+  </data>
+  <data name="plState.Help">
+    <value xml:space="preserve">Entre um nome para o estado.</value>
+  </data>
+  <data name="plPermissions.Text">
+    <value xml:space="preserve">Revisores</value>
+  </data>
+  <data name="plPermissions.Help">
+    <value xml:space="preserve">Especifique quem pode rever o conteúdo para o estado.</value>
+  </data>
+  <data name="plNotify.Text">
+    <value xml:space="preserve">Avisar</value>
+  </data>
+  <data name="plNotify.Help">
+    <value xml:space="preserve">Especifique se o autor e revisores devem receber emails de notificações relacionados com o estado.</value>
+  </data>
+  <data name="plActive.Text">
+    <value xml:space="preserve">Ativo?</value>
+  </data>
+  <data name="plActive.Help">
+    <value xml:space="preserve">Especifique se o estado está ativo.</value>
+  </data>
+  <data name="dshVersions.Text">
+    <value xml:space="preserve">Histórico de Versões</value>
+  </data>
+  <data name="plMaximumVersionHistory.Text">
+    <value xml:space="preserve">Histórico</value>
+  </data>
+  <data name="plMaximumVersionHistory.Help">
+    <value xml:space="preserve">Especifique o número máximo de versões de conteúdo a reter no histórico para um módulo ( entre zero para reter todas as versões )</value>
+  </data>
+  <data name="ControlTitle_workflow.Text">
+    <value xml:space="preserve">Gerenciar Fluxos de Trabalho</value>
+  </data>
+  <data name="WorkFlowStateHelp.Text">
+    <value xml:space="preserve">Nesta seção você pode gerenciar as situações dos fluxos de trabalho. Observe que uma vez que um fluxo de trabalho está sendo usado você não pode excluie nenhuma dos estados associados com o fluxo de trabalho. Também o primeiro e último estado do fluxo de trabalho não pode ser excluído.</value>
+  </data>
+</root>

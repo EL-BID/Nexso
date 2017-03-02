@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LogTitle.Text">
+    <value xml:space="preserve">Registros da instalação do pacote</value>
+  </data>
+  <data name="Cancel.Text">
+    <value xml:space="preserve">Cancelar</value>
+  </data>
+  <data name="InvalidExt.Text">
+    <value xml:space="preserve">Extensão de arquivo inválida: {0}!</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre a Instalação de Pacotes&lt;/h1&gt;&lt;p&gt;Permite a você enviar e instalar pacotes no portal.&lt;/p&gt;</value>
+  </data>
+  <data name="NoFile.Text">
+    <value xml:space="preserve">Você precisa primeiro selecionar um arquivo para enviar, clique no botão para localizar o arquivo no seu computador.</value>
+  </data>
+  <data name="InstallCustomPackage.Text">
+    <value xml:space="preserve">Instalar Nova Extensão "{0}" </value>
+  </data>
+  <data name="InstallPackage.Text">
+    <value xml:space="preserve">Instalar Nova Extensão</value>
+  </data>
+  <data name="UploadPackage.Text">
+    <value xml:space="preserve">Enviar pacote</value>
+  </data>
+  <data name="AcceptLicense.Text">
+    <value xml:space="preserve">Aceitar a licença?</value>
+  </data>
+  <data name="Introduction.Help">
+    <value xml:space="preserve">O DotNetNuke pode ser extendido de várias maneiras. Este assistente ajudará você a enviar e instalar pacotes de extensão do DotNetNuke. O primeiro passo é selecionar no seu computador o pacote que você deseja instalar. Clique o botão Procurar para escolher o pacote a ser instalado. Quando você tiver selecionado o pacote ZIP para instalar, clique em Próxima para continuar.</value>
+  </data>
+  <data name="Introduction.Title">
+    <value xml:space="preserve">Enviar Novo Pacote de Extensão</value>
+  </data>
+  <data name="ZipCriticalError.Text">
+    <value xml:space="preserve">Erro crítico ao ler o pacote ZIP!</value>
+  </data>
+  <data name="ZipError.Text">
+    <value xml:space="preserve">Erro ao ler o pacote, veja abaixo:</value>
+  </data>
+  <data name="AcceptTerms.Text">
+    <value xml:space="preserve">Você deve aceitar os termos da licença para instalar este pacote.</value>
+  </data>
+  <data name="InstallError.Text">
+    <value xml:space="preserve">Erro ao carregar arquivos da pasta temporária, veja abaixo:</value>
+  </data>
+  <data name="InstallResults.Help">
+    <value xml:space="preserve">Veja abaixo os resultados da instalação do pacote.</value>
+  </data>
+  <data name="InstallResults.Title">
+    <value xml:space="preserve">Relatório de Instalação do Pacote</value>
+  </data>
+  <data name="PackageInfo.Help">
+    <value xml:space="preserve">A seguinte informação foi encontrada no manifesto do pacote.</value>
+  </data>
+  <data name="PackageInfo.Title">
+    <value xml:space="preserve">Informação do Pacote</value>
+  </data>
+  <data name="License.Help">
+    <value xml:space="preserve">Antes de continuar você deve aceitar os termos da licença desta extensão. Por favor reveja a licença e marque a caixa "Aceitar licença".</value>
+  </data>
+  <data name="License.Title">
+    <value xml:space="preserve">Rever Licença</value>
+  </data>
+  <data name="ReleaseNotes.Help">
+    <value xml:space="preserve">Você pode rever as notas de lançamento deste pacote.</value>
+  </data>
+  <data name="ReleaseNotes.Title">
+    <value xml:space="preserve">Notas de Lançamento</value>
+  </data>
+  <data name="IgnoreWhiteList.Text">
+    <value xml:space="preserve">Ignorar restrições de arquivos?</value>
+  </data>
+  <data name="IgnoreRestrictedFilesWarning.Text">
+    <value xml:space="preserve">AVISO: Você escolheu ignorar a verificação de tipos de arquivos restritos. Esta ação possibilita um risco de segurança para sua aplicação, e você deveria fazer isto apenas se o pacote que você está instalando é de uma fonte segura.</value>
+  </data>
+  <data name="RepairInstall.Text">
+    <value xml:space="preserve">Reparar instalação?</value>
+  </data>
+  <data name="InvalidFiles.Text">
+    <value xml:space="preserve">O pacote contém arquivos com extensões de arquivo inválidas ({0}).</value>
+  </data>
+  <data name="PackageInstalled.Text">
+    <value xml:space="preserve">O pacote já está instalado.</value>
+  </data>
+  <data name="Return.Text">
+    <value xml:space="preserve">Voltar</value>
+  </data>
+  <data name="Container.Text">
+    <value xml:space="preserve">Moldura</value>
+  </data>
+  <data name="CoreLanguageError.Text">
+    <value xml:space="preserve">O idioma núcleo para o qual este pacote de idioma está designado não está instalado. Instale o pacote de idioma núcleo antes de instalar quaisquer extensões do idioma.</value>
+  </data>
+  <data name="DependencyError.Text">
+    <value xml:space="preserve">Este pacote de idioma está designado para um extensão que parece não estar instalada.</value>
+  </data>
+  <data name="IgnoreWhiteListHelp.Text">
+    <value xml:space="preserve">O instalador mantém uma lista de arquivos permitidos (lista branca) que podem ser instalados no seu portal. Se você confia que o pacote que você está instalando é de uma fonte segura então você pode ignorar esta lista.</value>
+  </data>
+  <data name="RepairInstallHelp.Text">
+    <value xml:space="preserve">Por padrão o instalador não irá sobreescrever o mesmo pacote / versão. Se você quer que o instalador continue e repare a versão instalada atualmente então marque esta caixa. Caso contrário você não conseguirá continuar com esta instalação.</value>
+  </data>
+  <data name="BrowseFile.Text">
+    <value xml:space="preserve">Procurar aquivo:</value>
+  </data>
+  <data name="BrowseFileHelp.Text">
+    <value xml:space="preserve">Use o botão abaixo para navegar no seu sistema de arquivos local e localizar o pacote de extensão que você deseja instalar, então clique em Próxima para continuar.</value>
+  </data>
+  <data name="Warnings.Help">
+    <value xml:space="preserve">Se você chegou nesta página é porque o instalador precisa de mais algumas informações antes de continuar.</value>
+  </data>
+  <data name="Warnings.Title">
+    <value xml:space="preserve">Resultados do Envio</value>
+  </data>
+  <data name="AcceptLicense.Help">
+    <value xml:space="preserve">Marque esta caixa para aceitar os termos da licença.</value>
+  </data>
+  <data name="ControlTitle_install.Text">
+    <value xml:space="preserve">Instalar Extensão</value>
+  </data>
+  <data name="FileSizeRestriction.Text">
+    <value xml:space="preserve">Seu portal está configurado com um tamanho máximo para envio de arquivo de {0} MB. </value>
+  </data>
+</root>

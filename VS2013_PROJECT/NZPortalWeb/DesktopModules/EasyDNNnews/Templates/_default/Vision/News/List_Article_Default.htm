@@ -1,0 +1,47 @@
+<!--TemplateGroup:listArticleDefault-->
+<!--ArticleTemplate-->
+<div class="EDN_article">
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	<h2><a class="articleTitle" href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+	[EasyDNNnews:IfExists:SubTitle]
+	<h3 class="articleTitle articleSubTitle">[EasyDNNnews:SubTitle]</h3>
+	[EasyDNNnews:EndIf:SubTitle]
+	<ul class="EDN_meta-details">
+		<li class="EDN_publish-date">
+		[EasyDNNnews:IfNotExists:Event]
+		[EasyDNNnews:FormatedDate: d MMMM yyyy]
+		[EasyDNNnews:EndIf:Event]
+		[EasyDNNnews:IfExists:Event]
+		[EasyDNNnews:EventDate]
+		[EasyDNNnews:EndIf:Event]</li>
+		<li class="EDN_author">[EasyDNNnewsLocalizedText:Author]: [EasyDNNnews:Author:Link]</li>
+		<li class="EDN_number-views">[EasyDNNnewsLocalizedText:Numberofviews]: [EasyDNNnews:NumberOfViews]</li>
+		<li class="EDN_comments">[EasyDNNnews:Comments] [EasyDNNnewsLocalizedText:Comments]</li>
+	</ul>
+	[EasyDNNnews:IfExists:Image]
+	<div class="EDN_mediaContainer">
+		<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]"/></a>
+	</div>
+	[EasyDNNnews:EndIf:Image]
+	<div class="EDN_article_content">
+		[EasyDNNnews:Summary]
+		<div class="EDN_readMoreButtonWrapper"><a class="EDN_readmore EDN_readMoreButton" href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:IfNotExists:EventRegistration][EasyDNNnewsLocalizedText:Read][EasyDNNnews:EndIf:EventRegistration][EasyDNNnews:IfExists:EventRegistration][EasyDNNnewsLocalizedText:Register][EasyDNNnews:EndIf:EventRegistration]</a></div>
+	</div>
+</div>
+<!--ArticleEnd-->
+<!--ArticleRepeat:Before:-->
+<!--RepeatEnd:Before:-->
+
+<!--ArticleRepeat:After:-->
+[EasyDNNnews:IfExists:RSS]
+<div class="EDN_article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

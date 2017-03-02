@@ -1,0 +1,121 @@
+﻿/* ==========================================================================
+   Solution - solution page styles for Nexso 2
+   ========================================================================== */
+
+/* The Solution page shares its layout with other pages. The SASS can be 
+		found in _styles.scss */
+
+.solution {
+	// Generic styling of the icons of the metadata 
+	.locations li,
+	.meta {		
+		@include clearfix();
+		display: block;
+		list-style: none;
+		margin: 0;
+		line-height: 1.5rem;
+		padding: 0.25rem 0 0.25rem 1.5rem;
+		position: relative;
+		&:before {
+			@extend .nexso-icon;
+			position: absolute;
+			left: 0.25rem;
+			top: 0.5rem;
+		}
+	}
+	.meta.tag:before { @extend .icon-tag5; }
+	.meta.users:before { @extend .icon-users; }
+	.meta.link:before { @extend .icon-link4; }
+	.meta.coins:before { @extend .icon-coins; }
+	.meta.calendar:before { @extend .icon-calendar; }
+	.locations li:before { content: "\e610" !important; }
+
+	.content-wrapper {
+		.meta-wrapper {
+			@include clearfix();
+			border: 1px $light-touch solid;
+			border-width: 1px 0;
+			display: block;
+			font-size: 0.875rem;
+			margin: 1rem 0 0.5rem 0;
+			ul {
+				@include clearfix();		
+				margin: 0;
+			}
+			li {
+				float: left;
+				font-size: 0.875rem;
+			}
+			li + li:before {
+    		content: ", ";
+			}
+		}
+	}
+	aside {
+		.map,
+		.documents {
+			div {
+				margin-bottom: 0;
+			}
+		}
+		.locations {
+			margin-top: 2rem;
+			li {
+				padding: 0.25rem 0 0.25rem 2rem;
+				&:before {
+					font-size: 1.25rem;
+					left: 6px;
+					top: 6px;
+				}
+			}
+			.title {
+				@extend .title-s;
+				font-weight: bold;
+			}
+		}
+		.organization {
+			background-color: #f2f2f2;
+			border: 1px $light-touch solid;
+			.media {
+				background-color: #fff;
+				border-bottom: 1px $light-touch solid;
+				margin-bottom: 0;
+				img {
+					display: block;
+					margin: 0 auto;
+					padding: 0.5rem 0;
+				}
+			}
+			.description {
+				margin-bottom: 0;
+				padding: 1rem;
+				p:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.author {
+			.details:before {
+				@extend .nexso-icon;
+				@extend .icon-user;
+				@include border-radius(2rem);
+				margin-right: 0.75rem;
+				background-color: $light-touch;
+				color: $body-font-color;
+				float: left;
+				font-size: 2rem;
+				height: 3.5rem;
+				line-height: 3.5rem;
+				text-align: center;
+				width: 3.5rem;
+			}
+			a {
+				color: $body-font-color;
+			}
+			h1 {
+				@extend .title-s;
+				font-weight: bold;
+			}
+		}
+	}
+}

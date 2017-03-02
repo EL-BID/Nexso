@@ -1,0 +1,70 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArchive]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsArchive]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsArchive]', N'{objectQualifier}EasyDNNNewsArchive', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsArchive_1', N'PK_{objectQualifier}EasyDNNNewsArchive_1', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArchive_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsArchive_EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNews]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNews]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNews]', N'{objectQualifier}EasyDNNNews', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNews', N'PK_{objectQualifier}EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNews_EasyGallery', N'FK_{objectQualifier}EasyDNNNews_EasyGallery', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [Approved]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [NumberOfViews]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [RatingValue]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [RatingCount]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [Active]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [GalleryIntegration]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [ArtGalleryID]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [ShowArtGAllery]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [ShowAdsense]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [NumberOfComments]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [DateAdded]
+END TRY
+BEGIN CATCH
+END CATCH
+
+BEGIN TRY
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [OriginalImage]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [ShowAdsense]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP COLUMN [AllowAnonymousComments]
+END TRY
+BEGIN CATCH
+END CATCH
+
+BEGIN TRY
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [OriginalImage]
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] DROP COLUMN [AllowAnonymousComments]
+END TRY
+BEGIN CATCH
+END CATCH

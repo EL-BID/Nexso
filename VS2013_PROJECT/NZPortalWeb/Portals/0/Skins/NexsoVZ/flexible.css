@@ -1,0 +1,1583 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+/* ==========================================================================
+   Fix blog list view display 04/02/15
+   ========================================================================== */
+
+ul#latest-blog-posts-list li.card-wrapper {
+  width: 33.33333%;
+}
+
+/* ==========================================================================
+   Page styles for EXR 2015 Challenge
+   ========================================================================== */
+
+.exr2015 > header > .row {
+        max-width: none;
+        margin: 0;
+        }
+
+.exr2015 > header > .row > .image-container {
+        padding: 0 !important;
+        position:relative;
+        width:100%;
+      }
+
+.exr2015  nav.top-bar {
+    text-align: center !important;
+    overflow:visible;
+    }
+
+.exr2015 nav.top-bar section.top-bar-section ul>li>a {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.exr2015 h1 {
+	text-transform: uppercase;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.exr2015 section#opener {
+	color: rgb(255, 255, 255);
+  	text-transform: uppercase;
+  	background: rgb(202, 199, 10);
+  	padding: 5rem 0px;
+}
+
+.exr2015 section#opener h1 {
+	color: #016040;
+}
+
+.exr2015 > section.timeline > .row > .columns > .banner {
+	background: #014d33;
+}
+
+.exr2015 section.timeline .banner .step-navigation #header:before {
+	width: 53% !important;
+}
+
+.exr2015  section#challenge-list, .exr2015  section#partners  {
+	padding: 5rem 0;
+}
+
+.exr2015  section#partners img {
+padding: 2rem;
+}
+
+.exr2015  section#challenge-list em.icon {
+	font-size: 4rem;
+  	color: #ccc;
+}
+
+.exr2015 section.challenge-list p {
+  margin-top: 1.5rem;
+}
+
+.exr2015 section.foursquare:before,.exr2015 section.foursquare ul.pages:before,.exr2015 section.foursquare:after,.exr2015 section.foursquare ul.pages:after {
+      content:" ";
+      display:table;
+      }
+
+.exr2015 section.foursquare:after,.exr2015 section.foursquare ul.pages:after {
+clear:both;
+}
+
+.exr2015 > section.foursquare {
+    clear: both;
+    background: #fff;
+    zoom:1;
+    }
+
+.exr2015 > section.foursquare > ul {
+      margin: 0 !important;
+        list-style: none;
+    }
+
+.exr2015 > section.foursquare > ul.pages {
+      clear: both;
+      zoom:1;
+      }
+
+.exr2015 > section.foursquare > ul.pages > li {
+        list-style: none;
+        padding: 2rem 1rem;
+        text-align: center !important;
+        color: #fff;
+        position:relative;
+        width:100%;
+        float:left;
+}
+
+.exr2015 > section.foursquare > ul.pages > li > .icons {
+          font-size: 2rem;
+            color: #fff;
+        }
+
+.exr2015 > section.foursquare > ul.pages > li > h1 {
+              font-size: 24px;
+              color: #fff;
+              font-weight: normal;
+              letter-spacing:1px;
+				text-transform: uppercase;
+            }
+.exr2015 section.foursquare ul.pages li p {
+              color: #fff;
+              font-size: 1rem;
+              line-height: 1.4rem;
+}
+
+.exr2015 > section.foursquare > ul.pages > li > p a.view-more {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #fff;
+}
+
+.exr2015 > section.foursquare > ul.pages > li > a {
+                color: #fff;
+            border-bottom: 1px #fff dotted;
+            padding-bottom: 2px;
+              }
+
+.exr2015 > section.foursquare > ul.pages > li.one {
+	background: #014d33;
+}
+.exr2015 > section.foursquare > ul.pages > li.two {
+	background: #cac70a;
+}
+.exr2015 > section.foursquare > ul.pages > li.three {
+	background: #0088bc;
+}
+.exr2015 > section.foursquare > ul.pages > li.four {
+	background: #ff8025;
+}
+
+.exr2015 section.foursquare p a.view-more {
+  color: #000000;
+  border-bottom: dotted 1px #fff;
+}
+
+.exr2015 > section.participa {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 40.063em) {
+
+.exr2015 > header {
+visibility:visible;
+}
+
+
+.exr2015 > section.foursquare > ul.pages > li {
+height:21.25rem;
+position:relative;
+  padding-left: 3rem;
+  padding-right: 3rem;
+width:50%;
+float:left;
+}
+
+.exr2015 nav.top-bar section.top-bar-section {
+  display: block;
+}
+
+}
+
+@media screen and (min-width: 60.063em) {
+
+.exr2015 > section.foursquare > ul.pages > li {
+height:18rem;
+}
+
+.exr2015 nav.top-bar section.top-bar-section {
+display: inline-block;
+}
+
+}
+
+/* ==========================================================================
+   Example Solution styles for EXR2015 Challenge
+   ========================================================================== */
+
+#example_solutions .actions:after, #example_solutions .actions .drop2 .themes ul:after,
+#example_solutions .actions .drop2 .beneficiaries ul:after,
+#example_solutions .actions .drop2 .deliveryFormat ul:after,
+#example_solutions .solution-grid:after {
+  clear: both;
+}
+
+#example_solutions .actions:before, #example_solutions .actions .drop2 .themes ul:before,
+#example_solutions .actions .drop2 .beneficiaries ul:before,
+#example_solutions .actions .drop2 .deliveryFormat ul:before,
+#example_solutions .solution-grid:before,
+#example_solutions .actions:after,
+#example_solutions .actions .drop2 .themes ul:after,
+#example_solutions .actions .drop2 .beneficiaries ul:after,
+#example_solutions .actions .drop2 .deliveryFormat ul:after,
+#example_solutions .solution-grid:after {
+  content: " ";
+  display: table;
+}
+
+#example_solutions .actions, #example_solutions .actions .drop2 .themes ul,
+#example_solutions .actions .drop2 .beneficiaries ul,
+#example_solutions .actions .drop2 .deliveryFormat ul,
+#example_solutions .solution-grid {
+  *zoom: 1;
+}
+
+#example_solutions .solution .meta dl.link:before {
+  content: "\e60d";
+}
+
+#example_solutions .solution .meta dl.location:before {
+  content: "\e60f";
+}
+
+#example_solutions .solution .meta dl.themes:before {
+  content: "\e617";
+}
+
+#example_solutions .solution .meta dl.target:before {
+  content: "\e618";
+}
+
+#example_solutions .actions .filters-toggle:hover, #example_solutions .actions .drop2 .filter.on:hover,
+#example_solutions .actions .drop2 .filters-apply:hover,
+#example_solutions #show-more-trigger:hover,
+#example_solutions .actions .filters-toggle:focus,#example_solutions .actions .drop2 .filter.on:focus,
+#example_solutions .actions .drop2 .filters-apply:focus,
+#example_solutions #show-more-trigger:focus {
+  background-color: #2c6b97;
+}
+
+#example_solutions .actions .filters-toggle:hover,
+#example_solutions .actions .drop2 .filter.on:hover,
+#example_solutions .actions .drop2 .filters-apply:hover,
+#example_solutions #show-more-trigger:hover,
+#example_solutions .actions .filters-toggle:focus,
+#example_solutions .actions .drop2 .filter.on:focus,
+#example_solutions .actions .drop2 .filters-apply:focus,
+#example_solutions #show-more-trigger:focus {
+  color: white;
+}
+
+#example_solutions .actions .filters-toggle:hover,
+#example_solutions .actions .drop2 .filter.on:hover,
+#example_solutions .actions .drop2 .filters-apply:hover,
+#example_solutions #show-more-trigger:hover,
+#example_solutions .actions .filters-toggle:visited,
+#example_solutions .actions .drop2 .filter.on:visited,
+#example_solutions .actions .drop2 .filters-apply:visited,
+#example_solutions #show-more-trigger:visited,
+#example_solutions .actions .filters-toggle:link,
+#example_solutions .actions .drop2 .filter.on:link,
+#example_solutions .actions .drop2 .filters-apply:link,
+#example_solutions #show-more-trigger:link,
+#example_solutions .actions .filters-toggle:active,
+#example_solutions .actions .drop2 .filter.on:active,
+#example_solutions .actions .drop2 .filters-apply:active,
+#example_solutions #show-more-trigger:active {
+  color: #fff;
+}
+
+#example_solutions {
+  /* General resets */
+}
+
+#example_solutions ul {
+  margin: 0;
+  list-style: none;
+}
+#example_solutions .intro {
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+#example_solutions .actions-wrapper {
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  float: left;
+}
+#example_solutions .actions {
+  position: relative;
+  margin-bottom: 3rem;
+  border: 1px #e5e5e5 solid;
+  border-width: 1px 0;
+  text-align: center;
+  padding: 1rem 0;
+}
+#example_solutions .actions .filters-toggle {
+  font-size: 1rem;
+  margin: 0 0 0 0 !important;
+}
+
+#example_solutions .actions .drop2 {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 5rem;
+  right: 0;
+  width: 100%;
+  padding: 1rem;
+  border: 1px #e5e5e5 solid;
+  background-color: #FFF;
+  text-align: left;
+}
+#example_solutions .actions .drop2:before {
+  position: absolute;
+  z-index: 1;
+  top: -1.8rem;
+  left: 50%;
+  margin-left: -1rem;
+  font-size: 2rem;
+  content: "\e61d";
+  color: #FFF;
+  text-shadow: 0 -1px #848484;
+}
+#example_solutions .actions .drop2 .themes ul,
+#example_solutions .actions .drop2 .beneficiaries ul,
+#example_solutions .actions .drop2 .deliveryFormat ul {
+  margin: 0 0 1rem 0;
+}
+#example_solutions .actions .drop2 .themes ul li,
+#example_solutions .actions .drop2 .beneficiaries ul li,
+#example_solutions .actions .drop2 .deliveryFormat ul li, {
+  float: left;
+  margin: 0 0.5rem 0.5rem 0;
+}
+#example_solutions .actions .drop2 .filter {
+  font-size: 0.875rem !important;
+  margin: 0 0 0 0 !important;
+  padding: 0.25rem !important;
+  font-weight: normal !important;
+}
+#example_solutions .actions .drop2 .filter.on {
+  border-width: 1px;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+  padding: 0.25rem;
+  font-weight: 700 !important;
+}
+#example_solutions .actions .drop2 .filters-apply {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  clear: both;
+}
+
+@media only screen and (min-width: 40.063em) {
+	#example_solutions .actions .filters-toggle {
+	    float: right;
+	  }
+	#example_solutions .actions .drop2 {
+	    width: 75%;
+	  }
+	#example_solutions .actions .drop2:before {
+	    left: 85%;
+	    margin-left: 0;
+	  }
+}
+	
+#example_solutions .solution-grid {
+  min-height: 25rem;
+}
+#example_solutions .solution {
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  float: left;
+  margin-bottom: 3rem;
+}
+#example_solutions .solution .wrapper {
+  border: 1px #e5e5e5 solid;
+}
+#example_solutions .solution .media a {
+  display: block;
+}
+#example_solutions .solution .meta {
+  padding: 0;
+}
+#example_solutions .solution .meta span, #example_solutions .solution .meta p, #example_solutions .solution .meta a, #example_solutions .solution .meta dt, #example_solutions .solution .meta dd {
+  font-size: 0.875rem;
+}
+#example_solutions .solution .meta h1 {
+  margin-top: 1rem;
+color: #3f3f3f;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+#example_solutions .solution .meta .introduction,
+#example_solutions .solution .meta dl {
+  padding: 0 1rem;
+}
+#example_solutions .solution .meta .introduction .organization {
+  display: block;
+  margin-bottom: 1rem;
+}
+#example_solutions .solution .meta dl {
+  position: relative;
+  border-top: 1px #e5e5e5 solid;
+  margin: 0;
+}
+#example_solutions .solution .meta dl dd {
+  margin: 0;
+  padding: 0.75rem 0 0.75rem 1.5rem;
+  line-height: 1.5rem;
+}
+#example_solutions .solution .meta dl:before {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 40.063em) {
+	#example_solutions .solution{
+	    position: relative;
+	    padding-left: 1rem;
+	    padding-right: 1rem;
+	    width: 50%;
+	    float: left;
+	  }
+	#example_solutions .solution:nth-child(2n+1) {
+	    clear: left;
+	  }
+}
+
+@media only screen and (min-width: 60.063em) {
+	#example_solutions .solution{
+	    position: relative;
+	    padding-left: 1rem;
+	    padding-right: 1rem;
+	    width: 33.33333%;
+	    float: left;
+	  }
+	#example_solutions .solution:nth-child(2n+1) {
+	    clear: none;
+	  }
+	#example_solutions .solution:nth-child(3n+1){
+	    clear: left;
+	  }
+}
+
+#example_solutions .solution.placeholder-solution .media{
+  background: #E7E7E7;
+  height: 250px;
+}
+#example_solutions .solution.placeholder-solution .title.placeholder {
+  background: #E7E7E7;
+  margin: 1rem 0;
+}
+#example_solutions .solution.placeholder-solution .introduction p.placeholder {
+  background: #E7E7E7;
+  margin-top: 1rem;
+  font-size: 0.625rem;
+  line-height: 0.625rem;
+  margin: 0 0 0.625rem 0;
+}
+#example_solutions .solution.placeholder-solution .organization.placeholder {
+  display: block;
+  background: #E7E7E7;
+  margin: 2rem 0 0.625rem 0;
+  width: 30%;
+  font-size: 0.625rem;
+  line-height: 0.625rem;
+}
+#example_solutions .solution.placeholder-solution dd span.placeholder {
+  display: block;
+  font-size: 0.5rem;
+  background: #E7E7E7;
+  font-size: 0.625rem;
+  line-height: 0.625rem;
+  margin: 7px 0;
+}
+#example_solutions #show-more-trigger {
+  display: block;
+  margin: 0 auto 4rem auto;
+}
+#example_solutions #show-more-trigger.disabled {
+  opacity: 0.3;
+}
+#example_solutions #loading {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 14rem;
+  height: 7rem;
+  margin: -3.5rem 0 0 -7rem;
+  background: rgba(151, 151, 151, 0.6);
+  border: 1px solid rgba(126, 126, 126, 0.4);
+  border-bottom-width: 0.375rem;
+  color: #FFF;
+  font-weight: 700;
+  text-align: center;
+  line-height: 7rem;
+  font-size: 1.25rem;
+}
+#example_solutions #loading.on {
+  display: block;
+}
+
+/* ==========================================================================
+   Page styles for VPC 2015 Challenge
+   ========================================================================== */
+
+   .vpc2015 > .no-sidebar > .content-wrapper > h1 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 900;
+			font-size: 44px;
+			letter-spacing: 5px;
+			color: #000000;  
+			text-transform: uppercase; 
+        	}
+ .vpc2015 > .no-sidebar > .content-wrapper > h2 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700;
+			font-size: 30px;
+			letter-spacing: 5px;
+			color: #000000;
+			margin-top: 2rem;
+          	text-transform: uppercase; 
+          	}
+ .vpc2015 > .no-sidebar > .content-wrapper > h3, .vpc2015 > .no-sidebar > .content-wrapper > .partners > .columns > h3 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 30px;
+            letter-spacing: 5px;
+            font-weight: 400;
+          color: #000000;
+          text-transform: uppercase;
+          }
+.vpc2015 > .no-sidebar > .content-wrapper > .top-spacer {
+margin-top: 2rem;
+}
+ .vpc2015 > .no-sidebar > .content-wrapper > p, .vpc2015 > .no-sidebar > .content-wrapper > ul, .vpc2015 > .no-sidebar > .content-wrapper > li,  .vpc2015 > .no-sidebar > .content-wrapper > ol, .vpc2015 > .no-sidebar > .content-wrapper > dd, .vpc2015 > .no-sidebar > .content-wrapper > dt, .vpc2015 > .no-sidebar > .content-wrapper > dl,  .vpc2015 > .no-sidebar > .content-wrapper > .row > .columns > p, .vpc2015 > .no-sidebar > .content-wrapper > .row > .columns > h1, .vpc2015 > .no-sidebar > .content-wrapper > .partners > .columns > p, .vpc2015 > .no-sidebar > .content-wrapper > .partners > .columns > ul, .vpc2015 > .no-sidebar > .content-wrapper > .partners > .columns > li, .vpc2015 > .no-sidebar > .content-wrapper > .partners > .columns > dd, .vpc2015 > .no-sidebar > .content-wrapper > .partners > .columns > dt, .vpc2015 > .no-sidebar > .content-wrapper > .partners > .columns > dl {
+            font-family: 'Roboto Condensed', sans-serif;
+            line-height: 175%;
+            font-weight: 400;
+          }
+ .vpc2015 > .no-sidebar > .content-wrapper > .row > .columns > .round {
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+        	}
+
+.vpc2015 > .no-sidebar .content-wrapper li {
+  			list-style: none;
+			}
+ .vpc2015 > .confirmation > .content-wrapper > header {
+            padding: 2rem;
+          }
+
+.vpc2015 > .contain-to-grid, .vpc2015 > .contain-to-grid > .top-bar, .vpc2015 > .contain-to-grid > .top-bar > .top-bar-section, .vpc2015 > .contain-to-grid > .top-bar > .top-bar-section li:not(.has-form) a:not(.button), .vpc2015 > .contain-to-grid > .top-bar > .top-bar-section > ul {
+background: #000000;
+}
+
+/* ==========================================================================
+   Homepage - homepage styles for VPC 2015 Challenge
+   ========================================================================== */
+
+.vpc2015 > header {
+      text-align: center !important;
+      background: #ffff00;
+      padding: 0;
+      visibility:hidden;
+      }
+
+.vpc2015 > header > .row {
+        max-width: none;
+        margin: 0;
+        }
+
+.vpc2015 > header > .row > .image-container {
+        padding: 0 !important;
+        position:relative;
+        width:100%;
+      }
+
+.vpc2015  nav.top-bar {
+    text-align: center !important;
+    overflow:visible;
+    }
+.vpc2015 nav.top-bar section.top-bar-section {
+display: inline-block;
+}
+
+.vpc2015 nav.top-bar section.top-bar-section ul li {
+	border-left: solid #ffff00 1px;
+}
+.vpc2015 nav.top-bar section.top-bar-section ul li:first-of-type {
+	border-left: none;
+}
+.vpc2015 nav.top-bar section.top-bar-section ul li:last-of-type {
+	border-left: none;
+}
+
+.vpc2015 nav.top-bar section.top-bar-section ul>li>a {
+    font-family:'Roboto Condensed', sans-serif;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	font-weight: bold;
+    }
+
+.vpc2015 > section.call {
+    padding: 6rem 0;
+    text-align: center !important;
+    }
+
+.vpc2015 section.call p, .vpc2015 section.call ul li {
+      color: #000000;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      }
+
+.vpc2015  section.call  p.text-justify {
+        text-align:justify;
+      }
+
+.vpc2015  section.call  p.highlight {
+        color: #001D95;
+font-weight: 700;
+      }
+
+.vpc2015 section.call .symbol-l {
+  font-size: 5rem;
+color:#000000;
+}
+
+.vpc2015 section.call .box-out {
+  font-weight: bold;
+}
+
+.vpc2015 section.call .box-out p.text-justify {
+  font-weight: bold;
+}
+
+.vpc2015 section.call .box-out {
+  background: #ffff00;
+  padding: 1.5rem;
+  margin-bottom:2rem;
+}
+
+.vpc2015  section.call h1 {
+      color: #000000;
+	  font-family: 'Roboto Condensed', sans-serif;
+	  font-weight: bold;
+	  letter-spacing: 5px;
+	  text-transform: uppercase;
+	  font-size: 2rem;
+      }
+
+.vpc2015 > section.timeline {
+    background: #000;
+    padding: 6rem 0;
+    text-align: center !important;
+    font-weight: normal;
+    }
+
+.vpc2015 > section.timeline > .row > .columns > .banner {
+background-color: #000;
+}
+
+.vpc2015 > section.timeline > .row > .columns > .banner .step-navigation #header a, .vpc2015 > section.timeline > .row > .columns > .banner .step-navigation  #header .currentStep  .step-title {
+  color: #fff;
+font-family: 'Roboto Condensed', sans-serif;
+text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.vpc2015 section.timeline h1 {
+      color: #fff;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing:5px;
+		font-size: 44px;
+    }
+
+ .vpc2015 section.latest-solutions header.intro h1 {
+      color: #000;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing:5px;
+		font-size: 44px;
+    }
+
+.vpc2015 > section.timeline > .row > .columns > .banner > .row > .step-navigation > #header:before {
+        width: 54%;
+      }
+.vpc2015 > section.timeline > .row > .columns > .banner > .row > .step-navigation > .step-title {
+        font-size: 0.9rem;
+        font-weight: normal;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: #fff;
+      }
+
+.vpc2015 section.foursquare:before,.vpc2015 section.foursquare ul.pages:before,.vpc2015 section.foursquare:after,.vpc2015 section.foursquare ul.pages:after {
+      content:" ";
+      display:table;
+      }
+
+.vpc2015 section.foursquare:after,.vpc2015 section.foursquare ul.pages:after {
+clear:both;
+}
+
+.vpc2015 > section.foursquare {
+    clear: both;
+    background: #fff;
+    padding: 6rem 0;
+    zoom:1;
+    }
+
+.vpc2015 > section.foursquare > ul {
+      margin: 0 !important;
+        list-style: none;
+    }
+.vpc2015 section.foursquare p {
+      color:#000000;
+    }
+
+.vpc2015 > section.foursquare > ul.pages {
+      clear: both;
+      zoom:1;
+      }
+
+.vpc2015 > section.foursquare > ul.pages > li {
+        list-style: none;
+        padding: 2rem 1rem;
+        text-align: center !important;
+        color: #fff;
+        position:relative;
+        width:100%;
+        float:left;
+}
+
+.vpc2015 section.foursquare .icons {
+          font-size: 2rem;
+            color: #000000;
+        }
+
+.vpc2015 section.foursquare h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.vpc2015 > section.foursquare > .row {
+	  border-bottom: 1px solid #000;
+	  margin-bottom: 2rem;
+padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.vpc2015 > section.foursquare ul li {
+  list-style: disc;
+  font-family: 'Roboto Condensed', sans-serif;
+  color:#000000;
+}
+
+.vpc2015 > section.foursquare > ul.pages > li > h1 {
+              font-family: 'Roboto Condensed', sans-serif;
+              font-size: 24px;
+              color: #001D95;
+              font-weight: normal;
+              letter-spacing:1px;
+text-transform: uppercase;
+            }
+.vpc2015 section.foursquare ul.pages li p {
+              color: #fff;
+              font-family: 'Roboto Condensed', sans-serif;
+              font-size: 1rem;
+              line-height: 1.4rem;
+}
+
+.vpc2015 section.foursquare p a.view-more {
+  background: #ffff00;
+  padding: 5px 8px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+.vpc2015 section.foursquare h3, .vpc2015 section.foursquare p {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.vpc2015 > section.foursquare > ul.pages > li > p a.view-more {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #fff;
+}
+
+.vpc2015 > section.foursquare > ul.pages > li > a {
+                color: #fff;
+            border-bottom: 1px #fff dotted;
+            padding-bottom: 2px;
+              }
+.vpc2015 > section.foursquare > ul.pages > li.one {
+        background-color: #000000;
+      }
+.vpc2015 > section.foursquare > ul.pages > li.two {
+        background-color: #4ec8b5;
+      }
+.vpc2015 > section.foursquare > ul.pages > li.three {
+        background-color: #b3c8e6;
+      }
+.vpc2015 > section.foursquare > ul.pages > li.four {   
+        background-color: #000000;
+      }
+.vpc2015 > section.judges {
+    background: #fff;
+    text-align: center !important;
+    }
+.vpc2015 > section.judges > .icons {
+      font-size: 3rem;
+        color: #000000;
+    }
+.vpc2015 > section.judges > h1 {
+      font-family: 'Roboto Condensed', sans-serif;
+      color: #000000;
+      font-weight: 700;
+      font-size: 44px;
+      margin-top:1.5rem;
+      margin-bottom:0;
+      letter-spacing:0;
+text-transform: uppercase;
+    }
+
+.vpc2015 > section.judges > h1 > a {
+      color:#000000;
+      }
+
+.vpc2015 > section.judges > .row > ul > li > a > img.round {
+          -webkit-border-radius:75px;
+          border-radius: 75px;
+          border: 5px solid #fff;
+          width: 150px;
+          }
+.vpc2015 > section.judges > .row > ul > li > h1 {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size:1.3rem;
+        font-weight: 400;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        letter-spacing:1px;
+text-transform: uppercase;
+        }
+.vpc2015 > section.judges > .row > ul > li > h1 > a {
+          color: #4EC8B5;
+        }
+
+.vpc2015 > section.judges > .row > ul > li > h2, .vpc2015 > section.judges > .row > ul > li > h3 {
+        font-family: 'Roboto Condensed', sans-serif;
+        color: #001D95;
+        font-size: 0.9rem;
+        font-weight: 400;
+letter-spacing: 1px;
+        line-height: 1.4rem;
+        margin-bottom: 0rem;
+      }
+
+.vpc2015 > nav.top-bar > section.top-bar-section {
+        display:inline-block;
+        }
+
+.vpc2015 > section.participa {
+text-align: center;
+margin-top: 2rem;
+}
+
+@media screen and (min-width: 40.063em) {
+
+.vpc2015 > header {
+visibility:visible;
+}
+
+.vpc2015 > nav.top-bar {
+overflow:hidden;
+}
+
+.vpc2015 > section.foursquare > ul.pages > li {
+height:21.25rem;
+position:relative;
+  padding-left: 3rem;
+  padding-right: 3rem;
+width:50%;
+float:left;
+}
+
+}
+
+@media screen and (min-width: 60.063em) {
+
+.vpc2015 > section.foursquare > ul.pages > li {
+height:18rem;
+}
+
+}
+
+/* ==========================================================================
+   Latest Solution styles for VPC 2015 Challenge
+   ========================================================================== */
+
+#vpc_solutions .actions:after, #vpc_solutions .actions .drop2 .themes ul:after,
+#vpc_solutions .actions .drop2 .beneficiaries ul:after,
+#vpc_solutions .actions .drop2 .deliveryFormat ul:after,
+#vpc_solutions .solution-grid:after {
+  clear: both;
+}
+
+#vpc_solutions .actions:before, #vpc_solutions .actions .drop2 .themes ul:before,
+#vpc_solutions .actions .drop2 .beneficiaries ul:before,
+#vpc_solutions .actions .drop2 .deliveryFormat ul:before,
+#vpc_solutions .solution-grid:before,
+#vpc_solutions .actions:after,
+#vpc_solutions .actions .drop2 .themes ul:after,
+#vpc_solutions .actions .drop2 .beneficiaries ul:after,
+#vpc_solutions .actions .drop2 .deliveryFormat ul:after,
+#vpc_solutions .solution-grid:after {
+  content: " ";
+  display: table;
+}
+
+#vpc_solutions .actions, #vpc_solutions .actions .drop2 .themes ul,
+#vpc_solutions .actions .drop2 .beneficiaries ul,
+#vpc_solutions .actions .drop2 .deliveryFormat ul,
+#vpc_solutions .solution-grid {
+  *zoom: 1;
+}
+
+#vpc_solutions .solution .meta dl.link:before {
+  content: "\e60d";
+}
+
+#vpc_solutions .solution .meta dl.location:before {
+  content: "\e60f";
+}
+
+#vpc_solutions .solution .meta dl.themes:before {
+  content: "\e617";
+}
+
+#vpc_solutions .solution .meta dl.target:before {
+  content: "\e618";
+}
+
+#vpc_solutions .actions .filters-toggle:hover, #vpc_solutions .actions .drop2 .filter.on:hover,
+#vpc_solutions .actions .drop2 .filters-apply:hover,
+#vpc_solutions #show-more-trigger:hover,
+#vpc_solutions .actions .filters-toggle:focus,#vpc_solutions .actions .drop2 .filter.on:focus,
+#vpc_solutions .actions .drop2 .filters-apply:focus,
+#vpc_solutions #show-more-trigger:focus {
+  background-color: #2c6b97;
+}
+
+#vpc_solutions .actions .filters-toggle:hover,
+#vpc_solutions .actions .drop2 .filter.on:hover,
+#vpc_solutions .actions .drop2 .filters-apply:hover,
+#vpc_solutions #show-more-trigger:hover,
+#vpc_solutions .actions .filters-toggle:focus,
+#vpc_solutions .actions .drop2 .filter.on:focus,
+#vpc_solutions .actions .drop2 .filters-apply:focus,
+#vpc_solutions #show-more-trigger:focus {
+  color: white;
+}
+
+#vpc_solutions .actions .filters-toggle:hover,
+#vpc_solutions .actions .drop2 .filter.on:hover,
+#vpc_solutions .actions .drop2 .filters-apply:hover,
+#vpc_solutions #show-more-trigger:hover,
+#vpc_solutions .actions .filters-toggle:visited,
+#vpc_solutions .actions .drop2 .filter.on:visited,
+#vpc_solutions .actions .drop2 .filters-apply:visited,
+#vpc_solutions #show-more-trigger:visited,
+#vpc_solutions .actions .filters-toggle:link,
+#vpc_solutions .actions .drop2 .filter.on:link,
+#vpc_solutions .actions .drop2 .filters-apply:link,
+#vpc_solutions #show-more-trigger:link,
+#vpc_solutions .actions .filters-toggle:active,
+#vpc_solutions .actions .drop2 .filter.on:active,
+#vpc_solutions .actions .drop2 .filters-apply:active,
+#vpc_solutions #show-more-trigger:active {
+  color: #fff;
+}
+
+#vpc_solutions {
+  /* General resets */
+}
+
+#vpc_solutions ul {
+  margin: 0;
+  list-style: none;
+}
+#vpc_solutions .intro {
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+#vpc_solutions .actions-wrapper {
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  float: left;
+}
+#vpc_solutions .actions {
+  position: relative;
+  margin-bottom: 3rem;
+  border: 1px #e5e5e5 solid;
+  border-width: 1px 0;
+  text-align: center;
+  padding: 1rem 0;
+}
+#vpc_solutions .actions .filters-toggle {
+  font-size: 1rem;
+  margin: 0 0 0 0 !important;
+}
+
+#vpc_solutions .actions .drop2 {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 5rem;
+  right: 0;
+  width: 100%;
+  padding: 1rem;
+  border: 1px #e5e5e5 solid;
+  background-color: #FFF;
+  text-align: left;
+}
+#vpc_solutions .actions .drop2:before {
+  position: absolute;
+  z-index: 1;
+  top: -1.8rem;
+  left: 50%;
+  margin-left: -1rem;
+  font-size: 2rem;
+  content: "\e61d";
+  color: #FFF;
+  text-shadow: 0 -1px #848484;
+}
+#vpc_solutions .actions .drop2 .themes ul,
+#vpc_solutions .actions .drop2 .beneficiaries ul,
+#vpc_solutions .actions .drop2 .deliveryFormat ul {
+  margin: 0 0 1rem 0;
+}
+#vpc_solutions .actions .drop2 .themes ul li,
+#vpc_solutions .actions .drop2 .beneficiaries ul li,
+#vpc_solutions .actions .drop2 .deliveryFormat ul li, {
+  float: left;
+  margin: 0 0.5rem 0.5rem 0;
+}
+#vpc_solutions .actions .drop2 .filter {
+  font-size: 0.875rem !important;
+  margin: 0 0 0 0 !important;
+  padding: 0.25rem !important;
+  font-weight: normal !important;
+}
+#vpc_solutions .actions .drop2 .filter.on {
+  border-width: 1px;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+  padding: 0.25rem;
+  font-weight: 700 !important;
+}
+#vpc_solutions .actions .drop2 .filters-apply {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  clear: both;
+}
+
+@media only screen and (min-width: 40.063em) {
+	#vpc_solutions .actions .filters-toggle {
+	    float: right;
+	  }
+	#vpc_solutions .actions .drop2 {
+	    width: 75%;
+	  }
+	#vpc_solutions .actions .drop2:before {
+	    left: 85%;
+	    margin-left: 0;
+	  }
+}
+	
+#vpc_solutions .solution-grid {
+  min-height: 25rem;
+}
+#vpc_solutions .solution {
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  float: left;
+  margin-bottom: 3rem;
+}
+#vpc_solutions .solution .wrapper {
+  border: 1px #e5e5e5 solid;
+}
+#vpc_solutions .solution .media a {
+  display: block;
+}
+#vpc_solutions .solution .meta {
+  padding: 0;
+}
+#vpc_solutions .solution .meta span, #vpc_solutions .solution .meta p, #vpc_solutions .solution .meta a, #vpc_solutions .solution .meta dt, #vpc_solutions .solution .meta dd {
+  font-size: 0.875rem;
+}
+#vpc_solutions .solution .meta h1 {
+  margin-top: 1rem;
+color: #3f3f3f;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+#vpc_solutions .solution .meta .introduction,
+#vpc_solutions .solution .meta dl {
+  padding: 0 1rem;
+}
+#vpc_solutions .solution .meta .introduction .organization {
+  display: block;
+  margin-bottom: 1rem;
+}
+#vpc_solutions .solution .meta dl {
+  position: relative;
+  border-top: 1px #e5e5e5 solid;
+  margin: 0;
+}
+#vpc_solutions .solution .meta dl dd {
+  margin: 0;
+  padding: 0.75rem 0 0.75rem 1.5rem;
+  line-height: 1.5rem;
+}
+#vpc_solutions .solution .meta dl:before {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 40.063em) {
+	#vpc_solutions .solution{
+	    position: relative;
+	    padding-left: 1rem;
+	    padding-right: 1rem;
+	    width: 50%;
+	    float: left;
+	  }
+	#vpc_solutions .solution:nth-child(2n+1) {
+	    clear: left;
+	  }
+}
+
+@media only screen and (min-width: 60.063em) {
+	#vpc_solutions .solution{
+	    position: relative;
+	    padding-left: 1rem;
+	    padding-right: 1rem;
+	    width: 33.33333%;
+	    float: left;
+	  }
+	#vpc_solutions .solution:nth-child(2n+1) {
+	    clear: none;
+	  }
+	#vpc_solutions .solution:nth-child(3n+1){
+	    clear: left;
+	  }
+}
+
+#vpc_solutions .solution.placeholder-solution .media{
+  background: #E7E7E7;
+  height: 250px;
+}
+#vpc_solutions .solution.placeholder-solution .title.placeholder {
+  background: #E7E7E7;
+  margin: 1rem 0;
+}
+#vpc_solutions .solution.placeholder-solution .introduction p.placeholder {
+  background: #E7E7E7;
+  margin-top: 1rem;
+  font-size: 0.625rem;
+  line-height: 0.625rem;
+  margin: 0 0 0.625rem 0;
+}
+#vpc_solutions .solution.placeholder-solution .organization.placeholder {
+  display: block;
+  background: #E7E7E7;
+  margin: 2rem 0 0.625rem 0;
+  width: 30%;
+  font-size: 0.625rem;
+  line-height: 0.625rem;
+}
+#vpc_solutions .solution.placeholder-solution dd span.placeholder {
+  display: block;
+  font-size: 0.5rem;
+  background: #E7E7E7;
+  font-size: 0.625rem;
+  line-height: 0.625rem;
+  margin: 7px 0;
+}
+#vpc_solutions #show-more-trigger {
+  display: block;
+  margin: 0 auto 4rem auto;
+}
+#vpc_solutions #show-more-trigger.disabled {
+  opacity: 0.3;
+}
+#vpc_solutions #loading {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 14rem;
+  height: 7rem;
+  margin: -3.5rem 0 0 -7rem;
+  background: rgba(151, 151, 151, 0.6);
+  border: 1px solid rgba(126, 126, 126, 0.4);
+  border-bottom-width: 0.375rem;
+  color: #FFF;
+  font-weight: 700;
+  text-align: center;
+  line-height: 7rem;
+  font-size: 1.25rem;
+}
+#vpc_solutions #loading.on {
+  display: block;
+}
+
+/* ==========================================================================
+   Page styles for Mentoring For Women Entrepreneurs 2015 Challenge
+   ========================================================================== */
+
+   .mfwe2015 > .no-sidebar > .content-wrapper > h1 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+          font-size: 44px;
+          letter-spacing:1px;
+          color: #00A7E0;   
+        }
+ .mfwe2015 > .no-sidebar > .content-wrapper > h2 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+          font-size: 30px;
+          letter-spacing:1px;
+          color: #00A7E0;
+          margin-top: 2rem;
+          }
+ .mfwe2015 > .no-sidebar > .content-wrapper > h3, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > h3 {
+            font-family: 'Lato', sans-serif;
+            font-size: 30px;
+            letter-spacing:1px;
+            font-weight: 400;
+          color: #00A7E0;
+          }
+.mfwe2015 > .no-sidebar > .content-wrapper > .top-spacer {
+margin-top: 2rem;
+}
+ .mfwe2015 > .no-sidebar > .content-wrapper > p, .mfwe2015 > .no-sidebar > .content-wrapper > ul, .mfwe2015 > .no-sidebar > .content-wrapper > li,  .mfwe2015 > .no-sidebar > .content-wrapper > ol, .mfwe2015 > .no-sidebar > .content-wrapper > dd, .mfwe2015 > .no-sidebar > .content-wrapper > dt, .mfwe2015 > .no-sidebar > .content-wrapper > dl,  .mfwe2015 > .no-sidebar > .content-wrapper > .row > .columns > p, .mfwe2015 > .no-sidebar > .content-wrapper > .row > .columns > h1, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > p, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > ul, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > li, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > dd, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > dt, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > dl {
+            font-family: 'Lato', sans-serif;
+            line-height: 175%;
+            font-weight: 400;
+          }
+ .mfwe2015 > .no-sidebar > .content-wrapper > .row > .columns > .round {
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+        }
+ .mfwe2015 > .confirmation > .content-wrapper > header {
+            padding: 2rem;
+          }
+
+.mfwe2015 > .contain-to-grid, .mfwe2015 > .contain-to-grid > .top-bar, .mfwe2015 > .contain-to-grid > .top-bar > .top-bar-section, .mfwe2015 > .contain-to-grid > .top-bar > .top-bar-section li:not(.has-form) a:not(.button), .mfwe2015 > .contain-to-grid > .top-bar > .top-bar-section > ul {
+background: #00A7E0;
+}
+
+/* ==========================================================================
+   Homepage - homepage styles for Mentoring For Women Entrepreneurs 2015 Challenge
+   ========================================================================== */
+
+.mfwe2015 > header {
+      text-align: center !important;
+      background: #4EC8B5;
+      padding: 0;
+      visibility:hidden;
+      }
+
+.mfwe2015 > header > .row {
+        max-width: none;
+        margin: 0;
+        }
+
+.mfwe2015 > header > .row > .image-container {
+        padding: 0 !important;
+        position:relative;
+        width:100%;
+      }
+
+.mfwe2015  nav.top-bar {
+    text-align: center !important;
+    overflow:visible;
+    }
+.mfwe2015 nav.top-bar section.top-bar-section {
+display: inline-block;
+}
+
+.mfwe2015 nav.top-bar section.top-bar-section ul>li>a {
+    font-family:'Lato', sans-serif;
+font-size: 1rem;
+    }
+
+.mfwe2015 > section.call {
+    padding: 6rem 0;
+    text-align: center !important;
+    }
+
+.mfwe2015 section.call p {
+      color: #808080;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      }
+
+.mfwe2015  section.call  p.text-justify {
+        text-align:justify;
+      }
+
+.mfwe2015  section.call  p.highlight {
+        color: #001D95;
+font-weight: 700;
+      }
+
+
+.mfwe2015  section.call h1 {
+      color:#001D95;
+      font-family:'Lato', sans-serif;
+      font-weight:400;
+      letter-spacing:1px;
+      }
+
+.mfwe2015 > section.timeline {
+    background: #f2f2f2;
+    padding: 6rem 0;
+    text-align: center !important;
+    font-weight: normal;
+    }
+
+.mfwe2015 > section.timeline > .row > .columns > .banner {
+background-color: #f2f2f2;
+}
+
+.mfwe2015 > section.timeline > .row > .columns > .banner .step-navigation #header a, .mfwe2015 > section.timeline > .row > .columns > .banner .step-navigation  #header .currentStep  .step-title {
+  color: #001D95;
+font-family: 'Lato', sans-serif;
+}
+
+.mfwe2015 section.timeline h1 {
+      color: #00a7e0;
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing:1px;
+font-size: 44px;
+    }
+
+.mfwe2015 > section.timeline > .row > .columns > .banner > .row > .step-navigation > #header:before {
+        width: 54%;
+      }
+.mfwe2015 > section.timeline > .row > .columns > .banner > .row > .step-navigation > .step-title {
+        font-size: 0.9rem;
+        font-weight: normal;
+        font-family: 'Lato', sans-serif;
+        color: #001d95;
+      }
+
+.mfwe2015 section.foursquare:before,.mfwe2015 section.foursquare ul.pages:before,.mfwe2015 section.foursquare:after,.mfwe2015 section.foursquare ul.pages:after {
+      content:" ";
+      display:table;
+      }
+
+.mfwe2015 section.foursquare:after,.mfwe2015 section.foursquare ul.pages:after {
+clear:both;
+}
+
+.mfwe2015 > section.foursquare {
+    clear: both;
+    background: #fff;
+    zoom:1;
+    }
+
+.mfwe2015 > section.foursquare > ul {
+      margin: 0 !important;
+        list-style: none;
+    }
+
+.mfwe2015 > section.foursquare > ul.pages {
+      clear: both;
+      zoom:1;
+      }
+
+.mfwe2015 > section.foursquare > ul.pages > li {
+        list-style: none;
+        padding: 2rem 1rem;
+        text-align: center !important;
+        color: #fff;
+        position:relative;
+        width:100%;
+        float:left;
+}
+
+.mfwe2015 > section.foursquare > ul.pages > li > .icons {
+          font-size: 2rem;
+            color: #001D95;
+        }
+
+.mfwe2015 > section.foursquare > ul.pages > li > h1 {
+              font-family: 'Lato', sans-serif;
+              font-size: 24px;
+              color: #001D95;
+              font-weight: normal;
+              letter-spacing:1px;
+text-transform: uppercase;
+            }
+.mfwe2015 section.foursquare ul.pages li p {
+              color: #fff;
+              font-family: 'Lato', sans-serif;
+              font-size: 1rem;
+              line-height: 1.4rem;
+}
+
+.mfwe2015 > section.foursquare > ul.pages > li > p a.view-more {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #fff;
+}
+
+.mfwe2015 > section.foursquare > ul.pages > li > a {
+                color: #fff;
+            border-bottom: 1px #fff dotted;
+            padding-bottom: 2px;
+              }
+.mfwe2015 > section.foursquare > ul.pages > li.one {
+        background-color: #00a7e0;
+      }
+.mfwe2015 > section.foursquare > ul.pages > li.two {
+        background-color: #4ec8b5;
+      }
+.mfwe2015 > section.foursquare > ul.pages > li.three {
+        background-color: #b3c8e6;
+      }
+.mfwe2015 > section.foursquare > ul.pages > li.four {   
+        background-color: #808080;
+      }
+.mfwe2015 > section.judges {
+    background: #fff;
+    text-align: center !important;
+    }
+.mfwe2015 > section.judges > .icons {
+      font-size: 3rem;
+        color: #00A7E0;
+    }
+.mfwe2015 > section.judges > h1 {
+      font-family: 'Lato', sans-serif;
+      color: #00A7E0;
+      font-weight: 700;
+      font-size: 44px;
+      margin-top:1.5rem;
+      margin-bottom:0;
+      letter-spacing:0;
+text-transform: uppercase;
+    }
+
+.mfwe2015 > section.judges > h1 > a {
+      color:#00A7E0;
+      }
+
+.mfwe2015 > section.judges > .row > ul > li > a > img.round {
+          -webkit-border-radius:75px;
+          border-radius: 75px;
+          border: 5px solid #fff;
+          width: 150px;
+          }
+.mfwe2015 > section.judges > .row > ul > li > h1 {
+        font-family: 'Lato', sans-serif;
+        font-size:1.3rem;
+        font-weight: 400;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        letter-spacing:1px;
+text-transform: uppercase;
+        }
+.mfwe2015 > section.judges > .row > ul > li > h1 > a {
+          color: #4EC8B5;
+        }
+
+.mfwe2015 > section.judges > .row > ul > li > h2, .mfwe2015 > section.judges > .row > ul > li > h3 {
+        font-family: 'Lato', sans-serif;
+        color: #001D95;
+        font-size: 0.9rem;
+        font-weight: 400;
+letter-spacing: 1px;
+        line-height: 1.4rem;
+        margin-bottom: 0rem;
+      }
+
+.mfwe2015 > nav.top-bar > section.top-bar-section {
+        display:inline-block;
+        }
+
+.mfwe2015 > section.participa {
+text-align: center;
+margin-top: 2rem;
+}
+
+@media screen and (min-width: 40.063em) {
+
+.mfwe2015 > header {
+visibility:visible;
+}
+
+.mfwe2015 > nav.top-bar {
+overflow:hidden;
+}
+
+.mfwe2015 > section.foursquare > ul.pages > li {
+height:21.25rem;
+position:relative;
+  padding-left: 3rem;
+  padding-right: 3rem;
+width:50%;
+float:left;
+}
+
+}
+
+@media screen and (min-width: 60.063em) {
+
+.mfwe2015 > section.foursquare > ul.pages > li {
+height:18rem;
+}
+
+}

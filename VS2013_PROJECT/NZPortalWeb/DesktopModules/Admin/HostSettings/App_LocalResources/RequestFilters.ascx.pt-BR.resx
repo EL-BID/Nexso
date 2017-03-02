@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cmdAdd.Text">
+    <value xml:space="preserve">Adicionar nova regra</value>
+  </data>
+  <data name="cmdCancel.Text">
+    <value xml:space="preserve">Cancelar edição</value>
+  </data>
+  <data name="Delete.Text">
+    <value xml:space="preserve">Apagar regra</value>
+  </data>
+  <data name="Edit.Text">
+    <value xml:space="preserve">Editar regra</value>
+  </data>
+  <data name="plServerVar.Text">
+    <value xml:space="preserve">Variável de servidor</value>
+  </data>
+  <data name="plOperator.Text">
+    <value xml:space="preserve">Operação</value>
+  </data>
+  <data name="plValue.Text">
+    <value xml:space="preserve">Valor de combinação</value>
+  </data>
+  <data name="plAction.Text">
+    <value xml:space="preserve">Ação</value>
+  </data>
+  <data name="plLocation.Text">
+    <value xml:space="preserve">Posição</value>
+  </data>
+  <data name="saveRule.Text">
+    <value xml:space="preserve">Atualizar regra</value>
+  </data>
+  <data name="unauthorized.Text">
+    <value xml:space="preserve">A conta da aplicação não tem autorização para mudar o arquivo DotNetNuke.config. Este erro pode ocorrer se o arquivo DotNetNuke.config está marcado como Somente Leitura ou se a conta da aplicação não tem permissão para editar o arquivo.</value>
+  </data>
+  <data name="plAction.Help">
+    <value xml:space="preserve">Selecione a ação para executar se o pedido que está chegando combinar com esta regra.</value>
+  </data>
+  <data name="plLocation.Help">
+    <value xml:space="preserve">Entre o endereço para redirecionar o usuário se o pedido que está chegando combinar com esta regra. Este valor é usado apenas para ações Redirect e PermanentRedirect.</value>
+  </data>
+  <data name="plOperator.Help">
+    <value xml:space="preserve">Selecione o operador para usar quando comparando o pedido que está chegando com a variável de servidor especificada e a lista de valores.</value>
+  </data>
+  <data name="plServerVar.Help">
+    <value xml:space="preserve">Especifique a variável de servidor para usar quando filtrando pedidos que estão chegando. Uma lista completa de variáveis de servidor válidas pode ser encontrada no MSDN.</value>
+  </data>
+  <data name="plValue.Help">
+    <value xml:space="preserve">Define o valor da variável de servidor que disparará a regra. Para uma regra RegEx, o valor deverá ser uma expressão regular que será usada como uma expressão de combinação. Se esta não é uma operação RegEx, então o valor deve ser uma lista de valores delimitada por ponto e vírgula.</value>
+  </data>
+  <data name="lblWarning.Text">
+    <value xml:space="preserve">AVISO: Adicionando uma regra de filtro de pedido incorreta pode impedir você ou seus clientes acessarem seu portal DotNetNuke, e pode precisar que você manualmente edite o arquivo DotNetNuke.config para remover a regra configurada incorretamente.</value>
+  </data>
+</root>

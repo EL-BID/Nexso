@@ -1,0 +1,313 @@
+@import url(https://fonts.googleapis.com/css?family=Fauna+One|Covered+By+Your+Grace);
+
+$mi-sangre-primary-color: #e8dd18;
+$mi-sangre-color-one: #d88027;
+$mi-sangre-color-two: #033652;
+$mi-sangre-color-three: #81b641;
+$mi-sangre-color-four: #ee2526;
+$mi-sangre-color-five: #39a6ad;
+$white: #fff;
+
+/* ==========================================================================
+   Homepage - homepage styles for Mi Sangre Challenge
+   ========================================================================== */
+
+.mi-sangre {
+	header {
+    	@extend .text-center;
+    	background: $mi-sangre-primary-color;
+    	padding: 0;
+    	visibility: hidden;
+    	@media #{$medium-up} {
+    		visibility: visible;	
+    	}
+    	.row {
+    		max-width: none;
+    		margin: 0;
+    		.logo-container {
+    			@include grid-column(12);
+    			padding-top: 0;
+				@media #{$medium-up} {
+					@include grid-column(3);
+					padding-top: 1rem;
+				}
+				@media #{$large-up} {
+					@include grid-column(2);
+					padding-top: 2rem;
+				}
+		    	ul {
+		    		margin: 0;
+					list-style: none;
+					padding: 0;
+				}
+			}
+			.image-container {
+				padding: 0 !important;
+				@include grid-column(12);
+				@media #{$medium-up} {
+					@include grid-column(9);
+				}
+				@media #{$large-up} {
+					@include grid-column(10);
+				}
+				padding: 0;
+			}
+	    }
+	}
+	section.promote {
+		background-color: $mi-sangre-color-four;
+    	padding: 2rem 0;
+    	@extend .text-center;
+    	h2 {
+    		color: $mi-sangre-primary-color;
+    		font-family: 'Covered By Your Grace', cursive;
+    		font-weight: normal;
+			font-size: rem-calc(54);
+			letter-spacing:1px;
+		}
+	}
+	nav.top-bar {
+		@extend .text-center;
+		overflow: visible;
+		@media #{$medium-up} {
+					overflow: hidden;
+				}
+		section.top-bar-section {
+			display: inline-block;
+			ul > li > a {
+				font-family: 'Fauna One', cursive;
+			}
+		}
+	}
+	section.call {
+		padding: 6rem 0;
+		@extend .text-center;
+		h1 {
+			color: $mi-sangre-color-five;
+			font-family: 'Covered By Your Grace', cursive;
+			font-weight: normal;
+			letter-spacing:1px;
+		}
+		h2 {
+			color: $mi-sangre-color-two;
+			font-family: 'Fauna One', cursive;
+			font-weight: normal;
+			font-size: 1.3rem;
+			line-height: 2.5rem;
+		}
+	}
+	section.timeline {
+		background: #333;
+		padding: 6rem 0;
+		@extend .text-center;
+		font-weight: normal;
+		h1 {
+			color: $mi-sangre-color-three;
+			font-family: 'Covered By Your Grace', cursive;
+			font-weight: normal;
+			letter-spacing:1px;
+		}
+		.step-navigation {
+			#header:before {
+				width: 40%;
+			}
+			.step-date {
+				font-size: rem-calc(36);
+				font-weight: normal;
+				font-family: 'Fauna One', cursive;
+				color: $mi-sangre-color-four;
+			}
+			.step-month {
+				font-size: rem-calc(28);
+				font-weight: normal;
+				text-transform: lowercase;
+				line-height: 34px;
+				letter-spacing: 1px;
+				font-family: 'Covered By Your Grace', cursive;
+				color: $mi-sangre-color-four;
+			}
+			.step-title {
+				font-size: 0.9rem;
+				font-weight: normal;
+				font-family: 'Fauna One', cursive;
+				color: $body-font-color;
+			}
+		}
+	}
+	section.foursquare {
+		@extend .clearfix;
+		background: $mi-sangre-color-four;
+		ul {
+			margin: 0 !important;
+	    	list-style: none;
+		}
+		ul.pages {
+			@extend .clearfix;
+			li {
+				list-style: none;
+				padding: 2rem 0;
+				@extend .text-center;
+				color: $white;
+				@media #{$medium-up} {
+				height: rem-calc(340);
+				}
+				@media #{$large-up} {
+				height: rem-calc(240);
+				}
+				.icons {
+					font-size: 3rem;
+		    		color: $white;
+				}
+				@include grid-column(12);
+				@media #{$medium-up} {
+	      			@include grid-column(6);
+	      			&:nth-child(2n+1) {
+				        clear: left;
+				    }
+	      		}
+	      		h1 {
+	      			font-family: 'Covered By Your Grace', cursive;
+	      			font-size: rem-calc(32);
+	      			color: $white;
+	      			font-weight: normal;
+	      			letter-spacing:1px;
+	      		}
+	      		p {
+	      			color: $white;
+	      			font-family: 'Fauna One', serif;
+	      			font-size: 0.9rem;
+	      			line-height: 1.4rem;
+	      			a {
+	      				color: #fff;
+						border-bottom: 1px #fff dotted;
+						padding-bottom: 2px;
+	      			}
+	      		}
+	      	}
+			li.one {
+				background-color: $mi-sangre-color-one;
+			}
+			li.two {
+				background-color: $mi-sangre-color-two;
+			}
+			li.three {
+				background-color: $mi-sangre-color-three;
+			}
+			li.four {		
+				background-color: $mi-sangre-color-four;
+			}
+		}
+	}
+	section.judges {
+		background: lighten( $mi-sangre-color-three, 25% );
+		@extend .text-center;
+		.icons {
+			font-size: 3rem;
+    		color: red;
+		}
+		h1 {
+			font-family: 'Covered By Your Grace', cursive;
+			color: $mi-sangre-color-four;
+			font-weight: normal;
+			font-size: rem-calc(54);
+			letter-spacing:1px;
+		}
+		ul {
+			li {
+				img.round {
+					@include radius(
+						$radius:75px
+					);
+					border: 5px solid $white;
+					width: 150px;
+			    }
+			}
+			h1 {
+				font-family: 'Fauna One', serif;
+				font-size:1.3rem;
+				font-weight: normal;
+				margin-top: 1.5rem;
+				margin-bottom: 0;
+				letter-spacing:0px;
+				a {
+					color: $mi-sangre-color-two;
+				}
+			}
+			h2, h3 {
+				font-family: 'Fauna One', serif;
+				color: $body-font-color;
+				font-size: 0.9rem;
+				font-weight: normal;
+				line-height: 1.4rem;
+				margin-bottom: 0rem;
+			}
+			h3:before {
+				content: "\e610" !important;
+			}
+		}
+	}
+	section.participa {
+		padding: 6rem 0;
+		@extend .text-center;
+	}
+	section.latest-solutions {
+		header {
+			background: #fff;
+			visibility: visible;
+			h1 {
+				font-family: 'Covered By Your Grace', cursive;
+				color: $mi-sangre-color-four;
+				font-weight: normal;
+				font-size: rem-calc(54);
+				letter-spacing:1px;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Page styles for Mi Sangre Challenge
+   ========================================================================== */
+
+   .mi-sangre {
+   		.no-sidebar {
+   			.content-wrapper {
+   				h1 {
+   					font-family: 'Covered By Your Grace', cursive;
+   					font-weight: normal;
+					font-size: rem-calc(54);
+					letter-spacing:1px;
+					color: $mi-sangre-color-five;   				}
+   				h2 {
+   					font-family: 'Covered By Your Grace', cursive;
+   					font-weight: normal;
+					font-size: rem-calc(42);
+					letter-spacing:1px;
+					color: $mi-sangre-color-five;
+					margin-top: 2rem;
+   				}
+   				h3 {
+   					font-family: 'Covered By Your Grace', cursive;
+   					font-size: rem-calc(32);
+   					letter-spacing:1px;
+   					font-weight: normal;
+					color: $mi-sangre-color-five;
+   				}
+   				p, ul, li, dd, dt, dl {
+   					font-family: 'Fauna One', serif;
+   					line-height: 175%;
+   				}
+   				.round {
+				    -webkit-border-radius: 50px;
+				    border-radius: 50px;
+				}
+   			}
+   		}
+   		.confirmation {
+   			.content-wrapper {
+   				header {
+   					padding: 2rem;
+   				}
+   			}
+   		}
+   }

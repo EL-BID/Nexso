@@ -1,0 +1,32 @@
+.eds_socialEventsWidget.eds_style_light .eds_signUpActionBarWrapper {
+  border-color: #bebebe;
+  padding: 1px;
+  background-color: white;
+}
+.eds_socialEventsWidget.eds_style_light .eds_signUpActionBarWrapper .eds_signUpActionBar {
+  background-color: #e6e6e6;
+}
+.eds_socialEventsWidget.eds_style_light .eds_signUpActionBarWrapper > .eds_title {
+  background-image: url("../images/module_title_background-light.png");
+  background-color: #979797;
+  color: #222222;
+}
+.eds_socialEventsWidget.eds_style_light .eds_eventUsersWrapper {
+  background-color: white;
+  border-color: #bebebe;
+  padding: 1px;
+}
+.eds_socialEventsWidget.eds_style_light .eds_eventUsersWrapper > .eds_title {
+  color: #636363;
+  background-color: #e6e6e6;
+  border-bottom-color: white;
+}
+.eds_socialEventsWidget.eds_style_light .eds_eventUsers {
+  background-color: #efefef;
+}
+.eds_socialEventsWidget.eds_style_light .eds_eventUsers + .eds_eventUsers {
+  border-top-color: gainsboro;
+}
+.eds_socialEventsWidget.eds_style_light .eds_eventUsers > .eds_title {
+  color: #636363;
+}

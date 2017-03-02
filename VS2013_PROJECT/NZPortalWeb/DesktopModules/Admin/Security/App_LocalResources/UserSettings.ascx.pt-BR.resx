@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ControlTitle_usersettings.Text">
+    <value xml:space="preserve">Configurações de Usuário</value>
+  </data>
+  <data name="ProviderSettings.Text">
+    <value xml:space="preserve">Configurações do Provedor de Contas de Usuários</value>
+  </data>
+  <data name="UserAccounts.Text">
+    <value xml:space="preserve">Configurações de Contas de Usuário</value>
+  </data>
+  <data name="Column_Address.Text">
+    <value xml:space="preserve">Mostrar coluna Endereço?</value>
+  </data>
+  <data name="Column_Address.Help">
+    <value xml:space="preserve">Mostrar coluna Endereço.</value>
+  </data>
+  <data name="Column_Authorized.Text">
+    <value xml:space="preserve">Mostrar coluna Autorizado?</value>
+  </data>
+  <data name="Column_Authorized.Help">
+    <value xml:space="preserve">Mostrar coluna Autorizado.</value>
+  </data>
+  <data name="Column_CreatedDate.Text">
+    <value xml:space="preserve">Mostrar coluna Data de criação?</value>
+  </data>
+  <data name="Column_CreatedDate.Help">
+    <value xml:space="preserve">Mostrar coluna Data de criação.</value>
+  </data>
+  <data name="Column_DisplayName.Text">
+    <value xml:space="preserve">Mostrar coluna Nome?</value>
+  </data>
+  <data name="Column_DisplayName.Help">
+    <value xml:space="preserve">Mostrar coluna Nome.</value>
+  </data>
+  <data name="Column_Email.Text">
+    <value xml:space="preserve">Mostrar coluna Email?</value>
+  </data>
+  <data name="Column_Email.Help">
+    <value xml:space="preserve">Mostrar coluna Email.</value>
+  </data>
+  <data name="Column_FirstName.Text">
+    <value xml:space="preserve">Mostrar coluna Primeiro Nome?</value>
+  </data>
+  <data name="Column_FirstName.Help">
+    <value xml:space="preserve">Mostrar coluna Primeiro Nome.</value>
+  </data>
+  <data name="Column_LastLogin.Text">
+    <value xml:space="preserve">Mostrar coluna Última conexão?</value>
+  </data>
+  <data name="Column_LastLogin.Help">
+    <value xml:space="preserve">Mostrar coluna Última conexão.</value>
+  </data>
+  <data name="Column_LastName.Text">
+    <value xml:space="preserve">Mostrar coluna Sobrenome?</value>
+  </data>
+  <data name="Column_LastName.Help">
+    <value xml:space="preserve">Mostrar coluna Sobrenome.</value>
+  </data>
+  <data name="Column_Telephone.Text">
+    <value xml:space="preserve">Mostrar coluna Telefone?</value>
+  </data>
+  <data name="Column_Telephone.Help">
+    <value xml:space="preserve">Mostrar coluna Telefone.</value>
+  </data>
+  <data name="Records_PerPage.Text">
+    <value xml:space="preserve">Usuários por página:</value>
+  </data>
+  <data name="Records_PerPage.Help">
+    <value xml:space="preserve">Entre o número de usuários para mostrar em uma página</value>
+  </data>
+  <data name="ProviderSettingsHelp.Text">
+    <value xml:space="preserve">Nesta seção você pode rever as configurações do provedor de contas de usuários. Alguns provedores podem permitir editar estas configurações. O provedor padrão baseado no ASP.NET MemberRole requer que você edite o arquivo web.config, então as configurações não pode ser atualizadas aqui.</value>
+  </data>
+  <data name="PasswordSettings.Text">
+    <value xml:space="preserve">Configurações de Idade de Senha</value>
+  </data>
+  <data name="PasswordSettingsHelp.Text">
+    <value xml:space="preserve">Você pode definir as configurações de idade de senha nesta seção</value>
+  </data>
+  <data name="Display_Mode.Text">
+    <value xml:space="preserve">Modo de visualização padrão</value>
+  </data>
+  <data name="Display_Mode.Help">
+    <value xml:space="preserve">Selecione o modo de visualização padrão para a grade de usuários</value>
+  </data>
+  <data name="Security_UsersControl.Text">
+    <value xml:space="preserve">Modo de exibição de usuários no Gerenciamento de Regras</value>
+  </data>
+  <data name="Security_UsersControl.Help">
+    <value xml:space="preserve">Selecione o controle de usuário para usar no módulo Gerenciamento de Regras</value>
+  </data>
+  <data name="FirstLetter.Text">
+    <value xml:space="preserve">Primeira letra</value>
+  </data>
+  <data name="Combo.Text">
+    <value xml:space="preserve">Lista</value>
+  </data>
+  <data name="TextBox.Text">
+    <value xml:space="preserve">Texto</value>
+  </data>
+  <data name="Display_SuppressPager.Help">
+    <value xml:space="preserve">Marque para esconder o paginamento quando tiver apenas uma página de registros</value>
+  </data>
+  <data name="Display_SuppressPager.Text">
+    <value xml:space="preserve">Esconder paginamento?</value>
+  </data>
+  <data name="Profile_ManageServices.Help">
+    <value xml:space="preserve">Marque para mostrar a seção 'Gerenciar Serviços' nos perfis de usuários</value>
+  </data>
+  <data name="Profile_ManageServices.Text">
+    <value xml:space="preserve">Mostrar Gerenciar Serviços?</value>
+  </data>
+  <data name="MembersOnly.Text">
+    <value xml:space="preserve">Apenas membros</value>
+  </data>
+  <data name="Security_DisplayNameFormat.Help">
+    <value xml:space="preserve">Você pode opcionalmente especificar o formato para exibir o nome do usuário. O formato pode incluir elementos para substituição dinâminca como [FIRSTNAME] [LASTNAME]. Se um formato para exibição de nome é especificado, o nome exibido não poderá ser editado através da interface do usuário.</value>
+  </data>
+  <data name="Security_DisplayNameFormat.Text">
+    <value xml:space="preserve">Formato de exibição de nome:</value>
+  </data>
+  <data name="InvalidRegex.Text">
+    <value xml:space="preserve">O valor de '{0}' não é uma expressão regular válida!</value>
+  </data>
+  <data name="ControlTitle_settings.Text">
+    <value xml:space="preserve">Configurações de Conta de Usuário</value>
+  </data>
+  <data name="CannotChangeSettings.Text">
+    <value xml:space="preserve">Este portal é um membro de um grupo de portais, estas configurações são controladas pelo portal mestre.</value>
+  </data>
+</root>

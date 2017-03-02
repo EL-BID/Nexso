@@ -1,0 +1,72 @@
+<!--ArticleRepeat:Before:-->
+<script src="[EasyDNNnews:ClientBasePath]/DesktopModules/EasyDNNnews/static/isotope2/isotope.v2.0.0-beta.4.min.js"></script>
+<script src="[EasyDNNnews:ClientBasePath]/DesktopModules/EasyDNNnews/static/imagesLoaded/imagesLoaded_3.1.4.min.js"></script>
+<script>
+	eds1_8(function ($) {
+		var $articleListContainer = $('.edn_[EasyDNNnews:ModuleID]_article_list_wrapper'),
+			imageLoadedKey = 'imageLoaded';
+
+		$articleListContainer
+			.isotope({
+				itemSelector: '.edn_articleWrapper',
+				sortBy: 'original-order',
+				masonry: {
+					isFitWidth: true
+				}
+			})
+			.find('img').imagesLoaded()
+				.progress(function (instance, image) {
+					var $img = $(image.img);
+
+					if ($img.data(imageLoadedKey))
+						return;
+
+					$img.data(imageLoadedKey, true);
+
+					$articleListContainer.isotope('layout');
+				});
+	});
+</script>
+<div class="edn_isotopeLayout">
+<!--RepeatEnd:Before:-->
+
+<!--TemplateGroup:listArticleInBox-->
+<!--ArticleTemplate-->
+	<div class="EDN_article EDN_articleBoxInline edn_articleWrapper">
+		[EasyDNNnews:HasArticlePermissions]
+		<div>
+			[EasyDNNnews:ArticlePermissions:Edit]
+			[EasyDNNnews:ArticlePermissions:Publish]
+			[EasyDNNnews:ArticlePermissions:Approve]
+		</div>
+		[EasyDNNnews:HasArticlePermissionsEnd]
+		<div class="EDN_article-content">
+			[EasyDNNnews:IfExists:Image]
+			<div class="EDN_image-container">
+				<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]"/></a>
+			</div>
+			[EasyDNNnews:EndIf:Image]
+			<h2 style="max-width:[EasyDNNnews:MainArticleImageWidth]"><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title][EDNcf:IfExists:price] - [EDNcf:price][EDNcf:EndIf:price]</a></h2>
+			<div class="EDN_summary" style="max-width:[EasyDNNnews:MainArticleImageWidth]">
+				[EasyDNNnews:Summary]
+			</div>
+			<div class="EDN_inLineArticleDetails" style="max-width:[EasyDNNnews:MainArticleImageWidth]">
+				<span class="EDN_inLineArticleDate">[EasyDNNnews:IfNotExists:Event][EasyDNNnews:FormatedDate: d MMMM yyyy][EasyDNNnews:EndIf:Event][EasyDNNnews:IfExists:Event][EasyDNNnews:EventDate][EasyDNNnews:IfExists:EventRegistration], (<a href="[EasyDNNnews:ReadMore]" title="[EasyDNNnews:Title]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnewsLocalizedText:Register]</a>)[EasyDNNnews:EndIf:EventRegistration][EasyDNNnews:EndIf:Event]</span>
+				<span class="EDN_comments">[EasyDNNnews:Comments]</span>
+			</div>
+			<div class="EDN_inLineArticleRatingViews" style="max-width:[EasyDNNnews:MainArticleImageWidth]">
+				<div>[EasyDNNnews:ArticleRating]</div>
+				<span class="EDN_numberOfViews">[EasyDNNnews:NumberOfViews]</span>
+			</div>
+		</div>
+	</div>
+<!--ArticleEnd-->
+
+<!--ArticleRepeat:After:-->
+</div>
+[EasyDNNnews:IfExists:RSS]
+<div class="EDN_article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

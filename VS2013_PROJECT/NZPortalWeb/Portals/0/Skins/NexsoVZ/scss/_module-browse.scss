@@ -1,0 +1,187 @@
+﻿/* ==========================================================================
+   Browse - browse page styles for Nexso 2
+   ========================================================================== */
+
+.browse {
+	.actions-wrapper,
+	.solution {
+		@include grid-column(12);
+	}
+	ul {
+		margin: 0;
+	}
+	.actions {
+		border: 1px $light-touch solid;
+		border-width: 1px 0;
+		position: relative;
+		margin-bottom: 3rem;
+		text-align: center;
+		li  {
+			float: left;
+		}
+	}
+	.actions,
+	.actions .sort,
+	.solution-grid {
+		@include clearfix();
+	}
+	.sort {
+		ul {
+			display: inline-block;
+		}
+		li {
+			font-size: 0.875rem;
+			margin-right: 0.5rem;
+		}
+	}
+
+	.filter {
+		@extend .primary-button;
+		font-size: 1rem;
+		margin: 0.5rem 0;
+	}
+	.drop {
+		background-color: #fff;
+		border: 1px $light-touch solid;
+		display: none;
+		right: 0;
+		padding: 1rem;
+		position: absolute;
+		top: 6rem;
+		z-index: 2;
+		&:before {
+			@extend .nexso-icon;
+	    content: "\e609";
+	    color: #fff;
+	    font-size: 2rem;
+	    left: 50%;
+	    margin-left: -1rem;
+	    position: absolute;
+	    text-shadow: 0 -1px lighten($body-font-color,20%);
+	    top: -22px;
+	  }
+		h2 {
+			@extend .title-m;
+		}
+		li {
+			text-align: left;
+		}
+		li li a {
+			@extend .tertiary-button;
+			font-size: 0.875rem;
+			margin-right: 0.5rem;
+			padding: 0.25rem;
+			&.active {
+				@extend .primary-button;
+				border-width: 1px;
+				font-size: 0.875rem;
+				margin-right: 0.5rem;
+				padding: 0.25rem;
+			}
+		}
+		a.apply {
+			@extend .primary-button;
+			font-size: 0.875rem;
+			padding: 0.25rem 0.5rem;
+		}
+	}
+	.solution {
+		margin-bottom: 3rem;
+		.wrapper {
+			border: 1px $light-touch solid;
+		}
+		.meta {
+			padding: 0;
+			span,
+			p,
+			a,
+			li {
+				font-size: 0.875rem;
+			}
+			.introduction,
+			&>ul>li {
+				padding: 0 1rem;
+			}
+			h1 {
+				@extend .title-s;
+				margin-top: 1rem;
+			}
+			.organization {
+				display: block;
+				margin-bottom: 1rem;
+			}
+			&>ul>li {
+				border-top: 1px $light-touch solid;
+			}
+			li ul {
+				line-height: 1.5rem;
+				padding: 0.75rem 0 0.75rem 1.5rem;
+				position: relative;
+			}
+			li ul:before {
+				@extend .nexso-icon;
+				position: absolute;
+				left: 0;
+				top: 1rem;
+			}
+			li.cost ul:before { 
+				@extend .icon-coins;
+			}
+			li.themes ul:before {
+				@extend .icon-tag5;
+			}
+			li.time ul:before { 
+				@extend .icon-calendar;
+			}
+			li.location ul:before { 
+				@extend .icon-location5;
+			}
+			li.themes li,
+			li.location li {
+				display: inline;
+				& + li:before {
+    			content: ", ";
+    		}
+			}
+		}
+	}
+	@media #{$medium-up} {
+		.actions {
+			ul.sort {
+				float: left;
+			}
+			.filter {
+				float: right;
+			}
+			.drop {
+				top: 5rem;
+				width: 75%;
+	    	&:before {
+	    		left: 85%;
+	    		margin-left: 0;
+	    	}
+				&>li {
+					float: left;
+					width: 50%;
+				}
+			}
+		}
+		.solution-grid {
+			.solution {
+				@include grid-column(6);
+				float: none;
+				display: inline-block;
+				margin-left: -3px;
+				vertical-align: top;
+			}
+		}
+	}
+	@media #{$large-up} {
+		.solution-grid {
+			.solution {
+				@include grid-column(4);
+				float: none;
+			}
+		}
+	}
+}

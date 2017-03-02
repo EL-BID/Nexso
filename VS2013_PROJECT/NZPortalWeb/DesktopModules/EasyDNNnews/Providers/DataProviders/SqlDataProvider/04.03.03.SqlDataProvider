@@ -1,0 +1,27 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsCharList]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNnewsCharList]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNnewsCharList]', N'{objectQualifier}EasyDNNnewsCharList', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNnewsCharList', N'PK_{objectQualifier}EasyDNNnewsCharList', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNnewsCharList' and column_name = 'OriginalChar')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNnewsCharList] ALTER COLUMN OriginalChar nvarchar(3)
+END
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNnewsCharList' and column_name = 'NewChar')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNnewsCharList] ALTER COLUMN NewChar nvarchar(3)
+END

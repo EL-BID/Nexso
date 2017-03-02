@@ -1,0 +1,65 @@
+﻿/****** Object:  Table {databaseOwner}[{objectQualifier}EasyDNNNewsTreeView]    Script Date: 10/25/2012 09:43:53 ******/
+/****** Object:  Table {databaseOwner}[{objectQualifier}EasyDNNnewsWidgets]    Script Date: 10/25/2012 09:43:53 ******/
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTreeView]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTreeView](
+	[ModuleID] [int] NOT NULL,
+	[SharingPortalID] [int] NULL,
+	[Theme] [nvarchar](250) NOT NULL,
+	[ThemeStyle] [nvarchar](250) NOT NULL,
+	[ShowRssLink] [bit] NOT NULL,
+	[ShowAllCategories] [bit] NOT NULL,
+	[ExpandAllCategories] [bit] NOT NULL,
+	[AutoAddChildCategories] [bit] NOT NULL,
+	[OpenInModuleID] [int] NOT NULL,
+	[PermissionSource] [tinyint] NOT NULL,
+	[PermissionSourceID] [int] NOT NULL,
+	[DisplayAllAuthors] [bit] NOT NULL,
+	[DisplayHeader] [bit] NOT NULL,
+	[IsSocialInstance] [bit] NOT NULL,
+	[PassAuthorUserID] [bit] NOT NULL,
+	[HideUnlocalizedItems] [bit] NOT NULL,
+	[ShowArticles] [bit] NOT NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNNewsTreeView] PRIMARY KEY CLUSTERED ( [ModuleID] ASC )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsWidgets]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNnewsWidgets](
+	[ModuleID] [int] NOT NULL,
+	[PortalID] [int] NOT NULL,
+	[ViewControlID] [int] NOT NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNnewsWidgets] PRIMARY KEY CLUSTERED  ([ModuleID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNnewsWidgets_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsWidgets]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNnewsWidgets]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNnewsWidgets_Modules] FOREIGN KEY([ModuleID])
+REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNnewsWidgets_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsWidgets]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNnewsWidgets] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNnewsWidgets_Modules]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNnewsWidgets_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsWidgets]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNnewsWidgets]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNnewsWidgets_Portals] FOREIGN KEY([PortalID])
+REFERENCES {databaseOwner}[{objectQualifier}Portals] ([PortalID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNnewsWidgets_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsWidgets]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNnewsWidgets] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNnewsWidgets_Portals]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsTreeView_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTreeView]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTreeView]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsTreeView_Modules] FOREIGN KEY([ModuleID])
+REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsTreeView_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTreeView]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTreeView] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsTreeView_Modules]

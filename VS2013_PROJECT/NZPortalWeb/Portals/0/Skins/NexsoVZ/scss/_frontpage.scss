@@ -1,0 +1,140 @@
+﻿/* ==========================================================================
+   Frontpage - frontpage styles for Nexso 2
+   ========================================================================== */
+
+.front {
+	p.small {
+		font-size: 0.9rem !important; font-style: italic;
+	}
+	span.voice-thumb img {
+		@include border-radius(3rem);
+	}
+	section.banner-img {
+		padding-top: 80%;
+		@media #{$medium-up} {
+			padding-top: 6rem;
+		}
+	}
+
+	section.menu {
+		@include box-shadow(none);
+		background-color: #333;
+		padding-bottom: 0;
+		padding-top: 0;
+		ul {
+			@include grid-row;
+			list-style: none;
+			margin: 0;
+			li {
+				list-style: none;
+				a {
+					color: #fff;
+					display: block;
+					font-weight: bold;
+					&:before {
+						@extend .nexso-icon;
+						color: #fff;
+						text-align: center;
+						vertical-align: middle;
+						font-size: 2.5rem;
+						height: 2.5rem;
+						line-height: 2.5rem;
+						width: 2.5rem;
+					}	
+				}
+				&.discover-solutions a:before {
+					@extend .icon-browse;
+				}
+				&.share-solution a:before {
+					@extend .icon-share2;
+				}
+				&.join-nexso a:before {
+					@extend .icon-nexso;
+					font-size: 3rem;
+				}
+			}
+	    @media #{$small-only} {
+				li {
+					padding: 1rem 0;
+	    		a:before {
+						display: inline-block;
+						margin-right: 2rem;
+	    		}
+	    	}
+	    }
+			@media #{$medium-up} {
+				padding: 2rem 0;
+				li {
+					float: left;
+					text-align: center;
+					width: 33%;
+					a {
+						font-size: 1.5rem;
+					}
+					a:before {
+						display: block;
+						font-size: 4rem;
+						height: 5.5rem;
+						line-height: 5rem;
+						width: 5rem;
+						margin: 0 auto;
+					}
+					&.join-nexso a:before {
+						font-size: 5rem;
+					}
+				}
+			}
+		}
+	}
+
+	section.video {
+		background-color: #333;
+		li {
+			color: #e7e7e7;
+		}
+		.flex-video { position: relative; padding-top: 1.5625rem; padding-bottom: 67.5%; height: 0; margin-bottom: 1rem; overflow: hidden; }
+		.flex-video.widescreen {padding-bottom: 56.34%; }
+		.flex-video.vimeo {padding-top: 0; }
+		.flex-video iframe, .flex-video object, .flex-video embed, .flex-video video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+	}
+
+	section.what {
+		ul.three li {
+			@include grid-column(12,$offset:0);
+			@media #{$medium-up} {
+				@include grid-column(4,$offset:0);
+			}
+		}
+	}
+
+	section.browse {
+		background: transparent url(../../Images/banner-map-small@2x.jpg) no-repeat left top / 100%;
+		@media #{$medium-up} {
+			background: transparent url(../../Images/banner-map@2x.png) no-repeat center center;
+			background-size: cover;
+		}
+	}
+	section.share {
+		background: transparent url(../../Images/banner-girls-small@2x.jpg) no-repeat left top / 100%;
+		@media #{$medium-up} {
+			background: transparent url(../../Images/banner-girls@2x.jpg) no-repeat center center;
+			background-size: cover;
+		}
+	}
+	section.join {
+		background: transparent url(../../Images/banner-city-small@2x.jpg) no-repeat left top / 100%;
+		@media #{$medium-up} {
+			background: transparent url(../../Images/banner-city@2x.jpg) no-repeat center center;
+			background-size: cover;
+		}
+	}
+	section.challenge-list {
+		text-align: center;
+		a {
+			margin-top: 2rem;
+		}
+	}
+	h1, h2 {
+		font-weight: normal;
+	}
+}

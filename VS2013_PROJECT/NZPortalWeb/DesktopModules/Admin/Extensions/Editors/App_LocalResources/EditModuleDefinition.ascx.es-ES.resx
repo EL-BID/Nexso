@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add.Title">
+    <value xml:space="preserve">Crear módulo nuevo</value>
+  </data>
+  <data name="cmdAdd.Text">
+    <value xml:space="preserve">Añadir carpeta</value>
+  </data>
+  <data name="cmdCancel.Text">
+    <value xml:space="preserve">Cancelar</value>
+  </data>
+  <data name="cmdCreate.Text">
+    <value xml:space="preserve">Crear módulo</value>
+  </data>
+  <data name="cmdSave.Text">
+    <value xml:space="preserve">Crear carpeta</value>
+  </data>
+  <data name="Control.Text">
+    <value xml:space="preserve">Control </value>
+  </data>
+  <data name="CSharp.Text">
+    <value xml:space="preserve">C# (C sharp) </value>
+  </data>
+  <data name="Edit.Title">
+    <value xml:space="preserve">Editar módulo</value>
+  </data>
+  <data name="FileExists.Text">
+    <value xml:space="preserve">El nombre del archivo ya existe. Introduzca otro nombre.</value>
+  </data>
+  <data name="ImportControl.ErrorMessage">
+    <value xml:space="preserve">Hubo un error al importar el control del módulo, consulte el registro de eventos para obtener más detalles del error.</value>
+  </data>
+  <data name="InvalidFilename.Text">
+    <value xml:space="preserve">Los nombres de archivo no pueden contener caracteres inválidos.</value>
+  </data>
+  <data name="LanguageError.Text">
+    <value xml:space="preserve">Debe seleccionar un idioma para el control</value>
+  </data>
+  <data name="Manifest.Text">
+    <value xml:space="preserve">Manifiesto</value>
+  </data>
+  <data name="MissingControl.Text">
+    <value xml:space="preserve">Debe proporcionar un nombre de archivo para el control</value>
+  </data>
+  <data name="MissingFriendlyname.Text">
+    <value xml:space="preserve">Debe proporcionar un nombre para el módulo</value>
+  </data>
+  <data name="MissingManifest.Text">
+    <value xml:space="preserve">Debe proporcionar un archivo de manifiesto (.dnn o .dnn5)</value>
+  </data>
+  <data name="ModuleControlTemplate.Text">
+    <value xml:space="preserve">&lt;%@ Control Language="{0}" ClassName="{1}" Inherits="DotNetNuke.Entities.Modules.PortalModuleBase" %&gt;
+&lt;h1&gt;Felicidades&lt;/h1&gt;
+&lt;p&gt;Ha creado su módulo. Puede editar el código fuente del control mediante la selección de la vista de código fuente el menú de acciones.&lt;/p&gt;
+&lt;script runat="server"&gt;
+
+&lt;/script&gt;</value>
+  </data>
+  <data name="ModuleFolder.Text">
+    <value xml:space="preserve">Debe seleccionar una carpeta para el módulo. Puede crear una si es necesario.</value>
+  </data>
+  <data name="New.Text">
+    <value xml:space="preserve">Nuevo</value>
+  </data>
+  <data name="NoControl.Text">
+    <value xml:space="preserve">Debe seleccionar un control de la lista de "Recursos"</value>
+  </data>
+  <data name="NonuniqueName.Text">
+    <value xml:space="preserve">Ya existe un paquete con este nombre. Utilize otro nombre.</value>
+  </data>
+  <data name="NonuniqueNameModule.Text">
+    <value xml:space="preserve">El módulo {0} ya se ha registrado en el sistema</value>
+  </data>
+  <data name="plAddPage.Help">
+    <value xml:space="preserve">Marque esta casilla para crear una página de pruebas para el nuevo módulo.</value>
+  </data>
+  <data name="plAddPage.Text">
+    <value xml:space="preserve">¿Añadir página de prueba?</value>
+  </data>
+  <data name="plCreate.Help">
+    <value xml:space="preserve">Puede crear un nuevo módulo de tres maneras diferentes. Seleccione el método a utilizar. 1.Nuevo: crea un nuevo control de módulo. 2.Control: crea un módulo a partir de un control existente. 3.Manifiesto: crea un módulo a partir de un manifiesto existente.</value>
+  </data>
+  <data name="plCreate.Text">
+    <value xml:space="preserve">Crear módulo desde:</value>
+  </data>
+  <data name="plDescription.Help">
+    <value xml:space="preserve">Puede proporcionar una descripción para su módulo.</value>
+  </data>
+  <data name="plDescription.Text">
+    <value xml:space="preserve">Descripción:</value>
+  </data>
+  <data name="plFile1.Help">
+    <value xml:space="preserve">Seleccione el recurso a utilizar para crear el módulo.</value>
+  </data>
+  <data name="plFile1.Text">
+    <value xml:space="preserve">Recurso:</value>
+  </data>
+  <data name="plFile2.Help">
+    <value xml:space="preserve">Indique un nombre para el nuevo control de módulo</value>
+  </data>
+  <data name="plFile2.Text">
+    <value xml:space="preserve">Nombre de archivo:</value>
+  </data>
+  <data name="plLang.Help">
+    <value xml:space="preserve">Seleccione el idioma a usar.</value>
+  </data>
+  <data name="plLang.Text">
+    <value xml:space="preserve">Idioma:</value>
+  </data>
+  <data name="plModule1.Help">
+    <value xml:space="preserve">Carpeta donde se encuentran las carpetas y archivos del módulo</value>
+  </data>
+  <data name="plModule1.Text">
+    <value xml:space="preserve">Carpeta del módulo:</value>
+  </data>
+  <data name="plModule2.Help">
+    <value xml:space="preserve">Indique un nombre para la carpeta del nuevo módulo.</value>
+  </data>
+  <data name="plModule2.Text">
+    <value xml:space="preserve">Nombre de la carpeta:</value>
+  </data>
+  <data name="plName.Help">
+    <value xml:space="preserve">Indique un nombre amigable para el módulo.</value>
+  </data>
+  <data name="plName.Text">
+    <value xml:space="preserve">Nombre:</value>
+  </data>
+  <data name="plOwner1.Help">
+    <value xml:space="preserve">Le recomendamos que utilice una carpeta principal dentro de DesktopModules para todos los desarrollos, de esta forma puede evitar posibles conflictos con otros desarrolladores. Seleccione la carpeta que desee utilizar para el módulo. Atención: las carpetas con controles de usuario (archivos .ascx) y la carpeta admin no se incluyen en la lista.</value>
+  </data>
+  <data name="plOwner1.Text">
+    <value xml:space="preserve">Carpeta principal:</value>
+  </data>
+  <data name="plOwner2.Help">
+    <value xml:space="preserve">Indique el nombre de la carpeta</value>
+  </data>
+  <data name="plOwner2.Text">
+    <value xml:space="preserve">Nombre de la carpeta:</value>
+  </data>
+  <data name="TabExists.Text">
+    <value xml:space="preserve">Ya existe una página con el mismo nombre que este módulo. El módulo se ha creado pero la página de prueba no.</value>
+  </data>
+  <data name="Template.Text">
+    <value xml:space="preserve">Plantilla</value>
+  </data>
+  <data name="VisualBasic.Text">
+    <value xml:space="preserve">Visual Basic </value>
+  </data>
+</root>

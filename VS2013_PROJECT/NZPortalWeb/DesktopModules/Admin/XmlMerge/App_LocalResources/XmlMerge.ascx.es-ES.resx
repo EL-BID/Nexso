@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cmdExecute.Text">
+    <value xml:space="preserve">Ejecutar combinación</value>
+  </data>
+  <data name="cmdLoad.Text">
+    <value xml:space="preserve">Cargar</value>
+  </data>
+  <data name="cmdSave.Text">
+    <value xml:space="preserve">Guardar cambios</value>
+  </data>
+  <data name="cmdUpload.Text">
+    <value xml:space="preserve">Subir</value>
+  </data>
+  <data name="Configuration.Text">
+    <value xml:space="preserve">Archivos</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Gestión de archivos de configuración</value>
+  </data>
+  <data name="ERROR_ConfigurationFormat.Text">
+    <value xml:space="preserve">Su archivo de configuración no es un archivo XML válido. Corrija el problema de formato y vuelva a guardar el archivo. Error: {0}</value>
+  </data>
+  <data name="ERROR_Merge.Text">
+    <value xml:space="preserve">El sistema ha detectado un error al aplicar los cambios de configuración especificados. Revise el registro de sucesos para más detalles del error.</value>
+  </data>
+  <data name="fileLabel.Help">
+    <value xml:space="preserve">Puede modificar el archivo antes de hacer cambios</value>
+  </data>
+  <data name="fileLabel.Text">
+    <value xml:space="preserve">Archivo:</value>
+  </data>
+  <data name="LoadConfigWarning.Text">
+    <value xml:space="preserve">Perderá los cambios actuales si carga un nuevo archivo de configuración</value>
+  </data>
+  <data name="Merge.Text">
+    <value xml:space="preserve">Scripts de combinación</value>
+  </data>
+  <data name="MergeConfirm.Text">
+    <value xml:space="preserve">¿Está seguro que desea combinar los cambios a este archivo de configuración?</value>
+  </data>
+  <data name="plConfig.Help">
+    <value xml:space="preserve">Seleccione un archivo de configuración para la edición.</value>
+  </data>
+  <data name="plConfig.Text">
+    <value xml:space="preserve">Archivo de configuración</value>
+  </data>
+  <data name="plScript.Help">
+    <value xml:space="preserve">Seleccione una combinación de secuencias de comandos XML para cargar. Una vez cargado, el script se puede editar y luego ejecutar.</value>
+  </data>
+  <data name="plScript.Text">
+    <value xml:space="preserve">Script de combinación</value>
+  </data>
+  <data name="SaveConfirm.Text">
+    <value xml:space="preserve">¿Está seguro que desea guardar los cambios en este archivo de configuración?</value>
+  </data>
+  <data name="SaveWarning.Text">
+    <value xml:space="preserve">Cambiar el archivo web.config hará que su sitio web se reinicie y puede disminuir el rendimiento del sitio mientras que la aplicación se vuelve a cargar. ¿Esta seguro que desea continuar?</value>
+  </data>
+  <data name="scriptLabel.Help">
+    <value xml:space="preserve">Puede editar el script antes de su ejecución.</value>
+  </data>
+  <data name="scriptLabel.Text">
+    <value xml:space="preserve">Script: </value>
+  </data>
+  <data name="SelectConfig.Text">
+    <value xml:space="preserve">Seleccione un archivo de configuración</value>
+  </data>
+  <data name="Success.Text">
+    <value xml:space="preserve">Cambios aplicados correctamente.</value>
+  </data>
+</root>

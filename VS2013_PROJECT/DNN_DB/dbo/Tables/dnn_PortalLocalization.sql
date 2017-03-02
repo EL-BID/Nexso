@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[dnn_PortalLocalization] (
+    [PortalID]             INT            NOT NULL,
+    [CultureCode]          NVARCHAR (10)  NOT NULL,
+    [PortalName]           NVARCHAR (128) NOT NULL,
+    [LogoFile]             NVARCHAR (50)  NULL,
+    [FooterText]           NVARCHAR (100) NULL,
+    [Description]          NVARCHAR (500) NULL,
+    [KeyWords]             NVARCHAR (500) NULL,
+    [BackgroundFile]       NVARCHAR (50)  NULL,
+    [HomeTabId]            INT            NULL,
+    [LoginTabId]           INT            NULL,
+    [UserTabId]            INT            NULL,
+    [AdminTabId]           INT            NULL,
+    [SplashTabId]          INT            NULL,
+    [CreatedByUserID]      INT            NULL,
+    [CreatedOnDate]        DATETIME       NULL,
+    [LastModifiedByUserID] INT            NULL,
+    [LastModifiedOnDate]   DATETIME       NULL,
+    [RegisterTabId]        INT            NULL,
+    [SearchTabId]          INT            NULL,
+    [Custom404TabId]       INT            NULL,
+    [Custom500TabId]       INT            NULL,
+    CONSTRAINT [PK_dnn_PortalLocalization] PRIMARY KEY CLUSTERED ([PortalID] ASC, [CultureCode] ASC),
+    CONSTRAINT [FK_dnn_PortalLocalization_dnn_Portals] FOREIGN KEY ([PortalID]) REFERENCES [dbo].[dnn_Portals] ([PortalID]) ON DELETE CASCADE
+);
+

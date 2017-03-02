@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">Existem dois tipos de Portais que podem ser criados com esta aplicação:&lt;br&gt;&lt;br&gt;&lt;li&gt;&lt;b&gt;Portais Pai&lt;/b&gt; são portais que têm um endereço único (ex. www.dominio.com) associado. Isto envolve geralmente a compra de um nome de domínio de um registro de internet, definir o DNS primário e secundário para apontar para o servidor de DNS do provedor de hospedagem, e fazer no seu provedor de hospedagem o mapeamento do nome de domínio para o endereço IP da sua conta. Um exemplo de um nome de portal pai válido é &lt;b&gt;www.meudominio.com&lt;/b&gt;. Você também pode utilizar o endereço IP do seu portal sem um nome de domínio (ie. &lt;b&gt;65.174.86.217&lt;/b&gt;). Se necessitar de ter múltiplos nomes de domínio apontando para o mesmo portal então você pode separá-los por virgulas (ex. &lt;b&gt;www.dominio1.com, www.dominio2.com&lt;/b&gt;).
+Não crie um portal pai enquanto todos os mapeamentos DNS não estiverem criados pois não poderá acessar seu portal. &lt;br&gt;&lt;br&gt;&lt;li&gt;&lt;b&gt;Portais filhos&lt;/b&gt; são sub-portais da sua conta no provedor de hospedagem. Essencialmente isto significa que é criada um diretório no servidor web que permite que o site seja acessado através de um endereço que inclui o nome de domínio pai tal como o nome de diretório (ex. www.dominio.com/diretorio). Um portal filho pode ser convertido em um portal pai a qualquer momento pela simples modificação da entrada do apelido do portal.&lt;br&gt;&lt;br&gt;* Por favor, observe: Portais serão criados utilizando as propriedades padrões definidas no módulo de Configuração do Servidor (Tarifa de servidor, Espaço em servidor, Período de demonstração...) ou no arquivo modelo selecionado. Uma vez criado o portal, estas propriedades podem ser modificadas na página de administraçãor no módulo de Configurações do Portal.&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="plType.Text">
+    <value xml:space="preserve">Tipo de portal:</value>
+  </data>
+  <data name="plType.Help">
+    <value xml:space="preserve">Há dois tipos de portais que podem ser criados com esta aplicação (veja o módulo de ajuda disponível no menu de ações para mais detalhes).</value>
+  </data>
+  <data name="DemoMessage.Text">
+    <value xml:space="preserve">A inscrição no Portal de Demonstração permite-lhe criar o seu próprio portal e experimentar as suas capacidades avançadas {0}. A qualquer momento durante ou depois do periodo de experiência, você pode converter o seu portal de demonstração em um portal registrado conectando-se como administrador e selecionando o atalho de "Renovar / Extender a sua subscrição de portal" na página de administração. Portais registrados têm o benefício adicional de utilizar o seu próprio nome de domínio (ex. www.seudominio.com) como o seu endereço Web.&lt;br&gt;&lt;br&gt;&lt;b&gt; * Nota:&lt;/b&gt; O seu nome de portal deve ser um nome simples e não pode contar espaços ou caracteres de pontuação. O endereço do seu portal tomará a forma &lt;b&gt; {1}/nomedoportal&lt;/b&gt;&lt;br&gt;&lt;br&gt;</value>
+  </data>
+  <data name="AdminMissing.Text">
+    <value xml:space="preserve">Seu arquivo "admin.template" está faltando e deve ser enviado para o portal.&lt;br&gt;</value>
+  </data>
+  <data name="PortalMissing.Text">
+    <value xml:space="preserve">Seu arquivo 'portal.template' está faltando e deve ser enviado para o portal.&lt;br&gt;</value>
+  </data>
+  <data name="plPortalName.Text">
+    <value xml:space="preserve">Nome do portal:</value>
+  </data>
+  <data name="plPortalName.Help">
+    <value xml:space="preserve">Entre um nome para o portal.</value>
+  </data>
+  <data name="valPortalName.ErrorMessage">
+    <value xml:space="preserve">O nome de portal é obrigatório!</value>
+  </data>
+  <data name="plTitle.Text">
+    <value xml:space="preserve">Título:</value>
+  </data>
+  <data name="plTitle.Help">
+    <value xml:space="preserve">Dê um título ao portal.</value>
+  </data>
+  <data name="plDescription.Text">
+    <value xml:space="preserve">Descrição:</value>
+  </data>
+  <data name="plDescription.Help">
+    <value xml:space="preserve">Entre uma descrição para seu portal.</value>
+  </data>
+  <data name="plKeyWords.Text">
+    <value xml:space="preserve">Palavras chave:</value>
+  </data>
+  <data name="plKeyWords.Help">
+    <value xml:space="preserve">Insira algumas palavras chave separadas por vírgulas. Estas palavras serão adicionadas à página HTML como metadados e ajudarão os dispositivos de busca a indexar o seu portal.</value>
+  </data>
+  <data name="plTemplate.Text">
+    <value xml:space="preserve">Modelo:</value>
+  </data>
+  <data name="plTemplate.Help">
+    <value xml:space="preserve">Escolha um modelo para o novo portal.</value>
+  </data>
+  <data name="plFirstName.Text">
+    <value xml:space="preserve">Nome:</value>
+  </data>
+  <data name="plFirstName.Help">
+    <value xml:space="preserve">Entre o seu nome.</value>
+  </data>
+  <data name="plLastName.Text">
+    <value xml:space="preserve">Sobrenome:</value>
+  </data>
+  <data name="plLastName.Help">
+    <value xml:space="preserve">Entre o seu sobrenome.</value>
+  </data>
+  <data name="valFirstName.ErrorMessage">
+    <value xml:space="preserve">O nome é obrigatório!</value>
+  </data>
+  <data name="valLastName.ErrorMessage">
+    <value xml:space="preserve">O sobrenome é obrigatório!</value>
+  </data>
+  <data name="plUsername.Text">
+    <value xml:space="preserve">Nome de usuário:</value>
+  </data>
+  <data name="plUsername.Help">
+    <value xml:space="preserve">Entre um nome de usuário para a conta de administrador deste portal.</value>
+  </data>
+  <data name="plPassword.Text">
+    <value xml:space="preserve">Senha:</value>
+  </data>
+  <data name="plPassword.Help">
+    <value xml:space="preserve">Entre uma senha para a conta de administrador deste portal.</value>
+  </data>
+  <data name="plConfirm.Text">
+    <value xml:space="preserve">Confirme:</value>
+  </data>
+  <data name="plConfirm.Help">
+    <value xml:space="preserve">Repita a sua senha para confirmar que foi digitada corretamente.</value>
+  </data>
+  <data name="valUsername.ErrorMessage">
+    <value xml:space="preserve">O nome de usuário é obrigatório!</value>
+  </data>
+  <data name="valPassword.ErrorMessage">
+    <value xml:space="preserve">A senha é obrigatória!</value>
+  </data>
+  <data name="valConfirm.ErrorMessage">
+    <value xml:space="preserve">A confirmação de senha é obrigatória!</value>
+  </data>
+  <data name="plEmail.Text">
+    <value xml:space="preserve">Endereço de email:</value>
+  </data>
+  <data name="plEmail.Help">
+    <value xml:space="preserve">Entre o endereço de email para a conta de administrador deste portal.</value>
+  </data>
+  <data name="valEmail.ErrorMessage">
+    <value xml:space="preserve">O email é obrigatório!</value>
+  </data>
+  <data name="cmdUpdate.Text">
+    <value xml:space="preserve">Criar portal</value>
+  </data>
+  <data name="Note.Text">
+    <value xml:space="preserve">&lt;b&gt;* Nota:&lt;/b&gt; Uma vez que o portal é criado, é necessário autenticar-se com a informação de administrador especificada acima.</value>
+  </data>
+  <data name="InvalidTemplate.Text">
+    <value xml:space="preserve">{0} não é um modelo de portal válido.</value>
+  </data>
+  <data name="InvalidName.Text">
+    <value xml:space="preserve">O nome do portal não pode conter espaços ou pontuação.</value>
+  </data>
+  <data name="InvalidPassword.Text">
+    <value xml:space="preserve">Os valores das senhas inseridas não coincidem.</value>
+  </data>
+  <data name="ChildExists.Text">
+    <value xml:space="preserve">O nome especificado para o portal filho já existe. Por favor escolha um nome diferente para o portal filho.</value>
+  </data>
+  <data name="CreateError.Text">
+    <value xml:space="preserve">Ocorreu um erro durante a criação do seu portal. Isto pode ter sido causado pela especificação de uma senha incorreta para um usuário existente. Por favor verifique os seus detalhes antes de tentar novamente.</value>
+  </data>
+  <data name="PortalSetup.Text">
+    <value xml:space="preserve">Configuração do Portal</value>
+  </data>
+  <data name="SecuritySettings.Text">
+    <value xml:space="preserve">Configuração de Segurança</value>
+  </data>
+  <data name="plPortalAlias.Text">
+    <value xml:space="preserve">Apelido do portal:</value>
+  </data>
+  <data name="plPortalAlias.Help">
+    <value xml:space="preserve">Entre o apelido do portal.</value>
+  </data>
+  <data name="plHomeDirectory.Text">
+    <value xml:space="preserve">Diretório inicial:</value>
+  </data>
+  <data name="plHomeDirectory.Help">
+    <value xml:space="preserve">Entre o diretório inicial para este portal</value>
+  </data>
+  <data name="Customize.Text">
+    <value xml:space="preserve">Personalizar</value>
+  </data>
+  <data name="valTemplate.ErrorMessage">
+    <value xml:space="preserve">Por favor selecione um arquivo de modelo!</value>
+  </data>
+  <data name="Parent.Text">
+    <value xml:space="preserve">Pai</value>
+  </data>
+  <data name="Child.Text">
+    <value xml:space="preserve">Filho</value>
+  </data>
+  <data name="AutoGenerate.Text">
+    <value xml:space="preserve">Geração automática</value>
+  </data>
+  <data name="ControlTitle_signup.Text">
+    <value xml:space="preserve">Adicionar Portal</value>
+  </data>
+  <data name="SendMail.Error">
+    <value xml:space="preserve">Ocorreu um erro ao enviar os emails de confirmação: {0}! Entretanto, o portal foi criado. &lt;a href='{1}'&gt;Clique aqui&lt;/a&gt;para acessar o novo portal!</value>
+  </data>
+  <data name="AddPortal.Text">
+    <value xml:space="preserve">Adicionar Novo Portal</value>
+  </data>
+  <data name="InvalidHomeFolder.Text">
+    <value xml:space="preserve">A pasta inicial que você especificou não é válida.</value>
+  </data>
+  <data name="DuplicatePortalAlias.Text">
+    <value xml:space="preserve">O nome de apelido do portal que você especificou já existe. Por favor escolha um apelido de portal diferente.</value>
+  </data>
+  <data name="UnknownSendMail.Error">
+    <value xml:space="preserve">Ocorreu um erro ao enviar os emails de confirmação! Entretanto, o portal foi criado. &lt;a href='{0}'&gt;Clique aqui&lt;/a&gt; para acessar o novo portal.</value>
+  </data>
+  <data name="ValidationResults.Text">
+    <value xml:space="preserve">Resultados da validação</value>
+  </data>
+  <data name="plAnswer.Help">
+    <value xml:space="preserve">Entre a resposta para a pergunta acima. </value>
+  </data>
+  <data name="plAnswer.Text">
+    <value xml:space="preserve">Resposta da senha:</value>
+  </data>
+  <data name="plQuestion.Help">
+    <value xml:space="preserve">Entre uma pergunta para usar quando precisar recuperar a senha.</value>
+  </data>
+  <data name="plQuestion.Text">
+    <value xml:space="preserve">Pergunta da senha:</value>
+  </data>
+  <data name="valEmail2.ErrorMessage">
+    <value xml:space="preserve">O endereço de email é inválido!</value>
+  </data>
+  <data name="useCurrentLabel.Help">
+    <value xml:space="preserve">Marque esta caixa se você quer usar o atual SuperUsuário como o administrador do portal. Se esta caixa estiver desmarcada você poderá entrar credenciais de usuário para o administrador.</value>
+  </data>
+  <data name="useCurrentLabel.Text">
+    <value xml:space="preserve">Usar usuário atual como administrador?</value>
+  </data>
+  <data name="valPortalAlias.ErrorMessage">
+    <value xml:space="preserve">O apelido do portal é obrigatório!</value>
+  </data>
+</root>

@@ -1,0 +1,295 @@
+﻿/* ==========================================================================
+   Browse - browse page styles for Nexso 2
+   ========================================================================== */
+
+#browse {
+  /* General resets */
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+  
+  .intro {
+    @include grid-column(12);
+    text-align: center;
+  }
+  
+  .actions-wrapper {
+    @include grid-column(12);
+  }
+  
+  .actions {
+    @extend .clearfix;
+    position: relative;
+    margin-bottom: 3rem;
+    border: 1px $light-touch solid;
+    border-width: 1px 0;
+    text-align: center;
+    
+    .filters-toggle {
+      @extend .primary-button;
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+    
+    .drop2 {
+      display: none;
+      position: absolute;
+      z-index: 2;
+      top: 5rem;
+      right: 0;
+      width: 100%;
+      padding: 1rem;
+      border: 1px $light-touch solid;
+      background-color: #FFF;
+      text-align: left;
+      
+      &:before {
+        position: absolute;
+        z-index: 1;
+        top: -22px;
+        left: 50%;
+        margin-left: -1rem;
+        
+        @extend .nexso-icon;
+        font-size: 2rem;
+        content: "\e609";
+        color: #FFF;
+        text-shadow: 0 -1px tint($body-font-color, 20%);
+      }
+      
+      h2 {
+        @extend .title-m;
+      }
+      
+      .themes,
+      .beneficiaries {
+        ul {
+          @extend .clearfix;
+          li {
+            float: left;
+          }
+        }
+      }
+      
+      .filter {
+        @extend .tertiary-button;
+        font-size: 0.875rem;
+        margin-right: 0.5rem;
+        padding: 0.25rem;
+        font-weight: normal !important;
+        
+        &.on {
+          @extend .primary-button;
+          border-width: 1px;
+          font-size: 0.875rem;
+          margin-right: 0.5rem;
+          padding: 0.25rem;
+          font-weight: 700 !important;
+        }
+        
+      }
+      
+      .filters-apply {
+        @extend .primary-button;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+        clear: both;
+      }
+    }
+    
+    @media #{$medium-up} {
+      .filters-toggle {
+        float: right;
+      }
+      .drop2 {
+        width: 75%;
+        
+        &:before {
+          left: 85%;
+          margin-left: 0;
+        }
+      }
+      .themes,
+      .beneficiaries {
+        float: left;
+        width: 50%;
+      }
+    }
+  }
+  
+  .solution-grid {
+    @extend .clearfix;
+    min-height: 25rem;
+  }
+  
+  .solution {
+    @include grid-column(12);
+    margin-bottom: 3rem;
+    
+    .wrapper {
+      border: 1px $light-touch solid;
+    }
+    
+    .media a{
+      display: block;
+    }
+    
+    .meta {
+      padding: 0;
+      
+      span, p, a, dt, dd {
+        font-size: 0.875rem;
+      }
+      
+      h1 {
+        @extend .title-s;
+        margin-top: 1rem;
+      }
+      
+      .introduction,
+      dl {
+        padding: 0 1rem;
+      }
+      
+      .introduction {
+        .organization {
+          display: block;
+          margin-bottom: 1rem;
+        }
+      }
+      
+      dl {
+        position: relative;
+        border-top: 1px $light-touch solid;
+        margin: 0;
+        
+        dt {
+          @extend .visually-hidden;
+        }
+        
+        dd {
+          margin: 0;
+          padding: 0.75rem 0 0.75rem 1.5rem;
+          line-height: 1.5rem;
+        }
+          
+        &:before {
+          @extend .nexso-icon;
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          z-index: 1;
+          
+          &.cost {
+            @extend .icon-coins;
+          }
+          &.themes {
+            @extend .icon-tag5;
+          }
+          &.time {
+            @extend .icon-calendar;
+          }
+          &.location {
+            @extend .icon-location5;
+          }
+        }
+      }
+    }
+    
+    @media #{$medium-up} {
+      @include grid-column(6);
+      
+      &:nth-child(2n+1) {
+        clear: left;
+      }
+    }
+    
+    @media #{$large-up} {
+      @include grid-column(4);
+      
+      &:nth-child(2n+1) {
+        clear: none;
+      }
+      &:nth-child(3n+1) {
+        clear: left;
+      }
+    }
+  }
+  
+  .solution.placeholder-solution {
+    .media {
+      background: #E7E7E7;
+      height: 250px;
+    }
+    
+    .title.placeholder {
+      background: #E7E7E7;
+      margin: 1rem 0;
+    }
+    
+    .introduction p.placeholder {
+      background: #E7E7E7;
+      margin-top: 1rem;
+      font-size: 0.625rem;
+      line-height: 0.625rem;
+      margin: 0 0 0.625rem 0
+    }
+    
+    .organization.placeholder {
+      display: block;
+      background: #E7E7E7;
+      margin: 2rem 0 0.625rem 0;
+      width: 30%;
+      font-size: 0.625rem;
+      line-height: 0.625rem;
+    }
+    
+    dd span.placeholder {
+      display: block;
+      font-size: 0.5rem;
+      background: #E7E7E7;
+      font-size: 0.625rem;
+      line-height: 0.625rem;
+      margin: 7px 0;
+    }
+  }
+  
+  #show-more-trigger {
+    @extend .primary-button;
+    display: block;
+    margin: 0 auto 4rem auto;
+    
+    &.disabled {
+      opacity: 0.3;
+    }
+  }
+  
+  #loading {
+    position: fixed;
+    display: none;   
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: 14rem;
+    height: 7rem;
+    margin: -3.5rem 0 0 -7rem;
+    
+    background: rgba(tint(#7E7E7E, 20%), 0.6);
+    border: 1px solid rgba(#7E7E7E, 0.4);
+    border-bottom-width: 0.375rem;
+    color: #FFF;
+    
+    font-weight: 700;
+    text-align: center;
+    line-height: 7rem;
+    font-size: 1.25rem;
+    
+    &.on {
+      display: block;
+    }
+  }
+}

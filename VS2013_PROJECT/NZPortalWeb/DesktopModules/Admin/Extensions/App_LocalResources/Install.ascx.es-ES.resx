@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AcceptLicense.Help">
+    <value xml:space="preserve">Marque esta casilla para aceptar los términos de la licencia.</value>
+  </data>
+  <data name="AcceptLicense.Text">
+    <value xml:space="preserve">¿Aceptar licencia?</value>
+  </data>
+  <data name="AcceptTerms.Text">
+    <value xml:space="preserve">Debe aceptar los términos de la licencia si desea instalar este paquete.</value>
+  </data>
+  <data name="AzureCompact.Text">
+    <value xml:space="preserve">¿Instalar la extensión sin la verificación de compatibilidad de Windows Azure SQL Database?</value>
+  </data>
+  <data name="AzureCompactHelp.Text">
+    <value xml:space="preserve">Este sitio utiliza Windows Azure SQL Database como base de datos. El propieatario del paquete que está instalando no ha verificado que sea compatible con Windows Azure SQL Database. Si instala una extensión no compatible puede provocar que no funcionen las copias de seguridad de la base de datos y que se produzcan errores durante la ejecución del módulo. Puede continuar la instalación si usted ha verificado la compatibilidad de la extensión. Pulse Cancelar y póngase en contacto con el propietario de la extensión para preguntar sobre la compatibilidad si no está seguro.</value>
+  </data>
+  <data name="AzureCompactMessage.Text">
+    <value xml:space="preserve">El paquete no tiene la verificación de compatibilidad con Windows Azure SQL Database.</value>
+  </data>
+  <data name="AzureCompactWarning.Text">
+    <value xml:space="preserve">Atención: Ha seleccionado instalar el paquete sin la verificación de compatibilidad Windows Azure SQL Database.</value>
+  </data>
+  <data name="BrowseFile.Text">
+    <value xml:space="preserve">Examinar archivos:</value>
+  </data>
+  <data name="BrowseFileHelp.Text">
+    <value xml:space="preserve">Use el botón examinar para explorar en el sistema de archivos de su ordenador el paquete de extensión que desea instalar. Luego haga clic en "Siguiente" para continuar.</value>
+  </data>
+  <data name="Cancel.Text">
+    <value xml:space="preserve">Volver</value>
+  </data>
+  <data name="Container.Text">
+    <value xml:space="preserve">Container </value>
+  </data>
+  <data name="ControlTitle_install.Text">
+    <value xml:space="preserve">Instalar extensión</value>
+  </data>
+  <data name="CoreLanguageError.Text">
+    <value xml:space="preserve">El idioma del núcleo para el cual este paquete de idioma está diseñado no está instalado. Instale el paquete de idioma del núcleo antes de instalar cualquier paquete de idioma de una extensión para este idioma.</value>
+  </data>
+  <data name="DependencyError.Text">
+    <value xml:space="preserve">Este paquete de idioma está diseñado para una extensión que no parece estar instalada.</value>
+  </data>
+  <data name="FileSizeRestriction.Text">
+    <value xml:space="preserve">Su sitio está configurado con un tamaño máximo de archivo de {0} MB. </value>
+  </data>
+  <data name="IgnoreRestrictedFilesWarning.Text">
+    <value xml:space="preserve">ATENCIÓN: Ha seleccionado ignorar la comprobación de restricción de tipos de archivo. Esta acción supone un posible riesgo de seguridad para su sitio y sólo debería hacerlo si el paquete que está instalando procede de una fuente segura.</value>
+  </data>
+  <data name="IgnoreWhiteList.Text">
+    <value xml:space="preserve">¿Ignorar restricciones de archivos?</value>
+  </data>
+  <data name="IgnoreWhiteListHelp.Text">
+    <value xml:space="preserve">El instalador mantiene una lista de archivos permitidos (lista blanca) que pueden ser instalados en tu sitio. Si está seguro que el paquete que está instalando procede de una fuente segura puede ignorar esta lista.</value>
+  </data>
+  <data name="InstallCustomPackage.Text">
+    <value xml:space="preserve">Instalar nuevo paquete {0} </value>
+  </data>
+  <data name="InstallError.Text">
+    <value xml:space="preserve">Error cargando archivos desde la carpeta temporal, observe a continuación</value>
+  </data>
+  <data name="InstallPackage.Text">
+    <value xml:space="preserve">Instalar nuevo paquete</value>
+  </data>
+  <data name="InstallResults.Help">
+    <value xml:space="preserve">El paquete se instaló correctamente, observe a continuación</value>
+  </data>
+  <data name="InstallResults.Title">
+    <value xml:space="preserve">Paquete instalado correctamente</value>
+  </data>
+  <data name="Introduction.Help">
+    <value xml:space="preserve">DotNetNuke se puede ampliar de muchas maneras. Este asistente le ayuda a subir e instalar los paquetes de extensión de DotNetNuke.
+</value>
+  </data>
+  <data name="Introduction.Title">
+    <value xml:space="preserve">Subir nuevo paquete de extensión</value>
+  </data>
+  <data name="InvalidExt.Text">
+    <value xml:space="preserve">Extensión de archivo inválida: {0}</value>
+  </data>
+  <data name="InvalidFiles.Text">
+    <value xml:space="preserve">El paquete contiene archivos con extensiones inválidas: {0}.</value>
+  </data>
+  <data name="License.Help">
+    <value xml:space="preserve">Antes de proceder debe aceptar los términos de licenciamiento para esta extensión. Revise la licencia y marque la casilla de verificación "Acepto los términos"</value>
+  </data>
+  <data name="License.Title">
+    <value xml:space="preserve">Revisar licencia</value>
+  </data>
+  <data name="LogTitle.Text">
+    <value xml:space="preserve">Registro de la instalación del paquete</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Acerca del instalador de paquetes&lt;/h1&gt;&lt;p&gt;Le permite subir e instalar paquetes en su sitio web.&lt;/p&gt;</value>
+  </data>
+  <data name="NoAzureCompactHelp.Text">
+    <value xml:space="preserve">Este sitio utiliza Windows Azure SQL Database como base de datos. El propieatario del paquete que está instalando ha verificado que no es compatible con Windows Azure SQL Database. Pulse Cancelar para terminar el proceso de instalación.</value>
+  </data>
+  <data name="NoAzureCompactMessage.Text">
+    <value xml:space="preserve">Este paquete no es compatible con Windows Azure SQL Database.</value>
+  </data>
+  <data name="NoFile.Text">
+    <value xml:space="preserve">Tiene seleccionar un archivo para subir. Haga clic en el botón de examinar para localizar un archivo en el sistema de archivos de su ordenador.</value>
+  </data>
+  <data name="PackageInfo.Help">
+    <value xml:space="preserve">La información siguiente se encuentra en el manifiesto del paquete.</value>
+  </data>
+  <data name="PackageInfo.Title">
+    <value xml:space="preserve">Información del paquete</value>
+  </data>
+  <data name="PackageInstalled.Text">
+    <value xml:space="preserve">El paquete ya está instalado.</value>
+  </data>
+  <data name="ReleaseNotes.Help">
+    <value xml:space="preserve">Puede revisar las notas de la versión para este paquete.</value>
+  </data>
+  <data name="ReleaseNotes.Title">
+    <value xml:space="preserve">Notas de la versión</value>
+  </data>
+  <data name="RepairInstall.Text">
+    <value xml:space="preserve">¿Reparar instalación?</value>
+  </data>
+  <data name="RepairInstallHelp.Text">
+    <value xml:space="preserve">El instalador no sobrescribirá el mismo paquete/versión a menos que lo indique. Si quiere que el instalador continue y repare la versión actualmente instalada active esta opción. En caso contrario no podrá continuar con la instalación.</value>
+  </data>
+  <data name="RepairInstallWarning.Text">
+    <value xml:space="preserve">ATENCIÓN: Ha seleccionado reparar la instalación de este paquete. Esto ocasionará que todos los archivos instalados previamente sean sobrescritos.</value>
+  </data>
+  <data name="Return.Text">
+    <value xml:space="preserve">Volver</value>
+  </data>
+  <data name="UploadPackage.Text">
+    <value xml:space="preserve">Subir paquete</value>
+  </data>
+  <data name="Warnings.Help">
+    <value xml:space="preserve">Si ha llegado a esta página es debido a que el instalador  necesita reunir más información antes de proceder.</value>
+  </data>
+  <data name="Warnings.Title">
+    <value xml:space="preserve">Resultados de la carga</value>
+  </data>
+  <data name="ZipCriticalError.Text">
+    <value xml:space="preserve">Error crítico leyendo el zip del paquete</value>
+  </data>
+  <data name="ZipError.Text">
+    <value xml:space="preserve">Error leyendo el zip del paquete, observe a continuación</value>
+  </data>
+</root>

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdvancedSettings.Text">
+    <value xml:space="preserve">Configuración avanzada</value>
+  </data>
+  <data name="Asynchronous.Text">
+    <value xml:space="preserve">Asíncrono</value>
+  </data>
+  <data name="BasicSettings.Text">
+    <value xml:space="preserve">Configuración básica</value>
+  </data>
+  <data name="cmdCancelPreview.Text">
+    <value xml:space="preserve">Cancelar previsualización</value>
+  </data>
+  <data name="cmdPreview.Text">
+    <value xml:space="preserve">Previsualizar email</value>
+  </data>
+  <data name="cmdSend.Text">
+    <value xml:space="preserve">Enviar correo</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Boletín de noticias</value>
+  </data>
+  <data name="Heading.Text">
+    <value xml:space="preserve">Apreciado/a</value>
+  </data>
+  <data name="High.Text">
+    <value xml:space="preserve">Alta</value>
+  </data>
+  <data name="Low.Text">
+    <value xml:space="preserve">Baja</value>
+  </data>
+  <data name="Message.Text">
+    <value xml:space="preserve">Mensaje</value>
+  </data>
+  <data name="MessageSent.Text">
+    <value xml:space="preserve">El envio (asíncrono) ha finalizado. Verifique la confirmación del envío en su correo</value>
+  </data>
+  <data name="MessagesSentCount.Text">
+    <value xml:space="preserve">{0} mensajes enviados correctamente</value>
+  </data>
+  <data name="MessageValidation.Text">
+    <value xml:space="preserve">Debe incluir un Asunto y un Mensaje</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Acerca del bolet&amp;iacute;n&lt;/h1&gt;
+&lt;p&gt;Los administradores pueden realizar env&amp;iacute;os masivos de correo a los miembros de uno o m&amp;aacute;s roles, o emails espec&amp;iacute;ficos. En sitios multi idioma se permite filtrar los usuarios seg&amp;uacute;n sus preferencias de idioma.&lt;/p&gt;
+&lt;p&gt;Se permite indicar una direcci&amp;oacute;n de env&amp;iacute;o y opcionalmente una direcci&amp;oacute;n de respuesta. El formato del correo enviado se asume en funci&amp;oacute;n del tipo de editor de texto utilizado.&lt;/p&gt;
+&lt;p&gt;El texto del asunto y el cuerpo del mensaje puede contener marcas (&lt;em&gt;tokens&lt;/em&gt;) que se reemplazar&amp;aacute;n por los valores reales al enviar el correo (tiene que activarse la opci&amp;oacute;n "reemplazar tokens").&lt;/p&gt;
+&lt;p&gt;Se permite en env&amp;iacute;o de archivos adjuntos y la asignaci&amp;oacute;n de una prioridad de env&amp;iacute;o. Tambi&amp;eacute;n si hay que suprimir los correos enviados a una misma direcci&amp;oacute;n de correo.&lt;/p&gt;
+&lt;p&gt;Hay tres m&amp;eacute;todos de env&amp;iacute;o disponibles:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;PARA&lt;/strong&gt;: se env&amp;iacute;a un correo individualmente para cada direcci&amp;oacute;n, reemplazando los tokens&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;CCO&lt;/strong&gt;: se env&amp;iacute;a un &amp;uacute;nico email al remitente con copia oculta a todos los destinatarios. No se reemplazar&amp;aacute;n los tokens de usuario.&lt;/li&gt;
+    &lt;li&gt;Relay: se utiliza como PARA, pero todos los emails individuales se env&amp;iacute;an a una direcci&amp;oacute;n de RELAY espec&amp;iacute;fica. Tiene que utilizar tokens para el n&amp;uacute;mero de m&amp;oacute;bil o fax de los usuarios para que se env&amp;iacute;en los mensajes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si env&amp;iacute;a los correos de forma &lt;strong&gt;s&amp;iacute;ncrona &lt;/strong&gt;tendr&amp;aacute; que esperar a que acabe el env&amp;iacute;o para poder continuar. En el modo &lt;strong&gt;as&amp;iacute;ncrono &lt;/strong&gt;puede continuar trabajando mientras se env&amp;iacute;an los correos. El informe del resultado de la operaci&amp;oacute;n se enviar&amp;aacute; a la direcci&amp;oacute;n del remitente.&lt;/p&gt;</value>
+  </data>
+  <data name="NoMessagesSent.Text">
+    <value xml:space="preserve">No se ha enviado ningún mensaje. En correo de confirmación se ha enviado a "{0}" con una descripción de los errores que se han encontrado durante el proceso de envío.</value>
+  </data>
+  <data name="NoMessagesSentPlusError.Text">
+    <value xml:space="preserve">Ocurrió un error en el envío del email: {0}</value>
+  </data>
+  <data name="NoRecipients.Text">
+    <value xml:space="preserve">No se envió ningún mensaje porque no hay destinatarios para este email.</value>
+  </data>
+  <data name="Normal.Text">
+    <value xml:space="preserve">Normal </value>
+  </data>
+  <data name="plAddressees.Text">
+    <value xml:space="preserve">Direcciones</value>
+  </data>
+  <data name="plAttachment.Help">
+    <value xml:space="preserve">Seleccione un archivo a adjuntar a este mensaje .</value>
+  </data>
+  <data name="plAttachment.Text">
+    <value xml:space="preserve">Adjunto</value>
+  </data>
+  <data name="plEmail.Help">
+    <value xml:space="preserve">Puede introducir direcciones de correo electrónico separadas por ";".</value>
+  </data>
+  <data name="plEmail.Text">
+    <value xml:space="preserve">Emails adicionales</value>
+  </data>
+  <data name="plFrom.Help">
+    <value xml:space="preserve">Indique el campo "De" para el mensaje</value>
+  </data>
+  <data name="plFrom.Text">
+    <value xml:space="preserve">De</value>
+  </data>
+  <data name="plLanguages.Help">
+    <value xml:space="preserve">Especifique un filtro de usuarios según el idioma especificado en sus perfiles.</value>
+  </data>
+  <data name="plLanguages.Text">
+    <value xml:space="preserve">Filtro por idioma</value>
+  </data>
+  <data name="plNoDuplicates.Help">
+    <value xml:space="preserve">Active esta opción para eliminar direcciones de correo duplicadas de la lista de direcciones.</value>
+  </data>
+  <data name="plNoDuplicates.Text">
+    <value xml:space="preserve">Borrar direcciones duplicadas</value>
+  </data>
+  <data name="plPriority.Help">
+    <value xml:space="preserve">Seleccione una prioridad para este mensaje.</value>
+  </data>
+  <data name="plPriority.Text">
+    <value xml:space="preserve">Prioridad</value>
+  </data>
+  <data name="plRelayAddress.Text">
+    <value xml:space="preserve">Dirección de respuesta</value>
+  </data>
+  <data name="plReplaceTokens.Help">
+    <value xml:space="preserve">¿El texto contiene algún token que debe ser sustituido con valores actuales del entorno? Nota: Los token de usuario serán remplazados solamente si el método de envío es "Para"
+	</value>
+  </data>
+  <data name="plReplaceTokens.Text">
+    <value xml:space="preserve">¿Reemplazar Tokens?</value>
+  </data>
+  <data name="plReplyTo.Help">
+    <value xml:space="preserve">Escriba la dirección para el campo "Responder a" del mensaje </value>
+  </data>
+  <data name="plReplyTo.Text">
+    <value xml:space="preserve">Responder a</value>
+  </data>
+  <data name="plRoles.Help">
+    <value xml:space="preserve">Seleccione los roles o usuarios que recibirán el mensaje. Por ejemplo, todos los administradores o todos los usuarios registrados.</value>
+  </data>
+  <data name="plRoles.Text">
+    <value xml:space="preserve">Enviar a usuarios o roles</value>
+  </data>
+  <data name="plSendAction.Help">
+    <value xml:space="preserve">Seleccione cómo desea que se envíe el mensaje. Síncrono: los mensajes se envían al momento, la aplicación queda bloqueada mientras se envían los mensajes; Asíncrono: los mensajes se envían en una tarea independiente, podrá continuar trabajando mientras los mensajes se envían en una tarea de segundo plano.</value>
+  </data>
+  <data name="plSendAction.Text">
+    <value xml:space="preserve">Modo de envío</value>
+  </data>
+  <data name="plSendMethod.Help">
+    <value xml:space="preserve">Seleccione el método de envío de este mensaje.</value>
+  </data>
+  <data name="plSendMethod.Text">
+    <value xml:space="preserve">Método de envío</value>
+  </data>
+  <data name="plSubject.Help">
+    <value xml:space="preserve">Introduzca el Asunto del mensaje.</value>
+  </data>
+  <data name="plSubject.Text">
+    <value xml:space="preserve">Asunto</value>
+  </data>
+  <data name="revEmailAddress.ErrorMessage">
+    <value xml:space="preserve">La dirección de correo no es valida</value>
+  </data>
+  <data name="SendBCC.Text">
+    <value xml:space="preserve">CCO: Un mensaje dirigido a una lista de correos oculta (no personalizado)</value>
+  </data>
+  <data name="SendRelay.Text">
+    <value xml:space="preserve">Relay: Un mensaje por dirección de correo (personalizado) para un servidor especificado de Relay</value>
+  </data>
+  <data name="SendTo.Text">
+    <value xml:space="preserve">PARA: Un mensaje por cada dirección de correo electrónico (personalizado)</value>
+  </data>
+  <data name="Synchronous.Text">
+    <value xml:space="preserve">Síncrono</value>
+  </data>
+</root>

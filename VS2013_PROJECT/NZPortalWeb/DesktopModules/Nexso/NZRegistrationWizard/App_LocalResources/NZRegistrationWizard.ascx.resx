@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BtnFinish.Text" xml:space="preserve">
+    <value>Sign Up </value>
+  </data>
+  <data name="BtnNext" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="BtnPrevious" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Email.Text" xml:space="preserve">
+    <value>Email </value>
+  </data>
+  <data name="ExistingMail.Text" xml:space="preserve">
+    <value>This email is already in use, if yours you can use it to login.</value>
+  </data>
+  <data name="ExistingUser.Text" xml:space="preserve">
+    <value>This email is already in use, if yours you can use it to login or recover your password by clicking &lt;a href="/es-es/login.aspx"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="FirstName.Text" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="InvalidEmail.Text" xml:space="preserve">
+    <value>Invalid email</value>
+  </data>
+  <data name="InvalidPassword.Text" xml:space="preserve">
+    <value>Password must be at least 7 characters</value>
+  </data>
+  <data name="LastName.Text" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Password.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="rfvtxtEmail.Text" xml:space="preserve">
+    <value>Email is required</value>
+  </data>
+  <data name="rfvtxtFirstName.Text" xml:space="preserve">
+    <value>First Name is required</value>
+  </data>
+  <data name="rfvtxtLastName.Text" xml:space="preserve">
+    <value>Last Name is required</value>
+  </data>
+  <data name="rfvtxtPassword.Text" xml:space="preserve">
+    <value>Password is required</value>
+  </data>
+  <data name="Step1Description.Text" xml:space="preserve">
+    <value>Click on the tags to show your areas of interest.
+(You can pick more than one.)</value>
+  </data>
+  <data name="Step2Description.Text" xml:space="preserve">
+    <value>Click on the tags to show the people and sectors you serve. (You can pick more than one.)</value>
+  </data>
+  <data name="Step3Description.Text" xml:space="preserve">
+    <value>click the tags to show the sectors you work in.
+(You can pick more than one.)</value>
+  </data>
+  <data name="Step4Description.Text" xml:space="preserve">
+    <value>Click the tags to show your partners.
+(You can pick more than one.)</value>
+  </data>
+  <data name="Step5Description.Text" xml:space="preserve">
+    <value>Street, city/country/province, country</value>
+  </data>
+  <data name="Step6Description.Text" xml:space="preserve">
+    <value>Create your free account</value>
+  </data>
+  <data name="Message.Text" xml:space="preserve">
+    <value>Must select at least one item</value>
+  </data>
+  <data name="Message5.Text" xml:space="preserve">
+    <value>Location is required</value>
+  </data>
+  <data name="Message55.Text" xml:space="preserve">
+    <value>Address is required</value>
+  </data>
+  <data name="Step0.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Step1.Text" xml:space="preserve">
+    <value>Your Interests</value>
+  </data>
+  <data name="Step2.Text" xml:space="preserve">
+    <value>People who you work help</value>
+  </data>
+  <data name="Step3.Text" xml:space="preserve">
+    <value>Sector you work in</value>
+  </data>
+  <data name="Step4.Text" xml:space="preserve">
+    <value>People who you are working with</value>
+  </data>
+  <data name="Step5.Text" xml:space="preserve">
+    <value>where you are</value>
+  </data>
+  <data name="Step6.Text" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="IntroductionTitle.Text" xml:space="preserve">
+    <value>Be part of something big.</value>
+  </data>
+  <data name="Step0Description.Text" xml:space="preserve">
+    <value>&lt;ul&gt;
+&lt;li&gt;The opportunity to receive advice and input on your solutions and ideas, and to connect with potential investors and partners&lt;/li&gt;
+&lt;li&gt;Channels for networking with peers form across the region and around the world&lt;/li&gt;
+&lt;li&gt;An exclusive library of tested, effective development solutions&lt;/li&gt;
+&lt;li&gt;An interactive toolkit that will help you build new solutions and customize existing ones&lt;/li&gt;
+&lt;br/&gt;
+&lt;strong&gt;Click Start to connect.&lt;/strong&gt;</value>
+  </data>
+  <data name="Step0Title.Text" xml:space="preserve">
+    <value>In six easy steps, tell us about you, your work &amp; your organization. When you create a registered NEXSO account, you'll gain access to unique features and tools, such as:</value>
+  </data>
+  <data name="EmailTitle.Text" xml:space="preserve">
+    <value>Email </value>
+  </data>
+  <data name="FirstNameTitle.Text" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="IntroductionTitleAlt.Text" xml:space="preserve">
+    <value>We'd like to know a little more about you.</value>
+  </data>
+  <data name="LastNameTitle.Text" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="PasswordTitle.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Step0TitleAlt.Text" xml:space="preserve">
+    <value>In six easy steps, tell us about you, your work &amp; your organization. When you update your NEXSO account, you'll gain access to unique features and tools, such as:</value>
+  </data>
+  <data name="Step1Title.Text" xml:space="preserve">
+    <value>What interests you?</value>
+  </data>
+  <data name="Step2Title.Text" xml:space="preserve">
+    <value>Who does your work help?</value>
+  </data>
+  <data name="Step3Title.Text" xml:space="preserve">
+    <value>What sector do you work in?</value>
+  </data>
+  <data name="Step4Title.Text" xml:space="preserve">
+    <value>Who do you work with?</value>
+  </data>
+  <data name="Step5Title.Text" xml:space="preserve">
+    <value>Where do you work?</value>
+  </data>
+  <data name="Step6Title.Text" xml:space="preserve">
+    <value>That’s it! Now create your free account to get started:</value>
+  </data>
+  <data name="rfvBeneficiaries.Text" xml:space="preserve">
+    <value>At least you have to select one Work option.</value>
+  </data>
+  <data name="rfvSector.Text" xml:space="preserve">
+    <value>At least you have to select one Sector option.</value>
+  </data>
+  <data name="rfvTheme.Text" xml:space="preserve">
+    <value>At least you have to select one Interest option.</value>
+  </data>
+  <data name="rfvWhoAreYou.Text" xml:space="preserve">
+    <value>At least you have to select one Workign option.</value>
+  </data>
+  <data name="Step6DescriptionAlt.Text" xml:space="preserve">
+    <value>We will use it to provide you a better NEXSO.</value>
+  </data>
+  <data name="Step6TitleAlt.Text" xml:space="preserve">
+    <value>Thanks for updating your information!!</value>
+  </data>
+  <data name="AcceptTerms.Text" xml:space="preserve">
+    <value>I accept the terms of agreement. &lt;a href="/en-us/useragreement" target="_blank"&gt;view Terms&lt;/a&gt;</value>
+  </data>
+  <data name="rfvTermAndContiditions.Text" xml:space="preserve">
+    <value>In order to complete the process you must accept the NEXSO Terms And Conditions.</value>
+  </data>
+  <data name="Start.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="TermsAndConditions.Text" xml:space="preserve">
+    <value>Terms and Conditions</value>
+  </data>
+  <data name="WizardTitle.Text" xml:space="preserve">
+    <value>Connect to Best Solutions</value>
+  </data>
+  <data name="Finish.Text" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="rfvAddress.Text" xml:space="preserve">
+    <value>Address is required.</value>
+  </data>
+  <data name="EditModule.Text" xml:space="preserve">
+    <value>Edit Module</value>
+  </data>
+  <data name="InvalidFormat.Text" xml:space="preserve">
+    <value>Invalid format</value>
+  </data>
+</root>

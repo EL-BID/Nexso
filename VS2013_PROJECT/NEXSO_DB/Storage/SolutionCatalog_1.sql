@@ -1,0 +1,6 @@
+﻿CREATE FULLTEXT CATALOG [SolutionCatalog]
+    WITH ACCENT_SENSITIVITY = OFF
+   ;
+
+
+

@@ -1,0 +1,104 @@
+<!--ArticleTemplate-->
+
+<EDNHeader>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var lang = document.documentElement.lang;
+            if (lang.toLowerCase() == "es-es") {
+                $("#recentArticles").text("Art\u00EDculos Recientes");
+                $("#share").text("Compartir");
+
+
+            } else if (lang.toLowerCase() == "pt-br") {
+                $("#recentArticles").text("Artigos recentes");
+                $("#share").text("A\u00E7\u00E3o");
+            }
+
+        });
+
+    </script>
+
+
+    <div class="row sidebar-layout blog-article">
+<div class="content-wrapper">
+<p><a href="/en-us/blog" class="cta-inline">NEXSO Blog</a> <strong>[EasyDNNnews:Title]</strong></p>
+[EasyDNNnews:IfExists:Image]
+	<article class="card" id='Blog-[EasyDNNnews:Categories separator="-" nolink]'>
+  <div class="card-media">
+  <a href="[EasyDNNnews:Image]" title="[EasyDNNnews:Title]">
+    <img class="mainImage" src="[EasyDNNnews:Image]"/>
+  </a>
+  </div>
+		<header class="clearfix">
+<div class="blog-meta">
+		[EasyDNNnews:PublishDay] [EasyDNNnews:PublishMonthString] [EasyDNNnews:PublishYear]</dd>
+</div>
+				<h1>[EasyDNNnews:Title]</h1>		
+
+				<h5 class="tagline">[EasyDNNnews:Summary]</h5>
+			
+		</header>
+</EDNHeader>
+
+<!--Gallery TOP position-->
+<EDNContentTop>
+</EDNContentTop>
+
+<EDNContent>
+		<div class="main-content">
+			[EasyDNNnews:Article]
+		</div>
+</article>
+</div>
+<aside>
+<h3 id="recentArticles">Recent Articles</h3>
+<div id="article_feed"></div>
+</aside>
+</div>
+</EDNContent>
+
+<EDNContentBottom>
+
+</EDNContentBottom>
+<!--Gallery BOTTOM position-->
+
+<EDNFooter>
+<div class="discussion">
+<div class="row">
+<div class="discussion-content">
+				<section class="comments" id="comment-container">
+				<h2>[EasyDNNnews:Comments]</h2>		
+</EDNFooter>
+
+<!--Comments position-->
+
+<EDNBottom>
+</section>
+</div>
+<div class="discussion-aside">
+
+      <section class="share-block" id="share-container">
+        <h2 id="share">Share</h2>
+        <ul>
+          <li>
+            <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=[EasyDNNnews:CurrentPageURL]" target="_blank" title="Share on Facebook">Facebook</a>
+          </li>
+          <li>
+            <a class="twitter" href="https://twitter.com/share?url=[EasyDNNnews:CurrentPageURL]" target="_blank" title="Share on Twitter">Twitter</a>
+          </li>
+          <li>
+            <a class="gplus" href="https://plus.google.com/share?url=[EasyDNNnews:CurrentPageURL]" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); return false;" title="Share on Google+">Google+</a>
+          </li>
+          <li>
+            <a class="linkedin" href="https://www.linkedin.com/cws/share?url=[EasyDNNnews:CurrentPageURL]" target="_blank" title="Share on LinkedIn">LinkedIn</a>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+</div>
+	</div>
+</EDNBottom>
+<!--ArticleEnd-->
+
+

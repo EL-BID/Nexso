@@ -1,0 +1,673 @@
+/*
+Import Normalize css and Helper Classes
+
+1. Base 
+2. Layout
+3. Modules
+4. State
+*/
+
+@import "_normalize";
+@import "_bootstrap";
+@import "_helpers";
+
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/images";
+ 
+
+$brown: #74645D; 
+$green: #A3A187;
+$blue: #00A4E6;
+$dark-blue: #0065A4;
+$light-grey: #BBBDC0;
+$dark-grey: #333333;
+
+
+/* 1. Base Rules
+------------------------------------------------------------------ */
+
+* {
+	@include box-sizing(border-box);
+}
+
+html {
+	height: 100%;
+	background: url('../images/page-bg.jpg') top left repeat;
+}
+
+body {
+	background: url('../images/page-doodles-bg-940.png') top center no-repeat;
+	font-size: 13px;
+	line-height: 20px;
+	min-height: 100%;
+	min-width: 940px;
+	font-style: normal;
+}
+
+::-moz-selection { 
+	background: $blue;
+	color: #fff; 
+}
+
+::selection { 
+	background: $blue;
+	color: #fff; 
+}
+
+
+/* 1.1 Links */
+
+a { 
+	color: $dark-blue;
+	text-decoration: none;
+}
+
+a:visited { 
+	color: $dark-blue;
+}
+
+a:hover { 
+	color: $blue;
+	text-decoration: none;
+}
+
+
+/* 1.2 Typography */
+
+h1, h1 .Head, h2, h3, h4, h5, h6 {
+	color: $blue;
+	margin: 0 0 20px 0;
+	line-height: 20px;
+}
+
+h1, h1 .Head {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+h2 {
+	font-size: 17px;
+	margin: 0 0 10px 0;
+}
+
+h3 {
+	font-size: 15px;
+}
+
+h4 {
+	font-size: 13px;
+}
+
+p, ul, ol {
+	margin: 0 0 20px 0;
+}
+
+ul, ol {
+	padding: 0 0 0 20px;
+}
+
+.stacked {
+	padding: 0;
+	margin: 0;
+}
+
+.stacked li{
+	list-style: none;
+	display: inline;
+	margin: 0 5px 20px 0;
+}
+
+.Normal, .NormalDisabled, .NormalDeleted {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: normal;
+}
+
+
+/* 1.3 Forms */
+
+*:focus {
+    outline: none; /* Remove orange outlines in chrome and outlines generally everywhere */
+}
+
+.form-horizontal .control-group {
+	background-color: #F1F1F2;
+	margin: 0 0 10px 0;
+	padding: 5px 10px;
+}
+
+.form-horizontal .control-label {
+	color: $blue;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: left;
+	padding-top: 0;
+	float: left;
+	width: 160px;
+}
+
+.form-horizontal .controls {
+	margin: 0 0 2px 180px;
+}
+
+.form-actions {
+  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  background: none;
+  border-top: none;
+  float: right;
+}
+
+.help-block {
+	font-size: 12px;
+	line-height: 16px;
+	color: $brown;
+}
+
+.input-xxlarge {
+	width: 395px;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $light-grey;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $light-grey;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $light-grey;
+}
+
+.btn, input[type="submit"], a.submit {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 2px 15px;
+	
+  color: #fff !important;
+  text-shadow: none;
+  
+  border: none;
+  border-top: 2px solid #aa9d91;
+  border-bottom: 1px solid #403324;
+
+  @include border-radius(13px);  
+  background-color: #584939;
+  @include background(image-url("gradient-background.png"),
+                      linear-gradient(bottom, #3F311F, #9A8A7D));   
+}
+
+a.submit:hover,
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  color: #333333;
+  background-color: #2186c8;
+  @include background(image-url("gradient-background.png"),
+                      linear-gradient(bottom, #1D75BB, #27A8E0));   
+                      
+  border-top: 2px solid #65b5e2;
+  border-bottom: 1px solid #193a5f;                    
+}
+
+
+
+.btn-large {
+	font-size: 22px;
+	padding: 6px 25px;
+	@include border-radius(17px);
+}
+
+
+
+.nav {
+  margin-bottom: 20px;
+  margin-left: 0;
+  list-style: none;
+}
+
+.nav > li > a {
+  display: block;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+
+
+/* 1.4 Dropdowns */
+
+.dropdown-menu {
+	min-width: 120px;
+	top: 120%;
+}
+
+.dropdown-menu.arrow:before, {
+  position: absolute;
+  top: -7px;
+  left: 9px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-left: 7px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+
+.dropdown-menu.arrow:after {
+  position: absolute;
+  top: -6px;
+  left: 10px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-left: 6px solid transparent;
+  content: '';
+}
+
+
+/* 1.5 Table */
+
+.table-styled {
+	border: none !important;
+	font-size: 14px;
+	width: 100%;
+	color: $green;
+	background-color: #F1F1F2;
+	margin: 0 0 20px 0;
+  @include box-shadow(#828181 0px 1px 4px);
+  @include border-radius(5px); 
+  
+  a, a:hover, a:visited {
+  	color: $green;
+  }
+  
+  a:hover {
+  	text-decoration: underline;
+  }
+  
+  th {
+    	border: none;
+		color: $brown;
+		font-size: 14px;
+		text-align: left;
+		padding: 5px 20px;
+		/* border-bottom: 1px solid $brown; */
+	}
+	
+	td {
+		padding: 3px 20px;
+		border: 1px solid #eceded;
+		border-left: none;
+		border-right: none;
+	}
+}
+
+
+
+
+
+
+/* 2. Layout
+------------------------------------------------------------------ */
+
+#page {
+	background-color: #fff;
+	width: 940px;
+	*width: 880px;
+	padding: 0 30px;
+	margin: 0 auto;
+	color: $brown;
+	font-size: 16px;
+	line-height: 22px;
+	
+	@include box-shadow(#575554 0px 0px 20px);
+}
+
+.featured-image {
+	margin: 0 -30px 0 -30px;
+	width: 940px;
+
+	.gutter {
+		margin: 0 30px;
+	}
+}
+
+.main-content {	
+	float: left;
+	width: 615px;
+	padding: 30px 25px 30px 0;
+}
+
+.main-content.divider {
+	background: url('../images/sec-content-bg.jpg') top right no-repeat;
+}
+
+.main-content.centered {
+	margin: 0 auto;
+	float: none;
+}
+
+.sec-content {
+	font-size: 14px;
+	float: left;
+/* 	width: 289px; */
+	width: 30%;
+	padding: 30px 0 30px 9px;
+	
+	a, a h4 {
+		color: $brown;
+		
+		&:hover {
+			color: $dark-grey;
+		}
+	}
+}
+
+.block {
+	margin: 0 0 20px 0;
+}
+
+#page-header {
+	height: 100px;
+	position: relative;
+}
+
+#brand {
+	float: left;
+	margin: 30px 0 0 0;
+	
+	a {
+		display: block;
+		height: 47px;
+	}
+}
+
+.main-nav {
+	float: left;
+	margin: 45px 0 0 40px;
+	padding: 0;
+	
+	li {
+		float: left;
+		list-style: none;
+		border-left: 1px solid #E7E4DF;
+		
+		&.active {
+			background: url('../images/main-nav-bg.png') top left repeat-x;
+		}
+		
+			a {
+			padding: 0 20px;
+			height: 55px;
+			display: block;
+			color: $green;
+			text-decoration: none;
+			
+				strong {
+					color: $brown;
+					font-size: 17px;
+					display: block;
+				}
+				
+			}
+		
+		&.active a, 
+		&.active a strong,
+		a:hover, 
+		a:hover strong {
+			color: $blue;
+		}
+		
+	} 
+	
+}
+
+.sec-nav {
+	list-style: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px 0 20px 0;
+	ul {
+		padding: 0;
+	}
+	li {
+		float: left;
+		list-style: none;
+		margin: 0;
+		
+		a {
+			color: $light-grey;
+			font-size: 12px;
+			font-weight: normal;
+			margin: 0 10px;
+			padding: 0;
+			
+			&:hover {
+				color: $dark-blue;
+				text-decoration: none;
+			}		
+		}
+	}
+	.language-object {
+		background: #ffffff url(../images/arrow.png) no-repeat right;
+      	overflow: hidden;
+      	width: 80px;
+
+      	select {
+      		background-color: transparent;
+			border: none;
+			color: #BBBDC0;    
+			font-size: 12px;
+			height: 20px;
+			line-height: 20px;
+			margin: 0;
+			padding: 0;
+			width: 100px;
+			-webkit-appearance: none; 
+
+			&:focus {
+				outline: none;
+			}
+      	}
+	}
+}
+
+
+#page-footer {
+	background-color: $dark-grey;
+	padding: 30px 30px 20px 30px;
+	margin: 0 -30px 0 -30px;
+	overflow: hidden;
+	color: $green;
+	
+  	h1#title .Head {
+    	font-size: 17px;
+    	font-weight: bold;
+    	line-height: 20px;
+  	}
+
+	a, h4 {
+		color: $green;
+		
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+	
+	.more-link {
+		color: $dark-blue;
+	}
+	
+	>section {
+		float: left;
+		width: 325px;
+	}	
+	
+	.related {
+		overflow: hidden;
+	}
+	
+	.column {
+		float: left;
+		width: 33.7136%;
+	}
+	
+	.footer-about,
+	.footer.third {
+		width: 29.04%;
+		margin: 0 0 0 25px;
+	}
+	
+	.entry-list {
+		font-size: 13px;
+		
+		.entry-thumb {
+			@include box-shadow(#000 1px 1px 3px);
+		}
+		
+	}
+	
+}
+
+
+
+.footer-info {
+	border-top: 1px solid $green;
+	padding: 20px 0 0 0;
+	clear: left;
+	font-size: 13px;
+	
+	p {
+		float: left;
+		margin: 0 40px 0 0;
+	}
+	
+	ul {
+		margin: 0;
+		padding: 0;
+		float: left;
+	
+		li {
+			display: inline;
+		}
+	}
+	
+	.social-nav {
+		float: right;
+		
+		a {
+			background: url('../images/footer-icons.png') top left no-repeat;
+			width: 30px;
+			height: 30px;
+			float: left;
+		}
+		
+		.sn-twitter {
+			a {
+				background-position: 0px 0px;
+				
+				&:hover {
+					background-position: 0px -30px; }
+			}
+		}
+		
+		.sn-facebook {
+			a {
+				background-position: 0px -60px;
+				
+				&:hover {
+					background-position: 0px -90px; }
+			}
+		}
+		
+	}
+
+}
+
+
+/* 3. Module
+------------------------------------------------------------------ */
+
+/* 3.1 Entry List */
+
+.entry-list {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 18px;
+	
+	li {
+		list-style: none;
+		padding: 0 0 5px 70px;	
+		margin: 0 0 15px 0;
+		position: relative;
+		min-height: 50px;
+	}
+	
+	.entry-title {
+		margin: 0;
+	}
+	
+	.entry-thumb {
+		background-color: #fff;	
+		padding: 4px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+		height: 50px;
+		@include box-shadow(#828181 1px 1px 3px);
+	}
+	
+	.entry-meta {
+		margin: 0;
+		font-size: 13px;
+	}
+	
+}
+
+
+/* 3.2 Carousel  */
+
+.wns-slideshow-wrapper {
+	height: 280px;
+}
+
+.carousel-indicators {	
+	li {
+		cursor: pointer;
+	}
+}
+
+
+/* 3.3 Secondary Content */
+	
+#sec-submit-block img {
+	float:right;
+	*float: none;
+}
+
+
+
+
+
+
+
+
+

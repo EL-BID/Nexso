@@ -1,0 +1,67 @@
+<!--TemplateGroup:newsListMulti-->
+
+<!--ArticleRepeat:Before:-->
+<script src="[EasyDNNnews:ClientBasePath]/DesktopModules/EasyDNNnews/static/isotope2/isotope.v2.0.0-beta.4.min.js"></script>
+<script src="[EasyDNNnews:ClientBasePath]/DesktopModules/EasyDNNnews/static/imagesLoaded/imagesLoaded_3.1.4.min.js"></script>
+<script>
+	eds1_8(function ($) {
+		var $articleListContainer = $('.edn_[EasyDNNnews:ModuleID]_article_list_wrapper'),
+			imageLoadedKey = 'imageLoaded';
+
+		$articleListContainer
+			.isotope({
+				itemSelector: '.edn_articleWrapper',
+				sortBy: 'original-order',
+				masonry: {
+					isFitWidth: true
+				}
+			})
+			.find('img').imagesLoaded()
+				.progress(function (instance, image) {
+					var $img = $(image.img);
+
+					if ($img.data(imageLoadedKey))
+						return;
+
+					$img.data(imageLoadedKey, true);
+
+					$articleListContainer.isotope('layout');
+				});
+	});
+</script>
+<div class="articles_row edn_isotopeLayout">
+<!--RepeatEnd:Before:-->
+
+<!--ArticleTemplate-->
+
+	<div class="article in_list box big edn_articleWrapper" style="width:[EasyDNNnews:MainArticleImageWidth]">
+		[EasyDNNnews:HasArticlePermissions]
+			[EasyDNNnews:ArticlePermissions:Edit]
+			[EasyDNNnews:ArticlePermissions:Publish]
+			[EasyDNNnews:ArticlePermissions:Approve]
+		[EasyDNNnews:HasArticlePermissionsEnd]
+		[EasyDNNnews:IfExists:Image]
+		<div class="article_image" [EasyDNNnews:Image:Visibility]>
+			<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]" /></a>
+			<span><span class="date">[EasyDNNnews:IfNotExists:Event][EasyDNNnews:PublishDate][EasyDNNnews:EndIf:Event][EasyDNNnews:IfExists:Event][EasyDNNnews:EventDate][EasyDNNnews:EndIf:Event]</span><span class="comment_count">[EasyDNNnews:Comments]</span></span>
+		</div>
+		[EasyDNNnews:EndIf:Image]
+
+		[EasyDNNnews:IfNotExists:Image]
+		<p class="date">[EasyDNNnews:PublishDate]</p>
+		[EasyDNNnews:EndIf:Image]
+
+		<h1><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h1>
+		<div class="summary">[EasyDNNnews:Summary]</div>
+	</div>
+
+<!--ArticleEnd-->
+
+<!--ArticleRepeat:After:-->
+</div>
+[EasyDNNnews:IfExists:RSS]
+<div class="article_rss_wrapper">
+	<a class="article_rss" href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

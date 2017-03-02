@@ -1,0 +1,67 @@
+<!--TemplateGroup:listArticleEventBoxAccordion-->
+<!--ArticleRepeat:Before:-->
+<div class="EDN_eventsModuleBox">
+	<h2 class="edn_module_title">
+		[EasyDNNnews:IfExists:RSS]
+		<a class="rss EDN_eventsModuleBoxRSS" href="[EasyDNNnews:RSSLink]" target="_blank" title="[EasyDNNnewsLocalizedText:RSSLinkText]"><span>[EasyDNNnewsLocalizedText:RSSLinkText]</span></a>
+		[EasyDNNnews:EndIf:RSS]
+		<span>[EasyDNNnewsLocalizedText:UpcomingEvents]</span>
+	</h2>
+	<div class="edsAccordionEventsBox">
+		<script src="[EasyDNNnews:ClientBasePath]/DesktopModules/EasyDNNnews/static/edsAccordion/edsAccordion-1.0.js"></script>
+		<script>
+			jQuery(function ($) {
+				$('div.edsAccordionEventsBox').edsAccordion_1();
+			});
+		</script>
+<!--RepeatEnd:Before:-->
+
+<!--ArticleTemplate-->
+		<div class="edsAccordion_section">
+			[EasyDNNnews:HasArticlePermissions]
+			<div>
+				[EasyDNNnews:ArticlePermissions:Edit]
+				[EasyDNNnews:ArticlePermissions:Publish]
+				[EasyDNNnews:ArticlePermissions:Approve]
+			</div>
+			[EasyDNNnews:HasArticlePermissionsEnd]
+			<div class="EDN_article EDN_eventsBox [EasyDNNnews:ItemOrderClasses] [EasyDNNnews:ActiveArticle] edsAccordion_title">
+				[EasyDNNnews:IfExists:Event]
+				<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]">
+					<span class="EDN_eventsBoxDate">
+						<span class="EDN_eventPublishDay">[EasyDNNnews:EventStartDay]</span>
+						<span class="EDN_eventPublishMonth">[EasyDNNnews:EventStartMonthNameShort]</span>
+						<span class="EDN_eventPublishYear">[EasyDNNnews:EventStartYear]</span>
+					</span>
+					<span class="EDN_eventBox">
+						<span class="EDN_eventBoxTitle articleTitle">[EasyDNNnews:Title:Limit:120]</span>
+						[EasyDNNnews:IfExists:EventLocation]<span class="EDN_eventBoxLocation">[EasyDNNnews:EventLocation]</span>[EasyDNNnews:EndIf:EventLocation]
+						<span class="EDN_eventBoxTime">[EasyDNNnews:EventDate]</span>
+					</span>
+				</a>
+				[EasyDNNnews:EndIf:Event]
+			</div>
+			<div class="edsAccordion_contentWrapper">
+				<div class="edsAccordion_content EDN_article EDN_simpleArticle">
+					[EasyDNNnews:IfExists:Image]
+					<div class="EDN_image-container">
+						<a class="EDN_moreIcon" href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]" title="[EasyDNNnews:Title]"><span>[EasyDNNnews:Title]</span></a>
+						<div class="EDN_image-overlay"></div>
+						<div class="EDN_arrow"></div>
+						<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]"/>
+					</div>
+					[EasyDNNnews:EndIf:Image]
+					<div class="EDN_article_content">
+						[EasyDNNnews:Summary]
+					</div>
+					[EasyDNNnews:ArticleMaps]
+					<a class="EDN_readmore" href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:IfNotExists:EventRegistration][EasyDNNnewsLocalizedText:Read][EasyDNNnews:EndIf:EventRegistration][EasyDNNnews:IfExists:EventRegistration][EasyDNNnewsLocalizedText:Register][EasyDNNnews:EndIf:EventRegistration]</a>
+				</div>
+			</div>
+		</div>
+<!--ArticleEnd-->
+
+<!--ArticleRepeat:After:-->
+	</div>
+</div>
+<!--RepeatEnd:After:-->

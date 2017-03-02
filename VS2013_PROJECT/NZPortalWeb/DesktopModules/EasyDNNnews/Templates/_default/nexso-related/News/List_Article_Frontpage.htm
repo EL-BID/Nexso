@@ -1,0 +1,55 @@
+<!--ArticleRepeat:Before:-->
+<div class="front">
+<section id="blog-stripe" class="stripe stripe-center">
+<div class="row">
+<div class="stripe-prose">
+<h1 class="stripe-title">NEXSO Blog</h1>
+<div class="stripe-body">
+<p>A collection of stories and articles from the NEXSO community and beyond.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="row no-sidebar blog-article">
+<!--RepeatEnd:Before:-->
+
+<!--ArticleTemplate-->
+
+<div class="content-wrapper">
+[EasyDNNnews:IfExists:Image]
+	<article id='Blog-[EasyDNNnews:Categories separator="-" nolink]' style ="background-image: url([EasyDNNnews:Image])">
+		<header class="clearfix">
+<div class="blog-meta">
+		[EasyDNNnews:PublishDay] [EasyDNNnews:PublishMonthString] [EasyDNNnews:PublishYear]</dd>
+</div>
+<a href="[EasyDNNnews:ArticleLink]" title="View this blog post">
+				<h1>[EasyDNNnews:Title]</h1>		
+			</a>
+<p>[EasyDNNnewsSystemToken:SysAddThis]</p>
+<h5 class="tagline">[EasyDNNnews:Summary]</h5>
+		</header>
+
+		<div class="main-content">
+			[EasyDNNnews:Article]
+		</div>
+</article>
+<div class="discussion">
+<div class="row">
+<div class="discussion-content">
+				<section class="comments" id="comment-container">
+<a href="[EasyDNNnews:ArticleLink]" title="View this blog post">				
+<h2>Comments <span class="badge">[EasyDNNnews:Comments]</span></h2>
+</a>
+</section>
+</div>
+</div>
+</div>
+</div>
+
+<!--ArticleEnd-->
+
+<!--ArticleRepeat:After:-->
+
+<!--RepeatEnd:After:-->
+</div>

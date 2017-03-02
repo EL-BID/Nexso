@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdditionalCost.Text" xml:space="preserve">
+    <value>Additional Cost</value>
+  </data>
+  <data name="Approach.Text" xml:space="preserve">
+    <value>Innovation</value>
+  </data>
+  <data name="ApproachScoreCard.Text" xml:space="preserve">
+    <value>Check all elements that are included in the description to help qualify the innovation of the solution or product.</value>
+  </data>
+  <data name="AvailableResources.Text" xml:space="preserve">
+    <value>Available Resources</value>
+  </data>
+  <data name="AvailableResourcesScoreCard.Text" xml:space="preserve">
+    <value>Doest this "Available Resources" make sense with "Implementation Details"?</value>
+  </data>
+  <data name="Beneficiaries.Text" xml:space="preserve">
+    <value>Beneficiaries</value>
+  </data>
+  <data name="BeneficiaryScoreCard.Text" xml:space="preserve">
+    <value>Does the "Beneficiaries" relate to the "Innovation"?</value>
+  </data>
+  <data name="By.Text" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="Challenge.Text" xml:space="preserve">
+    <value>Problem</value>
+  </data>
+  <data name="ChallengeScoreCard.Text" xml:space="preserve">
+    <value>Check all elements that help quantify the problem that are present in the description given.</value>
+  </data>
+  <data name="Cost.Text" xml:space="preserve">
+    <value>Implementation Cost</value>
+  </data>
+  <data name="CostDetails.Text" xml:space="preserve">
+    <value>Budget Details</value>
+  </data>
+  <data name="CostDetailsScoreCard.Text" xml:space="preserve">
+    <value>Is the budget details for the consolidation and positioning of the solution or product on the market well justified?</value>
+  </data>
+  <data name="CostScoreCard.Text" xml:space="preserve">
+    <value>Is the budget consistent with the justification described in the previous section?</value>
+  </data>
+  <data name="DeliveryFormat.Text" xml:space="preserve">
+    <value>Delivery Format</value>
+  </data>
+  <data name="DeliveryFormatScoreCard.Text" xml:space="preserve">
+    <value>Does the "Delivery Format" relate to the "Impact"?</value>
+  </data>
+  <data name="Description.Text" xml:space="preserve">
+    <value>Additional Information</value>
+  </data>
+  <data name="DescriptionScoreCard.Text" xml:space="preserve">
+    <value>Does the "Addtional Information" add value to the Solution?</value>
+  </data>
+  <data name="Duration.Text" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="DurationDetails.Text" xml:space="preserve">
+    <value>Duration Details</value>
+  </data>
+  <data name="DurationDetailsScoreCard.Text" xml:space="preserve">
+    <value>Are the duration details consistent with the proposed activities?</value>
+  </data>
+  <data name="DurationScoreCard.Text" xml:space="preserve">
+    <value>Is the duration consistent with the activities described previously?</value>
+  </data>
+  <data name="Format.Text" xml:space="preserve">
+    <value>format</value>
+  </data>
+  <data name="FromMail.Text" xml:space="preserve">
+    <value>jairoa@iadb.org</value>
+  </data>
+  <data name="ImplementationDetails.Text" xml:space="preserve">
+    <value>Implementation Details</value>
+  </data>
+  <data name="ImplementationDetailsScoreCard.Text" xml:space="preserve">
+    <value>How are described the next steps and activities intended to develop the solution or product?</value>
+  </data>
+  <data name="InstitutionNameScoreCard.Text" xml:space="preserve">
+    <value>What is your opinion about the value proposition of the solution or product?</value>
+  </data>
+  <data name="ReportSpam.Text" xml:space="preserve">
+    <value>Report As Spam</value>
+  </data>
+  <data name="ReportSpamTemplate.Text" xml:space="preserve">
+    <value>Solution Id {0}, ReportedBy {1}</value>
+  </data>
+  <data name="Results.Text" xml:space="preserve">
+    <value>Impact</value>
+  </data>
+  <data name="ResultsScoreCard.Text" xml:space="preserve">
+    <value>Check all elements that help describe and quantify the impact.</value>
+  </data>
+  <data name="SolutionReported.Text" xml:space="preserve">
+    <value>Solution Reported</value>
+  </data>
+  <data name="SolutionSettings.Text" xml:space="preserve">
+    <value>Solution Detail</value>
+  </data>
+  <data name="SolutionSettingsMsg.Text" xml:space="preserve">
+    <value>solution message</value>
+  </data>
+  <data name="Submitted.Text" xml:space="preserve">
+    <value>Submitted: </value>
+  </data>
+  <data name="Themes.Text" xml:space="preserve">
+    <value>Themes</value>
+  </data>
+  <data name="ThemeScoreCard.Text" xml:space="preserve">
+    <value>Does the "Themes" reflect "The Problem"?</value>
+  </data>
+  <data name="TimeFrameDetails.Text" xml:space="preserve">
+    <value>time fr</value>
+  </data>
+  <data name="TitleHelp.Text" xml:space="preserve">
+    <value>What do You think about the Solution Name?</value>
+  </data>
+  <data name="ToComplete.Text" xml:space="preserve">
+    <value>to complete</value>
+  </data>
+  <data name="ToMail.Text" xml:space="preserve">
+    <value>jairo.anaya@iadb.org</value>
+  </data>
+  <data name="Unpublish.Text" xml:space="preserve">
+    <value>Unpublish</value>
+  </data>
+  <data name="FinalScore.Text" xml:space="preserve">
+    <value>Score:</value>
+  </data>
+  <data name="FinalScoreGlobal.Text" xml:space="preserve">
+    <value>Global Solution Score:</value>
+  </data>
+  <data name="rfValidator.Text" xml:space="preserve">
+    <value>* Is Required</value>
+  </data>
+  <data name="GridHeader.Text" xml:space="preserve">
+    <value>First name y  Last name</value>
+  </data>
+  <data name="ListJudges.Text" xml:space="preserve">
+    <value>Participant Judges</value>
+  </data>
+  <data name="Scoring.Text" xml:space="preserve">
+    <value>Scoring Summary (Visible to Judges and Administrators Only)</value>
+  </data>
+  <data name="GridFirstName.Text" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="GridLastName.Text" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="GridScore.Text" xml:space="preserve">
+    <value>Solution Score</value>
+  </data>
+  <data name="NotScored.Text" xml:space="preserve">
+    <value>Solution has not been scored yet.</value>
+  </data>
+  <data name="summaryValidator.Text" xml:space="preserve">
+    <value>Please check this:</value>
+  </data>
+  <data name="rfvAdditionalInfo.Text" xml:space="preserve">
+    <value>Select an Additional Information Score</value>
+  </data>
+  <data name="rfvAvailableResources.Text" xml:space="preserve">
+    <value>Select an Available Resources Score</value>
+  </data>
+  <data name="rfvBeneficiaries.Text" xml:space="preserve">
+    <value>Select a Beneficiaries Score</value>
+  </data>
+  <data name="rfvBenefits.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="rfvCost.Text" xml:space="preserve">
+    <value>Select an Implementation Cost Score</value>
+  </data>
+  <data name="rfvCostDetails.Text" xml:space="preserve">
+    <value>Select a Cost Details Score.</value>
+  </data>
+  <data name="rfvDeliveryFormat.Text" xml:space="preserve">
+    <value>Select a Delivery Format Score</value>
+  </data>
+  <data name="rfvDurationDetails.Text" xml:space="preserve">
+    <value>Select a Duration Details Score.</value>
+  </data>
+  <data name="rfvImplementationCost.Text" xml:space="preserve">
+    <value>Select an Implementation Cost Score</value>
+  </data>
+  <data name="rfvImplementationDetails.Text" xml:space="preserve">
+    <value>Select an Implementation Details Score</value>
+  </data>
+  <data name="rfvName.Text" xml:space="preserve">
+    <value>Select a Name Score.</value>
+  </data>
+  <data name="rfvProblem.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="rfvSolution.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="rfvTagLine.Text" xml:space="preserve">
+    <value>Select a Tagline Score.</value>
+  </data>
+  <data name="rfvThemes.Text" xml:space="preserve">
+    <value>Select a Theme Score</value>
+  </data>
+  <data name="rfvTime.Text" xml:space="preserve">
+    <value>Select a Completation time Score</value>
+  </data>
+  <data name="PrivateDocuments.Text" xml:space="preserve">
+    <value>Private Documents (visible only Owner and Judges)</value>
+  </data>
+  <data name="PublishedBy.Text" xml:space="preserve">
+    <value>Published by</value>
+  </data>
+  <data name="SupportingDocuments.Text" xml:space="preserve">
+    <value>Supporting Documents</value>
+  </data>
+  <data name="CustomDataScoreCard.Text" xml:space="preserve">
+    <value>Does the product or service provided by this startup improve live in cities?</value>
+  </data>
+  <data name="PrivateFilesScoreCard.Text" xml:space="preserve">
+    <value>Does the "Private Documents" accomplish the requirements for this competition.</value>
+  </data>
+  <data name="rfvPrivateDocuments.Text" xml:space="preserve">
+    <value>Select a Private Document cireteria Score</value>
+  </data>
+  <data name="rfvCustomScoreCard.Text" xml:space="preserve">
+    <value>Select the agreement criteria.</value>
+  </data>
+  <data name="btnCancelSendMessage.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="btnSendMessage.Text" xml:space="preserve">
+    <value>Send message</value>
+  </data>
+  <data name="btnSendMessageTo.Text" xml:space="preserve">
+    <value>Send a message to</value>
+  </data>
+  <data name="Locations.Text" xml:space="preserve">
+    <value>Locations</value>
+  </data>
+  <data name="MessageAuthentication.Text" xml:space="preserve">
+    <value>&lt;h2&gt;You must be a registered user to view this page&lt;/h2&gt; &lt;p&gt;&lt;a href="/en-us/register.aspx"&gt;&lt;strong&gt;Register&lt;/strong&gt;&lt;/a&gt; or &lt;a href="/en-us/login.aspx"&gt;&lt;strong&gt;log-in&lt;/strong&gt;&lt;/a&gt; as an existing user. &lt;/p&gt; &lt;p&gt;If you did not receive a verification email at sign-up please use the &lt;a href="/Login/tabid/1193/ctl/SendPassword/language/en-US/Default.aspx?returnurl=%2fmif%2fnexso%2fen-us%2fsubmityoursolution.aspx"&gt;&lt;strong&gt;retrieve password link&lt;/strong&gt;&lt;/a&gt;. </value>
+  </data>
+  <data name="Overview.Text" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="SendMessage.Text" xml:space="preserve">
+    <value>Send a message</value>
+  </data>
+  <data name="SendMessageTo.Text" xml:space="preserve">
+    <value>Send a message to </value>
+  </data>
+  <data name="WriteAMessage.Text" xml:space="preserve">
+    <value>Write a message...</value>
+  </data>
+  <data name="GridCustomScore.Text" xml:space="preserve">
+    <value>Additional Questions</value>
+  </data>
+  <data name="GridTotalScore.Text" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="FinalAdditionalScoreGlobal.Text" xml:space="preserve">
+    <value>Additional Questions:</value>
+  </data>
+  <data name="TotalScoreGlobal.Text" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="GridScore2.Text" xml:space="preserve">
+    <value>Solution</value>
+  </data>
+  <data name="FinalScoreGlobal2.Text" xml:space="preserve">
+    <value>Solution:</value>
+  </data>
+  <data name="CostTitle.Text" xml:space="preserve">
+    <value>Estimated Budget</value>
+  </data>
+  <data name="DurationTitle.Text" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="PopUpConfirmation.Text" xml:space="preserve">
+    <value>You have scored successfully this solution.</value>
+  </data>
+  <data name="PopUpError.Text" xml:space="preserve">
+    <value>We are so sorry, something wrong happened. Contact somebody in NEXSO.</value>
+  </data>
+  <data name="btnScore.Text" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="DeliveryFormatTitle.Text" xml:space="preserve">
+    <value>Type of solution or product</value>
+  </data>
+  <data name="TargetTitle.Text" xml:space="preserve">
+    <value>Beneficiaries</value>
+  </data>
+  <data name="ThemesTitle.Text" xml:space="preserve">
+    <value>Themes</value>
+  </data>
+  <data name="PopUpReportSpam.Text" xml:space="preserve">
+    <value>Thank you. Our team will review this solution soon. :)</value>
+  </data>
+  <data name="TagLineTitle.Text" xml:space="preserve">
+    <value>Value Proposition</value>
+  </data>
+  <data name="rfvFeedBack.Text" xml:space="preserve">
+    <value>Write a Feedback</value>
+  </data>
+  <data name="CommentEn.Text" xml:space="preserve">
+    <value>Use this space to leave your comments and suggestion as feedback for the participating team, highlighting the strength and weaknesses as well as guidance to improve its potential.  (150 word max)</value>
+  </data>
+  <data name="lblChallengeComments.Text" xml:space="preserve">
+    <value>Challenge comments:</value>
+  </data>
+  <data name="CommentEs.Text" xml:space="preserve">
+    <value>En este espacio deberá realizar sus comentarios y sugerencias como retroalimentación para el equipo participante destacando las debilidades y fortalezas de la propuesta, así como sus orientaciones para potenciarla (un máximo de 150 palabras)</value>
+  </data>
+  <data name="Instructions.Text" xml:space="preserve">
+    <value>A continuación podrá proceder a realizar la evaluación de esta propuesta. Con el objetivo de unificar la visión crítica del panel de jurados, alinear el rigor evaluativo y equilibrar el nivel de exigencia del concurso, la evaluación estará enmarcada en los siguientes ocho criterios asignando valores de evaluación de 1 a 4 puntos. &lt;br&gt;&lt;br&gt;&lt;span style="color:#a7a7a7;"&gt;
+Below you can proceed with the evaluation of the proposal. With the objective of unifying the critical view of the panel of judges, align the rigor of evaluation and balance the standards of the competition, the assessment will be framed using the following eight assessment criteria; assigning values from 1 to 4 points.&lt;/span&gt;</value>
+  </data>
+  <data name="TitleFeedback.Text" xml:space="preserve">
+    <value>Retroalimentación - Feedback</value>
+  </data>
+</root>

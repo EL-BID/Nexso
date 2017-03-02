@@ -1,0 +1,117 @@
+<!--TemplateGroup:newsDetailsArticle-->
+<!--ArticleTemplate-->
+<EDNHeader>
+	<div class="article details_wrapper">
+		<p class="date_box">
+			<span class="day">[EasyDNNnews:PublishDay]</span>
+			<span class="month">[EasyDNNnews:PublishMonthString]</span>
+			<span class="year">[EasyDNNnews:PublishYear]</span>
+		</p>
+		<div class="details_container">
+			[EasyDNNnews:IfMediaType:Image]
+			<img class="article_image" alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]" style="max-width: 100%;"/>
+			[EasyDNNnews:EndIfMediaType]
+			[EasyDNNnews:IfMediaType:EmbedMedia]
+			<div class="eds_mediaContainer" style="width:[EasyDNNnews:MainArticleImageWidth]">
+				[EasyDNNnews:MainMedia]
+			</div>
+			[EasyDNNnews:EndIfMediaType]
+			<h1>[EasyDNNnews:Title]</h1>
+			<div class="meta_text">[EasyDNNnewsLocalizedText:Author]: [EasyDNNnews:Author:Link]&nbsp; /&nbsp; [EasyDNNnewsLocalizedText:Categories]: [EasyDNNnews:Categories]&nbsp; /&nbsp; [EasyDNNnews:ArticleRating]</div>
+</EDNHeader>
+<!--Gallery TOP position-->
+<EDNContentTop>
+			[EasyDNNnews:IfExists:Event]
+			<p class="event_date">[EasyDNNnewsLocalizedText:Eventdate]: [EasyDNNnews:EventDate] <a class="export" href="[EasyDNNnews:iCalendar]">[EasyDNNnewsLocalizedText:ExportEvent]</a></p>
+			[EasyDNNnews:IfExists:EventLocation]
+			<p class="event_location">[EasyDNNnewsLocalizedText:EventLocation]: [EasyDNNnews:EventLocation]</p>
+			[EasyDNNnews:EndIf:EventLocation]
+			[EasyDNNnews:IfExists:EventRegistration]
+			<div class="edn_eventDetails">
+			[EasyDNNnews:EventRegistration:RegisterButton]
+			<ul class="edn_registerEventDetails">
+				<li>[EasyDNNnewsLocalizedText:NumberOfAttendants]: <strong>[EasyDNNnews:EventRegistration:NumberOfAttendants]</strong></li>
+				<li>[EasyDNNnewsLocalizedText:MaxNumberOfTickets]: <strong>[EasyDNNnews:EventRegistration:MaxNumberOfTickets]</strong></li>
+				<li>[EasyDNNnewsLocalizedText:NotUsedTickets]: <strong>[EasyDNNnews:EventRegistration:NotUsedTickets]</strong></li>
+			</ul>
+			[EasyDNNnews:EventRegistration:InfoMessage]
+			</div>
+			[EasyDNNnews:EndIf:EventRegistration]
+			[EasyDNNnews:EndIf:Event]
+			<div class="main_content">
+			[EasyDNNnews:IfExists:EventSignUp]
+			<div class="eds_signUpActionBarWrapper">
+				<span>[EasyDNNnewsLocalizedText:AreYouGoing]</span>[EasyDNNnews:SignUpActionBar]
+			</div>
+			[EasyDNNnews:EndIf:EventSignUp]
+</EDNContentTop>
+
+<EDNContent>
+				[EasyDNNnews:Article]
+</EDNContent>
+
+<EDNContentBottom>
+				[EDNcf:ShowAll]
+				<div class="clear_content"></div>
+			</div>
+			[EasyDNNnews:ArticleMaps]
+			[EasyDNNnews:EventRegistration:ListOfAttendants]
+</EDNContentBottom>
+<!--Gallery BOTTOM position-->
+<EDNFooter>
+			<div class="edn_socialPrintWrapper">
+				<div class="social_buttons">[EasyDNNnewsSystemToken:SysAddThisFbTwGoLi]</div>
+				[EasyDNNnews:Print:ArticleDetails]
+				<div class="clear_content"></div>
+			</div>
+			<p class="meta_text light_text">[EasyDNNnewsLocalizedText:Numberofviews] ([EasyDNNnews:NumberOfViews]) &nbsp; &nbsp; &nbsp;[EasyDNNnewsLocalizedText:Comments] ([EasyDNNnews:Comments])</p>
+			<div class="box_list_container">[EasyDNNnewsLocalizedText:Tags]: [EasyDNNnews:Tags separator=""]</div>
+			[EasyDNNnews:IfExists:AuthorProfile]
+			<div class="author_group_profile">
+				<div class="profile_picture_container">[EasyDNNnews:Author:Image:Width:115:Height:100:Resize:Crop]</div>
+				<div class="details_container">
+					<h2>[EasyDNNnews:Author:DisplayName] [EasyDNNnews:Author:RSSURL]</h2>
+					<div class="short_info">[EasyDNNnews:Author:ShortInfo] <span class="more">[EasyDNNnewsLocalizedText:Otherpostsby] [EasyDNNnews:Author:Link]</span></div>
+				</div>
+				<div class="connect_with">
+					<div class="social-networks">
+						[EasyDNNnews:Author:Facebook]
+						[EasyDNNnews:Author:Twitter]
+						[EasyDNNnews:Author:LinkedIn]
+						[EasyDNNnews:Author:GooglePlus]
+					</div>
+					[EasyDNNnews:Author:Contact]
+					[EasyDNNnews:Author:FullInfo]
+				</div>
+			</div>
+			[EasyDNNnews:EndIf:AuthorProfile]
+
+			[EasyDNNnews:IfExists:AuthorGroup]
+			<div class="author_group_profile">
+				<div class="profile_picture_container">[EasyDNNnews:Author:GroupImage:Width:115:Height:100:Resize:Crop]</div>
+				<div class="details_container">
+					<h2>[EasyDNNnews:Author:GroupName] [EasyDNNnews:Author:GroupRSSURL]</h2>
+					<div class="short_info">[EasyDNNnews:Author:GroupInfo]</div>
+				</div>
+				<div class="connect_with">
+					<div class="social-networks">
+						[EasyDNNnews:Author:GroupFacebook]
+						[EasyDNNnews:Author:GroupTwitter]
+						[EasyDNNnews:Author:GroupGooglePlus]
+						[EasyDNNnews:Author:GroupLinkedIn]
+					</div>
+					[EasyDNNnews:Author:GroupContact]
+				</div>
+			</div>
+			[EasyDNNnews:EndIf:AuthorGroup]
+
+			[EasyDNNnews:DocumentList]
+			[EasyDNNnews:Links]
+			[EasyDNNnews:RelatedArticles]
+</EDNFooter>
+<!--Comments position-->
+<EDNBottom>
+		</div>
+	</div>
+</EDNBottom>
+<!--ArticleEnd-->

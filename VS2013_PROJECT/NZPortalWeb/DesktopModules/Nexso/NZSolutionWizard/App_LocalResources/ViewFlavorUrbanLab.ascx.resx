@@ -1,0 +1,912 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AcceptTerms.Text" xml:space="preserve">
+    <value>Let's get Started!</value>
+  </data>
+  <data name="Approach.Text" xml:space="preserve">
+    <value>Innovation</value>
+  </data>
+  <data name="ApproachDesc.Text" xml:space="preserve">
+    <value>Be bold: Showcase the uniqueness of your Solution. Highlight the characteristics that may attract partners, clients, or investors. 
+&lt;br/&gt; Try to address these questions as you describe the Solution:
+&lt;br/&gt;
+&lt;ul&gt;
+&lt;li&gt;Are you highlighting the innovation and unique character?
+&lt;/li&gt;
+&lt;li&gt;Is Solution related with the problem?
+&lt;/li&gt;
+&lt;li&gt;Is the Solution actionable, practical?
+&lt;/li&gt;
+&lt;li&gt;Is the innovation actionable, practical?
+&lt;/li&gt;
+&lt;li&gt;Is the Solution replicable, scalable?
+
+&lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="AutocompleteMessage.Text" xml:space="preserve">
+    <value>Choose an existing organization or enter the name of a new one.</value>
+  </data>
+  <data name="AvailableResources.Text" xml:space="preserve">
+    <value>Available Resources</value>
+  </data>
+  <data name="AvailableResourcesDesc.Text" xml:space="preserve">
+    <value>Please tick all resources that are readily available for the implementation of your Solution, or for the transfer of knowledge. This really enhances the description and shows the effort undertaken to develop resources for scale and replication.</value>
+  </data>
+  <data name="Beneficiaries.Text" xml:space="preserve">
+    <value>Beneficiaries</value>
+  </data>
+  <data name="BeneficiariesDesc.Text" xml:space="preserve">
+    <value>Identify the end-consumer or beneficiary of your Solution. Beneficiaries can be individuals, organizations or groups.</value>
+  </data>
+  <data name="BlockAdditionalInformationDesc.Text" xml:space="preserve">
+    <value>More specific information about the Solution</value>
+  </data>
+  <data name="BlockBenefits.Text" xml:space="preserve">
+    <value>Impact</value>
+  </data>
+  <data name="BlockBenefitsDesc.Text" xml:space="preserve">
+    <value>This is the chance to describe qualitatively and quantitatively the impact of your Solution.  Emphasize the reach of this impact and how it is sustainable over time.</value>
+  </data>
+  <data name="BlockCostDetails.Text" xml:space="preserve">
+    <value>Cost Details</value>
+  </data>
+  <data name="BlockCostDetailsDesc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BlockDetails.Text" xml:space="preserve">
+    <value>Implementation</value>
+  </data>
+  <data name="BlockDetailsDesc.Text" xml:space="preserve">
+    <value>Describe how your Solution is implemented and provide information about the costs and time needed.</value>
+  </data>
+  <data name="BlockDurationDetails.Text" xml:space="preserve">
+    <value>Duration Details</value>
+  </data>
+  <data name="BlockDurationDetailsDesc.Text" xml:space="preserve">
+    <value>sdf sd ff dsfdsfsdfsd f sdf sdf  sdfsdf sdf sdf sdf sdfsd ds fsd</value>
+  </data>
+  <data name="BlockEvidences.Text" xml:space="preserve">
+    <value>Evidence</value>
+  </data>
+  <data name="BlockEvidencesDesc.Text" xml:space="preserve">
+    <value>If your Solution has already been piloted, tell us about it. &lt;br/&gt;Remember!&lt;br/&gt;
+Your Solution will have more opportunities to be seen in NEXSO as much evidences and documentation you present with your Solution.</value>
+  </data>
+  <data name="BlockFinish.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="BlockFinishDesc.Text" xml:space="preserve">
+    <value>A peek at how NEXSO presents your Solution before you hit Publish</value>
+  </data>
+  <data name="BlockInnovation.Text" xml:space="preserve">
+    <value>Innovation</value>
+  </data>
+  <data name="BlockInnovationDesc.Text" xml:space="preserve">
+    <value>This is the key section! Put your marketing skills to work here. Demonstrate how your Solution is innovative and unique. Explain how you made a difference in addressing the problem described.</value>
+  </data>
+  <data name="BlockOrganizationBasicDetails.Text" xml:space="preserve">
+    <value>Basic details</value>
+  </data>
+  <data name="BlockOrganizationBasicDetailsDesc.Text" xml:space="preserve">
+    <value>Organization information. Create a new one or search for an existing one.</value>
+  </data>
+  <data name="BlockProblem.Text" xml:space="preserve">
+    <value>Problem</value>
+  </data>
+  <data name="BlockProblemDesc.Text" xml:space="preserve">
+    <value>Describe the problem or market need that your Solution seeks to address. It should be a very specific problem, not a macro global issue like "climate change"or "poverty".</value>
+  </data>
+  <data name="BlockTitle.Text" xml:space="preserve">
+    <value>Name your Solution</value>
+  </data>
+  <data name="BlockTitleDesc.Text" xml:space="preserve">
+    <value>&lt;/br&gt;</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="BtnCreateOrganization.Text" xml:space="preserve">
+    <value>Create Organization</value>
+  </data>
+  <data name="btnOk.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Challenge.Text" xml:space="preserve">
+    <value>Problem</value>
+  </data>
+  <data name="ChallengeDesc.Text" xml:space="preserve">
+    <value>Try to address these questions as you describe the problem:&lt;br/&gt;
+&lt;ul&gt;
+&lt;li&gt;
+
+ What is the current situation of the beneficiary or consumer that you try to support with this Solution?&lt;/li&gt;
+&lt;li&gt;What is the context of the problem and the actual situation of the people affected?&lt;/li&gt;
+&lt;li&gt;What obstacle is that beneficiary or consumer facing?&lt;/li&gt;
+&lt;li&gt;What causes this problem you are describing?&lt;/li&gt;
+&lt;li&gt;What is the size or magnitude of this problem? Numbers are welcome.
+&lt;/li&gt;
+&lt;li&gt;Who are the affected people from this problem?
+&lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="chkPublicationApproval.Text" xml:space="preserve">
+    <value>I accept my Solution to be published in &lt;a href="home.aspx" target="_blank"&gt; nexso.org. &lt;/ a&gt;</value>
+  </data>
+  <data name="chkPublicationApprovalCustom.Text" xml:space="preserve">
+    <value>I want my Solution to be published on nexso.org after completing the selection process by the Japan Special Fund Poverty Reduction Program (JPO).  Only the information posted in my Solution will be published. Information related with the Expression of Interest and its annexes will not be visible to the public.</value>
+  </data>
+  <data name="ConfirmationDelete.Text" xml:space="preserve">
+    <value>Are you sure you want to delete this Solution?</value>
+  </data>
+  <data name="Cost.Text" xml:space="preserve">
+    <value>Cost Unit</value>
+  </data>
+  <data name="CostDesc.Text" xml:space="preserve">
+    <value>In this section you must give an estimated cost for your Solution implementation.</value>
+  </data>
+  <data name="CostDetails.Text" xml:space="preserve">
+    <value>Cost Details</value>
+  </data>
+  <data name="CostDetailsDesc.Text" xml:space="preserve">
+    <value>Use this space to describe additional cost considerations, including the number of units, travel, materials, and so on.Try to separate  the fixed and variable costs. &lt;br/&gt;
+
+Keep in mind other cost factors including travel, licensing fees, legal work, hosting and other online services for web projects, and materials.</value>
+  </data>
+  <data name="CostValue.Text" xml:space="preserve">
+    <value>Estimated Cost (in USD)</value>
+  </data>
+  <data name="DeleteSolution.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeliveryFormat.Text" xml:space="preserve">
+    <value>Type of Solution</value>
+  </data>
+  <data name="DeliveryFormatDesc.Text" xml:space="preserve">
+    <value>Please select the type  that best describes how your Solution will be delivered.</value>
+  </data>
+  <data name="DurationDetails.Text" xml:space="preserve">
+    <value>Duration Details</value>
+  </data>
+  <data name="DurationDetailsDesc.Text" xml:space="preserve">
+    <value>Use this space to further clarify and describe the duration selection above.</value>
+  </data>
+  <data name="EditModule.Text" xml:space="preserve">
+    <value>Edit Module</value>
+  </data>
+  <data name="Finish.Text" xml:space="preserve">
+    <value>Publish Solution</value>
+  </data>
+  <data name="GuideLines.Text" xml:space="preserve">
+    <value>Guide Lines</value>
+  </data>
+  <data name="Implementation.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="ImplementationDetails.Text" xml:space="preserve">
+    <value>Implementation Details</value>
+  </data>
+  <data name="ImplementationDetailsDesc.Text" xml:space="preserve">
+    <value>Briefly describe the main activities and details needed for the implementation of your Solution.  This information is very important for the potential partner, investor, or buyer  to understand what is required and associate the costs and time needed for the implementation.  
+&lt;br/&gt;
+Remember that the implementation can be in two types, depending on the maturity level of the Solution:
+&lt;br/&gt;
+&lt;ul&gt;&lt;li&gt;
+Developed or proof of concept&lt;/li&gt;&lt;li&gt;
+Scale up or replicate of proven and matured Solution&lt;/li&gt;&lt;/ul&gt;
+These details will help you justify the estimated costs and duration of the implementation of the Solution.</value>
+  </data>
+  <data name="lblCreateNewOrganization.Text" xml:space="preserve">
+    <value>Select this Organization</value>
+  </data>
+  <data name="Location.Text" xml:space="preserve">
+    <value>Tested location(s)</value>
+  </data>
+  <data name="LocationDesc.Text" xml:space="preserve">
+    <value>&lt;/br&gt;Indicate the countries where you have piloted your Solution. &lt;strong&gt;Select all those that apply.  If you add an incorrect country delete by clicking on the “X”at the country box.  &lt;/strong&gt;</value>
+  </data>
+  <data name="LongDescription.Text" xml:space="preserve">
+    <value>Additional Information</value>
+  </data>
+  <data name="LongDescriptionDesc.Text" xml:space="preserve">
+    <value>Here's an extra opportunity for you to pitch your Solution! &lt;br/&gt;
+Use this additional space to share any additional information you have about your Solution. Get into more details here, or elaborate on a particular area. You might use this section to add more history of your Solution or to demonstrate credentials relevant to potential adopters. Please do not repeat yourself here.</value>
+  </data>
+  <data name="MailTemplateNewSolution.Text" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+&lt;head&gt;
+&lt;meta name="viewport" content="width=device-width" /&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;title&gt;New comment&lt;/title&gt;
+
+
+&lt;style type="text/css"&gt;
+img {
+max-width: 100%;
+}
+body {
+-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6;
+}
+body {
+background-color: #f6f6f6;
+}
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h2 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h3 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h4 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h1 {
+    font-size: 22px !important;
+  }
+  h2 {
+    font-size: 18px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .container {
+    width: 100% !important;
+  }
+  .content {
+    padding: 10px !important;
+  }
+  .content-wrap {
+    padding: 10px !important;
+  }
+  .invoice {
+    width: 100% !important;
+  }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6; background: #fff; margin: 0; padding: 0;"&gt;
+
+&lt;table class="body-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background: #f6f6f6; margin: 0; padding: 0;"&gt;
+	&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+		&lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+		&lt;td class="container" width="600" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto; padding: 0;" valign="top"&gt;
+			&lt;div class="content" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;"&gt;
+				&lt;table class="main" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; background: #fff; margin: 0; padding: 0; border: 1px solid #e9e9e9;"&gt;
+					&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="alert alert-warning" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #333; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; border-bottom: 4px solid #e9e9e9; background: #ffffff; margin: 0; padding: 20px;" align="center" valign="top"&gt;
+							&lt;a href="http://www.nexso.org"&gt;&lt;img src="http://www.nexso.org/Portals/0/Images/logo.png" alt="Welcome to NEXSO!" width="150" height="38" style="display: block;" /&gt;&lt;/a&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="content-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px;" valign="top"&gt;
+							&lt;table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; margin: 0; padding: 0;"&gt;{SOLUTION:Title}&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Congratulations, {USER:FirstName}. We see you started a new Solution on NEXSO. Here's a short guide to show you everything you need to complete in order to see you Solution published.
+									&lt;/td&gt;
+								&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; margin: 0; padding: 0;"&gt;Everything You Need To Get Published&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;										
+		&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;1. Start Here&lt;/strong&gt;&lt;br/&gt;The title, the tagline, the organization
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+	&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;										
+		&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;2. Problem&lt;/strong&gt;&lt;br/&gt;Describe the particular development problem that your Solution seeks to alleviate.
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+	&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;										
+		&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;3. Innovation&lt;/strong&gt;&lt;br/&gt;Demonstrate how your Solution is innovative, how it makes a difference, and how it addresses the specific challenge you described.
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+	&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;										
+		&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;4. Impact&lt;/strong&gt;&lt;br/&gt;Explain the results and effects a potential Solution adopter (a project designer) can expect from implementing your Solution.
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+	&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;										
+		&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;5. Details&lt;/strong&gt;&lt;br/&gt;Any specific points of interest someone would need to know about implementation in order to evaluate the Solution and its replication potential.
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+	&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;										
+		&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;6. Evidence&lt;/strong&gt;&lt;br/&gt;More information that can convince potential adopters to connect with your Solution.
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+	&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;										
+		&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;7. Finish&lt;/strong&gt;&lt;br/&gt;Publish your Solution
+	&lt;/td&gt;
+&lt;/tr&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;a href="{SOLUTION:URL}" class="btn-primary" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background: #80b63f; margin: 0; padding: 0; border-color: #80b63f; border-style: solid; border-width: 10px 20px;"&gt;Edit your Solution&lt;/a&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+	&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;										
+		For further support on how to publish a Solution please visit our &lt;a href="http://www.nexso.org/en-us/Support" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #2993d4; text-decoration: underline; margin: 0; padding: 0;"&gt;help page&lt;/a&gt;.
+	&lt;/td&gt;
+&lt;/tr&gt;
+		
+
+							&lt;/table&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="alert alert-warning" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; color: #fff; font-weight: 500; text-align: left; border-radius: 0 0 3px 3px; border-top: 1px solid #e9e9e9; background: #2993d4; margin: 0; padding: 20px;" align="left" valign="top"&gt;
+							Forgot your password? &lt;a href="http://www.nexso.org/en-us/Login" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; color: #fff; text-decoration: underline; margin: 0; padding: 0;"&gt;Reset&lt;/a&gt;.
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;div class="footer" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; clear: both; color: #999; margin: 0; padding: 20px;"&gt;
+					&lt;table width="100%" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+							&lt;td class="aligncenter content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px;" align="center" valign="top"&gt;Inter-American Development Bank&lt;br/&gt; Multilateral Investment Fund&lt;br/&gt; 1300 New York Ave NW, Washington, DC 205577, USA&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/table&gt;
+				&lt;/div&gt;&lt;/div&gt;
+		&lt;/td&gt;
+		&lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="MailTemplateNewSolutionSubject.Text" xml:space="preserve">
+    <value>{USER:FirstName} Make sure you turn your draft into a submitted Solution!</value>
+  </data>
+  <data name="MailTemplatePublishedSolution.Text" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+&lt;head&gt;
+&lt;meta name="viewport" content="width=device-width" /&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;title&gt;Your Solution is published!&lt;/title&gt;
+
+
+&lt;style type="text/css"&gt;
+img {
+max-width: 100%;
+}
+body {
+-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6;
+}
+body {
+background-color: #f6f6f6;
+}
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h2 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h3 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h4 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h1 {
+    font-size: 22px !important;
+  }
+  h2 {
+    font-size: 18px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .container {
+    width: 100% !important;
+  }
+  .content {
+    padding: 10px !important;
+  }
+  .content-wrap {
+    padding: 10px !important;
+  }
+  .invoice {
+    width: 100% !important;
+  }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6; background: #fff; margin: 0; padding: 0;"&gt;
+
+&lt;table class="body-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background: #f6f6f6; margin: 0; padding: 0;"&gt;
+	&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+		&lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+		&lt;td class="container" width="600" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto; padding: 0;" valign="top"&gt;
+			&lt;div class="content" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;"&gt;
+				&lt;table class="main" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; background: #fff; margin: 0; padding: 0; border: 1px solid #e9e9e9;"&gt;
+					&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="alert alert-warning" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #333; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; border-bottom: 4px solid #e9e9e9; background: #ffffff; margin: 0; padding: 20px;" align="center" valign="top"&gt;
+							&lt;a href="http://www.nexso.org"&gt;&lt;img src="http://www.nexso.org/Portals/0/Images/logo.png" alt="Welcome to NEXSO!" width="150" height="38" style="display: block;" /&gt;&lt;/a&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="content-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px;" valign="top"&gt;
+							&lt;table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 30px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 30px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 30px; margin: 0; padding: 0;"&gt;Your Solution is published! &lt;/strong&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Congratulations on transforming your innovation into an easy-to-read 500-word Solution! Succinct Solutions like these can be reviewed more quickly and spread more effectively, and hopefully... no more long proposal writing for you. 
+									&lt;/td&gt;
+								&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										NEXSO is a community of &lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;1500+ members&lt;/strong&gt; in &lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;29 countries&lt;/strong&gt;, creating the premier marketplace of development Solutions to improve life in Latin America and the Caribbean. 
+									&lt;/td&gt;
+								&lt;/tr&gt;								
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;a href="{SOLUTION:URL}" class="btn-primary" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background: #80b63f; margin: 0; padding: 0; border-color: #80b63f; border-style: solid; border-width: 10px 20px;"&gt;View my Solution&lt;/a&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; margin: 0; padding: 0;"&gt;Keep working on your Solution&lt;/strong&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										All published Solutions on NEXSO are under constant review for matches with funding opportunities. Regularly updating your Solution is important for maintaining its visibility on NEXSO for potential funding opportunities.&lt;br/&gt;&lt;a href="http://www.nexso.org/en-us/" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #2993d4; text-decoration: underline; margin: 0; padding: 0;"&gt;View featured Solutions &amp;raquo;&lt;/a&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; margin: 0; padding: 0;"&gt;Join a challenge&lt;/strong&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										More than &lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;5 million dollars&lt;/strong&gt; in prizes and funding opportunities has been distributed to Solution providers just like you, through NEXSO Challenges. Limited duration, themed challenges provide eligible community members with exclusive opportunities that can help to gear your Solution for growth.
+									&lt;/td&gt;
+								&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										
+All current and past challenges are listed on the &lt;a href="http://www.nexso.org/en-us/" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #2993d4; text-decoration: underline; margin: 0; padding: 0;"&gt;homepage&lt;/a&gt;, and we'll be sure to let you know when a new challenge is getting ready to launch.
+									&lt;/td&gt;
+								&lt;/tr&gt;
+							&lt;/table&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="alert alert-warning" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; color: #fff; font-weight: 500; text-align: left; border-radius: 0 0 3px 3px; border-top: 1px solid #e9e9e9; background: #2993d4; margin: 0; padding: 20px;" align="left" valign="top"&gt;
+							Forgot your password? &lt;a href="http://www.nexso.org/en-us/Login" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; color: #fff; text-decoration: underline; margin: 0; padding: 0;"&gt;Reset&lt;/a&gt;.
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;div class="footer" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; clear: both; color: #999; margin: 0; padding: 20px;"&gt;
+					&lt;table width="100%" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+							&lt;td class="aligncenter content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px;" align="center" valign="top"&gt;Inter-American Development Bank&lt;br/&gt; Multilateral Investment Fund&lt;br/&gt; 1300 New York Ave NW, Washington, DC 205577, USA&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/table&gt;
+				&lt;/div&gt;&lt;/div&gt;
+		&lt;/td&gt;
+		&lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="MailTemplatePublishedSolutionSubject.Text" xml:space="preserve">
+    <value>{USER:FirstName}, Congratulations Your Solution is now eligible to participate in NEXSO opportunities!</value>
+  </data>
+  <data name="MaxLengthExceeded.Text" xml:space="preserve">
+    <value>You have exceeded the maximum characters.</value>
+  </data>
+  <data name="Next.Text" xml:space="preserve">
+    <value>Save &amp; Next</value>
+  </data>
+  <data name="OrganizationAttached.Text" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="OrganizationAttachedDesc.Text" xml:space="preserve">
+    <value>Select an Organization from the List or Type an Organization Name for creating a new one.</value>
+  </data>
+  <data name="Preview.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Previous.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="ProjectDuration.Text" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="ProjectDurationDesc.Text" xml:space="preserve">
+    <value>Indicate how long it takes to implement your Solution.</value>
+  </data>
+  <data name="Proof.Text" xml:space="preserve">
+    <value>Evidence</value>
+  </data>
+  <data name="Results.Text" xml:space="preserve">
+    <value>Impact</value>
+  </data>
+  <data name="ResultsDesc.Text" xml:space="preserve">
+    <value>Try to answer these questions as you describe the impact of your Solution: 
+&lt;ul&gt;
+&lt;li&gt;How do you quantify (using numbers) the impact of your Solution?
+&lt;/li&gt;
+&lt;li&gt;What is the potential scale or dimension of your Solution?
+&lt;/li&gt;
+&lt;li&gt;What is your business model?  Briefly explain how your Solution can generate income and be sustainable.
+&lt;/li&gt;
+&lt;li&gt;Have you included figures to support the impact description and show evidence of the success of your Solution?
+
+&lt;/li&gt;
+
+&lt;/ul&gt;</value>
+  </data>
+  <data name="Review.Text" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="ReviewText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revtxtCost.Text" xml:space="preserve">
+    <value>Please type an integer or decimal type number. Ex: 1,352,365.36  or 1352365.36</value>
+  </data>
+  <data name="rfvddCost.Text" xml:space="preserve">
+    <value>Select a cost type</value>
+  </data>
+  <data name="rfvddProjectDuration.Text" xml:space="preserve">
+    <value>Select a project duration type</value>
+  </data>
+  <data name="rfvRadAutoCompleteBox1.Text" xml:space="preserve">
+    <value>Please select or type an organization</value>
+  </data>
+  <data name="rfvtxtApproach.Text" xml:space="preserve">
+    <value>Innovation definition is required</value>
+  </data>
+  <data name="rfvtxtAvailableResources.Text" xml:space="preserve">
+    <value>Please select up to 3 resources. You must select at least one</value>
+  </data>
+  <data name="rfvtxtBeneficiaries.Text" xml:space="preserve">
+    <value>Please select up to 3 beneficiaries. You must select at least one</value>
+  </data>
+  <data name="rfvtxtChallenge.Text" xml:space="preserve">
+    <value>Problem definition is required</value>
+  </data>
+  <data name="rfvtxtCost.Text" xml:space="preserve">
+    <value>Cost value is required.</value>
+  </data>
+  <data name="rfvtxtCostDetails.Text" xml:space="preserve">
+    <value>Cost details are required</value>
+  </data>
+  <data name="rfvtxtDeliveryFormat.Text" xml:space="preserve">
+    <value>Please select up to 3 types of Solution. You must select at least one.</value>
+  </data>
+  <data name="rfvtxtDurationDetails.Text" xml:space="preserve">
+    <value>Duration Details are required</value>
+  </data>
+  <data name="rfvtxtImplementationDetails.Text" xml:space="preserve">
+    <value>Implementation Details are required</value>
+  </data>
+  <data name="rfvtxtLongDescription.Text" xml:space="preserve">
+    <value>Description is required.</value>
+  </data>
+  <data name="rfvtxtResults.Text" xml:space="preserve">
+    <value>Impact definition is required</value>
+  </data>
+  <data name="rfvtxtShortDescription.Text" xml:space="preserve">
+    <value>Tagline is required</value>
+  </data>
+  <data name="rfvtxtSubmissionTitle.Text" xml:space="preserve">
+    <value>Title is required</value>
+  </data>
+  <data name="rfvtxtTheme.Text" xml:space="preserve">
+    <value>Please select up to 3 themes. You must select at least one</value>
+  </data>
+  <data name="Save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveContinue.Text" xml:space="preserve">
+    <value>Save and Continue</value>
+  </data>
+  <data name="SelectItem.Text" xml:space="preserve">
+    <value>Select Item</value>
+  </data>
+  <data name="ShortDescription.Text" xml:space="preserve">
+    <value>Value Proposition</value>
+  </data>
+  <data name="ShortDescriptionDesc.Text" xml:space="preserve">
+    <value>Pitch your Solution in a few words.  Use this space to entice people to read more.  Single, clear, compelling message that stated why you are different and worth getting attention.  You don’t need to repeat the Solution name as these two items will always be shown together. Example: (Solution Name) Sport Trains Youth; (Value Proposition) A workforce development program wrapped inside a soccer ball.  We use the best of sport to help youth develop market-driven job skills.</value>
+  </data>
+  <data name="SolutionSettings.Text" xml:space="preserve">
+    <value>Solution Wizard</value>
+  </data>
+  <data name="SolutionSettingsMsg.Text" xml:space="preserve">
+    <value>message</value>
+  </data>
+  <data name="Step0.Text" xml:space="preserve">
+    <value>Start Here </value>
+  </data>
+  <data name="Step0ShortMessage.Text" xml:space="preserve">
+    <value>All Solutions must have a name &amp; an organization</value>
+  </data>
+  <data name="Step0Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step1.Text" xml:space="preserve">
+    <value>Problem</value>
+  </data>
+  <data name="Step1ShortMessage.Text" xml:space="preserve">
+    <value>Every Solution solve a problem.</value>
+  </data>
+  <data name="Step1Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step2.Text" xml:space="preserve">
+    <value>Innovation</value>
+  </data>
+  <data name="Step2ShortMessage.Text" xml:space="preserve">
+    <value>Every Solution presents an Innovation</value>
+  </data>
+  <data name="Step2Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step3.Text" xml:space="preserve">
+    <value>Impact</value>
+  </data>
+  <data name="Step3ShortMessage.Text" xml:space="preserve">
+    <value>Every Solution benefits to some one.</value>
+  </data>
+  <data name="Step3Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step4.Text" xml:space="preserve">
+    <value>Implementation</value>
+  </data>
+  <data name="Step4ShortMessage.Text" xml:space="preserve">
+    <value>Add useful tags to your Solution</value>
+  </data>
+  <data name="Step4Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step5.Text" xml:space="preserve">
+    <value>Evidence</value>
+  </data>
+  <data name="Step5ShortMessage.Text" xml:space="preserve">
+    <value>Review your Solution before publishing</value>
+  </data>
+  <data name="Step5Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step6.Text" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="Step6ShortMessage.Text" xml:space="preserve">
+    <value>Your Solution is now published</value>
+  </data>
+  <data name="Step6Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SubmissionTitle.Text" xml:space="preserve">
+    <value>Solution Name</value>
+  </data>
+  <data name="SubmissionTitleDesc.Text" xml:space="preserve">
+    <value>A great name is short, crisp, and easily understood. Try limiting the name to 8 words or less. Make your Solution stand out with a memorable name.</value>
+  </data>
+  <data name="SupportDocuments.Text" xml:space="preserve">
+    <value>Supporting Documents (public to the community)</value>
+  </data>
+  <data name="SupportDocumentsDesc.Text" xml:space="preserve">
+    <value>Upload documents, such as images, business plans, certifications, that may offer additional evidence of your Solution’s effectiveness.</value>
+  </data>
+  <data name="TermsAcceptMessage.Text" xml:space="preserve">
+    <value>I understand that in order to have my submission listed in NEXSO I must meet the Submission Guidelines and I must meet eligibility requirements.</value>
+  </data>
+  <data name="TermsMessage.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Theme.Text" xml:space="preserve">
+    <value>Themes</value>
+  </data>
+  <data name="ThemeDesc.Text" xml:space="preserve">
+    <value>Please select the development theme(s) that can best be used to classify the problem.</value>
+  </data>
+  <data name="TitlePopUp.Text" xml:space="preserve">
+    <value>Delete Solution</value>
+  </data>
+  <data name="Verification.Text" xml:space="preserve">
+    <value>Thank you for verifying your account. You may now proceed to make a submmision.</value>
+  </data>
+  <data name="lblMessage.Text" xml:space="preserve">
+    <value>&lt;div class="row confirmation-page no-sidebar"&gt;
+&lt;div class="content-wrapper"&gt;
+&lt;header class="intro"&gt;&lt;div class="confirmation-page"&gt;&lt;h1&gt;Sorry, you're too late.&lt;/h1&gt;
+&lt;h1&gt;This challenge is now closed.&lt;/h1&gt;&lt;/div&gt;&lt;/header&gt;&lt;/div&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="Maxlength.Text" xml:space="preserve">
+    <value>{r} words remaining ({m} limit)</value>
+  </data>
+  <data name="hlExplore.Text" xml:space="preserve">
+    <value>Explore Solutions</value>
+  </data>
+  <data name="hlViewDetails.Text" xml:space="preserve">
+    <value>View more details</value>
+  </data>
+  <data name="hlViewSolution.Text" xml:space="preserve">
+    <value>View Solution</value>
+  </data>
+  <data name="hlWhatIsNexso.Text" xml:space="preserve">
+    <value>What is NEXSO?</value>
+  </data>
+  <data name="lbHeader.Text" xml:space="preserve">
+    <value>
+&lt;div class="row confirmation-page no-sidebar"&gt;
+&lt;div class="content-wrapper"&gt;
+&lt;header class="intro"&gt;
+&lt;div class="confirmation-page"&gt;
+&lt;h1&gt;Thank you!&lt;/h1&gt;
+&lt;p class="lead"&gt;&lt;strong&gt;You have been automatically entered into the current NEXSO challenge.&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="lead"&gt;We will be in touch if your entry is selected by our judging panel.&lt;/p&gt;
+&lt;h1 class="icon-star"&gt;&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/header&gt;
+&lt;h2&gt;What to do next&lt;/h2&gt;
+&lt;ul class="toc"&gt;
+    &lt;li style="display: none;"&gt;&lt;a href="OutUrl"&gt;View more details&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/en-us/solprofile/sl/"&gt;View Solution&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/en-us/explore"&gt;Explore solutions&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/en-us/whatisnexso"&gt;What is NEXSO?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+          </value>
+  </data>
+  <data name="btnReUse.Text" xml:space="preserve">
+    <value>Re-use a solution</value>
+  </data>
+  <data name="InvalidFormat.Text" xml:space="preserve">
+    <value>Invalid format</value>
+  </data>
+</root>

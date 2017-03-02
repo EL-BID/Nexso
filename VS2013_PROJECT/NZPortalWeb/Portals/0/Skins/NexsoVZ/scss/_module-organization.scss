@@ -1,0 +1,49 @@
+﻿/* ==========================================================================
+   Organization - organization page styles for Nexso 2
+   ========================================================================== */
+
+/* The organization form is used in a couple of different contexts:
+		- as part of the Solution Wizard
+		- standalone, when adding an organization
+
+
+	Since the organization form shares its styles with other pages, the main
+	styling is done in the _styles.scss.
+	This file contains the specific overrides to those styles.
+*/
+
+.organization .edit-form {
+	@include grid-column(8,$offset:2);
+}
+
+/* The organization form is also used on the Solution wizard. Styles have to be
+		reset here */
+
+.solution-wizard .organization {
+	box-shadow: none;
+	padding-top: 2rem;
+	.row {
+    @include grid-row($behavior: nest);
+	}
+	.edit-form {
+		@include grid-column(12,$offset:0);
+	}
+	.banner-wrapper,
+	.content-wrapper,
+	aside {
+		float: none;
+		margin-left: 0 !important;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+	}
+	.buttons-com .edit {
+		@extend .tertiary-button;
+	}
+
+	// The edit form of the organization is already contained in a .field
+
+	#pnlOrganizationEditMode .field {
+		width: auto;
+	}
+}

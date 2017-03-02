@@ -1,0 +1,28 @@
+<!--TemplateGroup:newsListArticleSimpleImageLeftRight-->
+<!--ArticleTemplate-->
+<div class="article multi_layout single_collumn">
+	<div class="in_article_image left" [EasyDNNnews:Image:Visibility]>
+		<div class="image_wrapper no_text">
+			<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]">
+				<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]" />
+			</a>
+		</div>
+	</div>
+	<h1 class="title"><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h1>
+	<h2>[EasyDNNnews:SubTitle]</h2>
+	<div class="content">
+		[EasyDNNnews:Summary]
+	</div>
+</div>
+<!--ArticleEnd-->
+
+<!--ArticleRepeat:Before:-->
+<!--RepeatEnd:Before:-->
+
+<!--ArticleRepeat:After:-->
+[EasyDNNnews:IfExists:RSS]
+<div class="article_rss_wrapper">
+	<a class="article_rss" href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="UserName.Header">
+    <value xml:space="preserve">Nome de usuário</value>
+  </data>
+  <data name="SecurityRole.Header">
+    <value xml:space="preserve">Regra de segurança</value>
+  </data>
+  <data name="ExpiryDate.Header">
+    <value xml:space="preserve">Data de expiração</value>
+  </data>
+  <data name="plUsers.Text">
+    <value xml:space="preserve">Nome de usuário:</value>
+  </data>
+  <data name="plUsers.Help">
+    <value xml:space="preserve">Selecione o nome de usuário.</value>
+  </data>
+  <data name="cmdValidate.Text">
+    <value xml:space="preserve">Validar</value>
+  </data>
+  <data name="plRoles.Text">
+    <value xml:space="preserve">Regra de segurança:</value>
+  </data>
+  <data name="plRoles.Help">
+    <value xml:space="preserve">Selecione a regra de segurança</value>
+  </data>
+  <data name="plExpiryDate.Text">
+    <value xml:space="preserve">Data de expiração:</value>
+  </data>
+  <data name="plExpiryDate.Help">
+    <value xml:space="preserve">(opcional) Especifique a data em que esta atribuição de regra deve expirar. Não entrar um valor indicará que a regra não expira.</value>
+  </data>
+  <data name="cmdAdd.Text">
+    <value xml:space="preserve">Adicionar regra</value>
+  </data>
+  <data name="valExpiryDate.Text">
+    <value xml:space="preserve">&lt;br&gt;A data de expiração é inválida!</value>
+  </data>
+  <data name="RoleRemoveError.Text">
+    <value xml:space="preserve">Você não pode remover o administrador do portal ou a regra de usuários registadros</value>
+  </data>
+  <data name="ControlTitle_user roles.Text">
+    <value xml:space="preserve">Regras de Usuários</value>
+  </data>
+  <data name="UserTitle.Text">
+    <value xml:space="preserve">Gerenciar Regras do Usuário: {0}</value>
+  </data>
+  <data name="RoleTitle.Text">
+    <value xml:space="preserve">Gerenciar Usuários na Regra: {0}</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre Gerenciamento de Regras de Segurança&lt;/h1&gt;&lt;p&gt;Administradores podem gerenciar as regras de segurança definidas no seu Portal. O módulo permite-lhe gerenciar os usuários atribuídos à regras de segurança.&lt;/p&gt;</value>
+  </data>
+  <data name="AddUser.Text">
+    <value xml:space="preserve">Adicionar usuário</value>
+  </data>
+  <data name="AddRole.Text">
+    <value xml:space="preserve">Adicionar regra</value>
+  </data>
+  <data name="EffectiveDate.Header">
+    <value xml:space="preserve">Data de efetivação</value>
+  </data>
+  <data name="plEffectiveDate.Text">
+    <value xml:space="preserve">Data de efetivação:</value>
+  </data>
+  <data name="plEffectiveDate.Help">
+    <value xml:space="preserve">(opcional) Especifique a data em que esta atribuição de regra deve iniciar. Não entrar um valor indicará que a regra inicia automaticamente.</value>
+  </data>
+  <data name="valEffectiveDate.Text">
+    <value xml:space="preserve">&lt;br&gt;A data de efetivação é inválida!</value>
+  </data>
+  <data name="valDates.Text">
+    <value xml:space="preserve">&lt;br&gt;A data de expiração deve ser maior que a data de efetivação!</value>
+  </data>
+  <data name="UpdateRole.Text">
+    <value xml:space="preserve">Atualizar regra</value>
+  </data>
+  <data name="NotAuthorized.Text">
+    <value xml:space="preserve">Você não está autorizado a editar esta regra.</value>
+  </data>
+  <data name="DeleteUsersFromRole.Text">
+    <value xml:space="preserve">Você tem certeza de que quer excluir '{0}' da regra '{1}'?</value>
+  </data>
+  <data name="DeleteRoleFromUser.Text">
+    <value xml:space="preserve">Você tem certeza de que quer excluir a regra '{1}' de '{0}'?</value>
+  </data>
+  <data name="lblIsOwner.Text">
+    <value xml:space="preserve">É proprietário?</value>
+  </data>
+  <data name="IsOwner.Header">
+    <value xml:space="preserve">É proprietário</value>
+  </data>
+  <data name="lblIsOwner.Help">
+    <value xml:space="preserve">Adicionar este usuário como um proprietário deste grupo.</value>
+  </data>
+</root>

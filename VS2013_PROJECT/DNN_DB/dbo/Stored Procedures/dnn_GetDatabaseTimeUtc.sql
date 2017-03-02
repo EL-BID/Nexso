@@ -1,0 +1,6 @@
+﻿CREATE PROCEDURE [dbo].[dnn_GetDatabaseTimeUtc]
+AS
+BEGIN
+	SELECT GETUTCDATE()
+END
+

@@ -1,0 +1,107 @@
+﻿/* ==========================================================================
+   Type - type related styles for Nexso2
+   ========================================================================== */
+
+/* Font icon */
+
+@font-face {
+	font-family: 'nexso-icons';
+	src:url('fonts/nexso-icons.eot');
+	src:url('fonts/nexso-icons.eot?#iefix') format('embedded-opentype'),
+		url('fonts/nexso-icons.woff') format('woff'),
+		url('fonts/nexso-icons.ttf') format('truetype'),
+		url('fonts/nexso-icons.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'nexso-icons	';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.nexso-icon {
+	font-family: 'nexso-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon-search {
+	content: "\e600";
+}
+.icon-nexso {
+	content: "\e601";
+}
+.icon-browse {
+	content: "\e602";
+}
+.icon-twitter {
+	content: "\e603";
+}
+.icon-facebook {
+	content: "\e604";
+}
+.icon-globe {
+	content: "\e605";
+}
+.icon-file {
+	content: "\e606";
+}
+.icon-user {
+	content: "\e607";
+}
+.icon-menu {
+	content: "\e608";
+}
+.icon-caret-up {
+	content: "\e609";
+}
+.icon-arr-left {
+	content: "\e60a";
+}
+.icon-arr-right {
+	content: "\e60b";
+}
+.icon-calendar {
+	content: "\e60c";
+}
+.icon-coins {
+	content: "\e60d";
+}
+.icon-grid3 {
+	content: "\e60e";
+}
+.icon-link4 {
+	content: "\e60f";
+}
+.icon-location5 {
+	content: "\e610";
+}
+.icon-share2 {
+	content: "\e611";
+}
+.icon-tag5 {
+	content: "\e612";
+}
+.icon-users {
+	content: "\e613";
+}

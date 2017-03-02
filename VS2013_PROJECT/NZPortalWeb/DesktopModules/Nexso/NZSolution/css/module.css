@@ -1,0 +1,46 @@
+.hideMessage {
+    display: none;
+}
+
+.state {
+    float: left;
+}
+
+
+@media (max-width:60.063em) {
+
+    .curator-container {
+        display: none;
+    }
+
+    .curator-container-responsive {
+        position: absolute;
+        display: block !important;
+        top: 4%;
+        right: 4%;
+        width: 7vw;
+        height: 7vw;
+    }
+
+        .curator-container-responsive img {
+            width: 100%;
+        }
+}
+
+@media (max-width:40.063em) {
+    .curator-container-responsive {
+        width: 10vw;
+        height: 10vw;
+    }
+}
+
+@media (max-width:20.063em) {
+    .curator-container-responsive {
+        width: 10vw;
+        height: 10vw;
+    }
+}
+
+.curator-container-responsive {
+    display: none;
+}

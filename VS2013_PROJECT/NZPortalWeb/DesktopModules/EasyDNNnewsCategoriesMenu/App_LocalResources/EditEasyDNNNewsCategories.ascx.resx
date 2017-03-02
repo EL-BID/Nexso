@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCancelResource1.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="btnSaveCloseResource1.Text" xml:space="preserve">
+    <value>Save &amp; Close</value>
+  </data>
+  <data name="btnSaveSettingsResource1.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="cbAutoAddAuthorChildsResource1.Text" xml:space="preserve">
+    <value>Auto select all child authors.</value>
+  </data>
+  <data name="cbAutoAddCatChildsResource1.Text" xml:space="preserve">
+    <value>Auto select all child categories.</value>
+  </data>
+  <data name="cbDisplayAllAuthorsResource1.Text" xml:space="preserve">
+    <value>Display all authors</value>
+  </data>
+  <data name="cbdisplayallcatsResource1.Text" xml:space="preserve">
+    <value>Display all categories and subcategories</value>
+  </data>
+  <data name="cbModulesResource1.Text" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="cbPageResource1.Text" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="ControlTitle_edit.Text" xml:space="preserve">
+    <value>Edit EasyDNNNewsCategories</value>
+  </data>
+  <data name="cvThemeSelectResource1.ErrorMessage" xml:space="preserve">
+    <value> Please select theme.</value>
+  </data>
+  <data name="lblContent.Help" xml:space="preserve">
+    <value>Enter the Content</value>
+  </data>
+  <data name="lblContent.Text" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Portal</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>Category menu</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>Author menu</value>
+  </data>
+  <data name="ModuleHelp.Text" xml:space="preserve">
+    <value>&lt;P&gt;A EasyDNNNewsCategories module</value>
+  </data>
+  <data name="tvAuthorAndGroupSelectionResource1.CollapseImageToolTip" xml:space="preserve">
+    <value>Collapse {0}</value>
+  </data>
+  <data name="tvAuthorAndGroupSelectionResource1.ExpandImageToolTip" xml:space="preserve">
+    <value>Expand {0}</value>
+  </data>
+  <data name="tvAuthorAndGroupSelectionResource1.SkipLinkText" xml:space="preserve">
+    <value>Skip Navigation Links.</value>
+  </data>
+  <data name="tvCatAndSubCatResource1.CollapseImageToolTip" xml:space="preserve">
+    <value>Collapse {0}</value>
+  </data>
+  <data name="tvCatAndSubCatResource1.ExpandImageToolTip" xml:space="preserve">
+    <value>Expand {0}</value>
+  </data>
+  <data name="tvCatAndSubCatResource1.SkipLinkText" xml:space="preserve">
+    <value>Skip Navigation Links.</value>
+  </data>
+  <data name="valContent.ErrorMessage" xml:space="preserve">
+    <value>&lt;br&gt;Content is required</value>
+  </data>
+  <data name="lblCelectCats.HelpText" xml:space="preserve">
+    <value>Show all categories or make category selection in the tree view selection list.</value>
+  </data>
+  <data name="lblCelectCats.Text" xml:space="preserve">
+    <value>Select categories to display:</value>
+  </data>
+  <data name="lblDisplayHeader.HelpText" xml:space="preserve">
+    <value>Display header.</value>
+  </data>
+  <data name="lblDisplayHeader.Text" xml:space="preserve">
+    <value>Display header:</value>
+  </data>
+  <data name="lblExpandAllCategories.HelpText" xml:space="preserve">
+    <value>Expand (open) all items:</value>
+  </data>
+  <data name="lblExpandAllCategories.Text" xml:space="preserve">
+    <value>Expand all:</value>
+  </data>
+  <data name="lblModuleTemplate.HelpText" xml:space="preserve">
+    <value>Select theme.</value>
+  </data>
+  <data name="lblModuleTemplate.Text" xml:space="preserve">
+    <value>Module theme:</value>
+  </data>
+  <data name="lblModuleTheme.HelpText" xml:space="preserve">
+    <value>Select template.</value>
+  </data>
+  <data name="lblModuleTheme.Text" xml:space="preserve">
+    <value>Module htm template:</value>
+  </data>
+  <data name="lblPermissionSource.HelpText" xml:space="preserve">
+    <value>Category menu will inherite permission from selected value. Only allowed categories will show in menu.</value>
+  </data>
+  <data name="lblPermissionSource.Text" xml:space="preserve">
+    <value>Select permission source:</value>
+  </data>
+  <data name="lblSelectDisplayStyle.HelpText" xml:space="preserve">
+    <value>Select display style.</value>
+  </data>
+  <data name="lblSelectDisplayStyle.Text" xml:space="preserve">
+    <value>Module display style:</value>
+  </data>
+  <data name="lblSelectMenuType.HelpText" xml:space="preserve">
+    <value>Select the type of menu to display categories or authors.</value>
+  </data>
+  <data name="lblSelectMenuType.Text" xml:space="preserve">
+    <value>Select menu type:</value>
+  </data>
+  <data name="lblSelectModule.HelpText" xml:space="preserve">
+    <value>Select news module instance to open articles.</value>
+  </data>
+  <data name="lblSelectModule.Text" xml:space="preserve">
+    <value>Select module to display results:</value>
+  </data>
+  <data name="lblSelectPage.HelpText" xml:space="preserve">
+    <value>Select page to open articles.</value>
+  </data>
+  <data name="lblSelectPage.Text" xml:space="preserve">
+    <value>Select page to display results:</value>
+  </data>
+  <data name="lblAuthorFilter.HelpText" xml:space="preserve">
+    <value>Filter by author.</value>
+  </data>
+  <data name="lblAuthorFilter.Text" xml:space="preserve">
+    <value>All Authors:</value>
+  </data>
+  <data name="lblPortalSharing.HelpText" xml:space="preserve">
+    <value>Select data source portal.</value>
+  </data>
+  <data name="lblPortalSharing.Text" xml:space="preserve">
+    <value>Select portal:</value>
+  </data>
+  <data name="NewsCategorymenu.Text" xml:space="preserve">
+    <value>News Category menu</value>
+  </data>
+  <data name="NoNewsInstance.Text" xml:space="preserve">
+    <value>No News Instance, please add news module instance. &lt;br /&gt;</value>
+  </data>
+  <data name="NoNewsInstancePortal.Text" xml:space="preserve">
+    <value>No news instance with selected portal sharing. Please edit news module instance settings and set portal sharing. &lt;br /&gt;</value>
+  </data>
+  <data name="cbIsSocialInstance.HelpText" xml:space="preserve">
+    <value>Displays user's and group's articles on the Activity feed. The articles are filtered by the UserID or GroupID querystring. If this option is enabled and the querystring UserID or GroupID is missing, then the articles won't show up.</value>
+  </data>
+  <data name="cbIsSocialInstance.Text" xml:space="preserve">
+    <value>Community mode:</value>
+  </data>
+  <data name="Filter.Text" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="lblHideUnlocalizedItems.HelpText" xml:space="preserve">
+    <value>Articles that do not have content for selected language won't be counted. For example on the sites with three different languages: English (default), German and Italian. Article is localized to Italian language. When selecting German language article won’t be visible because there is no localization. Article will only be counted on Italian and English language which is default. 
+Hint: You can also turn off displaying languages on the default language. For articles that you do not want to show on the default language you need to go to Edit article &gt; Content localization and Turn on option “Do not show articles on the default language”.</value>
+  </data>
+  <data name="lblHideUnlocalizedItems.Text" xml:space="preserve">
+    <value>Do not count articles if they do not have content for selected language:</value>
+  </data>
+  <data name="lblnodeExpandToLevel.HelpText" xml:space="preserve">
+    <value>Expand (open) nodes to some level</value>
+  </data>
+  <data name="lblnodeExpandToLevel.Text" xml:space="preserve">
+    <value>Expand to level:</value>
+  </data>
+  <data name="lblPassAuthorUserID.HelpText" xml:space="preserve">
+    <value>Pass author userid in query string.</value>
+  </data>
+  <data name="lblPassAuthorUserID.Text" xml:space="preserve">
+    <value>Pass author userid in query string:</value>
+  </data>
+  <data name="LocalizationText.Text" xml:space="preserve">
+    <value>Localization:</value>
+  </data>
+  <data name="Menuspecificoptions.Text" xml:space="preserve">
+    <value>Menu specific options:</value>
+  </data>
+  <data name="Permissions.Text" xml:space="preserve">
+    <value>Permissions:</value>
+  </data>
+  <data name="Portalsharing.Text" xml:space="preserve">
+    <value>Portal sharing:</value>
+  </data>
+  <data name="Themeandtemplate.Text" xml:space="preserve">
+    <value>Theme and template:</value>
+  </data>
+  <data name="lblFilterBy.HelpText" xml:space="preserve">
+    <value>This option allows for displaying articles only, or events only, or both.</value>
+  </data>
+  <data name="lblFilterBy.Text" xml:space="preserve">
+    <value>Display articles and events:</value>
+  </data>
+  <data name="lblShowOnlyEventsLimit.HelpText" xml:space="preserve">
+    <value>Set the criteria to display events whose start date has ended. The option 'Show all' will display all events, disregarding the fact that they have already ended. We can enter the number of days to be set in the past for past events in the field 'Limit to number of days in the past'. If the set value is 0, the criterion for the event's listing will be the current date. In that case, neither of the past events will be displayed.</value>
+  </data>
+  <data name="lblShowOnlyEventsLimit.Text" xml:space="preserve">
+    <value>Displaying of past events:</value>
+  </data>
+  <data name="Visibility.Text" xml:space="preserve">
+    <value>Visibility</value>
+  </data>
+  <data name="lblShowEmptyCategories.HelpText" xml:space="preserve">
+    <value>If category doesn't contain any content it will not be visible.</value>
+  </data>
+  <data name="lblShowEmptyCategories.Text" xml:space="preserve">
+    <value>Show empty categories:</value>
+  </data>
+  <data name="CalendarCategoryMenu.Text" xml:space="preserve">
+    <value>Calendar category menu</value>
+  </data>
+</root>

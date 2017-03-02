@@ -1,0 +1,238 @@
+﻿/****** Object:  ForeignKey [FK_EasyDNNNewsCategoryMenuImages_EasyDNNNewsCategoryList]    Script Date: 08/29/2012 14:33:40 ******/
+/****** Object:  ForeignKey [FK_EasyDNNNewsCategoryMenuImages_Modules]    Script Date: 08/29/2012 14:33:40 ******/
+/****** Create table EasyDNNNewsCategoryMenuImages *****/
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategoryMenuImages]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryMenuImages](
+	[CategoryID] [int] NOT NULL,
+	[ModuleID] [int] NOT NULL,
+	[Width] [int] NOT NULL,
+	[Height] [int] NOT NULL,
+	[Created] [bit] NOT NULL,
+	[Resizing] [nvarchar](15) NOT NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNNewsCategoryMenuImages] PRIMARY KEY CLUSTERED ([CategoryID] ASC,[ModuleID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsCategoryList]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsCategoryList]', N'{objectQualifier}EasyDNNNewsCategoryList', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsCategoryList', N'PK_{objectQualifier}EasyDNNNewsCategoryList', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsCategoryMenuImages_EasyDNNNewsCategoryList]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategoryMenuImages]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryMenuImages]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsCategoryMenuImages_EasyDNNNewsCategoryList] FOREIGN KEY([CategoryID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] ([CategoryID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsCategoryMenuImages_EasyDNNNewsCategoryList]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategoryMenuImages]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryMenuImages] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsCategoryMenuImages_EasyDNNNewsCategoryList]
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsCategoryMenuImages_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategoryMenuImages]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryMenuImages]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsCategoryMenuImages_Modules] FOREIGN KEY([ModuleID])
+REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsCategoryMenuImages_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategoryMenuImages]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryMenuImages] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsCategoryMenuImages_Modules]
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsAuthorGroups]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsAuthorGroups]', N'{objectQualifier}EasyDNNNewsAuthorGroups', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsProfileGroups', N'PK_{objectQualifier}EasyDNNNewsProfileGroups', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsAuthorGroups_Portals', N'FK_{objectQualifier}EasyDNNNewsAuthorGroups_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsAuthorGroups' and column_name = 'LinkType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups] ADD LinkType tinyint NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsAuthorGroups' and column_name = 'GroupURL')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups] ADD GroupURL nvarchar(1000) NULL
+END
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsAuthorProfile]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsAuthorProfile]', N'{objectQualifier}EasyDNNNewsAuthorProfile', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsAuthorProfile', N'PK_{objectQualifier}EasyDNNNewsAuthorProfile', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsAuthorProfile', N'IX_{objectQualifier}EasyDNNNewsAuthorProfile', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsAuthorProfiles_Users]', N'FK_{objectQualifier}EasyDNNNewsAuthorProfiles_Users]', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsAuthorProfile' and column_name = 'LinkType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile] ADD LinkType tinyint NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsAuthorProfile' and column_name = 'AuthorURL')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile] ADD AuthorURL nvarchar(1000) NULL
+END
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRolePremissionSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRolePremissionSettings]', N'{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRolePremissionSettings', N'PK_{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionSettings_Roles', N'FK_{objectQualifier}EasyDNNNewsRolePremissionSettings_Roles', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRolePremissionsAddToCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRolePremissionsAddToCategories]', N'{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRolePremissionsAddToCategories', N'PK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList1', N'FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList1', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings1', N'FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings1', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings1]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories]'))
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] DROP [FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings1]
+END
+
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings1] FOREIGN KEY([PremissionSettingsID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ([PremissionSettingsID]) ON DELETE CASCADE
+
+END TRY
+BEGIN CATCH
+END CATCH;
+GO
+
+BEGIN TRY
+
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList1]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories]'))
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] DROP [FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList1]
+END
+
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] ADD CONSTRAINT [FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList1] FOREIGN KEY ([CategoryID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] ([CategoryID]) ON DELETE CASCADE
+
+END TRY
+BEGIN CATCH
+END CATCH;
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUserPremissionSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUserPremissionSettings]', N'{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUserPremissionSettings', N'PK_{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionSettings_Users', N'FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Users', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUserPremissionsAddToCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUserPremissionsAddToCategories]', N'{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUserPremissionsAddToCategories', N'PK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList1', N'FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList1', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsUserPremissionSettings1', N'FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsUserPremissionSettings1', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList1]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories]'))
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories] DROP [FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList1]
+END
+
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories] ADD CONSTRAINT [FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList1] FOREIGN KEY ([CategoryID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] ([CategoryID]) ON DELETE CASCADE
+
+END TRY
+BEGIN CATCH
+END CATCH;

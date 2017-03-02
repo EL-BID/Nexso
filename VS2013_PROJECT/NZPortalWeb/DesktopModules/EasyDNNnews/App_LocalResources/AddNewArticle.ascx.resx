@@ -1,0 +1,1572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="BoundFieldResource1.HeaderText" xml:space="preserve">
+    <value>Title</value>
+  </data>
+	<data name="btnAddNewArticle.Text" xml:space="preserve">
+    <value>&lt;span&gt;Save article&lt;/span&gt;</value>
+  </data>
+	<data name="btnGenerateURLResource1.Text" xml:space="preserve">
+    <value>Generate url link</value>
+  </data>
+	<data name="btnGenerateURLResource2.Text" xml:space="preserve">
+    <value>Generate url link</value>
+  </data>
+	<data name="btnGIShowMediaResource1.Text" xml:space="preserve">
+    <value>Show gallery media</value>
+  </data>
+	<data name="btnUploadImageResource1.Text" xml:space="preserve">
+    <value>Set as article image</value>
+  </data>
+	<data name="btnUploadImageResource2.Text" xml:space="preserve">
+    <value>Set as article image</value>
+  </data>
+	<data name="cbGIIntegrateGalleryResource1.Text" xml:space="preserve">
+    <value>Integrate this article with gallery:</value>
+  </data>
+	<data name="cvGINumber0Resource1.ErrorMessage" xml:space="preserve">
+    <value>Please enter number.</value>
+  </data>
+	<data name="cvGINumberResource1.ErrorMessage" xml:space="preserve">
+    <value>Please enter number.</value>
+  </data>
+	<data name="cvGIThumbnailHeightResource1.ErrorMessage" xml:space="preserve">
+    <value>Please enter number.</value>
+  </data>
+	<data name="cvGIThumbnailWidthResource1.ErrorMessage" xml:space="preserve">
+    <value>Please enter number.</value>
+  </data>
+	<data name="ImageFieldResource1.HeaderText" xml:space="preserve">
+    <value>Thumbnail</value>
+  </data>
+	<data name="lblArticleAuthorNameResource1.Text" xml:space="preserve">
+    <value>Author:</value>
+  </data>
+	<data name="lblArticleAuthorNameResource2.Text" xml:space="preserve">
+    <value>Author:</value>
+  </data>
+	<data name="lblCategorySelectErrorResource1.Text" xml:space="preserve">
+    <value>Please select category.</value>
+  </data>
+	<data name="lblCategorySelectErrorResource2.Text" xml:space="preserve">
+    <value>Please select category.</value>
+  </data>
+	<data name="lbSetArticleImageResource1.Text" xml:space="preserve">
+    <value>Set as main article image</value>
+  </data>
+	<data name="ListItemResource1.Text" xml:space="preserve">
+    <value>Text/HTML</value>
+  </data>
+	<data name="ListItemResource10.Text" xml:space="preserve">
+    <value>Below article</value>
+  </data>
+	<data name="ListItemResource11.Text" xml:space="preserve">
+    <value>Text/HTML</value>
+  </data>
+	<data name="ListItemResource12.Text" xml:space="preserve">
+    <value>Page</value>
+  </data>
+	<data name="ListItemResource13.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+	<data name="ListItemResource14.Text" xml:space="preserve">
+    <value>Link</value>
+  </data>
+	<data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Page</value>
+  </data>
+	<data name="ListItemResource3.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+	<data name="ListItemResource4.Text" xml:space="preserve">
+    <value>Link</value>
+  </data>
+	<data name="ListItemResource5.Text" xml:space="preserve">
+    <value>Select category</value>
+  </data>
+	<data name="ListItemResource6.Text" xml:space="preserve">
+    <value>Numeric</value>
+  </data>
+	<data name="ListItemResource7.Text" xml:space="preserve">
+    <value>Arrows (Next, Previous)</value>
+  </data>
+	<data name="ListItemResource8.Text" xml:space="preserve">
+    <value>Arrows (Next, Previous, First, Last)</value>
+  </data>
+	<data name="ListItemResource9.Text" xml:space="preserve">
+    <value>Above article</value>
+  </data>
+	<data name="rfvArticleResource1.ErrorMessage" xml:space="preserve">
+    <value>This field is required.</value>
+  </data>
+	<data name="rfvArticleResource2.ErrorMessage" xml:space="preserve">
+    <value>This field is required.</value>
+  </data>
+	<data name="rfvGIItemsPerPage0Resource1.ErrorMessage" xml:space="preserve">
+    <value>This filed is required.</value>
+  </data>
+	<data name="rfvGIItemsPerPageResource1.ErrorMessage" xml:space="preserve">
+    <value>This filed is required.</value>
+  </data>
+	<data name="rfvGIThumbanilHeightResource1.ErrorMessage" xml:space="preserve">
+    <value>This filed is required.</value>
+  </data>
+	<data name="rfvGIThumbanilWidthResource1.ErrorMessage" xml:space="preserve">
+    <value>This filed is required.</value>
+  </data>
+	<data name="rfvTitleResource1.ErrorMessage" xml:space="preserve">
+    <value>This field is required.</value>
+  </data>
+	<data name="rfvTitleResource2.ErrorMessage" xml:space="preserve">
+    <value>This field is required.</value>
+  </data>
+	<data name="rfvTitleUrlResource1.ErrorMessage" xml:space="preserve">
+    <value>This field is required.</value>
+  </data>
+	<data name="rfvTitleUrlResource2.ErrorMessage" xml:space="preserve">
+    <value>This field is required.</value>
+  </data>
+	<data name="tbGIItemsPerPageResource1.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="tbGIThumbnailHeightResource1.Text" xml:space="preserve">
+    <value>100</value>
+  </data>
+	<data name="tbGIThumbnailWidthResource1.Text" xml:space="preserve">
+    <value>100</value>
+  </data>
+	<data name="tbNumberOfColumnsResource1.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="TemplateFieldResource2.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+	<data name="TemplateFieldResource3.HeaderText" xml:space="preserve">
+    <value>Insert into article</value>
+  </data>
+	<data name="lblActiveArticle.Help" xml:space="preserve">
+    <value>Publish article:</value>
+  </data>
+	<data name="lblActiveArticle.Text" xml:space="preserve">
+    <value>Publish article:</value>
+  </data>
+	<data name="lblAddToTwitter.Help" xml:space="preserve">
+    <value>Add post to twitter:</value>
+  </data>
+	<data name="lblAddToTwitter.Text" xml:space="preserve">
+    <value>Add post to twitter:</value>
+  </data>
+	<data name="lblAllowAnonymousComments.Help" xml:space="preserve">
+    <value>Allow anonymous comments:</value>
+  </data>
+	<data name="lblAllowAnonymousComments.Text" xml:space="preserve">
+    <value>Allow anonymous comments:</value>
+  </data>
+	<data name="lblAllowComments.Help" xml:space="preserve">
+    <value>Allow comments:</value>
+  </data>
+	<data name="lblAllowComments.Text" xml:space="preserve">
+    <value>Allow comments:</value>
+  </data>
+	<data name="lblArticleAuthor.Help" xml:space="preserve">
+    <value>Name of the article author:</value>
+  </data>
+	<data name="lblArticleAuthor.Text" xml:space="preserve">
+    <value>Author:</value>
+  </data>
+	<data name="lblArticleCategory.Help" xml:space="preserve">
+    <value>Article category:</value>
+  </data>
+	<data name="lblArticleCategory.Text" xml:space="preserve">
+    <value>Category:</value>
+  </data>
+	<data name="lblArticleDetailsTemplate.Text" xml:space="preserve">
+    <value>Article details folder:</value>
+  </data>
+	<data name="lblArticleDetailsTheme.Text" xml:space="preserve">
+    <value>Article details theme:</value>
+  </data>
+	<data name="lblArticleImage.Help" xml:space="preserve">
+    <value>Image:</value>
+  </data>
+	<data name="lblArticleImage.Text" xml:space="preserve">
+    <value>Article image:</value>
+  </data>
+	<data name="lblArticleLinkUrl.Help" xml:space="preserve">
+    <value>Article title url link:</value>
+  </data>
+	<data name="lblArticleLinkUrl.Text" xml:space="preserve">
+    <value>Article title url link:</value>
+  </data>
+	<data name="lblArticleSummary.Help" xml:space="preserve">
+    <value>Article summary:</value>
+  </data>
+	<data name="lblArticleSummary.Text" xml:space="preserve">
+    <value>Summary:</value>
+  </data>
+	<data name="lblArticleText.Help" xml:space="preserve">
+    <value>Article details:</value>
+  </data>
+	<data name="lblArticleText.Text" xml:space="preserve">
+    <value>Article details:</value>
+  </data>
+	<data name="lblArticleTitle.Help" xml:space="preserve">
+    <value>Article title:</value>
+  </data>
+	<data name="lblArticleTitle.Text" xml:space="preserve">
+    <value>Title:</value>
+  </data>
+	<data name="lblDetailType.Help" xml:space="preserve">
+    <value>Article detail type:</value>
+  </data>
+	<data name="lblDetailType.Text" xml:space="preserve">
+    <value>Article detail type:</value>
+  </data>
+	<data name="lblExpireDate.Help" xml:space="preserve">
+    <value>Expire date. Must be greather than publish date.</value>
+  </data>
+	<data name="lblExpireDate.Text" xml:space="preserve">
+    <value>Expire date:</value>
+  </data>
+	<data name="lblFeaturedArticle.Help" xml:space="preserve">
+    <value>Featured article:</value>
+  </data>
+	<data name="lblFeaturedArticle.Text" xml:space="preserve">
+    <value>Featured article:</value>
+  </data>
+	<data name="lblGalleryIntegration.Help" xml:space="preserve">
+    <value>EasyDNNGallery integration:</value>
+  </data>
+	<data name="lblGalleryIntegration.Text" xml:space="preserve">
+    <value>EasyDNNGallery integration:</value>
+  </data>
+	<data name="lblGIGalleryPosition.Help" xml:space="preserve">
+    <value>Gallery position:</value>
+  </data>
+	<data name="lblGIGalleryPosition.Text" xml:space="preserve">
+    <value>Gallery position:</value>
+  </data>
+	<data name="lblGIGalleryTheme.Help" xml:space="preserve">
+    <value>Gallery theme:</value>
+  </data>
+	<data name="lblGIGalleryTheme.Text" xml:space="preserve">
+    <value>Gallery theme:</value>
+  </data>
+	<data name="lblGIItemsPerPage.Help" xml:space="preserve">
+    <value>Items per page:</value>
+  </data>
+	<data name="lblGIItemsPerPage.Text" xml:space="preserve">
+    <value>Items per page:</value>
+  </data>
+	<data name="lblGINumberOfColumns.Help" xml:space="preserve">
+    <value>Number of columns:</value>
+  </data>
+	<data name="lblGINumberOfColumns.Text" xml:space="preserve">
+    <value>Number of columns:</value>
+  </data>
+	<data name="lblGIPagerStyle.Help" xml:space="preserve">
+    <value>Pager style:</value>
+  </data>
+	<data name="lblGIPagerStyle.Text" xml:space="preserve">
+    <value>Pager style:</value>
+  </data>
+	<data name="lblGIThumbHeight.Help" xml:space="preserve">
+    <value>Thumbnail height:</value>
+  </data>
+	<data name="lblGIThumbHeight.Text" xml:space="preserve">
+    <value>Thumbnail height:</value>
+  </data>
+	<data name="lblGIThumbWidth.Help" xml:space="preserve">
+    <value>Thumbnail width:</value>
+  </data>
+	<data name="lblGIThumbWidth.Text" xml:space="preserve">
+    <value>Thumbnail width:</value>
+  </data>
+	<data name="lblPublishDate.Help" xml:space="preserve">
+    <value>Publish date:</value>
+  </data>
+	<data name="lblPublishDate.Text" xml:space="preserve">
+    <value>Publish date:</value>
+  </data>
+	<data name="lblSubtitle.Help" xml:space="preserve">
+    <value>Subtitle:</value>
+  </data>
+	<data name="lblSubtitle.Text" xml:space="preserve">
+    <value>Subtitle:</value>
+  </data>
+	<data name="ListItemResource15.Text" xml:space="preserve">
+    <value>Lightbox gallery</value>
+  </data>
+	<data name="ListItemResource16.Text" xml:space="preserve">
+    <value>Audio gallery</value>
+  </data>
+	<data name="btnCancel.Text" xml:space="preserve">
+    <value>&lt;span&gt;Close&lt;/span&gt;</value>
+  </data>
+	<data name="AddNewArticleTitle.Text" xml:space="preserve">
+    <value>Add Article</value>
+  </data>
+	<data name="Articledetailtype.Text" xml:space="preserve">
+    <value>Article detail type</value>
+  </data>
+	<data name="Categories.Text" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+	<data name="lblArticleTitleURL.HelpText" xml:space="preserve">
+    <value>The text that will be displayed in the URL as the document name.</value>
+  </data>
+	<data name="lblArticleTitleURL.Text" xml:space="preserve">
+    <value>Article URL</value>
+  </data>
+	<data name="lblCategorySelectError.Text" xml:space="preserve">
+    <value>Please select category.</value>
+  </data>
+	<data name="lblMetaDescription.HelpText" xml:space="preserve">
+    <value>Enter text for &lt;meta&gt; description tag of HTML document. Metadata will not be displayed on the page.</value>
+  </data>
+	<data name="lblMetaDescription.Text" xml:space="preserve">
+    <value>META description</value>
+  </data>
+	<data name="lblMetaKeywords.HelpText" xml:space="preserve">
+    <value>Enter text for &lt;meta&gt; keywords tag of HTML document. Metadata will not be displayed on the page.</value>
+  </data>
+	<data name="lblMetaKeywords.Text" xml:space="preserve">
+    <value>META keywords</value>
+  </data>
+	<data name="lblTitle.HelpText" xml:space="preserve">
+    <value>Title</value>
+  </data>
+	<data name="lblTitle.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+	<data name="ResetarticleURL.Text" xml:space="preserve">
+    <value>Reset article URL</value>
+  </data>
+	<data name="SEOsettings.Text" xml:space="preserve">
+    <value>SEO settings</value>
+  </data>
+	<data name="lblContent.HelpText" xml:space="preserve">
+    <value>Article content:</value>
+  </data>
+	<data name="lblContent.Text" xml:space="preserve">
+    <value>Content:</value>
+  </data>
+	<data name="AddExistingTags.Text" xml:space="preserve">
+    <value>ADD EXISTING TAGS</value>
+  </data>
+	<data name="Generatetoken.Text" xml:space="preserve">
+    <value>Generate token</value>
+  </data>
+	<data name="lbAllAddedTags.Text" xml:space="preserve">
+    <value>ALL TAGS</value>
+  </data>
+	<data name="lblArticleTags.HelpText" xml:space="preserve">
+    <value>Article tags separated by comma ( , ):</value>
+  </data>
+	<data name="lblArticleTags.Text" xml:space="preserve">
+    <value>Article tags:</value>
+  </data>
+	<data name="lbLastAddedTags.Text" xml:space="preserve">
+    <value>LAST ADDED FIRST</value>
+  </data>
+	<data name="lblSelectDetailTarget.Text" xml:space="preserve">
+    <value>Select target:</value>
+  </data>
+	<data name="lbMostPopularTags.Text" xml:space="preserve">
+    <value>MOST POPULAR FIRST</value>
+  </data>
+	<data name="liFile.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+	<data name="liLink.Text" xml:space="preserve">
+    <value>Link</value>
+  </data>
+	<data name="liNone.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+	<data name="liPage.Text" xml:space="preserve">
+    <value>Page link</value>
+  </data>
+	<data name="Mainarticlemap.Text" xml:space="preserve">
+    <value>Main article map</value>
+  </data>
+	<data name="Searchforlocation.Text" xml:space="preserve">
+    <value>Search for location:</value>
+  </data>
+	<data name="ShowHidetokenlist.Text" xml:space="preserve">
+    <value>Show/Hide token list</value>
+  </data>
+	<data name="Generalsettings.Text" xml:space="preserve">
+    <value>General settings</value>
+  </data>
+	<data name="Hybrid.Text" xml:space="preserve">
+    <value>Hybrid</value>
+  </data>
+	<data name="Roadmap.Text" xml:space="preserve">
+    <value>Roadmap</value>
+  </data>
+	<data name="Satellite.Text" xml:space="preserve">
+    <value>Satellite</value>
+  </data>
+	<data name="Terrain.Text" xml:space="preserve">
+    <value>Terrain</value>
+  </data>
+	<data name="cbShowMainArticleImage.Text" xml:space="preserve">
+    <value>Show main article image</value>
+  </data>
+	<data name="Galleriesincluded.Text" xml:space="preserve">
+    <value>Galleries included</value>
+  </data>
+	<data name="liAudiogallery.Text" xml:space="preserve">
+    <value>Audio gallery</value>
+  </data>
+	<data name="liImage.Text" xml:space="preserve">
+    <value>Image</value>
+  </data>
+	<data name="liLightbox.Text" xml:space="preserve">
+    <value>Lightbox gallery</value>
+  </data>
+	<data name="liVideo.Text" xml:space="preserve">
+    <value>Video</value>
+  </data>
+	<data name="liVideogallery.Text" xml:space="preserve">
+    <value>Video gallery</value>
+  </data>
+	<data name="Mainarticleimage.Text" xml:space="preserve">
+    <value>Main article image</value>
+  </data>
+	<data name="RemoveArticleImage.Text" xml:space="preserve">
+    <value>&lt;strong&gt;This image&lt;/strong&gt; is selected as the article's main image&lt;/p&gt;</value>
+  </data>
+	<data name="Viewsettings.Text" xml:space="preserve">
+    <value>View settings</value>
+  </data>
+	<data name="GalleryPanel.Text" xml:space="preserve">
+    <value>Gallery Panel</value>
+  </data>
+	<data name="lbArticleGalleryImages.Text" xml:space="preserve">
+    <value>ARTICLE &lt;span class="blue dot"&gt;</value>
+  </data>
+	<data name="lbCustomGallery.Text" xml:space="preserve">
+    <value>CUSTOM &lt;span class="yellow dot"&gt;</value>
+  </data>
+	<data name="lblChameleonLayout.HelpText" xml:space="preserve">
+    <value>Gallery layout:</value>
+  </data>
+	<data name="lblChameleonLayout.Text" xml:space="preserve">
+    <value>Gallery layout:</value>
+  </data>
+	<data name="lblChameleonLayoutTheme.HelpText" xml:space="preserve">
+    <value>Chameleon theme:</value>
+  </data>
+	<data name="lblChameleonLayoutTheme.Text" xml:space="preserve">
+    <value>Chameleon theme:</value>
+  </data>
+	<data name="lblChameleonLayoutThemeStyle.HelpText" xml:space="preserve">
+    <value>Chameleon theme style:</value>
+  </data>
+	<data name="lblChameleonLayoutThemeStyle.Text" xml:space="preserve">
+    <value>Chameleon theme style:</value>
+  </data>
+	<data name="lblGalleryHeight.HelpText" xml:space="preserve">
+    <value>Gallery height:</value>
+  </data>
+	<data name="lblGalleryHeight.Text" xml:space="preserve">
+    <value>Gallery height:</value>
+  </data>
+	<data name="lblGalleryWidth.HelpText" xml:space="preserve">
+    <value>Gallery width:</value>
+  </data>
+	<data name="lblGalleryWidth.Text" xml:space="preserve">
+    <value>Gallery width:</value>
+  </data>
+	<data name="lblGIDisplayItemDescription.HelpText" xml:space="preserve">
+    <value>Display item description:</value>
+  </data>
+	<data name="lblGIDisplayItemDescription.Text" xml:space="preserve">
+    <value>Display item description:</value>
+  </data>
+	<data name="lblGIDisplayItemDescriptionLightBox.HelpText" xml:space="preserve">
+    <value>Display item description in Lightbox:</value>
+  </data>
+	<data name="lblGIDisplayItemDescriptionLightBox.Text" xml:space="preserve">
+    <value>Display item description in Lightbox:</value>
+  </data>
+	<data name="lblGIDisplayItemTitle.HelpText" xml:space="preserve">
+    <value>Display item title:</value>
+  </data>
+	<data name="lblGIDisplayItemTitle.Text" xml:space="preserve">
+    <value>Display item title:</value>
+  </data>
+	<data name="lblGIDisplayItemTitleLightBOx.HelpText" xml:space="preserve">
+    <value>Display item title in Lightbox:</value>
+  </data>
+	<data name="lblGIDisplayItemTitleLightBOx.Text" xml:space="preserve">
+    <value>Display item title in Lightbox:</value>
+  </data>
+	<data name="lblGIGalleryPosition.HelpText" xml:space="preserve">
+    <value>Gallery position:</value>
+  </data>
+	<data name="lblGIGalleryPositionDown.Text" xml:space="preserve">
+    <value>Gallery position:</value>
+  </data>
+	<data name="lblGIGalleryTheme.HelpText" xml:space="preserve">
+    <value>Gallery theme:</value>
+  </data>
+	<data name="lblGIGalleryTheme2.Text" xml:space="preserve">
+    <value>Gallery theme:</value>
+  </data>
+	<data name="lblGIGalleryType.HelpText" xml:space="preserve">
+    <value>Gallery display type:</value>
+  </data>
+	<data name="lblGIGalleryType.Text" xml:space="preserve">
+    <value>Gallery display type:</value>
+  </data>
+	<data name="lblGIItemsPerPage.HelpText" xml:space="preserve">
+    <value>Broj itema po stranici:</value>
+  </data>
+	<data name="lblGIItemsPerPage2.Text" xml:space="preserve">
+    <value>Broj itema po stranici:</value>
+  </data>
+	<data name="lblGINumberOfColumns.HelpText" xml:space="preserve">
+    <value>Number of columns:</value>
+  </data>
+	<data name="lblGINumberOfColumns2.Text" xml:space="preserve">
+    <value>Number of columns:</value>
+  </data>
+	<data name="lblGIThumbHeight.HelpText" xml:space="preserve">
+    <value>Thumbnail height:</value>
+  </data>
+	<data name="lblGIThumbHeight2.Text" xml:space="preserve">
+    <value>Thumbnail height:</value>
+  </data>
+	<data name="lblGIThumbWidth.HelpText" xml:space="preserve">
+    <value>Thumbnail width:</value>
+  </data>
+	<data name="lblGIThumbWidth2.HelpText" xml:space="preserve">
+    <value>Thumbnail width:</value>
+  </data>
+	<data name="lbSharedArticleGalleryImages.Text" xml:space="preserve">
+    <value>SHARED</value>
+  </data>
+	<data name="liBottom.Text" xml:space="preserve">
+    <value>Bottom position</value>
+  </data>
+	<data name="liTop.Text" xml:space="preserve">
+    <value>Top position</value>
+  </data>
+	<data name="btnIntegGallery.Text" xml:space="preserve">
+    <value>Add gallery to article</value>
+  </data>
+	<data name="btnOpenEasyDnnGallery.Text" xml:space="preserve">
+    <value>Open gallery</value>
+  </data>
+	<data name="liSelectCategory.Text" xml:space="preserve">
+    <value>Select category</value>
+  </data>
+	<data name="liSelectGallery.Text" xml:space="preserve">
+    <value>Select gallery</value>
+  </data>
+	<data name="StartUpload.Text" xml:space="preserve">
+    <value>Start Upload</value>
+  </data>
+	<data name="btnDocUpload.Text" xml:space="preserve">
+    <value>&lt;span&gt;UPLOAD&lt;/span&gt;</value>
+  </data>
+	<data name="hlOpenGallery.Text" xml:space="preserve">
+    <value>Open Media manager</value>
+  </data>
+	<data name="ibAddImages.Text" xml:space="preserve">
+    <value>Add gallery</value>
+  </data>
+	<data name="lbCustomAddEmedVideoToGallery.Text" xml:space="preserve">
+    <value>Add video</value>
+  </data>
+	<data name="lbDisplayArticleGallery.Text" xml:space="preserve">
+    <value>Display gallery</value>
+  </data>
+	<data name="lblAuthorAlias.HelpText" xml:space="preserve">
+    <value>Author alias:</value>
+  </data>
+	<data name="lblAuthorAlias.Text" xml:space="preserve">
+    <value>Author alias:</value>
+  </data>
+	<data name="lblChOwner.Text" xml:space="preserve">
+    <value>Change Owner:</value>
+  </data>
+	<data name="lblCustomAddEmbedToGallery.Text" xml:space="preserve">
+    <value>Add video from YouTube or Vimeo:</value>
+  </data>
+	<data name="lblDocUploadDescription.Text" xml:space="preserve">
+    <value>Document description:</value>
+  </data>
+	<data name="lblDocUploadSelectFile.Text" xml:space="preserve">
+    <value>Select a document:</value>
+  </data>
+	<data name="lblDocUploadTitle.Text" xml:space="preserve">
+    <value>Document title:</value>
+  </data>
+	<data name="lblGalSetThenumberOfItems0.Text" xml:space="preserve">
+    <value>Set the number of items per page:</value>
+  </data>
+	<data name="lblowner.Text" xml:space="preserve">
+    <value>Article Owner:</value>
+  </data>
+	<data name="lbRemoveDisplayArticleGallery.Text" xml:space="preserve">
+    <value>Do not display gallery</value>
+  </data>
+	<data name="lbSetArticleImageArtGallery.Text" xml:space="preserve">
+    <value>Set as main article image</value>
+  </data>
+	<data name="liSelectAuthor.Text" xml:space="preserve">
+    <value>Select author</value>
+  </data>
+	<data name="liSelectRole.Text" xml:space="preserve">
+    <value>Select role</value>
+  </data>
+	<data name="lblArticleCommentsTheme.HelpText" xml:space="preserve">
+    <value>Article comments theme:</value>
+  </data>
+	<data name="lblArticleCommentsTheme.Text" xml:space="preserve">
+    <value>Article comments theme:</value>
+  </data>
+	<data name="lblArticleCSSStyle.HelpText" xml:space="preserve">
+    <value>Display style:</value>
+  </data>
+	<data name="lblArticleCSSStyle.Text" xml:space="preserve">
+    <value>Display style:</value>
+  </data>
+	<data name="lblArticleDetailsTemplate.HelpText" xml:space="preserve">
+    <value>Article details template:</value>
+  </data>
+	<data name="lblArticleDetailsTheme.HelpText" xml:space="preserve">
+    <value>Article details theme:</value>
+  </data>
+	<data name="lblEventDateError.Text" xml:space="preserve">
+    <value>End date is smaller or equal to start date.</value>
+  </data>
+	<data name="lblEventStartDateTime.HelpText" xml:space="preserve">
+    <value>Start date:</value>
+  </data>
+	<data name="lblEventStartDateTime.Text" xml:space="preserve">
+    <value>Start date:</value>
+  </data>
+	<data name="lblIsArticleEvent.Text" xml:space="preserve">
+    <value>Add as event:</value>
+  </data>
+	<data name="lblUseDefaultTemplate.HelpText" xml:space="preserve">
+    <value>Use default template:</value>
+  </data>
+	<data name="lblUseDefaultTemplate.Text" xml:space="preserve">
+    <value>Use default template:</value>
+  </data>
+	<data name="Actions.HeaderText" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+	<data name="Author.HeaderText" xml:space="preserve">
+    <value>Author</value>
+  </data>
+	<data name="Date.HeaderText" xml:space="preserve">
+    <value>DateUploaded</value>
+  </data>
+	<data name="Description.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+	<data name="DOCUMENTSincluded.Text" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+	<data name="Entervideourl.Text" xml:space="preserve">
+    <value>Enter video URL...</value>
+  </data>
+	<data name="Filename.HeaderText" xml:space="preserve">
+    <value>Filename</value>
+  </data>
+	<data name="lblAddPerArticlePermission.Text" xml:space="preserve">
+    <value>Permissions per article:</value>
+  </data>
+	<data name="lblAllowComments.HelpText" xml:space="preserve">
+    <value>Allow comments:</value>
+  </data>
+	<data name="lblApprovingMessage.Text" xml:space="preserve">
+    <value>Your article needs to be approved. It will not be visible until it is approved.</value>
+  </data>
+	<data name="lblCategorySelect.Text" xml:space="preserve">
+    <value>Select category: </value>
+  </data>
+	<data name="lblEventEndDateTime.HelpText" xml:space="preserve">
+    <value>End date:</value>
+  </data>
+	<data name="lblEventEndDateTime.Text" xml:space="preserve">
+    <value>End date:</value>
+  </data>
+	<data name="lblExpireDate.HelpText" xml:space="preserve">
+    <value>Expire date. Must be greather than publish date.</value>
+  </data>
+	<data name="lblExpireDateError.Text" xml:space="preserve">
+    <value>Invalid date.</value>
+  </data>
+	<data name="lblExpireDateErrorResource1.Text" xml:space="preserve">
+    <value>Invalid date.</value>
+  </data>
+	<data name="lblFeaturedArticle.HelpText" xml:space="preserve">
+    <value>Featured article</value>
+  </data>
+	<data name="lblGallerySelect.Text" xml:space="preserve">
+    <value>Select gallery: </value>
+  </data>
+	<data name="lblPostToFacebook.Text" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+	<data name="lblPostToJournal.Text" xml:space="preserve">
+    <value>Post to Journal</value>
+  </data>
+	<data name="lblPostToTwitter.Text" xml:space="preserve">
+    <value>Twitter</value>
+  </data>
+	<data name="lblPubDateError.Text" xml:space="preserve">
+    <value>Invalid date.</value>
+  </data>
+	<data name="lblPublishDate.HelpText" xml:space="preserve">
+    <value>Publish date:</value>
+  </data>
+	<data name="lblShowToUnauthorizedUser.Text" xml:space="preserve">
+    <value>Unauthorized users:</value>
+  </data>
+	<data name="lblSocialSecurityGroups.Text" xml:space="preserve">
+    <value>Groups:</value>
+  </data>
+	<data name="lblSocialSecuritySelect.Text" xml:space="preserve">
+    <value>View:</value>
+  </data>
+	<data name="lblUsernameToAdd.Text" xml:space="preserve">
+    <value>Add user by username:</value>
+  </data>
+	<data name="lbUsernameAdd.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+	<data name="lbUserPremissionRemove.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+	<data name="liDraftArticle.Text" xml:space="preserve">
+    <value>Draft Article</value>
+  </data>
+	<data name="liPublishArticle.Text" xml:space="preserve">
+    <value>Publish Article</value>
+  </data>
+	<data name="Thegalleryisempty.Text" xml:space="preserve">
+    <value>The gallery is empty</value>
+  </data>
+	<data name="Title.HeaderText" xml:space="preserve">
+    <value>Title</value>
+  </data>
+	<data name="Addmarker.Text" xml:space="preserve">
+    <value>Add marker</value>
+  </data>
+	<data name="Enablescrollwheelzoom.Text" xml:space="preserve">
+    <value>Enable scrollwheel zoom</value>
+  </data>
+	<data name="Height.Text" xml:space="preserve">
+    <value>Height</value>
+  </data>
+	<data name="Latitude.Text" xml:space="preserve">
+    <value>Latitude:</value>
+  </data>
+	<data name="Longitude.Text" xml:space="preserve">
+    <value>Longitude:</value>
+  </data>
+	<data name="Mapmarkers.Text" xml:space="preserve">
+    <value>Map markers</value>
+  </data>
+	<data name="Maptype.Text" xml:space="preserve">
+    <value>Map type:</value>
+  </data>
+	<data name="Width.Text" xml:space="preserve">
+    <value>Width</value>
+  </data>
+	<data name="Zoom.Text" xml:space="preserve">
+    <value>Zoom:</value>
+  </data>
+	<data name="Backtoediting.Text" xml:space="preserve">
+    <value>Back to editing</value>
+  </data>
+	<data name="CopyAndPAsteContent.Text" xml:space="preserve">
+    <value>Copy and paste the token into the content section of the article</value>
+  </data>
+	<data name="Mainarticlemapisnotset.Text" xml:space="preserve">
+    <value>Main article map is not set</value>
+  </data>
+	<data name="Mainarticlemapisset.Text" xml:space="preserve">
+    <value>Main article map is set</value>
+  </data>
+	<data name="lblArticleCommentsTemplate.HelpText" xml:space="preserve">
+    <value>Article comments template:</value>
+  </data>
+	<data name="lblArticleCommentsTemplate.Text" xml:space="preserve">
+    <value>Article comments template:</value>
+  </data>
+	<data name="Addmap.Text" xml:space="preserve">
+    <value>Add map</value>
+  </data>
+	<data name="CopyAndPaste.Text" xml:space="preserve">
+    <value>Copy and paste this token into the article\'s content field.</value>
+  </data>
+	<data name="Croptosize.Text" xml:space="preserve">
+    <value>Crop to size</value>
+  </data>
+	<data name="Editmap.Text" xml:space="preserve">
+    <value>Edit map</value>
+  </data>
+	<data name="GalleryWithArticle.Text" xml:space="preserve">
+    <value>This gallery is displayed with the article</value>
+  </data>
+	<data name="Itemtokensettings.Text" xml:space="preserve">
+    <value>Item token settings</value>
+  </data>
+	<data name="lblFixedResponsiveLayout.HelpText" xml:space="preserve">
+    <value>Fixed or responsive layout:</value>
+  </data>
+	<data name="lblFixedResponsiveLayout.Text" xml:space="preserve">
+    <value>Fixed or responsive layout:</value>
+  </data>
+	<data name="Leftclear.Text" xml:space="preserve">
+    <value>Left clear</value>
+  </data>
+	<data name="Leftwrap.Text" xml:space="preserve">
+    <value>Left wrap</value>
+  </data>
+	<data name="Linktext.Text" xml:space="preserve">
+    <value>Link text</value>
+  </data>
+	<data name="Mapeditor.Text" xml:space="preserve">
+    <value>Mapeditor</value>
+  </data>
+	<data name="None.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+	<data name="Note.Text" xml:space="preserve">
+    <value>Note: If you don\'t set this text, the token won\'t render as a standard text link.</value>
+  </data>
+	<data name="NotWithArticle.Text" xml:space="preserve">
+    <value>This gallery is not displayed within the article</value>
+  </data>
+	<data name="Onclickaction.Text" xml:space="preserve">
+    <value>On click action</value>
+  </data>
+	<data name="Openiteminlightbox.Text" xml:space="preserve">
+    <value>Open in lightbox</value>
+  </data>
+	<data name="Position.Text" xml:space="preserve">
+    <value>Position:</value>
+  </data>
+	<data name="Proportional.Text" xml:space="preserve">
+    <value>Proportional</value>
+  </data>
+	<data name="RedirecttosetURL.Text" xml:space="preserve">
+    <value>Redirect to set media URL</value>
+  </data>
+	<data name="Remove.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+	<data name="Rightwrap.Text" xml:space="preserve">
+    <value>Right wrap</value>
+  </data>
+	<data name="Showastandardtextlink.Text" xml:space="preserve">
+    <value>Show as a standard text link</value>
+  </data>
+	<data name="Showdescription.Text" xml:space="preserve">
+    <value>Show description</value>
+  </data>
+	<data name="Showtitle.Text" xml:space="preserve">
+    <value>Show title</value>
+  </data>
+	<data name="Sizing.Text" xml:space="preserve">
+    <value>Sizing</value>
+  </data>
+	<data name="AdvancedSettings.Text" xml:space="preserve">
+    <value>ADVANCED SETTINGS / ARTICLE OWNER</value>
+  </data>
+	<data name="cbAllDayEventResource1.Text" xml:space="preserve">
+    <value>All day event</value>
+  </data>
+	<data name="cbShowEndDate.Text" xml:space="preserve">
+    <value>Show end date</value>
+  </data>
+	<data name="Edit article.HeaderText" xml:space="preserve">
+    <value>Edit article</value>
+  </data>
+	<data name="liFixed.Text" xml:space="preserve">
+    <value>Fixed Layout</value>
+  </data>
+	<data name="liResponsive.Text" xml:space="preserve">
+    <value>Responsive Layout</value>
+  </data>
+	<data name="Permissionsperarticleoverride.Text" xml:space="preserve">
+    <value>Permissions per article override all other permissions</value>
+  </data>
+	<data name="Roles.HeaderText" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+	<data name="security.Text" xml:space="preserve">
+    <value>security:</value>
+  </data>
+	<data name="Social.Text" xml:space="preserve">
+    <value>Social</value>
+  </data>
+	<data name="View article.HeaderText" xml:space="preserve">
+    <value>View article</value>
+  </data>
+	<data name="Addasarticlemap.Text" xml:space="preserve">
+    <value>Add as article map</value>
+  </data>
+	<data name="AddGoogleMapslocation.Text" xml:space="preserve">
+    <value>Add Google Maps location</value>
+  </data>
+	<data name="Addmapmarker.Text" xml:space="preserve">
+    <value>Add map marker</value>
+  </data>
+	<data name="Atitleisrequired.Text" xml:space="preserve">
+    <value>A title is required</value>
+  </data>
+	<data name="Cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+	<data name="Centeronmap.Text" xml:space="preserve">
+    <value>Center on map</value>
+  </data>
+	<data name="Close.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+	<data name="Confirm.Text" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+	<data name="Customizegalleryitemtoken.Text" xml:space="preserve">
+    <value>Customize gallery item token</value>
+  </data>
+	<data name="Edit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+	<data name="HTMoptional.Text" xml:space="preserve">
+    <value>HTML: (optional)</value>
+  </data>
+	<data name="Title.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+	<data name="Articleto.Text" xml:space="preserve">
+    <value>article to:</value>
+  </data>
+	<data name="Post.Text" xml:space="preserve">
+    <value>Post</value>
+  </data>
+	<data name="ActionText.Text" xml:space="preserve">
+    <value>Action</value>
+  </data>
+	<data name="Customtoken.Text" xml:space="preserve">
+    <value>Custom token</value>
+  </data>
+	<data name="Description.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+	<data name="Media.Text" xml:space="preserve">
+    <value>Media</value>
+  </data>
+	<data name="OwnerIsAdded.Text" xml:space="preserve">
+    <value>Owner is added automatically.</value>
+  </data>
+	<data name="PleseSelectDifferent.Text" xml:space="preserve">
+    <value>Please selct differnt username</value>
+  </data>
+	<data name="Show.Text" xml:space="preserve">
+    <value>Show</value>
+  </data>
+	<data name="Timezone.Text" xml:space="preserve">
+    <value>Time zone:</value>
+  </data>
+	<data name="UploadComplete.Text" xml:space="preserve">
+    <value>Upload complete</value>
+  </data>
+	<data name="Useralreadyadded.Text" xml:space="preserve">
+    <value>User already added to list.</value>
+  </data>
+	<data name="UserDoesnoeExist.Text" xml:space="preserve">
+    <value>That user does not exist.</value>
+  </data>
+	<data name="ArticleTokens.Text" xml:space="preserve">
+    <value>[EasyDNNnews:PageBreak] - Creates a article page break.
+[ReadMore] - Breaks article in article list.
+[EasyDNNnews:PaidContentStart] - Marks the start of paid content.
+[EasyDNNnews:PaidContentEnd]- Marks the end of paid content.
+[EasyDNNnews:UnPaidContentEnd] - Marks the end of un paid content.
+[EasyDNNnewsSystemToken:SysFacebookLikeButton] - Inserts Facebook like button.
+[EasyDNNnewsSystemToken:SysTwitter]- Inserts Twiter button.
+[EasyDNNnewsSystemToken:SysGooglePlus] - Inserts Google plus button.
+[EasyDNNnewsSystemToken:SysFacebookShareButton] - Inserts Facebook share button.
+[EasyDNNnewsSystemToken:SysAddThis] - Inserts AddThis sharing service button.</value>
+  </data>
+	<data name="ArticleGalleryTip.Text" xml:space="preserve">
+    <value>Article gallery</value>
+  </data>
+	<data name="CustomGalleryTip.Text" xml:space="preserve">
+    <value>Custom gallery</value>
+  </data>
+	<data name="SharedGalleryTip.Text" xml:space="preserve">
+    <value>Shared gallery</value>
+  </data>
+	<data name="btnAddNewArticle.ToolTip" xml:space="preserve">
+    <value>Save article</value>
+  </data>
+	<data name="btnCancel.ToolTip" xml:space="preserve">
+    <value>Close</value>
+  </data>
+	<data name="btnDocUpload.ToolTip" xml:space="preserve">
+    <value>Document upload</value>
+  </data>
+	<data name="ImgeTitleDescriptionSettings.Text" xml:space="preserve">
+    <value>Title and description</value>
+  </data>
+	<data name="lblCFGroupSelection.HelpText" xml:space="preserve">
+    <value>Select custom fields group. Only one group per article can be selected and saved.</value>
+  </data>
+	<data name="lblCFGroupSelection.Text" xml:space="preserve">
+    <value>Custom fields group:</value>
+  </data>
+	<data name="lblShowCustomFields.Text" xml:space="preserve">
+    <value>Custom fields:</value>
+  </data>
+	<data name="liNoCustomFieldGroup.Text" xml:space="preserve">
+    <value>-- No Custom field group created --</value>
+  </data>
+	<data name="lblLightboxGalleryResizeMethod.HelpText" xml:space="preserve">
+    <value>Select resize method to use when generating thumbnails for images.</value>
+  </data>
+	<data name="lblLightboxGalleryResizeMethod.Text" xml:space="preserve">
+    <value>Thumbnail creation resize method:</value>
+  </data>
+	<data name="liCrop.Text" xml:space="preserve">
+    <value>Resize and crop</value>
+  </data>
+	<data name="liCropAndPropotional.Text" xml:space="preserve">
+    <value>Resize and crop horizontal, proportionally resize vertical images</value>
+  </data>
+	<data name="liPropotional.Text" xml:space="preserve">
+    <value>Proportional resize</value>
+  </data>
+	<data name="lblCategorySelectionCollapseAll.Text" xml:space="preserve">
+    <value>Collapse all</value>
+  </data>
+	<data name="lblCategorySelectionExpandAll.Text" xml:space="preserve">
+    <value>Expand all</value>
+  </data>
+	<data name="lblChameleonResponsiveMainImageWidth.HelpText" xml:space="preserve">
+    <value>Max width used to generate main responsive image.</value>
+  </data>
+	<data name="lblChameleonResponsiveMainImageWidth.Text" xml:space="preserve">
+    <value>Main image width:</value>
+  </data>
+	<data name="fineUploaderDragImagesHere.Text" xml:space="preserve">
+    <value>Drag images here</value>
+  </data>
+	<data name="fineUploaderSelectFiles.Text" xml:space="preserve">
+    <value>Select images</value>
+  </data>
+	<data name="fineUploaderStartUpload.Text" xml:space="preserve">
+    <value>Start upload</value>
+  </data>
+	<data name="NoPreviewAvalible.Text" xml:space="preserve">
+    <value>no preview avalible</value>
+  </data>
+	<data name="of.Text" xml:space="preserve">
+    <value>of</value>
+  </data>
+	<data name="Queued.Text" xml:space="preserve">
+    <value>Queued</value>
+  </data>
+	<data name="Retry.Text" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+	<data name="Uploadfailed.Text" xml:space="preserve">
+    <value>Upload failed</value>
+  </data>
+	<data name="btnAddAndClose.Text" xml:space="preserve">
+    <value>&lt;span&gt;Save and close&lt;/span&gt;</value>
+  </data>
+	<data name="btnAddAndView.Text" xml:space="preserve">
+    <value>&lt;span&gt;Save and view&lt;/span&gt;</value>
+  </data>
+	<data name="btnAddAndClose.ToolTip" xml:space="preserve">
+    <value>Save and close</value>
+  </data>
+	<data name="btnAddAndView.ToolTip" xml:space="preserve">
+    <value>Save and view</value>
+  </data>
+	<data name="rblAddDocumentType-newDocument.Text" xml:space="preserve">
+    <value>Upload new documents</value>
+  </data>
+	<data name="rblAddDocumentType-existingDocument.Text" xml:space="preserve">
+    <value>Add existing document</value>
+  </data>
+	<data name="Linksincluded.Text" xml:space="preserve">
+    <value>Links included</value>
+  </data>
+	<data name="rfvEventStartTime.ErrorMessage" xml:space="preserve">
+    <value>Time required.</value>
+  </data>
+	<data name="rfvEventStartDate.ErrorMessage" xml:space="preserve">
+    <value>Date required.</value>
+  </data>
+	<data name="revEventStartTime.ErrorMessage" xml:space="preserve">
+    <value>hh:mm</value>
+  </data>
+	<data name="rfvEventEndDate.ErrorMessage" xml:space="preserve">
+    <value>Date required.</value>
+  </data>
+	<data name="revEventEndTIme.ErrorMessage" xml:space="preserve">
+    <value>hh:mm</value>
+  </data>
+	<data name="rfvEventEnd.ErrorMessage" xml:space="preserve">
+    <value>Time required.</value>
+  </data>
+	<data name="fineUploaderSelectDocuments.Text" xml:space="preserve">
+    <value>Select documents</value>
+  </data>
+	<data name="fineUploaderUpload.Text" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+	<data name="lblDocumentFineUploaderDrag.Text" xml:space="preserve">
+    <value>Drag files here</value>
+  </data>
+	<data name="Searchdocuments.Text" xml:space="preserve">
+    <value>Search documents</value>
+  </data>
+	<data name="Documentid.Text" xml:space="preserve">
+    <value>Document id:</value>
+  </data>
+	<data name="TitleDescription.HeaderText" xml:space="preserve">
+    <value>Title / Description</value>
+  </data>
+	<data name="Info.HeaderText" xml:space="preserve">
+    <value>Info</value>
+  </data>
+	<data name="Lang.HeaderText" xml:space="preserve">
+    <value>Lang</value>
+  </data>
+	<data name="Show.HeaderText" xml:space="preserve">
+    <value>Show</value>
+  </data>
+	<data name="rfvExistingDocumentID.ErrorMessage" xml:space="preserve">
+    <value>Document ID must be set</value>
+  </data>
+	<data name="cvExistingDocumentID.ErrorMessage" xml:space="preserve">
+    <value>Document ID must be an integer</value>
+  </data>
+	<data name="Add.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+	<data name="liAllLanguages.Text" xml:space="preserve">
+    <value>All</value>
+  </data>
+	<data name="liDefaultPortalLanguage.Text" xml:space="preserve">
+    <value>Default</value>
+  </data>
+	<data name="Links.Text" xml:space="preserve">
+    <value>Links</value>
+  </data>
+	<data name="liCustomlink.Text" xml:space="preserve">
+    <value>External link</value>
+  </data>
+	<data name="liNewsarticle.Text" xml:space="preserve">
+    <value>Article link</value>
+  </data>
+	<data name="liExistinglink.Text" xml:space="preserve">
+    <value>Existing link</value>
+  </data>
+	<data name="rfvtbxCustomLink.ErrorMessage" xml:space="preserve">
+    <value>Please enter a URL.</value>
+  </data>
+	<data name="rfvNewsArticleID.ErrorMessage" xml:space="preserve">
+    <value>Please select a news article</value>
+  </data>
+	<data name="rfvExistingLinksID.ErrorMessage" xml:space="preserve">
+    <value>Please specify an existing link ID.</value>
+  </data>
+	<data name="cvExistingLinksID.ErrorMessage" xml:space="preserve">
+    <value>The existing link ID must be an integer.</value>
+  </data>
+	<data name="lblCustomLink.Text" xml:space="preserve">
+    <value>URL:</value>
+  </data>
+	<data name="lblSearchArticleText.Text" xml:space="preserve">
+    <value>Search news articles:</value>
+  </data>
+	<data name="lblLinkTitle.Text" xml:space="preserve">
+    <value>Link title:</value>
+  </data>
+	<data name="lblLinkDescription.Text" xml:space="preserve">
+    <value>Link description:</value>
+  </data>
+	<data name="lblSearchLinkText.Text" xml:space="preserve">
+    <value>Search links:</value>
+  </data>
+	<data name="lblExistingLinksID.Text" xml:space="preserve">
+    <value>Link id:</value>
+  </data>
+	<data name="Thelinkwasaddedsuccesfully.Text" xml:space="preserve">
+    <value>The link was added succesfully.</value>
+  </data>
+	<data name="Link.HeaderText" xml:space="preserve">
+    <value>Link</value>
+  </data>
+	<data name="Target.HeaderText" xml:space="preserve">
+    <value>Target</value>
+  </data>
+	<data name="ControlTitle_addnewarticle.Text" xml:space="preserve">
+    <value>Add new article</value>
+  </data>
+	<data name="liApril.Text" xml:space="preserve">
+    <value>April</value>
+  </data>
+	<data name="liAugust.Text" xml:space="preserve">
+    <value>August</value>
+  </data>
+	<data name="liDecember.Text" xml:space="preserve">
+    <value>December</value>
+  </data>
+	<data name="liFebruary.Text" xml:space="preserve">
+    <value>February</value>
+  </data>
+	<data name="liFirst.Text" xml:space="preserve">
+    <value>First</value>
+  </data>
+	<data name="liFourth.Text" xml:space="preserve">
+    <value>Fourth</value>
+  </data>
+	<data name="liJanuary.Text" xml:space="preserve">
+    <value>January</value>
+  </data>
+	<data name="liJuly.Text" xml:space="preserve">
+    <value>July</value>
+  </data>
+	<data name="liJune.Text" xml:space="preserve">
+    <value>June</value>
+  </data>
+	<data name="liLast.Text" xml:space="preserve">
+    <value>Last</value>
+  </data>
+	<data name="liMarch.Text" xml:space="preserve">
+    <value>March</value>
+  </data>
+	<data name="liMay.Text" xml:space="preserve">
+    <value>May</value>
+  </data>
+	<data name="liNovember.Text" xml:space="preserve">
+    <value>November</value>
+  </data>
+	<data name="liOctober.Text" xml:space="preserve">
+    <value>October</value>
+  </data>
+	<data name="liSecond.Text" xml:space="preserve">
+    <value>Second</value>
+  </data>
+	<data name="liSeptember.Text" xml:space="preserve">
+    <value>September</value>
+  </data>
+	<data name="liThird.Text" xml:space="preserve">
+    <value>Third</value>
+  </data>
+	<data name="liFriday.Text" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+	<data name="liMonday.Text" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+	<data name="liSaturday.Text" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+	<data name="liSunday.Text" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+	<data name="liThuesday.Text" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+	<data name="liThursday.Text" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+	<data name="liWednesday.Text" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+	<data name="cvDailyRecurringEventDays.ErrorMessage" xml:space="preserve">
+    <value>Please enter number only.</value>
+  </data>
+	<data name="lblRecurrenceType.Help" xml:space="preserve">
+    <value>Select type of recurrence.</value>
+  </data>
+	<data name="lblRecurrenceType.Text" xml:space="preserve">
+    <value>Recurrence type:</value>
+  </data>
+	<data name="lblRecurringDays.Text" xml:space="preserve">
+    <value>day(s)</value>
+  </data>
+	<data name="lblrecurringEvent.Help" xml:space="preserve">
+    <value>Create recurring event.</value>
+  </data>
+	<data name="lblrecurringEvent.Text" xml:space="preserve">
+    <value>Recurrence:</value>
+  </data>
+	<data name="lblRecurringEvery.Text" xml:space="preserve">
+    <value>Every:</value>
+  </data>
+	<data name="lblRecurringMonth.Text" xml:space="preserve">
+    <value>month(s)</value>
+  </data>
+	<data name="lblRecurringMonthEvery.Text" xml:space="preserve">
+    <value>of every:</value>
+  </data>
+	<data name="lblRecurringWeeks.Text" xml:space="preserve">
+    <value>weeks(s) on</value>
+  </data>
+	<data name="lblUpcomingOccurrences.Text" xml:space="preserve">
+    <value>Display upcoming occurrences</value>
+  </data>
+	<data name="lblWeeklyRecurringEvery.Text" xml:space="preserve">
+    <value>Recur every:</value>
+  </data>
+	<data name="liDaily.Text" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+	<data name="liEndbydate.Text" xml:space="preserve">
+    <value>End by date</value>
+  </data>
+	<data name="liEndsafterocurrences.Text" xml:space="preserve">
+    <value>Ends after occurrences</value>
+  </data>
+	<data name="liEvery.Text" xml:space="preserve">
+    <value>Every:</value>
+  </data>
+	<data name="liMonthly.Text" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
+	<data name="liRepeatedon.Text" xml:space="preserve">
+    <value>Repeated on:</value>
+  </data>
+	<data name="liRepeatedonday.Text" xml:space="preserve">
+    <value>Repeated on day:</value>
+  </data>
+	<data name="liThe.Text" xml:space="preserve">
+    <value>The:</value>
+  </data>
+	<data name="liWeekly.Text" xml:space="preserve">
+    <value>Weekly</value>
+  </data>
+	<data name="liYearly.Text" xml:space="preserve">
+    <value>Yearly</value>
+  </data>
+	<data name="rfvDailyRecurringEventDays.ErrorMessage" xml:space="preserve">
+    <value>Days required.</value>
+  </data>
+	<data name="lblDetailsDocumentsTemplate.HelpText" xml:space="preserve">
+    <value>Details documents template.</value>
+  </data>
+	<data name="lblDetailsDocumentsTemplate.Text" xml:space="preserve">
+    <value>Documents template:</value>
+  </data>
+	<data name="lblDetailsLinksTemplate.HelpText" xml:space="preserve">
+    <value>Details links template.</value>
+  </data>
+	<data name="lblDetailsLinksTemplate.Text" xml:space="preserve">
+    <value>Links template:</value>
+  </data>
+	<data name="lblDetailsRelatedArticlesTemplate.HelpText" xml:space="preserve">
+    <value>Details related articles template.</value>
+  </data>
+	<data name="lblDetailsRelatedArticlesTemplate.Text" xml:space="preserve">
+    <value>Related articles template:</value>
+  </data>
+	<data name="Closesettings.Text" xml:space="preserve">
+    <value>Close settings</value>
+  </data>
+	<data name="Deletethisdocument.Text" xml:space="preserve">
+    <value>Delete this document</value>
+  </data>
+	<data name="Deletethislink.Text" xml:space="preserve">
+    <value>Delete this link</value>
+  </data>
+	<data name="Editthisdocument.Text" xml:space="preserve">
+    <value>Edit this document</value>
+  </data>
+	<data name="Editthislink.Text" xml:space="preserve">
+    <value>Edit this link</value>
+  </data>
+	<data name="liblank.Text" xml:space="preserve">
+    <value>_blank</value>
+  </data>
+	<data name="liparent.Text" xml:space="preserve">
+    <value>_parent</value>
+  </data>
+	<data name="liself.Text" xml:space="preserve">
+    <value>_self</value>
+  </data>
+	<data name="litopopen.Text" xml:space="preserve">
+    <value>_top</value>
+  </data>
+	<data name="Owner.Text" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+	<data name="Selectauthor.Text" xml:space="preserve">
+    <value>Select author</value>
+  </data>
+	<data name="lblGalleryLightbox.Help" xml:space="preserve">
+    <value>Please select gallery lightbox type.</value>
+  </data>
+	<data name="lblGalleryLightbox.Text" xml:space="preserve">
+    <value>Select lightbox type:</value>
+  </data>
+	<data name="lblRegistrationOnEvent.Text" xml:space="preserve">
+    <value>Enable registrations:</value>
+  </data>
+	<data name="lblRegistrationOnEvent.Help" xml:space="preserve">
+    <value>Turn this option on if you would like to enable the user registration to the event. This option is not possible to turn off afterwards if there is an existing registration to the event.</value>
+  </data>
+	<data name="Mustsavearticlebeforeenabelingregistration.Text" xml:space="preserve">
+    <value>Must save article before enabeling registration!</value>
+  </data>
+	<data name="lbMustSaveBeforeEnable.Text" xml:space="preserve">
+    <value>To enable the registration process it is necessary to save the article.</value>
+  </data>
+	<data name="lblUploadToWistiaService.Text" xml:space="preserve">
+		<value>Upload video to Wistia service:</value>
+	</data>
+	<data name="btnWistiaSingleUpload.Text" xml:space="preserve">
+		<value>Upload</value>
+	</data>
+	<data name="PleaseSelectVideoFile.Text" xml:space="preserve">
+		<value>Please select video file.</value>
+	</data>
+	<data name="WrongFileType.Text" xml:space="preserve">
+		<value>Wrong file type.</value>
+	</data>
+	<data name="APIKeyMissing.Text" xml:space="preserve">
+		<value>API key missing.</value>
+	</data>
+	<data name="ErrorWhileUploadingVideo.Text" xml:space="preserve">
+		<value>Error while uploading video.</value>
+	</data>
+	<data name="VideoUploaded.Text" xml:space="preserve">
+		<value>Video uploaded.</value>
+	</data>
+</root>

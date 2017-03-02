@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ErrorCodes.AddFolder_NoPermission">
+    <value xml:space="preserve">Usuário não tem permissão de adicionar na pasta.</value>
+  </data>
+  <data name="ErrorCodes.AddFolder_NotInsecureFolder">
+    <value xml:space="preserve">Usuário não pode adicionar uma pasta ou arquivo em uma pasta marcada como base de dados ou segura.</value>
+  </data>
+  <data name="ErrorCodes.CannotCopyFolder_ChildrenVisible">
+    <value xml:space="preserve">Usuário não tem permissão para copiar a pasta porque nem todos os arquivos estão visíveis na janela.</value>
+  </data>
+  <data name="ErrorCodes.CannotDeleteFolder_ChildrenVisible">
+    <value xml:space="preserve">Usuário não tem permissão para excluir a pasta porque nem todos os arquivos estão visíveis na janela.</value>
+  </data>
+  <data name="ErrorCodes.CannotMoveFolder_ChildrenVisible">
+    <value xml:space="preserve">Usuário não tem permissão para mover a pasta porque nem todos os arquivos estão visíveis na janela.</value>
+  </data>
+  <data name="ErrorCodes.CopyFolder_NoPermission">
+    <value xml:space="preserve">Usuário não tem permissão para copiar a pasta.</value>
+  </data>
+  <data name="ErrorCodes.CopyFolder_NotInsecureFolder">
+    <value xml:space="preserve">Usuário não pode copiar uma pasta ou arquivo em uma pasta marcada como base de dados ou segura.</value>
+  </data>
+  <data name="ErrorCodes.DeleteFolder_NoPermission">
+    <value xml:space="preserve">Usuário não tem permissão para excluir a pasta ou arquivo.</value>
+  </data>
+  <data name="ErrorCodes.DeleteFolder_NotInsecureFolder">
+    <value xml:space="preserve">Usuário não pode excluir uma pasta ou arquivo de uma pasta marcada como base de dados ou segura.</value>
+  </data>
+  <data name="ErrorCodes.DeleteFolder_Protected">
+    <value xml:space="preserve">Usuário não tem permissão para excluir a pasta porque ela está marcada como protegida.</value>
+  </data>
+  <data name="ErrorCodes.DeleteFolder_Root">
+    <value xml:space="preserve">Não pode excluir a pasta raiz.</value>
+  </data>
+  <data name="ErrorCodes.DirectoryAlreadyExists">
+    <value xml:space="preserve">Pasta já existe. Atualize sua lista de pastas.</value>
+  </data>
+  <data name="ErrorCodes.FileDoesNotExist">
+    <value xml:space="preserve">Arquivo não existe. Atualize sua lista de pastas.</value>
+  </data>
+  <data name="ErrorCodes.FolderDoesNotExist">
+    <value xml:space="preserve">Pasta não existe. Atualize sua lista de pastas.</value>
+  </data>
+  <data name="ErrorCodes.General_PermissionDenied">
+    <value xml:space="preserve">Você não tem permissões suficientes para completar a ação ou a ação foi impedida pelo sistema. Por favor contate seu administrador do sistema para mais informações.</value>
+  </data>
+  <data name="ErrorCodes.InvalidCharactersInPath">
+    <value xml:space="preserve">Existem caracteres inválidos no caminho.</value>
+  </data>
+  <data name="ErrorCodes.NewFileAlreadyExists">
+    <value xml:space="preserve">Arquivo já existe. Atualize sua lista de pastas.</value>
+  </data>
+  <data name="ErrorCodes.RenameFolder_Root">
+    <value xml:space="preserve">Não pode renomear a pasta raiz.</value>
+  </data>
+  <data name="FolderDoesNotExist.Text">
+    <value xml:space="preserve">Pasta não existe. Atualize sua lista de pastas.</value>
+  </data>
+  <data name="SystemError.Text">
+    <value xml:space="preserve">Não foi possível concluir a operação. Ocorreu um erro desconhecido.</value>
+  </data>
+</root>

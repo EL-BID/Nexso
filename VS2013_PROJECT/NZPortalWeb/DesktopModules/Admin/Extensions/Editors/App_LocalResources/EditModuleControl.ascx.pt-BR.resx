@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plModule.Text">
+    <value xml:space="preserve">Módulo:</value>
+  </data>
+  <data name="plDefinition.Text">
+    <value xml:space="preserve">Definição:</value>
+  </data>
+  <data name="plKey.Text">
+    <value xml:space="preserve">Chave:</value>
+  </data>
+  <data name="plKey.Help">
+    <value xml:space="preserve">Entre um nome único para identificar este controle dentro do módulo.</value>
+  </data>
+  <data name="plTitle.Text">
+    <value xml:space="preserve">Título:</value>
+  </data>
+  <data name="plSource.Text">
+    <value xml:space="preserve">Código fonte:</value>
+  </data>
+  <data name="plSource.Help">
+    <value xml:space="preserve">Selecione o arquivo do código fonte ou entre o nome do tipo para este controle.</value>
+  </data>
+  <data name="plType.Text">
+    <value xml:space="preserve">Tipo:</value>
+  </data>
+  <data name="plType.Help">
+    <value xml:space="preserve">Escolha o tipo de controle na lista.</value>
+  </data>
+  <data name="Skin.Text">
+    <value xml:space="preserve">Objeto tema</value>
+  </data>
+  <data name="Anonymous.Text">
+    <value xml:space="preserve">Anônimo</value>
+  </data>
+  <data name="View.Text">
+    <value xml:space="preserve">Visualização</value>
+  </data>
+  <data name="Edit.Text">
+    <value xml:space="preserve">Edição</value>
+  </data>
+  <data name="Admin.Text">
+    <value xml:space="preserve">Portal</value>
+  </data>
+  <data name="Host.Text">
+    <value xml:space="preserve">Servidor</value>
+  </data>
+  <data name="plViewOrder.Text">
+    <value xml:space="preserve">Ordem de visualização:</value>
+  </data>
+  <data name="plViewOrder.Help">
+    <value xml:space="preserve">Entre a ordem de visualização para o controle na lista de controles para esta definição.</value>
+  </data>
+  <data name="plIcon.Text">
+    <value xml:space="preserve">Ícone:</value>
+  </data>
+  <data name="plHelpURL.Text">
+    <value xml:space="preserve">Endereço de ajuda:</value>
+  </data>
+  <data name="plModule.Help">
+    <value xml:space="preserve">Este é o nome amigável do módulo.</value>
+  </data>
+  <data name="plDefinition.Help">
+    <value xml:space="preserve">Este é o nome de definição do módulo</value>
+  </data>
+  <data name="ControlTitle_editcontrol.Text">
+    <value xml:space="preserve">Editar o Controle do Módulo</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre Definições de Módulo&lt;/h1&gt;&lt;p&gt;O Super Usuário pode gerenciar os módulos instalados no sistema.&lt;/p&gt;</value>
+  </data>
+  <data name="AddControl.ErrorMessage">
+    <value xml:space="preserve">Já existe um controle com a mesma chave e código fonte.</value>
+  </data>
+  <data name="MissingSource.ErrorMessage">
+    <value xml:space="preserve">Você deve especificar um código fonte para o controle.</value>
+  </data>
+  <data name="DuplicateKey.ErrorMessage">
+    <value xml:space="preserve">Já existe um controle com a mesma chave nesta definição de módulo.</value>
+  </data>
+  <data name="plSupportsPartialRendering.Text">
+    <value xml:space="preserve">Suporta exibição parcial AJAX?</value>
+  </data>
+  <data name="plSupportsPartialRendering.Help">
+    <value xml:space="preserve">Marque se o controle do módulo suportar exibição parcial AJAX.</value>
+  </data>
+  <data name="supportsModalPopUpsLabel.Help">
+    <value xml:space="preserve">Indica se o controle do módulo suporta janelas modais.</value>
+  </data>
+  <data name="supportsModalPopUpsLabel.Text">
+    <value xml:space="preserve">Suporta janela modal?</value>
+  </data>
+</root>

@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accessibility.Text">
+    <value xml:space="preserve">Accesibilidad</value>
+  </data>
+  <data name="AutoConfigure.Text">
+    <value xml:space="preserve">Configuración automática</value>
+  </data>
+  <data name="Cancel.Text">
+    <value xml:space="preserve">Cancelar</value>
+  </data>
+  <data name="CreateGroup.Text">
+    <value xml:space="preserve">Crear un grupo</value>
+  </data>
+  <data name="CreateGroupButton.Text">
+    <value xml:space="preserve">Crear un grupo</value>
+  </data>
+  <data name="CreateNewGroup.Text">
+    <value xml:space="preserve">Crear nuevo grupo</value>
+  </data>
+  <data name="Description.Text">
+    <value xml:space="preserve">Descripción</value>
+  </data>
+  <data name="documents.Text">
+    <value xml:space="preserve">documentos</value>
+  </data>
+  <data name="EditGroup.Text">
+    <value xml:space="preserve">Editar grupo</value>
+  </data>
+  <data name="GroupApprovedNotification.Body">
+    <value xml:space="preserve">Su grupo se ha aprobado. Clique el enlace inferior para acceder a su nuevo grupo.&lt;br /&gt;&lt;br /&gt;&lt;a href="[groupitem:URL]"&gt;[groupitem:GroupName]&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="GroupApprovedNotification.Subject">
+    <value xml:space="preserve">El grupo [groupitem:GroupName] ha sido aprobado</value>
+  </data>
+  <data name="GroupCreatedNotification.Body">
+    <value xml:space="preserve">&lt;strong&gt;Nombre del grupo:&lt;/strong&gt; &lt;a href="[groupitem:URL]"&gt;[groupitem:GroupName]&lt;/a&gt;&lt;br /&gt;&lt;strong&gt;Descripción:&lt;/strong&gt; [groupitem:Description]&lt;br /&gt;&lt;strong&gt;Tipo de grupo: &lt;/strong&gt; [groupitem:GroupType]&lt;br /&gt;&lt;strong&gt;Creador del grupo:&lt;/strong&gt; [groupitem:GroupCreatorName]&lt;br /&gt;
+</value>
+  </data>
+  <data name="GroupCreatedNotification.Subject">
+    <value xml:space="preserve">El grupo [groupitem:GroupName] se ha creado</value>
+  </data>
+  <data name="GroupEditUrl.Text">
+    <value xml:space="preserve">&lt;a href="{0}"&gt;Editar grupo&lt;/a&gt;</value>
+  </data>
+  <data name="GroupIdNotFound.Text">
+    <value xml:space="preserve">No se ha podido encontrar el grupo que ha solicitado.</value>
+  </data>
+  <data name="GroupListTemplate.Text">
+    <value xml:space="preserve">&lt;div class="dgdGroupQuickInfoWrap dnnClear"&gt;
+                    &lt;div class="dgdAvatar dnnLeft"&gt;&lt;a href="[groupviewurl]"&gt;&lt;img src="[groupitem:PhotoURL]" alt="[groupitem:GroupName]" /&gt;&lt;/a&gt;&lt;/div&gt;
+                    &lt;div class="dgdGroupQuickInfo dnnLeft"&gt;
+                        &lt;h3&gt;&lt;a href="[groupviewurl]" title="[groupitem:GroupName]"&gt;[groupitem:GroupName]&lt;/a&gt;&lt;/h3&gt;
+                        &lt;p&gt;[groupitem:GroupDescription]&lt;/p&gt;
+                        &lt;ul&gt;
+                            &lt;li class="posts-icn"&gt;[groupitem:stat_status] {resx:posts}&lt;/li&gt;
+                            &lt;li class="member-icn"&gt;[groupitem:UserCount] {resx:members}&lt;/li&gt;
+                            &lt;li class="photo-icn"&gt;[groupitem:stat_photo] {resx:photos}&lt;/li&gt;
+                            &lt;li class="docs-icn"&gt;[groupitem:stat_file] {resx:documents}&lt;/li&gt;
+                            [IsNotMember]
+                            &lt;li class="join-group-icn"&gt;&lt;a href="#" title="" class="dnnTertiaryAction" id="groupJoin-[groupitem:RoleId]" groupid="[groupitem:RoleId]" groupViewTabId ="[GroupViewTabId]"&gt;{resx:Join}&lt;/a&gt;&lt;/li&gt;[/IsNotMember] 
+[IsPendingMember]&lt;li class="join-group-icn"&gt;&lt;a href="#" title="" class="dnnDisabled"&gt;{resx:Pending}&lt;/a&gt;&lt;/li&gt;[/IsPendingMember]
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;</value>
+  </data>
+  <data name="GroupMemberApprovedNotification.Body">
+    <value xml:space="preserve">Su solicitud para unirse al grupo  &lt;a href="[groupitem:URL]"&gt;[groupitem:GroupName]&lt;/a&gt; se ha aprobado.</value>
+  </data>
+  <data name="GroupMemberApprovedNotification.Subject">
+    <value xml:space="preserve">Bienvenido a [groupitem:GroupName]</value>
+  </data>
+  <data name="GroupMemberPendingNotification.Body">
+    <value xml:space="preserve">&lt;a href="[ProfileUrl]" target="_blank"&gt;[DisplayName]&lt;/a&gt; ha solicitado unirse a [groupitem:GroupName].</value>
+  </data>
+  <data name="GroupMemberPendingNotification.Subject">
+    <value xml:space="preserve">[DisplayName] quiere unirse a [groupitem:GroupName]</value>
+  </data>
+  <data name="GroupMemberRejectedNotification.Body">
+    <value xml:space="preserve">Sentimos informarle que su solicitud de unirse a &lt;a href="[groupitem:URL]"&gt;[groupitem:GroupName]&lt;/a&gt; se ha denegado.</value>
+  </data>
+  <data name="GroupMemberRejectedNotification.Subject">
+    <value xml:space="preserve">Respuesta a su solicitud de unirse a [groupitem:GroupName]</value>
+  </data>
+  <data name="GroupName.Invalid">
+    <value xml:space="preserve">&lt;br/&gt;El nombre es incorrecto. Los nombres de grupo no pueden incluir los caracteres siguientes: &amp; $ + , / ? ~ # &lt; &gt; ( ) ¿ ¡ « » !  . :  * ' [ ]</value>
+  </data>
+  <data name="GroupName.Required">
+    <value xml:space="preserve">El nombre del grupo es obligatorio.</value>
+  </data>
+  <data name="GroupName.Text">
+    <value xml:space="preserve">Nombre de grupo</value>
+  </data>
+  <data name="GroupNameDuplicate.Text">
+    <value xml:space="preserve">El nombre que ha entrado ya se está utilizando.</value>
+  </data>
+  <data name="GroupPendingNotification.Body">
+    <value xml:space="preserve">&lt;strong&gt;Nombre del grupo:&lt;/strong&gt; &lt;a href="[groupitem:URL]" target="_blank"&gt;[groupitem:GroupName]&lt;/a&gt;&lt;br /&gt;&lt;strong&gt;Descripción:&lt;/strong&gt; [groupitem:Description]&lt;br /&gt;&lt;strong&gt;Tipo de grupo: &lt;/strong&gt; [groupitem:GroupType]&lt;br /&gt;&lt;strong&gt;Creador del grupo:&lt;/strong&gt; [groupitem:GroupCreatorName]&lt;br /&gt;</value>
+  </data>
+  <data name="GroupPendingNotification.Subject">
+    <value xml:space="preserve">El grupo [groupitem:GroupName] está pendiente de aprobación</value>
+  </data>
+  <data name="GroupPicture.Help">
+    <value xml:space="preserve">Elija una imagen de su ordenador, tamaño máximo 2.5MB</value>
+  </data>
+  <data name="GroupPicture.Text">
+    <value xml:space="preserve">Imagen de grupo</value>
+  </data>
+  <data name="GroupRejectedNotification.Body">
+    <value xml:space="preserve">No se ha podido aprobar la petición del grupo en este momento.</value>
+  </data>
+  <data name="GroupRejectedNotification.Subject">
+    <value xml:space="preserve">Se ha denegado la petición de creación del grupo.</value>
+  </data>
+  <data name="GroupSearch.Required">
+    <value xml:space="preserve">El término de búsqueda es obligatorio.</value>
+  </data>
+  <data name="GroupViewTemplate.Text">
+    <value xml:space="preserve">&lt;div class="GroupViewTop"&gt;
+    &lt;div class="dgdAvatar dnnLeft"&gt;&lt;img src="[groupitem:PhotoURL]" alt="[groupitem:GroupName]" /&gt;&lt;/div&gt;
+    &lt;div class="GroupViewHeader"&gt;
+        &lt;h1&gt;[groupitem:GroupName]&lt;/h1&gt;
+        &lt;p&gt;[groupitem:GroupDescription]&lt;/p&gt;
+    &lt;/div&gt;
+&lt;div class="dnnRight dnnClear"&gt;
+[IsOwner]
+[GROUPEDITBUTTON] 
+[/IsOwner]
+[IsMember]
+[IsNotOwner]
+ &lt;a href="#" id="LeaveGroup-[groupitem:RoleId]"&gt;{resx:LeaveGroup}&lt;/a&gt;
+[/IsNotOwner]
+[/IsMember]
+[IsNotMember]
+[AllowJoin]
+ &lt;a href="#" id="JoinGroup-[groupitem:RoleId]" groupid="[groupitem:RoleId]" groupViewTabId ="[GroupViewTabId]"&gt;{resx:JoinGroup}&lt;/a&gt;
+[/AllowJoin]
+[/IsNotMember]
+[IsPendingMember]
+ &lt;em&gt;Membership Pending&lt;/em&gt;
+[/IsPendingMember]
+&lt;/div&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="Join.Text">
+    <value xml:space="preserve">Unirse</value>
+  </data>
+  <data name="JoinGroup.Text">
+    <value xml:space="preserve">Unirse al grupo</value>
+  </data>
+  <data name="LeaveGroup.Text">
+    <value xml:space="preserve">Dejar el grupo</value>
+  </data>
+  <data name="members.Text">
+    <value xml:space="preserve">miembros</value>
+  </data>
+  <data name="MembersMustBeApproved.Text">
+    <value xml:space="preserve">&lt;strong&gt;Revisión de nuevos miembros:&lt;/ b&gt; Los usuarios tienen que solicitar permiso y ser aprobados por un administrador para unirse a este grupo.</value>
+  </data>
+  <data name="NoGroupsFound.Text">
+    <value xml:space="preserve">No se encontraron grupos.</value>
+  </data>
+  <data name="Pending.Text">
+    <value xml:space="preserve">Solicitudes pendientes</value>
+  </data>
+  <data name="photos.Text">
+    <value xml:space="preserve">imágenes</value>
+  </data>
+  <data name="posts.Text">
+    <value xml:space="preserve">mensajes</value>
+  </data>
+  <data name="Private.Help">
+    <value xml:space="preserve">(sólo visible para miembros)</value>
+  </data>
+  <data name="Private.Text">
+    <value xml:space="preserve">Privado</value>
+  </data>
+  <data name="Public.Help">
+    <value xml:space="preserve">(cualquier puede verlo y apuntarse)</value>
+  </data>
+  <data name="Public.Text">
+    <value xml:space="preserve">Público</value>
+  </data>
+  <data name="RejectGroup.Text">
+    <value xml:space="preserve">Rechazar este grupo</value>
+  </data>
+  <data name="RejectMember.Text">
+    <value xml:space="preserve">Rechazar</value>
+  </data>
+  <data name="Remove.Text">
+    <value xml:space="preserve">Eliminar</value>
+  </data>
+  <data name="RequiredFields.Text">
+    <value xml:space="preserve">Indica campos obligatorios</value>
+  </data>
+  <data name="Sample_RoleDescription.Text">
+    <value xml:space="preserve">Esta es la descripción del grupo de ejemplo.  Este grupo no existe realmente. Está viendo este mensaje porque está configurando el módulo por primera vez o es un administrador y ha navegado a esta página sin un ID de grupo</value>
+  </data>
+  <data name="Sample_RoleName.Text">
+    <value xml:space="preserve">Grupo de ejemplo</value>
+  </data>
+  <data name="SearchButton.Text">
+    <value xml:space="preserve">Buscar</value>
+  </data>
+  <data name="SetupHeader.Text">
+    <value xml:space="preserve">Configuración de grupos</value>
+  </data>
+  <data name="SetupIntro.Text">
+    <value xml:space="preserve">El módulo de grupos sociales permite a los usuarios explorar, ver y crear nuevos grupos. La mejor forma de configurar el módulo es crear una página para la lista de grupos y otra página para el detalle de los grupos. Puede acceder a la configuración del módulo o bién seleccionar la opción de configuración automática. &lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Le recomendamos que utilice la opción de configuración automática si no está familiarizado con el módulo.&lt;/strong&gt;</value>
+  </data>
+</root>

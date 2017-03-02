@@ -1,0 +1,141 @@
+/*  http://meyerweb.com/eric/tools/css/reset/
+ *  v2.0 | 20110126
+ *  License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none outside;
+  padding: 0 0 0 25px;
+  margin: 0 0 10px;
+}
+ol li, ul li {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: #ececec;
+}
+body > h1 {
+  padding: 25px 0 15px 85px;
+  margin: 0;
+  background: url(../images/author_contact/letter.png) no-repeat 35px 22px;
+  border: 0;
+  border-bottom: 1px solid #e4e4e4;
+}
+body > h1 span {
+  text-transform: uppercase;
+  font: 18px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 22px;
+  color: #474747;
+}
+body .contact_form, body .state_message {
+  width: 520px;
+  border: 0;
+  border-top: 1px solid #f4f4f4;
+  padding: 15px 30px 30px;
+}
+body .contact_form > .field, body .state_message > .field {
+  margin: 10px 0 0;
+  font: 12px Arial, Helvetica, sans-serif;
+}
+body .contact_form > .field > .text, body .state_message > .field > .text {
+  background: #e5e5e5;
+  border: 1px solid #f1f1f1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 0 0 #d7d7d7;
+  -moz-box-shadow: inset 0 1px 0 0 #d7d7d7;
+  box-shadow: inset 0 1px 0 0 #d7d7d7;
+  color: #3e3e3e;
+  font: 12px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 7px 12px 6px;
+  width: 280px;
+}
+body .contact_form > .field textarea.text, body .state_message > .field textarea.text {
+  width: 496px;
+  height: 150px;
+  text-transform: none;
+  padding: 7px 12px 12px;
+  margin: 0;
+}
+body .contact_form > .buttons, body .state_message > .buttons {
+  margin: 15px 0 0;
+  text-align: right;
+}
+body .contact_form > .buttons .submit, body .state_message > .buttons .submit {
+  background: url(../images/author_contact/submit_button_bg.png) repeat-x #9c9c9c;
+  -webkit-box-shadow: 1px 1px 0 0 #757575;
+  -moz-box-shadow: 1px 1px 0 0 #757575;
+  box-shadow: 1px 1px 0 0 #757575;
+  color: white;
+  text-shadow: 0 1px #6f6f6f;
+  width: 120px;
+  border: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  height: 30px;
+  font: 14px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+body .state_message {
+  text-align: center;
+}
+body .state_message span {
+  border: 2px solid #7fc968;
+  background: #9be68d;
+  padding: 10px 20px 9px;
+  font: 14px Arial, Helvetica, sans-serif;
+  line-height: 18px;
+  color: #358620;
+}

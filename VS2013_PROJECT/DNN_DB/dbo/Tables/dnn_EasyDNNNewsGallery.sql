@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[dnn_EasyDNNNewsGallery] (
+    [ItenID]                  INT            IDENTITY (1, 1) NOT NULL,
+    [ArticleID]               INT            NOT NULL,
+    [GalleryID]               INT            NOT NULL,
+    [ThumbWidth]              INT            NULL,
+    [ThumbHeight]             INT            NULL,
+    [Param1]                  INT            NULL,
+    [Param2]                  INT            NULL,
+    [Param3]                  NVARCHAR (50)  NULL,
+    [Param4]                  NVARCHAR (50)  NULL,
+    [ShowTitle]               NVARCHAR (50)  NULL,
+    [ShowDescription]         NVARCHAR (50)  NULL,
+    [ResizeCrop]              NVARCHAR (50)  NULL,
+    [ShowLightBoxTitle]       NVARCHAR (50)  NULL,
+    [ShowLightBoxDescription] NVARCHAR (50)  NULL,
+    [MainImageWidth]          INT            NULL,
+    [MainImageHeight]         INT            NULL,
+    [Template]                NVARCHAR (350) NULL,
+    [ChameleonTheme]          NVARCHAR (350) NULL,
+    [ChameleonThemeStyle]     NVARCHAR (350) NULL,
+    [Responsive]              BIT            DEFAULT ((0)) NOT NULL,
+    CONSTRAINT [PK_dnn_EasyDNNNewsGallery] PRIMARY KEY CLUSTERED ([ItenID] ASC),
+    CONSTRAINT [FK_dnn_EasyDNNNewsGallery_EasyDNNNews] FOREIGN KEY ([ArticleID]) REFERENCES [dbo].[dnn_EasyDNNNews] ([ArticleID]) ON DELETE CASCADE,
+    CONSTRAINT [FK_dnn_EasyDNNNewsGallery_EasyGallery] FOREIGN KEY ([GalleryID]) REFERENCES [dbo].[dnn_EasyGallery] ([GalleryID])
+);
+

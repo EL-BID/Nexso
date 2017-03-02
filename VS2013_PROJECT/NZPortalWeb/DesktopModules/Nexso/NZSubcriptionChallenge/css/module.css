@@ -1,0 +1,151 @@
+﻿body {
+    background-color: #F9F9F9!important;
+}
+
+.RadComboBox_Silk .rcbFocused .rcbInputCell {
+    border-color: gray;
+    font-size: 11px;
+}
+
+
+.RadComboBox_Silk .rcbDisabled .rcbInput {
+    color: #b1b1b1;
+    background-color: #d7d7d7;
+    font-size: 11px;
+}
+
+.RadComboBox_Silk .rcbDisabled .rcbInputCell {
+    background-color: #d7d7d7;
+    font-size: 11px;
+}
+
+.RadComboBoxDropDown_Silk .rcbList {
+    font-size: 11px!important;
+}
+
+    .RadComboBoxDropDown_Silk .rcbList .rcbHovered {
+        background: gray;
+        font-weight: bold;
+        color: black;
+        font-size: 11px;
+    }
+
+.RadComboBox_Silk .rcbFocused .rcbArrowCell, .RadComboBox_Silk .rcbHovered .rcbArrowCell {
+    border-color: gray;
+    color: gray;
+    background-color: gray;
+    background-image: linear-gradient( gray 0, gray 100%);
+    font-size: 11px;
+}
+
+.RadComboBox_Silk .rcbHovered .rcbInputCell {
+    border-color: gray;
+    color: gray;
+    font-size: 11px;
+}
+
+.RadComboBoxDropDown_Silk .rcbFocused .rcbArrowCell {
+    background-color: gray!important;
+    border-color: gray!important;
+    font-size: 11px;
+}
+
+.div1 {
+    /*height: 85px;*/
+    height: 70px;
+}
+
+.div2 {
+    height: 125px;
+}
+
+.form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    background: #F9F9F9!important;
+    padding: 30px 30px 20px 30px;
+    font: 12px Verdana, Arial, Helvetica, sans-serif;
+    color: #666;
+    font-size: 11px;
+}
+
+    .form span {
+        display: block;
+        margin: 0px 0px 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+        .form span > span {
+            float: left;
+            margin-top: 10px;
+            color: #5E5E5E;
+        }
+
+
+    .form textarea {
+        height: 100px;
+        padding-top: 10px;
+    }
+
+    .form .button {
+        background-color: gray;
+        border: none;
+        padding: 10px 25px 10px 25px;
+        color: #333;
+        text-shadow: 1px 1px 1px #B3B0B0;
+    }
+
+        .form .button:hover {
+            outline: none!important;
+            color: #333;
+            text-shadow: 1px 1px 1px #B3B0B0;
+            background-color: #B3B0B0;
+        }
+
+        .form .button:disabled:hover, .form .button:disabled {
+            color: #333;
+            background-color: #949494;
+        }
+
+        .form .button:visited, .form .button:focus {
+            color: #333;
+            outline: none!important;
+            background-color: #B3B0B0;
+        }
+
+
+    .form .rfv span {
+        background-color: #F04124;
+        color: #fff !important;
+        display: block;
+        font-weight: bold;
+        padding: 0.20rem;
+        font-size: 11px;
+    }
+
+
+.ckb label {
+    width: 95%;
+    height: auto!important;
+    font-weight: bold!important;
+    font: 12px Verdana, Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.rfvEmail {
+    margin-top: -24px!important;
+}
+
+.radInput {
+    width: 100% !important;
+}
+
+.divAux {
+    height: 195px;
+}
+
+a:focus {
+    outline: none!important;
+}

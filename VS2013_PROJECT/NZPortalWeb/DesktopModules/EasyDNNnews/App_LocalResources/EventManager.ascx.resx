@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NoArticles.Text" xml:space="preserve">
+    <value>There aren't any events in the database.</value>
+  </data>
+  <data name="EnentRegistrationManager.Text" xml:space="preserve">
+    <value>EVENT REGISTRATION MANAGER</value>
+  </data>
+  <data name="cbFilterByCategory.Text" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="liSelectCategory.Text" xml:space="preserve">
+    <value>Select category</value>
+  </data>
+  <data name="Filterby.Text" xml:space="preserve">
+    <value>Filter by:</value>
+  </data>
+  <data name="Confirmation.Text" xml:space="preserve">
+    <value>Are you sure that you want to do selected action?</value>
+  </data>
+  <data name="selectAction.Text" xml:space="preserve">
+    <value>Please select action</value>
+  </data>
+  <data name="hlArticleFilterToggle.Text" xml:space="preserve">
+    <value>Show filter settings</value>
+  </data>
+  <data name="cbFilterByGroupOrAuthor.Text" xml:space="preserve">
+    <value>Group or Author</value>
+  </data>
+  <data name="liSelectgrouporauthor.Text" xml:space="preserve">
+    <value>Select group or author</value>
+  </data>
+  <data name="cbFilterByPublish.Text" xml:space="preserve">
+    <value>Published</value>
+  </data>
+  <data name="liPublished.Text" xml:space="preserve">
+    <value>Published</value>
+  </data>
+  <data name="liUnpublished.Text" xml:space="preserve">
+    <value>Unpublished</value>
+  </data>
+  <data name="cbFilterByFeatured.Text" xml:space="preserve">
+    <value>Featured</value>
+  </data>
+  <data name="liFeatured.Text" xml:space="preserve">
+    <value>Featured</value>
+  </data>
+  <data name="liUnfeatured.Text" xml:space="preserve">
+    <value>Unfeatured</value>
+  </data>
+  <data name="cbFilterByPermissionsByArticle.Text" xml:space="preserve">
+    <value>Permissions per article</value>
+  </data>
+  <data name="liEnabled.Text" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="liDisabled.Text" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="lblOrderBy.Text" xml:space="preserve">
+    <value>Order by:</value>
+  </data>
+  <data name="liOrderby.Text" xml:space="preserve">
+    <value>Order by</value>
+  </data>
+  <data name="liStartdate.Text" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="liPublishdate.Text" xml:space="preserve">
+    <value>Publish date</value>
+  </data>
+  <data name="liNumberofViews.Text" xml:space="preserve">
+    <value>Number of Views</value>
+  </data>
+  <data name="liRating.Text" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="liDateAdded.Text" xml:space="preserve">
+    <value>Date added</value>
+  </data>
+  <data name="liExpireDate.Text" xml:space="preserve">
+    <value>Expire date</value>
+  </data>
+  <data name="liLastmodified.Text" xml:space="preserve">
+    <value>Last modified</value>
+  </data>
+  <data name="liNumberOfCmments.Text" xml:space="preserve">
+    <value>Number of comments</value>
+  </data>
+  <data name="liTitle.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="lblOrdertype.Text" xml:space="preserve">
+    <value>Order type:</value>
+  </data>
+  <data name="liAscending.Text" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+  <data name="liDescending.Text" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="lblFilterStartDate.Text" xml:space="preserve">
+    <value>Start date:</value>
+  </data>
+  <data name="btnFilerArticles.Text" xml:space="preserve">
+    <value>&lt;span&gt;Filter&lt;/span&gt;</value>
+  </data>
+  <data name="lblOrderBySecond.Text" xml:space="preserve">
+    <value>Order by:</value>
+  </data>
+  <data name="Action.HeaderText" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Event Title.HeaderText" xml:space="preserve">
+    <value>Event Title</value>
+  </data>
+  <data name="Event Dates.HeaderText" xml:space="preserve">
+    <value>Event Dates</value>
+  </data>
+  <data name="Seats.Text" xml:space="preserve">
+    <value>Seats</value>
+  </data>
+  <data name="Info.HeaderText" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="ibFooterSelectAll.Text" xml:space="preserve">
+    <value>&lt;span&gt;Select all&lt;/span&gt;</value>
+  </data>
+  <data name="ibFooterUnSelectAll.Text" xml:space="preserve">
+    <value>&lt;span&gt;Unselect all&lt;/span&gt;</value>
+  </data>
+  <data name="liSelectAction.Text" xml:space="preserve">
+    <value>Select action</value>
+  </data>
+  <data name="liDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="lblTotalCount.Text" xml:space="preserve">
+    <value>Record(s) found: {0}</value>
+  </data>
+  <data name="lbEditThisArticle.Text" xml:space="preserve">
+    <value>Edit event</value>
+  </data>
+  <data name="hlEditAttendees.Text" xml:space="preserve">
+    <value>Edit attendees</value>
+  </data>
+  <data name="hlAddAttendee.Text" xml:space="preserve">
+    <value>Add attendees</value>
+  </data>
+  <data name="hlEditInvitations.Text" xml:space="preserve">
+    <value>Edit invitations</value>
+  </data>
+  <data name="hlEditReminders.Text" xml:space="preserve">
+    <value>Edit reminders</value>
+  </data>
+  <data name="Reserved.Text" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+  <data name="Totalseats.Text" xml:space="preserve">
+    <value>Total seats</value>
+  </data>
+  <data name="Remaining.Text" xml:space="preserve">
+    <value>Remaining</value>
+  </data>
+  <data name="Unlimited.Text" xml:space="preserve">
+    <value>unlimited</value>
+  </data>
+  <data name="Recurring.Text" xml:space="preserve">
+    <value>Recurring</value>
+  </data>
+  <data name="Yes.Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="No.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Owner.Text" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="Waitingforapproval.Text" xml:space="preserve">
+    <value>Waiting for approval</value>
+  </data>
+  <data name="Free.Text" xml:space="preserve">
+    <value>Free</value>
+  </data>
+  <data name="Fee.Text" xml:space="preserve">
+    <value>Fee</value>
+  </data>
+  <data name="Moderated.Text" xml:space="preserve">
+    <value>Moderated</value>
+  </data>
+  <data name="Activereg.Text" xml:space="preserve">
+    <value>Active reg</value>
+  </data>
+  <data name="hlAddNewArticle.Text" xml:space="preserve">
+    <value>&lt;span&gt;Add an event&lt;/span&gt;</value>
+  </data>
+  <data name="User.HeaderText" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="Qnt.HeaderText" xml:space="preserve">
+    <value>Qnt.</value>
+  </data>
+  <data name="liUnapprove.Text" xml:space="preserve">
+    <value>Unapprove</value>
+  </data>
+  <data name="hlEditUser.Text" xml:space="preserve">
+    <value>Edit user</value>
+  </data>
+  <data name="lblDelateRegistration.Text" xml:space="preserve">
+    <value>Delete registration</value>
+  </data>
+  <data name="Registrationdate.Text" xml:space="preserve">
+    <value>Registration date</value>
+  </data>
+  <data name="lblArticleListApproved.Text" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="Notverified.Text" xml:space="preserve">
+    <value>Not verified</value>
+  </data>
+  <data name="Verified.Text" xml:space="preserve">
+    <value>Verified</value>
+  </data>
+  <data name="liAlreadyApprovedRegistration.Text" xml:space="preserve">
+    <value>Already rejected</value>
+  </data>
+  <data name="lbRejectAttendee.Text" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="lblRejectMessage.Text" xml:space="preserve">
+    <value>Explain why the attende was rejected:</value>
+  </data>
+  <data name="lbRejectWMessage.Text" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="lbCancelRejectWMessage.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="lblFooterNumberOfRows.Text" xml:space="preserve">
+    <value>Number of rows:</value>
+  </data>
+  <data name="Eventregistrationuserdata.Text" xml:space="preserve">
+    <value>Event registration user data:</value>
+  </data>
+  <data name="lblFirstName.Text" xml:space="preserve">
+    <value>First name:</value>
+  </data>
+  <data name="FirstName.Text" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="rfvFirstName.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="lblLastName.Text" xml:space="preserve">
+    <value>Last name:</value>
+  </data>
+  <data name="rfvLastName.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="lblEmail.Text" xml:space="preserve">
+    <value>E-mail:</value>
+  </data>
+  <data name="rfvEmail.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="revEmail.ErrorMessage" xml:space="preserve">
+    <value>Please enter a valid email address.</value>
+  </data>
+  <data name="lblNumberOfTickets.Text" xml:space="preserve">
+    <value>Number of seats:</value>
+  </data>
+  <data name="rfvNumberOfTickets.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="rvNumberOfTickets.ErrorMessage" xml:space="preserve">
+    <value>Value between</value>
+  </data>
+  <data name="lblMessage.Text" xml:space="preserve">
+    <value>Additional Information:</value>
+  </data>
+  <data name="btnUpdateUserData.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="btnCloseUserData.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="lblAddUsersFromRole.Text" xml:space="preserve">
+    <value>Add users from roles:</value>
+  </data>
+  <data name="lblAddUsersFromRole.Help" xml:space="preserve">
+    <value>With the help of this option members of DNN security roles can be added as attendees.</value>
+  </data>
+  <data name="lbAddUsersFromRole.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Addusersfromroles.HeaderText" xml:space="preserve">
+    <value>Add users from roles:</value>
+  </data>
+  <data name="lbRoleRemove.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="lblSelectUserToAddToEvent.Text" xml:space="preserve">
+    <value>Add user:</value>
+  </data>
+  <data name="lblSelectUserToAddToEvent.Help" xml:space="preserve">
+    <value>With the help of this option a DNN user can be added as an attendee. User name is necessary.</value>
+  </data>
+  <data name="lbAddUserNameToEvent.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Userstoadd.HeaderText" xml:space="preserve">
+    <value>Users to add:</value>
+  </data>
+  <data name="lbUserPremissionRemove.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="btnAddUsersToEvent.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btnCloseAddUsersToEvent.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="lblEventPostName.Text" xml:space="preserve">
+    <value>Template name:</value>
+  </data>
+  <data name="lblEventPostName.Help" xml:space="preserve">
+    <value>Enter a name for a new invitation/reminder template.</value>
+  </data>
+  <data name="rfvEventPostName.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="lblSendToDNNRole.Text" xml:space="preserve">
+    <value>Send to users in roles:</value>
+  </data>
+  <data name="lblSendToDNNRole.Help" xml:space="preserve">
+    <value>Choose a security DNN role to which members the invitations/reminders will be sent. It is possible to add more DNN security roles.</value>
+  </data>
+  <data name="lbSendToDNNRole.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Sendtorole.HeaderText" xml:space="preserve">
+    <value>Send to role/s:</value>
+  </data>
+  <data name="lblSendToUserName.Text" xml:space="preserve">
+    <value>Send to user</value>
+  </data>
+  <data name="lblSendToUserName.Help" xml:space="preserve">
+    <value>Here you can choose a DNN user to whom the invitations/reminders will be sent.</value>
+  </data>
+  <data name="lbUsernameAdd.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Sendtousers.HeaderText" xml:space="preserve">
+    <value>Send to user/s:</value>
+  </data>
+  <data name="lblSendToEmail.Text" xml:space="preserve">
+    <value>Add e-mail:</value>
+  </data>
+  <data name="lblSendToEmail.Help" xml:space="preserve">
+    <value>Add e-mail.</value>
+  </data>
+  <data name="lbEmailAdd.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Sendtoemails.HeaderText" xml:space="preserve">
+    <value>Send to email/s:</value>
+  </data>
+  <data name="lblSendToEventAttendees.Text" xml:space="preserve">
+    <value>Send to event attendees:</value>
+  </data>
+  <data name="lblSendToEventAttendees.Help" xml:space="preserve">
+    <value>If this option is turned on then a reminder is sent to users who had registered to an event.</value>
+  </data>
+  <data name="lblEmailTemplateTheme.Text" xml:space="preserve">
+    <value>Predefined email template:</value>
+  </data>
+  <data name="lblEmailTemplateTheme.Help" xml:space="preserve">
+    <value>Here you can choose a predefined theme for invitation/reminder email formatting.</value>
+  </data>
+  <data name="btnEmailTemplate.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Createemailtemplate.Text" xml:space="preserve">
+    <value>Create email template</value>
+  </data>
+  <data name="Filename.Text" xml:space="preserve">
+    <value>File name:</value>
+  </data>
+  <data name="btnSaveEmailTemplate.Text" xml:space="preserve">
+    <value>Save template to file</value>
+  </data>
+  <data name="btnDeleteEmailTemplate.Text" xml:space="preserve">
+    <value>Delete selected template</value>
+  </data>
+  <data name="lblMailSubject.Text" xml:space="preserve">
+    <value>Email subject</value>
+  </data>
+  <data name="lblMailSubject.Help" xml:space="preserve">
+    <value>Enter a subject of invitation/reminder email.</value>
+  </data>
+  <data name="rfvMailSubject.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="lblEmailTemplateContent.Text" xml:space="preserve">
+    <value>Email content:</value>
+  </data>
+  <data name="lblEmailTemplateContent.Help" xml:space="preserve">
+    <value>Here you can in details edit the message of invitation/reminder email.</value>
+  </data>
+  <data name="lblSendingTime.Text" xml:space="preserve">
+    <value>Sending options:</value>
+  </data>
+  <data name="lblSendingTime.Help" xml:space="preserve">
+    <value>If the option 'Instant' is chosen, then the invitation/reminder is sent immediately after adding an event. If the option 'Time' is chosen, then we can specify time in advance when to send the invitations/reminders for a holding event. Enter the number of days and hours before the start of the event when the invitation needs to be sent.</value>
+  </data>
+  <data name="liInstant.Text" xml:space="preserve">
+    <value>Instant</value>
+  </data>
+  <data name="liTime.Text" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Days.Text" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="Hours.Text" xml:space="preserve">
+    <value>Hours:</value>
+  </data>
+  <data name="Minutes.Text" xml:space="preserve">
+    <value>Minutes:</value>
+  </data>
+  <data name="lblPostSettingsActive.Text" xml:space="preserve">
+    <value>Active:</value>
+  </data>
+  <data name="lblPostSettingsActive.Help" xml:space="preserve">
+    <value>If this option is turned on then this invitation/reminder template is active.</value>
+  </data>
+  <data name="btnAddPostSettings.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btnCloseAddPostSettings.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Name.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Sendtype.HeaderText" xml:space="preserve">
+    <value>Send type</value>
+  </data>
+  <data name="Status.HeaderText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Active.HeaderText" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="hlEdit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="lbDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Instant.Text" xml:space="preserve">
+    <value>Instant</value>
+  </data>
+  <data name="Before.Text" xml:space="preserve">
+    <value>before.</value>
+  </data>
+  <data name="Nostatus.Text" xml:space="preserve">
+    <value>No status</value>
+  </data>
+  <data name="Pending.Text" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="Sent.Text" xml:space="preserve">
+    <value>Sent</value>
+  </data>
+  <data name="Emaileventlinks.Text" xml:space="preserve">
+    <value>Email event links</value>
+  </data>
+  <data name="lblDefaultWhereToOpenContent.Text" xml:space="preserve">
+    <value>Module instance where links will be opened:</value>
+  </data>
+  <data name="lblDefaultWhereToOpenContent.Help" xml:space="preserve">
+    <value>Choose a module instance where the links from email will be opened (invitations, reminders and notifications)</value>
+  </data>
+  <data name="EmailNotificationTemplates.Text" xml:space="preserve">
+    <value>Email notification templates</value>
+  </data>
+  <data name="ApprovalNeeded.Text" xml:space="preserve">
+    <value>Approval needed</value>
+  </data>
+  <data name="lblapprovalNeededMailSubject.Text" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="lblapprovalNeededMailSubject.Help" xml:space="preserve">
+    <value>Here you can enter a subject of email notification which is sent when an approval is needed.</value>
+  </data>
+  <data name="rfvapprovalNeededMailSubject.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="lblapprovalNeededEmailTemplateTheme.Text" xml:space="preserve">
+    <value>Predefined email template:</value>
+  </data>
+  <data name="lblapprovalNeededEmailTemplateTheme.Help" xml:space="preserve">
+    <value>Select a theme for the content formatting of email notification which is sent when an approval is needed.</value>
+  </data>
+  <data name="btnapprovalNeededEmailTemplate.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="lblapprovalNeededEmailTemplateContent.Text" xml:space="preserve">
+    <value>Email content:</value>
+  </data>
+  <data name="lblapprovalNeededEmailTemplateContent.Help" xml:space="preserve">
+    <value>Here you can in details edit the message of email notification which is sent when an approval is needed.</value>
+  </data>
+  <data name="newEventRegistration.Text" xml:space="preserve">
+    <value>New event registration</value>
+  </data>
+  <data name="lblnewEventRegistrationMailSubject.Text" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="lblnewEventRegistrationMailSubject.Help" xml:space="preserve">
+    <value>Here you can enter a subject of email notification which is sent after a new registration.</value>
+  </data>
+  <data name="rfvnewEventRegistrationMailSubject.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="lblnewEventRegistrationEmailTemplateTheme.Text" xml:space="preserve">
+    <value>Predefined email template:</value>
+  </data>
+  <data name="lblnewEventRegistrationEmailTemplateTheme.Help" xml:space="preserve">
+    <value>Select a theme for the formatting email notification which is sent after a new registration.</value>
+  </data>
+  <data name="btnnewEventRegistrationEmailTemplate.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="lblnewEventRegistrationEmailTemplateContent.Text" xml:space="preserve">
+    <value>Email content:</value>
+  </data>
+  <data name="lblnewEventRegistrationEmailTemplateContent.Help" xml:space="preserve">
+    <value>Here you can in details edit the message of email notification which is sent after a new registration.</value>
+  </data>
+  <data name="verifyingRegistrationForUnregisteredUsers.Text" xml:space="preserve">
+    <value>Verifying registration for unregistered users</value>
+  </data>
+  <data name="lblverifyingRegistrationForUnregisteredUsersMailSubject.Text" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="lblverifyingRegistrationForUnregisteredUsersMailSubject.Help" xml:space="preserve">
+    <value>Here you can enter a subject of email notification which is sent when a registration is waiting for an approval.</value>
+  </data>
+  <data name="rfvverifyingRegistrationForUnregisteredUsersMailSubject.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="lblverifyingRegistrationForUnregisteredUsersEmailTemplateTheme.Text" xml:space="preserve">
+    <value>Predefined email template:</value>
+  </data>
+  <data name="lblverifyingRegistrationForUnregisteredUsersEmailTemplateTheme.Help" xml:space="preserve">
+    <value>Select a theme for the formatting email notification which is sent when a registration is waiting for an approval.</value>
+  </data>
+  <data name="btnverifyingRegistrationForUnregisteredUsersEmailTemplate.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="lblverifyingRegistrationForUnregisteredUsersEmailTemplateContent.Text" xml:space="preserve">
+    <value>Email content:</value>
+  </data>
+  <data name="lblverifyingRegistrationForUnregisteredUsersEmailTemplateContent.Help" xml:space="preserve">
+    <value>Here you can in details edit the message of email notification which is sent when a registration is waiting for an approval.</value>
+  </data>
+  <data name="awaitingRegistrationApproval.Text" xml:space="preserve">
+    <value>Awaiting registration approval</value>
+  </data>
+  <data name="lblAwaitingRegistrationApprovalMailSubject.Text" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="lblAwaitingRegistrationApprovalMailSubject.Help" xml:space="preserve">
+    <value>Enter a subject of email notification which is sent when a registration is rejected</value>
+  </data>
+  <data name="rfvAwaitingRegistrationApprovalMailSubject.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="lblAwaitingRegistrationApprovalEmailTemplateTheme.Text" xml:space="preserve">
+    <value>Predefined email template:</value>
+  </data>
+  <data name="lblAwaitingRegistrationApprovalEmailTemplateTheme.Help" xml:space="preserve">
+    <value>Select a theme for formatting email notification which is sent when a registration is rejected</value>
+  </data>
+  <data name="btnAwaitingRegistrationApprovalEmailTemplate.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="lblAwaitingRegistrationApprovalEmailTemplateContent.Text" xml:space="preserve">
+    <value>Email content:</value>
+  </data>
+  <data name="lblAwaitingRegistrationApprovalEmailTemplateContent.Help" xml:space="preserve">
+    <value>Here you can in details edit the message of notification email which is sent when a registration is rejected.</value>
+  </data>
+  <data name="rejectRegistration.Text" xml:space="preserve">
+    <value>Rejected registration</value>
+  </data>
+  <data name="lblrejectRegistrationMailSubject.Text" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="lblrejectRegistrationMailSubject.Help" xml:space="preserve">
+    <value>Enter a subject of email notification which is sent when a registration is rejected.</value>
+  </data>
+  <data name="rfvrejectRegistrationMailSubject.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="lblrejectRegistrationEmailTemplateTheme.Text" xml:space="preserve">
+    <value>Predefined email template:</value>
+  </data>
+  <data name="lblrejectRegistrationEmailTemplateTheme.Help" xml:space="preserve">
+    <value>Select a theme for formatting email notification which is sent when a registration is rejected.</value>
+  </data>
+  <data name="btnrejectRegistrationEmailTemplate.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="lblrejectRegistrationEmailTemplateContent.Text" xml:space="preserve">
+    <value>Email content:</value>
+  </data>
+  <data name="lblrejectRegistrationEmailTemplateContent.Help" xml:space="preserve">
+    <value>Here you can in details edit the message of notification email which is sent when a registration is rejected.</value>
+  </data>
+  <data name="confirmRegistration.Text" xml:space="preserve">
+    <value>Confirmed registration</value>
+  </data>
+  <data name="lblconfirmRegistrationMailSubject.Text" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="lblconfirmRegistrationMailSubject.Help" xml:space="preserve">
+    <value>Enter a subject of email notification which is sent after a successful registration.</value>
+  </data>
+  <data name="rfvconfirmRegistrationMailSubject.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="lblconfirmRegistrationEmailTemplateTheme.Text" xml:space="preserve">
+    <value>Predefined email template:</value>
+  </data>
+  <data name="lblconfirmRegistrationEmailTemplateTheme.Help" xml:space="preserve">
+    <value>Select a theme for formatting email notification which is sent after a successful registration.</value>
+  </data>
+  <data name="btnconfirmRegistrationEmailTemplate.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="lblconfirmRegistrationEmailTemplateContent.Text" xml:space="preserve">
+    <value>Email content:</value>
+  </data>
+  <data name="lblconfirmRegistrationEmailTemplateContent.Help" xml:space="preserve">
+    <value>Here you can in details edit the message of notification email which is sent after successful registration.</value>
+  </data>
+  <data name="emailSettings.Text" xml:space="preserve">
+    <value>Email settings</value>
+  </data>
+  <data name="lblDefaultFromName.Text" xml:space="preserve">
+    <value>From name</value>
+  </data>
+  <data name="lblDefaultFromName.Help" xml:space="preserve">
+    <value>Enter a name which will be on your outgoing emails.</value>
+  </data>
+  <data name="rfvDefaultFromName.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="lblDefaultFromMail.Text" xml:space="preserve">
+    <value>From email:</value>
+  </data>
+  <data name="lblDefaultFromMail.Help" xml:space="preserve">
+    <value>Enter your outgoing email.</value>
+  </data>
+  <data name="rfvDefaultFromMail.ErrorMessage" xml:space="preserve">
+    <value>Required!</value>
+  </data>
+  <data name="lblDefaultReplyTo.Text" xml:space="preserve">
+    <value>Replay to:</value>
+  </data>
+  <data name="lblDefaultReplyTo.Help" xml:space="preserve">
+    <value>Enter a replay email here, if it is different from outgoing email.</value>
+  </data>
+  <data name="btnSaveEmailSettings.Text" xml:space="preserve">
+    <value>Save settings:</value>
+  </data>
+  <data name="emailLog.Text" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="Editattendees.Text" xml:space="preserve">
+    <value>Edit attendees</value>
+  </data>
+  <data name="Eventlist.Text" xml:space="preserve">
+    <value>Event list</value>
+  </data>
+  <data name="Attendees.Text" xml:space="preserve">
+    <value>Attendees</value>
+  </data>
+  <data name="Addattendees.Text" xml:space="preserve">
+    <value>Add attendees</value>
+  </data>
+  <data name="Registrationsaredisabled.Text" xml:space="preserve">
+    <value>Registrations are disabled.</value>
+  </data>
+  <data name="Registrationsareenabled.Text" xml:space="preserve">
+    <value>Registrations are enabled.</value>
+  </data>
+  <data name="Unlimitedseats.Text" xml:space="preserve">
+    <value>Unlimited seats!</value>
+  </data>
+  <data name="Nomoreseatsavailable.Text" xml:space="preserve">
+    <value>No more seats available</value>
+  </data>
+  <data name="Seatsleft.Text" xml:space="preserve">
+    <value>Seats left:</value>
+  </data>
+  <data name="Editattendee.Text" xml:space="preserve">
+    <value>Edit attendee</value>
+  </data>
+  <data name="Edituser.Text" xml:space="preserve">
+    <value>Edit user</value>
+  </data>
+  <data name="EventInvitations.Text" xml:space="preserve">
+    <value>Event Invitations</value>
+  </data>
+  <data name="Editinvitations.Text" xml:space="preserve">
+    <value>Edit invitations</value>
+  </data>
+  <data name="Invitationsdefaultsettings.Text" xml:space="preserve">
+    <value>Invitations default settings</value>
+  </data>
+  <data name="EventReminders.Text" xml:space="preserve">
+    <value>Event Reminders</value>
+  </data>
+  <data name="Editreminders.Text" xml:space="preserve">
+    <value>Edit reminders</value>
+  </data>
+  <data name="Remindersdefaultsettings.Text" xml:space="preserve">
+    <value>Reminders default settings</value>
+  </data>
+  <data name="Addinvitationsettings.Text" xml:space="preserve">
+    <value>Add invitation settings</value>
+  </data>
+  <data name="Addinvitationdefaultsettings.Text" xml:space="preserve">
+    <value>Add invitation default settings</value>
+  </data>
+  <data name="Addremindersettings.Text" xml:space="preserve">
+    <value>Add reminder settings</value>
+  </data>
+  <data name="Addreminderdefaultsettings.Text" xml:space="preserve">
+    <value>Add reminder default settings</value>
+  </data>
+  <data name="NoNewsInstance.Text" xml:space="preserve">
+    <value>No News Instance</value>
+  </data>
+  <data name="Editeventinvitation.Text" xml:space="preserve">
+    <value>Edit invitation</value>
+  </data>
+  <data name="Editinvitationsdefaultsetting.Text" xml:space="preserve">
+    <value>Edit invitations default setting</value>
+  </data>
+  <data name="Update.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Editeventreminders.Text" xml:space="preserve">
+    <value>Edit event reminders</value>
+  </data>
+  <data name="Editremindersdefaultsetting.Text" xml:space="preserve">
+    <value>Edit reminders default setting</value>
+  </data>
+  <data name="Select.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Addanewinvitation.Text" xml:space="preserve">
+    <value>Add a new invitation</value>
+  </data>
+  <data name="Addanewreminder.Text" xml:space="preserve">
+    <value>Add a new reminder</value>
+  </data>
+  <data name="Openin.Text" xml:space="preserve">
+    <value>Open in</value>
+  </data>
+  <data name="PermissionDenied.Text" xml:space="preserve">
+    <value>Permission denied.</value>
+  </data>
+  <data name="Donthavepermissionstoregistertoevent.Text" xml:space="preserve">
+    <value>Don't have permissions to register to event!</value>
+  </data>
+  <data name="Userisnotregistredtoevent.Text" xml:space="preserve">
+    <value>User is not registred to event!</value>
+  </data>
+  <data name="Trytorefreshpagesomethingwentwrong.Text" xml:space="preserve">
+    <value>Try to refresh page, something went wrong!</value>
+  </data>
+  <data name="Firstnamerequired.Text" xml:space="preserve">
+    <value>First name required!</value>
+  </data>
+  <data name="Lastnamerequired.Text" xml:space="preserve">
+    <value>Last name required!</value>
+  </data>
+  <data name="Emailrequired.Text" xml:space="preserve">
+    <value>E-mail required!</value>
+  </data>
+  <data name="Enternumberoftickets.Text" xml:space="preserve">
+    <value>Enter number of tickets!</value>
+  </data>
+  <data name="Numberofticketsmustbebetween.Text" xml:space="preserve">
+    <value>Number of tickets must be between </value>
+  </data>
+  <data name="And.Text" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="Updated.Text" xml:space="preserve">
+    <value>Updated</value>
+  </data>
+  <data name="Roledoesntexist.Text" xml:space="preserve">
+    <value>Role doesn't exist.</value>
+  </data>
+  <data name="Rolealreadyaddedtolist.Text" xml:space="preserve">
+    <value>Role already added to list</value>
+  </data>
+  <data name="Role_.Text" xml:space="preserve">
+    <value>Rola</value>
+  </data>
+  <data name="Addedtolist.Text" xml:space="preserve">
+    <value>added to list.</value>
+  </data>
+  <data name="Userdoesntexist.Text" xml:space="preserve">
+    <value>User doesn't exist.</value>
+  </data>
+  <data name="Useralreadyaddedtolist.Text" xml:space="preserve">
+    <value>User already added to list.</value>
+  </data>
+  <data name="User_.Text" xml:space="preserve">
+    <value>User </value>
+  </data>
+  <data name="Emailnotvalid.Text" xml:space="preserve">
+    <value>Email not valid.</value>
+  </data>
+  <data name="Emailalreadyaddedtolist.Text" xml:space="preserve">
+    <value>Email already added to list.</value>
+  </data>
+  <data name="Email_.Text" xml:space="preserve">
+    <value>Email </value>
+  </data>
+  <data name="Wronglink.Text" xml:space="preserve">
+    <value>Wrong link.</value>
+  </data>
+  <data name="Emailtemplateisempty.Text" xml:space="preserve">
+    <value>E-mail template is empty. Template must contain some message.</value>
+  </data>
+  <data name="Emailsubjectisrequired.Text" xml:space="preserve">
+    <value>E-mail subject is required.</value>
+  </data>
+  <data name="Settingsnameisrequired.Text" xml:space="preserve">
+    <value>Settings name is required.</value>
+  </data>
+  <data name="Nooneisselected.Text" xml:space="preserve">
+    <value>No one is selected. No recipient was selected.</value>
+  </data>
+  <data name="Intervalnotproperlyset.Text" xml:space="preserve">
+    <value>Interval not properly set.</value>
+  </data>
+  <data name="Settingsnotsaved.Text" xml:space="preserve">
+    <value>Settings not saved. Contact support.</value>
+  </data>
+  <data name="Settingsupdated.Text" xml:space="preserve">
+    <value>Settings updated</value>
+  </data>
+  <data name="Alreadyregistredtoevent.Text" xml:space="preserve">
+    <value>Already registred to event.</value>
+  </data>
+  <data name="Alreadyregistredtoeventbutnotapproved.Text" xml:space="preserve">
+    <value>Already registred to event but not approved.</value>
+  </data>
+  <data name="Alreadyregistredtoeventbutrejected.Text" xml:space="preserve">
+    <value>Already registred to event but rejected.</value>
+  </data>
+  <data name="Mustrefreshpagesessionexpired.Text" xml:space="preserve">
+    <value>Must refresh page, session expired.</value>
+  </data>
+  <data name="Selectatleastoneuserorrole.Text" xml:space="preserve">
+    <value>Select at least one user or role.</value>
+  </data>
+  <data name="Usersaddedtoevent.Text" xml:space="preserve">
+    <value>Users added to event</value>
+  </data>
+  <data name="NoMatchingArticles.Text" xml:space="preserve">
+    <value>No matching articles.</value>
+  </data>
+  <data name="RegistrationID.Text" xml:space="preserve">
+    <value>RegistrationID</value>
+  </data>
+  <data name="locID.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Filenamerequired.Text" xml:space="preserve">
+    <value>File name required.</value>
+  </data>
+  <data name="Filenamehasunsuportedcharacters.Text" xml:space="preserve">
+    <value>File name has unsuported characters.</value>
+  </data>
+  <data name="Filenamecanhavemax100characters.Text" xml:space="preserve">
+    <value>File name can have max 100 characters.</value>
+  </data>
+  <data name="Nonewsinstanceselectedforwheretoopenlink.Text" xml:space="preserve">
+    <value>No news instance selected for where to open link.</value>
+  </data>
+  <data name="Fromnamerequired.Text" xml:space="preserve">
+    <value>From name required.</value>
+  </data>
+  <data name="Frommailrequired.Text" xml:space="preserve">
+    <value>From mail required.</value>
+  </data>
+  <data name="Frommailnotvalid.Text" xml:space="preserve">
+    <value>From mail not valid</value>
+  </data>
+  <data name="Replytomailrequired.Text" xml:space="preserve">
+    <value>Reply to mail required.</value>
+  </data>
+  <data name="Replytomailnotvalid.Text" xml:space="preserve">
+    <value>Reply to mail not valid.</value>
+  </data>
+  <data name="Emailsubjectrequired.Text" xml:space="preserve">
+    <value>E-mail subject required</value>
+  </data>
+  <data name="Emailcontentrequired.Text" xml:space="preserve">
+    <value>E-mail content required.</value>
+  </data>
+  <data name="Settingssaved.Text" xml:space="preserve">
+    <value>Settings saved.</value>
+  </data>
+  <data name="Emailsetttings.Text" xml:space="preserve">
+    <value>Email setttings</value>
+  </data>
+  <data name="DefaultInvitations.Text" xml:space="preserve">
+    <value>Default Invitations</value>
+  </data>
+  <data name="DefaultReminders.Text" xml:space="preserve">
+    <value>Default Reminders</value>
+  </data>
+  <data name="Userfullname.Text" xml:space="preserve">
+    <value>User full name</value>
+  </data>
+  <data name="Usersemail.Text" xml:space="preserve">
+    <value>Users email</value>
+  </data>
+  <data name="Qnt.Text" xml:space="preserve">
+    <value>Qnt.</value>
+  </data>
+  <data name="Isrecurringevent.Text" xml:space="preserve">
+    <value>Is recurring event</value>
+  </data>
+  <data name="RecurringID.Text" xml:space="preserve">
+    <value>RecurringID</value>
+  </data>
+  <data name="Sendtype.Text" xml:space="preserve">
+    <value>Send type</value>
+  </data>
+  <data name="Status.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Editevent.Text" xml:space="preserve">
+    <value>Edit event</value>
+  </data>
+  <data name="Startdate.Text" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="Enddate.Text" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="Activeregistration.Text" xml:space="preserve">
+    <value>Active registration</value>
+  </data>
+  <data name="Delateregistration.Text" xml:space="preserve">
+    <value>Delate registration</value>
+  </data>
+  <data name="Seats.HeaderText" xml:space="preserve">
+    <value>Seats</value>
+  </data>
+  <data name="Isreccuringevent.Text" xml:space="preserve">
+    <value>Is reccuring event</value>
+  </data>
+  <data name="UserStatusMaybe.Text" xml:space="preserve">
+    <value>&lt;b&gt;Attending:&lt;/b&gt; maybe</value>
+  </data>
+  <data name="UserStatusNo.Text" xml:space="preserve">
+    <value>&lt;b&gt;Attending:&lt;/b&gt; no</value>
+  </data>
+  <data name="UserStatusYes.Text" xml:space="preserve">
+    <value>&lt;b&gt;Attending:&lt;/b&gt; yes</value>
+  </data>
+  <data name="lblUserStatus.Text" xml:space="preserve">
+    <value>Is user going:</value>
+  </data>
+  <data name="liMaybe.Text" xml:space="preserve">
+    <value>Maybe</value>
+  </data>
+  <data name="liNo.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="liYes.Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+</root>

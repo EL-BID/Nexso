@@ -1,0 +1,140 @@
+﻿IF NOT EXISTS (SELECT UpdateVersion FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate] WHERE UpdateVersion = '06.03.05')
+BEGIN
+	INSERT {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate]([UpdateVersion],[Finished]) VALUES(N'06.03.05',0)
+END
+GO
+/**** Portal settings *****/
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleAuthorCommentApproveConfirm')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ArticleAuthorCommentApproveConfirm BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsPortalSettings_ArticleAuthorCommentApproveConfirm DEFAULT(0) NOT NULL
+END
+GO
+
+/*** OLD COUNT SP REMOVE ***/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsGetEventsCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNnewsGetEventsCount]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsGetArticlesCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNnewsGetArticlesCount]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsGetAllContentCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNnewsGetAllContentCount]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsSearchEventsCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNnewsSearchEventsCount]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsSearchArticlesCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNnewsSearchArticlesCount]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsSearchAllContentCount]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNnewsSearchAllContentCount]
+GO
+
+/*** New calendar option show/hide portal timezone ***/
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowUpcomingEventsPortalTimeZone')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowUpcomingEventsPortalTimeZone BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsCalendarSettings_ShowUpcomingEventsPortalTimeZone DEFAULT(0) NOT NULL
+END
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowCalendarPortalTimeZone')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowCalendarPortalTimeZone BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsCalendarSettings_ShowCalendarPortalTimeZone DEFAULT(0) NOT NULL
+END
+GO
+
+/*** New filter option ***/
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsWidgetsFilterMenu' and column_name = 'UseANDOperatorByCategory')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsWidgetsFilterMenu] ADD UseANDOperatorByCategory BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsWidgetsFilterMenu_UseANDOperatorByCategory DEFAULT(0) NOT NULL
+END
+GO
+
+/*** News Category for gallaries - option ***/
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'GalleryCategoryID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD GalleryCategoryID INT CONSTRAINT DF_{objectQualifier}EasyDNNNewsPortalSettings_GalleryCategoryID NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'GalleryCategoryID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD GalleryCategoryID INT CONSTRAINT DF_{objectQualifier}EasyDNNNewsModuleSettings_GalleryCategoryID NULL
+END
+GO
+
+
+/*** new gallery fields added because gravity gallery ***/
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsPortalSettings_EasyGalleryCategoryID]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD CONSTRAINT [FK_{objectQualifier}EasyDNNNewsPortalSettings_EasyGalleryCategoryID] FOREIGN KEY([GalleryCategoryID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyGalleryCategory] ([CategoryID])
+ON DELETE SET NULL
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsModuleSettings_EasyGalleryCategoryID]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD CONSTRAINT [FK_{objectQualifier}EasyDNNNewsModuleSettings_EasyGalleryCategoryID] FOREIGN KEY([GalleryCategoryID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyGalleryCategory] ([CategoryID])
+ON DELETE SET NULL
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyGallery' and column_name = 'PublishDate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyGallery] ADD PublishDate DATETIME NOT NULL DEFAULT GETUTCDATE();
+	EXECUTE sp_executesql N'UPDATE {databaseOwner}[{objectQualifier}EasyGallery] SET PublishDate = DateCreated';
+END
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyGallery' and column_name = 'ExpireDate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyGallery] ADD ExpireDate DATETIME NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyGallery' and column_name = 'Active')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyGallery] ADD Active BIT CONSTRAINT DF_{objectQualifier}EasyGallery_Active DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyGallery' and column_name = 'Approved')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyGallery] ADD Approved BIT CONSTRAINT DF_{objectQualifier}EasyGallery_Approved DEFAULT(1) NOT NULL
+END
+GO
+
+BEGIN TRY
+	EXECUTE sp_executesql N'
+	UPDATE eg SET eg.Active = n.Active, eg.Approved = n.Approved, eg.PublishDate = n.PublishDate, eg.ExpireDate = n.ExpireDate
+	FROM {databaseOwner}[{objectQualifier}EasyGallery] AS eg
+	INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNews] AS n ON eg.GalleryID = n.ArticleGalleryID';
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+
+/*** News satellite visibility option ***/
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'Visibility')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD Visibility TINYINT CONSTRAINT DF_{objectQualifier}EasyDNNNewsCalendarSettings_Visibility DEFAULT(0) NOT NULL;
+END
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'Visibility')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD Visibility TINYINT CONSTRAINT DF_{objectQualifier}EasyDNNNewsMenuSettings_Visibility DEFAULT(0) NOT NULL;
+END
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'Visibility')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD Visibility TINYINT CONSTRAINT DF_{objectQualifier}EasyDNNNewsTagCloudSettings_Visibility DEFAULT(0) NOT NULL;
+END
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'Visibility')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD Visibility TINYINT CONSTRAINT DF_{objectQualifier}EasyDNNNewsSearchSettings_Visibility DEFAULT(0) NOT NULL;
+END
+GO

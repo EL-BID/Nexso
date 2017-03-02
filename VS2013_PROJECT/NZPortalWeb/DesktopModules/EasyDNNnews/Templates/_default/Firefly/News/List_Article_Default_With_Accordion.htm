@@ -1,0 +1,61 @@
+<!--TemplateGroup:listArticleSimpleAccordion-->
+<!--ArticleTemplate-->
+<div class="EDN_article edsAccordion_section">
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	<h3 class="edsAccordion_title">[EasyDNNnews:Title]</h3>
+	<div class="edsAccordion_contentWrapper">
+		<div class="edsAccordion_content">
+			[EasyDNNnews:IfExists:Event]
+			<div class="EDN_event-location-container">
+				<p class="EDN_event-date"><strong>[EasyDNNnewsLocalizedText:Eventdate]:</strong> [EasyDNNnews:EventDate][EasyDNNnews:IfExists:EventRegistration], (<a href="[EasyDNNnews:ReadMore]" title="[EasyDNNnews:Title]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnewsLocalizedText:Register]</a>)[EasyDNNnews:EndIf:EventRegistration]</p>
+			</div>
+			[EasyDNNnews:EndIf:Event]
+			<div class="EDN_article-content">
+				[EasyDNNnews:IfExists:SubTitle]
+				<h3 class="article-subtitle">[EasyDNNnews:SubTitle]</h3>
+				[EasyDNNnews:EndIf:SubTitle]
+				[EasyDNNnews:IfExists:Image]
+				<div class="EDN_image-container">
+					<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]"/></a>
+				</div>
+				[EasyDNNnews:EndIf:Image]
+				<div class="EDN_summary">
+					[EasyDNNnews:Summary]
+				</div>
+				<div class="EDN_clear"></div>
+				[EasyDNNnews:DocumentList]
+				[EasyDNNnews:Links]
+				<div class="EDN_readMoreWrapper"><a class="EDN_readmore EDN_readMoreButton" href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnewsLocalizedText:Read]</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--ArticleEnd-->
+<!--ArticleRepeat:Before:-->
+<div class="edsAccordion">
+	<script src="[EasyDNNnews:ClientBasePath]/DesktopModules/EasyDNNnews/static/edsAccordion/edsAccordion-1.0.js"></script>
+	<script>
+		jQuery(function ($) {
+			$('div.edsAccordion').edsAccordion_1();
+			//For first opened article remove comment tag from lines bellow
+			//$('> .EDN_article', $('div.edn_[EasyDNNnews:ModuleID]_article_list_wrapper'))
+			//	.eq(0)
+			//		.addClass('edsAccordion_active');
+		});
+	</script>
+<!--RepeatEnd:Before:-->
+
+<!--ArticleRepeat:After:-->
+</div>
+[EasyDNNnews:IfExists:RSS]
+<div class="EDN_article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

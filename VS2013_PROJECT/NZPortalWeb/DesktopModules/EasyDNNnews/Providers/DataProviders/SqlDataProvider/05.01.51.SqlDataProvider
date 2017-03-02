@@ -1,0 +1,265 @@
+﻿/***
+There is no object qualifier on indexes
+Deletes indexes for tables:
+ EasyDNNNews,
+ EasyDNNNewsUserPremissionSettings,
+ EasyDNNNewsRolePremissionSettings,
+ EasyDNNNewsCategories,
+ EasyDNNNewsCategoryList,
+ EasyDNNNewsComments
+ ***/
+
+/*** EasyDNNNews table indexes ***/
+
+if '{objectQualifier}' <> ''
+BEGIN
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_Wizard_Suggestion')
+    DROP INDEX IX_EasyDNNNews_Wizard_Suggestion ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_Wizard_Suggestion2')
+    DROP INDEX IX_EasyDNNNews_Wizard_Suggestion2 ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_Wizard_Suggestion3')
+    DROP INDEX IX_EasyDNNNews_Wizard_Suggestion3 ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_Wizard_Suggestion4')
+    DROP INDEX IX_EasyDNNNews_Wizard_Suggestion4 ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_PortalID_HasPermissions_HideDefaultLocale')
+    DROP INDEX IX_EasyDNNNews_PortalID_HasPermissions_HideDefaultLocale ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_PortalID')
+    DROP INDEX IX_EasyDNNNews_PortalID ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_UserID')
+    DROP INDEX IX_EasyDNNNews_UserID ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_Approved')
+    DROP INDEX IX_EasyDNNNews_Approved ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_Active')
+    DROP INDEX IX_EasyDNNNews_Active ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_HasPermissions')
+    DROP INDEX IX_EasyDNNNews_HasPermissions ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_EventArticle')
+    DROP INDEX IX_EasyDNNNews_EventArticle ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_Featured')
+    DROP INDEX IX_EasyDNNNews_Featured ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_FK_ArticleGalleryID')
+    DROP INDEX IX_EasyDNNNews_FK_ArticleGalleryID ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_PublishDate')
+    DROP INDEX IX_EasyDNNNews_PublishDate ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_ExpireDate')
+    DROP INDEX IX_EasyDNNNews_ExpireDate ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNews_HideDefaultLocale')
+    DROP INDEX IX_EasyDNNNews_HideDefaultLocale ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+
+/*** EasyDNNNewsUserPremissionSettings table indexes ***/
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EDNUserPremissionSettings_FK_UserID')
+    DROP INDEX IX_EDNUserPremissionSettings_FK_UserID ON {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EDNUserPremissionSettings_FK_ModuleID')
+    DROP INDEX IX_EDNUserPremissionSettings_FK_ModuleID ON {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EDNUserPremissionSettings_FK_PortalID')
+    DROP INDEX IX_EDNUserPremissionSettings_FK_PortalID ON {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings];
+
+/*** EasyDNNNewsRolePremissionSettings table indexes ***/
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EDNRolePremissionSettings_FK_RoleID')
+    DROP INDEX IX_EDNRolePremissionSettings_FK_RoleID ON {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EDNRolePremissionSettings_FK_ModuleID')
+    DROP INDEX IX_EDNRolePremissionSettings_FK_ModuleID ON {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EDNRolePremissionSettings_FK_PortalID')
+    DROP INDEX IX_EDNRolePremissionSettings_FK_PortalID ON {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings];
+
+/*** EasyDNNNewsCategories table indexes ***/
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNewsCategories_FK_ArticleID')
+    DROP INDEX IX_EasyDNNNewsCategories_FK_ArticleID ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategories];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNewsCategories_FK_CategoryID')
+    DROP INDEX IX_EasyDNNNewsCategories_FK_CategoryID ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategories];
+
+/*** EasyDNNNewsCategoryList table indexes ***/
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNewsCategoryList_PortalID')
+    DROP INDEX IX_EasyDNNNewsCategoryList_PortalID ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList];
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNewsCategoryList_ParentCategory')
+    DROP INDEX IX_EasyDNNNewsCategoryList_ParentCategory ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList];
+
+/*** EasyDNNNewsComments table indexes ***/
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_EasyDNNNewsComments_FK_ArticleID')
+    DROP INDEX IX_EasyDNNNewsComments_FK_ArticleID ON {databaseOwner}[{objectQualifier}EasyDNNNewsComments];
+
+END
+GO
+
+/***
+Creates indexes for tables:
+ EasyDNNNews,
+ EasyDNNNewsUserPremissionSettings,
+ EasyDNNNewsRolePremissionSettings,
+ EasyDNNNewsCategories,
+ EasyDNNNewsCategoryList,
+ EasyDNNNewsComments
+ ***/
+
+/*** EasyDNNNews table indexes ***/
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_Wizard_Suggestion')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_Wizard_Suggestion ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE INDEX IX_{objectQualifier}EasyDNNNews_Wizard_Suggestion ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([PortalID], [HasPermissions], [HideDefaultLocale], [Approved], [Active], [PublishDate], [ExpireDate]) INCLUDE ([ArticleID], [UserID], [ArticleImage], [Featured])
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_Wizard_Suggestion2')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_Wizard_Suggestion2 ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE INDEX IX_{objectQualifier}EasyDNNNews_Wizard_Suggestion2 ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([PortalID], [HasPermissions], [EventArticle], [HideDefaultLocale], [PublishDate], [ExpireDate]) INCLUDE ([ArticleID], [UserID], [Approved], [Active])
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_Wizard_Suggestion3')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_Wizard_Suggestion3 ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE INDEX IX_{objectQualifier}EasyDNNNews_Wizard_Suggestion3 ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([PortalID], [HideDefaultLocale], [PublishDate], [ExpireDate]) INCLUDE ([ArticleID], [UserID])
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_Wizard_Suggestion4')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_Wizard_Suggestion4 ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE INDEX IX_{objectQualifier}EasyDNNNews_Wizard_Suggestion4 ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([PortalID], [UserID], [Approved], [Active], [PublishDate], [ExpireDate])
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_PortalID_HasPermissions_HideDefaultLocale')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_PortalID_HasPermissions_HideDefaultLocale ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNews_PortalID_HasPermissions_HideDefaultLocale] ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([PortalID] ASC, [HasPermissions] ASC,[HideDefaultLocale] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_PortalID')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_PortalID ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNews_PortalID] ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([PortalID] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_UserID')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_UserID ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNews_UserID] ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([UserID] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_Approved')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_Approved ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNews_Approved] ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([Approved] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_Active')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_Active ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNews_Active] ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([Active] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_HasPermissions')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_HasPermissions ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNews_HasPermissions] ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([HasPermissions] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_EventArticle')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_EventArticle ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNews_EventArticle] ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([EventArticle] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_Featured')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_Featured ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNews_Featured] ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([Featured] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_FK_ArticleGalleryID')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_FK_ArticleGalleryID ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = 'EasyDNNNews' and column_name = 'ArticleGalleryID') -- for v4
+	CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNews_FK_ArticleGalleryID] ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([ArticleGalleryID] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_PublishDate')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_PublishDate ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNews_PublishDate] ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([PublishDate] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_ExpireDate')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_ExpireDate ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNews_ExpireDate] ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([ExpireDate] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNews_HideDefaultLocale')
+    DROP INDEX IX_{objectQualifier}EasyDNNNews_HideDefaultLocale ON {databaseOwner}[{objectQualifier}EasyDNNNews];
+GO
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = 'EasyDNNNews' and column_name = 'HideDefaultLocale') -- for v4
+	CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNews_HideDefaultLocale] ON {databaseOwner}[{objectQualifier}EasyDNNNews] ([HideDefaultLocale] ASC)
+GO
+ALTER INDEX ALL ON {databaseOwner}[{objectQualifier}EasyDNNNews] REBUILD
+GO
+
+/*** EasyDNNNewsUserPremissionSettings table indexes ***/
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EDNUserPremissionSettings_FK_UserID')
+    DROP INDEX IX_{objectQualifier}EDNUserPremissionSettings_FK_UserID ON {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EDNUserPremissionSettings_FK_UserID] ON {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ([UserID] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EDNUserPremissionSettings_FK_ModuleID')
+    DROP INDEX IX_{objectQualifier}EDNUserPremissionSettings_FK_ModuleID ON {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EDNUserPremissionSettings_FK_ModuleID] ON {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ([ModuleID] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EDNUserPremissionSettings_FK_PortalID')
+    DROP INDEX IX_{objectQualifier}EDNUserPremissionSettings_FK_PortalID ON {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EDNUserPremissionSettings_FK_PortalID] ON {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ([PortalID] ASC)
+GO
+ALTER INDEX ALL ON {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] REBUILD
+GO
+
+/*** EasyDNNNewsRolePremissionSettings table indexes ***/
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EDNRolePremissionSettings_FK_RoleID')
+    DROP INDEX IX_{objectQualifier}EDNRolePremissionSettings_FK_RoleID ON {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EDNRolePremissionSettings_FK_RoleID] ON {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ([RoleID] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EDNRolePremissionSettings_FK_ModuleID')
+    DROP INDEX IX_{objectQualifier}EDNRolePremissionSettings_FK_ModuleID ON {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EDNRolePremissionSettings_FK_ModuleID] ON {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ([ModuleID] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EDNRolePremissionSettings_FK_PortalID')
+    DROP INDEX IX_{objectQualifier}EDNRolePremissionSettings_FK_PortalID ON {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EDNRolePremissionSettings_FK_PortalID] ON {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ([PortalID] ASC)
+GO
+ALTER INDEX ALL ON {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] REBUILD
+GO
+
+/*** EasyDNNNewsCategories table indexes ***/
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNewsCategories_FK_ArticleID')
+    DROP INDEX IX_{objectQualifier}EasyDNNNewsCategories_FK_ArticleID ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategories];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNewsCategories_FK_ArticleID] ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] ([ArticleID] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNewsCategories_FK_CategoryID')
+    DROP INDEX IX_{objectQualifier}EasyDNNNewsCategories_FK_CategoryID ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategories];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNewsCategories_FK_CategoryID] ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] ([CategoryID] ASC)
+GO
+ALTER INDEX ALL ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] REBUILD
+GO
+
+/*** EasyDNNNewsCategoryList table indexes ***/
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNewsCategoryList_PortalID')
+    DROP INDEX IX_{objectQualifier}EasyDNNNewsCategoryList_PortalID ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNewsCategoryList_PortalID] ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] ([PortalID] ASC)
+GO
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNewsCategoryList_ParentCategory')
+    DROP INDEX IX_{objectQualifier}EasyDNNNewsCategoryList_ParentCategory ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNewsCategoryList_ParentCategory] ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] ([ParentCategory] ASC)
+GO
+ALTER INDEX ALL ON {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] REBUILD
+GO
+
+/*** EasyDNNNewsComments table indexes ***/
+
+IF EXISTS (SELECT name FROM sys.indexes WHERE name = N'IX_{objectQualifier}EasyDNNNewsComments_FK_ArticleID')
+    DROP INDEX IX_{objectQualifier}EasyDNNNewsComments_FK_ArticleID ON {databaseOwner}[{objectQualifier}EasyDNNNewsComments];
+GO
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}EasyDNNNewsComments_FK_ArticleID] ON {databaseOwner}[{objectQualifier}EasyDNNNewsComments] ([ArticleID] ASC)
+GO
+ALTER INDEX ALL ON {databaseOwner}[{objectQualifier}EasyDNNNewsComments] REBUILD
+

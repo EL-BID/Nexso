@@ -1,0 +1,64 @@
+<!--TemplateGroup:listArticleInBox2-->
+<!--ArticleRepeat:Before:-->
+<script src="[EasyDNNnews:ClientBasePath]/DesktopModules/EasyDNNnews/static/isotope2/isotope.v2.0.0-beta.4.min.js"></script>
+<script src="[EasyDNNnews:ClientBasePath]/DesktopModules/EasyDNNnews/static/imagesLoaded/imagesLoaded_3.1.4.min.js"></script>
+<script>
+	eds1_8(function ($) {
+		var $articleListContainer = $('.edn_[EasyDNNnews:ModuleID]_article_list_wrapper'),
+			imageLoadedKey = 'imageLoaded';
+
+		$articleListContainer
+			.isotope({
+				itemSelector: '.edn_articleWrapper',
+				sortBy: 'original-order',
+				masonry: {
+					isFitWidth: true
+				}
+			})
+			.find('img').imagesLoaded()
+				.progress(function (instance, image) {
+					var $img = $(image.img);
+
+					if ($img.data(imageLoadedKey))
+						return;
+
+					$img.data(imageLoadedKey, true);
+
+					$articleListContainer.isotope('layout');
+				});
+	});
+</script>
+<div class="edn_isotopeLayout">
+<!--RepeatEnd:Before:-->
+
+<!--ArticleTemplate-->
+	<div class="EDN_article edn_smallMultiarticleBox edn_articleWrapper" style="width:[EasyDNNnews:MainArticleImageWidth]">
+		<div>
+			[EasyDNNnews:IfExists:Image]
+			<a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]" /></a>
+			<div class="edn_smallMultiarticleBoxContent">
+				<h2><a class="articleTitle" href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+				<div class="EDN_publish-date">[EasyDNNnews:FormatedDate: d MMMM yyyy]</div>
+				<div class="EDN_summary">[EasyDNNnews:Summary]</div>
+			</div>
+			[EasyDNNnews:HasArticlePermissions]
+			<div class="admin_actions">
+				[EasyDNNnews:ArticlePermissions:Edit]
+				[EasyDNNnews:ArticlePermissions:Publish]
+				[EasyDNNnews:ArticlePermissions:Approve]
+			</div>
+			[EasyDNNnews:HasArticlePermissionsEnd]
+			[EasyDNNnews:EndIf:Image]
+		</div>
+	</div>
+<!--ArticleEnd-->
+
+<!--ArticleRepeat:After:-->
+</div>
+[EasyDNNnews:IfExists:RSS]
+<div class="EDN_article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->
+

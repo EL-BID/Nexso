@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EmailErrorMessage.Text">
+    <value xml:space="preserve">Ocorreu um erro ao tentar enviar o email de teste. O erro é:&lt;br /&gt;{0}</value>
+  </data>
+  <data name="EmailSentMessage.Text">
+    <value xml:space="preserve">Email enviado com sucesso!</value>
+  </data>
+  <data name="EmailTest.Text">
+    <value xml:space="preserve">Testar as configurações do SMTP</value>
+  </data>
+  <data name="plSMTPAuthentication.Help">
+    <value xml:space="preserve">Entre o método de autenticação do servidor de SMTP Server (padrão = anônimo).</value>
+  </data>
+  <data name="plSMTPAuthentication.Text">
+    <value xml:space="preserve">Autenticação SMTP:</value>
+  </data>
+  <data name="plSMTPEnableSSL.Help">
+    <value xml:space="preserve">Usado por serviços de SMTP que requerem conexão segura (normalmente não necessário).</value>
+  </data>
+  <data name="plSMTPEnableSSL.Text">
+    <value xml:space="preserve">Ativar SSL no SMTP?</value>
+  </data>
+  <data name="plSMTPPassword.Help">
+    <value xml:space="preserve">Entre a senha para o servidor de SMTP.</value>
+  </data>
+  <data name="plSMTPPassword.Text">
+    <value xml:space="preserve">Senha do SMTP:</value>
+  </data>
+  <data name="plSMTPServer.Help">
+    <value xml:space="preserve">Entre o endereço do servidor de SMTP. Você também pode especificar uma porta alternativa adicionando dois pontos e o número da porta (ex: smtp.googlemail.com:587). Entre apenas o nome do servidor de SMTP para usar o número de porta padrão (25).</value>
+  </data>
+  <data name="plSMTPServer.Text">
+    <value xml:space="preserve">Servidor e porta do SMTP:</value>
+  </data>
+  <data name="plSMTPUsername.Help">
+    <value xml:space="preserve">Entre o nome de usuário do servidor de SMTP.</value>
+  </data>
+  <data name="plSMTPUsername.Text">
+    <value xml:space="preserve">Nome de usuário do SMTP:</value>
+  </data>
+  <data name="SMTP.Text">
+    <value xml:space="preserve">Configurações do Servidor SMTP</value>
+  </data>
+  <data name="SMTPAnonymous.Text">
+    <value xml:space="preserve">Anônimo</value>
+  </data>
+  <data name="SMTPBasic.Text">
+    <value xml:space="preserve">Básico</value>
+  </data>
+  <data name="SMTPNTLM.Text">
+    <value xml:space="preserve">NTLM</value>
+  </data>
+  <data name="SmtpServerWarning.Text">
+    <value xml:space="preserve">Você pode tentar usar uma porta SMTP personalizada com sua instância rodando sob confiança média. Você precisa contactar seu provedor de hospedagem para ter certeza de que esta configuração pode funcionar corretamente no seu servidor.</value>
+  </data>
+</root>

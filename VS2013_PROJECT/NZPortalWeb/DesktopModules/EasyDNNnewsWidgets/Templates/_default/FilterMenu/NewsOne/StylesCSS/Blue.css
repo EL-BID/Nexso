@@ -1,0 +1,16 @@
+.edn_widget_filtermenu_box.Blue > h1.edn_module_title {
+  background: url(../images/blue/module_title_background.png) repeat-x #1a57ae;
+}
+.edn_widget_filtermenu_box.Blue > h1.edn_module_title span {
+  color: white;
+  text-shadow: none;
+}
+.edn_widget_filtermenu_box.Blue > div .edn_filter_button {
+  background: url(../images/blue/edn_filter_button.png) repeat-x 0 0 #1a57ae;
+  color: white;
+  border-color: #225cc6;
+}
+.edn_widget_filtermenu_box.Blue > div .edn_filter_button:hover {
+  color: white;
+  background-position: 0 -30px;
+}

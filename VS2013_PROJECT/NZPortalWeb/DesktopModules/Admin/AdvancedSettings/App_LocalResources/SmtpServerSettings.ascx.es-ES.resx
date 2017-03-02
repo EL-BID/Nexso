@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EmailErrorMessage.Text">
+    <value xml:space="preserve">Ha ocurrido un error al enviar el email de prueba. El error es:&lt;br /&gt;{0}</value>
+  </data>
+  <data name="EmailSentMessage.Text">
+    <value xml:space="preserve">Se ha enviado el correo con éxito</value>
+  </data>
+  <data name="EmailTest.Text">
+    <value xml:space="preserve">Prueba de configuración SMTP</value>
+  </data>
+  <data name="plSMTPAuthentication.Help">
+    <value xml:space="preserve">Escriba el método de autenticación del servidor SMTP  (por omisión = Anónimo)</value>
+  </data>
+  <data name="plSMTPAuthentication.Text">
+    <value xml:space="preserve">Autenticación SMTP:</value>
+  </data>
+  <data name="plSMTPEnableSSL.Help">
+    <value xml:space="preserve">Usado por los servicios SMTP que requieren conexión segura (normalmente no es necesario)</value>
+  </data>
+  <data name="plSMTPEnableSSL.Text">
+    <value xml:space="preserve">Activar SSL para SMTP:</value>
+  </data>
+  <data name="plSMTPPassword.Help">
+    <value xml:space="preserve">Escriba la contraseña del servidor SMTP</value>
+  </data>
+  <data name="plSMTPPassword.Text">
+    <value xml:space="preserve">Contraseña SMTP:</value>
+  </data>
+  <data name="plSMTPServer.Help">
+    <value xml:space="preserve">Escriba la dirección del servidor SMTP. Puede especifiar un puerto alternativo añadiendo dos puntos y el número del puerto (por ejemplo: smtp.googlemail.com:587). Si utiliza el puerto por omisión (25) introduzca solo el nombre del servidor.</value>
+  </data>
+  <data name="plSMTPServer.Text">
+    <value xml:space="preserve">Servidor y puerto SMTP:</value>
+  </data>
+  <data name="plSMTPUsername.Help">
+    <value xml:space="preserve">Escriba la cuenta del servidor SMTP</value>
+  </data>
+  <data name="plSMTPUsername.Text">
+    <value xml:space="preserve">Cuenta SMTP:</value>
+  </data>
+  <data name="SMTP.Text">
+    <value xml:space="preserve">Configuración del servidor SMTP</value>
+  </data>
+  <data name="SMTPAnonymous.Text">
+    <value xml:space="preserve">Anónima</value>
+  </data>
+  <data name="SMTPBasic.Text">
+    <value xml:space="preserve">Básica</value>
+  </data>
+  <data name="SMTPNTLM.Text">
+    <value xml:space="preserve">NTLM</value>
+  </data>
+  <data name="SmtpServerWarning.Text">
+    <value xml:space="preserve">Está intentando configurar un servidor SMTP con un puerto alternativo cuando la configuración del sistema es "Medium Trust". Debería ponerse en contacto con su proveedor de alojamiento para verificar si esta opción puede funcionar correctamente en el servidor.</value>
+  </data>
+</root>

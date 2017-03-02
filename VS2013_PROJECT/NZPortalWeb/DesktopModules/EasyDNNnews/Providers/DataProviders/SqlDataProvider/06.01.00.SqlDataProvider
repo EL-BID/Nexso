@@ -1,0 +1,2408 @@
+﻿if not exists (select UpdateVersion from {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate] WHERE UpdateVersion = '06.01.00')
+BEGIN
+	INSERT INTO {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate]([UpdateVersion],[Finished]) VALUES(N'06.01.00',0)
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNfields' and column_name = 'IsChilde')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNfields] ADD IsChilde BIT CONSTRAINT DF_{objectQualifier}EasyDNNfields_IsChilde DEFAULT(0) NOT NULL
+END
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNThumbs' and column_name = 'CategoryID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNThumbs] ADD CategoryID INT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNThumbs' and column_name = 'AllNested')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNThumbs] ADD AllNested BIT CONSTRAINT DF_{objectQualifier}EasyDNNThumbs_AllNested DEFAULT(0) NOT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNThumbs' and column_name = 'GrayScale')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNThumbs] ADD GrayScale BIT CONSTRAINT DF_{objectQualifier}EasyDNNThumbs_GrayScale DEFAULT(0) NOT NULL
+END
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUpdate' and column_name = 'InstallDate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate] ADD InstallDate DateTime CONSTRAINT DF_{objectQualifier}EasyDNNNewsUpdate_InstallDate DEFAULT(GETUTCDATE()) NOT NULL
+END
+GO
+/**** Updade Social sharing Tokens ****/
+UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsSystemTokens]
+   SET [TokenContent] = N'<a id="twitterLik" href="//twitter.com/share?url=[EasyDNNnews:CurrentPageURL]" class="twitter-share-button" data-count="horizontal" data-via="">Tweet</a> <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>'
+ WHERE [TokenTitle] = N'SysTwitter'
+GO
+UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsSystemTokens]
+   SET [TokenContent] = N'<script type="text/javascript" src="//apis.google.com/js/plusone.js">{parsetags: ''explicit''}<br /></script><g:plusone></g:plusone><!-- Place this render call where appropriate --><script type="text/javascript">gapi.plusone.go();</script>'
+ WHERE [TokenTitle] = N'SysGooglePlus'
+GO
+UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsSystemTokens]
+   SET [TokenContent] = N'<a name="fb_share"></a> <script src="//static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>'
+ WHERE [TokenTitle] = N'SysFacebookShareButton'
+GO
+UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsSystemTokens]
+   SET [TokenContent] = N'<div class="addthis_toolbox addthis_default_style "><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a><a class="addthis_button_tweet"></a><a class="addthis_button_google_plusone" g:plusone:size="medium"></a><a class="addthis_counter addthis_pill_style"></a></div><script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4e83374938ea2808"></script>'
+ WHERE [TokenTitle] = N'SysAddThis'
+GO
+UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsSystemTokens]
+   SET [TokenContent] = N'<div class="addthis_toolbox addthis_default_style "><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a><a class="addthis_button_tweet"></a><a class="addthis_button_google_plusone" g:plusone:size="medium"></a><a class="addthis_button_linkedin_counter"></a><a class="addthis_counter addthis_pill_style"></a></div><script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4e83374938ea2808"></script>'
+ WHERE [TokenTitle] = N'SysAddThisFbTwGoLi'
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsLocalization]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNfieldsLocalization](
+	[CustomFieldID] [int] NOT NULL,
+	[LocaleCode] [nvarchar](20) NOT NULL,
+	[LabelValue] [nvarchar](500) NULL,
+	[LabelHelp] [nvarchar](500) NULL,
+	[ValidationErrorMsg] [nvarchar](300) NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNfieldsLocalization] PRIMARY KEY CLUSTERED  ([CustomFieldID] ASC,[LocaleCode] ASC)WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNfieldsLocalization_EasyDNNfields]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNfieldsLocalization]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNfieldsLocalization_EasyDNNfields] FOREIGN KEY([CustomFieldID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNfields] ([CustomFieldID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNfieldsLocalization_EasyDNNfields]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNfieldsLocalization] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNfieldsLocalization_EasyDNNfields]
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsValuesLocalization]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNfieldsValuesLocalization](
+	[CustomFieldID] [int] NOT NULL,
+	[ArticleID] [int] NOT NULL,
+	[LocaleCode] [nvarchar](20) NOT NULL,
+	[RText] [nvarchar](max) NULL,
+	[Text] [nvarchar](300) NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNfieldsValuesLocalization] PRIMARY KEY CLUSTERED ( [CustomFieldID] ASC, [ArticleID] ASC, [LocaleCode] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNfieldsValuesLocalization_EasyDNNfields]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsValuesLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNfieldsValuesLocalization]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNfieldsValuesLocalization_EasyDNNfields] FOREIGN KEY([CustomFieldID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNfields] ([CustomFieldID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNfieldsValuesLocalization_EasyDNNfields]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsValuesLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNfieldsValuesLocalization] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNfieldsValuesLocalization_EasyDNNfields]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNfieldsValuesLocalization_EasyDNNNews]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsValuesLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNfieldsValuesLocalization]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNfieldsValuesLocalization_EasyDNNNews] FOREIGN KEY([ArticleID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNews] ([ArticleID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNfieldsValuesLocalization_EasyDNNNews]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsValuesLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNfieldsValuesLocalization] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNfieldsValuesLocalization_EasyDNNNews]
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElementsLocalization]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElementsLocalization](
+	[FieldElementID] [int] NOT NULL,
+	[LocaleCode] [nvarchar](20) NOT NULL,
+	[Text] [nvarchar](300) NOT NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNfieldsMultiElementsLocalization] PRIMARY KEY CLUSTERED ( [FieldElementID] ASC, [LocaleCode] ASC ) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNfieldsMultiElementsLocalization_EasyDNNfieldsMultiElements]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElementsLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElementsLocalization]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNfieldsMultiElementsLocalization_EasyDNNfieldsMultiElements] FOREIGN KEY([FieldElementID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] ([FieldElementID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNfieldsMultiElementsLocalization_EasyDNNfieldsMultiElements]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElementsLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElementsLocalization] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNfieldsMultiElementsLocalization_EasyDNNfieldsMultiElements]
+GO
+
+IF NOT EXISTS (SELECT * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'GoogleAPIKey')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD GoogleAPIKey nvarchar(300) NULL;
+
+	BEGIN TRY
+		EXEC ('UPDATE ps SET ps.GoogleAPIKey = gm.GoogleAPIKey FROM {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] AS ps INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsAPI] AS gm ON ps.PortalID = gm.PortalID WHERE gm.GoogleAPIKey <> '''';');
+	
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsAPI]') AND type in (N'U'))
+		BEGIN
+			DROP TABLE {databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsAPI]
+		END
+	END TRY
+	BEGIN CATCH
+	END CATCH
+END
+GO
+
+/*** EasyDNNNewsSearchSettings ***/
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'SearchType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD SearchType BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsSearchSettings_SearchType DEFAULT(0) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'DisplayHeader')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD DisplayHeader BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsSearchSettings_DisplayHeader DEFAULT(0) NOT NULL
+END
+GO
+
+/*** End EasyDNNNewsSearchSettings ***/
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'CategoriesSelectionExpanded')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD CategoriesSelectionExpanded BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsPortalSettings_CategoriesSelectionExpanded DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'MainNewsPaginationType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD MainNewsPaginationType TINYINT CONSTRAINT DF_{objectQualifier}EasyDNNNewsPortalSettings_MainNewsPaginationType DEFAULT(0) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'EventsAddEditFormDefault')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD EventsAddEditFormDefault TINYINT CONSTRAINT DF_{objectQualifier}EasyDNNNewsPortalSettings_EventsAddEditFormDefault DEFAULT(0) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'CategoriesSelectionExpanded')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD CategoriesSelectionExpanded BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsModuleSettings_CategoriesSelectionExpanded DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'MainNewsPaginationType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD MainNewsPaginationType TINYINT CONSTRAINT DF_{objectQualifier}EasyDNNNewsModuleSettings_MainNewsPaginationType DEFAULT(0) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'EventsAddEditFormDefault')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD EventsAddEditFormDefault TINYINT CONSTRAINT DF_{objectQualifier}EasyDNNNewsModuleSettings_EventsAddEditFormDefault DEFAULT(0) NOT NULL
+END
+GO
+
+/*** EasyDNNNewsDocuments ***/
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsDocuments' and column_name = 'Filename')
+BEGIN
+	DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] WHERE [Filename] IS NULL;
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] ALTER COLUMN Filename nvarchar(1000) NOT NULL
+END
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsDocuments' and column_name = 'FileExtension')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] ADD FileExtension NVARCHAR(15) CONSTRAINT DF_{objectQualifier}EasyDNNNewsDocuments_FileExtension DEFAULT('') NOT NULL
+END
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsDocuments' and column_name = 'FilePath')
+BEGIN
+
+	BEGIN TRY
+	EXEC sp_rename '{objectQualifier}EasyDNNNewsDocuments.[Filename]' , 'FilePath', 'COLUMN'
+	END TRY
+	BEGIN CATCH
+	END CATCH
+
+	BEGIN TRY
+	EXEC dbo.sp_executesql @statement = N'UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] SET FilePath = LTRIM(RTRIM(FilePath))';
+	END TRY
+	BEGIN CATCH
+	END CATCH
+
+EXEC dbo.sp_executesql @statement = N'
+	BEGIN TRY
+	UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments]
+	SET FileExtension =
+	CASE WHEN (CHARINDEX(''.'',FilePath) = 0 ) THEN ''''
+	ELSE RTRIM(RIGHT(FilePath, CHARINDEX(''.'', REVERSE(''.'' + FilePath)))) END
+	END TRY
+	BEGIN CATCH
+	END CATCH';
+
+	IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsDocuments' and column_name = 'FileName')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] ADD FileName NVARCHAR(255) CONSTRAINT DF_{objectQualifier}EasyDNNNewsDocuments_FileName DEFAULT('') NOT NULL
+	END
+
+EXEC dbo.sp_executesql @statement = N'
+	BEGIN TRY
+	UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments]
+	SET [FileName] =
+	CASE WHEN (CHARINDEX(''.'',FilePath) = 0)
+	THEN RIGHT(FilePath, CHARINDEX(''/'', REVERSE(''/'' + FilePath)) - 1)
+	ELSE SUBSTRING(RIGHT(FilePath, CHARINDEX(''/'', REVERSE(''/'' + FilePath)) - 1), 0, CHARINDEX(''.'',RIGHT(FilePath, CHARINDEX(''/'', REVERSE(''/'' + FilePath)) - 1))) END
+	END TRY
+	BEGIN CATCH
+	END CATCH';
+
+END
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsDocuments' and column_name = 'AllLanguages')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] ADD AllLanguages BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsDocuments_AllLanguages DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsDocuments' and column_name = 'Visible')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] ADD Visible BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsDocuments_Visible DEFAULT(1) NOT NULL
+END
+GO
+
+/*** End EasyDNNNewsDocuments ***/
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsDocumentsLocalization]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocumentsLocalization](
+	[DocumentID] [int] NOT NULL,
+	[LocaleCode] [nvarchar](20) NOT NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNNewsDocumentsLocalization] PRIMARY KEY CLUSTERED  ( [DocumentID] ASC,[LocaleCode] ASC )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsDocumentsLocalization_EasyDNNNewsDocuments]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsDocumentsLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocumentsLocalization]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsDocumentsLocalization_EasyDNNNewsDocuments] FOREIGN KEY([DocumentID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] ([DocEntryID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsDocumentsLocalization_EasyDNNNewsDocuments]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsDocumentsLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocumentsLocalization] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsDocumentsLocalization_EasyDNNNewsDocuments]
+GO
+
+/*** Maknuti kolonu iz search settingsa, dodati novu i kreirati vanjski kljuc na kolonu ***/
+BEGIN TRY
+	IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'CfGroupSelect')
+	BEGIN
+		DECLARE @ConstraintName nvarchar(200);
+		SELECT @ConstraintName = Name FROM SYS.DEFAULT_CONSTRAINTS WHERE PARENT_OBJECT_ID = OBJECT_ID('{objectQualifier}EasyDNNNewsSearchSettings') AND PARENT_COLUMN_ID = (SELECT column_id FROM sys.columns WHERE NAME = N'CfGroupSelect' AND object_id = OBJECT_ID(N'{objectQualifier}EasyDNNNewsSearchSettings'))
+		IF @ConstraintName IS NOT NULL
+		BEGIN
+			EXEC('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] DROP CONSTRAINT ' + @ConstraintName);
+		END
+			EXEC('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] DROP COLUMN [CfGroupSelect]');
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'FieldsTemplateID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD FieldsTemplateID int NULL
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsSearchSettings_EasyDNNfieldsTemplate]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSearchSettings_EasyDNNfieldsTemplate] FOREIGN KEY([FieldsTemplateID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplate] ([FieldsTemplateID]) ON DELETE SET NULL
+GO
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsModuleCategory_EasyDNNfieldsTemplate]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSearchSettings_EasyDNNfieldsTemplate]
+GO
+
+/*** search settings ***/
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNfields' and column_name = 'ShowAllMultiElements')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNfields] ADD ShowAllMultiElements BIT CONSTRAINT DF_{objectQualifier}EasyDNNfields_ShowAllMultiElements DEFAULT(0) NOT NULL
+END
+GO
+/****** Object:  StoredProcedure {databaseOwner}[{objectQualifier}EasyDNNfieldsGetValues]    Script Date: 09/04/2013 13:41:42 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsGetValues]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNfieldsGetValues]
+GO
+/****** Object:  StoredProcedure {databaseOwner}[{objectQualifier}EasyDNNfieldsExchangeElementsPosition]    Script Date: 09/04/2013 13:41:42 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsExchangeElementsPosition]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNfieldsExchangeElementsPosition]
+GO
+/****** Object:  StoredProcedure {databaseOwner}[{objectQualifier}EasyDNNfieldsExchangeElementsPosition]    Script Date: 09/04/2013 13:41:42 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsExchangeElementsPosition]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNfieldsExchangeElementsPosition]
+(
+	@ComandType	int,
+	@FieldElementID	int,
+	@CustomFieldID	int,
+	@FEParentID int = null       
+)
+AS
+
+DECLARE @FEParentIDTemp int;
+
+DECLARE @CurrentPosition int;
+SET @CurrentPosition = 0;
+DECLARE @MaxMinPosition int;
+SET @MaxMinPosition = 0;
+DECLARE @ContentUpDownID int;
+SET @ContentUpDownID = 0;
+DECLARE @PositionOneUpDown int;
+SET @PositionOneUpDown = 0;
+BEGIN TRANSACTION;
+BEGIN TRY
+        SET NOCOUNT ON;      
+        IF (@ComandType = 1) -- ovo je za pomicanje gore, prema vrhu, tj prema prvome koji je dodan u listu
+        BEGIN
+			SELECT @CurrentPosition = Position FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE FieldElementID = @FieldElementID AND CustomFieldID = @CustomFieldID;
+			IF @FEParentID IS NULL
+			BEGIN
+				SELECT @MaxMinPosition = min(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID = @CustomFieldID;
+			END
+			ELSE
+			BEGIN
+				SELECT @MaxMinPosition = min(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID = @CustomFieldID AND FEParentID = @FEParentID;
+			END
+			IF (@CurrentPosition <> @MaxMinPosition) -- tu se može usporediti kad je to min value
+				BEGIN
+					IF @FEParentID IS NULL
+					BEGIN
+						SELECT @PositionOneUpDown = max(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID = @CustomFieldID AND Position < @CurrentPosition;
+					END
+					ELSE
+					BEGIN
+						SELECT @PositionOneUpDown = max(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID = @CustomFieldID AND FEParentID = @FEParentID AND Position < @CurrentPosition;				
+					END
+					UPDATE {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] SET Position = @CurrentPosition WHERE Position = @PositionOneUpDown AND CustomFieldID = @CustomFieldID;
+					UPDATE {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] SET Position = @PositionOneUpDown WHERE FieldElementID = @FieldElementID AND CustomFieldID = @CustomFieldID;
+				END
+        END
+        ELSE IF(@ComandType = 0) -- ovo je za pomicanje dolje -- znači da je commandType jednako 0, ali budemo mi to provjerili za svaki slučaj
+		BEGIN
+			SELECT @CurrentPosition = Position FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE FieldElementID = @FieldElementID AND CustomFieldID = @CustomFieldID;
+			IF @FEParentID IS NULL
+			BEGIN
+				SELECT @MaxMinPosition = max(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID = @CustomFieldID;
+			END
+			ELSE
+			BEGIN
+				SELECT @MaxMinPosition = max(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID = @CustomFieldID AND FEParentID = @FEParentID;
+			END
+			IF (@CurrentPosition <> @MaxMinPosition)
+				BEGIN
+					IF @FEParentID IS NULL
+					BEGIN
+						SELECT @PositionOneUpDown = min(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID = @CustomFieldID AND Position > @CurrentPosition;
+					END
+					ELSE
+					BEGIN
+						SELECT @PositionOneUpDown = min(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID = @CustomFieldID AND FEParentID = @FEParentID AND Position > @CurrentPosition;			
+					END			
+					UPDATE {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] SET Position = @CurrentPosition WHERE Position = @PositionOneUpDown AND CustomFieldID = @CustomFieldID;
+					UPDATE {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] SET Position = @PositionOneUpDown WHERE FieldElementID = @FieldElementID AND CustomFieldID = @CustomFieldID;
+				END
+		END        
+END TRY
+BEGIN CATCH
+    IF @@TRANCOUNT > 0
+        ROLLBACK TRANSACTION;
+END CATCH;
+
+IF @@TRANCOUNT > 0
+    COMMIT TRANSACTION;
+' 
+END
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsIUElementsList]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNfieldsIUElementsList]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsIUElementsList]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNfieldsIUElementsList]
+	@CustomFieldID int,
+	@FieldElementID int = 0,
+	@FEParentID int = null,
+    @Text nvarchar(300), 
+    @DefSelected bit = 0,
+    @IsChilde bit = 0      
+AS 
+DECLARE @NewPosition int;
+DECLARE @DateCreated datetime;
+DECLARE @inserted int;
+SET @inserted = 0;
+SET @NewPosition = ''0'';
+SET @DateCreated = GETUTCDATE();
+BEGIN TRANSACTION;
+BEGIN TRY
+    SET NOCOUNT ON;
+    -- Get last position
+    IF @FieldElementID = 0 -- onda je insert
+		BEGIN
+			IF @FEParentID IS NULL
+			BEGIN
+				IF EXISTS (SELECT Position FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID=@CustomFieldID AND FEParentID IS NULL)
+					BEGIN
+						SELECT @NewPosition = max(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID=@CustomFieldID AND FEParentID IS NULL;
+						SET @NewPosition = @NewPosition + 10;
+					END
+				ELSE
+					BEGIN
+						SET @NewPosition = 10; 
+					END
+			END
+			ELSE
+			BEGIN
+				IF EXISTS (SELECT Position FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID=@CustomFieldID AND FEParentID=@FEParentID)
+					BEGIN
+						SELECT @NewPosition = max(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID=@CustomFieldID AND FEParentID=@FEParentID;
+						SET @NewPosition = @NewPosition + 10;
+					END
+				ELSE
+					BEGIN
+						SET @NewPosition = 10; 
+					END
+			END
+			INSERT INTO {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements]([CustomFieldID],[FEParentID],[Text],[Position],[DefSelected])VALUES(@CustomFieldID,@FEParentID,@Text,@NewPosition,@DefSelected)
+			SET @inserted = SCOPE_IDENTITY();	
+		END
+	ELSE -- onda je update
+	BEGIN
+		-- treba ustanoviti tip elementa u smislu da li je prije imao parent ili nije, jer se sad u slucaju updejta moze promjeniti parent
+		DECLARE @PreviousParentID int;
+		SELECT @PreviousParentID = [FEParentID] FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE FieldElementID=@FieldElementID AND CustomFieldID = @CustomFieldID;
+		IF @PreviousParentID IS NULL
+		BEGIN
+			IF @FEParentID IS NULL -- element nije imao parent znaci sve ostaje isto
+			BEGIN
+				UPDATE {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] SET [FEParentID] = @FEParentID, [Text] = @Text WHERE FieldElementID=@FieldElementID AND CustomFieldID = @CustomFieldID;
+			END
+			ELSE -- element nije imao parent sad ga ima treba mjenjati poziciju
+			BEGIN
+				IF EXISTS (SELECT Position FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID=@CustomFieldID AND FEParentID = @FEParentID)
+					BEGIN
+						SELECT @NewPosition = max(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID=@CustomFieldID AND FEParentID = @FEParentID;
+						SET @NewPosition = @NewPosition + 10;
+					END
+				ELSE
+					BEGIN
+						SET @NewPosition = 10; 
+					END
+				UPDATE {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] SET [FEParentID] = @FEParentID, [Text] = @Text, [Position] = @NewPosition WHERE FieldElementID=@FieldElementID AND CustomFieldID = @CustomFieldID; 	
+			END
+		END
+		ELSE -- prije je imao parent
+		BEGIN
+			IF @FEParentID IS NULL -- element je imao parent sada ga vise nema. treba promjeniti poziciju na zadnjeg u listi koji nemaju parent
+			BEGIN
+				IF EXISTS (SELECT Position FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID=@CustomFieldID AND FEParentID IS NULL)
+					BEGIN
+						SELECT @NewPosition = max(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID=@CustomFieldID AND FEParentID IS NULL;
+						SET @NewPosition = @NewPosition + 10;
+					END
+				ELSE
+					BEGIN
+						SET @NewPosition = 10; 
+					END
+				UPDATE {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] SET [FEParentID] = @FEParentID, [Text] = @Text, [Position] = @NewPosition WHERE FieldElementID=@FieldElementID AND CustomFieldID = @CustomFieldID; 
+			END
+			ELSE -- element je imao parent i ima ga i dalje, treba vidjeti da li je isti parent ili razliciti, ako je isti ne treba mjenjati poziciju ako je razliciti onda treba
+			BEGIN
+				IF @PreviousParentID = @FEParentID -- parent je isti
+				BEGIN
+					UPDATE {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] SET [Text] = @Text WHERE FieldElementID=@FieldElementID AND CustomFieldID = @CustomFieldID;
+				END
+				ELSE			
+				BEGIN
+					IF EXISTS (SELECT Position FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID=@CustomFieldID AND FEParentID = @FEParentID)
+						BEGIN
+							SELECT @NewPosition = max(Position) FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE CustomFieldID=@CustomFieldID AND FEParentID = @FEParentID;
+							SET @NewPosition = @NewPosition + 10;
+						END
+					ELSE
+						BEGIN
+							SET @NewPosition = 10; 
+						END
+					UPDATE {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] SET [FEParentID] = @FEParentID, [Text] = @Text, [Position] = @NewPosition WHERE FieldElementID=@FieldElementID AND CustomFieldID = @CustomFieldID;
+				END
+			END
+		END
+	END
+	
+	IF @IsChilde = 1 -- treba update main cf
+	BEGIN
+		IF NOT EXISTS (SELECT CustomFieldID FROM {databaseOwner}[{objectQualifier}EasyDNNfields] WHERE [IsChilde] = 1 AND CustomFieldID=@CustomFieldID)
+		BEGIN
+			UPDATE {databaseOwner}[{objectQualifier}EasyDNNfields] SET [IsChilde] = 1 WHERE CustomFieldID=@CustomFieldID;
+		END
+	END
+	IF @FEParentID IS NOT NULL
+	BEGIN
+		DECLARE @CFParentID int;
+		SELECT @CFParentID = CustomFieldID FROM {databaseOwner}[{objectQualifier}EasyDNNfields] WHERE CustomFieldID IN (SELECT CustomFieldID FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE FieldElementID = @FEParentID)
+		IF @CFParentID IS NOT NULL
+		BEGIN
+			IF NOT EXISTS (SELECT CustomFieldID FROM {databaseOwner}[{objectQualifier}EasyDNNfields] WHERE [IsParent] = 1 AND CustomFieldID=@CFParentID)
+			BEGIN
+				UPDATE {databaseOwner}[{objectQualifier}EasyDNNfields] SET [IsParent]= 1 WHERE CustomFieldID = @CFParentID;
+			END
+		END
+	END     
+END TRY
+BEGIN CATCH
+    IF @@TRANCOUNT > 0
+        ROLLBACK TRANSACTION;
+END CATCH;
+
+IF @@TRANCOUNT > 0
+    COMMIT TRANSACTION;
+
+return @inserted;
+' 
+END
+GO
+
+/****** Object:  StoredProcedure {databaseOwner}[{objectQualifier}EasyDNNfieldsGetValues]    Script Date: 09/04/2013 13:41:42 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldsGetValues]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNfieldsGetValues]
+(
+	@ArticleID int,
+	@FieldsTemplateID int,
+	@LocaleCode	nvarchar(20) = NULL 
+)
+AS
+SET NOCOUNT ON;    
+
+IF @LocaleCode IS NULL
+BEGIN
+	SELECT fv.[ArticleID], cf.[CustomFieldID],cf.[ControlTypeID],cf.[Token],cf.[ShowLabel],cf.[LabelValue],cf.[LabelHelp],cf.[IsParent],
+		cf.[IconURL],cf.[ACode],cf.[DisplayFormat],fv.[RText],fv.[Decimal],fv.[Int],fv.[Bit],NULL AS [FieldElementID],fv.[Text],gt.[Position],NULL AS [MEPosition]
+	FROM {databaseOwner}[{objectQualifier}EasyDNNfields] AS cf INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplateItems] AS gt ON cf.[CustomFieldID] = gt.[CustomFieldID]
+	 INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsValues] as fv ON cf.[CustomFieldID] = fv.[CustomFieldID]
+	  WHERE cf.[IsPublished] = ''1'' AND cf.[IsHidden] = ''0'' AND gt.[FieldsTemplateID] = @FieldsTemplateID AND fv.[ArticleID] = @ArticleID
+	UNION ALL
+	SELECT fms.[ArticleID], cf.[CustomFieldID],cf.[ControlTypeID],cf.[Token],cf.[ShowLabel],cf.[LabelValue],cf.[LabelHelp],cf.[IsParent],cf.[IconURL],NULL AS [ACode],NULL AS [DisplayFormat],
+	 NULL as [RText], NULL AS [Decimal],NULL AS [Int],NULL AS [Bit],fme.[FieldElementID],fme.[Text],gt.[Position],fme.[Position] AS [MEPosition]
+	FROM {databaseOwner}[{objectQualifier}EasyDNNfields] as cf INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplateItems] AS gt ON cf.[CustomFieldID] = gt.[CustomFieldID]
+	 INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] as fme ON cf.[CustomFieldID] = fme.[CustomFieldID]
+	  LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiSelected] as fms ON cf.[CustomFieldID] = fms.[CustomFieldID] AND fme.[FieldElementID] = fms.[FieldElementID] AND ((cf.[ShowAllMultiElements] = 0 AND fms.[ArticleID] = @ArticleID) OR (cf.[ShowAllMultiElements] = 1 AND (fms.[ArticleID] = @ArticleID OR (fms.[ArticleID] IS NULL AND cf.[ControlTypeID] = 23))))
+	   WHERE cf.[IsPublished] = ''1'' AND cf.[IsHidden] = ''0'' AND gt.[FieldsTemplateID] = @FieldsTemplateID AND ((cf.[ShowAllMultiElements] = 0 AND fms.[ArticleID] = @ArticleID) OR (cf.[ShowAllMultiElements] = 1 AND (fms.[ArticleID] = @ArticleID OR (fms.[ArticleID] IS NULL AND cf.[ControlTypeID] = 23))))
+	ORDER BY [Position], [MEPosition];
+END
+ELSE
+BEGIN
+	;WITH AllValues ([ArticleID],[CustomFieldID],[ControlTypeID],[Token],[ShowLabel],[LabelValue],[LabelHelp],[IsParent],
+		[IconURL],[ACode],[DisplayFormat],[RText],[Decimal],[Int],[Bit],[FieldElementID],[Text],[Position],[MEPosition])
+		AS (
+			SELECT fv.[ArticleID], cf.[CustomFieldID],cf.[ControlTypeID],cf.[Token],cf.[ShowLabel],cf.[LabelValue],cf.[LabelHelp],cf.[IsParent],
+				cf.[IconURL],cf.[ACode],cf.[DisplayFormat],fv.[RText],fv.[Decimal],fv.[Int],fv.[Bit],NULL AS [FieldElementID],fv.[Text],gt.[Position],NULL AS [MEPosition]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNfields] AS cf INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplateItems] AS gt ON cf.[CustomFieldID] = gt.[CustomFieldID]
+			 INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsValues] as fv ON cf.[CustomFieldID] = fv.[CustomFieldID]
+			  WHERE cf.[IsPublished] = ''1'' AND cf.[IsHidden] = ''0'' AND gt.[FieldsTemplateID] = @FieldsTemplateID AND fv.[ArticleID] = @ArticleID
+			UNION ALL
+			SELECT fms.[ArticleID], cf.[CustomFieldID],cf.[ControlTypeID],cf.[Token],cf.[ShowLabel],cf.[LabelValue],cf.[LabelHelp],cf.[IsParent],cf.[IconURL],NULL AS [ACode],NULL AS [DisplayFormat],
+			 NULL as [RText], NULL AS [Decimal],NULL AS [Int],NULL AS [Bit],fme.[FieldElementID],fme.[Text],gt.[Position],fme.[Position] AS [MEPosition]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNfields] as cf INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplateItems] AS gt ON cf.[CustomFieldID] = gt.[CustomFieldID]
+			 INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] as fme ON cf.[CustomFieldID] = fme.[CustomFieldID]
+			  LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiSelected] as fms ON cf.[CustomFieldID] = fms.[CustomFieldID] AND fms.[FieldElementID] = fme.[FieldElementID] AND ((cf.[ShowAllMultiElements] = 0 AND fms.[ArticleID] = @ArticleID) OR (cf.[ShowAllMultiElements] = 1 AND (fms.[ArticleID] = @ArticleID OR (fms.[ArticleID] IS NULL AND cf.[ControlTypeID] = 23))))
+			   WHERE cf.[IsPublished] = ''1'' AND cf.[IsHidden] = ''0'' AND gt.[FieldsTemplateID] = @FieldsTemplateID AND ((cf.[ShowAllMultiElements] = 0 AND fms.[ArticleID] = @ArticleID) OR (cf.[ShowAllMultiElements] = 1 AND (fms.[ArticleID] = @ArticleID OR (fms.[ArticleID] IS NULL AND cf.[ControlTypeID] = 23))))
+	),
+	LocalizedSingleValues ([ArticleID],[CustomFieldID],[ControlTypeID],[Token],[ShowLabel],[LabelValue],[LabelHelp],[IsParent],
+		[IconURL],[ACode],[DisplayFormat],[RText],[Decimal],[Int],[Bit],[FieldElementID],[Text],[Position],[MEPosition]) AS(
+		SELECT av.[ArticleID], av.[CustomFieldID],av.[ControlTypeID],av.[Token],av.[ShowLabel],av.[LabelValue],av.[LabelHelp],av.[IsParent],
+		av.[IconURL],av.[ACode],av.[DisplayFormat],av.[RText],av.[Decimal],av.[Int],av.[Bit],av.[FieldElementID],fvl.[Text],av.[Position],av.[MEPosition]
+		 FROM AllValues as av INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsValuesLocalization] AS fvl ON av.CustomFieldID = fvl.CustomFieldID AND fvl.ArticleID = @ArticleID AND fvl.LocaleCode = @LocaleCode AND av.[Text] IS NOT NULL
+		  WHERE (av.ControlTypeID = 1 OR av.ControlTypeID = 2)
+	),
+	LocalizedMultiValues ([ArticleID],[CustomFieldID],[ControlTypeID],[Token],[ShowLabel],[LabelValue],[LabelHelp],[IsParent],
+		[IconURL],[ACode],[DisplayFormat],[RText],[Decimal],[Int],[Bit],[FieldElementID],[Text],[Position],[MEPosition]) AS(
+		SELECT av.[ArticleID], av.[CustomFieldID],av.[ControlTypeID],av.[Token],av.[ShowLabel],av.[LabelValue],av.[LabelHelp],av.[IsParent],
+			av.[IconURL],av.[ACode],av.[DisplayFormat],av.[RText],av.[Decimal],av.[Int],av.[Bit],av.[FieldElementID],fmel.[Text],av.[Position],av.[MEPosition]
+		FROM AllValues as av
+		 INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElementsLocalization] AS fmel ON av.FieldElementID = fmel.FieldElementID AND fmel.LocaleCode = @LocaleCode AND av.[Text] IS NOT NULL --WHERE (av.ControlTypeID <> 1 OR av.ControlTypeID <> 2)
+	),
+	CombinedValues ([ArticleID],[CustomFieldID],[ControlTypeID],[Token],[ShowLabel],[LabelValue],[LabelHelp],[IsParent],
+		[IconURL],[ACode],[DisplayFormat],[RText],[Decimal],[Int],[Bit],[FieldElementID],[Text],[Position],[MEPosition]) AS(
+		--u zadnjem redu ovo field element is nul null to je zato jer se prilikom joina maknul,.. jer se pretpostavlja da je null
+		SELECT * FROM LocalizedSingleValues
+		UNION ALL
+		SELECT * FROM LocalizedMultiValues
+		UNION ALL
+		SELECT * FROM AllValues WHERE (CustomFieldID NOT IN (SELECT CustomFieldID FROM LocalizedSingleValues)) AND ((FieldElementID NOT IN (SELECT FieldElementID FROM LocalizedMultiValues)) OR FieldElementID IS NULL)
+	),
+	LocalizedLabelsAndFinalize ([ArticleID],[CustomFieldID],[ControlTypeID],[Token],[ShowLabel],[LabelValue],[LabelHelp],[IsParent],
+		[IconURL],[ACode],[DisplayFormat],[RText],[Decimal],[Int],[Bit],[FieldElementID],[Text],[Position],[MEPosition]) AS(
+		SELECT cv.[ArticleID],cv.[CustomFieldID],cv.[ControlTypeID],cv.[Token],cv.[ShowLabel],fl.[LabelValue],fl.[LabelHelp],cv.[IsParent],
+			cv.[IconURL],cv.[ACode],cv.[DisplayFormat],cv.[RText],cv.[Decimal],cv.[Int],cv.[Bit],cv.[FieldElementID],cv.[Text],cv.[Position],cv.[MEPosition]
+		FROM CombinedValues as cv
+		 INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsLocalization] AS fl ON cv.CustomFieldID = fl.CustomFieldID AND fl.LocaleCode = @LocaleCode
+	)
+	SELECT * FROM LocalizedLabelsAndFinalize
+	UNION ALL
+	SELECT * FROM CombinedValues WHERE CustomFieldID NOT IN (SELECT CustomFieldID FROM LocalizedLabelsAndFinalize)  ORDER BY [Position], [MEPosition];
+END' 
+END
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCountForArticleEditor]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCountForArticleEditor]
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForArticleEditor]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForArticleEditor]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForArticleEditor]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsForArticleEditor]
+	@PortalID int, -- current Portal
+	@ModuleID int, -- current Module, portal sharing isto sadrzi dobre kategorije, auto add i setingsi su snimljeni kod tog modula
+	@UserID int,
+	@ItemsFrom int = 1,
+	@ItemsTo int = 5,
+	@OnlyOneCategory int = 0, -- used for category menu or when need to filter by one category
+	@FilterByAuthor int = 0, -- ako se selektiran jedan autor
+	@FilterByGroupID int = 0, -- ako je selektirana grupa
+	@EditOnlyAsOwner bit = 0, -- news settings
+	@UserCanApprove bit = 0, -- news settings
+	@Perm_ViewAllCategores bit = 0, -- permission settings View all categories
+	@Perm_EditAllCategores bit = 0, -- permission settings Edit all categories
+	@AdminOrSuperUser bit = 0,
+	@PermissionSettingsSource bit = 1, -- 1 portal, 0 module
+	@OrderBy nvarchar(20) = ''PublishDate DESC'',
+	@OrderBy2 nvarchar(20) = '''',
+	
+	@Featured tinyint = 0,
+	@Published tinyint = 0,
+	@Approved tinyint = 0,
+	@ArticleType tinyint = 0,
+	@PermissionsByArticle tinyint = 0	
+AS
+SET NOCOUNT ON;
+DECLARE @EditPermission tinyint;
+SET @EditPermission = 0;
+DECLARE @UserInRoles TABLE (RoleID int NOT NULL PRIMARY KEY);
+INSERT INTO @UserInRoles SELECT DISTINCT ur.[RoleID] FROM {databaseOwner}[{objectQualifier}UserRoles] AS ur INNER JOIN {databaseOwner}[{objectQualifier}Roles] AS r ON ur.RoleID = r.RoleID WHERE ur.UserID = @UserID AND r.PortalID = @PortalID AND (ur.ExpiryDate IS NULL OR ur.ExpiryDate > GETUTCDATE()) AND (ur.EffectiveDate IS NULL OR ur.EffectiveDate < GETUTCDATE());
+DECLARE @UserEditCategories TABLE (CategoryID int NOT NULL PRIMARY KEY); -- all categories which user can edit based on permissions
+
+DECLARE @FilterAuthorOrAuthors bit;
+SET @FilterAuthorOrAuthors = 0;
+DECLARE @TempAuthorsIDList TABLE (UserID int NOT NULL PRIMARY KEY);
+IF @FilterByAuthor <> 0
+BEGIN
+	SET @FilterAuthorOrAuthors = 1;
+	INSERT INTO @TempAuthorsIDList SELECT @FilterByAuthor;
+END
+ELSE IF @FilterByGroupID <> 0
+BEGIN
+	SET @FilterAuthorOrAuthors = 1;
+	INSERT INTO @TempAuthorsIDList
+	SELECT [UserID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile] AS ap 
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems] AS agi ON ap.AuthorProfileID = agi.AuthorProfileID	
+		WHERE agi.GroupID = @FilterByGroupID
+END
+
+-- kategorije sa edit pravima
+IF @AdminOrSuperUser = 1 OR @Perm_EditAllCategores = 1
+BEGIN	
+	INSERT INTO @UserEditCategories SELECT CategoryID FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] WHERE PortalID = @PortalID;
+	SET @EditPermission = 1;
+END
+ELSE
+BEGIN
+	IF @UserID = -1
+	BEGIN
+		IF @PermissionSettingsSource = 1 -- by portal
+		BEGIN
+			INSERT INTO @UserEditCategories
+			SELECT rpatc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] AS rpatc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] AS rps ON rps.PremissionSettingsID = rpatc.PremissionSettingsID
+			WHERE rps.PortalID = @PortalID AND rps.ModuleID IS NULL AND rps.RoleID IS NULL;
+		END
+		ELSE -- by module
+		BEGIN
+			INSERT INTO @UserEditCategories
+			SELECT rpatc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] AS rpatc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] AS rps ON rps.PremissionSettingsID = rpatc.PremissionSettingsID
+			WHERE rps.RoleID IS NULL AND rps.PortalID = @PortalID AND rps.ModuleID = @ModuleID;
+		END
+	END
+	ELSE -- registrirani korisnik
+	BEGIN
+		IF @PermissionSettingsSource = 1 -- by portal
+		BEGIN
+			INSERT INTO @UserEditCategories
+			SELECT rpatc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] AS rpatc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] AS rps ON rps.PremissionSettingsID = rpatc.PremissionSettingsID
+			INNER JOIN @UserInRoles AS uir ON rps.RoleID = uir.RoleID
+			WHERE rps.PortalID = @PortalID AND rps.ModuleID IS NULL GROUP BY rpatc.[CategoryID]
+			UNION
+			SELECT upatc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories] AS upatc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] AS ups ON ups.PremissionSettingsID = upatc.PremissionSettingsID
+			WHERE ups.UserID = @UserID AND ups.PortalID = @PortalID AND ups.ModuleID IS NULL GROUP BY upatc.[CategoryID];
+		END
+		ELSE -- by module
+		BEGIN
+			INSERT INTO @UserEditCategories
+			SELECT rpatc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] AS rpatc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] AS rps ON rps.PremissionSettingsID = rpatc.PremissionSettingsID
+			INNER JOIN @UserInRoles AS uir ON rps.RoleID = uir.RoleID
+			WHERE rps.PortalID = @PortalID AND rps.ModuleID = @ModuleID GROUP BY rpatc.[CategoryID]
+			UNION
+			SELECT upatc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories] AS upatc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] AS ups ON ups.PremissionSettingsID = upatc.PremissionSettingsID
+			WHERE ups.UserID = @UserID AND ups.PortalID = @PortalID AND ups.ModuleID = @ModuleID GROUP BY upatc.[CategoryID];
+		END	
+	END
+	IF EXISTS(SELECT TOP (1) * FROM @UserEditCategories) BEGIN SET @EditPermission = 2; END
+END
+
+IF @OnlyOneCategory <> 0 -- filtrira se po jednoj kategoriji
+BEGIN
+	 DELETE uec FROM @UserEditCategories AS uec WHERE uec.CategoryID NOT IN (SELECT @OnlyOneCategory);
+END
+
+SELECT Result.*,CASE WHEN u.DisplayName IS NULL THEN ''Anonym'' ELSE u.DisplayName END AS DisplayName,
+	CASE @EditPermission 
+		WHEN 0 THEN 0
+		WHEN 1 THEN 1
+		WHEN 2 THEN
+		CASE @EditOnlyAsOwner
+			WHEN 0 THEN			
+				CASE WHEN EXISTS(SELECT CategoryID FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS c WHERE c.ArticleID = Result.ArticleID AND c.CategoryID IN (SELECT CategoryID FROM @UserEditCategories))
+					THEN 1
+					ELSE
+						CASE WHEN EXISTS(SELECT [ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] AS arp WHERE arp.ArticleID = Result.ArticleID AND arp.Edit = 1 AND arp.RoleID IN(SELECT RoleID FROM @UserInRoles))
+						THEN 1
+						ELSE
+							CASE WHEN EXISTS (SELECT [ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] AS aup WHERE aup.ArticleID = Result.ArticleID AND aup.Edit = 1 AND aup.UserID = @UserID)
+								THEN 1
+								ELSE 0
+							END
+						END
+				END  			
+			WHEN 1 THEN
+				CASE WHEN EXISTS(SELECT CategoryID FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS c WHERE Result.UserID = @UserID AND c.ArticleID = Result.ArticleID AND c.CategoryID IN (SELECT CategoryID FROM @UserEditCategories))
+					THEN 1
+					ELSE
+						CASE WHEN EXISTS(SELECT [ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] AS arp WHERE arp.ArticleID = Result.ArticleID AND arp.Edit = 1 AND arp.RoleID IN(SELECT RoleID FROM @UserInRoles))
+						THEN 1
+						ELSE
+							CASE WHEN EXISTS (SELECT [ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] AS aup WHERE aup.ArticleID = Result.ArticleID AND aup.Edit = 1 AND aup.UserID = @UserID)
+								THEN 1
+								ELSE 0
+							END
+						END 
+				END
+		END
+		WHEN 3 THEN
+			CASE WHEN EXISTS(SELECT [ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] AS arp WHERE arp.ArticleID = Result.ArticleID AND arp.Edit = 1 AND arp.RoleID IN(SELECT RoleID FROM @UserInRoles))
+				THEN 1
+				ELSE
+				CASE WHEN EXISTS (SELECT [ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] AS aup WHERE aup.ArticleID = Result.ArticleID AND aup.Edit = 1 AND aup.UserID = @UserID)
+					THEN 1
+					ELSE 0
+					END
+				END 
+	END AS ''CanEdit'',
+	--(SELECT Cat.CategoryID AS ID, Cat.CategoryName AS Name, CategoryURL FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS Cat INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS c ON c.CategoryID = Cat.CategoryID WHERE c.ArticleID = Result.ArticleID AND cat.CategoryID IN (SELECT CategoryID FROM @UserViewCategories) FOR XML AUTO, ROOT(''root'')) AS ''CatToShow'',
+	 CASE Result.Active
+		WHEN 1 THEN 0
+		WHEN 0 THEN 1
+	 END AS ''Published'',
+	 CASE @UserCanApprove
+		WHEN 0 THEN 0
+		WHEN 1 THEN
+			CASE Result.Approved
+			 WHEN 1 THEN 0
+			 WHEN 0 THEN
+				 CASE Result.Active
+					WHEN 1 THEN 1
+					WHEN 0 THEN 0
+				END
+			END
+	 END AS ''Approve''
+	FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY 
+	CASE WHEN @OrderBy =''PublishDate ASC'' THEN PublishDate END,
+	CASE WHEN @OrderBy =''PublishDate DESC'' THEN PublishDate END DESC,
+	CASE WHEN @OrderBy =''NumberOfViews ASC'' THEN NumberOfViews END,
+	CASE WHEN @OrderBy =''NumberOfViews DESC'' THEN NumberOfViews END DESC,
+	CASE WHEN @OrderBy =''RatingValue ASC'' THEN RatingValue END,
+	CASE WHEN @OrderBy =''RatingValue DESC'' THEN RatingValue END DESC,
+	CASE WHEN @OrderBy =''DateAdded ASC'' THEN DateAdded END,
+	CASE WHEN @OrderBy =''DateAdded DESC'' THEN DateAdded END DESC,
+	CASE WHEN @OrderBy =''ExpireDate ASC'' THEN ExpireDate END,
+	CASE WHEN @OrderBy =''ExpireDate DESC'' THEN ExpireDate END DESC,
+	CASE WHEN @OrderBy =''LastModified ASC'' THEN LastModified END,
+	CASE WHEN @OrderBy =''LastModified DESC'' THEN LastModified END DESC,
+	CASE WHEN @OrderBy =''NumberOfComments ASC'' THEN NumberOfComments END,
+	CASE WHEN @OrderBy =''NumberOfComments DESC'' THEN NumberOfComments END DESC,
+	CASE WHEN @OrderBy =''Title ASC'' THEN Title END,
+	CASE WHEN @OrderBy =''Title DESC'' THEN Title END DESC,
+
+	CASE WHEN @OrderBy2 =''PublishDate ASC'' THEN PublishDate END,
+	CASE WHEN @OrderBy2 =''PublishDate DESC'' THEN PublishDate END DESC,
+	CASE WHEN @OrderBy2 =''NumberOfViews ASC'' THEN NumberOfViews END,
+	CASE WHEN @OrderBy2 =''NumberOfViews DESC'' THEN NumberOfViews END DESC,
+	CASE WHEN @OrderBy2 =''RatingValue ASC'' THEN RatingValue END,
+	CASE WHEN @OrderBy2 =''RatingValue DESC'' THEN RatingValue END DESC,
+	CASE WHEN @OrderBy2 =''DateAdded ASC'' THEN DateAdded END,
+	CASE WHEN @OrderBy2 =''DateAdded DESC'' THEN DateAdded END DESC,
+	CASE WHEN @OrderBy2 =''ExpireDate ASC'' THEN ExpireDate END,
+	CASE WHEN @OrderBy2 =''ExpireDate DESC'' THEN ExpireDate END DESC,
+	CASE WHEN @OrderBy2 =''LastModified ASC'' THEN LastModified END,
+	CASE WHEN @OrderBy2 =''LastModified DESC'' THEN LastModified END DESC,
+	CASE WHEN @OrderBy2 =''NumberOfComments ASC'' THEN NumberOfComments END,
+	CASE WHEN @OrderBy2 =''NumberOfComments DESC'' THEN NumberOfComments END DESC,
+	CASE WHEN @OrderBy2 =''Title ASC'' THEN Title END,
+	CASE WHEN @OrderBy2 =''Title DESC'' THEN Title END DESC) AS Kulike
+	FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS n WHERE ArticleID IN(
+		SELECT DISTINCT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cat ON na.ArticleID = cat.ArticleID
+			INNER JOIN @UserEditCategories AS uec ON uec.CategoryID = cat.CategoryID
+		WHERE na.PortalID=@PortalID
+			AND na.HasPermissions = 0
+			AND ((@Approved = 0) OR ((@Approved = 1 AND na.Approved = 1) OR (@Approved = 2 AND na.Approved = 0)))		   
+			AND ((@ArticleType = 0) OR ((@ArticleType = 1 AND na.EventArticle = 0) OR (@ArticleType = 2 AND na.EventArticle = 1)))
+			AND ((@PermissionsByArticle = 0) OR ((@PermissionsByArticle = 1 AND na.HasPermissions = 1) OR (@PermissionsByArticle = 2 AND na.HasPermissions = 0)))		   
+			AND ((@Published = 0) OR ((@Published = 1 AND na.Active = 1) OR (@Published = 2 AND na.Active = 0)))
+			AND ((@Featured = 0) OR ((@Featured = 1 AND na.Featured = 1) OR (@Featured = 2 AND na.Featured = 0)))
+			AND ((@FilterAuthorOrAuthors = 0) OR (@FilterAuthorOrAuthors = 1 AND na.UserID IN (SELECT UserID FROM @TempAuthorsIDList)))
+		UNION ALL
+		SELECT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] AS aup ON na.ArticleID = aup.ArticleID
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cat ON na.ArticleID = cat.ArticleID
+			--LEFT OUTER JOIN @UserEditCategories AS uec ON uec.CategoryID = cat.CategoryID
+			--INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+		WHERE na.PortalID=@PortalID
+			AND na.HasPermissions = 1
+			AND ((@EditPermission = 1) OR ((aup.Edit = 1) AND ((@UserID = -1 AND aup.UserID IS NULL) OR (aup.UserID = @UserID))))
+			AND ((@Approved = 0) OR ((@Approved = 1 AND na.Approved = 1) OR (@Approved = 2 AND na.Approved = 0)))
+			AND ((@ArticleType = 0) OR ((@ArticleType = 1 AND na.EventArticle = 0) OR (@ArticleType = 2 AND na.EventArticle = 1)))
+			AND ((@PermissionsByArticle = 0) OR ((@PermissionsByArticle = 1 AND na.HasPermissions = 1) OR (@PermissionsByArticle = 2 AND na.HasPermissions = 0)))
+			AND ((@Published = 0) OR ((@Published = 1 AND na.Active = 1) OR (@Published = 2 AND na.Active = 0)))
+			AND ((@Featured = 0) OR ((@Featured = 1 AND na.Featured = 1) OR (@Featured = 2 AND na.Featured = 0)))
+			AND ((@FilterAuthorOrAuthors = 0) OR (@FilterAuthorOrAuthors = 1 AND na.UserID IN (SELECT UserID FROM @TempAuthorsIDList)))
+			AND ((@OnlyOneCategory <> 0 AND cat.CategoryID IN (SELECT @OnlyOneCategory)) OR (@OnlyOneCategory = 0))
+		UNION
+		SELECT DISTINCT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] AS arp ON na.ArticleID = arp.ArticleID
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cat ON na.ArticleID = cat.ArticleID
+			--LEFT OUTER JOIN @UserEditCategories AS uec ON uec.CategoryID = cat.CategoryID
+			--INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+		WHERE na.PortalID=@PortalID
+			AND na.HasPermissions = 1
+			AND ((@EditPermission = 1) OR ((arp.Edit = 1) AND arp.RoleID IN (SELECT [RoleID] FROM @UserInRoles)))
+			AND ((@Approved = 0) OR ((@Approved = 1 AND na.Approved = 1) OR (@Approved = 2 AND na.Approved = 0)))
+			AND ((@ArticleType = 0) OR ((@ArticleType = 1 AND na.EventArticle = 0) OR (@ArticleType = 2 AND na.EventArticle = 1)))
+			AND ((@PermissionsByArticle = 0) OR ((@PermissionsByArticle = 1 AND na.HasPermissions = 1) OR (@PermissionsByArticle = 2 AND na.HasPermissions = 0)))
+			AND ((@Published = 0) OR ((@Published = 1 AND na.Active = 1) OR (@Published = 2 AND na.Active = 0)))
+			AND ((@Featured = 0) OR ((@Featured = 1 AND na.Featured = 1) OR (@Featured = 2 AND na.Featured = 0)))
+			AND ((@FilterAuthorOrAuthors = 0) OR (@FilterAuthorOrAuthors = 1 AND na.UserID IN (SELECT UserID FROM @TempAuthorsIDList)))
+			AND ((@OnlyOneCategory <> 0 AND cat.CategoryID IN (SELECT @OnlyOneCategory)) OR (@OnlyOneCategory = 0))
+		)
+	 ) AS Result LEFT OUTER JOIN {databaseOwner}[{objectQualifier}Users] AS u ON Result.UserID = u.UserID WHERE Kulike BETWEEN @ItemsFrom AND @ItemsTo ORDER BY
+	 CASE WHEN @OrderBy =''PublishDate ASC'' THEN PublishDate END,
+	 CASE WHEN @OrderBy =''PublishDate DESC'' THEN PublishDate END DESC,
+	 CASE WHEN @OrderBy =''NumberOfViews ASC'' THEN NumberOfViews END,
+	 CASE WHEN @OrderBy =''NumberOfViews DESC'' THEN NumberOfViews END DESC,
+	 CASE WHEN @OrderBy =''RatingValue ASC'' THEN RatingValue END,
+	 CASE WHEN @OrderBy =''RatingValue DESC'' THEN RatingValue END DESC,
+	 CASE WHEN @OrderBy =''DateAdded ASC'' THEN DateAdded END,
+	 CASE WHEN @OrderBy =''DateAdded DESC'' THEN DateAdded END DESC,
+	 CASE WHEN @OrderBy =''ExpireDate ASC'' THEN ExpireDate END,
+	 CASE WHEN @OrderBy =''ExpireDate DESC'' THEN ExpireDate END DESC,
+	 CASE WHEN @OrderBy =''LastModified ASC'' THEN LastModified END,
+	 CASE WHEN @OrderBy =''LastModified DESC'' THEN LastModified END DESC,
+	 CASE WHEN @OrderBy =''NumberOfComments ASC'' THEN NumberOfComments END,
+	 CASE WHEN @OrderBy =''NumberOfComments DESC'' THEN NumberOfComments END DESC,
+	 CASE WHEN @OrderBy =''Title ASC'' THEN Title END,
+	 CASE WHEN @OrderBy =''Title DESC'' THEN Title END DESC,
+	 CASE WHEN @OrderBy2 =''PublishDate ASC'' THEN PublishDate END,
+	 CASE WHEN @OrderBy2 =''PublishDate DESC'' THEN PublishDate END DESC,
+	 CASE WHEN @OrderBy2 =''NumberOfViews ASC'' THEN NumberOfViews END,
+	 CASE WHEN @OrderBy2 =''NumberOfViews DESC'' THEN NumberOfViews END DESC,
+	 CASE WHEN @OrderBy2 =''RatingValue ASC'' THEN RatingValue END,
+	 CASE WHEN @OrderBy2 =''RatingValue DESC'' THEN RatingValue END DESC,
+	 CASE WHEN @OrderBy2 =''DateAdded ASC'' THEN DateAdded END,
+	 CASE WHEN @OrderBy2 =''DateAdded DESC'' THEN DateAdded END DESC,
+	 CASE WHEN @OrderBy2 =''ExpireDate ASC'' THEN ExpireDate END,
+	 CASE WHEN @OrderBy2 =''ExpireDate DESC'' THEN ExpireDate END DESC,
+	 CASE WHEN @OrderBy2 =''LastModified ASC'' THEN LastModified END,
+	 CASE WHEN @OrderBy2 =''LastModified DESC'' THEN LastModified END DESC,
+	 CASE WHEN @OrderBy2 =''NumberOfComments ASC'' THEN NumberOfComments END,
+	 CASE WHEN @OrderBy2 =''NumberOfComments DESC'' THEN NumberOfComments END DESC,
+	 CASE WHEN @OrderBy2 =''Title ASC'' THEN Title END,
+	 CASE WHEN @OrderBy2 =''Title DESC'' THEN Title END DESC;' 
+END
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCountForArticleEditor]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCountForArticleEditor]
+	@PortalID int, -- current Portal
+	@ModuleID int, -- current Module, portal sharing isto sadrzi dobre kategorije, auto add i setingsi su snimljeni kod tog modula
+	@UserID int,
+	@ItemsFrom int = 1,
+	@ItemsTo int = 5,
+	@OnlyOneCategory int = 0, -- used for category menu or vhen need to filter by one category
+	@FilterByAuthor int = 0, -- ako se selektiran jedan autor
+	@FilterByGroupID int = 0, -- ako je selektirana grupa
+	@EditOnlyAsOwner bit = 0, -- news settings
+	@UserCanApprove bit = 0, -- news settings
+	@Perm_ViewAllCategores bit = 0, -- permission settings View all categories
+	@Perm_EditAllCategores bit = 0, -- permission settings Edit all categories
+	@AdminOrSuperUser bit = 0,
+	@PermissionSettingsSource bit = 1, -- 1 portal, 0 module
+	@OrderBy nvarchar(20) = ''PublishDate DESC'',
+	@OrderBy2 nvarchar(20) = '''',
+	
+	@Featured tinyint = 0,
+	@Published tinyint = 0,
+	@Approved tinyint = 0,
+	@ArticleType tinyint = 0,
+	@PermissionsByArticle tinyint = 0	
+AS
+SET NOCOUNT ON;
+DECLARE @EditPermission tinyint;
+SET @EditPermission = 0;
+DECLARE @UserInRoles TABLE (RoleID int);
+INSERT INTO @UserInRoles SELECT DISTINCT ur.[RoleID] FROM {databaseOwner}[{objectQualifier}UserRoles] AS ur INNER JOIN {databaseOwner}[{objectQualifier}Roles] AS r ON ur.RoleID = r.RoleID WHERE ur.UserID = @UserID AND r.PortalID = @PortalID AND (ur.ExpiryDate IS NULL OR ur.ExpiryDate > GETUTCDATE()) AND (ur.EffectiveDate IS NULL OR ur.EffectiveDate < GETUTCDATE());
+DECLARE @UserEditCategories TABLE (CategoryID int NOT NULL PRIMARY KEY); -- all categories which user can edit based on permissions
+
+DECLARE @FilterAuthorOrAuthors bit;
+SET @FilterAuthorOrAuthors = 0;
+DECLARE @TempAuthorsIDList TABLE (UserID int NOT NULL PRIMARY KEY);
+IF @FilterByAuthor <> 0
+BEGIN
+	SET @FilterAuthorOrAuthors = 1;
+	INSERT INTO @TempAuthorsIDList SELECT @FilterByAuthor;
+END
+ELSE IF @FilterByGroupID <> 0
+BEGIN
+	SET @FilterAuthorOrAuthors = 1;
+	INSERT INTO @TempAuthorsIDList
+	SELECT [UserID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile] AS ap 
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems] AS agi ON ap.AuthorProfileID = agi.AuthorProfileID	
+		WHERE agi.GroupID = @FilterByGroupID
+END
+
+-- kategorije sa edit pravima
+IF @AdminOrSuperUser = 1 OR @Perm_EditAllCategores = 1
+BEGIN	
+	INSERT INTO @UserEditCategories SELECT CategoryID FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] WHERE PortalID = @PortalID;
+	SET @EditPermission = 1;
+END
+ELSE
+BEGIN
+	IF @UserID = -1
+	BEGIN
+		IF @PermissionSettingsSource = 1 -- by portal
+		BEGIN
+			INSERT INTO @UserEditCategories
+			SELECT rpatc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] AS rpatc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] AS rps ON rps.PremissionSettingsID = rpatc.PremissionSettingsID
+			WHERE rps.PortalID = @PortalID AND rps.ModuleID IS NULL AND rps.RoleID IS NULL;
+		END
+		ELSE -- by module
+		BEGIN
+			INSERT INTO @UserEditCategories
+			SELECT rpatc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] AS rpatc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] AS rps ON rps.PremissionSettingsID = rpatc.PremissionSettingsID
+			WHERE rps.RoleID IS NULL AND rps.PortalID = @PortalID AND rps.ModuleID = @ModuleID;
+		END
+	END
+	ELSE -- registrirani korisnik
+	BEGIN
+		IF @PermissionSettingsSource = 1 -- by portal
+		BEGIN
+			INSERT INTO @UserEditCategories
+			SELECT rpatc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] AS rpatc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] AS rps ON rps.PremissionSettingsID = rpatc.PremissionSettingsID
+			INNER JOIN @UserInRoles AS uir ON rps.RoleID = uir.RoleID
+			WHERE rps.PortalID = @PortalID AND rps.ModuleID IS NULL GROUP BY rpatc.[CategoryID]
+			UNION
+			SELECT upatc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories] AS upatc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] AS ups ON ups.PremissionSettingsID = upatc.PremissionSettingsID
+			WHERE ups.UserID = @UserID AND ups.PortalID = @PortalID AND ups.ModuleID IS NULL GROUP BY upatc.[CategoryID];
+		END
+		ELSE -- by module
+		BEGIN
+			INSERT INTO @UserEditCategories
+			SELECT rpatc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] AS rpatc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] AS rps ON rps.PremissionSettingsID = rpatc.PremissionSettingsID
+			INNER JOIN @UserInRoles AS uir ON rps.RoleID = uir.RoleID
+			WHERE rps.PortalID = @PortalID AND rps.ModuleID = @ModuleID GROUP BY rpatc.[CategoryID]
+			UNION
+			SELECT upatc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories] AS upatc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] AS ups ON ups.PremissionSettingsID = upatc.PremissionSettingsID
+			WHERE ups.UserID = @UserID AND ups.PortalID = @PortalID AND ups.ModuleID = @ModuleID GROUP BY upatc.[CategoryID];
+		END	
+	END
+	IF EXISTS(SELECT TOP (1) * FROM @UserEditCategories) BEGIN SET @EditPermission = 2; END
+END
+
+IF @OnlyOneCategory <> 0 -- filtrira se po jednoj kategoriji
+BEGIN
+	 DELETE uec FROM @UserEditCategories AS uec WHERE uec.CategoryID NOT IN (SELECT @OnlyOneCategory);
+END
+
+DECLARE @ArticlesInCategories int;
+SET @ArticlesInCategories = 0;
+DECLARE @ArticlesInRolesAndUsers int;
+SET @ArticlesInRolesAndUsers = 0;
+
+
+SELECT @ArticlesInCategories = Count(ArticleID) FROM (SELECT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na
+	INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cat ON na.ArticleID = cat.ArticleID
+	INNER JOIN @UserEditCategories AS uec ON uec.CategoryID = cat.CategoryID
+WHERE na.PortalID=@PortalID
+	AND na.HasPermissions = 0
+	AND ((@Approved = 0) OR ((@Approved = 1 AND na.Approved = 1) OR (@Approved = 2 AND na.Approved = 0)))
+	AND ((@ArticleType = 0) OR ((@ArticleType = 1 AND na.EventArticle = 0) OR (@ArticleType = 2 AND na.EventArticle = 1)))
+	AND ((@PermissionsByArticle = 0) OR ((@PermissionsByArticle = 1 AND na.HasPermissions = 1) OR (@PermissionsByArticle = 2 AND na.HasPermissions = 0)))
+	AND ((@Published = 0) OR ((@Published = 1 AND na.Active = 1) OR (@Published = 2 AND na.Active = 0)))
+	AND ((@Featured = 0) OR ((@Featured = 1 AND na.Featured = 1) OR (@Featured = 2 AND na.Featured = 0)))
+	AND ((@FilterAuthorOrAuthors = 0) OR (@FilterAuthorOrAuthors = 1 AND na.UserID IN (SELECT UserID FROM @TempAuthorsIDList)))
+GROUP BY na.ArticleID) AS CountTable;
+
+SELECT @ArticlesInRolesAndUsers = Count(ArticleID) FROM (
+	SELECT na.[ArticleID] from {databaseOwner}[{objectQualifier}EasyDNNNews] AS na
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] AS aup ON na.ArticleID = aup.ArticleID
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cat ON na.ArticleID = cat.ArticleID
+	WHERE na.PortalID=@PortalID
+		AND ((@EditPermission = 1) OR ((aup.Edit = 1) AND ((@UserID = -1 AND aup.UserID IS NULL) OR (aup.UserID = @UserID))))
+		AND na.HasPermissions = 1
+		AND ((@Approved = 0) OR ((@Approved = 1 AND na.Approved = 1) OR (@Approved = 2 AND na.Approved = 0)))
+		AND ((@ArticleType = 0) OR ((@ArticleType = 1 AND na.EventArticle = 0) OR (@ArticleType = 2 AND na.EventArticle = 1)))
+	    AND ((@PermissionsByArticle = 0) OR ((@PermissionsByArticle = 1 AND na.HasPermissions = 1) OR (@PermissionsByArticle = 2 AND na.HasPermissions = 0)))
+		AND ((@Published = 0) OR ((@Published = 1 AND na.Active = 1) OR (@Published = 2 AND na.Active = 0)))
+		AND ((@Featured = 0) OR ((@Featured = 1 AND na.Featured = 1) OR (@Featured = 2 AND na.Featured = 0)))
+		AND ((@FilterAuthorOrAuthors = 0) OR (@FilterAuthorOrAuthors = 1 AND na.UserID IN (SELECT UserID FROM @TempAuthorsIDList)))
+		AND ((@OnlyOneCategory <> 0 AND cat.CategoryID IN (SELECT @OnlyOneCategory)) OR (@OnlyOneCategory = 0))
+	GROUP BY na.ArticleID
+	UNION
+	SELECT na.[ArticleID] from {databaseOwner}[{objectQualifier}EasyDNNNews] AS na
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] AS arp ON na.ArticleID = arp.ArticleID
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cat ON na.ArticleID = cat.ArticleID
+	WHERE na.PortalID=@PortalID
+		AND na.HasPermissions = 1
+		AND ((@EditPermission = 1) OR ((arp.Edit = 1) AND arp.RoleID IN (SELECT [RoleID] FROM @UserInRoles)))
+		AND ((@Approved = 0) OR ((@Approved = 1 AND na.Approved = 1) OR (@Approved = 2 AND na.Approved = 0)))
+		AND ((@ArticleType = 0) OR ((@ArticleType = 1 AND na.EventArticle = 0) OR (@ArticleType = 2 AND na.EventArticle = 1)))
+	    AND ((@PermissionsByArticle = 0) OR ((@PermissionsByArticle = 1 AND na.HasPermissions = 1) OR (@PermissionsByArticle = 2 AND na.HasPermissions = 0)))
+		AND ((@Published = 0) OR ((@Published = 1 AND na.Active = 1) OR (@Published = 2 AND na.Active = 0)))
+		AND ((@Featured = 0) OR ((@Featured = 1 AND na.Featured = 1) OR (@Featured = 2 AND na.Featured = 0)))
+		AND ((@FilterAuthorOrAuthors = 0) OR (@FilterAuthorOrAuthors = 1 AND na.UserID IN (SELECT UserID FROM @TempAuthorsIDList)))
+		AND ((@OnlyOneCategory <> 0 AND cat.CategoryID IN (SELECT @OnlyOneCategory)) OR (@OnlyOneCategory = 0))
+	GROUP BY na.ArticleID
+) AS final
+
+SELECT @ArticlesInRolesAndUsers + @ArticlesInCategories
+     
+     ' 
+END
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetRelatedArticlesByArticleTags]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetRelatedArticlesByArticleTags]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetRelatedArticlesByArticleTags]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetRelatedArticlesByArticleTags]
+	@PortalID int, -- current Portal
+	@ModuleID int, -- current Module, portal sharing isto sadrzi dobre kategorije, auto add i setingsi su snimljeni kod tog modula
+	@UserID int,
+	@CurrentDate Datetime, -- = GetUTCDate,
+	@OrderBy nvarchar(20) = ''PublishDate DESC'',	
+	@UserCanApprove bit = 0, -- news settings
+	@LocaleCode nvarchar(20) = '''',
+	@Perm_ViewAllCategores bit = 0, -- permission settings View all categories
+	@AdminOrSuperUser bit = 0,
+	@PermissionSettingsSource bit = 1, -- 1 portal, 0 module
+	@FillterSettingsSource bit = 1, -- 1 portal, 0 module	
+	@CategoryFilterType tinyint = 1, -- 0 All categories, 1 - SELECTion, 2 - AutoAdd
+	@HideUnlocalizedItems bit = 0,
+	@ArticleID int,
+	@NumberOfItems int = 5
+AS
+SET NOCOUNT ON;
+
+IF EXISTS (SELECT TOP (1) [ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] WHERE ArticleID = @ArticleID)
+BEGIN
+
+DECLARE @EditPermission tinyint;
+SET @EditPermission = 0;
+
+DECLARE @UserInRoles TABLE (RoleID int NOT NULL PRIMARY KEY);
+INSERT INTO @UserInRoles SELECT DISTINCT ur.[RoleID] FROM {databaseOwner}[{objectQualifier}UserRoles] AS ur INNER JOIN {databaseOwner}[{objectQualifier}Roles] AS r ON ur.RoleID = r.RoleID WHERE ur.UserID = @UserID AND r.PortalID = @PortalID AND (ur.ExpiryDate IS NULL OR ur.ExpiryDate > GETUTCDATE()) AND (ur.EffectiveDate IS NULL OR ur.EffectiveDate < GETUTCDATE());
+
+DECLARE @UserViewCategories TABLE (CategoryID INT NOT NULL PRIMARY KEY); -- all categories which user can see based on permissions
+DECLARE @UserViewCategoriesWithFilter TABLE (CategoryID INT NOT NULL PRIMARY KEY); -- all categories which user can see based on permissions and Module filter
+DECLARE @FiltredByCategories TABLE (CategoryID INT NOT NULL PRIMARY KEY); -- all categories that are filtred by module or portal
+
+IF @AdminOrSuperUser = 1 OR @Perm_ViewAllCategores = 1
+BEGIN
+	INSERT INTO @UserViewCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] WHERE PortalID = @PortalID;
+END
+ELSE IF @UserID = -1
+BEGIN	
+	IF @PermissionSettingsSource = 1 -- by portal
+	BEGIN
+		INSERT INTO @UserViewCategories
+		SELECT rpsc.[CategoryID] FROM  {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsShowCategories] AS rpsc 
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] AS rps ON rps.PremissionSettingsID = rpsc.PremissionSettingsID
+		WHERE rps.PortalID = @PortalID  AND rps.ModuleID IS NULL AND rps.RoleID IS NULL;
+	END
+	ELSE -- by module
+	BEGIN
+	INSERT INTO @UserViewCategories
+		SELECT rpsc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsShowCategories] AS rpsc
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] AS rps ON rps.PremissionSettingsID = rpsc.PremissionSettingsID
+		WHERE rps.PortalID = @PortalID AND rps.ModuleID = @ModuleID AND rps.RoleID IS NULL;
+	END
+END
+ELSE -- registrirani korisnik
+BEGIN
+	IF @PermissionSettingsSource = 1 -- by portal
+	BEGIN
+		INSERT INTO @UserViewCategories
+		SELECT rpsc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsShowCategories] AS rpsc
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] AS rps ON rps.PremissionSettingsID = rpsc.PremissionSettingsID
+		INNER JOIN @UserInRoles AS uir ON rps.RoleID = uir.RoleID
+		WHERE rps.PortalID = @PortalID AND rps.ModuleID IS NULL GROUP BY rpsc.[CategoryID]
+		UNION
+		SELECT upsc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsShowCategories] AS upsc
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] AS ups ON ups.PremissionSettingsID = upsc.PremissionSettingsID
+		WHERE ups.UserID = @UserID AND ups.PortalID = @PortalID AND ups.ModuleID IS NULL GROUP BY upsc.[CategoryID];
+	END
+	ELSE -- by module
+	BEGIN
+		INSERT INTO @UserViewCategories
+		SELECT rpsc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsShowCategories] AS rpsc
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] AS rps ON rps.PremissionSettingsID = rpsc.PremissionSettingsID
+		INNER JOIN @UserInRoles AS uir ON rps.RoleID = uir.RoleID
+		WHERE rps.PortalID = @PortalID AND rps.ModuleID = @ModuleID GROUP BY rpsc.[CategoryID]
+		UNION
+		SELECT upsc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsShowCategories] AS upsc
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] AS ups ON ups.PremissionSettingsID = upsc.PremissionSettingsID
+		WHERE ups.UserID = @UserID AND ups.PortalID = @PortalID AND ups.ModuleID = @ModuleID GROUP BY upsc.[CategoryID];
+	END
+END
+
+IF @CategoryFilterType = 0 -- 0 All categories
+BEGIN
+	INSERT INTO @UserViewCategoriesWithFilter SELECT [CategoryID] FROM @UserViewCategories;
+	INSERT INTO @FiltredByCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] WHERE PortalID = @PortalID;
+END
+ELSE IF @CategoryFilterType = 1 -- 1 - SELECTion
+BEGIN
+	IF @FillterSettingsSource = 1 -- portal
+	BEGIN
+		INSERT INTO @UserViewCategoriesWithFilter 
+		SELECT cl.[CategoryID] FROM @UserViewCategories AS cl
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsPortalCategoryItems] AS pci ON pci.CategoryID = cl.CategoryID AND pci.PortalID = @PortalID
+		
+		INSERT INTO @FiltredByCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsPortalCategoryItems] WHERE PortalID = @PortalID;
+	END
+	ELSE -- module
+	BEGIN
+		INSERT INTO @UserViewCategoriesWithFilter 
+		SELECT cl.[CategoryID] FROM @UserViewCategories AS cl
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems] AS mci ON mci.CategoryID = cl.CategoryID AND mci.ModuleID = @ModuleID
+		
+		INSERT INTO @FiltredByCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems] WHERE ModuleID = @ModuleID;
+	END
+END
+ELSE IF @CategoryFilterType = 2 -- 2 - AutoAdd
+BEGIN
+	IF @FillterSettingsSource = 1 -- portal
+	BEGIN
+		WITH hierarchy AS(
+			SELECT [CategoryID], [ParentCategory]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS cl
+			WHERE (cl.ParentCategory IN (SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsPortalCategoryItems] WHERE PortalID = @PortalID) OR cl.CategoryID IN (SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsPortalCategoryItems] WHERE PortalID = @PortalID)) AND PortalID = @PortalID
+			UNION ALL
+			SELECT c.[CategoryID], c.[ParentCategory]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS c INNER JOIN hierarchy AS p ON c.ParentCategory = p.CategoryID WHERE c.PortalID = @PortalID
+			)
+		INSERT INTO @FiltredByCategories SELECT DISTINCT CategoryID FROM hierarchy;	
+		INSERT INTO @UserViewCategoriesWithFilter SELECT uvc.CategoryID FROM @FiltredByCategories AS nfc INNER JOIN @UserViewCategories AS uvc ON uvc.CategoryID = nfc.CategoryID;			
+	END
+	ELSE -- module
+	BEGIN
+		WITH hierarchy AS(
+			SELECT [CategoryID], [ParentCategory]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS cl
+			WHERE (cl.ParentCategory IN (SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems] WHERE ModuleID = @ModuleID) OR cl.CategoryID IN (SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems] WHERE ModuleID = @ModuleID)) AND PortalID = @PortalID
+			UNION ALL
+			SELECT c.[CategoryID], c.[ParentCategory]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS c INNER JOIN hierarchy AS p ON c.ParentCategory = p.CategoryID WHERE c.PortalID = @PortalID
+			)
+		INSERT INTO @FiltredByCategories SELECT DISTINCT CategoryID FROM hierarchy;	
+		INSERT INTO @UserViewCategoriesWithFilter SELECT uvc.CategoryID FROM @FiltredByCategories AS nfc INNER JOIN @UserViewCategories AS uvc ON uvc.CategoryID = nfc.CategoryID;
+	END
+END
+
+IF @LocaleCode <> ''''
+BEGIN
+	WITH FinalArticleIDsSet (ArticleID) AS(
+	SELECT TOP (@NumberOfItems) n.[ArticleID]
+	FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS n WHERE ArticleID IN(
+		SELECT DISTINCT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cat ON na.ArticleID = cat.ArticleID
+			INNER JOIN @UserViewCategoriesWithFilter AS uvc ON uvc.CategoryID = cat.CategoryID	
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] AS ti ON na.ArticleID = ti.ArticleID AND (ti.TagID IN (SELECT [TagID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] WHERE ArticleID = @ArticleID))		
+		WHERE na.PortalID=@PortalID
+			AND na.HasPermissions = 0
+			AND na.HideDefaultLocale = 0
+			AND na.PublishDate <= @CurrentDate
+			AND na.ExpireDate >= @CurrentDate
+			AND na.ArticleID <> @ArticleID
+			AND ((@EditPermission = 1) OR ((@UserCanApprove = 1 OR na.Approved=1) AND (na.Active = 1 OR na.UserID=@UserID)))
+		UNION ALL
+		SELECT DISTINCT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] AS aup ON na.ArticleID = aup.ArticleID
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cat ON na.ArticleID = cat.ArticleID
+			INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] AS ti ON na.ArticleID = ti.ArticleID AND (ti.TagID IN (SELECT [TagID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] WHERE ArticleID = @ArticleID))		
+		WHERE na.PortalID=@PortalID
+			AND na.HasPermissions = 1
+			AND na.HideDefaultLocale = 0
+			AND na.PublishDate <= @CurrentDate
+			AND na.ExpireDate >= @CurrentDate
+			AND na.ArticleID <> @ArticleID
+			AND ((@EditPermission = 1) OR (((@UserID = -1 AND aup.UserID IS NULL) OR (aup.UserID = @UserID))
+				AND aup.Show = 1 AND ((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active = 1 OR na.UserID=@UserID)
+			))
+		UNION
+		SELECT DISTINCT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] AS arp ON na.ArticleID = arp.ArticleID
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cat ON na.ArticleID = cat.ArticleID
+			INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] AS ti ON na.ArticleID = ti.ArticleID AND (ti.TagID IN (SELECT [TagID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] WHERE ArticleID = @ArticleID))		
+		WHERE na.PortalID=@PortalID
+			AND na.HasPermissions = 1
+			AND na.HideDefaultLocale = 0
+			AND na.PublishDate <= @CurrentDate
+			AND na.ExpireDate >= @CurrentDate
+			AND na.ArticleID <> @ArticleID
+			AND ((@EditPermission = 1) OR (((@UserCanApprove = 1) OR (na.Approved=1))
+				AND (na.Active = 1 OR na.UserID=@UserID) AND arp.Show = 1 AND arp.RoleID IN (SELECT [RoleID] FROM @UserInRoles)
+			))
+		)
+	ORDER BY
+		CASE WHEN @OrderBy =''PublishDate DESC'' THEN PublishDate END DESC,
+		CASE WHEN @OrderBy =''NumberOfViews DESC'' THEN NumberOfViews END DESC
+),
+FinalLocalizedArticleIDsSet (ArticleID,Title,TitleLink) AS(
+	SELECT ArticleID,Title,clTitleLink AS TitleLink FROM {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] WHERE ArticleID IN (SELECT ArticleID FROM FinalArticleIDsSet) AND LocaleCode = @LocaleCode
+)
+SELECT *
+	 FROM (
+		 SELECT n.[ArticleID],n.[Title],n.[TitleLink],n.[PublishDate],n.[NumberOfViews]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS n WHERE ArticleID IN (SELECT ArticleID FROM FinalArticleIDsSet WHERE ArticleID NOT IN (SELECT ArticleID FROM FinalLocalizedArticleIDsSet))
+		 UNION ALL
+		 SELECT n.[ArticleID],fla.[Title],fla.[TitleLink],n.[PublishDate],n.[NumberOfViews]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS n INNER JOIN FinalLocalizedArticleIDsSet AS fla ON fla.ArticleID = n.ArticleID) As Result
+	ORDER BY
+		CASE WHEN @OrderBy =''PublishDate DESC'' THEN PublishDate END DESC,
+		CASE WHEN @OrderBy =''NumberOfViews DESC'' THEN NumberOfViews END DESC
+END
+ELSE
+BEGIN
+	SELECT TOP (@NumberOfItems) n.[ArticleID],n.[Title],n.[TitleLink]
+	FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS n WHERE ArticleID IN(
+		SELECT DISTINCT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cat ON na.ArticleID = cat.ArticleID
+			INNER JOIN @UserViewCategoriesWithFilter AS uvc ON uvc.CategoryID = cat.CategoryID	
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] AS ti ON na.ArticleID = ti.ArticleID AND (ti.TagID IN (SELECT [TagID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] WHERE ArticleID = @ArticleID))		
+		WHERE na.PortalID=@PortalID
+			AND na.HasPermissions = 0
+			AND na.HideDefaultLocale = 0
+			AND na.PublishDate <= @CurrentDate
+			AND na.ExpireDate >= @CurrentDate
+			AND na.ArticleID <> @ArticleID
+			AND ((@EditPermission = 1) OR ((@UserCanApprove = 1 OR na.Approved=1) AND (na.Active = 1 OR na.UserID=@UserID)))
+		UNION ALL
+		SELECT DISTINCT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] AS aup ON na.ArticleID = aup.ArticleID
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cat ON na.ArticleID = cat.ArticleID
+			INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] AS ti ON na.ArticleID = ti.ArticleID AND (ti.TagID IN (SELECT [TagID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] WHERE ArticleID = @ArticleID))		
+		WHERE na.PortalID=@PortalID
+			AND na.HasPermissions = 1
+			AND na.HideDefaultLocale = 0
+			AND na.PublishDate <= @CurrentDate
+			AND na.ExpireDate >= @CurrentDate
+			AND na.ArticleID <> @ArticleID
+			AND ((@EditPermission = 1) OR (((@UserID = -1 AND aup.UserID IS NULL) OR (aup.UserID = @UserID))
+				AND aup.Show = 1 AND ((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active = 1 OR na.UserID=@UserID)
+			))
+		UNION
+		SELECT DISTINCT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] AS arp ON na.ArticleID = arp.ArticleID
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cat ON na.ArticleID = cat.ArticleID
+			INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] AS ti ON na.ArticleID = ti.ArticleID AND (ti.TagID IN (SELECT [TagID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems] WHERE ArticleID = @ArticleID))		
+		WHERE na.PortalID=@PortalID
+			AND na.HasPermissions = 1
+			AND na.HideDefaultLocale = 0
+			AND na.PublishDate <= @CurrentDate
+			AND na.ExpireDate >= @CurrentDate
+			AND na.ArticleID <> @ArticleID
+			AND ((@EditPermission = 1) OR (((@UserCanApprove = 1) OR (na.Approved=1))
+				AND (na.Active = 1 OR na.UserID=@UserID) AND arp.Show = 1 AND arp.RoleID IN (SELECT [RoleID] FROM @UserInRoles)
+			))
+		)
+	ORDER BY
+		CASE WHEN @OrderBy =''PublishDate DESC'' THEN PublishDate END DESC,
+		CASE WHEN @OrderBy =''NumberOfViews DESC'' THEN NumberOfViews END DESC;
+END
+END
+ELSE
+BEGIN
+	SELECT TOP(1) n.[ArticleID],n.[Title],n.[TitleLink],n.[PublishDate],n.[NumberOfViews] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as n WHERE n.[ArticleID] = -1
+END
+' 
+END
+GO
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCalendarEventsArchive]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCalendarEventsArchive]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCalendarEventsArchive]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNNewsGetItemsCalendarEventsArchive]
+	@PortalID int,
+	@UserID int,
+	@CalendarModuleID int,
+	@AdminOrSuperUser bit  = 0,
+	@CurrentDate DateTime,
+	@RowCount int = 10,
+	@LocaleCode nvarchar(20) = '''',
+	@IsSocialInstance bit = 0,
+	@FilterByDNNUserID int = 0, -- filter by some UserID / not current user ID
+	@FilterByDNNGroupID int = 0, -- filter by DNNGroup/RoleID / not profile GroupID
+	@ShowAllAuthors bit = 1, -- filter postavka menija
+	@CategoryFilterType tinyint = 0, --0 All categories, 1 - Selection, 2 - AutoAdd
+	@HideUnlocalizedItems bit = 0,
+	@PermissionSettingsSource tinyint = 0, -- None, 1 - portal, 2 - module
+	@PermissionsModuleID int = 0 -- NewsModuleID
+
+AS
+SET NOCOUNT ON;
+DECLARE @UserCanApprove bit;
+SET @UserCanApprove = 0;
+DECLARE @UserInRoles TABLE (RoleID int NOT NULL PRIMARY KEY);
+INSERT INTO @UserInRoles SELECT DISTINCT ur.[RoleID] FROM {databaseOwner}[{objectQualifier}UserRoles] AS ur INNER JOIN {databaseOwner}[{objectQualifier}Roles] AS r ON ur.RoleID = r.RoleID WHERE ur.UserID = @UserID AND r.PortalID = @PortalID AND (ur.ExpiryDate IS NULL OR ur.ExpiryDate > GETUTCDATE()) AND (ur.EffectiveDate IS NULL OR ur.EffectiveDate < GETUTCDATE());
+
+DECLARE @UserViewCategories TABLE (CategoryID int NOT NULL PRIMARY KEY); -- all categories which user can see based on permissions
+DECLARE @UserViewCategoriesWithFilter TABLE (CategoryID int NOT NULL PRIMARY KEY); -- all categories which user can see based on permissions and Module filter
+DECLARE @FiltredByCategories TABLE (CategoryID int NOT NULL PRIMARY KEY); -- all categories that are filtred by module or portal
+
+DECLARE @SettingsSource bit; SET @SettingsSource = 1;
+IF @AdminOrSuperUser = 1 OR @PermissionSettingsSource = 0
+BEGIN
+	INSERT INTO @UserViewCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] WHERE PortalID = @PortalID;
+END
+ELSE IF @UserID = -1
+BEGIN	
+	IF @PermissionSettingsSource = 1 -- by portal
+	BEGIN
+		IF EXISTS (SELECT ShowAllCategories FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rps WHERE rps.PortalID = @PortalID  AND rps.ModuleID IS NULL AND rps.RoleID IS NULL AND rps.ShowAllCategories = 1)
+		BEGIN
+			INSERT INTO @UserViewCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] WHERE PortalID = @PortalID;
+		END
+		ELSE
+		BEGIN
+			INSERT INTO @UserViewCategories
+			SELECT rpsc.[CategoryID] FROM  {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsShowCategories] as rpsc 
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rps ON rps.PremissionSettingsID = rpsc.PremissionSettingsID
+			WHERE rps.PortalID = @PortalID  AND rps.ModuleID IS NULL AND rps.RoleID IS NULL;
+		END
+	END
+	ELSE -- by module
+	BEGIN
+		SELECT @SettingsSource = PermissionsPMSource FROM {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] WHERE ModuleID = @PermissionsModuleID;
+		IF @SettingsSource = 1
+		BEGIN
+			IF EXISTS (SELECT ShowAllCategories FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rps WHERE rps.PortalID = @PortalID  AND rps.ModuleID IS NULL AND rps.RoleID IS NULL AND rps.ShowAllCategories = 1)
+			BEGIN
+				INSERT INTO @UserViewCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] WHERE PortalID = @PortalID;
+			END
+			ELSE
+			BEGIN
+				INSERT INTO @UserViewCategories
+				SELECT rpsc.[CategoryID] FROM  {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsShowCategories] as rpsc 
+				INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rps ON rps.PremissionSettingsID = rpsc.PremissionSettingsID
+				WHERE rps.PortalID = @PortalID  AND rps.ModuleID IS NULL AND rps.RoleID IS NULL;
+			END
+		END
+		ELSE
+		BEGIN
+			IF EXISTS (SELECT ShowAllCategories FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rps WHERE rps.PortalID = @PortalID AND rps.ModuleID = @PermissionsModuleID AND rps.RoleID IS NULL AND rps.ShowAllCategories = 1)
+			BEGIN
+				INSERT INTO @UserViewCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] WHERE PortalID = @PortalID;
+			END
+			ELSE
+			BEGIN
+				INSERT INTO @UserViewCategories
+				SELECT rpsc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsShowCategories] as rpsc
+				INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rps ON rps.PremissionSettingsID = rpsc.PremissionSettingsID
+				WHERE rps.PortalID = @PortalID AND rps.ModuleID = @PermissionsModuleID AND rps.RoleID IS NULL;
+			END
+		END
+	END
+END
+ELSE -- registrirani korisnik
+BEGIN
+	IF @PermissionSettingsSource = 1 -- by portal
+	BEGIN
+		IF EXISTS (
+				SELECT TOP (1) ShowAllCategories FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rps
+					INNER JOIN @UserInRoles as uir ON rps.RoleID = uir.RoleID
+					WHERE rps.PortalID = @PortalID AND rps.ModuleID IS NULL AND rps.ShowAllCategories = 1
+				UNION
+				SELECT ShowAllCategories FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] as ups
+				WHERE ups.UserID = @UserID AND ups.PortalID = @PortalID AND ups.ModuleID IS NULL AND ups.ShowAllCategories = 1
+		)
+		BEGIN
+			INSERT INTO @UserViewCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] WHERE PortalID = @PortalID;
+		END
+		ELSE
+		BEGIN
+			INSERT INTO @UserViewCategories
+			SELECT rpsc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsShowCategories] as rpsc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rps ON rps.PremissionSettingsID = rpsc.PremissionSettingsID
+			INNER JOIN @UserInRoles as uir ON rps.RoleID = uir.RoleID
+			WHERE rps.PortalID = @PortalID AND rps.ModuleID IS NULL GROUP BY rpsc.[CategoryID]
+			UNION
+			SELECT upsc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsShowCategories] as upsc
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] as ups ON ups.PremissionSettingsID = upsc.PremissionSettingsID
+			WHERE ups.UserID = @UserID AND ups.PortalID = @PortalID AND ups.ModuleID IS NULL GROUP BY upsc.[CategoryID];
+		END
+	END
+	ELSE -- by module
+	BEGIN
+		SELECT @SettingsSource = PermissionsPMSource FROM {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] WHERE ModuleID = @PermissionsModuleID;
+		IF @SettingsSource = 1
+		BEGIN
+			IF EXISTS (
+				SELECT TOP (1) ShowAllCategories FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rps
+					INNER JOIN @UserInRoles as uir ON rps.RoleID = uir.RoleID
+					WHERE rps.PortalID = @PortalID AND rps.ModuleID IS NULL AND rps.ShowAllCategories = 1
+				UNION
+				SELECT ShowAllCategories FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] as ups
+				WHERE ups.UserID = @UserID AND ups.PortalID = @PortalID AND ups.ModuleID IS NULL AND ups.ShowAllCategories = 1
+			)
+			BEGIN
+				INSERT INTO @UserViewCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] WHERE PortalID = @PortalID;
+			END
+			ELSE
+			BEGIN
+				INSERT INTO @UserViewCategories
+				SELECT rpsc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsShowCategories] as rpsc
+				INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rps ON rps.PremissionSettingsID = rpsc.PremissionSettingsID
+				INNER JOIN @UserInRoles as uir ON rps.RoleID = uir.RoleID
+				WHERE rps.PortalID = @PortalID AND rps.ModuleID IS NULL GROUP BY rpsc.[CategoryID]
+				UNION
+				SELECT upsc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsShowCategories] as upsc
+				INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] as ups ON ups.PremissionSettingsID = upsc.PremissionSettingsID
+				WHERE ups.UserID = @UserID AND ups.PortalID = @PortalID AND ups.ModuleID IS NULL GROUP BY upsc.[CategoryID];
+			END
+		END
+		ELSE
+		BEGIN
+			IF EXISTS (
+				SELECT TOP (1) ShowAllCategories FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rps
+					INNER JOIN @UserInRoles as uir ON rps.RoleID = uir.RoleID
+					WHERE rps.PortalID = @PortalID AND rps.ModuleID = @PermissionsModuleID AND rps.ShowAllCategories = 1
+				UNION
+				SELECT ShowAllCategories FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] as ups
+				WHERE ups.UserID = @UserID AND ups.PortalID = @PortalID AND ups.ModuleID = @PermissionsModuleID AND ups.ShowAllCategories = 1
+			)
+			BEGIN
+				INSERT INTO @UserViewCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] WHERE PortalID = @PortalID;
+			END
+			ELSE
+			BEGIN
+				INSERT INTO @UserViewCategories
+				SELECT rpsc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsShowCategories] as rpsc
+				INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] as rps ON rps.PremissionSettingsID = rpsc.PremissionSettingsID
+				INNER JOIN @UserInRoles as uir ON rps.RoleID = uir.RoleID
+				WHERE rps.PortalID = @PortalID AND rps.ModuleID = @PermissionsModuleID GROUP BY rpsc.[CategoryID]
+				UNION
+				SELECT upsc.[CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsShowCategories] as upsc
+				INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] as ups ON ups.PremissionSettingsID = upsc.PremissionSettingsID
+				WHERE ups.UserID = @UserID AND ups.PortalID = @PortalID AND ups.ModuleID = @PermissionsModuleID GROUP BY upsc.[CategoryID];
+			END
+		END
+	END
+END
+
+IF @CategoryFilterType = 0 -- 0 All categories
+BEGIN
+	INSERT INTO @UserViewCategoriesWithFilter SELECT [CategoryID] FROM @UserViewCategories;
+	INSERT INTO @FiltredByCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] WHERE PortalID = @PortalID;
+END
+ELSE IF @CategoryFilterType = 1 -- 1 - Selection
+BEGIN
+		INSERT INTO @UserViewCategoriesWithFilter 
+		SELECT cl.[CategoryID] FROM @UserViewCategories as cl
+		INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems] AS mci ON mci.CategoryID = cl.CategoryID AND mci.ModuleID = @CalendarModuleID
+		
+		INSERT INTO @FiltredByCategories SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems] WHERE ModuleID = @CalendarModuleID;
+END
+ELSE IF @CategoryFilterType = 2 -- 2 - AutoAdd
+BEGIN
+	WITH hierarchy AS(
+		SELECT [CategoryID], [ParentCategory]
+		FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS cl
+		WHERE (cl.ParentCategory IN (SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems] WHERE ModuleID = @CalendarModuleID) OR cl.CategoryID IN (SELECT [CategoryID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems] WHERE ModuleID = @CalendarModuleID)) AND PortalID = @PortalID
+		UNION ALL
+		SELECT c.[CategoryID], c.[ParentCategory]
+		FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS c INNER JOIN hierarchy AS p ON c.ParentCategory = p.CategoryID WHERE c.PortalID = @PortalID
+		)
+		INSERT INTO @FiltredByCategories SELECT DISTINCT CategoryID FROM hierarchy;	
+		INSERT INTO @UserViewCategoriesWithFilter SELECT uvc.CategoryID FROM @FiltredByCategories as nfc INNER JOIN @UserViewCategories as uvc ON uvc.CategoryID = nfc.CategoryID;
+END
+
+DECLARE @FilterBySocialGroup bit;
+SET @FilterBySocialGroup = 0;
+DECLARE @FilterAuthorOrAuthors bit;
+SET @FilterAuthorOrAuthors = 0;
+
+DECLARE @TempAuthorsIDList TABLE (UserID int NOT NULL PRIMARY KEY);
+IF @IsSocialInstance = 1
+BEGIN
+	IF @FilterByDNNGroupID <> 0
+	BEGIN	
+		SET @FilterBySocialGroup = 1;
+	END
+END
+ELSE
+BEGIN
+	IF @ShowAllAuthors = 0
+	BEGIN
+		SET @FilterAuthorOrAuthors = 1;
+		INSERT INTO @TempAuthorsIDList
+		SELECT [UserID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsModuleAuthorsItems] AS mai WHERE mai.ModuleID = @CalendarModuleID
+		UNION 
+		SELECT [UserID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile] AS ap 
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems] AS agi ON ap.AuthorProfileID = agi.AuthorProfileID
+			INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsModuleGroupItems] AS mgi ON mgi.GroupID = agi.GroupID
+			WHERE mgi.ModuleID = @CalendarModuleID
+	END
+END
+
+IF @RowCount <> 0
+BEGIN
+	SET ROWCOUNT @RowCount;
+END
+
+IF @IsSocialInstance = 0
+BEGIN
+	IF @LocaleCode <> ''''
+	BEGIN
+		WITH FinalArticleIDsSet (ArticleID) AS (
+			SELECT ArticleID FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as n WHERE ArticleID IN(
+				Select DISTINCT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @UserViewCategoriesWithFilter as uvcwf ON uvcwf.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne on na.ArticleID = ne.ArticleID
+					LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] AS ncl ON ncl.ArticleID = na.ArticleID
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR ((@UserCanApprove = 1 OR na.Approved=1) AND (na.Active=1 OR na.UserID=@UserID)))
+					AND na.HasPermissions = 0
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate) 
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND ((@FilterAuthorOrAuthors = 1 AND na.UserID IN (SELECT UserID FROM @TempAuthorsIDList)) OR (@FilterAuthorOrAuthors = 0))
+					AND ((@HideUnlocalizedItems = 1 AND ncl.ArticleID IS NOT NULL AND ncl.LocaleCode = @LocaleCode) OR (@HideUnlocalizedItems = 0))
+				UNION ALL
+				Select na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] as aup ON na.ArticleID = aup.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne on na.ArticleID = ne.ArticleID
+					LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] AS ncl ON ncl.ArticleID = na.ArticleID
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						((@UserID = -1 AND aup.UserID IS NULL) OR (aup.UserID = @UserID)) AND aup.Show = 1 AND ((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active=1 OR na.UserID=@UserID)))
+					AND na.HasPermissions = 1
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)  
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND ((@FilterAuthorOrAuthors = 1 AND na.UserID IN (SELECT UserID FROM @TempAuthorsIDList)) OR (@FilterAuthorOrAuthors = 0))
+					AND ((@HideUnlocalizedItems = 1 AND ncl.ArticleID IS NOT NULL AND ncl.LocaleCode = @LocaleCode) OR (@HideUnlocalizedItems = 0))
+				UNION
+				Select DISTINCT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] as arp ON na.ArticleID = arp.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne on na.ArticleID = ne.ArticleID
+					LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] AS ncl ON ncl.ArticleID = na.ArticleID
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active=1 OR na.UserID=@UserID) AND arp.Show = 1 AND arp.RoleID IN (SELECT [RoleID] FROM @UserInRoles)))
+					AND na.HasPermissions = 1
+					AND na.EventArticle = 1 
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)  
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND ((@FilterAuthorOrAuthors = 1 AND na.UserID IN (SELECT UserID FROM @TempAuthorsIDList)) OR (@FilterAuthorOrAuthors = 0))
+					AND ((@HideUnlocalizedItems = 1 AND ncl.ArticleID IS NOT NULL AND ncl.LocaleCode = @LocaleCode) OR (@HideUnlocalizedItems = 0))
+			)
+		),
+		FinalLocalizedArticleIDsSet (ArticleID,Title,SubTitle,Summary,Article,DetailTypeData,TitleLink,MetaDecription,MetaKeywords) AS (
+			SELECT ArticleID,Title,SubTitle,Summary,Article,DetailTypeData,clTitleLink AS TitleLink ,MetaDecription,MetaKeywords FROM {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] WHERE ArticleID IN (SELECT ArticleID FROM FinalArticleIDsSet) AND LocaleCode = @LocaleCode
+		)
+		SELECT Result.*, ne.StartDate, ne.EndDate,ne.WhloeDay,ne.ShowEndDate,
+		CASE Result.EventArticle
+			WHEN 1 THEN (SELECT PointData FROM {databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsData] as md inner join  {databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]  as mc ON md.GoogleMapID = mc.GoogleMapID WHERE mc.ArticleID =  Result.ArticleID)
+			WHEN 0 THEN ''''
+		END AS ''GoogleMapData'',
+		(SELECT c.CategoryID, c.CategoryName FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS c INNER JOIN @UserViewCategories AS uvc ON c.CategoryID = uvc.CategoryID INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cl ON uvc.CategoryID = cl.CategoryID WHERE cl.ArticleID = Result.ArticleID ORDER BY c.Position FOR XML AUTO, ROOT(''root'')) AS ''CssCategoryClasses''
+		FROM (
+			SELECT na.ArticleID, na.PublishDate, na.Title, na.TitleLink, na.ArticleImage, na.Summary, na.EventArticle
+				FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na WHERE na.ArticleID IN (SELECT ArticleID FROM FinalArticleIDsSet WHERE ArticleID NOT IN (SELECT ArticleID FROM FinalLocalizedArticleIDsSet))
+			UNION ALL
+			SELECT na.ArticleID, na.PublishDate, fla.Title, fla.TitleLink, na.ArticleImage, fla.Summary, na.EventArticle
+				FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na INNER JOIN FinalLocalizedArticleIDsSet AS fla ON fla.ArticleID = na.ArticleID
+		) As Result LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne on Result.ArticleID = ne.ArticleID ORDER BY ne.StartDate;
+	END
+	ELSE
+	BEGIN
+		SELECT TOP (500) *,
+		CASE Result.EventArticle
+			WHEN 1 THEN (SELECT PointData FROM {databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsData] as md inner join  {databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]  as mc ON md.GoogleMapID = mc.GoogleMapID WHERE mc.ArticleID =  Result.ArticleID)
+			WHEN 0 THEN ''''
+		END AS ''GoogleMapData'',
+		(SELECT c.CategoryID, c.CategoryName FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS c INNER JOIN @UserViewCategories AS uvc ON c.CategoryID = uvc.CategoryID INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cl ON uvc.CategoryID = cl.CategoryID WHERE cl.ArticleID = Result.ArticleID ORDER BY c.Position FOR XML AUTO, ROOT(''root'')) AS ''CssCategoryClasses''
+		FROM (
+			SELECT na.ArticleID, na.PublishDate, na.Title, na.TitleLink, na.ArticleImage, na.Summary, na.EventArticle, ne.StartDate, ne.EndDate,ne.WhloeDay,ne.ShowEndDate FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+				INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON na.ArticleID = ne.ArticleID
+			WHERE na.ArticleID in (
+				SELECT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @UserViewCategoriesWithFilter as uvcwf ON uvcwf.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR ((@UserCanApprove = 1 OR na.Approved=1) AND (na.Active=1 OR na.UserID=@UserID)))
+					AND na.HasPermissions = 0
+					AND na.HideDefaultLocale = 0
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND ((@FilterAuthorOrAuthors = 1 AND na.UserID IN (SELECT UserID FROM @TempAuthorsIDList)) OR (@FilterAuthorOrAuthors = 0))
+				GROUP BY na.ArticleID
+				UNION ALL
+				SELECT na.[ArticleID] from {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] as aup ON na.ArticleID = aup.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						((@UserID = -1 AND aup.UserID IS NULL) OR (aup.UserID = @UserID)) AND aup.Show = 1 AND ((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active=1 OR na.UserID=@UserID)))
+					AND na.HasPermissions = 1
+					AND na.HideDefaultLocale = 0
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND ((@UserID = -1 AND na.UserID IN (SELECT UserID FROM @TempAuthorsIDList)) OR (@FilterAuthorOrAuthors = 0))
+				GROUP BY na.ArticleID
+				UNION
+				SELECT na.[ArticleID] from {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] as arp ON na.ArticleID = arp.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active=1 OR na.UserID=@UserID) AND arp.Show = 1 AND arp.RoleID IN (SELECT [RoleID] FROM @UserInRoles)))
+					AND na.HasPermissions = 1
+					AND na.HideDefaultLocale = 0
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND ((@FilterAuthorOrAuthors = 1 AND na.UserID IN (SELECT UserID FROM @TempAuthorsIDList)) OR (@FilterAuthorOrAuthors = 0))
+				GROUP BY na.ArticleID
+			)
+		) AS Result ORDER BY StartDate;
+	END
+END
+ELSE IF @FilterBySocialGroup = 1
+BEGIN
+	IF @LocaleCode <> ''''
+	BEGIN
+		WITH FinalArticleIDsSet (ArticleID) AS(
+			SELECT ArticleID FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as n WHERE ArticleID IN(
+				SELECT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @UserViewCategoriesWithFilter as uvcwf ON uvcwf.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity] AS nss ON nss.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialGroupItems] AS sgi ON sgi.ArticleID = na.ArticleID AND sgi.RoleID = @FilterByDNNGroupID
+					INNER JOIN {databaseOwner}[{objectQualifier}Journal_User_Permissions](@PortalId,@UserID, @FilterByDNNGroupID) as t ON t.seckey = nss.SecurityKey
+					LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] AS ncl ON ncl.ArticleID = na.ArticleID
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR ((@UserCanApprove = 1 OR na.Approved=1) AND (na.Active=1 OR na.UserID=@UserID)))
+					AND na.HasPermissions = 0
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND ((@HideUnlocalizedItems = 1 AND ncl.ArticleID IS NOT NULL AND ncl.LocaleCode = @LocaleCode) OR (@HideUnlocalizedItems = 0))
+				GROUP BY na.ArticleID
+				UNION ALL
+				SELECT na.[ArticleID] from {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] as aup ON na.ArticleID = aup.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity] AS nss ON nss.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialGroupItems] AS sgi ON sgi.ArticleID = na.ArticleID AND sgi.RoleID = @FilterByDNNGroupID
+					INNER JOIN {databaseOwner}[{objectQualifier}Journal_User_Permissions](@PortalId,@UserID, @FilterByDNNGroupID) as t ON t.seckey = nss.SecurityKey
+					LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] AS ncl ON ncl.ArticleID = na.ArticleID
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						((@UserID = -1 AND aup.UserID IS NULL) OR (aup.UserID = @UserID)) AND aup.Show = 1 AND ((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active=1 OR na.UserID=@UserID)))
+					AND na.HasPermissions = 1
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND ((@HideUnlocalizedItems = 1 AND ncl.ArticleID IS NOT NULL AND ncl.LocaleCode = @LocaleCode) OR (@HideUnlocalizedItems = 0))
+				GROUP BY na.ArticleID
+				UNION
+				SELECT na.[ArticleID] from {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] as arp ON na.ArticleID = arp.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity] AS nss ON nss.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialGroupItems] AS sgi ON sgi.ArticleID = na.ArticleID AND sgi.RoleID = @FilterByDNNGroupID
+					INNER JOIN {databaseOwner}[{objectQualifier}Journal_User_Permissions](@PortalId,@UserID, @FilterByDNNGroupID) as t ON t.seckey = nss.SecurityKey
+					LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] AS ncl ON ncl.ArticleID = na.ArticleID
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active=1 OR na.UserID=@UserID) AND arp.Show = 1 AND arp.RoleID IN (SELECT [RoleID] FROM @UserInRoles)))
+					AND na.HasPermissions = 1
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND ((@HideUnlocalizedItems = 1 AND ncl.ArticleID IS NOT NULL AND ncl.LocaleCode = @LocaleCode) OR (@HideUnlocalizedItems = 0))
+				GROUP BY na.ArticleID
+			)
+		),
+		FinalLocalizedArticleIDsSet (ArticleID,Title,SubTitle,Summary,Article,DetailTypeData,TitleLink,MetaDecription,MetaKeywords) AS(
+			SELECT ArticleID,Title,SubTitle,Summary,Article,DetailTypeData,clTitleLink AS TitleLink ,MetaDecription,MetaKeywords FROM {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] WHERE ArticleID IN (SELECT ArticleID FROM FinalArticleIDsSet) AND LocaleCode = @LocaleCode
+		)
+		SELECT Result.*, ne.StartDate, ne.EndDate,ne.WhloeDay,ne.ShowEndDate,
+		CASE Result.EventArticle
+			WHEN 1 THEN (SELECT PointData FROM {databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsData] as md inner join {databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection] as mc ON md.GoogleMapID = mc.GoogleMapID WHERE mc.ArticleID =  Result.ArticleID)
+			WHEN 0 THEN ''''
+		END AS ''GoogleMapData'',
+		(SELECT c.CategoryID, c.CategoryName FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS c INNER JOIN @UserViewCategories AS uvc ON c.CategoryID = uvc.CategoryID INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cl ON uvc.CategoryID = cl.CategoryID WHERE cl.ArticleID = Result.ArticleID ORDER BY c.Position FOR XML AUTO, ROOT(''root'')) AS ''CssCategoryClasses''
+		FROM (
+			SELECT na.ArticleID, na.PublishDate, na.Title, na.TitleLink, na.ArticleImage, na.Summary, na.EventArticle
+				FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na WHERE na.ArticleID IN (SELECT ArticleID FROM FinalArticleIDsSet WHERE ArticleID NOT IN (SELECT ArticleID FROM FinalLocalizedArticleIDsSet))
+			UNION ALL
+			SELECT na.ArticleID, na.PublishDate, fla.Title, fla.TitleLink, na.ArticleImage, fla.Summary, na.EventArticle
+				FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na INNER JOIN FinalLocalizedArticleIDsSet AS fla ON fla.ArticleID = na.ArticleID
+		) As Result LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne on Result.ArticleID = ne.ArticleID ORDER BY ne.StartDate;
+	END
+	ELSE
+	BEGIN
+		SELECT TOP (500) *,
+		CASE Result.EventArticle
+			WHEN 1 THEN (SELECT PointData FROM {databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsData] as md inner join  {databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]  as mc ON md.GoogleMapID = mc.GoogleMapID WHERE mc.ArticleID =  Result.ArticleID)
+			WHEN 0 THEN ''''
+		END AS ''GoogleMapData'',
+		(SELECT c.CategoryID, c.CategoryName FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS c INNER JOIN @UserViewCategories AS uvc ON c.CategoryID = uvc.CategoryID INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cl ON uvc.CategoryID = cl.CategoryID WHERE cl.ArticleID = Result.ArticleID ORDER BY c.Position FOR XML AUTO, ROOT(''root'')) AS ''CssCategoryClasses''
+		FROM (
+			SELECT na.ArticleID, na.PublishDate, na.Title, na.TitleLink, na.ArticleImage, na.Summary, na.EventArticle, ne.StartDate, ne.EndDate,ne.WhloeDay,ne.ShowEndDate FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+				INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON na.ArticleID = ne.ArticleID
+			WHERE na.ArticleID in (
+				SELECT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @UserViewCategoriesWithFilter as uvcwf ON uvcwf.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity] AS nss ON nss.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialGroupItems] AS sgi ON sgi.ArticleID = na.ArticleID AND sgi.RoleID = @FilterByDNNGroupID
+					INNER JOIN {databaseOwner}[{objectQualifier}Journal_User_Permissions](@PortalId,@UserID, @FilterByDNNGroupID) as t ON t.seckey = nss.SecurityKey
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR ((@UserCanApprove = 1 OR na.Approved=1) AND (na.Active=1 OR na.UserID=@UserID)))
+					AND na.HasPermissions = 0
+					AND na.HideDefaultLocale = 0
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+				GROUP BY na.ArticleID
+				UNION ALL
+				SELECT na.[ArticleID] from {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] as aup ON na.ArticleID = aup.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity] AS nss ON nss.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialGroupItems] AS sgi ON sgi.ArticleID = na.ArticleID AND sgi.RoleID = @FilterByDNNGroupID
+					INNER JOIN {databaseOwner}[{objectQualifier}Journal_User_Permissions](@PortalId,@UserID, @FilterByDNNGroupID) as t ON t.seckey = nss.SecurityKey
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						((@UserID = -1 AND aup.UserID IS NULL) OR (aup.UserID = @UserID)) AND aup.Show = 1 AND ((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active=1 OR na.UserID=@UserID)))
+					AND na.HasPermissions = 1
+					AND na.HideDefaultLocale = 0
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					GROUP BY na.ArticleID
+				UNION
+				SELECT na.[ArticleID] from {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] as arp ON na.ArticleID = arp.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity] AS nss ON nss.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialGroupItems] AS sgi ON sgi.ArticleID = na.ArticleID AND sgi.RoleID = @FilterByDNNGroupID
+					INNER JOIN {databaseOwner}[{objectQualifier}Journal_User_Permissions](@PortalId,@UserID, @FilterByDNNGroupID) as t ON t.seckey = nss.SecurityKey
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active=1 OR na.UserID=@UserID) AND arp.Show = 1 AND arp.RoleID IN (SELECT [RoleID] FROM @UserInRoles)))
+					AND na.HasPermissions = 1
+					AND na.HideDefaultLocale = 0
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+				GROUP BY na.ArticleID
+			)
+		) AS Result ORDER BY StartDate;
+	END
+END
+ELSE IF @FilterByDNNUserID <> 0
+BEGIN
+	IF @LocaleCode <> ''''
+	BEGIN
+		WITH FinalArticleIDsSet (ArticleID) AS(
+			SELECT ArticleID FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as n WHERE ArticleID in (
+				SELECT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @UserViewCategoriesWithFilter as uvcwf ON uvcwf.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity] AS nss ON nss.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}Journal_User_Permissions](@PortalId,@UserID, @FilterByDNNGroupID) as t ON t.seckey = nss.SecurityKey
+					LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] AS ncl ON ncl.ArticleID = na.ArticleID
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						(@UserCanApprove = 1 OR na.Approved=1) AND (na.Active=1 OR na.UserID=@UserID)))
+					AND na.HasPermissions = 0
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND na.UserID = @FilterByDNNUserID
+					AND ((@HideUnlocalizedItems = 1 AND ncl.ArticleID IS NOT NULL AND ncl.LocaleCode = @LocaleCode) OR (@HideUnlocalizedItems = 0))
+				GROUP BY na.ArticleID
+				UNION ALL
+				SELECT na.[ArticleID] from {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] as aup ON na.ArticleID = aup.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity] AS nss ON nss.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}Journal_User_Permissions](@PortalId,@UserID, @FilterByDNNGroupID) as t ON t.seckey = nss.SecurityKey
+					LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] AS ncl ON ncl.ArticleID = na.ArticleID
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						((@UserID = -1 AND aup.UserID IS NULL) OR (aup.UserID = @UserID)) AND aup.Show = 1 AND ((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active=1 OR na.UserID=@UserID)))
+					AND na.HasPermissions = 1
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND na.UserID = @FilterByDNNUserID
+					AND ((@HideUnlocalizedItems = 1 AND ncl.ArticleID IS NOT NULL AND ncl.LocaleCode = @LocaleCode) OR (@HideUnlocalizedItems = 0))
+				GROUP BY na.ArticleID
+				UNION
+				SELECT na.[ArticleID] from {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] as arp ON na.ArticleID = arp.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity] AS nss ON nss.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}Journal_User_Permissions](@PortalId,@UserID, @FilterByDNNGroupID) as t ON t.seckey = nss.SecurityKey
+					LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] AS ncl ON ncl.ArticleID = na.ArticleID
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active=1 OR na.UserID=@UserID) AND arp.Show = 1 AND arp.RoleID IN (SELECT [RoleID] FROM @UserInRoles) ))
+					AND na.HasPermissions = 1
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND na.UserID = @FilterByDNNUserID
+					AND ((@HideUnlocalizedItems = 1 AND ncl.ArticleID IS NOT NULL AND ncl.LocaleCode = @LocaleCode) OR (@HideUnlocalizedItems = 0))
+				GROUP BY na.ArticleID
+				)
+			),
+			FinalLocalizedArticleIDsSet (ArticleID,Title,SubTitle,Summary,Article,DetailTypeData,TitleLink,MetaDecription,MetaKeywords) AS(
+				SELECT ArticleID,Title,SubTitle,Summary,Article,DetailTypeData,clTitleLink AS TitleLink ,MetaDecription,MetaKeywords FROM {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] WHERE ArticleID IN (SELECT ArticleID FROM FinalArticleIDsSet) AND LocaleCode = @LocaleCode
+			)
+			SELECT Result.*, ne.StartDate, ne.EndDate,ne.WhloeDay,ne.ShowEndDate,
+			CASE Result.EventArticle
+				WHEN 1 THEN (SELECT PointData FROM {databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsData] as md inner join  {databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]  as mc ON md.GoogleMapID = mc.GoogleMapID WHERE mc.ArticleID =  Result.ArticleID)
+				WHEN 0 THEN ''''
+			END AS ''GoogleMapData'',
+			(SELECT c.CategoryID, c.CategoryName FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS c INNER JOIN @UserViewCategories AS uvc ON c.CategoryID = uvc.CategoryID INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cl ON uvc.CategoryID = cl.CategoryID WHERE cl.ArticleID = Result.ArticleID ORDER BY c.Position FOR XML AUTO, ROOT(''root'')) AS ''CssCategoryClasses''
+			FROM (
+				SELECT na.ArticleID, na.PublishDate, na.Title, na.TitleLink, na.ArticleImage, na.Summary, na.EventArticle
+					   FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na WHERE na.ArticleID IN (SELECT ArticleID FROM FinalArticleIDsSet WHERE ArticleID NOT IN (SELECT ArticleID FROM FinalLocalizedArticleIDsSet))
+				UNION ALL
+				SELECT na.ArticleID, na.PublishDate, fla.Title, fla.TitleLink, na.ArticleImage, fla.Summary, na.EventArticle
+					FROM {databaseOwner}[{objectQualifier}EasyDNNNews] AS na INNER JOIN FinalLocalizedArticleIDsSet AS fla ON fla.ArticleID = na.ArticleID
+			) As Result LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne on Result.ArticleID = ne.ArticleID ORDER BY ne.StartDate;
+	END
+	ELSE
+	BEGIN
+		SELECT TOP (500) *,
+		CASE Result.EventArticle
+			WHEN 1 THEN (SELECT PointData FROM {databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsData] as md inner join  {databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]  as mc ON md.GoogleMapID = mc.GoogleMapID WHERE mc.ArticleID =  Result.ArticleID)
+			WHEN 0 THEN ''''
+		END AS ''GoogleMapData'',
+		(SELECT c.CategoryID, c.CategoryName FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] AS c INNER JOIN @UserViewCategories AS uvc ON c.CategoryID = uvc.CategoryID INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] AS cl ON uvc.CategoryID = cl.CategoryID WHERE cl.ArticleID = Result.ArticleID ORDER BY c.Position FOR XML AUTO, ROOT(''root'')) AS ''CssCategoryClasses''
+		FROM (
+			SELECT na.ArticleID, na.PublishDate, na.Title, na.TitleLink, na.ArticleImage, na.Summary, na.EventArticle, ne.StartDate, ne.EndDate,ne.WhloeDay,ne.ShowEndDate FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+				INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON na.ArticleID = ne.ArticleID
+			WHERE na.ArticleID in (
+				SELECT na.[ArticleID] FROM {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @UserViewCategoriesWithFilter as uvcwf ON uvcwf.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity] AS nss ON nss.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}Journal_User_Permissions](@PortalId,@UserID, @FilterByDNNGroupID) as t ON t.seckey = nss.SecurityKey
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						(@UserCanApprove = 1 OR na.Approved=1) AND (na.Active=1 OR na.UserID=@UserID)))
+					AND na.HasPermissions = 0
+					AND na.HideDefaultLocale = 0
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND na.UserID = @FilterByDNNUserID
+				GROUP BY na.ArticleID
+				UNION ALL
+				SELECT na.[ArticleID] from {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions] as aup ON na.ArticleID = aup.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity] AS nss ON nss.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}Journal_User_Permissions](@PortalId,@UserID, @FilterByDNNGroupID) as t ON t.seckey = nss.SecurityKey
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						((@UserID = -1 AND aup.UserID IS NULL) OR (aup.UserID = @UserID)) AND aup.Show = 1 AND ((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active=1 OR na.UserID=@UserID)))
+					AND na.HasPermissions = 1
+					AND na.HideDefaultLocale = 0
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND na.UserID = @FilterByDNNUserID
+				GROUP BY na.ArticleID
+				UNION
+				SELECT na.[ArticleID] from {databaseOwner}[{objectQualifier}EasyDNNNews] as na
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions] as arp ON na.ArticleID = arp.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] as cat ON na.ArticleID = cat.ArticleID
+					INNER JOIN @FiltredByCategories AS fbc ON fbc.CategoryID = cat.CategoryID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsEventsData] as ne ON ne.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity] AS nss ON nss.ArticleID = na.ArticleID
+					INNER JOIN {databaseOwner}[{objectQualifier}Journal_User_Permissions](@PortalId,@UserID, @FilterByDNNGroupID) as t ON t.seckey = nss.SecurityKey
+				WHERE na.PortalID=@PortalID
+					AND ((@AdminOrSuperUser = 1) OR (
+						((@UserCanApprove = 1) OR (na.Approved=1)) AND (na.Active=1 OR na.UserID=@UserID) AND arp.Show = 1 AND arp.RoleID IN (SELECT [RoleID] FROM @UserInRoles) ))
+					AND na.HasPermissions = 1
+					AND na.HideDefaultLocale = 0
+					AND na.EventArticle = 1
+					AND (na.PublishDate <= @CurrentDate AND na.ExpireDate >= @CurrentDate)		
+					AND ((ne.StartDate >= @CurrentDate) OR (ne.StartDate <= @CurrentDate AND ne.EndDate >= @CurrentDate))
+					AND na.UserID = @FilterByDNNUserID
+				GROUP BY na.ArticleID
+			)
+		) AS Result ORDER BY StartDate;
+	END
+END
+
+IF @RowCount <> 0
+BEGIN
+	SET ROWCOUNT 0;
+END
+' 
+END
+GO
+/*** Article links included ***/
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinks]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinks](
+	[LinkID] [int] IDENTITY(1,1) NOT NULL,
+	[PortalID] [int] NOT NULL,
+	[UserID] [int] NULL,
+	[Type] [tinyint] NOT NULL,
+	[Title] [nvarchar](200) NULL,
+	[Description] [nvarchar](500) NULL,
+	[Target] [tinyint] NOT NULL,
+	[URL] [nvarchar](500) NULL,
+	[Protocol] [nvarchar](10) NULL,
+	[ArticleID] [int] NULL,
+	[TabID] [int] NULL,
+	[AllLanguages] [bit] NOT NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNNewsArticleLink] PRIMARY KEY CLUSTERED ([LinkID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinksLocalization]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinksLocalization](
+	[LinkID] [int] NOT NULL,
+	[LocaleCode] [nvarchar](20) NOT NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNNewsLinksLocalization] PRIMARY KEY CLUSTERED ([LinkID] ASC,[LocaleCode] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinkItems]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinkItems](
+	[ArticleID] [int] NOT NULL,
+	[LinkID] [int] NOT NULL,
+	[Position] [int] NOT NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNNewsLinkItems] PRIMARY KEY CLUSTERED ([ArticleID] ASC,[LinkID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsLinkItems_EasyDNNNews]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinkItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinkItems]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsLinkItems_EasyDNNNews] FOREIGN KEY([ArticleID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNews] ([ArticleID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsLinkItems_EasyDNNNews]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinkItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinkItems] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsLinkItems_EasyDNNNews]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsLinkItems_EasyDNNNewsLinks]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinkItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinkItems]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsLinkItems_EasyDNNNewsLinks] FOREIGN KEY([LinkID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsLinks] ([LinkID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsLinkItems_EasyDNNNewsLinks]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinkItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinkItems] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsLinkItems_EasyDNNNewsLinks]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsLinks_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinks]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinks]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsLinks_Portals] FOREIGN KEY([PortalID])
+REFERENCES {databaseOwner}[{objectQualifier}Portals] ([PortalID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsLinks_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinks]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinks] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsLinks_Portals]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsLinks_Tabs]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinks]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinks]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsLinks_Tabs] FOREIGN KEY([TabID])
+REFERENCES {databaseOwner}[{objectQualifier}Tabs] ([TabID])
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsLinks_Tabs]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinks]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinks] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsLinks_Tabs]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsLinks_Users]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinks]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinks]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsLinks_Users] FOREIGN KEY([UserID])
+REFERENCES {databaseOwner}[{objectQualifier}Users] ([UserID]) ON DELETE SET NULL
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsLinks_Users]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinks]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinks] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsLinks_Users]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsLinksLocalization_EasyDNNNewsLinks]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinksLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinksLocalization]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsLinksLocalization_EasyDNNNewsLinks] FOREIGN KEY([LinkID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsLinks] ([LinkID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsLinksLocalization_EasyDNNNewsLinks]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLinksLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsLinksLocalization] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsLinksLocalization_EasyDNNNewsLinks]
+GO
+
+/*** dokumenti tablica transform ***/
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsDocumentItems]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocumentItems](
+	[ArticleID] [int] NOT NULL,
+	[DocumentID] [int] NOT NULL,
+	[Position] [int] NOT NULL,
+ CONSTRAINT [PK_{objectQualifier}EasyDNNNewsDocumentItems] PRIMARY KEY CLUSTERED ([ArticleID] ASC,[DocumentID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsDocumentItems_EasyDNNNewsDocuments]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsDocumentItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocumentItems]  WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}EasyDNNNewsDocumentItems_EasyDNNNewsDocuments] FOREIGN KEY([DocumentID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] ([DocEntryID]) ON DELETE CASCADE
+GO
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsDocumentItems_EasyDNNNewsDocuments]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsDocumentItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocumentItems] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsDocumentItems_EasyDNNNewsDocuments]
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsDocuments' and column_name = 'ArticleID')
+BEGIN
+	EXEC dbo.sp_executesql @statement = N'
+	BEGIN TRY
+		DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] WHERE ArticleID IS NULL
+		DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] WHERE ArticleID NOT IN(SELECT ArticleID FROM {databaseOwner}[{objectQualifier}EasyDNNNews])
+		UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] SET [Position] = 1 WHERE [Position] IS NULL
+	END TRY
+	BEGIN CATCH
+	END CATCH;
+
+	BEGIN TRY
+		IF NOT EXISTS(SELECT TOP 1 DocumentID FROM {databaseOwner}[{objectQualifier}EasyDNNNewsDocumentItems])
+		BEGIN
+			INSERT INTO {databaseOwner}[{objectQualifier}EasyDNNNewsDocumentItems] (DocumentID, ArticleID, Position) SELECT [DocEntryID],[ArticleID],[Position] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments];
+		END
+	END TRY
+	BEGIN CATCH
+	END CATCH;
+
+	BEGIN TRY
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] DROP COLUMN [Position];
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] DROP CONSTRAINT [FK_{objectQualifier}EasyDNNNewsDocuments_EasyDNNNews]
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocuments] DROP COLUMN [ArticleID];
+	END TRY
+	BEGIN CATCH
+	END CATCH;
+
+	BEGIN TRY
+		IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N''{databaseOwner}[FK_{objectQualifier}EasyDNNNewsDocumentItems_EasyDNNNews]'') AND parent_object_id = OBJECT_ID(N''{databaseOwner}[{objectQualifier}EasyDNNNewsDocumentItems]''))
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocumentItems]  WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}EasyDNNNewsDocumentItems_EasyDNNNews] FOREIGN KEY([ArticleID])
+		REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNews] ([ArticleID]) ON DELETE CASCADE
+
+		IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N''{databaseOwner}[FK_{objectQualifier}EasyDNNNewsDocumentItems_EasyDNNNews]'') AND parent_object_id = OBJECT_ID(N''{databaseOwner}[{objectQualifier}EasyDNNNewsDocumentItems]''))
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsDocumentItems] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsDocumentItems_EasyDNNNews]
+	END TRY
+	BEGIN CATCH
+	END CATCH;';
+END
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'Links')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD Links BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsRolePremissionSettings_Links DEFAULT(0) NOT NULL
+END
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'Links')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD Links BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsUserPremissionSettings_Links DEFAULT(0) NOT NULL
+END
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'UseCategoriesFieldTemplates')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD UseCategoriesFieldTemplates BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsSearchSettings_UseCategoriesFieldTemplates DEFAULT(0) NOT NULL
+END
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems](
+	[ModuleID] [int] NOT NULL,
+	[CategoryID] [int] NOT NULL,
+	[FieldsTemplateID] [int] NOT NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems] PRIMARY KEY CLUSTERED  ( [ModuleID] ASC,[CategoryID] ASC,[FieldsTemplateID] ASC )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems_EasyDNNfieldsTemplate]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems_EasyDNNfieldsTemplate] FOREIGN KEY([FieldsTemplateID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplate] ([FieldsTemplateID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems_EasyDNNfieldsTemplate]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems_EasyDNNfieldsTemplate]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems_EasyDNNNewsCategoryList]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems_EasyDNNNewsCategoryList] FOREIGN KEY([CategoryID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] ([CategoryID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems_EasyDNNNewsCategoryList]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems_EasyDNNNewsCategoryList]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems_EasyDNNNewsSearchSettings]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems_EasyDNNNewsSearchSettings] FOREIGN KEY([ModuleID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ([ModuleID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'{databaseOwner}[FK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems_EasyDNNNewsSearchSettings]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchCategoryFieldItems] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSearchCategoryFieldItems_EasyDNNNewsSearchSettings]
+GO
+
+BEGIN TRY
+	IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNfields' and column_name = 'CFParentID')
+	BEGIN
+		EXEC('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNfields] DROP COLUMN [CFParentID]');
+		EXEC('ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNfields] DROP CONSTRAINT [FK_{objectQualifier}EasyDNNfields_EasyDNNfields]');
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldGetMultiControlsElementsByParent]') AND type in (N'P', N'PC'))
+DROP PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNfieldGetMultiControlsElementsByParent]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNfieldGetMultiControlsElementsByParent]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'-- treba nadograditi da se dobi i CustomFieldID od parenta tj ko stvara selected index changed
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}EasyDNNfieldGetMultiControlsElementsByParent]
+    @parentCustomFieldID int,
+    @FieldElementID int, -- FieldElementID pomocu kojeg se dobije CustomFieldID element parent ID -- element koji je parent tj na temelju kojeg se dohvacaju childeovi
+    @ControlTypeID int,
+    @ParentList nvarchar(1000) = '''',
+    @FieldsTemplateID int, -- template id,
+    @LocaleCode nvarchar(20) = null
+AS
+SET NOCOUNT ON;
+-- dohvati parent custom field
+IF @ControlTypeID = 20
+BEGIN
+	IF @LocaleCode IS NULL
+	BEGIN
+		-- ovo su cf koji imaju zadanog parenta i nalaze se u grupi 
+		-- treba dobiti childove sa childe elementima
+		IF @parentCustomFieldID = 0 -- ovo se moze izbaciti, al u kod negdije nije dostupan parent custom field ID
+		BEGIN
+			SELECT TOP 1 @parentCustomFieldID = [CustomFieldID] FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE FieldElementID = @FieldElementID
+		END	
+		
+		;WITH FieldsWithParent AS(  -- sadrzi childe custom fieldove tj oni koji imaju zadani parentID i nalaze se u istoj template grupi
+			SELECT f.[CustomFieldID],fti.[Position]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNfields] AS f INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplateItems] AS fti ON f.CustomFieldID = fti.CustomFieldID AND fti.FieldsTemplateID = @FieldsTemplateID
+			WHERE fti.FieldsTemplateID = @FieldsTemplateID AND f.[CustomFieldID] IN (SELECT DISTINCT fme.CustomFieldID FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] AS fme WHERE fme.FEParentID IN (SELECT [FieldElementID] FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE [CustomFieldID] = @parentCustomFieldID))
+		)
+		SELECT fwp.[CustomFieldID],me.[FieldElementID],me.[FEParentID],me.[Text],me.[DefSelected],
+		CASE WHEN me.[FieldElementID] IS NOT NULL THEN CAST ((SELECT CASE WHEN COUNT([FEParentID]) > 0 THEN 1 ELSE 0 END FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE FEParentID = me.FieldElementID) AS BIT) ELSE NULL END AS [HasChildes]
+		FROM FieldsWithParent AS fwp
+			LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] as me ON fwp.CustomFieldID = me.CustomFieldID AND (me.FEParentID = @FieldElementID OR FEParentID IS NULL)-- left outer zato jer je moguce da cf nema niti jedan childe onda se stavlja null
+		--WHERE me.FEParentID = @FieldElementID OR FEParentID IS NULL
+		ORDER BY fwp.Position,me.Position ASC;
+	END
+	ELSE -- lokalizirani
+	BEGIN
+		;WITH FieldsWithParent AS(  -- sadrzi childe custom fieldove tj oni koji imaju zadani parentID i nalaze se u istoj template grupi
+			SELECT f.[CustomFieldID],fti.[Position]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNfields] AS f INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplateItems] AS fti ON f.CustomFieldID = fti.CustomFieldID AND fti.FieldsTemplateID = @FieldsTemplateID
+			WHERE fti.FieldsTemplateID = @FieldsTemplateID AND f.[CustomFieldID] IN (SELECT DISTINCT fme.CustomFieldID FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] AS fme WHERE fme.FEParentID IN (SELECT [FieldElementID] FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE [CustomFieldID] = @parentCustomFieldID))
+		),
+		AllElements AS (
+		SELECT fwp.[CustomFieldID],me.[FieldElementID],me.[FEParentID],me.[Text],me.[DefSelected],fwp.Position AS parentPosition ,me.Position,
+		CASE WHEN me.[FieldElementID] IS NOT NULL THEN CAST ((SELECT CASE WHEN COUNT([FEParentID]) > 0 THEN 1 ELSE 0 END FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE FEParentID = me.FieldElementID) AS BIT) ELSE NULL END AS [HasChildes]
+		FROM FieldsWithParent AS fwp
+			LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] as me ON fwp.CustomFieldID = me.CustomFieldID AND (me.FEParentID = @FieldElementID OR FEParentID IS NULL)-- left outer zato jer je moguce da cf nema niti jedan childe onda se stavlja null
+		--WHERE me.FEParentID = @FieldElementID OR FEParentID IS NULL
+		),
+		LocalizedValues AS(
+		SELECT allelem.[CustomFieldID],allelem.[FieldElementID],allelem.[FEParentID],allelem.parentPosition,allelem.Position,CASE WHEN mel.[Text] IS NULL THEN allelem.[Text] ELSE mel.[Text] END AS [Text] ,allelem.[DefSelected],allelem.[HasChildes]
+		FROM AllElements AS allelem LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElementsLocalization] AS mel ON allelem.FieldElementID = mel.FieldElementID AND mel.LocaleCode = @LocaleCode	
+		)
+		SELECT [CustomFieldID],[FieldElementID],[FEParentID],[Text],[DefSelected],[HasChildes] FROM LocalizedValues
+		ORDER BY parentPosition,Position ASC;
+	END
+END
+ELSE IF @ControlTypeID = 23
+BEGIN
+	DECLARE @CheckedParentsElementsAndPosition TABLE (ParentID INT NOT NULL PRIMARY KEY, Position INT);
+	IF @ParentList <> ''''
+	BEGIN
+		INSERT INTO @CheckedParentsElementsAndPosition SELECT cp.KeyID, fme.Position FROM {databaseOwner}[{objectQualifier}EDS_StringListToTable](@ParentList) AS cp INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] AS fme ON cp.KeyID = fme.FieldElementID
+	END
+	IF @parentCustomFieldID = 0 -- ovo se moze izbaciti, al u kod negdije nije dostupan parent custom field ID
+	BEGIN
+		SELECT TOP 1 @ParentCustomFieldID = [CustomFieldID] FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE FieldElementID IN (SELECT TOP 1 ParentID FROM @CheckedParentsElementsAndPosition)
+	END
+	IF @LocaleCode IS NULL
+	BEGIN
+		-- ovo su cf koji imaju zadanog parenta i nalaze se u grupi 
+		-- treba dobiti childove sa childe elementima
+		;WITH FieldsWithParent AS(  -- sadrzi childe custom fieldove tj oni koji imaju zadani parentID i nalaze se u istoj template grupi
+			SELECT f.[CustomFieldID],fti.[Position]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNfields] AS f INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplateItems] AS fti ON f.CustomFieldID = fti.CustomFieldID AND fti.FieldsTemplateID = @FieldsTemplateID
+			WHERE fti.FieldsTemplateID = @FieldsTemplateID AND f.[CustomFieldID] IN (SELECT DISTINCT fme.CustomFieldID FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] AS fme WHERE fme.FEParentID IN (SELECT [FieldElementID] FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE [CustomFieldID] = @parentCustomFieldID))
+		),
+		ResultPrijeSortiranja AS(
+		SELECT me.[CustomFieldID],me.[FieldElementID],me.[FEParentID],me.[Text],me.[DefSelected], fwp.Position AS parentCFposition,me.Position AS elementPosition,
+		CAST ((SELECT CASE WHEN COUNT([FEParentID]) > 0 THEN 1 ELSE 0 END FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE FEParentID = me.FieldElementID) AS BIT) AS [HasChildes]
+		FROM FieldsWithParent AS fwp
+			LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] as me ON fwp.CustomFieldID = me.CustomFieldID -- nije mi bas jasno ovo left outer - da se dobiju i oni koji su nall
+		WHERE me.FEParentID IN (SELECT ParentID FROM @CheckedParentsElementsAndPosition) OR FEParentID IS NULL
+		)
+		SELECT me.[CustomFieldID],me.[FieldElementID],me.[FEParentID],me.[Text],me.[DefSelected],me.[HasChildes]
+		FROM ResultPrijeSortiranja AS me LEFT OUTER JOIN @CheckedParentsElementsAndPosition as peap ON me.FEParentID = peap.ParentID
+		ORDER BY me.parentCFposition,peap.Position,me.elementPosition ASC;
+	END
+	ELSE
+	BEGIN
+		;WITH FieldsWithParent AS(  -- sadrzi childe custom fieldove tj oni koji imaju zadani parentID i nalaze se u istoj template grupi
+			SELECT f.[CustomFieldID],fti.[Position]
+			FROM {databaseOwner}[{objectQualifier}EasyDNNfields] AS f INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsTemplateItems] AS fti ON f.CustomFieldID = fti.CustomFieldID AND fti.FieldsTemplateID = @FieldsTemplateID
+			WHERE fti.FieldsTemplateID = @FieldsTemplateID AND f.[CustomFieldID] IN (SELECT DISTINCT fme.CustomFieldID FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] AS fme WHERE fme.FEParentID IN (SELECT [FieldElementID] FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE [CustomFieldID] = @parentCustomFieldID))
+		),
+		ResultPrijeSortiranja AS(
+		SELECT me.[CustomFieldID],me.[FieldElementID],me.[FEParentID],me.[Text],me.[DefSelected], fwp.Position AS parentCFposition,me.Position AS elementPosition,
+		CAST ((SELECT CASE WHEN COUNT([FEParentID]) > 0 THEN 1 ELSE 0 END FROM {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] WHERE FEParentID = me.FieldElementID) AS BIT) AS [HasChildes]
+		FROM FieldsWithParent AS fwp
+			LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElements] as me ON fwp.CustomFieldID = me.CustomFieldID -- nije mi bas jasno ovo left outer - da se dobiju i oni koji su nall
+		WHERE me.FEParentID IN (SELECT ParentID FROM @CheckedParentsElementsAndPosition) OR FEParentID IS NULL
+		),
+		LocalizedValues AS(
+			SELECT allelem.[CustomFieldID],allelem.[FieldElementID],allelem.[FEParentID],allelem.parentCFposition,allelem.elementPosition,CASE WHEN mel.[Text] IS NULL THEN allelem.[Text] ELSE mel.[Text] END AS [Text],allelem.[DefSelected],allelem.[HasChildes]
+			FROM ResultPrijeSortiranja AS allelem LEFT OUTER JOIN {databaseOwner}[{objectQualifier}EasyDNNfieldsMultiElementsLocalization] AS mel ON allelem.FieldElementID = mel.FieldElementID AND mel.LocaleCode = @LocaleCode	
+		)
+		SELECT me.[CustomFieldID],me.[FieldElementID],me.[FEParentID],me.[Text],me.[DefSelected],me.[HasChildes]
+		FROM LocalizedValues AS me LEFT OUTER JOIN @CheckedParentsElementsAndPosition as peap ON me.FEParentID = peap.ParentID
+		ORDER BY me.parentCFposition,peap.Position,me.elementPosition ASC;
+	END
+END' 
+END
+GO

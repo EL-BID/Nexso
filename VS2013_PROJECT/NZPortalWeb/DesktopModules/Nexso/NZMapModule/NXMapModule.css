@@ -1,0 +1,32 @@
+﻿body {
+}
+
+/* the overlayed element */
+.PopUpMap {
+   background-color: #333333;
+    border: 1px solid #666666;
+    height: 378px;
+ /*   left: -230px;*/
+    margin: 0 auto;
+    min-height: 201px;
+    position: relative;
+    top: -380px;
+    width: 498px;
+    z-index: 10000;
+}
+
+    /* close button positioned on upper right corner */
+    .PopUpMap .close {
+        background-image: url(/media/img/overlay/close.png);
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        cursor: pointer;
+        height: 35px;
+        width: 35px;
+    }
+
+#googleMapZoom {
+    width: 100%;
+    height: 100%;
+}

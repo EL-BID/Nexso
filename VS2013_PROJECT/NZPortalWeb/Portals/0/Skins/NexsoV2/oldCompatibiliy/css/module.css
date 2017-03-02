@@ -1,0 +1,83 @@
+/* 1.1 Solution Wizard  */
+.solution-wizard .featured-image {
+  width: 940px;
+  max-width: 940px; }
+
+.solution-wizard .tab-content {
+  overflow: visible; }
+
+#wizHeader {
+  font-size: 14px;
+  border: 1px solid #323232;
+  border-top: 1px solid #656565;
+  clear: both;
+  padding: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background: url("images/wizHeader-active-bg.png") top left repeat-y;
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #28a8e0), color-stop(100%, #15345b));
+  background: -webkit-linear-gradient(left, #28a8e0, #15345b);
+  background: -moz-linear-gradient(left, #28a8e0, #15345b);
+  background: -o-linear-gradient(left, #28a8e0, #15345b);
+  background: linear-gradient(left, #28a8e0, #15345b); }
+  #wizHeader li {
+    float: left;
+    list-style: none;
+    overflow: visible; }
+    #wizHeader li:first-child a {
+      -webkit-border-radius: 5px 0px 0px 5px;
+      -moz-border-radius: 5px 0px 0px 5px;
+      -ms-border-radius: 5px 0px 0px 5px;
+      -o-border-radius: 5px 0px 0px 5px;
+      border-radius: 5px 0px 0px 5px; }
+    #wizHeader li:last-child a {
+      -webkit-border-radius: 0px 5px 5px 0px;
+      -moz-border-radius: 0px 5px 5px 0px;
+      -ms-border-radius: 0px 5px 5px 0px;
+      -o-border-radius: 0px 5px 5px 0px;
+      border-radius: 0px 5px 5px 0px; }
+    #wizHeader li:last-child a:before {
+      background: none;
+      height: 0;
+      width: 0; }
+    #wizHeader li a {
+      background: none;
+      display: block;
+      float: left;
+      color: #fff;
+      padding: 10px 0;
+      position: relative; }
+      #wizHeader li a:before {
+        background: url("images/wizHeader-arrow-bg.png") left top no-repeat;
+        content: " ";
+        display: block;
+        height: 40px;
+        width: 16px;
+        position: absolute;
+        top: 0px;
+        right: -10px;
+        z-index: 2; }
+      #wizHeader li a:hover, #wizHeader li a:active {
+        text-decoration: none; }
+      #wizHeader li a.prevStep {
+        background: url("images/wizHeader-state-bg.png") left top repeat-x;
+        color: #696a6c; }
+        #wizHeader li a.prevStep:hover {
+          color: #333; }
+      #wizHeader li a.nextStep {
+        background: url("images/wizHeader-state-bg.png") left -51px repeat-x;
+        color: #cbcbcb; }
+        #wizHeader li a.nextStep:before {
+          background: url("images/wizHeader-arrow-bg.png") left -50px no-repeat; }
+        #wizHeader li a.nextStep:hover {
+          color: #fff; }
+      #wizHeader li a.currentStep {
+        cursor: default;
+        text-decoration: none;
+        outline: none; }
+        #wizHeader li a.currentStep:before {
+          background: url("images/wizHeader-arrow-bg.png") -4px -100px no-repeat;
+          width: 20px; }

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plEmail.Text">
+    <value>Email</value>
+  </data>
+  <data name="plEmail.Help">
+    <value>Insira o seu Endereço de Email</value>
+  </data>
+  <data name="plName.Text">
+    <value>Nome</value>
+  </data>
+  <data name="plName.Help">
+    <value>Insira o seu Nome</value>
+  </data>
+  <data name="plSubject.Text">
+    <value>Assunto</value>
+  </data>
+  <data name="plSubject.Help">
+    <value>Insira o assunto da sua mensagem</value>
+  </data>
+  <data name="plBody.Text">
+    <value>Mensagem</value>
+  </data>
+  <data name="plBody.Help">
+    <value>Insira a sua mensagem</value>
+  </data>
+  <data name="plCopy.Text">
+    <value>Enviar cópia</value>
+  </data>
+  <data name="plCopy.Help">
+    <value>Enviar uma cópia da mensagem para si próprio ?</value>
+  </data>
+  <data name="cmdSend.Text">
+    <value>Enviar</value>
+  </data>
+  <data name="MessageSent.Text">
+    <value>&lt;br&gt;A sua mensagem foi enviada</value>
+  </data>
+  <data name="EmailAddress.Text">
+    <value>&lt;br&gt;Por favor insira o seu Endereço de Email</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value>&lt;h1&gt;Sobre o Módulo de Feedback &lt;/h1&gt;&lt;p&gt;O Módulo de Feedback permite aos visitantes o envio de mensagens ao administrador de Portal.&lt;/p&gt;&lt;h1&gt;Enviar Feedback&lt;/h1&gt;&lt;ol&gt;&lt;li&gt;Adicionar um Módulo de &lt;b&gt;Feedback&lt;/b&gt; ou ir para um Módulo de &lt;b&gt;Feedback&lt;/b&gt; existente.&lt;/li&gt;&lt;li&gt;Em &lt;b&gt;Email&lt;/b&gt;, insira o seu Endereço de Email. 
+&lt;li&gt;Em &lt;b&gt;Nome&lt;/b&gt;, insira o seu nome. 
+&lt;li&gt;Em b&gt;Assunto&lt;/b&gt;, insira o assunto do seu email. 
+&lt;li&gt;Em &lt;b&gt;Corpo&lt;/b&gt;, insira a sua mensagem.&lt;li&gt;Clique &lt;b&gt;Enviar&lt;/b&gt;.&lt;/ol&gt;</value>
+  </data>
+</root>

@@ -1,0 +1,34 @@
+<!--TemplateGroup:newsListSidebar-->
+<!--ArticleRepeat:Before:-->
+<div class="edn_module_box">
+	<h2 class="edn_module_title"><span>[EasyDNNnewsLocalizedText:LatestNews]</span>
+	[EasyDNNnews:IfExists:RSS]
+	<a class="rss sidebar-news-module-rss" href="[EasyDNNnews:RSSLink]" target="_blank"><span>[EasyDNNnewsLocalizedText:RSSLinkText]</span></a>
+	[EasyDNNnews:EndIf:RSS]
+	</h2>
+<!--RepeatEnd:Before:-->
+
+
+<!--ArticleTemplate-->
+<div class="article sidebar_box [EasyDNNnews:ItemOrderClasses]">
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]">
+		[EasyDNNnews:IfExists:Image]
+		<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:77:Height:51:Resize:Crop]"  width="77" height="51"/>
+		[EasyDNNnews:EndIf:Image]
+		<span>[EasyDNNnews:Title:Limit:85]</span>
+	</a>
+</div>
+<!--ArticleEnd-->
+
+
+
+<!--ArticleRepeat:After:-->
+</div>
+<!--RepeatEnd:After:-->

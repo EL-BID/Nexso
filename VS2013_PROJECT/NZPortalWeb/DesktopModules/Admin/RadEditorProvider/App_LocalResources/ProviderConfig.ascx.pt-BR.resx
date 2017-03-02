@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblNote.Text">
+    <value xml:space="preserve">O propósito deste módulo é registrar e configurar o provedor do editor Telerik RadEditor. Ele auxilia os super usuários a configurar o provedor HTML no arquivo web.config e manter esta configuração.</value>
+  </data>
+  <data name="lblOnlyHost.Text">
+    <value xml:space="preserve">Apenas super usuários têm permissão para usar este módulo.</value>
+  </data>
+  <data name="lblEditorType.Text">
+    <value xml:space="preserve">O provedor atual nesta instalação do DotNetNuke é &lt;b&gt;{0}&lt;/b&gt;.</value>
+  </data>
+  <data name="btnUpdateConfig.Text">
+    <value xml:space="preserve">Atualizar configuração</value>
+  </data>
+  <data name="lblEditorConfig.Text">
+    <value xml:space="preserve">Configuração do editor</value>
+  </data>
+  <data name="lblNotAuthorized.Text">
+    <value xml:space="preserve">Você não está autorizado a usar este módulo.</value>
+  </data>
+  <data name="btnEditToolsFile.Text">
+    <value xml:space="preserve">Configurar o editor de barras de ferramentas</value>
+  </data>
+  <data name="BorderWidth.Help">
+    <value xml:space="preserve">Define em píxeis a borda ao redor do controle.</value>
+  </data>
+  <data name="ContentFilters.Help">
+    <value xml:space="preserve">Filtros no RadEditor para ASP.NET AJAX são pequenos pedaços de código, que são chamados em uma sequência para processar o conteúdo do editor, quando o modo (HTML / desenho / visualizar) é alternado ou quando a página é enviada.&lt;br&gt;&lt;br&gt;Cada filtro é descrito na &lt;a href="http://www.telerik.com/help/aspnet-ajax/contentfilters.html" target="_blank"&gt;ajuda&lt;/a&gt; online da Telerik.</value>
+  </data>
+  <data name="DocumentsPath.Help">
+    <value xml:space="preserve">A pasta onde se inicia o gerenciador de documentos ao chamar a janela de diálogo.</value>
+  </data>
+  <data name="EnableResize.Help">
+    <value xml:space="preserve">Obtém ou define o valor indicando se o usuário poderá redimensionar o controle RadEditor no cliente.</value>
+  </data>
+  <data name="FileBrowserContentProviderTypeName.Help">
+    <value xml:space="preserve">O provedor de conteúdo é uma classe que manipula como arquivos e pastas são manipuladas nos diálogos do gerenciador de arquivos.&lt;br&gt;&lt;br&gt;Substitua essa configuração se você tiver um outro provedor de conteúdo no lugar.</value>
+  </data>
+  <data name="FlashPath.Help">
+    <value xml:space="preserve">A pasta onde se inicia o gerenciador de flashs ao chamar a janela de diálogo.</value>
+  </data>
+  <data name="Height.Help">
+    <value xml:space="preserve">A altura total do controle editor.</value>
+  </data>
+  <data name="ImagesPath.Help">
+    <value xml:space="preserve">A pasta onde se inicia o gerenciador de imagens ao chamar a janela de diálogo.</value>
+  </data>
+  <data name="Language.Help">
+    <value xml:space="preserve">Se definido, isto substituirá o idioma do contexto do portal. O idioma atual é usado por padrão, então na maioria dos casos você deverá deixar isto vazio.</value>
+  </data>
+  <data name="LinksUseRelativeUrls.Help">
+    <value xml:space="preserve">Se desmarcado, atalhos são criados com endereço absoluto.</value>
+  </data>
+  <data name="MaxDocumentSize.Help">
+    <value xml:space="preserve">Tamanho máximo em bytes para envio de documento.</value>
+  </data>
+  <data name="MaxFlashSize.Help">
+    <value xml:space="preserve">Tamanho máximo em bytes para envio de flash.</value>
+  </data>
+  <data name="MaxImageSize.Help">
+    <value xml:space="preserve">Tamanho máximo em bytes para envio de imagem.</value>
+  </data>
+  <data name="MaxMediaSize.Help">
+    <value xml:space="preserve">Tamanho máximo em bytes para envio de mídia.</value>
+  </data>
+  <data name="MaxSilverlightSize.Help">
+    <value xml:space="preserve">Tamanho máximo em bytes para envio de silverlight.</value>
+  </data>
+  <data name="MaxTemplateSize.Help">
+    <value xml:space="preserve">Tamanho máximo em bytes para envio de modelo.</value>
+  </data>
+  <data name="MediaPath.Help">
+    <value xml:space="preserve">A pasta onde se inicia o gerenciador de mídias ao chamar a janela de diálogo.</value>
+  </data>
+  <data name="OnClientCommandExecuting.Help">
+    <value xml:space="preserve">Defina um nome de função a ser chamada quando o editor disparar o evento OnExecute no cliente (disparado apenas antes que um comando seja executado).&lt;br&gt;&lt;br&gt;A função pode ser colocada no arquivo Javascript definido na configuração ScriptToLoad.&lt;br&gt;&lt;br&gt;Este evento é útil se você quiser adicionar suporte a emoticons por exemplo.&lt;br&gt;&lt;br&gt;Leia esta &lt;a href="http://radeditor.codeplex.com/Thread/View.aspx?ThreadId=231612" target="_blank"&gt;mensagem no forum&lt;/a&gt; para maiores informações.</value>
+  </data>
+  <data name="PortalRoot.Text">
+    <value xml:space="preserve">[Raiz do portal]</value>
+  </data>
+  <data name="SilverlightPath.Help">
+    <value xml:space="preserve">A pasta onde se inicia o gerenciador de silverlights ao chamar a janela de diálogo.</value>
+  </data>
+  <data name="SpellAllowAddCustom.Help">
+    <value xml:space="preserve">Infelizmente as opções de verificação de ortografia são raramente documentadas. No geral você deverá deixar estes campos vazios a menos que você saiba o que está fazendo.&lt;br&gt;&lt;br&gt;Saiba mais sobre &lt;a href="http://www.telerik.com/products/aspnet-ajax/spell.aspx" target="_blank"&gt;opções de verificação de ortogragia&lt;/a&gt; no portal da Telerik.</value>
+  </data>
+  <data name="SpellCheckProvider.Help">
+    <value xml:space="preserve">Infelizmente as opções de verificação de ortografia são raramente documentadas. No geral você deverá deixar estes campos vazios a menos que você saiba o que está fazendo.&lt;br&gt;&lt;br&gt;Saiba mais sobre &lt;a href="http://www.telerik.com/products/aspnet-ajax/spell.aspx" target="_blank"&gt;opções de verificação de ortogragia&lt;/a&gt; no portal da Telerik.</value>
+  </data>
+  <data name="SpellCustomDictionarySourceTypeName.Help">
+    <value xml:space="preserve">Infelizmente as opções de verificação de ortografia são raramente documentadas. No geral você deverá deixar estes campos vazios a menos que você saiba o que está fazendo.&lt;br&gt;&lt;br&gt;Saiba mais sobre &lt;a href="http://www.telerik.com/products/aspnet-ajax/spell.aspx" target="_blank"&gt;opções de verificação de ortogragia&lt;/a&gt; no portal da Telerik.</value>
+  </data>
+  <data name="SpellCustomDictionarySuffix.Help">
+    <value xml:space="preserve">Infelizmente as opções de verificação de ortografia são raramente documentadas. No geral você deverá deixar estes campos vazios a menos que você saiba o que está fazendo.&lt;br&gt;&lt;br&gt;Saiba mais sobre &lt;a href="http://www.telerik.com/products/aspnet-ajax/spell.aspx" target="_blank"&gt;opções de verificação de ortogragia&lt;/a&gt; no portal da Telerik.</value>
+  </data>
+  <data name="SpellDictionaryLanguage.Help">
+    <value xml:space="preserve">Infelizmente as opções de verificação de ortografia são raramente documentadas. No geral você deverá deixar estes campos vazios a menos que você saiba o que está fazendo.&lt;br&gt;&lt;br&gt;Saiba mais sobre &lt;a href="http://www.telerik.com/products/aspnet-ajax/spell.aspx" target="_blank"&gt;opções de verificação de ortogragia&lt;/a&gt; no portal da Telerik.</value>
+  </data>
+  <data name="SpellDictionaryPath.Help">
+    <value xml:space="preserve">Infelizmente as opções de verificação de ortografia são raramente documentadas. No geral você deverá deixar estes campos vazios a menos que você saiba o que está fazendo.&lt;br&gt;&lt;br&gt;Saiba mais sobre &lt;a href="http://www.telerik.com/products/aspnet-ajax/spell.aspx" target="_blank"&gt;opções de verificação de ortogragia&lt;/a&gt; no portal da Telerik.</value>
+  </data>
+  <data name="SpellEditDistance.Help">
+    <value xml:space="preserve">Infelizmente as opções de verificação de ortografia são raramente documentadas. No geral você deverá deixar estes campos vazios a menos que você saiba o que está fazendo.&lt;br&gt;&lt;br&gt;Saiba mais sobre &lt;a href="http://www.telerik.com/products/aspnet-ajax/spell.aspx" target="_blank"&gt;opções de verificação de ortogragia&lt;/a&gt; no portal da Telerik.</value>
+  </data>
+  <data name="SpellFragmentIgnoreOptions.Help">
+    <value xml:space="preserve">Infelizmente as opções de verificação de ortografia são raramente documentadas. No geral você deverá deixar estes campos vazios a menos que você saiba o que está fazendo.&lt;br&gt;&lt;br&gt;Saiba mais sobre &lt;a href="http://www.telerik.com/products/aspnet-ajax/spell.aspx" target="_blank"&gt;opções de verificação de ortogragia&lt;/a&gt; no portal da Telerik.</value>
+  </data>
+  <data name="SpellWordIgnoreOptions.Help">
+    <value xml:space="preserve">Infelizmente as opções de verificação de ortografia são raramente documentadas. No geral você deverá deixar estes campos vazios a menos que você saiba o que está fazendo.&lt;br&gt;&lt;br&gt;Saiba mais sobre &lt;a href="http://www.telerik.com/products/aspnet-ajax/spell.aspx" target="_blank"&gt;opções de verificação de ortogragia&lt;/a&gt; no portal da Telerik.</value>
+  </data>
+  <data name="TemplatePath.Help">
+    <value xml:space="preserve">A pasta onde se inicia o gerenciador de modelos ao chamar a janela de diálogo.</value>
+  </data>
+  <data name="ToolsWidth.Help">
+    <value xml:space="preserve">Define a largura das barras de ferramentas do editor, devendo ser usado apenas quando o modo das barras de ferramentas está definido para qualquer coisa exceto padrão.</value>
+  </data>
+  <data name="Width.Help">
+    <value xml:space="preserve">A largura total do controle editor.</value>
+  </data>
+  <data name="btnEnable.Text">
+    <value xml:space="preserve">Alterar</value>
+  </data>
+  <data name="lblChangeProvider.Help">
+    <value xml:space="preserve">Ao selecionar um provedor diferente na lista e clicar em 'Alterar' alterará o provedor do editor HTML para a instalação inteira.</value>
+  </data>
+  <data name="lblChangeProvider.Text">
+    <value xml:space="preserve">Alterar provedor</value>
+  </data>
+  <data name="lblCurrentProvider.Help">
+    <value xml:space="preserve">Este é o provedor do editor HTML que está definido atualmente para esta instalação.</value>
+  </data>
+  <data name="lblCurrentProvider.Text">
+    <value xml:space="preserve">Provedor atual</value>
+  </data>
+  <data name="cmdCopy.Text">
+    <value xml:space="preserve">Copiar</value>
+  </data>
+  <data name="EditConfigTab.Text">
+    <value xml:space="preserve">Configuração do Editor</value>
+  </data>
+  <data name="ToolbarConfigTab.Text">
+    <value xml:space="preserve">Configuração da Barra de Ferramentas</value>
+  </data>
+  <data name="AutoResizeHeight.Text">
+    <value xml:space="preserve">Auto redimensionar altura?</value>
+  </data>
+  <data name="BorderWidth.Text">
+    <value xml:space="preserve">Largura da borda:</value>
+  </data>
+  <data name="ContentFilters.Text">
+    <value xml:space="preserve">Filtros de conteúdo:</value>
+  </data>
+  <data name="CssFile.Text">
+    <value xml:space="preserve">Arquivo CSS:</value>
+  </data>
+  <data name="DocumentsFilters.Text">
+    <value xml:space="preserve">Filtros:</value>
+  </data>
+  <data name="DocumentsPath.Text">
+    <value xml:space="preserve">Caminho:</value>
+  </data>
+  <data name="EditModes.Text">
+    <value xml:space="preserve">Modos de edição:</value>
+  </data>
+  <data name="EnableResize.Text">
+    <value xml:space="preserve">Ativar redimensionamento?</value>
+  </data>
+  <data name="FileBrowserContentProviderTypeName.Text">
+    <value xml:space="preserve">Provedor de navegação em arquivos:</value>
+  </data>
+  <data name="FlashFilters.Text">
+    <value xml:space="preserve">Filtros:</value>
+  </data>
+  <data name="FlashPath.Text">
+    <value xml:space="preserve">Caminho:</value>
+  </data>
+  <data name="Height.Text">
+    <value xml:space="preserve">Altura:</value>
+  </data>
+  <data name="ImagesFilters.Text">
+    <value xml:space="preserve">Filtros:</value>
+  </data>
+  <data name="ImagesPath.Text">
+    <value xml:space="preserve">Caminho:</value>
+  </data>
+  <data name="Language.Text">
+    <value xml:space="preserve">Idioma:</value>
+  </data>
+  <data name="LinksUseRelativeUrls.Text">
+    <value xml:space="preserve">Ativar endereços de atalho relativos?</value>
+  </data>
+  <data name="MaxDocumentSize.Text">
+    <value xml:space="preserve">Tamanho máximo de arquivo:</value>
+  </data>
+  <data name="MaxFlashSize.Text">
+    <value xml:space="preserve">Tamanho máximo de arquivo:</value>
+  </data>
+  <data name="MaxImageSize.Text">
+    <value xml:space="preserve">Tamanho máximo de arquivo:</value>
+  </data>
+  <data name="MaxMediaSize.Text">
+    <value xml:space="preserve">Tamanho máximo de arquivo:</value>
+  </data>
+  <data name="MaxSilverlightSize.Text">
+    <value xml:space="preserve">Tamanho máximo de arquivo:</value>
+  </data>
+  <data name="MaxTemplateSize.Text">
+    <value xml:space="preserve">Tamanho máximo de arquivo:</value>
+  </data>
+  <data name="MediaFilters.Text">
+    <value xml:space="preserve">Filtros:</value>
+  </data>
+  <data name="MediaPath.Text">
+    <value xml:space="preserve">Caminho:</value>
+  </data>
+  <data name="NewLineBr.Text">
+    <value xml:space="preserve">Exibir novas linhas como quebras?</value>
+  </data>
+  <data name="OnClientCommandExecuting.Text">
+    <value xml:space="preserve">Executar comando:</value>
+  </data>
+  <data name="OnClientPasteHtml.Text">
+    <value xml:space="preserve">Colar HTML:</value>
+  </data>
+  <data name="ScriptToLoad.Text">
+    <value xml:space="preserve">Programa JavaScript a ser carregado:</value>
+  </data>
+  <data name="ShowPortalLinks.Text">
+    <value xml:space="preserve">Exibir atalhos do portal?</value>
+  </data>
+  <data name="SilverlightFilters.Text">
+    <value xml:space="preserve">Filtros:</value>
+  </data>
+  <data name="SilverlightPath.Text">
+    <value xml:space="preserve">Caminho:</value>
+  </data>
+  <data name="SpellAllowAddCustom.Text">
+    <value xml:space="preserve">Permitir ortografias personalizadas:</value>
+  </data>
+  <data name="SpellCheckProvider.Text">
+    <value xml:space="preserve">Nome do provedor de verificação de ortografia:</value>
+  </data>
+  <data name="SpellCustomDictionarySourceTypeName.Text">
+    <value xml:space="preserve">Nome personalizado do dicionário de ortografia:</value>
+  </data>
+  <data name="SpellCustomDictionarySuffix.Text">
+    <value xml:space="preserve">Sufixo personalizado do dicionário de ortografia:</value>
+  </data>
+  <data name="SpellDictionaryLanguage.Text">
+    <value xml:space="preserve">Idioma do dicionário de ortografia:</value>
+  </data>
+  <data name="SpellDictionaryPath.Text">
+    <value xml:space="preserve">Caminho do dicionário de ortografia:</value>
+  </data>
+  <data name="SpellEditDistance.Text">
+    <value xml:space="preserve">Distância de edição de ortografia:</value>
+  </data>
+  <data name="SpellFragmentIgnoreOptions.Text">
+    <value xml:space="preserve">Opções de ignoramento de ortografia de framentos:</value>
+  </data>
+  <data name="SpellWordIgnoreOptions.Text">
+    <value xml:space="preserve">Opções de ignoramento de ortografia de palavras:</value>
+  </data>
+  <data name="StripFormattingOptions.Text">
+    <value xml:space="preserve">Opções de remoção de formatação:</value>
+  </data>
+  <data name="TemplateFilters.Text">
+    <value xml:space="preserve">Filtros:</value>
+  </data>
+  <data name="TemplatePath.Text">
+    <value xml:space="preserve">Caminho:</value>
+  </data>
+  <data name="ToolbarMode.Text">
+    <value xml:space="preserve">Modo:</value>
+  </data>
+  <data name="ToolsWidth.Text">
+    <value xml:space="preserve">Largura:</value>
+  </data>
+  <data name="Width.Text">
+    <value xml:space="preserve">Largura:</value>
+  </data>
+  <data name="lblSelectedProvider.Text">
+    <value xml:space="preserve">Provedor atual</value>
+  </data>
+  <data name="lblMode.Help">
+    <value xml:space="preserve">A regra que você deseja associar com esta configuração do editor.</value>
+  </data>
+  <data name="lblMode.Text">
+    <value xml:space="preserve">Vincular à regra</value>
+  </data>
+  <data name="lblPortal.Help">
+    <value xml:space="preserve">Se marcado, o portal atual será associado a esta configuração do editor.</value>
+  </data>
+  <data name="lblPortal.Text">
+    <value xml:space="preserve">Vincular ao portal</value>
+  </data>
+  <data name="lblTabs.Help">
+    <value xml:space="preserve">Ao selecionar uma página da árvore associará esta configuração do editor com a página selecionada.</value>
+  </data>
+  <data name="lblTabs.Text">
+    <value xml:space="preserve">Vincular à página:</value>
+  </data>
+  <data name="ContentAreaMode.Text">
+    <value xml:space="preserve">Modo da área de conteúdo:</value>
+  </data>
+  <data name="ContentAreaMode.Help">
+    <value xml:space="preserve">Escolha entre editar em um documento separado em uma janela interna (padrão) ou em uma divisão interna da página atual.</value>
+  </data>
+  <data name="cmdCreate.Text">
+    <value xml:space="preserve">Criar</value>
+  </data>
+  <data name="HTMLEditorPageDescription.Text">
+    <value xml:space="preserve">Fornece opções de configuração para o provedor do editor de HTML.</value>
+  </data>
+  <data name="HTMLEditorPageName.Text">
+    <value xml:space="preserve">Gerenciador do Editor de HTML</value>
+  </data>
+  <data name="NotCurrentProvider.Text">
+    <value xml:space="preserve">O RadEditorProvider não é o provedor padrão de edição de textos, então quaisquer alterações não serão aplicadas no atual provedor de edição. Se você quer que as configurações tenha efeito, por favor atualize o provedor padrão para 'DotNetNuke.RadEditorProvider' na lista da esquerda.</value>
+  </data>
+  <data name="Client Script Settings.Title">
+    <value xml:space="preserve">Configurações de JavaScript</value>
+  </data>
+  <data name="Common Settings.Title">
+    <value xml:space="preserve">Configurações Comuns</value>
+  </data>
+  <data name="Developer Settings.Title">
+    <value xml:space="preserve">Configurações de Desenvolvedor</value>
+  </data>
+  <data name="Document Manager Settings.Title">
+    <value xml:space="preserve">Configurações de Gerenciamento de Documento</value>
+  </data>
+  <data name="Flash Manager Settings.Title">
+    <value xml:space="preserve">Configurações de Gerenciamento de Flash</value>
+  </data>
+  <data name="Image Manager Settings.Title">
+    <value xml:space="preserve">Configurações de Gerenciamento de Imagem</value>
+  </data>
+  <data name="Media Manager Settings.Title">
+    <value xml:space="preserve">Configurações de Gerenciamento de Mídia</value>
+  </data>
+  <data name="Silverlight Manager Settings.Title">
+    <value xml:space="preserve">Configurações de Gerenciamento de Silverlight</value>
+  </data>
+  <data name="Template Manager Settings.Title">
+    <value xml:space="preserve">Configurações de Gerenciamento de Modelo</value>
+  </data>
+  <data name="Toolbar Settings.Title">
+    <value xml:space="preserve">Configurações da Barra de Ferramentas</value>
+  </data>
+  <data name="UserFolder.Text">
+    <value xml:space="preserve">[Pasta do usuário]</value>
+  </data>
+  <data name="DocumentsFilters.Help">
+    <value xml:space="preserve">Uma lista separada por vírgula de possíveis extensões a serem usadas no gerenciador de documentos. Use o seguinte formato: *.extensionname.</value>
+  </data>
+  <data name="FlashFilters.Help">
+    <value xml:space="preserve">Uma lista separada por vírgula de possíveis extensões a ser usada no gerenciador de flashs. Use o seguinte formato: *.extensionname.</value>
+  </data>
+  <data name="ImagesFilters.Help">
+    <value xml:space="preserve">Uma lista separada por vírgula de possíveis extensões a ser usada no gerenciador de imagens. Use o seguinte formato: *.extensionname.</value>
+  </data>
+  <data name="LinksType.Help">
+    <value xml:space="preserve">"Usar nome de página" = um atalho para uma página no portal é criado como 'default.aspx?TabName=Home';&lt;br /&gt;&lt;br/&gt;"Usar id da página" = um atalho para uma página no portal é criado como 'default.aspx?TabId=100';&lt;br /&gt;&lt;br /&gt;"Normal": um atalho para uma página no portal é criado como um atalho normal.</value>
+  </data>
+  <data name="MediaFilters.Help">
+    <value xml:space="preserve">Uma lista separada por vírgula de possíveis extensões a ser usada no gerenciador de mídias. Use o seguinte formato: *.extensionname.</value>
+  </data>
+  <data name="SilverlightFilters.Help">
+    <value xml:space="preserve">Uma lista separada por vírgula de possíveis extensões a ser usada no gerenciador de silverlights. Use o seguinte formato: *.extensionname.</value>
+  </data>
+  <data name="TemplateFilters.Help">
+    <value xml:space="preserve">Uma lista separada por vírgula de possíveis extensões a ser usada no gerenciador de modelos. Use o seguinte formato: *.extensionname.</value>
+  </data>
+  <data name="LinksType.Text">
+    <value xml:space="preserve">Tipo de atalhos de página:</value>
+  </data>
+  <data name="LinksType_Normal.Text">
+    <value xml:space="preserve">Normal</value>
+  </data>
+  <data name="LinksType_UseTabId.Text">
+    <value xml:space="preserve">Usar id da página no endereço</value>
+  </data>
+  <data name="LinksType_UseTabName.Text">
+    <value xml:space="preserve">Usar nome da página no endereço</value>
+  </data>
+</root>

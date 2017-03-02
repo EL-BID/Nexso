@@ -1,0 +1,17 @@
+﻿IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUpdate]') AND type in (N'U'))
+BEGIN
+	IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUpdate]') AND type in (N'U'))
+	BEGIN
+		EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUpdate]', N'{objectQualifier}EasyDNNNewsUpdate', 'OBJECT'
+		BEGIN TRY
+		EXECUTE sp_rename N'PK_EasyDNNNewsUpdate', N'PK_{objectQualifier}EasyDNNNewsUpdate', 'OBJECT'
+		END TRY
+		BEGIN CATCH
+		END CATCH
+	END
+END
+GO
+IF NOT EXISTS (SELECT UpdateVersion FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate] WHERE UpdateVersion = '05.00.00')
+BEGIN
+	INSERT {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate]([UpdateVersion],[Finished]) VALUES(N'05.00.00',0)
+END

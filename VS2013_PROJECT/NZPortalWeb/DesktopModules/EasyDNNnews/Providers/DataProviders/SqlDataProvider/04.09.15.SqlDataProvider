@@ -1,0 +1,1619 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsPortalSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsPortalSettings]', N'{objectQualifier}EasyDNNNewsPortalSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsPortalSettings', N'PK_{objectQualifier}EasyDNNNewsPortalSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsPortalSettings_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+--MainDisplaySettings
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleDisplayControl')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ArticleDisplayControl nvarchar(50) NOT NULL DEFAULT('ViewEasyDNNNews.ascx')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'NumberOfPosts')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD NumberOfPosts int NOT NULL DEFAULT(5)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'DisplayAsTable')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD DisplayAsTable bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'PostColumns')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD PostColumns int NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ColumnWidth')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ColumnWidth int NOT NULL DEFAULT(250)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'TotalNumberOfPosts')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD TotalNumberOfPosts int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'NumberOfPagerLinks')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD NumberOfPagerLinks int NOT NULL DEFAULT(10)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'OpenInTab')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD OpenInTab nvarchar(50) NOT NULL DEFAULT('0')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowPaging')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowPaging bit NOT NULL DEFAULT(1)
+END
+
+--CommentsSettings
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'AllowComments')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD AllowComments bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowWrittenComments')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowWrittenComments bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'AllowArticleComments')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD AllowArticleComments bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowCommentsRating')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowCommentsRating bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowThreadedComments')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowThreadedComments bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ApproveComments')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ApproveComments bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'EnableCAPTCHA')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD EnableCAPTCHA bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'CommentsSource')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD CommentsSource nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'FacebookID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD FacebookID nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'FacebookNumOfComments')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD FacebookNumOfComments nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'FacebookColorScheme')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD FacebookColorScheme nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'FacebookUserID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD FacebookUserID nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'DisqusID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD DisqusID nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'DisqusOnline')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD DisqusOnline bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'CommentsAvatarProvider')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD CommentsAvatarProvider nvarchar(50) NOT NULL DEFAULT('')
+END
+
+-- ArticleSettings
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'FeaturedArticles')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD FeaturedArticles bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'FeaturedOnTop')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD FeaturedOnTop bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowAllCategories')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowAllCategories bit NOT NULL DEFAULT(1) -- ovo treba promjeniti u ShowAllCategories ili Filter Categories
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'AutoAddChildCategories')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD AutoAddChildCategories bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowAllAuthors')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowAllAuthors bit NOT NULL DEFAULT(1) -- prije bilo string, ALL i selection
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowOnlyEvents')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowOnlyEvents bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'PastEventsLimitDays')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD PastEventsLimitDays int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'PastEventsLimit')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD PastEventsLimit nvarchar(50) NOT NULL DEFAULT('') -- ovo neznam zast je nvarchar
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ModuleBoundToCategory')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ModuleBoundToCategory int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'FilterByTags')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD FilterByTags bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'FilterByArticleID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD FilterByArticleID bit NOT NULL DEFAULT(0)
+END
+
+-- ArticleImageSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShrinkThumb')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShrinkThumb bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShrinkMain')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShrinkMain bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ThumbImageWidth')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ThumbImageWidth int NOT NULL DEFAULT(150)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ThumbImageHeight')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ThumbImageHeight int NOT NULL DEFAULT(150)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'MainImageWidth')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD MainImageWidth int NOT NULL DEFAULT(600)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'MainImageHeight')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD MainImageHeight int NOT NULL DEFAULT(400)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleImageJpegQuality')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ArticleImageJpegQuality int NOT NULL DEFAULT(97)
+END
+
+-- ImageInPostSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'TokenResizeCrop')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD TokenResizeCrop bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'TokenLightBox')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD TokenLightBox bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'TokenTitle')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD TokenTitle bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'TokenDescription')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD TokenDescription bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'TokenCSSClass')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD TokenCSSClass nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'TokenWidth')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD TokenWidth int NOT NULL DEFAULT(400)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'TokenHeight')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD TokenHeight int NOT NULL DEFAULT(400)
+END
+
+-- to je negde drugde 
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'OrderPosts')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD OrderPosts nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'OrderPostsType')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD OrderPostsType nvarchar(50) NOT NULL DEFAULT('')
+END
+-- do tud
+
+
+-- EasyDNNGalleryIntegrationSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'EnableGalleryIntegration')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD EnableGalleryIntegration bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'UseGalleryDefault')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD UseGalleryDefault bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'GalleryPosition')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD GalleryPosition nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'GalleryDisplayData')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD GalleryDisplayData nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'UserCanSeeOnlyTheirGalleries')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD UserCanSeeOnlyTheirGalleries bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'UserCanSeeOnlyTheirImages')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD UserCanSeeOnlyTheirImages bit NOT NULL DEFAULT(0)
+END
+
+-- ThemeSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleDetailsTemplate')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ArticleDetailsTemplate nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleListTemplate')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ArticleListTemplate nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'TemplatesFolder')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD TemplatesFolder nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleListTheme')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ArticleListTheme nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'TemplatesFolderDetails')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD TemplatesFolderDetails nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleDetailsTheme')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ArticleDetailsTheme nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleCommentsTemplate')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ArticleCommentsTemplate nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleDetailsDisplayStyle')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ArticleDetailsDisplayStyle nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'CommentsTheme')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD CommentsTheme nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'EnableThemeChange')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD EnableThemeChange bit NOT NULL DEFAULT(0)
+END
+
+-- AdvancedArticleSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowInAllModules')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowInAllModules bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'StaringArticle')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD StaringArticle int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'OpenLinksInPage')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD OpenLinksInPage nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'PassCategoryID')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD PassCategoryID bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'OpenCategoryFirstArticle')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD OpenCategoryFirstArticle bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'OpenFirstArticleByDate')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD OpenFirstArticleByDate bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'OpenCategoryArticleIfThereIsOnlyOne')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD OpenCategoryArticleIfThereIsOnlyOne bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'OpenArticleByDateIfThereIsOnlyOne')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD OpenArticleByDateIfThereIsOnlyOne bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'OpenFirstArticle')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD OpenFirstArticle bit NOT NULL DEFAULT(0)
+END
+
+-- PaidContetSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'EnablePaidContent')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD EnablePaidContent bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowCommentsOnPaidContent')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowCommentsOnPaidContent bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowImageGalleryOnPaidContent')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowImageGalleryOnPaidContent bit NOT NULL DEFAULT(0)
+END
+
+-- RelatedArticlesPrintRSSSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'EnableRelatedArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD EnableRelatedArticles bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'RelatedArticlesSorting')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD RelatedArticlesSorting nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'NumberOfRelatedArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD NumberOfRelatedArticles int NOT NULL DEFAULT(5)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'RSSUrl')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD RSSUrl nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'InsertImageIntoRSS')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD InsertImageIntoRSS bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'RssShowArticleImage')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD RssShowArticleImage bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'RSSNumberOfArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD RSSNumberOfArticles int NOT NULL DEFAULT(15)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'RSSNumberOfCharacters')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD RSSNumberOfCharacters int NOT NULL DEFAULT(15)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowRSSLink')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowRSSLink bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'RSSArticleData')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD RSSArticleData nvarchar(50) NOT NULL DEFAULT('')
+END
+
+-- ContentFormatingOptions
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'SubtitleLimit')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD SubtitleLimit int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'LimitTitleCharacters')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD LimitTitleCharacters int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'LimitSummaryCharacters')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD LimitSummaryCharacters int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleLimit')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ArticleLimit int NOT NULL DEFAULT(0)
+END
+
+-- ArticleRatingApproveSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ArticleRating')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ArticleRating bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ApproveArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ApproveArticles bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ApproveUpdatedArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ApproveUpdatedArticles bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'UserCanEditOnlyTheirArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD UserCanEditOnlyTheirArticles bit NOT NULL DEFAULT(0)
+END
+
+-- ArticleProfilesSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'AuthorsCanEditTheirOwnProfile')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD AuthorsCanEditTheirOwnProfile bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowAuthorsProfile')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowAuthorsProfile bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ShowAuthorsGroupProfile')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ShowAuthorsGroupProfile bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'EnableAuthorAliases')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD EnableAuthorAliases bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'AuthorsCanEditTheirOwnGroup')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD AuthorsCanEditTheirOwnGroup bit NOT NULL DEFAULT(0)
+END
+
+-- ImportedRSSSeettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ImportedRSSShowAsLink')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ImportedRSSShowAsLink bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'OpenRSSLinksInNewWindow')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD OpenRSSLinksInNewWindow bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'AddLinkToOriginalRSS')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD AddLinkToOriginalRSS bit NOT NULL DEFAULT(0)
+END
+
+-- ImageUploadOptions
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ResizeUploadImage')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ResizeUploadImage bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ImageResizeWidth')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ImageResizeWidth int NOT NULL DEFAULT(100)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'ImageResizeHeight')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD ImageResizeHeight int NOT NULL DEFAULT(100)
+END
+
+-- DNNSearchIntegration
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'IsModuleSearchable')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD IsModuleSearchable bit NOT NULL DEFAULT(1)
+END
+
+-- SocialSharingSettings
+
+-- dodano iz General settingsa
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'IncludejQuery')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD IncludejQuery bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'jQueryNoConflict')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD jQueryNoConflict bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'numOfArticleHistory')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD numOfArticleHistory int NOT NULL DEFAULT(10)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'DaylightSavingTime')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD DaylightSavingTime bit NOT NULL DEFAULT(0)
+END
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'HideUnlocalizedItems')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD HideUnlocalizedItems bit NOT NULL DEFAULT(0)
+END
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'DynamicModuleConatinerTitle')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD DynamicModuleConatinerTitle bit NOT NULL DEFAULT(0)
+END
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'UserIDInLink')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD UserIDInLink bit NOT NULL DEFAULT(0)
+END
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsModuleSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsModuleSettings]', N'{objectQualifier}EasyDNNNewsModuleSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsModuleSettings', N'PK_{objectQualifier}EasyDNNNewsModuleSettings', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsModuleSettings', N'IX_{objectQualifier}EasyDNNNewsModuleSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsModuleSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsModuleSettings_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+--MainDisplaySettings
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleDisplayControl')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticleDisplayControl nvarchar(50) NOT NULL DEFAULT('ViewEasyDNNNews.ascx')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'NumberOfPosts')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD NumberOfPosts int NOT NULL DEFAULT(5)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'DisplayAsTable')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD DisplayAsTable bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'PostColumns')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD PostColumns int NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ColumnWidth')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ColumnWidth int NOT NULL DEFAULT(250)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TotalNumberOfPosts')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD TotalNumberOfPosts int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'NumberOfPagerLinks')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD NumberOfPagerLinks int NOT NULL DEFAULT(10)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'OpenInTab')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD OpenInTab nvarchar(50) NOT NULL DEFAULT('0')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowPaging')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowPaging bit NOT NULL DEFAULT(1)
+END
+
+--CommentsSettings
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'AllowComments')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD AllowComments bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowWrittenComments')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowWrittenComments bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'AllowArticleComments')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD AllowArticleComments bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowCommentsRating')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowCommentsRating bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowThreadedComments')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowThreadedComments bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ApproveComments')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ApproveComments bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'EnableCAPTCHA')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD EnableCAPTCHA bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'CommentsSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD CommentsSource nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'FacebookID')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD FacebookID nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'FacebookNumOfComments')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD FacebookNumOfComments nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'FacebookColorScheme')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD FacebookColorScheme nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'FacebookUserID')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD FacebookUserID nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'DisqusID')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD DisqusID nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'DisqusOnline')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD DisqusOnline bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'CommentsAvatarProvider')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD CommentsAvatarProvider nvarchar(50) NOT NULL DEFAULT('')
+END
+
+-- ArticleSettings
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'FeaturedArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD FeaturedArticles bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'FeaturedOnTop')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD FeaturedOnTop bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowAllCategories')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowAllCategories bit NOT NULL DEFAULT(1) -- ovo treba promjeniti u ShowAllCategories ili Filter Categories
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'AutoAddChildCategories')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD AutoAddChildCategories bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowAllAuthors')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowAllAuthors bit NOT NULL DEFAULT(1) -- prije bilo string, ALL i selection
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowOnlyEvents')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowOnlyEvents bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'PastEventsLimitDays')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD PastEventsLimitDays int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'PastEventsLimit')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD PastEventsLimit nvarchar(50) NOT NULL DEFAULT('') -- ovo neznam zast je nvarchar
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ModuleBoundToCategory')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ModuleBoundToCategory int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'FilterByTags')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD FilterByTags bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'FilterByArticleID')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD FilterByArticleID bit NOT NULL DEFAULT(0)
+END
+
+-- ArticleImageSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShrinkThumb')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShrinkThumb bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShrinkMain')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShrinkMain bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ThumbImageWidth')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ThumbImageWidth int NOT NULL DEFAULT(150)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ThumbImageHeight')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ThumbImageHeight int NOT NULL DEFAULT(150)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'MainImageWidth')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD MainImageWidth int NOT NULL DEFAULT(600)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'MainImageHeight')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD MainImageHeight int NOT NULL DEFAULT(400)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleImageJpegQuality')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticleImageJpegQuality int NOT NULL DEFAULT(97)
+END
+
+-- ImageInPostSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TokenResizeCrop')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD TokenResizeCrop bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TokenLightBox')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD TokenLightBox bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TokenTitle')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD TokenTitle bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TokenDescription')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD TokenDescription bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TokenCSSClass')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD TokenCSSClass nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TokenWidth')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD TokenWidth int NOT NULL DEFAULT(400)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TokenHeight')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD TokenHeight int NOT NULL DEFAULT(400)
+END
+
+-- to je negde drugde 
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'OrderPosts')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD OrderPosts nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'OrderPostsType')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD OrderPostsType nvarchar(50) NOT NULL DEFAULT('')
+END
+-- do tud 
+
+-- EasyDNNGalleryIntegrationSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'EnableGalleryIntegration')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD EnableGalleryIntegration bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'UseGalleryDefault')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD UseGalleryDefault bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'GalleryPosition')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD GalleryPosition nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'GalleryDisplayData')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD GalleryDisplayData nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'UserCanSeeOnlyTheirGalleries')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD UserCanSeeOnlyTheirGalleries bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'UserCanSeeOnlyTheirImages')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD UserCanSeeOnlyTheirImages bit NOT NULL DEFAULT(0)
+END
+
+
+-- ThemeSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleDetailsTemplate')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticleDetailsTemplate nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleListTemplate')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticleListTemplate nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TemplatesFolder')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD TemplatesFolder nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleListTheme')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticleListTheme nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TemplatesFolderDetails')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD TemplatesFolderDetails nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleDetailsTheme')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticleDetailsTheme nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleCommentsTemplate')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticleCommentsTemplate nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleDetailsDisplayStyle')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticleDetailsDisplayStyle nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'CommentsTheme')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD CommentsTheme nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'EnableThemeChange')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD EnableThemeChange bit NOT NULL DEFAULT(0)
+END
+
+-- AdvancedArticleSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowInAllModules')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowInAllModules bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'StaringArticle')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD StaringArticle int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'OpenLinksInPage')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD OpenLinksInPage nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'PassCategoryID')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD PassCategoryID bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'OpenCategoryFirstArticle')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD OpenCategoryFirstArticle bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'OpenFirstArticleByDate')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD OpenFirstArticleByDate bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'OpenCategoryArticleIfThereIsOnlyOne')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD OpenCategoryArticleIfThereIsOnlyOne bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'OpenArticleByDateIfThereIsOnlyOne')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD OpenArticleByDateIfThereIsOnlyOne bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'OpenFirstArticle')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD OpenFirstArticle bit NOT NULL DEFAULT(0)
+END
+
+-- PaidContetSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'EnablePaidContent')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD EnablePaidContent bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowCommentsOnPaidContent')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowCommentsOnPaidContent bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowImageGalleryOnPaidContent')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowImageGalleryOnPaidContent bit NOT NULL DEFAULT(0)
+END
+
+-- RelatedArticlesPrintRSSSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'EnableRelatedArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD EnableRelatedArticles bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'RelatedArticlesSorting')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD RelatedArticlesSorting nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'NumberOfRelatedArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD NumberOfRelatedArticles int NOT NULL DEFAULT(5)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'RSSUrl')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD RSSUrl nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'InsertImageIntoRSS')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD InsertImageIntoRSS bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'RssShowArticleImage')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD RssShowArticleImage bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'RSSNumberOfArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD RSSNumberOfArticles int NOT NULL DEFAULT(15)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'RSSNumberOfCharacters')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD RSSNumberOfCharacters int NOT NULL DEFAULT(15)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowRSSLink')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowRSSLink bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'RSSArticleData')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD RSSArticleData nvarchar(50) NOT NULL DEFAULT('')
+END
+
+-- ContentFormatingOptions
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'SubtitleLimit')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD SubtitleLimit int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'LimitTitleCharacters')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD LimitTitleCharacters int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'LimitSummaryCharacters')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD LimitSummaryCharacters int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleLimit')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticleLimit int NOT NULL DEFAULT(0)
+END
+
+-- ArticleRatingApproveSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleRating')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticleRating bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ApproveArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ApproveArticles bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ApproveUpdatedArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ApproveUpdatedArticles bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'UserCanEditOnlyTheirArticles')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD UserCanEditOnlyTheirArticles bit NOT NULL DEFAULT(0)
+END
+
+-- ArticleProfilesSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'AuthorsCanEditTheirOwnProfile')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD AuthorsCanEditTheirOwnProfile bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowAuthorsProfile')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowAuthorsProfile bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ShowAuthorsGroupProfile')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ShowAuthorsGroupProfile bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'EnableAuthorAliases')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD EnableAuthorAliases bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'AuthorsCanEditTheirOwnGroup')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD AuthorsCanEditTheirOwnGroup bit NOT NULL DEFAULT(0)
+END
+
+-- ImportedRSSSeettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ImportedRSSShowAsLink')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ImportedRSSShowAsLink bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'OpenRSSLinksInNewWindow')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD OpenRSSLinksInNewWindow bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'AddLinkToOriginalRSS')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD AddLinkToOriginalRSS bit NOT NULL DEFAULT(0)
+END
+
+-- ImageUploadOptions
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ResizeUploadImage')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ResizeUploadImage bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ImageResizeWidth')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ImageResizeWidth int NOT NULL DEFAULT(100)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ImageResizeHeight')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ImageResizeHeight int NOT NULL DEFAULT(100)
+END
+
+-- DNNSearchIntegration
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'IsModuleSearchable')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD IsModuleSearchable bit NOT NULL DEFAULT(1)
+END
+
+-- SocialSharingSettings
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'UseGeneralSettingsAll')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD UseGeneralSettingsAll bit NOT NULL DEFAULT(1)
+END
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'HideUnlocalizedItems')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD HideUnlocalizedItems bit NOT NULL DEFAULT(0)
+END
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'DynamicModuleConatinerTitle')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD DynamicModuleConatinerTitle bit NOT NULL DEFAULT(0)
+END
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'UserIDInLink')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD UserIDInLink bit NOT NULL DEFAULT(0)
+END
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'PermissionsPMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD PermissionsPMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'MainDisplayPMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD MainDisplayPMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'CommentsPMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD CommentsPMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticlePMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticlePMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleImagePMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticleImagePMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ImageInPostPMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ImageInPostPMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'EasyDNNGalleryIntegrationPMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD EasyDNNGalleryIntegrationPMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ThemePMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ThemePMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'AdvancedArticlePMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD AdvancedArticlePMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'PaidContetPMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD PaidContetPMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'RelatedArticlesPrintRSSPMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD RelatedArticlesPrintRSSPMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ContentFormatingPMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ContentFormatingPMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ImageUploadPMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ImageUploadPMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ArticleRatingApprovePMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ArticleRatingApprovePMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'DNNSearchIntegrationPMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD DNNSearchIntegrationPMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'AuthorsProfilePMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD AuthorsProfilePMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'ImportedRSSPMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD ImportedRSSPMSource bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'SocialSharingPMSource')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD SocialSharingPMSource bit NOT NULL DEFAULT(1)
+END
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsCalendarSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsCalendarSettings]', N'{objectQualifier}EasyDNNNewsCalendarSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsCalendarSettings', N'PK_{objectQualifier}EasyDNNNewsCalendarSettings', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsCalendarSettings', N'IX_{objectQualifier}EasyDNNNewsCalendarSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsCalendarSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsCalendarSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsCalendarSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsCalendarSettings_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'UpcomingEventsTTSummaryLenght')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD UpcomingEventsTTSummaryLenght int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'CalendarTooltipSummaryLenght')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD CalendarTooltipSummaryLenght int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowEventsBypublishDate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowEventsBypublishDate bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'CalendarEventsExportIcon')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD CalendarEventsExportIcon bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'UpcomingEventsToolTip')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD UpcomingEventsToolTip bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowUpcomingEventsRSSIcon')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowUpcomingEventsRSSIcon bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowUpcomingEventsExportIcon')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowUpcomingEventsExportIcon bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'CellHeight')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD CellHeight int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'TitleLenght')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD TitleLenght int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'NumOfItemsInCell')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD NumOfItemsInCell int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowNewsRSSLink')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowNewsRSSLink bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowEventRSSLink')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowEventRSSLink bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowListLink')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowListLink bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'DisplayHeaderEvents')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD DisplayHeaderEvents bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'PastEventsLimitDays')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD PastEventsLimitDays int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'PastEventsLimit')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD PastEventsLimit nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowEventsInCalendar')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowEventsInCalendar bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowArticlesInCalendar')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowArticlesInCalendar bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'OpenEventDetails')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD OpenEventDetails nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'NumberOfEventsToShow')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD NumberOfEventsToShow int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowEventArchive')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowEventArchive bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'DisplayAllAuthors')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD DisplayAllAuthors bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'DisplayHeader')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD DisplayHeader bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'PermissionSourceID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD PermissionSourceID int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'PermissionSource')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD PermissionSource tinyint NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'AutoAddChildCategories')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD AutoAddChildCategories bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowAllCategories')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowAllCategories bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'DisplayStyle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD DisplayStyle nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'MonthlyArchiveModule')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD MonthlyArchiveModule nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'MonthlyShowArchive')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD MonthlyShowArchive bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ShowCalendarArchive')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ShowCalendarArchive bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'WhereToOpen')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD WhereToOpen nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'ModuleTheme')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD ModuleTheme nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'DetailsModule')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD DetailsModule nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'FirstDayOfTheWeek')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD FirstDayOfTheWeek nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'IsSocialInstance')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD IsSocialInstance bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'IsTooltipEnabled')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD IsTooltipEnabled bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'CalendarType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD CalendarType tinyint NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'HideUnlocalizedItems')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD HideUnlocalizedItems bit NOT NULL DEFAULT(0)
+END
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsMenuSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsMenuSettings]', N'{objectQualifier}EasyDNNNewsMenuSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsMenuSettings', N'PK_{objectQualifier}EasyDNNNewsMenuSettings', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsMenuSettings', N'IX_{objectQualifier}EasyDNNNewsMenuSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsMenuSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsMenuSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsMenuSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsMenuSettings_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'PassAuthorUserID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD PassAuthorUserID bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'nodeExpandToLevel')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD nodeExpandToLevel bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'nodeExpandLevel')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD nodeExpandLevel int NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'DisplayHeader')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD DisplayHeader bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'DisplayAllAuthors')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD DisplayAllAuthors bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'CategoryMenuType')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD CategoryMenuType nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'AutoAddChildCategories')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD AutoAddChildCategories bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'DisplayStyle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD DisplayStyle nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'HTMLTemplate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD HTMLTemplate nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'WhereToOpen')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD WhereToOpen nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'DetailsModule')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD DetailsModule nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'ModuleTheme')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD ModuleTheme nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'ShowAllCategories')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD ShowAllCategories bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'ExpandAll')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD ExpandAll bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'PermissionSource')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD PermissionSource tinyint NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'PermissionSourceID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD PermissionSourceID int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'IsSocialInstance')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD IsSocialInstance bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsMenuSettings' and column_name = 'HideUnlocalizedItems')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings] ADD HideUnlocalizedItems bit NOT NULL DEFAULT(0)
+END
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsTagCloudSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsTagCloudSettings]', N'{objectQualifier}EasyDNNNewsTagCloudSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsTagCloudSettings', N'PK_{objectQualifier}EasyDNNNewsTagCloudSettings', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsTagCloudSettings', N'IX_{objectQualifier}EasyDNNNewsTagCloudSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsTagCloudSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsTagCloudSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsTagCloudSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsTagCloudSettings_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'ModuleID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD ModuleID int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'SharingPortalID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD SharingPortalID int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'ShowTagCount')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD ShowTagCount bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'TagsByCategory')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD TagsByCategory bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'DisplayAllAuthors')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD DisplayAllAuthors bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'DisplayHeader')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD DisplayHeader bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'PermissionSourceID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD PermissionSourceID int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'PermissionSource')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD PermissionSource int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'DisplayStyle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD DisplayStyle nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'AutoAddChildCategories')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD AutoAddChildCategories bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'WhereToOpen')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD WhereToOpen nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'NumberOfTags')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD NumberOfTags int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'Sorting')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD Sorting nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'OpenInModule')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD OpenInModule nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'TagsTheme')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD TagsTheme nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'ShowAllCategories')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD ShowAllCategories bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'IsSocialInstance')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD IsSocialInstance bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'HtmTemplate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD HtmTemplate nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsTagCloudSettings' and column_name = 'HideUnlocalizedItems')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings] ADD HideUnlocalizedItems bit NOT NULL DEFAULT(0)
+END
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsSearchSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsSearchSettings]', N'{objectQualifier}EasyDNNNewsSearchSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsSearchSettings', N'PK_{objectQualifier}EasyDNNNewsSearchSettings', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsSearchSettings', N'IX_{objectQualifier}EasyDNNNewsTagCloudSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsSearchSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsSearchSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsSearchSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsSearchSettings_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'DisplayAllAuthors')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD DisplayAllAuthors bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'NewsOrSearchModuleSource')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD NewsOrSearchModuleSource nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'SearchButtonPosition')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD SearchButtonPosition nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'DisplayStyle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD DisplayStyle nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'HTMLTemplate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD HTMLTemplate nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'OpenInTab')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD OpenInTab nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'NumberOfChars')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD NumberOfChars int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'SearchTemplate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD SearchTemplate nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'SearchWay')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD SearchWay nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'HighlightResults')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD HighlightResults bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'DisplayResults')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD DisplayResults nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'FormDisplay')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD FormDisplay nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'CfGroupSelect')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD CfGroupSelect nvarchar(50) NOT NULL DEFAULT('')
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'PermissionSource')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD PermissionSource int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'PermissionSourceID')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD PermissionSourceID int NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'ShowAllCategories')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD ShowAllCategories bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'AutoAddChildCategories')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD AutoAddChildCategories bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'IsSocialInstance')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD IsSocialInstance bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'HideUnlocalizedItems')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD HideUnlocalizedItems bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsSearchSettings' and column_name = 'AutoComplete')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings] ADD AutoComplete bit NOT NULL DEFAULT(0)
+END
+

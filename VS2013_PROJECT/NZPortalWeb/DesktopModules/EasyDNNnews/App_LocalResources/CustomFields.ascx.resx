@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="btnCheckToken.Text" xml:space="preserve">
+    <value>Check availability</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btnCreateDropDownElement.Text" xml:space="preserve">
+    <value>Create element</value>
+  </data>
+  <data name="btnSaveField.Text" xml:space="preserve">
+    <value>Create Field</value>
+  </data>
+  <data name="btnUpdateField.Text" xml:space="preserve">
+    <value>Update Field</value>
+  </data>
+  <data name="gvListOfCustomFieldsAction.HeaderText" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="gvListOfCustomFieldsName.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="gvListOfCustomFieldsToken.HeaderText" xml:space="preserve">
+    <value>Token</value>
+  </data>
+  <data name="gvListOfCustomFieldsType.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="gvMultiControlElementsCustomFieldID.HeaderText" xml:space="preserve">
+    <value>cfID</value>
+  </data>
+  <data name="gvMultiControlElementsFieldElementID.HeaderText" xml:space="preserve">
+    <value>feID</value>
+  </data>
+  <data name="gvMultiControlElementsPosition.HeaderText" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="gvMultiControlElementsText.HeaderText" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="infoCurrencyControlLink.Text" xml:space="preserve">
+    <value>Please set &lt;a href="{0}"&gt;the base currency&lt;/a&gt; in order to be able to create a money custom field type.</value>
+  </data>
+  <data name="infolblCheckToken.Text" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="infolblCheckTokenFalse.Text" xml:space="preserve">
+    <value>Not available</value>
+  </data>
+  <data name="infolblInfoMultiPreSaveCommon.Text" xml:space="preserve">
+    <value>Select common items source.</value>
+  </data>
+  <data name="infolblInfoMultiPreSaveFirstcreate.Text" xml:space="preserve">
+    <value>Custom fields elements can be created upon the creation of custom field.</value>
+  </data>
+  <data name="lbgvMultiControlElementsCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="lbgvMultiControlElementsDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="lbgvMultiControlElementsEdit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="lbgvMultiControlElementsUpdate.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="lblBasePortalCurrency.HelpText" xml:space="preserve">
+    <value>The base currency for this portal. All other currencies on the portal are calculated from the base currency according to the portal exchange list.</value>
+  </data>
+  <data name="lblBasePortalCurrency.Text" xml:space="preserve">
+    <value>Base currency:</value>
+  </data>
+  <data name="lblCheckBoxListDefault.HelpText" xml:space="preserve">
+    <value>Default value of field.</value>
+  </data>
+  <data name="lblCheckBoxListDefault.Text" xml:space="preserve">
+    <value>Default value:</value>
+  </data>
+  <data name="lblCreateMultiElementInfoFail1.Text" xml:space="preserve">
+    <value>Failed to insert element {0} to database!</value>
+  </data>
+  <data name="lblCreateMultiElementInfoFail2.Text" xml:space="preserve">
+    <value>Can't create empty Dropdown list, Text element or if Text.Lenght &gt; 300</value>
+  </data>
+  <data name="lblCreateMultiElementInfoFail3.Text" xml:space="preserve">
+    <value>Please first save Custom Field then create Elements for that field</value>
+  </data>
+  <data name="lblCreateMultiElementInfoSuccess.Text" xml:space="preserve">
+    <value>Successfuly created element {0}!</value>
+  </data>
+  <data name="lblCurrencyManager.Text" xml:space="preserve">
+    <value>Currency setup</value>
+  </data>
+  <data name="lblCustomFieldName.HelpText" xml:space="preserve">
+    <value>Enter a name for the custom field you wish to create.</value>
+  </data>
+  <data name="lblCustomFieldName.Text" xml:space="preserve">
+    <value>Custom field name:</value>
+  </data>
+  <data name="lblCustomFieldsTemplates.Text" xml:space="preserve">
+    <value>Manage Custom Fields Groups</value>
+  </data>
+  <data name="lblDataType.HelpText" xml:space="preserve">
+    <value>Select TextBox data type.
+
+
+Text – Only used for plain text.
+RichText (HTML) –  Used for rich text or HTML.
+Integer – Used for integer numbers.
+Decimal – Used for decimal numbers.
+
+Money – This type of data is used for entering monetary values (prices). Prior to creating this type of field, it is necessary to set the base currency in Currency setup interface.</value>
+  </data>
+  <data name="lblDataType.Text" xml:space="preserve">
+    <value>TextBox data type:</value>
+  </data>
+  <data name="lblDefaultCheckBox.HelpText" xml:space="preserve">
+    <value>Here you can add default value of a particular token. When adding articles, this value will have already been added to the field, though it can be changed.</value>
+  </data>
+  <data name="lblDefaultCheckBox.Text" xml:space="preserve">
+    <value>Default token value:</value>
+  </data>
+  <data name="lblDefaultValue.HelpText" xml:space="preserve">
+    <value>Here you can add default value of a particular token. When adding articles, this value will have already been added to the field, though it can be changed.</value>
+  </data>
+  <data name="lblDefaultValue.Text" xml:space="preserve">
+    <value>Default token value:</value>
+  </data>
+  <data name="lblDefMulticontrol.Text" xml:space="preserve">
+    <value>Custom field elements</value>
+  </data>
+  <data name="lblDropDownListDefault.HelpText" xml:space="preserve">
+    <value>Select the element to be chosen by default.</value>
+  </data>
+  <data name="lblDropDownListDefault.Text" xml:space="preserve">
+    <value>Default value:</value>
+  </data>
+  <data name="lblFieldType.HelpText" xml:space="preserve">
+    <value>Select the custom field type you wish to add. Possible choices include TextBox, CheckBox and MultiControls.</value>
+  </data>
+  <data name="lblFieldType.Text" xml:space="preserve">
+    <value>Field type:</value>
+  </data>
+  <data name="lblIsHidden.HelpText" xml:space="preserve">
+    <value>Hidden fields are not displayed in articles, but they can be added by authors. Hidden fields are normally used for information important to authors, but not meant to be publicized.</value>
+  </data>
+  <data name="lblIsHidden.Text" xml:space="preserve">
+    <value>Field is hidden:</value>
+  </data>
+  <data name="lblIsPublished.HelpText" xml:space="preserve">
+    <value>If a field is active, values can be entered into it. It is not possible to enter values into inactive fields.</value>
+  </data>
+  <data name="lblIsPublished.Text" xml:space="preserve">
+    <value>Field is active:</value>
+  </data>
+  <data name="lbListOfCustomFieldsDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="lbListOfCustomFieldsEdit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="lblLabelOfTheFeild.HelpText" xml:space="preserve">
+    <value>Enter custom field label.</value>
+  </data>
+  <data name="lblLabelOfTheFeild.Text" xml:space="preserve">
+    <value>Field label:</value>
+  </data>
+  <data name="lblLabelVisible.HelpText" xml:space="preserve">
+    <value>If this option is checked, the label will be shown in the article's display.</value>
+  </data>
+  <data name="lblLabelVisible.Text" xml:space="preserve">
+    <value>Show label:</value>
+  </data>
+  <data name="lblMoneyDefSelect.HelpText" xml:space="preserve">
+    <value>This is the currency that you are entering when adding or editing an article. All other currencies are calculated from this currency based on the exchange list.</value>
+  </data>
+  <data name="lblMoneyDefSelect.Text" xml:space="preserve">
+    <value>Main currency:</value>
+  </data>
+  <data name="lblMultiControlElementText.HelpText" xml:space="preserve">
+    <value>Enter element drop-down lists and click on the Create element button.</value>
+  </data>
+  <data name="lblMultiControlElementText.Text" xml:space="preserve">
+    <value>Element:</value>
+  </data>
+  <data name="lblMultiControlType.HelpText" xml:space="preserve">
+    <value>Select the desired type of multi-control.</value>
+  </data>
+  <data name="lblMultiControlType.Text" xml:space="preserve">
+    <value>Multi-control type:</value>
+  </data>
+  <data name="lblRadioButtonListDefault.HelpText" xml:space="preserve">
+    <value>Default value of feild.</value>
+  </data>
+  <data name="lblRadioButtonListDefault.Text" xml:space="preserve">
+    <value>Default value:</value>
+  </data>
+  <data name="lblRequired.HelpText" xml:space="preserve">
+    <value>A field can be either required or optional. If this option is checked, the field becomes required and it needs to be added, or else the article can't be saved.</value>
+  </data>
+  <data name="lblRequired.Text" xml:space="preserve">
+    <value>Field is required:</value>
+  </data>
+  <data name="lblRequiredErrorMsg.HelpText" xml:space="preserve">
+    <value>Enter message text to be displayed in case that a field is required, but hasn't been filled in.</value>
+  </data>
+  <data name="lblRequiredErrorMsg.Text" xml:space="preserve">
+    <value>Error message:</value>
+  </data>
+  <data name="lblRichTextBoxDefault.HelpText" xml:space="preserve">
+    <value>Here you can add default value of a particular token. When adding articles, this value will have already been added to the field, though it can be changed.</value>
+  </data>
+  <data name="lblRichTextBoxDefault.Text" xml:space="preserve">
+    <value>Default token value:</value>
+  </data>
+  <data name="lblSaveInfoFail1.Text" xml:space="preserve">
+    <value>Saving failed! SQL insert method failed.</value>
+  </data>
+  <data name="lblSaveInfoFail2.Text" xml:space="preserve">
+    <value>Saving failed! Token name already exists.</value>
+  </data>
+  <data name="lblSaveInfoFail3.Text" xml:space="preserve">
+    <value>Saving failed! Token not set. Please select Valid Field Type or Name is wrong.</value>
+  </data>
+  <data name="lblSaveInfoFail4.Text" xml:space="preserve">
+    <value>Saving failed! Please select Valid Field Type.</value>
+  </data>
+  <data name="lblSaveInfoSavedSuccessfuly.Text" xml:space="preserve">
+    <value>Saved successfuly!</value>
+  </data>
+  <data name="lblSaveInfoUpdateSuccessfuly.Text" xml:space="preserve">
+    <value>Updated successfuly!</value>
+  </data>
+  <data name="lblToken.HelpText" xml:space="preserve">
+    <value>Enter token ID. Token ID is a unique token identifier. It can be used in HTML templates. If the entered value for a token ID is name, for example, then its token will be [EDNcf:name]. Note: tokens are case sensitive. A token ID must be unique for each custom field, so you can check its availability by clicking on Check availability button, to ensure you're not using the same token for another custom field.</value>
+  </data>
+  <data name="lblToken.Text" xml:space="preserve">
+    <value>Token ID:</value>
+  </data>
+  <data name="liCheckBox.Text" xml:space="preserve">
+    <value>CheckBox</value>
+  </data>
+  <data name="liCheckBoxList.Text" xml:space="preserve">
+    <value>CheckBoxList</value>
+  </data>
+  <data name="liDecimal.Text" xml:space="preserve">
+    <value>Decimal</value>
+  </data>
+  <data name="liDropDownList.Text" xml:space="preserve">
+    <value>DropDownList</value>
+  </data>
+  <data name="liInteger.Text" xml:space="preserve">
+    <value>Integer</value>
+  </data>
+  <data name="liMoney.Text" xml:space="preserve">
+    <value>Money</value>
+  </data>
+  <data name="liMultiControls.Text" xml:space="preserve">
+    <value>MultiControls</value>
+  </data>
+  <data name="liRadioButtonList.Text" xml:space="preserve">
+    <value>RadioButtonList</value>
+  </data>
+  <data name="liRichText.Text" xml:space="preserve">
+    <value>RichText (HTML)</value>
+  </data>
+  <data name="liSelect.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="liText.Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="liTextBox.Text" xml:space="preserve">
+    <value>TextBox</value>
+  </data>
+  <data name="rfvCustomFieldName.ErrorMessage" xml:space="preserve">
+    <value>Required field!</value>
+  </data>
+  <data name="tbxLabelHelp.HelpText" xml:space="preserve">
+    <value>Enter custom field tooltip. Tooltip will be displayed when adding articles, and its purpose is to display help text to authors when they fill in custom fields. Tooltips will be displayed when the mouse is positioned above "!" sign.</value>
+  </data>
+  <data name="tbxLabelHelp.Text" xml:space="preserve">
+    <value>Field tooltip:</value>
+  </data>
+  <data name="titleControlBasicSetup.Text" xml:space="preserve">
+    <value>Control basic setup</value>
+  </data>
+  <data name="titleControlLabelOptions.Text" xml:space="preserve">
+    <value>Control label options</value>
+  </data>
+  <data name="titleCreateNEWCF.Text" xml:space="preserve">
+    <value>Create NEW Custom Field</value>
+  </data>
+  <data name="titleExistingCF.Text" xml:space="preserve">
+    <value>Existing custom fields - ADMINISTRATION</value>
+  </data>
+  <data name="titleOfControle.Text" xml:space="preserve">
+    <value>CUSTOM FIELDS MANAGER</value>
+  </data>
+  <data name="titleOtherOptions.Text" xml:space="preserve">
+    <value>Other options</value>
+  </data>
+  <data name="titleUpdateCF.Text" xml:space="preserve">
+    <value>Update Custom Field</value>
+  </data>
+  <data name="titleValidation.Text" xml:space="preserve">
+    <value>Validation</value>
+  </data>
+  <data name="lblCustomFieldsList.Text" xml:space="preserve">
+    <value>Custom Field List</value>
+  </data>
+  <data name="btnSaveElementWithParent.Text" xml:space="preserve">
+    <value>Create element</value>
+  </data>
+  <data name="lblCreateChildElement.Text" xml:space="preserve">
+    <value>Element:</value>
+  </data>
+  <data name="lblCreateChildElement.Help" xml:space="preserve">
+    <value>Enter the text value for this element.</value>
+  </data>
+  <data name="lblIsSearchable.Text" xml:space="preserve">
+    <value>Field is searchable:</value>
+  </data>
+  <data name="lblIsSearchable.Help" xml:space="preserve">
+    <value>If this option is checked, the field is searchable in Advanced search mode of EasyDNNnews search module.</value>
+  </data>
+  <data name="searchableOptions.Text" xml:space="preserve">
+    <value>Searchable options</value>
+  </data>
+  <data name="lblShowAllMultiElements.Text" xml:space="preserve">
+    <value>Show all custom field elements:</value>
+  </data>
+  <data name="lblShowAllMultiElements.Help" xml:space="preserve">
+    <value>If the checkbox is checked then the not checked elements are displayed to readers as not checked.</value>
+  </data>
+  <data name="lblIsParentOrChilde.Text" xml:space="preserve">
+    <value>Element type:</value>
+  </data>
+  <data name="lblIsParentOrChilde.Help" xml:space="preserve">
+    <value>Select the desired element type. Normal elements are not linked with other custom fields. Related elements are linked to other custom fields, such as their elements. An example: we have created a drop-down list Car maker with elements Audi, BMW, Mercedes. Then we created another drop-down list, Car model. In the latter drop-down list we can create related elements linked with elements from the Car maker drop-down list. Audi's models A4, A5, A6, A7, A8 that we create as related elements will be linked with the corresponding Audi element from the Car model drop-down list.</value>
+  </data>
+  <data name="liNormal.Text" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="liTriggeredbyparent.Text" xml:space="preserve">
+    <value>Related</value>
+  </data>
+  <data name="lblParentSelect.Text" xml:space="preserve">
+    <value>Parent custom field</value>
+  </data>
+  <data name="lblParentSelect.HelpText" xml:space="preserve">
+    <value>Select a parent custom field to which you want to relate this custom field.</value>
+  </data>
+  <data name="lblSelectPerentElement.Text" xml:space="preserve">
+    <value>Parent custom field element:</value>
+  </data>
+  <data name="lblSelectPerentElement.HelpText" xml:space="preserve">
+    <value>Select an element from the parent custom field to which you want to add a related element.</value>
+  </data>
+  <data name="lbResetParentCF.Text" xml:space="preserve">
+    <value>Reset parent group</value>
+  </data>
+  <data name="lblSelectLanguage.Text" xml:space="preserve">
+    <value>Select language:</value>
+  </data>
+  <data name="lblSelectLanguage.Help" xml:space="preserve">
+    <value>Select language.</value>
+  </data>
+  <data name="gvActionHeaderText.HeaderText" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="gvLocalizeText.HeaderText" xml:space="preserve">
+    <value>Localized text</value>
+  </data>
+  <data name="gvRelatedHeaderText.HeaderText" xml:space="preserve">
+    <value>Parent</value>
+  </data>
+  <data name="infoNoteChildeToParentChange.Text" xml:space="preserve">
+    <value>Note: If you switch from the Related to the Normal type all linked elements will lose their parent value and will be ordered alphabetically. This change will take effect after you update the field.</value>
+  </data>
+  <data name="ControlTitle_customfields.Text" xml:space="preserve">
+    <value>Custom Fields</value>
+  </data>
+  <data name="lblCustomFieldsAdd.Text" xml:space="preserve">
+    <value>Add Custom Fields</value>
+  </data>
+  <data name="lblCustomFieldsEdit.Text" xml:space="preserve">
+    <value>Edit Custom Fields</value>
+  </data>
+  <data name="lblImportExport.Text" xml:space="preserve">
+    <value>Import/Export</value>
+  </data>
+</root>

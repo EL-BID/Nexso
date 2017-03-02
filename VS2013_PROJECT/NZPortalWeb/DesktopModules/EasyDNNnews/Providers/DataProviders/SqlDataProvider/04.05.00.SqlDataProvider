@@ -1,0 +1,415 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNews]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNews]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNews]', N'{objectQualifier}EasyDNNNews', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNews', N'PK_{objectQualifier}EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'CleanArticleData')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD CleanArticleData ntext CONSTRAINT DF_{objectQualifier}EasyDNNNews_CleanArticleData DEFAULT('') NOT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'ArticleFromRSS')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD ArticleFromRSS bit CONSTRAINT DF_{objectQualifier}EasyDNNNews_ArticleFromRSS DEFAULT (0) NOT NULL
+END
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGallery]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsGallery]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsGallery]', N'{objectQualifier}EasyDNNNewsGallery', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsGallery', N'PK_{objectQualifier}EasyDNNNewsGallery', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsGallery_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsGallery_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsGallery_EasyGallery', N'FK_{objectQualifier}EasyDNNNewsGallery_EasyGallery', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsGallery' and column_name = 'ChameleonTheme')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsGallery] ADD ChameleonTheme nvarchar(350) NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsGallery' and column_name = 'ChameleonThemeStyle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsGallery] ADD ChameleonThemeStyle nvarchar(350) NULL
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleSearchable]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSearchable](
+		[ModuleID] [int] NOT NULL,
+		[isSearchable] [bit] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsModuleSearchable] PRIMARY KEY CLUSTERED ([ModuleID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsData]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsData](
+		[GoogleMapID] [int] IDENTITY(1,1) NOT NULL,
+		[PortalID] [int] NOT NULL,
+		[UserID] [int] NOT NULL,
+		[Global] [bit] NOT NULL,
+		[DateAdded] [datetime] NOT NULL,
+		[Latitude] [nvarchar](50) NOT NULL,
+		[Longitude] [nvarchar](50) NOT NULL,
+		[MapType] [nvarchar](20) NOT NULL,
+		[MapZoom] [int] NOT NULL,
+		[Scrollwheel] [nvarchar](10) NOT NULL,
+		[MapWidth] [int] NOT NULL,
+		[MapHeight] [int] NOT NULL,
+		[PointData] [ntext] NOT NULL,
+		[FullToken] [ntext] NOT NULL,
+		[Position] [int] NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNnewsGoogleMapsData] PRIMARY KEY CLUSTERED ([GoogleMapID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsAPI]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsAPI](
+		[PortalID] [int] NOT NULL,
+		[GoogleAPIKey] [nvarchar](300) NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNnewsGoogleMapsAPI] PRIMARY KEY CLUSTERED ([PortalID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUpdate]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate](
+		[UpdateID] [int] IDENTITY(1,1) NOT NULL,
+		[UpdateVersion] [nvarchar](20) NOT NULL,
+		[Finished] [bit] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsUpdate] PRIMARY KEY CLUSTERED ([UpdateID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRSSFeedImport]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRSSFeedImport](
+		[RSSID] [int] IDENTITY(1,1) NOT NULL,
+		[PortalID] [int] NOT NULL,
+		[RSSURL] [nvarchar](1000) NOT NULL,
+		[UserID] [int] NOT NULL,
+		[CategoryID] [int] NOT NULL,
+		[Active] [bit] NOT NULL,
+		[PortalHomeDir] [nvarchar](1000) NOT NULL,
+		[DownloadImages] [bit] NOT NULL,
+		[LimitArticlesNumber] [int] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsRSSFeedImport] PRIMARY KEY CLUSTERED ([RSSID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRSSArticle]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRSSArticle](
+		[RSSID] [int] NOT NULL,
+		[ArticleID] [int] NOT NULL,
+		[PortalID] [int] NOT NULL,
+		[CheckType] [nvarchar](5) NOT NULL,
+		[CheckData] [nvarchar](1000) NOT NULL,
+		[FeedType] [nvarchar](10) NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsRSSArticle] PRIMARY KEY CLUSTERED ([RSSID] ASC, [ArticleID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems](
+		[ModuleID] [int] NOT NULL,
+		[CategoryID] [int] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsModuleCategoryItems] PRIMARY KEY CLUSTERED ([ModuleID] ASC, [CategoryID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleAuthorsItems]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleAuthorsItems](
+		[ModuleID] [int] NOT NULL,
+		[UserID] [int] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsModuleAuthorsItems] PRIMARY KEY CLUSTERED ([ModuleID] ASC, [UserID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile](
+		[AuthorProfileID] [int] IDENTITY(1,1) NOT NULL,
+		[PortalID] [int] NOT NULL,
+		[UserID] [int] NOT NULL,
+		[ShortInfo] [nvarchar](350) NULL,
+		[FullInfo] [nvarchar](4000) NULL,
+		[ProfileImage] [nvarchar](1000) NULL,
+		[FacebookURL] [nvarchar](1000) NULL,
+		[TwitterURL] [nvarchar](1000) NULL,
+		[GooglePlusURL] [nvarchar](1000) NULL,
+		[LinkedInURL] [nvarchar](1000) NULL,
+		[DateAdded] [datetime] NOT NULL,
+		[Active] [bit] NOT NULL,
+		[ArticleCount] [int] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsAuthorProfile] PRIMARY KEY CLUSTERED ([AuthorProfileID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
+		CONSTRAINT [IX_{objectQualifier}EasyDNNNewsAuthorProfile] UNIQUE NONCLUSTERED ([PortalID] ASC,[UserID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups](
+		[PortalID] [int] NOT NULL,
+		[GroupID] [int] IDENTITY(1,1) NOT NULL,
+		[GroupName] [nvarchar](250) NOT NULL,
+		[GroupInfo] [nvarchar](4000) NULL,
+		[GroupImage] [nvarchar](1000) NULL,
+		[FacebookURL] [nvarchar](1000) NULL,
+		[TwitterURL] [nvarchar](1000) NULL,
+		[GooglePlusURL] [nvarchar](1000) NULL,
+		[LinkedInURL] [nvarchar](1000) NULL,
+		[Parent] [int] NULL,
+		[Level] [int] NOT NULL,
+		[Position] [int] NOT NULL,
+		[GroupContactEmail] [nvarchar](100) NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsProfileGroups] PRIMARY KEY CLUSTERED ([GroupID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection](
+		[ArticleID] [int] NOT NULL,
+		[GoogleMapID] [int] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsArticleGoogleMapConnection] PRIMARY KEY CLUSTERED ([ArticleID] ASC, [GoogleMapID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleGroupItems]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleGroupItems](
+		[ModuleID] [int] NOT NULL,
+		[GroupID] [int] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsModuleGroupItems] PRIMARY KEY CLUSTERED ([ModuleID] ASC, [GroupID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems](
+		[AuthorProfileID] [int] NOT NULL,
+		[GroupID] [int] NOT NULL,
+		[DateAdded] [datetime] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsAutorGroupItems_1] PRIMARY KEY CLUSTERED ([AuthorProfileID] ASC, [GroupID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfileImages]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfileImages](
+		[UserID] [int] NOT NULL,
+		[ModuleID] [int] NOT NULL,
+		[Width] [int] NOT NULL,
+		[Height] [int] NOT NULL,
+		[Created] [bit] NOT NULL,
+		[Resizing] [nvarchar](15) NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsAuthorProfileImages] PRIMARY KEY CLUSTERED ([UserID] ASC, [ModuleID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroupImages]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroupImages](
+		[GroupID] [int] NOT NULL,
+		[ModuleID] [int] NOT NULL,
+		[Width] [int] NOT NULL,
+		[Height] [int] NOT NULL,
+		[Created] [bit] NOT NULL,
+		[Resizing] [nvarchar](15) NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsAuthorGroupImages] PRIMARY KEY CLUSTERED ([GroupID] ASC, [ModuleID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsCategoryList]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsCategoryList]', N'{objectQualifier}EasyDNNNewsCategoryList', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsCategoryList', N'PK_{objectQualifier}EasyDNNNewsCategoryList', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsArticleGoogleMapConnection_EasyDNNNews]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsArticleGoogleMapConnection_EasyDNNNews] FOREIGN KEY([ArticleID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNews] ([ArticleID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsArticleGoogleMapConnection_EasyDNNNews]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsArticleGoogleMapConnection_EasyDNNNews]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsArticleGoogleMapConnection_EasyDNNnewsGoogleMapsData]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]  WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}EasyDNNNewsArticleGoogleMapConnection_EasyDNNnewsGoogleMapsData] FOREIGN KEY([GoogleMapID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsData] ([GoogleMapID])
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsArticleGoogleMapConnection_EasyDNNnewsGoogleMapsData]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsArticleGoogleMapConnection_EasyDNNnewsGoogleMapsData]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAuthorGroupImages_EasyDNNNewsAuthorGroups]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroupImages]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroupImages]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAuthorGroupImages_EasyDNNNewsAuthorGroups] FOREIGN KEY([GroupID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups] ([GroupID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAuthorGroupImages_EasyDNNNewsAuthorGroups]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroupImages]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroupImages] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAuthorGroupImages_EasyDNNNewsAuthorGroups]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAuthorGroupImages_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroupImages]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroupImages]  WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAuthorGroupImages_Modules] FOREIGN KEY([ModuleID])
+REFERENCES {databaseOwner}{objectQualifier}Modules ([ModuleID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAuthorGroupImages_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroupImages]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroupImages] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAuthorGroupImages_Modules]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAuthorGroups_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAuthorGroups_Portals] FOREIGN KEY([PortalID])
+REFERENCES {databaseOwner}{objectQualifier}Portals ([PortalID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAuthorGroups_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAuthorGroups_Portals]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAuthorProfiles_Users]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAuthorProfiles_Users] FOREIGN KEY([UserID])
+REFERENCES {databaseOwner}{objectQualifier}Users ([UserID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAuthorProfiles_Users]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAuthorProfiles_Users]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAuthorProfileImages_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfileImages]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfileImages]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAuthorProfileImages_Modules] FOREIGN KEY([ModuleID])
+REFERENCES {databaseOwner}{objectQualifier}Modules ([ModuleID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAuthorProfileImages_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfileImages]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfileImages] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAuthorProfileImages_Modules]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAuthorProfileImages_Users]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfileImages]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfileImages]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAuthorProfileImages_Users] FOREIGN KEY([UserID])
+REFERENCES {databaseOwner}{objectQualifier}Users ([UserID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAuthorProfileImages_Users]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfileImages]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfileImages] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAuthorProfileImages_Users]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAutorGroupItems_EasyDNNNewsAuthorGroups1]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAutorGroupItems_EasyDNNNewsAuthorGroups1] FOREIGN KEY([GroupID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups] ([GroupID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAutorGroupItems_EasyDNNNewsAuthorGroups1]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAutorGroupItems_EasyDNNNewsAuthorGroups1]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAutorGroupItems_EasyDNNNewsAuthorProfile]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAutorGroupItems_EasyDNNNewsAuthorProfile] FOREIGN KEY([AuthorProfileID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile] ([AuthorProfileID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsAutorGroupItems_EasyDNNNewsAuthorProfile]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsAutorGroupItems_EasyDNNNewsAuthorProfile]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsModuleAuthorsItems_Users]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleAuthorsItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleAuthorsItems]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsModuleAuthorsItems_Users] FOREIGN KEY([UserID])
+REFERENCES {databaseOwner}{objectQualifier}Users ([UserID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsModuleAuthorsItems_Users]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleAuthorsItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleAuthorsItems] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsModuleAuthorsItems_Users]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsModuleCategory_EasyDNNNewsCategoryList]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsModuleCategory_EasyDNNNewsCategoryList] FOREIGN KEY([CategoryID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList] ([CategoryID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsModuleCategory_EasyDNNNewsCategoryList]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsModuleCategory_EasyDNNNewsCategoryList]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsModuleGroupItems_EasyDNNNewsAuthorGroups]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleGroupItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleGroupItems]  WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}EasyDNNNewsModuleGroupItems_EasyDNNNewsAuthorGroups] FOREIGN KEY([GroupID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups] ([GroupID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsModuleGroupItems_EasyDNNNewsAuthorGroups]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleGroupItems]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleGroupItems] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsModuleGroupItems_EasyDNNNewsAuthorGroups]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsRSSArticle_EasyDNNNews]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRSSArticle]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRSSArticle]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsRSSArticle_EasyDNNNews] FOREIGN KEY([ArticleID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNews] ([ArticleID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsRSSArticle_EasyDNNNews]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRSSArticle]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRSSArticle] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsRSSArticle_EasyDNNNews]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsRSSArticle_EasyDNNNewsRSSFeedImport]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRSSArticle]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRSSArticle]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsRSSArticle_EasyDNNNewsRSSFeedImport] FOREIGN KEY([RSSID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsRSSFeedImport] ([RSSID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsRSSArticle_EasyDNNNewsRSSFeedImport]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRSSArticle]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRSSArticle] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsRSSArticle_EasyDNNNewsRSSFeedImport]
+GO
+
+
+IF NOT EXISTS (SELECT UpdateVersion FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate] WHERE UpdateVersion = '04.05.00')
+BEGIN
+	INSERT {databaseOwner}[{objectQualifier}EasyDNNNewsUpdate]([UpdateVersion],[Finished]) VALUES(N'04.05.00',0)
+END

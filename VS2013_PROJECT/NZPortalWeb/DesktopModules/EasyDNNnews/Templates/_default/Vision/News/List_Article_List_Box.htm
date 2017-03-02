@@ -1,0 +1,34 @@
+<!--TemplateGroup:listArticleInBox-->
+<!--ArticleTemplate-->
+<div class="EDN_article EDN_articleBox EDN_displayInline">
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="EDN_imageContainerBox" style="max-width:[EasyDNNnews:MainArticleImageWidth]">
+		[EasyDNNnews:IfExists:Image]
+		<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]"/></a>
+		[EasyDNNnews:EndIf:Image]
+		<h2><a class="articleTitle" href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title][EDNcf:IfExists:price] - [EDNcf:price][EDNcf:EndIf:price]</a></h2>
+		<div class="EDN_article_content">[EasyDNNnews:Summary]</div>
+		<ul class="EDN_metaDetailsBox">
+			<li class="EDN_number-views">[EasyDNNnews:NumberOfViews]</li>
+			<li class="EDN_rating">[EasyDNNnews:ArticleRating]</li>
+		</ul>
+	</div>
+</div>
+<!--ArticleEnd-->
+<!--ArticleRepeat:Before:-->
+<!--RepeatEnd:Before:-->
+
+<!--ArticleRepeat:After:-->
+[EasyDNNnews:IfExists:RSS]
+<div class="EDN_article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->
+

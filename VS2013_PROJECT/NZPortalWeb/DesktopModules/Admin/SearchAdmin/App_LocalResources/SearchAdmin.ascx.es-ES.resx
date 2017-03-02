@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Actions.Text">
+    <value xml:space="preserve">Acciones</value>
+  </data>
+  <data name="AddStopWords.Text">
+    <value xml:space="preserve">Añadir palabra</value>
+  </data>
+  <data name="AddSynonymsGroup.Text">
+    <value xml:space="preserve">Añadir grupo de sinónimos</value>
+  </data>
+  <data name="btnReIndex.Text">
+    <value xml:space="preserve">Reindexar contenido</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Configuración de la búsqueda</value>
+  </data>
+  <data name="DefaultStopwordGroup.Text">
+    <value xml:space="preserve">y,o,era,es,son,el,la,un,una,uno,no,si,sí,de,en,que,este,esta,aquí,allí,estos,estas,con,desde,hasta,para,por</value>
+  </data>
+  <data name="DefaultSynonymGroup.Text">
+    <value xml:space="preserve">dnn,dotnetnuke</value>
+  </data>
+  <data name="General.Text">
+    <value xml:space="preserve">General</value>
+  </data>
+  <data name="introIgnoreWords.Text">
+    <value xml:space="preserve">Esta opción le permite añadir palabras que seran ignoradas al realizar búquedas. De esta manera se pueden evitar ciertas palabras que interfieran en la calidad de los resultados de búsqueda.</value>
+  </data>
+  <data name="introSynonyms.Text">
+    <value xml:space="preserve">En muchas ocasiones, al realizar una búsqueda, no sabemos con exactitud lo que estamos buscando. A veces utilizamos sinónimos con la esperanza de encontrar otros conceptos relacionados. Esta opción le permite crear listas de sinónimos y relacionar términos parecidos.</value>
+  </data>
+  <data name="lblStopwordsCultureList.Help">
+    <value xml:space="preserve">Seleccione el idioma de la lista de palabras ignoradas</value>
+  </data>
+  <data name="lblStopwordsCultureList.Text">
+    <value xml:space="preserve">Seleccione el idioma:</value>
+  </data>
+  <data name="lblSynonymsCultureList.Help">
+    <value xml:space="preserve">Seleccione el idioma para los grupos de sinónimos</value>
+  </data>
+  <data name="lblSynonymsCultureList.Text">
+    <value xml:space="preserve">Seleccione el idioma:</value>
+  </data>
+  <data name="MessageReIndexWarning.Text">
+    <value xml:space="preserve">&lt;div align="left"&gt;&lt;p&gt;&lt;strong&gt;Reindexar&lt;/strong&gt; borrará todo el contenido del índice y lo creará de nuevo. &lt;br/&gt;La reindexación se ejecuta durante la tarea de indexación del programador de tareas. &lt;br/&gt;Esta tarea se puede ejecutar manualmente en Sistema &gt; Programador para indexar inmediatamente. La reindexación se realiza solo en el sitio actual. &lt;/p&gt;&lt;strong&gt;Atención&lt;/strong&gt; Esta acción debe realizarse durante periodos de baja actividad puesto que puede requerir un uso intenso de la CPU del servidor.&lt;/p&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="ModifiedBy.Text">
+    <value xml:space="preserve">Modificado por</value>
+  </data>
+  <data name="ModifiedOn.Text">
+    <value xml:space="preserve">Modificado el</value>
+  </data>
+  <data name="NoStopWords.Text">
+    <value xml:space="preserve">No se ha encontrado ninguna palabra excluida para el portal e idioma seleccionados</value>
+  </data>
+  <data name="ReIndexConfirmationCancel.Text">
+    <value xml:space="preserve">Cancelar</value>
+  </data>
+  <data name="ReIndexConfirmationMessage.Text">
+    <value xml:space="preserve">La reindexación borrará todo el contenido del índice de búsqueda. Esta acción la realiza la tarea de reindexación y depende de la frecuencia del programador de tareas. ¿Está seguro que desea continuar?</value>
+  </data>
+  <data name="ReIndexConfirmationTitle.Text">
+    <value xml:space="preserve">Confirmar reindexación</value>
+  </data>
+  <data name="ReIndexConfirmationYes.Text">
+    <value xml:space="preserve">Continuar</value>
+  </data>
+  <data name="StopWords.Text">
+    <value xml:space="preserve">Palabras excluidas</value>
+  </data>
+  <data name="Synonyms.Text">
+    <value xml:space="preserve">Sinónimos</value>
+  </data>
+  <data name="SynonymsTagDuplicated.Text">
+    <value xml:space="preserve">ya se utiliza en otro grupo de sinónimos</value>
+  </data>
+  <data name="SynonymsTagRequired.Text">
+    <value xml:space="preserve">Tiene que entrar al menos un sinónimo</value>
+  </data>
+  <data name="SynonymsTags.Text">
+    <value xml:space="preserve">Sinónimos</value>
+  </data>
+</root>

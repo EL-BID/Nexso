@@ -1,0 +1,38 @@
+<!--TemplateGroup:listArticleSimple-->
+<!--ArticleTemplate-->
+<div class="EDN_article EDN_articleSimple">
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	[EasyDNNnews:IfExists:Image]
+	<a class="EDN_simpleArticleImage" href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]"/></a>
+	[EasyDNNnews:EndIf:Image]
+	[EasyDNNnews:IfNotExists:Event]
+	<span class="EDN_simpleDate">[EasyDNNnews:FormatedDate: d MMMM yyyy]</span>
+	[EasyDNNnews:EndIf:Event]
+	[EasyDNNnews:IfExists:Event]
+	<span class="EDN_simpleDate">[EasyDNNnews:EventDate][EasyDNNnews:IfExists:EventRegistration] (<a href="[EasyDNNnews:ReadMore]">[EasyDNNnewsLocalizedText:Register]</a>)[EasyDNNnews:EndIf:EventRegistration]</span>
+	[EasyDNNnews:EndIf:Event]
+	<h2><a class="articleTitle" href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+	[EasyDNNnews:IfExists:SubTitle]
+	<h3 class="articleTitle articleSubTitle">[EasyDNNnews:SubTitle]</h3>
+	[EasyDNNnews:EndIf:SubTitle]
+	<div class="EDN_article_content">
+		[EasyDNNnews:Summary]
+	</div>
+</div>
+<!--ArticleEnd-->
+<!--ArticleRepeat:Before:-->
+<!--RepeatEnd:Before:-->
+
+<!--ArticleRepeat:After:-->
+[EasyDNNnews:IfExists:RSS]
+<div class="EDN_article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

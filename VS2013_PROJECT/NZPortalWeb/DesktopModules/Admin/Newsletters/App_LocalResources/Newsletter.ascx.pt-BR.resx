@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BasicSettings.Text">
+    <value xml:space="preserve">Configurações Básicas</value>
+  </data>
+  <data name="plAddressees.Text">
+    <value xml:space="preserve">Endereços</value>
+  </data>
+  <data name="plLanguages.Text">
+    <value xml:space="preserve">Filtro de idioma</value>
+  </data>
+  <data name="plLanguages.Help">
+    <value xml:space="preserve">Especifique um filtro para usuários de acordo com o idioma em seus perfis</value>
+  </data>
+  <data name="plEmail.Text">
+    <value xml:space="preserve">Emails adicionais</value>
+  </data>
+  <data name="plEmail.Help">
+    <value xml:space="preserve">Você pode adicionar endereços de email, separados por um ponto-e-vírgula (";").</value>
+  </data>
+  <data name="plFrom.Text">
+    <value xml:space="preserve">De</value>
+  </data>
+  <data name="plFrom.Help">
+    <value xml:space="preserve">Entre o endereço de email "De" da mensagem de email.</value>
+  </data>
+  <data name="plReplyTo.Text">
+    <value xml:space="preserve">Responder para</value>
+  </data>
+  <data name="plReplyTo.Help">
+    <value xml:space="preserve">Entre o endereço de email "Responder para" para esta mensagem de email</value>
+  </data>
+  <data name="revEmailAddress.ErrorMessage">
+    <value xml:space="preserve">O endereço de email está em um formato inválido!</value>
+  </data>
+  <data name="plSubject.Text">
+    <value xml:space="preserve">Assunto</value>
+  </data>
+  <data name="plSubject.Help">
+    <value xml:space="preserve">Insira o assunto desta mensagem.</value>
+  </data>
+  <data name="Message.Text">
+    <value xml:space="preserve">Mensagem</value>
+  </data>
+  <data name="AdvancedSettings.Text">
+    <value xml:space="preserve">Configurações Avançadas</value>
+  </data>
+  <data name="plAttachment.Text">
+    <value xml:space="preserve">Anexo</value>
+  </data>
+  <data name="plAttachment.Help">
+    <value xml:space="preserve">Selecione um anexo para esta mensagem.</value>
+  </data>
+  <data name="plPriority.Text">
+    <value xml:space="preserve">Prioridade</value>
+  </data>
+  <data name="plPriority.Help">
+    <value xml:space="preserve">Selecione a prioridade para esta mensagem.</value>
+  </data>
+  <data name="Normal.Text">
+    <value xml:space="preserve">Normal</value>
+  </data>
+  <data name="High.Text">
+    <value xml:space="preserve">Alta</value>
+  </data>
+  <data name="Low.Text">
+    <value xml:space="preserve">Baixa</value>
+  </data>
+  <data name="plReplaceTokens.Text">
+    <value xml:space="preserve">Refazer elementos</value>
+  </data>
+  <data name="plReplaceTokens.Help">
+    <value xml:space="preserve">O texto contêm elementos que devem ser substituídos por valores de ambiente atuais?&lt;br&gt; Nota: Elementos de usuário não serão substituídos se o método de envio for "BCC"</value>
+  </data>
+  <data name="plNoDuplicates.Text">
+    <value xml:space="preserve">Nenhum endereço duplicado</value>
+  </data>
+  <data name="plNoDuplicates.Help">
+    <value xml:space="preserve">Ative esta opção para remover endereços de email duplicados da lista de endereços</value>
+  </data>
+  <data name="SendTo.Text">
+    <value xml:space="preserve">PARA: uma mensagem por endereço de email (personalizado)</value>
+  </data>
+  <data name="SendBCC.Text">
+    <value xml:space="preserve">BCC: um email para lista de distribuição (não personalizado)</value>
+  </data>
+  <data name="SendRelay.Text">
+    <value xml:space="preserve">Entrega: uma mensagem por endereço de email (personalizado)para um determinado servidor de entrega</value>
+  </data>
+  <data name="plRelayAddress.Text">
+    <value xml:space="preserve">Endereço de entrega</value>
+  </data>
+  <data name="plSendMethod.Help">
+    <value xml:space="preserve">Selecione o método para enviar este email.</value>
+  </data>
+  <data name="plSendMethod.Text">
+    <value xml:space="preserve">Método de envio</value>
+  </data>
+  <data name="plSendAction.Text">
+    <value xml:space="preserve">Ação de envio</value>
+  </data>
+  <data name="plSendAction.Help">
+    <value xml:space="preserve">Selecione como quer enviar a mensagem.</value>
+  </data>
+  <data name="Synchronous.Text">
+    <value xml:space="preserve">Síncrono</value>
+  </data>
+  <data name="Asynchronous.Text">
+    <value xml:space="preserve">Assíncrono</value>
+  </data>
+  <data name="cmdSend.Text">
+    <value xml:space="preserve">Enviar email</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Mala Direta</value>
+  </data>
+  <data name="MessageSent.Text">
+    <value xml:space="preserve">Email enviado em massa (modo assíncrono). Por favor, verifique email de confirmação de resultado.</value>
+  </data>
+  <data name="Heading.Text">
+    <value xml:space="preserve">Caro(a)</value>
+  </data>
+  <data name="MessageValidation.Text">
+    <value xml:space="preserve">Você deve incluir um assunto e a mensagem</value>
+  </data>
+  <data name="MessagesSentCount.Text">
+    <value xml:space="preserve">{0} mensagem(ns) foi(oram) enviado(s) com sucesso. </value>
+  </data>
+  <data name="NoMessagesSent.Text">
+    <value xml:space="preserve">Nenhuma mensagem foi enviada, você pode querer verificar o Visualizador de Eventos para ver se algum problema foi anotado.</value>
+  </data>
+  <data name="cmdPreview.Text">
+    <value xml:space="preserve">Visualizar email</value>
+  </data>
+  <data name="NoMessagesSentPlusError.Text">
+    <value xml:space="preserve">Ocorreu um erro ao enviar o email: {0}</value>
+  </data>
+  <data name="NoRecipients.Text">
+    <value xml:space="preserve">Nenhuma mensagem foi enviada porque não há destinatários para este email.</value>
+  </data>
+  <data name="cmdCancelPreview.Text">
+    <value xml:space="preserve">Cancelar visualização</value>
+  </data>
+</root>

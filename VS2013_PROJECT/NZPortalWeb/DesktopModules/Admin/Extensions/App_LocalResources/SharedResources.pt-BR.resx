@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Description.Help">
+    <value xml:space="preserve">Descrição do pacote.</value>
+  </data>
+  <data name="Description.Text">
+    <value xml:space="preserve">Descrição:</value>
+  </data>
+  <data name="Name.Help">
+    <value xml:space="preserve">O nome do pacote (ex: NomeDaCompanhia.Nome).</value>
+  </data>
+  <data name="Name.Text">
+    <value xml:space="preserve">Nome:</value>
+  </data>
+  <data name="PackageType.Help">
+    <value xml:space="preserve">O tipo do pacote.</value>
+  </data>
+  <data name="PackageType.Text">
+    <value xml:space="preserve">Tipo:</value>
+  </data>
+  <data name="Version.Help">
+    <value xml:space="preserve">A versão do pacote.</value>
+  </data>
+  <data name="Version.Text">
+    <value xml:space="preserve">Versão:</value>
+  </data>
+  <data name="FriendlyName.Help">
+    <value xml:space="preserve">O nome amigável deste pacote.</value>
+  </data>
+  <data name="FriendlyName.Text">
+    <value xml:space="preserve">Nome amigável:</value>
+  </data>
+  <data name="License.Help">
+    <value xml:space="preserve">A licença para este pacote.</value>
+  </data>
+  <data name="License.Text">
+    <value xml:space="preserve">Licença:</value>
+  </data>
+  <data name="ReleaseNotes.Help">
+    <value xml:space="preserve">As notas de lançamento para esta versão.</value>
+  </data>
+  <data name="ReleaseNotes.Text">
+    <value xml:space="preserve">Notas de lançamento:</value>
+  </data>
+  <data name="Name.Required">
+    <value xml:space="preserve">O nome é obrigatório!</value>
+  </data>
+  <data name="Version.Required">
+    <value xml:space="preserve">A versão é obrigatória.</value>
+  </data>
+  <data name="PackageType.Required">
+    <value xml:space="preserve">O tipo do pacote é obrigatório!</value>
+  </data>
+  <data name="Version.Validation">
+    <value xml:space="preserve">Um pacote deve ter um número de versão na forma de ##.##.##!</value>
+  </data>
+  <data name="Owner.Help">
+    <value xml:space="preserve">O proprietário do pacote.</value>
+  </data>
+  <data name="Owner.Text">
+    <value xml:space="preserve">Proprietário:</value>
+  </data>
+  <data name="Email.Help">
+    <value xml:space="preserve">O endereço de email do autor do pacote.</value>
+  </data>
+  <data name="Email.Text">
+    <value xml:space="preserve">Endereço de email:</value>
+  </data>
+  <data name="Organization.Help">
+    <value xml:space="preserve">A organização responsável pelo pacote.</value>
+  </data>
+  <data name="Organization.Text">
+    <value xml:space="preserve">Organização:</value>
+  </data>
+  <data name="FriendlyName.Required">
+    <value xml:space="preserve">O nome amigável é obrigatório!</value>
+  </data>
+  <data name="Email.Validation">
+    <value xml:space="preserve">O endereço de email deve ser válido!</value>
+  </data>
+  <data name="IconFile.Help">
+    <value xml:space="preserve">O arquivo de ícone deste pacote.</value>
+  </data>
+  <data name="IconFile.Text">
+    <value xml:space="preserve">Arquivo de ícone:</value>
+  </data>
+  <data name="feedEndpoint.Text">
+    <value xml:space="preserve">catalog.dotnetnuke.com</value>
+  </data>
+  <data name="setupCredentials.Text">
+    <value xml:space="preserve">Entrar credenciais da loja</value>
+  </data>
+  <data name="WebserviceFailure.Text">
+    <value xml:space="preserve">Não foi possível conectar ao serviço!</value>
+  </data>
+  <data name="WebservicePermission.Text">
+    <value xml:space="preserve">Este portal não permite conexões a serviços externos.</value>
+  </data>
+  <data name="StoreFile.Text">
+    <value xml:space="preserve">https://www.snowcovered.com/Snowcovered2/AppGalleryHandler.ashx?PortalID=0</value>
+  </data>
+  <data name="fetchExtensions.Text">
+    <value xml:space="preserve">Buscar lista de extensões</value>
+  </data>
+  <data name="PurchasedHelp.Text">
+    <value xml:space="preserve">Aqui você pode ver as extensões que você adquiriu na loja, e opcionalmente baixá-las e implantá-las em seu portal. Você precisará informar suas credenciais na loja para ver suas compras.</value>
+  </data>
+  <data name="PurchasedTitle.Text">
+    <value xml:space="preserve">Extensões Adquiridas</value>
+  </data>
+  <data name="deleteCredentials.Text">
+    <value xml:space="preserve">Alterar detalhes da loja</value>
+  </data>
+  <data name="updateCredentials.Text">
+    <value xml:space="preserve">Atualizar credenciais da loja</value>
+  </data>
+  <data name="deploy.Text">
+    <value xml:space="preserve">Implantar</value>
+  </data>
+  <data name="deploySuccess.Text">
+    <value xml:space="preserve">Extensão '{0}' implantada no portal com sucesso.  Selecione 'Instalar extensão' para instalar a nova extensão.</value>
+  </data>
+  <data name="download.Text">
+    <value xml:space="preserve">Baixar</value>
+  </data>
+  <data name="extensionDescLabel.Help">
+    <value xml:space="preserve">A descrição da extensão que você selecionou para implantação.</value>
+  </data>
+  <data name="extensionDescLabel.Text">
+    <value xml:space="preserve">Descrição:</value>
+  </data>
+  <data name="extensionNamelabel.Help">
+    <value xml:space="preserve">O nome da extensão que você selecionou para implantação.</value>
+  </data>
+  <data name="extensionNamelabel.Text">
+    <value xml:space="preserve">Nome da extensão:</value>
+  </data>
+  <data name="extensionTypeLabel.Help">
+    <value xml:space="preserve">O tipo da extensão que você selecionou para implantação.</value>
+  </data>
+  <data name="extensionTypeLabel.Text">
+    <value xml:space="preserve">Tipo da extensão:</value>
+  </data>
+  <data name="Help.Text">
+    <value xml:space="preserve">Um pedido para um arquivo externo está prestes a ser feito. Se você não estava esperando fazer este pedido, por favor selecione Cancelar para retornar à página de extensões, caso contrário, selecione uma das opções disponíveis abaixo.</value>
+  </data>
+  <data name="install.Text">
+    <value xml:space="preserve">Instalar extensão</value>
+  </data>
+  <data name="Title.Text">
+    <value xml:space="preserve">Implantar e Instalar a Extensão</value>
+  </data>
+  <data name="unexpectedRequest.Text">
+    <value xml:space="preserve">Foi feita uma tentativa de acessar um arquivo externo inesperado.</value>
+  </data>
+  <data name="NoData.Text">
+    <value xml:space="preserve">Não há dados a exibir.</value>
+  </data>
+  <data name="PackageErrors.Text">
+    <value xml:space="preserve">&lt;u&gt;Os seguintes pacotes são inválidos:&lt;/u&gt;&lt;br/&gt;</value>
+  </data>
+</root>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddContent.Action">
+    <value xml:space="preserve">Añadir tarea al programador</value>
+  </data>
+  <data name="ContentOptions.Action">
+    <value xml:space="preserve">Ver estado del programador</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Tareas programadas</value>
+  </data>
+  <data name="Day.Text">
+    <value xml:space="preserve">Día</value>
+  </data>
+  <data name="Disabled.Text">
+    <value xml:space="preserve">Desactivado</value>
+  </data>
+  <data name="Enabled.Header">
+    <value xml:space="preserve">Habilitada</value>
+  </data>
+  <data name="Frequency.Header">
+    <value xml:space="preserve">Frecuencia</value>
+  </data>
+  <data name="History.Text">
+    <value xml:space="preserve">Ver histórico</value>
+  </data>
+  <data name="Hour.Text">
+    <value xml:space="preserve">Hora</value>
+  </data>
+  <data name="lnkHistory.Text">
+    <value xml:space="preserve">Historia</value>
+  </data>
+  <data name="Minute.Text">
+    <value xml:space="preserve">Minuto</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Acerca del programador de tareas&lt;/h1&gt;&lt;p&gt;Permite planificar tareas para ser ejecutadas a intervalos establecidos.&lt;/p&gt;</value>
+  </data>
+  <data name="n/a.Text">
+    <value xml:space="preserve">n/d</value>
+  </data>
+  <data name="Name.Header">
+    <value xml:space="preserve">Nombre</value>
+  </data>
+  <data name="NextStart.Header">
+    <value xml:space="preserve">Próximo comienzo</value>
+  </data>
+  <data name="plScheduleAppStartDelay.Help">
+    <value xml:space="preserve">Número de minutos que el sistema tiene que esperar antes de empezar a ejecutar las tareas después de un reinicio del sistema. El valor predeterminado es de 1 minuto.</value>
+  </data>
+  <data name="plScheduleAppStartDelay.Text">
+    <value xml:space="preserve">Retardar el programador al inicio:</value>
+  </data>
+  <data name="plSchedulerMode.Help">
+    <value xml:space="preserve">El modo Temporizador mantiene una tarea independiente para ejecutar las tareas mientras el proceso del web este activo. El modo Petición ejecuta las tareas cuando se reciben peticiones HTTP. Puede desactivar el programador seleccionando la opción Desactivado.</value>
+  </data>
+  <data name="plSchedulerMode.Text">
+    <value xml:space="preserve">Modo del programador:</value>
+  </data>
+  <data name="plServers.Help">
+    <value xml:space="preserve">El servidor (o todos) donde la tarea se ejecutará.</value>
+  </data>
+  <data name="plServers.Text">
+    <value xml:space="preserve">Nombre del servidor:</value>
+  </data>
+  <data name="RequestMethod.Text">
+    <value xml:space="preserve">Modo Petición</value>
+  </data>
+  <data name="RetryTimeLapse.Header">
+    <value xml:space="preserve">Reintentar cada</value>
+  </data>
+  <data name="ScheduleAppStartDelayValidation.Text">
+    <value xml:space="preserve">Tiene que entrar un valor en minutos</value>
+  </data>
+  <data name="ScheduleHistory.Action">
+    <value xml:space="preserve">Ver histórico del programador</value>
+  </data>
+  <data name="Settings.Text">
+    <value xml:space="preserve">Configuración</value>
+  </data>
+  <data name="Status.Text">
+    <value xml:space="preserve">Ver estado</value>
+  </data>
+  <data name="TimeLapsePrefix.Text">
+    <value xml:space="preserve">Cada</value>
+  </data>
+  <data name="TimerMethod.Text">
+    <value xml:space="preserve">Modo Temporizador</value>
+  </data>
+  <data name="Type.Header">
+    <value xml:space="preserve">Tipo</value>
+  </data>
+  <data name="ViewLog.Header">
+    <value xml:space="preserve">Registro</value>
+  </data>
+</root>

@@ -1,0 +1,36 @@
+<!--TemplateGroup:newsListDefault-->
+<!--ArticleTemplate-->
+<div class="article">
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	[EasyDNNnews:IfExists:Image]
+	<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]"/></a>
+	[EasyDNNnews:EndIf:Image]
+	<h2><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+	<h3 class="article-subtitle">[EasyDNNnews:SubTitle]</h3>
+	<div class="summary">
+		[EasyDNNnews:Summary]
+	</div>
+	<div class="clear-content"></div>
+	<div class="meta-text-wraper">
+		<div class="meta_text">
+			<div class="attribute author"><strong>[EasyDNNnewsLocalizedText:Author]:</strong> [EasyDNNnews:Author:Link]</div><div class="newstwo-comments">[EasyDNNnews:Comments] [EasyDNNnewsLocalizedText:Comments]</div><div class="rating">[EasyDNNnews:ArticleRating]</div>
+		</div>
+	</div>
+</div>
+<!--ArticleEnd-->
+<!--ArticleRepeat:Before:-->
+<!--RepeatEnd:Before:-->
+
+<!--ArticleRepeat:After:-->
+[EasyDNNnews:IfExists:RSS]
+<div class="article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

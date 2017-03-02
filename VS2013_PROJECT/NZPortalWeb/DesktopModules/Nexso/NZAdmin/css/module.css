@@ -1,0 +1,34 @@
+﻿.raColor {
+    width: 1181px !important;
+}
+
+.RadComboBox_Default {
+    width: 96px !important;
+}
+
+.RadAjax_Default .raColor {
+    width: 100% !important;
+}
+
+#dvReport, #dvBtn {
+   max-width: 1300px;
+    margin: 0 auto;
+    z-index: 10;
+    position: relative;
+    width: 100%;
+}
+.rgFilterRow input {
+    height: 25px!important;
+}
+.RadComboBox_Default .rcbReadOnly .rcbInput {
+    height: 20px;
+}
+/*****/
+.inner-wrap > main {
+    overflow-x: auto;
+}
+.RadGrid_Default {
+   
+    width: 1300px !important;
+    margin: 0 auto;
+}

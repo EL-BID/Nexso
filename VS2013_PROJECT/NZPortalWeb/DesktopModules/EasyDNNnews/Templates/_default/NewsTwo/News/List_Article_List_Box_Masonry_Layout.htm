@@ -1,0 +1,69 @@
+<!--TemplateGroup:newsListBox-->
+
+<!--ArticleRepeat:Before:-->
+<script src="[EasyDNNnews:ClientBasePath]/DesktopModules/EasyDNNnews/static/isotope2/isotope.v2.0.0-beta.4.min.js"></script>
+<script src="[EasyDNNnews:ClientBasePath]/DesktopModules/EasyDNNnews/static/imagesLoaded/imagesLoaded_3.1.4.min.js"></script>
+<script>
+	eds1_8(function ($) {
+		var $articleListContainer = $('.edn_[EasyDNNnews:ModuleID]_article_list_wrapper'),
+			imageLoadedKey = 'imageLoaded';
+
+		$articleListContainer
+			.isotope({
+				itemSelector: '.edn_articleWrapper',
+				sortBy: 'original-order',
+				masonry: {
+					isFitWidth: true
+				}
+			})
+			.find('img').imagesLoaded()
+				.progress(function (instance, image) {
+					var $img = $(image.img);
+
+					if ($img.data(imageLoadedKey))
+						return;
+
+					$img.data(imageLoadedKey, true);
+
+					$articleListContainer.isotope('layout');
+				});
+	});
+</script>
+<div class="edn_isotopeLayout two-articles-row">
+<!--RepeatEnd:Before:-->
+
+<!--ArticleTemplate-->
+<div class="article-two-in-row edn_articleWrapper" style="width:[EasyDNNnews:MainArticleImageWidth]">
+	[EasyDNNnews:IfExists:Image]
+	<a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]" /></a>
+	[EasyDNNnews:EndIf:Image]
+	<h2><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+	[EasyDNNnews:HasArticlePermissions]
+	<div class="admin_actions">
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	[EasyDNNnews:Summary]
+	<div class="date-comments"><span class="newstwo-date">
+		[EasyDNNnews:IfNotExists:Event]
+		[EasyDNNnews:FormatedDate: MMMM d, yyyy]
+		[EasyDNNnews:EndIf:Event]
+		[EasyDNNnews:IfExists:Event]
+		[EasyDNNnews:EventDate]
+		[EasyDNNnews:EndIf:Event]
+		</span>
+		<span class="newstwo-comments">[EasyDNNnews:Comments] [EasyDNNnewsLocalizedText:Comments]</span>
+	</div>
+</div>
+<!--ArticleEnd-->
+
+<!--ArticleRepeat:After:-->
+</div>
+[EasyDNNnews:IfExists:RSS]
+<div class="article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

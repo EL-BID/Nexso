@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cmdAdd.Text">
+    <value xml:space="preserve">Adicionar novo usuário</value>
+  </data>
+  <data name="plAuthorize.Text">
+    <value xml:space="preserve">Autorizar?</value>
+  </data>
+  <data name="plAuthorize.Help">
+    <value xml:space="preserve">Autorizar este usuário?</value>
+  </data>
+  <data name="plNotify.Text">
+    <value xml:space="preserve">Notificar?</value>
+  </data>
+  <data name="plNotify.Help">
+    <value xml:space="preserve">Enviar um email para o endereço de email do usuário?</value>
+  </data>
+  <data name="CreateUser.Text">
+    <value xml:space="preserve">Criar usuário</value>
+  </data>
+  <data name="plPassword.Text">
+    <value xml:space="preserve">Senha:</value>
+  </data>
+  <data name="plPassword.Help">
+    <value xml:space="preserve">Entre uma senha para este usuário.</value>
+  </data>
+  <data name="plConfirm.Text">
+    <value xml:space="preserve">Confirme a senha:</value>
+  </data>
+  <data name="plConfirm.Help">
+    <value xml:space="preserve">Redigite a senha para confirmar que você digitou corretamente.</value>
+  </data>
+  <data name="Password.Text">
+    <value xml:space="preserve">Senha</value>
+  </data>
+  <data name="PasswordHelpUser.Text">
+    <value xml:space="preserve">Entre uma senha.</value>
+  </data>
+  <data name="PasswordHelpAdmin.Text">
+    <value xml:space="preserve">Opcionalmente entre uma senha para este usuário, ou permita que o sistema gere uma senha aleatória.</value>
+  </data>
+  <data name="plRandom.Text">
+    <value xml:space="preserve">Senha aleatória?</value>
+  </data>
+  <data name="plRandom.Help">
+    <value xml:space="preserve">Marque esta caixa para gerar uma senha aleatória.</value>
+  </data>
+  <data name="InvalidCaptcha.Text">
+    <value xml:space="preserve">Código de segurança incorreto!</value>
+  </data>
+  <data name="CaptchaText.Text">
+    <value xml:space="preserve">Entre o código mostrado acima na caixa abaixo.</value>
+  </data>
+  <data name="UnRegister.Text">
+    <value xml:space="preserve">Descadastrar</value>
+  </data>
+  <data name="Delete.Text">
+    <value xml:space="preserve">Excluir</value>
+  </data>
+  <data name="cmdRemove.Text">
+    <value xml:space="preserve">Remover</value>
+  </data>
+  <data name="cmdRestore.Text">
+    <value xml:space="preserve">Restaurar</value>
+  </data>
+  <data name="ConfirmUnRegister.Text">
+    <value xml:space="preserve">Você tem certeza de que quer descadastrar?</value>
+  </data>
+  <data name="plQuestion.Text">
+    <value xml:space="preserve">Pergunta de senha:</value>
+  </data>
+  <data name="plQuestion.Help">
+    <value xml:space="preserve">Entre uma pergunta de senha para ser usada quando for recuperar a senha.</value>
+  </data>
+  <data name="plAnswer.Text">
+    <value xml:space="preserve">Resposta da senha:</value>
+  </data>
+  <data name="plAnswer.Help">
+    <value xml:space="preserve">Entre uma resposta para a pergunta da senha.</value>
+  </data>
+  <data name="ComparePasswordsValidator.ErrorMessage">
+    <value xml:space="preserve">A senha e a confirmação da senha devem combinar</value>
+  </data>
+</root>

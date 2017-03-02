@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LogType.Header">
+    <value xml:space="preserve">Tipo de evento</value>
+  </data>
+  <data name="Portal.Header">
+    <value xml:space="preserve">Portal</value>
+  </data>
+  <data name="Active.Header">
+    <value xml:space="preserve">Ativo</value>
+  </data>
+  <data name="FileName.Header">
+    <value xml:space="preserve">Nome do arquivo</value>
+  </data>
+  <data name="Edit.EditText">
+    <value xml:space="preserve">Editar</value>
+  </data>
+  <data name="Settings.Text">
+    <value xml:space="preserve">Configurações do Evento</value>
+  </data>
+  <data name="plIsActive.Text">
+    <value xml:space="preserve">Evento ativo?</value>
+  </data>
+  <data name="plIsActive.Help">
+    <value xml:space="preserve">Você quer ativar o evento?</value>
+  </data>
+  <data name="plLogTypeKey.Text">
+    <value xml:space="preserve">Tipo de evento</value>
+  </data>
+  <data name="plLogTypeKey.Help">
+    <value xml:space="preserve">Que tipo de evento é esse</value>
+  </data>
+  <data name="plLogTypePortalID.Text">
+    <value xml:space="preserve">Portal</value>
+  </data>
+  <data name="plLogTypePortalID.Help">
+    <value xml:space="preserve">Com que portal encontra-se associado este registro de evento</value>
+  </data>
+  <data name="plKeepMostRecent.Text">
+    <value xml:space="preserve">Manter os mais recentes</value>
+  </data>
+  <data name="plFileName.Text">
+    <value xml:space="preserve">Nome do arquivo</value>
+  </data>
+  <data name="plFileName.Help">
+    <value xml:space="preserve">Entre o nome do arquivo de evento.</value>
+  </data>
+  <data name="plEmailNotificationStatus.Text">
+    <value xml:space="preserve">Notificação de email ativa?</value>
+  </data>
+  <data name="plEmailNotificationStatus.Help">
+    <value xml:space="preserve">Você quer que uma mensagem seja enviada quando esse evento ocorrer?</value>
+  </data>
+  <data name="plThreshold.Text">
+    <value xml:space="preserve">Limite de ocorrência</value>
+  </data>
+  <data name="plMailFromAddress.Text">
+    <value xml:space="preserve">Endereço de email origem</value>
+  </data>
+  <data name="plMailFromAddress.Help">
+    <value xml:space="preserve">Endereço de email para enviar a notificação de origem</value>
+  </data>
+  <data name="plMailToAddress.Text">
+    <value xml:space="preserve">Endereço de email destino</value>
+  </data>
+  <data name="plMailToAddress.Help">
+    <value xml:space="preserve">Endereço de email para enviar a notificação de destino</value>
+  </data>
+  <data name="EmailSettings.Text">
+    <value xml:space="preserve">Configurações de Notificação de Email</value>
+  </data>
+  <data name="AddContent.Action">
+    <value xml:space="preserve">Adicionar definição de evento</value>
+  </data>
+  <data name="ConfigDeleted.Text">
+    <value xml:space="preserve">A definição de evento selecionada foi excluída.</value>
+  </data>
+  <data name="ConfigUpdated.Text">
+    <value xml:space="preserve">A definição do evento foi atualizada.</value>
+  </data>
+  <data name="ConfigAdded.Text">
+    <value xml:space="preserve">Definição de evento foi adicionado.</value>
+  </data>
+  <data name="LogEntry.Text">
+    <value xml:space="preserve"> entrada de evento</value>
+  </data>
+  <data name="LogEntries.Text">
+    <value xml:space="preserve"> entradas de evento</value>
+  </data>
+  <data name="Occurence.Text">
+    <value xml:space="preserve"> ocorrência</value>
+  </data>
+  <data name="Occurences.Text">
+    <value xml:space="preserve"> ocorrências</value>
+  </data>
+  <data name="In.Text">
+    <value xml:space="preserve">em</value>
+  </data>
+  <data name="ControlTitle_edit.Text">
+    <value xml:space="preserve">Editar Definições de Evento</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre o Visualizador de Eventos &lt;/h1&gt;&lt;p&gt;Permite editar os eventos do portal.&lt;/p&gt;</value>
+  </data>
+  <data name="DeleteError.Text">
+    <value xml:space="preserve">A definição de evento selecionada não pode ser excluída. Você deve primeiro excluir todas as entradas existente do evento.</value>
+  </data>
+</root>

@@ -1,0 +1,114 @@
+﻿/****** Permissions by roles PortalId 10 cleanup and set to null ******/
+/****** clean tables before settings Moduleid to NULL ******/
+
+/****** Permissions by user PortalId 10 cleanup and set to null ******/
+/****** clean tables before settings Moduleid to NULL ******/
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRolePremissionSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRolePremissionSettings]', N'{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRolePremissionSettings', N'PK_{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionSettings_Roles', N'FK_{objectQualifier}EasyDNNNewsRolePremissionSettings_Roles', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsRolePremissionSettings', N'IX_{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT' -- od verzije 4.9.14
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ALTER COLUMN [ModuleID] int NULL
+	UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] SET [ModuleID] = NULL WHERE ModuleID = 10
+END TRY
+BEGIN CATCH
+END CATCH
+
+BEGIN TRY
+	DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] WHERE ModuleID NOT IN (SELECT ModuleID From {databaseOwner}[{objectQualifier}Modules]);
+	DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] WHERE PortalID NOT IN (SELECT PortalID From {databaseOwner}[{objectQualifier}Portals]);
+END TRY
+BEGIN CATCH
+END CATCH
+
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUserPremissionSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUserPremissionSettings]', N'{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUserPremissionSettings', N'PK_{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionSettings_Users', N'FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Users', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsUserPremissionSettings', N'IX_{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT' -- od verzije 4.9.14
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ALTER COLUMN [ModuleID] int NULL
+	UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] SET [ModuleID] = NULL WHERE ModuleID = 10
+END TRY
+BEGIN CATCH
+END CATCH
+
+BEGIN TRY
+	DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] WHERE ModuleID NOT IN (SELECT ModuleID From {databaseOwner}{objectQualifier}Modules);
+	DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] WHERE PortalID NOT IN (SELECT PortalID From {databaseOwner}{objectQualifier}Portals);
+END TRY
+BEGIN CATCH
+END CATCH
+
+GO
+
+/** add for roles FK on permissions moduleid **/
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsRolePremissionSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings]  WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}EasyDNNNewsRolePremissionSettings_Modules] FOREIGN KEY([ModuleID])
+	REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleID]) ON DELETE CASCADE
+	IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsRolePremissionSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsRolePremissionSettings_Modules]
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+/** add for users FK on permissions moduleid **/
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]  WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Modules] FOREIGN KEY([ModuleID])
+	REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleID]) ON DELETE CASCADE
+	IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Modules]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Modules]
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+/** add for roles FK on permissions portalid **/
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]  WITH CHECK ADD CONSTRAINT [FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Portals] FOREIGN KEY([PortalID])
+	REFERENCES {databaseOwner}[{objectQualifier}Portals] ([PortalID]) ON DELETE CASCADE
+	IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]'))
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Portals]
+END TRY
+BEGIN CATCH
+END CATCH

@@ -1,0 +1,58 @@
+﻿/* ==========================================================================
+   Connect - connect page styles for Nexso 2
+   ========================================================================== */
+
+.connect-wizard .wizard-form {
+	fieldset {
+		text-align: center;
+		legend {
+			margin-bottom: 1rem;
+			text-align: center;
+			width: 100%;
+		}
+	}
+	p.introduction {
+		margin-bottom: 3rem;
+	}
+
+	&#wizard-form-Step0 fieldset {
+		text-align: left;
+		li {
+			list-style: disc;
+		}
+	}
+
+	.buttonWrapper {
+		@extend .tertiary-button;
+		background: #f2f2f2 url(images/tag.png) no-repeat 0.5rem center;
+		color: #333;
+		font-size: 0.875rem;
+		font-weight: bold;
+		padding-left: 3rem;
+		text-align: left;
+		width: 100%;
+		&.selectButtonWrapper {
+			@extend .secondary-button;
+			background: url(images/checkmark.png) no-repeat 0.5rem center;
+			border-width: 1px;
+			color: $primary-color;
+			font-size: 0.875rem;
+			padding-left: 3rem;
+			text-align: left;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+	@media #{$medium-up} {
+		.buttonWrapper {
+			width: 48%;
+		}
+	}
+	@media #{$large-up} {
+		@include grid-column(10,$offset:1);
+		.buttonWrapper {
+			width: 32%;
+		}
+	}
+}

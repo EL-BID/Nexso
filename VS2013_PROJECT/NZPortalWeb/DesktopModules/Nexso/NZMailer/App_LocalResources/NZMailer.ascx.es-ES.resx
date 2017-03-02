@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EditModule.Text" xml:space="preserve">
+    <value>Edit Module</value>
+  </data>
+  <data name="AdditionalRecipients.Text" xml:space="preserve">
+    <value>Additional Recipients</value>
+  </data>
+  <data name="AdditionalRecipientsDesc.Text" xml:space="preserve">
+    <value>You can type additional recepients separate by commas (,). Provide the email in email standar format. Example Jose Pedro Medina &amp;#60;jPsolano@gmail.com&amp;#62;, where the name Jose Pedro Medina could be mapped by the tag {NAME} and  &amp;#60;jPsolano@gmail.com&amp;#62; is going to be mapped by {EMAIL}. If you only provide the email addres you only are able to use the tag {EMAIL} in the email template. IMPORTANT: These additional recipients only work with templates that doesnt use user tags like FIRST-NAME, LAST-NAME, LANGUAGE, etc. If any email temaplate is not compatible with the information on this field the email will not be sent. You will be able to see in the log.</value>
+  </data>
+  <data name="Authorization.Text" xml:space="preserve">
+    <value>Only user with Receive Notification agreement.</value>
+  </data>
+  <data name="Beneficiaries.Text" xml:space="preserve">
+    <value>Beneficiaries</value>
+  </data>
+  <data name="BeneficiariesUserDesc.Text" xml:space="preserve">
+    <value>Select as many Beneficiaries you want that matches with the Nexso Users. If you don't make any selection this filter will be ignored.</value>
+  </data>
+  <data name="Body.Text" xml:space="preserve">
+    <value>Body</value>
+  </data>
+  <data name="BtnCloneTemplate.Text" xml:space="preserve">
+    <value>Clone Template</value>
+  </data>
+  <data name="BtnDeleteCampaign.Text" xml:space="preserve">
+    <value>Deleted Campaign</value>
+  </data>
+  <data name="BtnDeleteTemplate.Text" xml:space="preserve">
+    <value>Delete Template</value>
+  </data>
+  <data name="BtnSaveCampaign.Text" xml:space="preserve">
+    <value>Save Campaign</value>
+  </data>
+  <data name="btnSaveConf.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="BtnSaveTemplate.Text" xml:space="preserve">
+    <value>Save Template</value>
+  </data>
+  <data name="BtnTestCampaign.Text" xml:space="preserve">
+    <value>Preview Campaign</value>
+  </data>
+  <data name="BtnVersionTemplate.Text" xml:space="preserve">
+    <value>Version Template</value>
+  </data>
+  <data name="Campaign.Text" xml:space="preserve">
+    <value>Campaign</value>
+  </data>
+  <data name="CampaignConfiguration.Text" xml:space="preserve">
+    <value>Campaign Configuration</value>
+  </data>
+  <data name="CampaignDesc.Text" xml:space="preserve">
+    <value>Select an Existing Campaign or Type a Campaign name for creating a new one.</value>
+  </data>
+  <data name="CampaignExcludeDesc.Text" xml:space="preserve">
+    <value>Select one or more existing campaigns to avoid users receive emails from the current campaign.</value>
+  </data>
+  <data name="CampaignIncludeDesc.Text" xml:space="preserve">
+    <value>Select one or more existing campaigns to include only users receive emails from the current campaign. IMPORTANT: Exclusion rules have more importance than inclusion rules. For example, if any user is part of any “Include” rule, but in the meantime is part of any “Exclude” rule, this user will be exclude from this current campaign.</value>
+  </data>
+  <data name="CampaignName.Text" xml:space="preserve">
+    <value>Campaign Name</value>
+  </data>
+  <data name="CampaignNameDesc.Text" xml:space="preserve">
+    <value>Every Campaign has a name. Provide a name like: Invitation for Winners 2014</value>
+  </data>
+  <data name="CampaignTemplate.Text" xml:space="preserve">
+    <value>Campaign Templete</value>
+  </data>
+  <data name="CampaignTemplateDesc.Text" xml:space="preserve">
+    <value>Select an Existing Email Template or Type an Email Template for creating a new one.</value>
+  </data>
+  <data name="Cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CollapseTemplate.Text" xml:space="preserve">
+    <value>collapse details</value>
+  </data>
+  <data name="ConfirmationCampaignDelete.Text" xml:space="preserve">
+    <value>Are you sure you want to delete this campaign?</value>
+  </data>
+  <data name="ConfirmationTemplateDelete.Text" xml:space="preserve">
+    <value>Are you sure you want to delete this template?</value>
+  </data>
+  <data name="ConfirmationTemplateSave.Text" xml:space="preserve">
+    <value>You are about to save an existing template, this change can affect existing campaigns. are you sure? Note: You can use clone template instead.</value>
+  </data>
+  <data name="CountryOrganizationDesc.Text" xml:space="preserve">
+    <value>Select as many countries you want that matches with the Nexso Organizations. If you don't make any selection this filter will be ignored.</value>
+  </data>
+  <data name="CountryPotentialUserDesc.Text" xml:space="preserve">
+    <value>Select as many countries you want that matches with the Nexso Potential Users. If you don't make any selection this filter will be ignored.</value>
+  </data>
+  <data name="CountryUserDesc.Text" xml:space="preserve">
+    <value>Select as many countries you want that matches with the Nexso Users. If you don't make any selection this filter will be ignored.</value>
+  </data>
+  <data name="CustomerType.Text" xml:space="preserve">
+    <value>Customer Type</value>
+  </data>
+  <data name="CustomerTypeDesc.Text" xml:space="preserve">
+    <value>You have to Select a customer type. If you don't select any of them the whole NEXSO USER SECTION filter will be ignored.</value>
+  </data>
+  <data name="cvrfvtxtCampaignName.Text" xml:space="preserve">
+    <value>The Campaign Name already exists.</value>
+  </data>
+  <data name="cvtxtTemplateName.Text" xml:space="preserve">
+    <value>The Template Name already exists.</value>
+  </data>
+  <data name="Description.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DescriptionDesc.Text" xml:space="preserve">
+    <value>Every Campaign should have a description for explaing to other details about the camping.</value>
+  </data>
+  <data name="Dynamic.Text" xml:space="preserve">
+    <value>Dynamic</value>
+  </data>
+  <data name="EmailTemplate.Text" xml:space="preserve">
+    <value>Email Template</value>
+  </data>
+  <data name="EmailTemplateContentDesc.Text" xml:space="preserve">
+    <value>Format your 
+    Email template using the Html Text Editor or HTML code. The information on this 
+    template will be send to target audience.
+    &lt;br /&gt;
+   Use the next Tags for autoformating your email.&lt;p&gt;
+        Users:&lt;/p&gt;
+    &lt;p&gt;
+        {USER:UserId} {USER:Agreement} {USER:SkypeName} {USER:Twitter} {USER:FaceBook} 
+        {USER:Google} {USER:LinkedIn} {USER:OtherSocialNetwork} {USER:City} 
+        {USER:Region} {USER:Country} {USER:PostalCode} {USER:Telephone} {USER:Address} 
+        {USER:FirstName} {USER:LastName} {USER:email} {USER:CustomerType} 
+        {USER:NexsoEnrolment} {USER:AllowNexsoNotifications} {USER:Language} 
+        {USER:Latitude} {USER:Longitude} {USER:GoogleLocation}
+    &lt;/p&gt;
+    &lt;p&gt;
+        &amp;nbsp;&lt;/p&gt;
+    &lt;p&gt;
+        Organization:&lt;/p&gt;
+    &lt;p&gt;
+        {ORGANIZATION:OrganizationID} {ORGANIZATION:Name} {ORGANIZATION:Address} 
+        {ORGANIZATION:Phone} {ORGANIZATION:Email} {ORGANIZATION:ContactEmail} 
+        {ORGANIZATION:Website} {ORGANIZATION:Twitter} {ORGANIZATION:Skype} 
+        {ORGANIZATION:Facebook} {ORGANIZATION:GooglePlus} {ORGANIZATION:LinkedIn} 
+        {ORGANIZATION:Description} {ORGANIZATION:Logo} {ORGANIZATION:Country} 
+        {ORGANIZATION:Region} {ORGANIZATION:City} {ORGANIZATION:ZipCode} 
+        {ORGANIZATION:Created} {ORGANIZATION:Updated} {ORGANIZATION:Latitude} 
+        {ORGANIZATION:Longitude} {ORGANIZATION:GoogleLocation}
+    &lt;/p&gt;
+    &lt;p&gt;
+        solutions&lt;/p&gt;
+    &lt;p&gt;
+        {SOLUTION:SolutionId} {SOLUTION:OrganizationId} {SOLUTION:SolutionTypeId} 
+        {SOLUTION:Title} {SOLUTION:TagLine} {SOLUTION:Description} {SOLUTION:Biography} 
+        {SOLUTION:Challenge} {SOLUTION:Approach} {SOLUTION:Results} 
+        {SOLUTION:ImplementationDetails} {SOLUTION:AdditionalCost} 
+        {SOLUTION:AvailableResources} {SOLUTION:TimeFrame} {SOLUTION:Duration} 
+        {SOLUTION:DurationDetails} {SOLUTION:SolutionStatusId} {SOLUTION:SolutionType} 
+        {SOLUTION:Topic} {SOLUTION:Language} {SOLUTION:CreatedUserId} {SOLUTION:Deleted} 
+        {SOLUTION:Country} {SOLUTION:Region} {SOLUTION:City} {SOLUTION:Address} 
+        {SOLUTION:ZipCode} {SOLUTION:Logo} {SOLUTION:Cost1} {SOLUTION:Cost2} 
+        {SOLUTION:Cost3} {SOLUTION:DeliveryFormat} {SOLUTION:Cost} {SOLUTION:CostType} 
+        {SOLUTION:CostDetails} {SOLUTION:SolutionState} {SOLUTION:Beneficiaries} 
+        {SOLUTION:DateCreated} {SOLUTION:DateUpdated}
+    &lt;/p&gt;
+    &lt;p&gt;
+        IMPORTANT: Please use &amp;quot;Send to Test&amp;quot; first for validating your template.&lt;/p&gt;</value>
+  </data>
+  <data name="EveryDay.Text" xml:space="preserve">
+    <value>Every Day</value>
+  </data>
+  <data name="EveryMonth.Text" xml:space="preserve">
+    <value>Every Month</value>
+  </data>
+  <data name="EveryWeek.Text" xml:space="preserve">
+    <value>Every Week</value>
+  </data>
+  <data name="Exceptions.Text" xml:space="preserve">
+    <value>Exceptions</value>
+  </data>
+  <data name="Exclude.Text" xml:space="preserve">
+    <value>Exclude</value>
+  </data>
+  <data name="ExpandTemplate.Text" xml:space="preserve">
+    <value>expand details</value>
+  </data>
+  <data name="Finish.Text" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="hlReport.Text" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Include.Text" xml:space="preserve">
+    <value>Include</value>
+  </data>
+  <data name="Interest.Text" xml:space="preserve">
+    <value>Areas of interest?</value>
+  </data>
+  <data name="InterestUserDesc.Text" xml:space="preserve">
+    <value>Select as many Interests you want that matches with the Nexso Users. If you don't make any selection this filter will be ignored.</value>
+  </data>
+  <data name="Judge.Text" xml:space="preserve">
+    <value>Judge</value>
+  </data>
+  <data name="Language.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LanguageOrganizationDesc.Text" xml:space="preserve">
+    <value>Select as many languages you want that matches with the Nexso Organizations. If you don't make any selection this filter will be ignored.</value>
+  </data>
+  <data name="LanguagePotentialUserDesc.Text" xml:space="preserve">
+    <value>Select as many languages you want that matches with the Nexso Potential Users. If you don't make any selection this filter will be ignored.</value>
+  </data>
+  <data name="LanguageSolutionDesc.Text" xml:space="preserve">
+    <value>Select as many languages you want that matches with the Nexso Solutions. If you don't make any selection this filter will be ignored.</value>
+  </data>
+  <data name="LanguageUserDesc.Text" xml:space="preserve">
+    <value>Select as many languages you want that matches with the Nexso Users. If you don't make any selection this filter will be ignored.</value>
+  </data>
+  <data name="lblUser.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="lblUserTest.Text" xml:space="preserve">
+    <value>User Test</value>
+  </data>
+  <data name="lblUserTestMessage.Text" xml:space="preserve">
+    <value>If any "User Test" is selected the campaign will not be sent to any "Nexso User" to avoid any mistake.</value>
+  </data>
+  <data name="Mail.Text" xml:space="preserve">
+    <value>Mail separated by (,) example: &lt;name&gt;user@mail.com</value>
+  </data>
+  <data name="MessageCampaignDelete.Text" xml:space="preserve">
+    <value>Campaign deleted</value>
+  </data>
+  <data name="MessageCampaignSave.Text" xml:space="preserve">
+    <value>Saved campaign</value>
+  </data>
+  <data name="MessageTemplateDelete.Text" xml:space="preserve">
+    <value>Template deleted</value>
+  </data>
+  <data name="MessageTemplateSave.Text" xml:space="preserve">
+    <value>Saved template</value>
+  </data>
+  <data name="NewCampaign.Text" xml:space="preserve">
+    <value>New Campaign</value>
+  </data>
+  <data name="NewTemplate.Text" xml:space="preserve">
+    <value>New Template</value>
+  </data>
+  <data name="NexsoPotentialUserSelector.Text" xml:space="preserve">
+    <value>Nexso Potential User Selector</value>
+  </data>
+  <data name="NexsoUser.Text" xml:space="preserve">
+    <value>Nexso User</value>
+  </data>
+  <data name="NexsoUserSelector.Text" xml:space="preserve">
+    <value>Nexso User Selector</value>
+  </data>
+  <data name="Next.Text" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="NotificationAuthorizationDesc.Text" xml:space="preserve">
+    <value>If you select "yes"is possible you are violating the NEXSO Agreement. This selection is consider for extreme cases.</value>
+  </data>
+  <data name="NullItem.Text" xml:space="preserve">
+    <value>Null or Empty Value</value>
+  </data>
+  <data name="Once.Text" xml:space="preserve">
+    <value>Once</value>
+  </data>
+  <data name="OrganizationSelector.Text" xml:space="preserve">
+    <value>Organization Selector</value>
+  </data>
+  <data name="PotentialUserSource.Text" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="PotentialUserSourceDesc.Text" xml:space="preserve">
+    <value>Select as many list sources you want that matches with the Nexso Potential Users. If you don't make any selection this filter will be ignored.</value>
+  </data>
+  <data name="Preview.Text" xml:space="preserve">
+    <value>Preview Campaign</value>
+  </data>
+  <data name="Previous.Text" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Rate.Text" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="RateDesc.Text" xml:space="preserve">
+    <value>Select a minimum and maximun word counter value between 0 and 100 for filtering solutions. If you want to include all solution drag to 0 and 100 each slider.</value>
+  </data>
+  <data name="Repeat.Text" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="RepeatDesc.Text" xml:space="preserve">
+    <value>Choose a recurrent time for this blast since the "Send On" date.</value>
+  </data>
+  <data name="resultsPreview.Text" xml:space="preserve">
+    <value>Preview Results</value>
+  </data>
+  <data name="rfvddCampaign.Text" xml:space="preserve">
+    <value>Campaign is required.</value>
+  </data>
+  <data name="rfvddCampaignTemplate.Text" xml:space="preserve">
+    <value>Campaign Template is required.</value>
+  </data>
+  <data name="rfvRadDatePicker1.Text" xml:space="preserve">
+    <value>Send On is required.</value>
+  </data>
+  <data name="rfvrdbRepeat.Text" xml:space="preserve">
+    <value>Repeat is required.</value>
+  </data>
+  <data name="rfvrdbStatus.Text" xml:space="preserve">
+    <value>Status is required.</value>
+  </data>
+  <data name="rfvtxtCampaignName.Text" xml:space="preserve">
+    <value>Campaign Name is required.</value>
+  </data>
+  <data name="rfvtxtContent.Text" xml:space="preserve">
+    <value>Content is required.</value>
+  </data>
+  <data name="rfvtxtDescription.Text" xml:space="preserve">
+    <value>Description is required.</value>
+  </data>
+  <data name="rfvtxtLanguage.Text" xml:space="preserve">
+    <value>Language is required.</value>
+  </data>
+  <data name="rfvtxtTemplateName.Text" xml:space="preserve">
+    <value>Template Name is required.</value>
+  </data>
+  <data name="rfvtxtTemplateSubject.Text" xml:space="preserve">
+    <value>the mail Subject is required.</value>
+  </data>
+  <data name="samplePreview.Text" xml:space="preserve">
+    <value>Random Sample</value>
+  </data>
+  <data name="Sector.Text" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="SelectCountry.Text" xml:space="preserve">
+    <value>Select by Country</value>
+  </data>
+  <data name="SelectItem.Text" xml:space="preserve">
+    <value>Select Item</value>
+  </data>
+  <data name="SelectOrganizationTable.Text" xml:space="preserve">
+    <value>Use Organization Table</value>
+  </data>
+  <data name="SelectOrganizationTableDesc.Text" xml:space="preserve">
+    <value>Select this option for using the Nexso Organization Table in the filter.  If Select "No" the filter will not be apply.</value>
+  </data>
+  <data name="SelectPotentialUserTable.Text" xml:space="preserve">
+    <value>Use Potential User Table</value>
+  </data>
+  <data name="SelectPotentialUserTableDesc.Text" xml:space="preserve">
+    <value>Select this option for using the Nexso Potential Users Table in the filter.  If Select "No" the filter will not be apply.</value>
+  </data>
+  <data name="SelectSolutionTable.Text" xml:space="preserve">
+    <value>Use Solution Table</value>
+  </data>
+  <data name="SelectSolutionTableDesc.Text" xml:space="preserve">
+    <value>Select this option for using the Nexso Solution Table in the filter.  If Select "No" the filter will not be apply.</value>
+  </data>
+  <data name="SelectUserTable.Text" xml:space="preserve">
+    <value>Use Nexso Table</value>
+  </data>
+  <data name="SelectUserTableDesc.Text" xml:space="preserve">
+    <value>Select this option for using the Nexso Users Table in the filter.  If Select "No" the filter will not be apply.</value>
+  </data>
+  <data name="SendOn.Text" xml:space="preserve">
+    <value>Send On</value>
+  </data>
+  <data name="SendOnDesc.Text" xml:space="preserve">
+    <value>Chosse an exact time when the first blast should be sent. If the time is before to the current time the blast is going to send inmediately.</value>
+  </data>
+  <data name="SolutionChallenge.Text" xml:space="preserve">
+    <value>Solution Challenge</value>
+  </data>
+  <data name="SolutionChallengeDesc.Text" xml:space="preserve">
+    <value>Select none or many solution challenges values.</value>
+  </data>
+  <data name="SolutionSelector.Text" xml:space="preserve">
+    <value>Solution Selector</value>
+  </data>
+  <data name="SolutionState.Text" xml:space="preserve">
+    <value>Solution State</value>
+  </data>
+  <data name="SolutionStateDesc.Text" xml:space="preserve">
+    <value>Select none or many solution states values.</value>
+  </data>
+  <data name="Start.Text" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Static.Text" xml:space="preserve">
+    <value>Static</value>
+  </data>
+  <data name="Status.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="StatusDesc.Text" xml:space="preserve">
+    <value>Activate or deactivate the current campaign. If is reactivate it is possible a blast is sent it.</value>
+  </data>
+  <data name="Step1.Text" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="Step2.Text" xml:space="preserve">
+    <value>Exceptions</value>
+  </data>
+  <data name="Step3.Text" xml:space="preserve">
+    <value>Potential User</value>
+  </data>
+  <data name="Step4.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="Step5.Text" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Step6.Text" xml:space="preserve">
+    <value>Solution</value>
+  </data>
+  <data name="Step7.Text" xml:space="preserve">
+    <value>Additional</value>
+  </data>
+  <data name="Step8.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Subject.Text" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="TemplateLanguageDesc.Text" xml:space="preserve">
+    <value>Select a language for this template. This value is important for translation and localization purposes.</value>
+  </data>
+  <data name="TemplateName.Text" xml:space="preserve">
+    <value>Template Name:</value>
+  </data>
+  <data name="TemplateNameDesc.Text" xml:space="preserve">
+    <value>Provide a name for this template. This template could be resuded in many campaigns.</value>
+  </data>
+  <data name="TemplateSelected.Text" xml:space="preserve">
+    <value>Template Selected</value>
+  </data>
+  <data name="TemplateSubject.Text" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="TemplateSubjectDesc.Text" xml:space="preserve">
+    <value>Please provide a subject for the email. You can use the Tags. Expand Template Details.</value>
+  </data>
+  <data name="ToggleHelp.Text" xml:space="preserve">
+    <value>View/hide Help</value>
+  </data>
+  <data name="Version.Text" xml:space="preserve">
+    <value>Version: </value>
+  </data>
+  <data name="WizardTitle.Text" xml:space="preserve">
+    <value>Nexso-Chimp</value>
+  </data>
+  <data name="WordCounter.Text" xml:space="preserve">
+    <value>Word Counter</value>
+  </data>
+  <data name="WordCounterDesc.Text" xml:space="preserve">
+    <value>Select a minimum and maximun word counter value between 0 and 500 for filtering solutions. If you want to include all solution drag to 0 and 500 each slider.</value>
+  </data>
+</root>

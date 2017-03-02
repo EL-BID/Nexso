@@ -1,0 +1,160 @@
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+.edn_widget_filtermenu_box {
+  margin-bottom: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: baseline;
+  line-height: 1.25em;
+  border: 2px solid black;
+  background: #151515;
+  padding: 0;
+}
+.edn_widget_filtermenu_box > h2.edn_module_title {
+  background: url(images/common/module_title_background.png) repeat-x bottom left black;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.edn_widget_filtermenu_box > h2.edn_module_title span {
+  line-height: 21px;
+  display: block;
+  color: #bdbdbd;
+  font-size: 18px;
+  padding: 5px 8px 7px;
+  font-family: "Bree Serif", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  padding: 5px 8px 7px;
+  margin: 0 !important;
+  border: none;
+  letter-spacing: normal;
+}
+.edn_widget_filtermenu_box h3 {
+  padding: 5px 10px;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #1f1f1f;
+  color: #bdbdbd;
+  font: 15px Arial;
+  font-weight: bold;
+  line-height: 15px;
+  background-color: #1c1c1c;
+}
+.edn_widget_filtermenu_box > div select {
+  border: 2px solid black;
+  border-left-style: none;
+  border-right-style: none;
+  display: block;
+  background: #222222;
+  width: 100%;
+  box-shadow: 0 3px 25px #0a0a0a inset;
+  color: #898989;
+  text-shadow: 1px 1px 2px black;
+  font: 14px Arial;
+  padding: 4px 8px;
+  margin: 0;
+}
+.edn_widget_filtermenu_box .edn_filter_menu {
+  padding: 0;
+  margin: 0;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li ul {
+  margin: 0;
+  padding: 0;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li ul li > div {
+  background: #262626;
+  border: 0;
+  border-top: 1px solid #323232;
+  border-bottom: 1px solid #1e1e1e;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div {
+  border: 0;
+  border-top: 1px solid #1f1f1f;
+  border-bottom: 1px solid black;
+  background: url(images/item_bg.png) repeat-x 0 0 #151515;
+  overflow: hidden;
+  padding: 1px 4px 0 70px;
+  position: relative;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div .expand_collapse {
+  display: block;
+  float: right;
+  text-indent: -10000px;
+  margin: 0 0 0 4px;
+  background: url(images/expand_collapse.png) no-repeat 0 0;
+  height: 7px;
+  width: 13px;
+  margin: 9px 4px 0 0;
+  cursor: pointer;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div .expand_collapse:hover {
+  background-position: -13px 0;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div .expand_collapse.collapse {
+  background-position: 0 -7px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div .expand_collapse.collapse:hover {
+  background-position: -13px -7px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div label {
+  font-size: 12px;
+  color: #bdbdbd;
+  line-height: 24px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_0 > div {
+  padding-left: 10px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_1 > div {
+  padding-left: 20px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_2 > div {
+  padding-left: 30px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_3 > div {
+  padding-left: 40px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_4 > div {
+  padding-left: 50px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_5 > div {
+  padding-left: 60px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.active > div label {
+  font-weight: bold;
+}
+.edn_widget_filtermenu_box .EDN_two-column {
+  float: left;
+  width: 49%;
+  clear: none;
+}
+.edn_widget_filtermenu_box .EDN_two-column.EDN_right {
+  float: right;
+}
+.edn_widget_filtermenu_box .EDN_button-wrapper {
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+  padding: 8px;
+}
+.edn_widget_filtermenu_box .EDN_button-wrapper .edn_filter_button {
+  background: url(images/button-bg.png) repeat-x 0 0 black;
+  float: none;
+  height: 32px;
+  padding: 0 11px;
+  text-indent: 0;
+  text-transform: none;
+  width: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #6a6a6a black black #6a6a6a;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 32px;
+}
+.edn_widget_filtermenu_box .EDN_button-wrapper .edn_filter_button:hover {
+  background-position: 0 -32px;
+}

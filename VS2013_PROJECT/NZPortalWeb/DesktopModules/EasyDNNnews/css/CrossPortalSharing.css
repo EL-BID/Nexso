@@ -1,0 +1,74 @@
+.portal_sharing_container {
+  width: 700px;
+  margin: 0 auto;
+}
+.portal_sharing_container h1 {
+  color: #333333;
+  font: 16px Arial, Helvetica, sans-serif;
+  line-height: 19px;
+  margin: 0 0 15px;
+  padding: 0;
+}
+.portal_sharing_container .permission_selection_dialog {
+  display: none;
+}
+.portal_sharing_container .shared_portals {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.portal_sharing_container .shared_portals th {
+  color: #2e3d47;
+  font: 14px Arial, Helvetica, sans-serif;
+  line-height: 16px;
+  padding: 0 0 5px;
+  font-weight: bold;
+}
+.portal_sharing_container .shared_portals th.left_side {
+  text-align: right;
+  width: 25%;
+  padding-right: 10px;
+  min-width: 150px;
+}
+.portal_sharing_container .shared_portals th.right_side {
+  text-align: left;
+  padding-left: 10px;
+}
+.portal_sharing_container .shared_portals .row td {
+  border: 0;
+  margin: 0;
+  font: 12px Arial, Helvetica, sans-serif;
+  line-height: 14px;
+}
+.portal_sharing_container .shared_portals .row td.left_side {
+  background: #e6edf4;
+  font-weight: bold;
+  padding: 5px 10px 10px 10px;
+  text-align: right;
+}
+.portal_sharing_container .shared_portals .row td.right_side {
+  background: white;
+  font-weight: bold;
+  padding: 5px 10px 10px 10px;
+}
+.portal_sharing_container .shared_portals .row td .permissions_manual_item_selection > p {
+  margin: 10px 0 10px;
+  padding: 0;
+}
+.portal_sharing_container .shared_portals .row td .permissions_manual_item_selection .selected_categories {
+  border: 0;
+  background: transparent;
+  margin: 0;
+  width: 80%;
+}
+.portal_sharing_container .shared_portals .row.second td.left_side {
+  background: #d1dee8;
+}
+.portal_sharing_container .shared_portals .row.second td.right_side {
+  background: #f1f1f1;
+}
+.portal_sharing_container > .main_actions {
+  margin: 15px 0 0;
+  padding: 0;
+  text-align: center;
+}

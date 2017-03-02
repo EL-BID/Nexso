@@ -1,0 +1,61 @@
+<!--TemplateGroup:newsListArticleMulti2colSmallImages-->
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:Before:-->
+<div>
+<!--RepeatEnd:Before:-->
+<!--MultiArticleEnd-->
+
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:1:3:5:7:9:-->
+<div class="article multi_layout two_collumn small left">
+[EasyDNNnews:HasArticlePermissions]
+	[EasyDNNnews:ArticlePermissions:Edit]
+	[EasyDNNnews:ArticlePermissions:Publish]
+	[EasyDNNnews:ArticlePermissions:Approve]
+[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="in_article_image left" [EasyDNNnews:Image:Visibility]>
+		<div class="image_wrapper no_text">
+			<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]">
+				<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:100:Height:60:Resize:Crop]" />
+			</a>
+		</div>
+	</div>
+	<h1 class="title"><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title:Limit:100]</a></h1>
+</div>
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:2:4:6:8:10:-->
+<div class="article multi_layout two_collumn small right">
+[EasyDNNnews:HasArticlePermissions]
+	[EasyDNNnews:ArticlePermissions:Edit]
+	[EasyDNNnews:ArticlePermissions:Publish]
+	[EasyDNNnews:ArticlePermissions:Approve]
+[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="in_article_image left" [EasyDNNnews:Image:Visibility]>
+		<div class="image_wrapper no_text">
+			<a href="[EasyDNNnews:ReadMore]" target="[EasyDNNnews:DetailTarget]">
+				<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:100:Height:60:Resize:Crop]" />
+			</a>
+		</div>
+	</div>
+	<h1 class="title"><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title:Limit:100]</a></h1>
+</div>
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:After:-->
+</div>
+<div style="clear: both;"></div>
+[EasyDNNnews:IfExists:RSS]
+<div class="article_rss_wrapper">
+	<a class="article_rss" href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->
+<!--MultiArticleEnd-->

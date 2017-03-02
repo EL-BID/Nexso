@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Roles.Action">
+    <value xml:space="preserve">Gerenciar regras do usuário</value>
+  </data>
+  <data name="ControlTitle_edit.Text">
+    <value xml:space="preserve">Editar Contas de Usuários</value>
+  </data>
+  <data name="UserLockedOut.Text">
+    <value xml:space="preserve">Atualmente esta conta está bloqueada devido a muitas tentativas falhas de conexão.</value>
+  </data>
+  <data name="InvalidUser.Text">
+    <value xml:space="preserve">Esta conta não é de um usuário no portal atual.</value>
+  </data>
+  <data name="SuperUser.Text">
+    <value xml:space="preserve">Esta conta é de um Super Usuário. Você não tem direitos para editar uma conta de Super Usuário.</value>
+  </data>
+  <data name="NoUser.Text">
+    <value xml:space="preserve">Esta conta não existe</value>
+  </data>
+  <data name="plNewPassword.Text">
+    <value xml:space="preserve">Nova senha:</value>
+  </data>
+  <data name="plNewPassword.Help">
+    <value xml:space="preserve">Entre a nova senha</value>
+  </data>
+  <data name="plNewConfirm.Text">
+    <value xml:space="preserve">Confirme a nova senha:</value>
+  </data>
+  <data name="plNewConfirm.Help">
+    <value xml:space="preserve">Redigite a nova senha para certificar-se de que não cometeu erros de digitação</value>
+  </data>
+  <data name="ResetPassword.Text">
+    <value xml:space="preserve">Redefinir a senha</value>
+  </data>
+  <data name="cmdUpdatePassword.Text">
+    <value xml:space="preserve">Atualizar senha</value>
+  </data>
+  <data name="NewPassword.Text">
+    <value xml:space="preserve">Você deve entrar uma nova senha.</value>
+  </data>
+  <data name="UserTitle.Text">
+    <value xml:space="preserve">Editar Usuário - {0} [Id: {1}]</value>
+  </data>
+  <data name="MembershipTitle.Text">
+    <value xml:space="preserve">Informação do provedor de contas</value>
+  </data>
+  <data name="AddContent.Action">
+    <value xml:space="preserve">Adicionar novo usuário</value>
+  </data>
+  <data name="Profile.Action">
+    <value xml:space="preserve">Gerenciar Perfil do Usuário</value>
+  </data>
+  <data name="Password.Action">
+    <value xml:space="preserve">Gerenciar senha do usuário</value>
+  </data>
+  <data name="cmdRoles.Text">
+    <value xml:space="preserve">Gerenciar regras</value>
+  </data>
+  <data name="cmdPassword.Text">
+    <value xml:space="preserve">Gerenciar senha</value>
+  </data>
+  <data name="cmdProfile.Text">
+    <value xml:space="preserve">Gerenciar perfil</value>
+  </data>
+  <data name="AddUser.Text">
+    <value xml:space="preserve">Adicionar novo usuário</value>
+  </data>
+  <data name="UserUnAuthorized.Text">
+    <value xml:space="preserve">Usuário desautorizado com sucesso.</value>
+  </data>
+  <data name="UserAuthorized.Text">
+    <value xml:space="preserve">Usuário autorizado com sucesso</value>
+  </data>
+  <data name="PasswordQAChanged.Text">
+    <value xml:space="preserve">Pergunta e resposta da senha foram atualizadas com sucesso.</value>
+  </data>
+  <data name="ControlTitle_profile.Text">
+    <value xml:space="preserve">Gerenciar Perfil</value>
+  </data>
+  <data name="NotAuthorized.Text">
+    <value xml:space="preserve">Você não está autorizado a editar este usuário.</value>
+  </data>
+  <data name="ControlTitle_register.Text">
+    <value xml:space="preserve">Cadastrar</value>
+  </data>
+  <data name="cmdServices.Text">
+    <value xml:space="preserve">Gerenciar serviços</value>
+  </data>
+  <data name="ManageProfile.Action">
+    <value xml:space="preserve">Gerenciar propriedades de perfil</value>
+  </data>
+  <data name="cmdRegister.Text">
+    <value xml:space="preserve">Cadastrar</value>
+  </data>
+  <data name="ExceededRegisterQuota.Text">
+    <value xml:space="preserve">Você não pode se cadastrar agora neste portal. Por favor, contacte o administrador do portal para saber quando novos cadastros estarão disponíveis.</value>
+  </data>
+  <data name="ExceededUserQuota.Text">
+    <value xml:space="preserve">Adicionando este usuário irá exceder sua quota de usuários para este portal. Por favor, contacte o provedor de hospedagem para saber como aumentar sua quota de usuários.</value>
+  </data>
+  <data name="UserSubscribed.Text">
+    <value xml:space="preserve">Você foi inserido na regra '{0}' com sucesso.</value>
+  </data>
+  <data name="UserUnSubscribed.Text">
+    <value xml:space="preserve">Você foi retirado da regra '{0}' com sucesso.</value>
+  </data>
+  <data name="EmailError.Text">
+    <value xml:space="preserve">Este portal requer um endereço de email único. O endereço de email que você forneceu já está sendo usado.</value>
+  </data>
+  <data name="CannotAddUser.Text">
+    <value xml:space="preserve">Sua configuração exige que o usuário entre uma pergunta e resposta como lembrete de senha. Isto é incompatível com administradores adicionando usuáros, então foi desativado neste portal.</value>
+  </data>
+  <data name="cmdLogin.Text">
+    <value xml:space="preserve">Conectar</value>
+  </data>
+  <data name="plCaptcha.Help">
+    <value xml:space="preserve">Entre o código de segurança</value>
+  </data>
+  <data name="plCaptcha.Text">
+    <value xml:space="preserve">Código de segurança:</value>
+  </data>
+  <data name="UserPasswordUpdateChanged.Text">
+    <value xml:space="preserve">O usuário deve atualizar a senha na próxima conexão.</value>
+  </data>
+  <data name="RegisterWarning.Text">
+    <value xml:space="preserve">- &lt;em&gt;(&lt;strong&gt;Nota:&lt;/strong&gt; - Cadastramento pode levar vários segundos. Uma vez que você clicar no botão Cadastrar por favor aguarde até que o sistema responda.)&lt;/em&gt;</value>
+  </data>
+  <data name="AddUser.Title">
+    <value xml:space="preserve">Adicionar Novo Usuário</value>
+  </data>
+  <data name="Register.Text">
+    <value xml:space="preserve">Cadastramento de usuário</value>
+  </data>
+  <data name="Register.Title">
+    <value xml:space="preserve">Cadastramento de usuário</value>
+  </data>
+</root>

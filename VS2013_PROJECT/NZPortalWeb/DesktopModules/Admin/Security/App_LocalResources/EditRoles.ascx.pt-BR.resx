@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BasicSettings.Text">
+    <value xml:space="preserve">Configurações Básicas</value>
+  </data>
+  <data name="BasicSettingsDescription.Text">
+    <value xml:space="preserve">Nesta secão você pode definir as configurações básicas para este regra.</value>
+  </data>
+  <data name="RoleName.Text">
+    <value xml:space="preserve">Nome da regra:</value>
+  </data>
+  <data name="RoleName.Help">
+    <value xml:space="preserve">Entre o nome da regra.</value>
+  </data>
+  <data name="Description.Text">
+    <value xml:space="preserve">Descrição:</value>
+  </data>
+  <data name="Description.Help">
+    <value xml:space="preserve">Entre uma descrição para esta regra.</value>
+  </data>
+  <data name="PublicRole.Text">
+    <value xml:space="preserve">Regra pública?</value>
+  </data>
+  <data name="PublicRole.Help">
+    <value xml:space="preserve">Esta regra é uma regra pública?</value>
+  </data>
+  <data name="AutoAssignment.Text">
+    <value xml:space="preserve">Auto atribuição?</value>
+  </data>
+  <data name="AutoAssignment.Help">
+    <value xml:space="preserve">Este regra é automaticamente atribuída aos usuários?</value>
+  </data>
+  <data name="AdvancedSettings.Text">
+    <value xml:space="preserve">Configurações Avançadas</value>
+  </data>
+  <data name="AdvancedSettingsHelp.Text">
+    <value xml:space="preserve">Nesta secão você pode definir mais configurações avançadas para este regra.</value>
+  </data>
+  <data name="ServiceFee.Text">
+    <value xml:space="preserve">Tarifa de serviço</value>
+  </data>
+  <data name="ServiceFee.Help">
+    <value xml:space="preserve">Entre a tarifa cobrada aos usuários desta regra.</value>
+  </data>
+  <data name="BillingPeriod.Text">
+    <value xml:space="preserve">Período de faturamento (cada)</value>
+  </data>
+  <data name="BillingPeriod.Help">
+    <value xml:space="preserve">Estes dois campos são utilizados em conjunto para definir um período de faturamento (ex. 2 semanas, ou 1 mês).</value>
+  </data>
+  <data name="TrialFee.Text">
+    <value xml:space="preserve">Tarifa de testes</value>
+  </data>
+  <data name="TrialFee.Help">
+    <value xml:space="preserve">Entre a tarifa de testes para os usuários desta regra.</value>
+  </data>
+  <data name="TrialPeriod.Text">
+    <value xml:space="preserve">Tempo de testes (cada)</value>
+  </data>
+  <data name="TrialPeriod.Help">
+    <value xml:space="preserve">Estes dois campos são utilizados em conjunto para definir um período de teste (ex. 2 semanas, ou 1 mês).</value>
+  </data>
+  <data name="cmdManage.Text">
+    <value xml:space="preserve">Gerenciar usuários nesta regra</value>
+  </data>
+  <data name="valRoleName.Text">
+    <value xml:space="preserve">&lt;br&gt;Você deve entrar um nome válido!</value>
+  </data>
+  <data name="valServiceFee1.Text">
+    <value xml:space="preserve">&lt;br&gt;O valor da tarifa de serviço informado não é válido!</value>
+  </data>
+  <data name="valServiceFee2.Text">
+    <value xml:space="preserve">&lt;br&gt;A tarifa de serviço deve ser maior ou igual a zero!</value>
+  </data>
+  <data name="valBillingPeriod1.Text">
+    <value xml:space="preserve">&lt;br&gt;O período de faturamento  informado não é válido!</value>
+  </data>
+  <data name="valBillingPeriod2.Text">
+    <value xml:space="preserve">&lt;br&gt;O período de faturamento deve ser maior que zero!</value>
+  </data>
+  <data name="valTrialFee1.Text">
+    <value xml:space="preserve">&lt;br&gt;O valor da tarifa de testes informado não é válido!</value>
+  </data>
+  <data name="valTrialFee2.Text">
+    <value xml:space="preserve">&lt;br&gt;A tarifa de testes deve ser maior ou igual a zero!</value>
+  </data>
+  <data name="valTrialPeriod1.Text">
+    <value xml:space="preserve">&lt;br&gt;O período de testes informado não é válido!</value>
+  </data>
+  <data name="valTrialPeriod2.Text">
+    <value xml:space="preserve">&lt;br&gt;O período de testes deve ser maior que zero!</value>
+  </data>
+  <data name="ControlTitle_edit.Text">
+    <value xml:space="preserve">Editar Regras de Segurança</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre o Editor de Regras de Segurança&lt;/h1&gt;&lt;p&gt;Administradores podem gerenciar as regras de segurança definidas para o seu portal. O módulo permite adicionar, modificar e excluir regras de segurança e gerenciar os usuários atribuídos às regras de segurança.&lt;/p&gt;</value>
+  </data>
+  <data name="plRoleGroups.Text">
+    <value xml:space="preserve">Grupo de regras:</value>
+  </data>
+  <data name="plRoleGroups.Help">
+    <value xml:space="preserve">Selecione o grupo de regras ao qual esta regra pertence.</value>
+  </data>
+  <data name="plRSVPCode.Text">
+    <value xml:space="preserve">Código RSVP:</value>
+  </data>
+  <data name="plRSVPCode.Help">
+    <value xml:space="preserve">Entre um código RSVP para esta regra. Este código pode ser usado para providenciar um método conveniente para usuários pertencerem a uma ou mais regras.</value>
+  </data>
+  <data name="plRSVPLink.Text">
+    <value xml:space="preserve">Atalho RSVP:</value>
+  </data>
+  <data name="plRSVPLink.Help">
+    <value xml:space="preserve">Se um código RSVP é fornecido você pode compartilhar o seguinte endereço.</value>
+  </data>
+  <data name="plIcon.Text">
+    <value xml:space="preserve">Ícone:</value>
+  </data>
+  <data name="plIcon.Help">
+    <value xml:space="preserve">Selecione um ícone para a regra.</value>
+  </data>
+  <data name="DuplicateRole.Text">
+    <value xml:space="preserve">Uma regra com o mesmo nome já existe. A regra não foi adicionada.</value>
+  </data>
+  <data name="ProcessorWarning.Text">
+    <value xml:space="preserve">&lt;b&gt;Atenção:&lt;/b&gt; Você precisará configurar o processador de pagamentos nas configurações do portal, para habilitar os usuários assinarem serviços e regras baseadas em tarifas.</value>
+  </data>
+  <data name="IncompatibleFee.Text">
+    <value xml:space="preserve">Você deve selecionar uma frequencia de pagamento se você deseja definir uma tarifa para esta regra</value>
+  </data>
+  <data name="securityModeListLabel.Help">
+    <value xml:space="preserve">Escolha o modo de segurança para esta regra / grupo.</value>
+  </data>
+  <data name="securityModeListLabel.Text">
+    <value xml:space="preserve">Modo de segurança:</value>
+  </data>
+  <data name="statusListLabel.Help">
+    <value xml:space="preserve">Selecione a situação desta regra / grupo.</value>
+  </data>
+  <data name="statusListLabel.Text">
+    <value xml:space="preserve">Situação:</value>
+  </data>
+  <data name="SystemRoleWarning.Text">
+    <value xml:space="preserve">Esta regra é uma regra do sistema, apenas edição mínima é permitida.</value>
+  </data>
+  <data name="AssignToExistUsers.Help">
+    <value xml:space="preserve">Associar esta regra a todos os usuários existentes.</value>
+  </data>
+  <data name="AssignToExistUsers.Text">
+    <value xml:space="preserve">Associar para usuários existentes?</value>
+  </data>
+</root>

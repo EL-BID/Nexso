@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Configuration.Text">
+    <value xml:space="preserve">Configuração</value>
+  </data>
+  <data name="plServerTime.Text">
+    <value xml:space="preserve">Hora do servidor:</value>
+  </data>
+  <data name="plServerTime.Help">
+    <value xml:space="preserve">A data e hora atual do servidor web.</value>
+  </data>
+  <data name="plebFarm.Text">
+    <value xml:space="preserve">Web Farm ativo?</value>
+  </data>
+  <data name="plWebFarm.Help">
+    <value xml:space="preserve">A aplicação está usando um Web Farm?</value>
+  </data>
+  <data name="plDataProvider.Text">
+    <value xml:space="preserve">Provedor de dados:</value>
+  </data>
+  <data name="plDataProvider.Help">
+    <value xml:space="preserve">O nome do provedor que está identificado como provedor padrão de dados no arquivo web.config.</value>
+  </data>
+  <data name="plFramework.Text">
+    <value xml:space="preserve">.NET Framework:</value>
+  </data>
+  <data name="plFramework.Help">
+    <value xml:space="preserve">A versão do .NET Framework onde a aplicação está sendo executada - especificada através do IIS.</value>
+  </data>
+  <data name="plIdentity.Text">
+    <value xml:space="preserve">Identidade ASP.NET:</value>
+  </data>
+  <data name="plIdentity.Help">
+    <value xml:space="preserve">A conta de usuário Windows onde a aplicação está sendo executada. Esta é a conta que tem que ter permissões nas pasta do servidor.</value>
+  </data>
+  <data name="plHostName.Text">
+    <value xml:space="preserve">Nome do servidor:</value>
+  </data>
+  <data name="plHostName.Help">
+    <value xml:space="preserve">O nome do servidor.</value>
+  </data>
+  <data name="plIPAddress.Text">
+    <value xml:space="preserve">Endereço IP:</value>
+  </data>
+  <data name="plIPAddress.Help">
+    <value xml:space="preserve">O endereço IP do servidor.</value>
+  </data>
+  <data name="plPermissions.Text">
+    <value xml:space="preserve">Permissões:</value>
+  </data>
+  <data name="plPermissions.Help">
+    <value xml:space="preserve">As permissões de acesso ao código disponíveis no ambiente do servidor.</value>
+  </data>
+  <data name="plApplicationPath.Text">
+    <value xml:space="preserve">Diretório relativo:</value>
+  </data>
+  <data name="plApplicationPath.Help">
+    <value xml:space="preserve">A localização relativa da aplicação em relação à raiz do portal.</value>
+  </data>
+  <data name="plApplicationMapPath.Text">
+    <value xml:space="preserve">Diretório físico:</value>
+  </data>
+  <data name="plApplicationMapPath.Help">
+    <value xml:space="preserve">A localização física da raiz da aplicação no servidor.</value>
+  </data>
+  <data name="plGUID.Text">
+    <value xml:space="preserve">GUID:</value>
+  </data>
+  <data name="plGUID.Help">
+    <value xml:space="preserve">O identificador único global que pode ser usado para identificar esta aplicação.</value>
+  </data>
+  <data name="plHostPortal.Text">
+    <value xml:space="preserve">Portal:</value>
+  </data>
+  <data name="plHostTitle.Text">
+    <value xml:space="preserve">Título:</value>
+  </data>
+  <data name="plHostURL.Text">
+    <value xml:space="preserve">Endereço:</value>
+  </data>
+  <data name="plHostEmail.Text">
+    <value xml:space="preserve">Email:</value>
+  </data>
+  <data name="plHostContainer.Text">
+    <value xml:space="preserve">Moldura do servidor:</value>
+  </data>
+  <data name="plProcessor.Text">
+    <value xml:space="preserve">Processador de pagamentos:</value>
+  </data>
+  <data name="plUserId.Text">
+    <value xml:space="preserve">ID de usuário:</value>
+  </data>
+  <data name="plPassword.Text">
+    <value xml:space="preserve">Senha:</value>
+  </data>
+  <data name="plHostFee.Text">
+    <value xml:space="preserve">Tarifa de hospedagem:</value>
+  </data>
+  <data name="plHostCurrency.Text">
+    <value xml:space="preserve">Moeda do servidor:</value>
+  </data>
+  <data name="plHostSpace.Text">
+    <value xml:space="preserve">Espaço de hospedagem (MB):</value>
+  </data>
+  <data name="plDemoPeriod.Text">
+    <value xml:space="preserve">Periodo de demonstração:</value>
+  </data>
+  <data name="plDemoSignup.Text">
+    <value xml:space="preserve">Inscrição anônima para demonstração?</value>
+  </data>
+  <data name="plSiteLogBuffer.Text">
+    <value xml:space="preserve">Espaço para registros do portal:</value>
+  </data>
+  <data name="plSiteLogHistory.Text">
+    <value xml:space="preserve">Histórico dos registros do portal:</value>
+  </data>
+  <data name="plUsersOnline.Text">
+    <value xml:space="preserve">Ativar lista de usuários conectados?</value>
+  </data>
+  <data name="plUsersOnlineTime.Text">
+    <value xml:space="preserve">Tempo de usuários conectados:</value>
+  </data>
+  <data name="plProxyServer.Text">
+    <value xml:space="preserve">Servidor:</value>
+  </data>
+  <data name="plProxyPort.Text">
+    <value xml:space="preserve">Porta:</value>
+  </data>
+  <data name="plProxyUsername.Text">
+    <value xml:space="preserve">Usuário:</value>
+  </data>
+  <data name="plProxyPassword.Text">
+    <value xml:space="preserve">Senha:</value>
+  </data>
+  <data name="plWebRequestTimeout.Text">
+    <value xml:space="preserve">Expiração do requerimento web:</value>
+  </data>
+  <data name="plSMTPServer.Text">
+    <value xml:space="preserve">Servidor e porta:</value>
+  </data>
+  <data name="EmailTest.Text">
+    <value xml:space="preserve">Testar</value>
+  </data>
+  <data name="plSMTPAuthentication.Text">
+    <value xml:space="preserve">Autenticação:</value>
+  </data>
+  <data name="plSMTPUsername.Text">
+    <value xml:space="preserve">Usuário:</value>
+  </data>
+  <data name="plSMTPPassword.Text">
+    <value xml:space="preserve">Senha:</value>
+  </data>
+  <data name="plSMTPEnableSSL.Text">
+    <value xml:space="preserve">Ativar SSL?</value>
+  </data>
+  <data name="plSMTPEnableSSL.Help">
+    <value xml:space="preserve">Usado por serviços SMTP que requerem conexão segura (normalmente não é necessário).</value>
+  </data>
+  <data name="plFileExtensions.Text">
+    <value xml:space="preserve">Extensões de arquivos permitidas:</value>
+  </data>
+  <data name="plCache.Text">
+    <value xml:space="preserve">Tempo limite de cache (segundos):</value>
+  </data>
+  <data name="ClearCache.Text">
+    <value xml:space="preserve">Limpar cache</value>
+  </data>
+  <data name="plCopyright.Text">
+    <value xml:space="preserve">Mostrar créditos de direitos de cópia?</value>
+  </data>
+  <data name="plUseCustomErrorMessages.Text">
+    <value xml:space="preserve">Usar mensagens de erro  personalizadas?</value>
+  </data>
+  <data name="UpgradeLog.Text">
+    <value xml:space="preserve">Atualizar os registros de versão</value>
+  </data>
+  <data name="SpecifyHostEmailMessage.Text">
+    <value xml:space="preserve">Você deve especificar o endereço de email do servidor.</value>
+  </data>
+  <data name="15Seconds.Text">
+    <value xml:space="preserve">15 segundos</value>
+  </data>
+  <data name="30Seconds.Text">
+    <value xml:space="preserve">30 segundos</value>
+  </data>
+  <data name="45Seconds.Text">
+    <value xml:space="preserve">45 segundos</value>
+  </data>
+  <data name="60Seconds.Text">
+    <value xml:space="preserve">60 segundos</value>
+  </data>
+  <data name="plPerformance.Text">
+    <value xml:space="preserve">Performance:</value>
+  </data>
+  <data name="HeavyCaching.Text">
+    <value xml:space="preserve">Alta</value>
+  </data>
+  <data name="ModerateCaching.Text">
+    <value xml:space="preserve">Moderada</value>
+  </data>
+  <data name="LightCaching.Text">
+    <value xml:space="preserve">Baixa</value>
+  </data>
+  <data name="NoCaching.Text">
+    <value xml:space="preserve">Nenhuma</value>
+  </data>
+  <data name="BasicSettingsHelp.Text">
+    <value xml:space="preserve">Entre as configurações básicas para seu servidor.</value>
+  </data>
+  <data name="BasicSettings.Text">
+    <value xml:space="preserve">Configurações Básicas</value>
+  </data>
+  <data name="HostDetails.Text">
+    <value xml:space="preserve">Detalhes do Servidor</value>
+  </data>
+  <data name="plHostTitle.Help">
+    <value xml:space="preserve">Entre o título do servidor.</value>
+  </data>
+  <data name="plHostEmail.Help">
+    <value xml:space="preserve">Entre o endereço de email de suporte do servidor.</value>
+  </data>
+  <data name="plHostContainer.Help">
+    <value xml:space="preserve">Selecione a moldura padrão para utilizar nos seus portais.</value>
+  </data>
+  <data name="Appearance.Text">
+    <value xml:space="preserve">Aparência</value>
+  </data>
+  <data name="Payment.Text">
+    <value xml:space="preserve">Configurações de Pagamento</value>
+  </data>
+  <data name="Proxy.Text">
+    <value xml:space="preserve">Configurações de Proxy</value>
+  </data>
+  <data name="SMTP.Text">
+    <value xml:space="preserve">Configurações do Servidor de SMTP</value>
+  </data>
+  <data name="OtherSettings.Text">
+    <value xml:space="preserve">Outras Configurações</value>
+  </data>
+  <data name="AdvancedSettings.Text">
+    <value xml:space="preserve">Configurações Avançadas</value>
+  </data>
+  <data name="AdvancedSettingsHelp.Text">
+    <value xml:space="preserve">Entre as configurações avançadas para seu servidor.</value>
+  </data>
+  <data name="Other.Text">
+    <value xml:space="preserve">Outras Configurações</value>
+  </data>
+  <data name="plCopyright.Help">
+    <value xml:space="preserve">Marque para mostrar os créditos de direitos de cópia do DotNetNuke.</value>
+  </data>
+  <data name="plUseCustomErrorMessages.Help">
+    <value xml:space="preserve">Marque isto para usar mensagens de erro personalizadas.</value>
+  </data>
+  <data name="plProcessor.Help">
+    <value xml:space="preserve">Selecione um processador de pagamentos para aceitar pagamentos dos clientes do portal.</value>
+  </data>
+  <data name="plUserId.Help">
+    <value xml:space="preserve">Entre sua ID de usuário no processador de pagamentos.</value>
+  </data>
+  <data name="plPassword.Help">
+    <value xml:space="preserve">Entre sua senha no processador de pagamentos.</value>
+  </data>
+  <data name="plHostFee.Help">
+    <value xml:space="preserve">Insira a tarifa básica para a  hospedagem do portal.</value>
+  </data>
+  <data name="plHostCurrency.Help">
+    <value xml:space="preserve">Selecione a moeda para as suas tarifas.</value>
+  </data>
+  <data name="plDemoPeriod.Help">
+    <value xml:space="preserve">Insira o número de dias para experiência de uma conta de demonstração.</value>
+  </data>
+  <data name="plDemoSignup.Help">
+    <value xml:space="preserve">Selecione caso você permita que usuários se registrem para demonstração.</value>
+  </data>
+  <data name="plHostSpace.Help">
+    <value xml:space="preserve">Entre a quantidade de espaço para arquivos permitido para uma conta.</value>
+  </data>
+  <data name="plSMTPServer.Help">
+    <value xml:space="preserve">Entre o endereço do servidor SMTP. Você também pode especificar uma porta alternativa adicionando dois pontos e o número da porta (ex: smtp.googlemail.com:587). Entre o nome do servidor SMTP apenas se usar o número de porta padrão (25).</value>
+  </data>
+  <data name="plSMTPAuthentication.Help">
+    <value xml:space="preserve">Entre o método de autenticação no servidor SMTP (padrão = anônimo).</value>
+  </data>
+  <data name="SMTPAnonymous.Text">
+    <value xml:space="preserve">Anônimo</value>
+  </data>
+  <data name="SMTPBasic.Text">
+    <value xml:space="preserve">Básico</value>
+  </data>
+  <data name="SMTPNTLM.Text">
+    <value xml:space="preserve">NTLM</value>
+  </data>
+  <data name="plSMTPUsername.Help">
+    <value xml:space="preserve">Entre o nome de usuário no servidor SMTP.</value>
+  </data>
+  <data name="plSMTPPassword.Help">
+    <value xml:space="preserve">Entre a senha no servidor SMTP.</value>
+  </data>
+  <data name="plControlPanel.Text">
+    <value xml:space="preserve">Painel de controle:</value>
+  </data>
+  <data name="plControlPanel.Help">
+    <value xml:space="preserve">Você pode especificar um controle alternativo para usar na administração de páginas.</value>
+  </data>
+  <data name="plFileExtensions.Help">
+    <value xml:space="preserve">Entre as extensões de arquivo permitidas (separadas por vírgulas).</value>
+  </data>
+  <data name="Host.Text">
+    <value xml:space="preserve">Servidor</value>
+  </data>
+  <data name="Portal.Text">
+    <value xml:space="preserve">Portal</value>
+  </data>
+  <data name="plCache.Help">
+    <value xml:space="preserve">Defina a quantidade de tempo em que os objetos permanecem em cache.</value>
+  </data>
+  <data name="plPerformance.Help">
+    <value xml:space="preserve">Selecione como optimizar a performance.</value>
+  </data>
+  <data name="plProxyServer.Help">
+    <value xml:space="preserve">Entre o endereço do servidor de proxy.</value>
+  </data>
+  <data name="plProxyPort.Help">
+    <value xml:space="preserve">Entre a porta do servidor de proxy.</value>
+  </data>
+  <data name="plProxyUsername.Help">
+    <value xml:space="preserve">Entre o nome de usuário no servidor de proxy.</value>
+  </data>
+  <data name="plProxyPassword.Help">
+    <value xml:space="preserve">Entre a senha para o servidor de proxy.</value>
+  </data>
+  <data name="plWebRequestTimeout.Help">
+    <value xml:space="preserve">Insira um valor de expiração para um requerimento web.</value>
+  </data>
+  <data name="plSiteLogBuffer.Help">
+    <value xml:space="preserve">Entre o número de itens no espaço de registros do portal.</value>
+  </data>
+  <data name="plSiteLogHistory.Help">
+    <value xml:space="preserve">Entre o número de dias de atividade para manter nos registros do portal.</value>
+  </data>
+  <data name="plUsersOnline.Help">
+    <value xml:space="preserve">Você pode opcionalmente ativar o recurso que mantém uma lista com os usuários atualmente conectados.</value>
+  </data>
+  <data name="plUsersOnlineTime.Help">
+    <value xml:space="preserve">Entre a quantidade de tempo para manter a lista de usuários conectados.</value>
+  </data>
+  <data name="RequestFilter.Text">
+    <value xml:space="preserve">Configurações de Filtros de Pedidos</value>
+  </data>
+  <data name="plEnableRequestFilters.Text">
+    <value xml:space="preserve">Ativar filtros de requerimentos?</value>
+  </data>
+  <data name="plEnableRequestFilters.Help">
+    <value xml:space="preserve">Marque para ativar os filtros de requerimentos.</value>
+  </data>
+  <data name="plHostPortal.Help">
+    <value xml:space="preserve">Selecione o portal padrão.</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Configurações do Servidor</value>
+  </data>
+  <data name="ContainerUpload.Text">
+    <value xml:space="preserve">Enviar moldura</value>
+  </data>
+  <data name="plSiteLogStorage.Text">
+    <value xml:space="preserve">Armazenamento dos registros do portal:</value>
+  </data>
+  <data name="plSiteLogStorage.Help">
+    <value xml:space="preserve">Selecione o local de armazenamento dos registros do portal.</value>
+  </data>
+  <data name="Database.Text">
+    <value xml:space="preserve">Base de dados</value>
+  </data>
+  <data name="FileSystem.Text">
+    <value xml:space="preserve">Sistema de arquivos</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre as Configurações do Servidor&lt;/h1&gt;&lt;p&gt;O Super Usuário  pode gerenciar as opções de configuração que se aplicam a todo o portal.&lt;/p&gt;</value>
+  </data>
+  <data name="plLogBuffer.Text">
+    <value xml:space="preserve">Ativar memória temporária para registros de eventos?</value>
+  </data>
+  <data name="plLogBuffer.Help">
+    <value xml:space="preserve">Marcando isto irá registrar na memória e então regularmente salvar no arquivo de dados. Desmarcando isto irá registrar imediatamente no arquivo de dados.</value>
+  </data>
+  <data name="plAutoAccountUnlock.Text">
+    <value xml:space="preserve">Auto-desbloquear contas após:</value>
+  </data>
+  <data name="plAutoAccountUnlock.Help">
+    <value xml:space="preserve">Após o bloqueio de uma conta devido a tentativas de conexão sem sucesso, a conta pode ser desbloqueada automaticamente após um certo período de tempo. Insira o número de minutos de espera para que a conta possa ser automaticamente desbloqueada. Insira "0" para desligar a capacidade de auto-desbloquear.</value>
+  </data>
+  <data name="plCacheMethod.Text">
+    <value xml:space="preserve">Método de cache de módulo:</value>
+  </data>
+  <data name="plCacheMethod.Help">
+    <value xml:space="preserve">O cache de memória fornece uma maior flexibilidade e um maior desempenho, embora isto consuma mais recursos do sistema. O cache de disco consome menos recursos mas não oferece qualquer flexibilidade.</value>
+  </data>
+  <data name="Memory.Text">
+    <value xml:space="preserve">Memória</value>
+  </data>
+  <data name="Disk.Text">
+    <value xml:space="preserve">Disco</value>
+  </data>
+  <data name="ProcessorWebSite.Text">
+    <value xml:space="preserve">Ir para o portal do processador de pagamentos</value>
+  </data>
+  <data name="plHelpUrl.Text">
+    <value xml:space="preserve">Endereço de ajuda:</value>
+  </data>
+  <data name="plHelpUrl.Help">
+    <value xml:space="preserve">Entre com o endereço para Ajuda Online que você irá fornecer. Se você deixar em branco então nenhuma Ajuda Online será oferecida para as áreas de Administração / Servidor do DotNetNuke.</value>
+  </data>
+  <data name="plEnableHelp.Text">
+    <value xml:space="preserve">Ativar ajuda online dos módulos?</value>
+  </data>
+  <data name="plCacheability.Text">
+    <value xml:space="preserve">Cacheabilidade autenticada:</value>
+  </data>
+  <data name="plCacheability.Help">
+    <value xml:space="preserve">Informe o valor do cabeçalho HTTP Cache-Control para usuários autenticados.</value>
+  </data>
+  <data name="NoCache.Text">
+    <value xml:space="preserve">NoCache</value>
+  </data>
+  <data name="Private.Text">
+    <value xml:space="preserve">Private</value>
+  </data>
+  <data name="Public.Text">
+    <value xml:space="preserve">Public</value>
+  </data>
+  <data name="Server.Text">
+    <value xml:space="preserve">Server</value>
+  </data>
+  <data name="ServerAndNoCache.Text">
+    <value xml:space="preserve">ServerAndNoCache</value>
+  </data>
+  <data name="ServerAndPrivate.Text">
+    <value xml:space="preserve">ServerAndPrivate</value>
+  </data>
+  <data name="plUpgrade.Text">
+    <value xml:space="preserve">Verificar atualizações?</value>
+  </data>
+  <data name="plUpgrade.Help">
+    <value xml:space="preserve">Selecione esta opção se você quer que a aplicação verifique se existem atualizações disponíveiss</value>
+  </data>
+  <data name="UpgradeNever.Text">
+    <value xml:space="preserve">Nunca</value>
+  </data>
+  <data name="plAvailable.Text">
+    <value xml:space="preserve">Atualização disponível?</value>
+  </data>
+  <data name="plAvailable.Help">
+    <value xml:space="preserve">Mostra um ícone se uma nova versão da aplicação estiver disponível.</value>
+  </data>
+  <data name="plLog.Text">
+    <value xml:space="preserve">Ver registros de atualização da versão:</value>
+  </data>
+  <data name="plLog.Help">
+    <value xml:space="preserve">Permite a você ver os registros de atualização da base de dados para uma versão específica.</value>
+  </data>
+  <data name="cmdRestart.Text">
+    <value xml:space="preserve">Reiniciar aplicação</value>
+  </data>
+  <data name="plAutoSync.Text">
+    <value xml:space="preserve">Auto-sincronizar o sistema de arquivos?</value>
+  </data>
+  <data name="plAutoSync.Help">
+    <value xml:space="preserve">Marque esta caixa para automaticamente sincronizar o sistema de arquivos.</value>
+  </data>
+  <data name="plPageQuota.Help">
+    <value xml:space="preserve">Você pode especificar um número máximo de páginas por portal.</value>
+  </data>
+  <data name="plPageQuota.Text">
+    <value xml:space="preserve">Quota de páginas:</value>
+  </data>
+  <data name="plUserQuota.Help">
+    <value xml:space="preserve">Você pode especificar um número máximo de usuários por portal.</value>
+  </data>
+  <data name="plUserQuota.Text">
+    <value xml:space="preserve">Quota de usuários:</value>
+  </data>
+  <data name="Performance.Text">
+    <value xml:space="preserve">Configurações de Performance</value>
+  </data>
+  <data name="Page.Text">
+    <value xml:space="preserve">Página</value>
+  </data>
+  <data name="plPageState.Help">
+    <value xml:space="preserve">Selecione o modo para persistir um estado de página. Isto pode ser um campo oculto na página (padrão) ou na memória (cache).  ** ATENÇÃO: persistência de estado de página na memória pode causar problemas no AJAX **</value>
+  </data>
+  <data name="plPageState.Text">
+    <value xml:space="preserve">Persistência do estado da página:</value>
+  </data>
+  <data name="plWhitespace.Help">
+    <value xml:space="preserve">Selecione isto para remover excessos de espaço em branco da resposta enviada ao navegador - isto irá resultar em uma página menor (em torno de 10% a 15% menor) mas irá deixar o HTML menos legível.</value>
+  </data>
+  <data name="plWhitespace.Text">
+    <value xml:space="preserve">Usar filtro de espaços em branco?</value>
+  </data>
+  <data name="plExcludedPaths.Text">
+    <value xml:space="preserve">Diretórios excluídos:</value>
+  </data>
+  <data name="plExcludedPaths.Help">
+    <value xml:space="preserve">Entre uma lista de diretórios excluídos.</value>
+  </data>
+  <data name="plWhitespaceFilter.Text">
+    <value xml:space="preserve">Filtro de espaços em branco:</value>
+  </data>
+  <data name="plWhitespaceFilter.Help">
+    <value xml:space="preserve">Entre uma expressão regular que atuará como um filtro para remover espaços em branco.</value>
+  </data>
+  <data name="valHostFee.Error">
+    <value xml:space="preserve">Tarifa inválida, precisa ser um valor moeda!</value>
+  </data>
+  <data name="LogEmpty.Text">
+    <value xml:space="preserve">O arquivo de registros está vazio para essa versão especificada do programa. Isto geralmente indica que o programa executou com sucesso.</value>
+  </data>
+  <data name="NoLog.Text">
+    <value xml:space="preserve">Não existe um arquivo de registros para essa versão especificada do programa. Isto geralmente indica que o programa nunca foi executado.</value>
+  </data>
+  <data name="Authentication.Text">
+    <value xml:space="preserve">Configurações de Autenticação</value>
+  </data>
+  <data name="EmailErrorMessage.Text">
+    <value xml:space="preserve">Ocorreu um erro ao tentar enviar o email de teste! O erro é:&lt;br /&gt;{0}</value>
+  </data>
+  <data name="plAJAX.Help">
+    <value xml:space="preserve">Marque esta caixa para ativar o suporte ao AJAX.</value>
+  </data>
+  <data name="plAJAX.Text">
+    <value xml:space="preserve">Ativar AJAX?</value>
+  </data>
+  <data name="UserRestart.Text">
+    <value xml:space="preserve">Usuário disparou um reinício da aplicação!</value>
+  </data>
+  <data name="NoPermissions.Text">
+    <value xml:space="preserve">Sem permissões</value>
+  </data>
+  <data name="Items.Text">
+    <value xml:space="preserve">Itens</value>
+  </data>
+  <data name="LegacyDoctype.Text">
+    <value xml:space="preserve">HTML 4 (legado)</value>
+  </data>
+  <data name="TransDoctype.Text">
+    <value xml:space="preserve">XHTML 1.0 transitional</value>
+  </data>
+  <data name="StrictDoctype.Text">
+    <value xml:space="preserve">XHTML 1.0 strict</value>
+  </data>
+  <data name="plRememberMe.Text">
+    <value xml:space="preserve">Ativar "Lembrar de mim" em controles de conexão?</value>
+  </data>
+  <data name="plRememberMe.Help">
+    <value xml:space="preserve">Configurar a caixa "Lembrar de mim" em controles de conexão. Se a lembrança é permitida, usuários poderão criar cookies que serão mantidos durantes as múltiplas visitas.</value>
+  </data>
+  <data name="plWebFarm.Text">
+    <value xml:space="preserve">É Web Farm?</value>
+  </data>
+  <data name="valFileExtensions.Error">
+    <value xml:space="preserve">&lt;br/&gt;Extensões de arquivo podem incluir apenas letras, números e sublinhado, separados por vírgulas.</value>
+  </data>
+  <data name="UpgradeFramework.Text">
+    <value xml:space="preserve">Atualizar o atual .NET Framework!</value>
+  </data>
+  <data name="plNotifyUpgrade.Help">
+    <value xml:space="preserve">Se marcado o administrador do servidor será notificado de atualizações por email.</value>
+  </data>
+  <data name="plNotifyUpgrade.Text">
+    <value xml:space="preserve">Notificar administrador do servidor?</value>
+  </data>
+  <data name="plAdminContainer.Help">
+    <value xml:space="preserve">A moldura selecionada será aplicada em todos módulos no modo de edição em seus portais.</value>
+  </data>
+  <data name="plAdminContainer.Text">
+    <value xml:space="preserve">Moldura para edição:</value>
+  </data>
+  <data name="plJQueryDebugVersion.Help">
+    <value xml:space="preserve">Se marcado, então será usado o arquivo padrão de comandos jQuery. Se desmarcado, então uma versão reduzida será usada, diminuindo significativamente o tamanho do arquivo, mas dificultando sua legibilidade.</value>
+  </data>
+  <data name="plJQueryDebugVersion.Text">
+    <value xml:space="preserve">Usar a versão de depuração do jQuery?</value>
+  </data>
+  <data name="plJQueryHostUrl.Help">
+    <value xml:space="preserve">Este é o endereço completo do programa jQuery. Por padrão este é configurado para o último programa jQuery reduzido hospedado nos servidores CDN do Google para melhorar a performance.</value>
+  </data>
+  <data name="plJQueryHostUrl.Text">
+    <value xml:space="preserve">Endereço do jQuery:</value>
+  </data>
+  <data name="plJQueryUseHosted.Help">
+    <value xml:space="preserve">Se marcado, então o endereço abaixo será usado para buscar o arquivo jQuery. Se desmarcado então cópias locais do arquivo serão usadas.</value>
+  </data>
+  <data name="plJQueryUseHosted.Text">
+    <value xml:space="preserve">Usar jQuery versão da web?</value>
+  </data>
+  <data name="plJQueryVersion.Help">
+    <value xml:space="preserve">Identifica a versão do programa jQuery local.</value>
+  </data>
+  <data name="plJQueryVersion.Text">
+    <value xml:space="preserve">Versão do jQuery instalado:</value>
+  </data>
+  <data name="HostEmail.Error">
+    <value xml:space="preserve">Endereço de email é inválido!</value>
+  </data>
+  <data name="JQuery.Text">
+    <value xml:space="preserve">Configurações JQuery</value>
+  </data>
+  <data name="plBetaNotice.Help">
+    <value xml:space="preserve">Marque esta caixa para exibir uma mensagem indicando que a versão executada é um lançamento beta.</value>
+  </data>
+  <data name="plBetaNotice.Text">
+    <value xml:space="preserve">Exibir mensagem beta?</value>
+  </data>
+  <data name="plThrowExceptions.Help">
+    <value xml:space="preserve">Marque isto para permitir exceções principais que ocorram devido à falta de campos nos dados retornados do banco de dados a ser relançado. Se isto não for marcado o erro será anotado nos registros de eventos. Se isto for marcado o erro será "bubbled up". Esta opção normalmente é usada por desenvolvedores para diagnosticar problemas.</value>
+  </data>
+  <data name="plThrowExceptions.Text">
+    <value xml:space="preserve">Relançar erros CBO:</value>
+  </data>
+  <data name="plPsWarning.Text">
+    <value xml:space="preserve">ATENÇÃO: persistência de estado de página na memória pode causar problemas no AJAX!</value>
+  </data>
+  <data name="ModuleCacheProvider.Help">
+    <value xml:space="preserve">Selecione o provedor padrão de cache de módulos. Esta configuração pode ser substituída individualmente em cada módulo.</value>
+  </data>
+  <data name="ModuleCacheProvider.Text">
+    <value xml:space="preserve">Provedor de cache de módulo:</value>
+  </data>
+  <data name="plContentLocalization.Help">
+    <value xml:space="preserve">Marque isto para ativar a passagem da cultura atual do usuário para o portal e usar o conteúdo traduzido.</value>
+  </data>
+  <data name="plContentLocalization.Text">
+    <value xml:space="preserve">Ativar tradução de conteúdo?</value>
+  </data>
+  <data name="PageCacheProvider.Help">
+    <value xml:space="preserve">Selecione o provedor padrão de cache de página. O provedor de cache deve ser ativado configurando o tempo de cache em cada página.</value>
+  </data>
+  <data name="PageCacheProvider.Text">
+    <value xml:space="preserve">Provedor de cache de saída de página:</value>
+  </data>
+  <data name="plUseCustomModuleCssClass.Text">
+    <value xml:space="preserve">Usar classe CSS personalizada?</value>
+  </data>
+  <data name="plEnableContentLocalization.Help">
+    <value xml:space="preserve">Marque esta caixa para permitir que administradores de portal ativem a tradução de conteúdo em seus portais.</value>
+  </data>
+  <data name="plEnableContentLocalization.Text">
+    <value xml:space="preserve">Ativar tradução de conteúdo?</value>
+  </data>
+  <data name="plJQueryUIHostUrl.Help">
+    <value xml:space="preserve">Este é o endereço completo do programa jQuery UI. Por padrão este é configurado para o último programa jQuery reduzido hospedado nos servidores CDN do Google para melhorar a performance.</value>
+  </data>
+  <data name="plJQueryUIHostUrl.Text">
+    <value xml:space="preserve">Endereço do jQuery UI:</value>
+  </data>
+  <data name="plJQueryUIVersion.Help">
+    <value xml:space="preserve">Identifica a versão do programa jQuery UI local.</value>
+  </data>
+  <data name="plJQueryUIVersion.Text">
+    <value xml:space="preserve">Versão do jQuery UI instalado:</value>
+  </data>
+  <data name="ClientResourceManagement.Text">
+    <value xml:space="preserve">Gerenciamento de Recursos do Navegador</value>
+  </data>
+  <data name="plCrmVersion.Help">
+    <value xml:space="preserve">Para gerenciar o cache do navegador, os recursos do cliente são associados a um número de versão. Este número é aumentado quando uma extensão é instalada, o arquivo 'portal.css' é atualizado ou quando o servidor de cache é limpo. Ele se aplica a qualquer arquivo processado (combinado e/ou minificado). Você pode manualmente aumentar o número abaixo para forçar os navegadores a baixar novas cópias dos arquivos de recursos.</value>
+  </data>
+  <data name="plCrmVersion.Text">
+    <value xml:space="preserve">Versão atual do servidor:</value>
+  </data>
+  <data name="plCrmEnableCompositeFiles.Help">
+    <value xml:space="preserve">Arquivos compostos são combinações de recursos (CSS e JavaScript) criados para reduzir o número de requerimentos de arquivos pelo navegador. Isto aumentará significativamente a velocidade de carregamento da página.</value>
+  </data>
+  <data name="plCrmEnableCompositeFiles.Text">
+    <value xml:space="preserve">Ativar arquivos compostos?</value>
+  </data>
+  <data name="plCrmMinifyCss.Help">
+    <value xml:space="preserve">A minificação de CSS reduzirá o tamanho do código CSS usando expressões regulares para remover comentários, espaços em branco e 'CSS morto'. Isto só estará disponível quando os arquivos compostos estiverem ativados.</value>
+  </data>
+  <data name="plCrmMinifyCss.Text">
+    <value xml:space="preserve">Minificar CSS?</value>
+  </data>
+  <data name="plCrmMinifyJs.Help">
+    <value xml:space="preserve">A minificação de JS reduzirá o tamanho do código JavaScript ao usar JSMin. Isto só estará disponível quando os arquivos compostos estiverem ativados.</value>
+  </data>
+  <data name="plCrmMinifyJs.Text">
+    <value xml:space="preserve">Minificar JS?</value>
+  </data>
+  <data name="CrmIncrementCrmVersionButton.Text">
+    <value xml:space="preserve">Aumentar versão</value>
+  </data>
+  <data name="IncrementCrmVersionButton.Text">
+    <value xml:space="preserve">Aumentar versão do portal</value>
+  </data>
+  <data name="IncrementCrmVersionConfirm.Text">
+    <value xml:space="preserve">&lt;p&gt;Esta ação forçará a todos os visitantes do portal a baixarem novas versões dos arquivos CSS e JavaScript. Você só deveria fazer isto se tiver certeza de que os arquivos foram alterados e você quer que estas mudanças se reflitam nos navegadores dos visitantes.&lt;/p&gt;&lt;p&gt;Você tem certeza de que quer aumentar o número da versão do seu portal?&lt;/p&gt;</value>
+  </data>
+  <data name="IncrementCrmVersionError.Text">
+    <value xml:space="preserve">Ocorreu um erro ao aumentar a versão dos recursos do navegador!</value>
+  </data>
+  <data name="DebugEnabled.Title">
+    <value xml:space="preserve">Nota importante sobre o modo de depuração de aplicação</value>
+  </data>
+  <data name="MinificationSettingsInfo.Text">
+    <value xml:space="preserve">Se as configurações de minificação são alteradas quando os arquivos compostos estão ativos, você deve primeiro salvar as configurações de minificação clicando em 'Atualizar' e depois aumentar o número de versão. Isto emitirá novos arquivos compostos usando a nova configuração de minificação.</value>
+  </data>
+  <data name="MinificationSettingsInfo.Title">
+    <value xml:space="preserve">Nota importante sobre configurações de minificação</value>
+  </data>
+  <data name="txtBatch.Text">
+    <value xml:space="preserve">Número de mensagens enviadas em cada lote:</value>
+  </data>
+  <data name="txtBatch.Help">
+    <value xml:space="preserve">O número de mensagens enviadas pelo agendamento de mensagens em cada lote.</value>
+  </data>
+  <data name="LogSettings.Text">
+    <value xml:space="preserve">Registros</value>
+  </data>
+  <data name="LogSettingsHelp.Text">
+    <value xml:space="preserve">Ver registros de instalação e outros</value>
+  </data>
+  <data name="Html5Doctype.Text">
+    <value xml:space="preserve">HTML 5</value>
+  </data>
+  <data name="LogLocations.Text">
+    <value xml:space="preserve">Locais de Registros</value>
+  </data>
+  <data name="plLogs.Text">
+    <value xml:space="preserve">Arquivos de registros:</value>
+  </data>
+  <data name="plLogs.Help">
+    <value xml:space="preserve">Lista de arquivos de registros disponíveis para visualização.</value>
+  </data>
+  <data name="SelectLog.Text">
+    <value xml:space="preserve">&lt; selecione um arquivo de registros &gt;</value>
+  </data>
+  <data name="plBatch.Help">
+    <value xml:space="preserve">O número de mensagens enviadas pelo agendamento de mensagens em cada lote.</value>
+  </data>
+  <data name="plBatch.Text">
+    <value xml:space="preserve">Número de mensagens enviadas em cada lote:</value>
+  </data>
+  <data name="CdnSettings.Text">
+    <value xml:space="preserve">Configurações de CDN</value>
+  </data>
+  <data name="plMsAjaxCdn.Help">
+    <value xml:space="preserve">Ativar a configuração de CDN para biblioteca Microsoft Ajax?</value>
+  </data>
+  <data name="plMsAjaxCdn.Text">
+    <value xml:space="preserve">Ativar CDN da MS Ajax?</value>
+  </data>
+  <data name="plTelerikCdn.Help">
+    <value xml:space="preserve">Ativar as configurações da CDN dos controles Telerik?</value>
+  </data>
+  <data name="plTelerikCdn.Text">
+    <value xml:space="preserve">Ativar CDN da Telerik?</value>
+  </data>
+  <data name="plAsyncTimeout.Help">
+    <value xml:space="preserve">Defina um valor que indica o tempo, em segundos, antes do prazo acabar para respostas assíncronas se nenhuma resposta for recebida, o valor deve estar entre 90 e 9999 segundos.</value>
+  </data>
+</root>

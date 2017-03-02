@@ -1,0 +1,15 @@
+﻿IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'DetailTypeData')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ALTER COLUMN DetailTypeData nvarchar(400) NULL;
+END
+GO
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsContentLocalization' and column_name = 'DetailTypeData')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] ALTER COLUMN DetailTypeData nvarchar(400) NULL;
+END
+GO
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsArchive' and column_name = 'DetailTypeData')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsArchive] ALTER COLUMN DetailTypeData nvarchar(400) NULL;
+END
+GO

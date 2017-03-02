@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cancel.Text">
+    <value xml:space="preserve">Volver</value>
+  </data>
+  <data name="ControlTitle_newextension.Text">
+    <value xml:space="preserve">Asistente de nueva extensión</value>
+  </data>
+  <data name="Core.Text">
+    <value xml:space="preserve">Idiomas del núcleo</value>
+  </data>
+  <data name="DuplicateName.Text">
+    <value xml:space="preserve">El nombre "{0}" ya existe. Introduzca otro nombre y vuelva a intentarlo.</value>
+  </data>
+  <data name="ExtensionLanguageHelp.Text">
+    <value xml:space="preserve">&lt;strong&gt;Atención:&lt;/strong&gt; Si está creando una extensión de paquete de idioma la extensión ya debe estar definida.</value>
+  </data>
+  <data name="Introduction.Help">
+    <value xml:space="preserve">El asistente de creación de nuevas extensiones permite crear una nueva extensión. Indique la información solicitada en cada paso. Seleccione el tipo de extensión a crear.</value>
+  </data>
+  <data name="Introduction.Title">
+    <value xml:space="preserve">Crear nueva extensión</value>
+  </data>
+  <data name="IntroductionHelp.Text">
+    <value xml:space="preserve">En el primer paso introduzca un nombre único para la nueva extensión. Es recomendable que use el formato "NombreCompañía.Nombre" para prevenir potenciales conflictos si pretende distribuir la extensión. Además, debe proporcionar un nombre amigable para la extensión, una descripción y debe especificar la versión (o se usará el núm. de versión por omisión 0.0.0)</value>
+  </data>
+  <data name="LanguageHelp.Text">
+    <value xml:space="preserve">&lt;strong&gt;Atención:&lt;/strong&gt; Si está creando una extensión de paquete de idioma la extensión ya debe estar definida en el módulo Administración/Idiomas.</value>
+  </data>
+  <data name="OwnerInfo.Help">
+    <value xml:space="preserve">En este último paso puede proporcional detalles opcionales acerca del autor de la extensión. Esta información es muy útil si planea distribuir su extensión.</value>
+  </data>
+  <data name="OwnerInfo.Title">
+    <value xml:space="preserve">Detalles del autor</value>
+  </data>
+  <data name="Package.Text">
+    <value xml:space="preserve">Extensión de idioma</value>
+  </data>
+  <data name="PackageType.Error">
+    <value xml:space="preserve">Debe seleccionar un tipo de paquete de idioma</value>
+  </data>
+  <data name="plExtensionType.Help">
+    <value xml:space="preserve">Seleccione el tipo de extensión a crear</value>
+  </data>
+  <data name="plExtensionType.Text">
+    <value xml:space="preserve">Seleccionar tipo extensión:</value>
+  </data>
+  <data name="plPackageType.Help">
+    <value xml:space="preserve">Seleccione si éste es un paquete de idioma del núcleo o un paquete de idioma para otra extensión.</value>
+  </data>
+  <data name="plPackageType.Text">
+    <value xml:space="preserve">Seleccione tipo paquete de idioma:</value>
+  </data>
+  <data name="Specific_CoreLanguagePack.Help">
+    <value xml:space="preserve">En este paso seleccione el idioma del paquete</value>
+  </data>
+  <data name="Specific_CoreLanguagePack.Title">
+    <value xml:space="preserve">Detalles específicos del paquete de idioma</value>
+  </data>
+  <data name="Specific_ExtensionLanguagePack.Help">
+    <value xml:space="preserve">En este paso seleccione el idioma y la extensión del paquete</value>
+  </data>
+  <data name="Specific_ExtensionLanguagePack.Title">
+    <value xml:space="preserve">Detalles específicos del paquete de idioma</value>
+  </data>
+  <data name="Specific_Module.Help">
+    <value xml:space="preserve">En este paso suministre información específica acerca del módulo</value>
+  </data>
+  <data name="Specific_Module.Title">
+    <value xml:space="preserve">Detalles específicos del módulo</value>
+  </data>
+</root>

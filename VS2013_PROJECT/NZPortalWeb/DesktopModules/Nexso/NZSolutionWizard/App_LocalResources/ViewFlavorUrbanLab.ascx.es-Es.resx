@@ -1,0 +1,894 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AcceptTerms.Text" xml:space="preserve">
+    <value>Empecemos!</value>
+  </data>
+  <data name="Approach.Text" xml:space="preserve">
+    <value>Innovación</value>
+  </data>
+  <data name="ApproachDesc.Text" xml:space="preserve">
+    <value>Resaltar características innovadoras de la solución que pueden atraer posibles aliados o inversionistas.</value>
+  </data>
+  <data name="AutocompleteMessage.Text" xml:space="preserve">
+    <value>Selecciona una organización existente o escribe un nombre para crear una nueva.</value>
+  </data>
+  <data name="AvailableResources.Text" xml:space="preserve">
+    <value>Recursos Disponibles</value>
+  </data>
+  <data name="AvailableResourcesDesc.Text" xml:space="preserve">
+    <value>
+Por favor selecciona los recursos que se encuentran listos para utilizar en la implementación de tu Solución. Esta selección realmente mejora la descripción de tu solucion y muestra el esfuerzo que has realizado para que sea escalable y replicable.</value>
+  </data>
+  <data name="Basics.Text" xml:space="preserve">
+    <value>Basics</value>
+  </data>
+  <data name="Beneficiaries.Text" xml:space="preserve">
+    <value>Usuarios o beneficiarios de la Solución:</value>
+  </data>
+  <data name="BeneficiariesDesc.Text" xml:space="preserve">
+    <value>Identifica al usuario final o beneficiario de tu Solución. </value>
+  </data>
+  <data name="BlockAdditionalInformationDesc.Text" xml:space="preserve">
+    <value>Describe los beneficios o impactos que puede generar la aplicación o uso de tu Solución. ¿Cuáles son las expectativas realistas de tu Solución?</value>
+  </data>
+  <data name="BlockBenefits.Text" xml:space="preserve">
+    <value>Impacto</value>
+  </data>
+  <data name="BlockBenefitsDesc.Text" xml:space="preserve">
+    <value>Expliquen cualitativa y cuantitativamente el posible impacto de la solución urbana. Hacer énfasis en el alcance de este impacto sobre la ciudad y como se articularía con su crecimiento urbano hacia el futuro.</value>
+  </data>
+  <data name="BlockCostDetails.Text" xml:space="preserve">
+    <value>Justificación de los costos</value>
+  </data>
+  <data name="BlockCostDetailsDesc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BlockDetails.Text" xml:space="preserve">
+    <value>Implementación</value>
+  </data>
+  <data name="BlockDetailsDesc.Text" xml:space="preserve">
+    <value>Descripción general de cuál sería la estrategia que se plantea para implementar la solución urbana. Proporcionen información sobre las etapas estimadas.</value>
+  </data>
+  <data name="BlockDurationDetails.Text" xml:space="preserve">
+    <value>Justificación de la duración</value>
+  </data>
+  <data name="BlockDurationDetailsDesc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BlockEvidences.Text" xml:space="preserve">
+    <value>Evidencias (Opcional)</value>
+  </data>
+  <data name="BlockEvidencesDesc.Text" xml:space="preserve">
+    <value>¿Hay alguna experiencia exitosa en la región relacionada a la estrategia urbana que plantean? ¿Hay soluciones urbanas similares en ciudades o comunidades de ALC que les hayan servido de referencia o inspiración para abordar la problemática? ¿Tienen información o documentos sobre estas evidencias? De manera opcional pueden compartirlas aquí.</value>
+  </data>
+  <data name="BlockFinish.Text" xml:space="preserve">
+    <value>Vista Previa</value>
+  </data>
+  <data name="BlockFinishDesc.Text" xml:space="preserve">
+    <value>Un vistazo de cómo NEXSO presenta tu solución urbana antes de que se publique.   ¡Los invitamos a cambiar la foto de portada por una del equipo de trabajo!</value>
+  </data>
+  <data name="BlockInnovation.Text" xml:space="preserve">
+    <value>Innovación</value>
+  </data>
+  <data name="BlockInnovationDesc.Text" xml:space="preserve">
+    <value>Describan porqué la solución urbana es innovadora, única y adaptada al contexto. ¿Cómo aborda los principales problemas urbanístico-sociales identificados y en qué se diferenciaría de otras propuestas? ¿Es viable técnica y económicamente?</value>
+  </data>
+  <data name="BlockOrganizationBasicDetails.Text" xml:space="preserve">
+    <value>Detalles Básicos</value>
+  </data>
+  <data name="BlockOrganizationBasicDetailsDesc.Text" xml:space="preserve">
+    <value>Información de la Organización. Selecciona una existente o escribe un nombre para crear una nueva.</value>
+  </data>
+  <data name="BlockProblem.Text" xml:space="preserve">
+    <value>Problema</value>
+  </data>
+  <data name="BlockProblemDesc.Text" xml:space="preserve">
+    <value>Describan la principal problemática urbanística-social en el área de intervención que buscará resolver la propuesta de su equipo. Pueden enfocarse en 2 o 3 áreas principales de acción de la solución urbana.</value>
+  </data>
+  <data name="BlockTitle.Text" xml:space="preserve">
+    <value>Empieza aquí dándole un nombre a tu solución</value>
+  </data>
+  <data name="BlockTitleDesc.Text" xml:space="preserve">
+    <value>&lt;/br&gt;</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="BtnCreateOrganization.Text" xml:space="preserve">
+    <value>Crea una organización</value>
+  </data>
+  <data name="btnOk.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Cancel.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Challenge.Text" xml:space="preserve">
+    <value>Descripción del Problema</value>
+  </data>
+  <data name="ChallengeDesc.Text" xml:space="preserve">
+    <value>
+&lt;ul&gt;
+&lt;li&gt;¿Cuál es el contexto urbano y la problemática que vive la comunidad?&lt;/li&gt;
+&lt;li&gt;Identificar los principales problemas que enfrentan los habitantes del sector y a cuáles quiere dar respuesta la solución urbana. &lt;/li&gt;
+&lt;li&gt;¿Cuál es la causa u origen de los principales problemas identificados?&lt;/li&gt;
+&lt;li&gt;¿Cuál es la dimensión o magnitud de los principales problemas identificados? Se pueden mencionar cifras o datos.&lt;/li&gt;
+&lt;/ul&gt;
+</value>
+  </data>
+  <data name="chkPublicationApproval.Text" xml:space="preserve">
+    <value>Acepto que mi Solución sea publicada en &lt;a href="inicio.aspx" target="_blank"&gt; nexso.org. &lt;/ a&gt;</value>
+  </data>
+  <data name="chkPublicationApprovalCustom.Text" xml:space="preserve">
+    <value>Quiero que mi Solución sea publicada en nexso.org luego de terminar el proceso de selección por parte del Fondo Especial Japonés de Reducción de la Pobreza (JPO). Solo la información relativa a mi Solución será publicada. La información contenida en la Expresión de Interés y sus anexos no será visible para el publico.</value>
+  </data>
+  <data name="ConfirmationDelete.Text" xml:space="preserve">
+    <value>¿Seguro que quieres eliminar esta Solución?</value>
+  </data>
+  <data name="Cost.Text" xml:space="preserve">
+    <value>Unidad de Costo</value>
+  </data>
+  <data name="CostDesc.Text" xml:space="preserve">
+    <value>Una primera aproximación y de carácter referencial sobre el costo para la implementación de la solución urbana.</value>
+  </data>
+  <data name="CostDetails.Text" xml:space="preserve">
+    <value>Justificación de los costos</value>
+  </data>
+  <data name="CostDetailsDesc.Text" xml:space="preserve">
+    <value>Mencionar, de manera general y referencial, las acciones principales a realizar por etapas o proyectos  asociados a los costos estimados para la implementación de la solución. (Por ejemplo: estudios base, desarrollo de viviendas, plan de movilidad, equipamientos, etc.)</value>
+  </data>
+  <data name="CostValue.Text" xml:space="preserve">
+    <value>Costo estimado (US$)</value>
+  </data>
+  <data name="DeleteSolution.Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="DeliveryFormat.Text" xml:space="preserve">
+    <value>Tipo  de  Solución</value>
+  </data>
+  <data name="DeliveryFormatDesc.Text" xml:space="preserve">
+    <value>Hay muchos tipos de Soluciones! Selecciona el tipo que mejor representa la tuya.</value>
+  </data>
+  <data name="DurationDetails.Text" xml:space="preserve">
+    <value>Justificación de la duración</value>
+  </data>
+  <data name="DurationDetailsDesc.Text" xml:space="preserve">
+    <value>Mencionar los tiempos estimados de cada una de las diferentes etapas durante la implementación de la solución urbana.</value>
+  </data>
+  <data name="EditModule.Text" xml:space="preserve">
+    <value>Edit Module</value>
+  </data>
+  <data name="Finish.Text" xml:space="preserve">
+    <value>Enviar la Solución Urbana</value>
+  </data>
+  <data name="GuideLines.Text" xml:space="preserve">
+    <value>Lineamientos</value>
+  </data>
+  <data name="Implementation.Text" xml:space="preserve">
+    <value>Previsualización</value>
+  </data>
+  <data name="ImplementationDetails.Text" xml:space="preserve">
+    <value>Detalles de Implementación</value>
+  </data>
+  <data name="ImplementationDetailsDesc.Text" xml:space="preserve">
+    <value>&lt;ul&gt;&lt;li&gt;¿Cuáles son los pasos más importantes a seguir para implementar la solución urbana desde la etapa de planificación hasta su ejecución? &lt;/li&gt;
+&lt;li&gt;¿Cuáles serían las acciones principales de ese proceso? &lt;/li&gt;
+&lt;li&gt;Esta información permitirá luego estimar los costos y tiempos aproximados para la implementación de la solución. &lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="lblCreateNewOrganization.Text" xml:space="preserve">
+    <value>Select this Organization</value>
+  </data>
+  <data name="Location.Text" xml:space="preserve">
+    <value>Lugares de Prueba (Opcional)</value>
+  </data>
+  <data name="LocationDesc.Text" xml:space="preserve">
+    <value>Ubiquen la ciudad o la comunidad donde se implementaron esos planes o proyectos referenciales en la región.</value>
+  </data>
+  <data name="LongDescription.Text" xml:space="preserve">
+    <value>Información adicional</value>
+  </data>
+  <data name="LongDescriptionDesc.Text" xml:space="preserve">
+    <value>En esta sección intenten convencer al jurado con un mensaje claro y conciso de porque la solución urbana que proponen es única y diferente. Ofrezcan detalles que hagan innovadora la solución urbana. Recomendamos no repetir el nombre ya que se podrán ver juntos.</value>
+  </data>
+  <data name="MailTemplateNewSolution.Text" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0  Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns=" http://www.w3.org/1999/xhtml " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+
+&lt;head&gt;
+    &lt;meta name=" viewport " content=" width=device-width " /&gt;
+    &lt;meta http-equiv=" Content-Type " content=" text/html; charset=UTF-8 " /&gt;
+    &lt;title&gt;una nueva Solución&lt;/title&gt;
+
+
+    &lt;style type=" text/css "&gt;
+        img {
+            max-width: 100%;
+        }
+        
+        body {
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: none;
+            width: 100% !important;
+            height: 100%;
+            line-height: 1.6;
+        }
+        
+        body {
+            background-color: #f6f6f6;
+        }
+        
+        @media only screen and (max-width: 640px) {
+            h1 {
+                font-weight: 600 !important;
+                margin: 20px 0 5px !important;
+            }
+            h2 {
+                font-weight: 600 !important;
+                margin: 20px 0 5px !important;
+            }
+            h3 {
+                font-weight: 600 !important;
+                margin: 20px 0 5px !important;
+            }
+            h4 {
+                font-weight: 600 !important;
+                margin: 20px 0 5px !important;
+            }
+            h1 {
+                font-size: 22px !important;
+            }
+            h2 {
+                font-size: 18px !important;
+            }
+            h3 {
+                font-size: 16px !important;
+            }
+            .container {
+                width: 100% !important;
+            }
+            .content {
+                padding: 10px !important;
+            }
+            .content-wrap {
+                padding: 10px !important;
+            }
+            .invoice {
+                width: 100% !important;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6; background: #fff; margin: 0; padding: 0; "&gt;
+
+    &lt;table class=" body-wrap " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background: #f6f6f6; margin: 0; padding: 0; "&gt;
+        &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+            &lt;td style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0; " valign=" top "&gt;&lt;/td&gt;
+            &lt;td class=" container " width=" 600 " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto; padding: 0; " valign=" top "&gt;
+                &lt;div class=" content " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px; "&gt;
+                    &lt;table class=" main " width=" 100% " cellpadding=" 0 " cellspacing=" 0 " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; background: #fff; margin: 0; padding: 0; border: 1px solid #e9e9e9; "&gt;
+                        &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                            &lt;td class=" alert alert-warning " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #333; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; border-bottom: 4px solid #e9e9e9; background: #ffffff; margin: 0; padding: 20px; " align=" center " valign=" top "&gt;
+                                &lt;a href=" http://www.nexso.org "&gt;&lt;img src="http://www.nexso.org/Portals/7/Challenges/imagen.png" alt=" Welcome to NEXSO! " width="500" height="175" style=" display: block; " /&gt;&lt;/a&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                            &lt;td class=" content-wrap " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px; " valign=" top "&gt;
+                                &lt;table width=" 100% " cellpadding=" 0 " cellspacing=" 0 " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                    &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                        &lt;td class=" content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; vertical-align: top; margin: 0; padding: 0 0 20px; " valign=" top "&gt;
+                                            &lt;strong style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; margin: 0; padding: 0; "&gt;{SOLUTION:Title}&lt;/strong&gt;
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                        &lt;td class=" content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px; " valign=" top "&gt;
+                                            Felicitaciones, {USER:FirstName}. Has comenzado una nueva Solución en NEXSO. A continuación te proveemos una guía con lo que debes completar para ver tu Solución publicada.
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                        &lt;td class=" content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; vertical-align: top; margin: 0; padding: 0 0 20px; " valign=" top "&gt;
+                                            &lt;strong style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; margin: 0; padding: 0; "&gt;Lo que necesitas para que tu Solución urbana sea publicada exitosamente&lt;/strong&gt;
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                        &lt;td class=" content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px; " valign=" top "&gt;
+                                            &lt;strong style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;1. Empieza aquí&lt;/strong&gt;&lt;br/&gt;El título, la propuesta de valor, la universidad.
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                        &lt;td class=" content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px; " valign=" top "&gt;
+                                            &lt;strong style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;2. Problema&lt;/strong&gt;&lt;br/&gt;Describan la principal problemática urbanística-social en el área de intervención que buscará resolver la propuesta de su equipo.
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                        &lt;td class=" content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px; " valign=" top "&gt;
+                                            &lt;strong style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;3. Innovación&lt;/strong&gt;&lt;br/&gt;Describan porqué la solución urbana es innovadora, única y adaptada al contexto.
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                        &lt;td class=" content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px; " valign=" top "&gt;
+                                            &lt;strong style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;4. Impacto&lt;/strong&gt;&lt;br/&gt;Expliquen cualitativa y cuantitativamente el posible impacto de la solución urbana.
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                        &lt;td class=" content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px; " valign=" top "&gt;
+                                            &lt;strong style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;5. Implementación&lt;/strong&gt;&lt;br/&gt;Descripción general de cuál sería la estrategia que se plantea para implementar la solución urbana.
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                        &lt;td class=" content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px; " valign=" top "&gt;
+                                            &lt;strong style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;6. Información adicional&lt;/strong&gt;&lt;br/&gt;Más información sobre el equipo de trabajo y la solución urbana.
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                        &lt;td class=" content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px; " valign=" top "&gt;
+                                            &lt;strong style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;7. Finalizar&lt;/strong&gt;&lt;br/&gt;Publica tu solución urbana.
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                        &lt;td class=" content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px; " valign=" top "&gt;
+                                            &lt;a href=" {SOLUTION:URL} " class=" btn-primary " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background: #80b63f; margin: 0; padding: 0; border-color: #80b63f; border-style: solid; border-width: 10px 20px; "&gt;Edita tu Solución&lt;/a&gt;
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                        &lt;td class=" content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px; " valign=" top "&gt;
+                                            Para apoyo adicional sobre cómo publicar tu Solución por favor visita nuestra &lt;a href=" http://www.nexso.org/en-us/Support " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #2993d4; text-decoration: underline; margin: 0; padding: 0; "&gt;página de ayuda&lt;/a&gt;.
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+
+
+                                &lt;/table&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                            &lt;td class=" alert alert-warning " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; color: #fff; font-weight: 500; text-align: left; border-radius: 0 0 3px 3px; border-top: 1px solid #e9e9e9; background: #2993d4; margin: 0; padding: 20px; " align=" left " valign=" top "&gt;
+                                &lt;a href=" http://www.nexso.org/es-es/Login " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; color: #fff; text-decoration: underline; margin: 0; padding: 0; "&gt;Restablecer su contraseña&lt;/a&gt;.
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                    &lt;div class=" footer " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; clear: both; color: #999; margin: 0; padding: 20px; "&gt;
+                        &lt;table width=" 100% " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                            &lt;tr style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0; "&gt;
+                                &lt;td class=" aligncenter content-block " style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px; " align=" center " valign=" top "&gt;Inter-American Development Bank&lt;br/&gt; Multilateral Investment Fund&lt;br/&gt; 1300 New York Ave NW, Washington, DC 20577, USA&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td style=" font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0; " valign=" top "&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</value>
+  </data>
+  <data name="MailTemplateNewSolutionSubject.Text" xml:space="preserve">
+    <value>{USER:FirstName} Asegúrate de convertir tu borrador en una solución.</value>
+  </data>
+  <data name="MailTemplatePublishedSolution.Text" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+
+&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width" /&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+    &lt;title&gt;¡Su solución urbana ha sido enviada con éxito!&lt;/title&gt;
+
+
+    &lt;style type="text/css"&gt;
+        img {
+            max-width: 100%;
+        }
+        
+        body {
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: none;
+            width: 100% !important;
+            height: 100%;
+            line-height: 1.6;
+        }
+        
+        body {
+            background-color: #f6f6f6;
+        }
+        
+        @media only screen and (max-width: 640px) {
+            h1 {
+                font-weight: 600 !important;
+                margin: 20px 0 5px !important;
+            }
+            h2 {
+                font-weight: 600 !important;
+                margin: 20px 0 5px !important;
+            }
+            h3 {
+                font-weight: 600 !important;
+                margin: 20px 0 5px !important;
+            }
+            h4 {
+                font-weight: 600 !important;
+                margin: 20px 0 5px !important;
+            }
+            h1 {
+                font-size: 22px !important;
+            }
+            h2 {
+                font-size: 18px !important;
+            }
+            h3 {
+                font-size: 16px !important;
+            }
+            .container {
+                width: 100% !important;
+            }
+            .content {
+                padding: 10px !important;
+            }
+            .content-wrap {
+                padding: 10px !important;
+            }
+            .invoice {
+                width: 100% !important;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6; background: #fff; margin: 0; padding: 0;"&gt;
+
+    &lt;table class="body-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background: #f6f6f6; margin: 0; padding: 0;"&gt;
+        &lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+            &lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+            &lt;td class="container" width="600" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto; padding: 0;" valign="top"&gt;
+                &lt;div class="content" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;"&gt;
+                    &lt;table class="main" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; background: #fff; margin: 0; padding: 0; border: 1px solid #e9e9e9;"&gt;
+                        &lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+                            &lt;td class="alert alert-warning" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #333; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; border-bottom: 4px solid #e9e9e9; background: #ffffff; margin: 0; padding: 20px;" align="center" valign="top"&gt;
+                                &lt;a href="http://www.nexso.org"&gt;&lt;img src="http://www.nexso.org/Portals/7/Challenges/imagen.png" alt="Welcome to NEXSO!" width="500" height="175" style="display: block;" /&gt;&lt;/a&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+                            &lt;td class="content-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px;" valign="top"&gt;
+                                &lt;table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+
+                                    &lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 30px; margin: 0; padding: 0;"&gt;
+                                        &lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 30px; vertical-align: top; margin: 0; padding: 0 0 20px; text-align: center;" valign="top"&gt;
+                                            &lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 30px; margin: 0; padding: 0; "&gt;¡Muchas gracias! &lt;/strong&gt;
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                   
+                                    &lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 30px; margin: 0; padding: 0;"&gt;
+                                        &lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 30px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+                                            &lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 25px; margin: 0; padding: 0;"&gt;
+Ya están participando en el concurso BID UrbanLab de Santa Marta, Colombia.
+
+La propuesta fue recibida correctamente y estará siendo evaluada en las próximas semanas. 
+&lt;/strong&gt;
+                                        &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    
+                                    &lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+
+                                        &lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+                                            &lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+                                                &lt;a href="{SOLUTION:URL}" class="btn-primary" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background: #80b63f; margin: 0; padding: 0; border-color: #80b63f; border-style: solid; border-width: 10px 20px;"&gt;Ver solución urbana&lt;/a&gt;
+                                            &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+                                            &lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+
+                                                &lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+                                                    &lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+                                    &lt;td class="alert alert-warning" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; color: #fff; font-weight: 500; text-align: left; border-radius: 0 0 3px 3px; border-top: 1px solid #e9e9e9; background: #2993d4; margin: 0; padding: 20px;" align="left" valign="top"&gt;
+                                        &lt;a href="http://www.nexso.org/es-es/Login" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; color: #fff; text-decoration: underline; margin: 0; padding: 0;"&gt;Restablecer su contraseña&lt;/a&gt;.
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                    &lt;/table&gt;
+                    &lt;div class="footer" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; clear: both; color: #999; margin: 0; padding: 20px;"&gt;
+                        &lt;table width="100%" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+                            &lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+                                &lt;td class="aligncenter content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px;" align="center" valign="top"&gt;Banco Interamericano de Desarrollo &lt;br/&gt; 1300 New York Ave NW, Washington, DC 20577, USA&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/td&gt;
+                &lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+    &lt;/table&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</value>
+  </data>
+  <data name="MailTemplatePublishedSolutionSubject.Text" xml:space="preserve">
+    <value>{USER:FirstName} Tu Solución es ahora elegible para participar en oportunidades de NEXSO!</value>
+  </data>
+  <data name="MaxLengthExceeded.Text" xml:space="preserve">
+    <value>Has excedido el maximo de caracteres o palabras.</value>
+  </data>
+  <data name="Next.Text" xml:space="preserve">
+    <value>Guardar y Continuar</value>
+  </data>
+  <data name="OrganizationAttached.Text" xml:space="preserve">
+    <value>Organización</value>
+  </data>
+  <data name="OrganizationAttachedDesc.Text" xml:space="preserve">
+    <value>Seleccionen su universidad en la lista, de no aparecer, deben registrarla</value>
+  </data>
+  <data name="Preview.Text" xml:space="preserve">
+    <value>Previsualización</value>
+  </data>
+  <data name="Previous.Text" xml:space="preserve">
+    <value>Atrás</value>
+  </data>
+  <data name="ProjectDuration.Text" xml:space="preserve">
+    <value>Tiempo de implementación</value>
+  </data>
+  <data name="ProjectDurationDesc.Text" xml:space="preserve">
+    <value>Indiquen cuánto tiempo aproximado, de carácter referencial, puede tomar la implementación de la solución urbana que proponen.</value>
+  </data>
+  <data name="Proof.Text" xml:space="preserve">
+    <value>Evidencias</value>
+  </data>
+  <data name="Results.Text" xml:space="preserve">
+    <value>Impacto de la Solución</value>
+  </data>
+  <data name="ResultsDesc.Text" xml:space="preserve">
+    <value>&lt;ul&gt;&lt;li&gt;¿Cómo cuantifican (con números) el impacto que pudiera tener la solución urbana para el sector y la ciudad?  ¿Cuál es su alcance potencial hacia el futuro? &lt;/li&gt;
+&lt;li&gt;¿Cómo puede ser la solución urbana que proponen sostenible en el tiempo? 
+&lt;/li&gt;
+&lt;li&gt;Incluir cifras o proyecciones sobre los posibles beneficiados de la solución. &lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="Review.Text" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="ReviewText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revtxtCost.Text" xml:space="preserve">
+    <value>Digite un número entero o decimal. Ej. 1,352,365.36  ó 1352365.36</value>
+  </data>
+  <data name="rfvddCost.Text" xml:space="preserve">
+    <value>Seleciona un tipo de costo</value>
+  </data>
+  <data name="rfvddProjectDuration.Text" xml:space="preserve">
+    <value>Selecciona un tipo de duración de proyecto</value>
+  </data>
+  <data name="rfvRadAutoCompleteBox1.Text" xml:space="preserve">
+    <value>Selecciona o ingresa el nombre de una organización</value>
+  </data>
+  <data name="rfvtxtApproach.Text" xml:space="preserve">
+    <value>Definición de la innovación es requerida</value>
+  </data>
+  <data name="rfvtxtAvailableResources.Text" xml:space="preserve">
+    <value>Debes seleccionar por lo menos un recurso</value>
+  </data>
+  <data name="rfvtxtBeneficiaries.Text" xml:space="preserve">
+    <value>Debes seleccionar entre 1 y 3 beneficiarios</value>
+  </data>
+  <data name="rfvtxtChallenge.Text" xml:space="preserve">
+    <value>Definición de problema es requerida.</value>
+  </data>
+  <data name="rfvtxtCost.Text" xml:space="preserve">
+    <value>Costo estimado es requerido.</value>
+  </data>
+  <data name="rfvtxtCostDetails.Text" xml:space="preserve">
+    <value>Detalles de Costos son requeridos.</value>
+  </data>
+  <data name="rfvtxtDeliveryFormat.Text" xml:space="preserve">
+    <value>Debes seleccionar entre 1 y 3 formatos de entrega</value>
+  </data>
+  <data name="rfvtxtDurationDetails.Text" xml:space="preserve">
+    <value>Detalles de Duración son requeridos</value>
+  </data>
+  <data name="rfvtxtImplementationDetails.Text" xml:space="preserve">
+    <value>Detalles de Implementación son requeridos.</value>
+  </data>
+  <data name="rfvtxtLongDescription.Text" xml:space="preserve">
+    <value>Información adicional es requerida</value>
+  </data>
+  <data name="rfvtxtResults.Text" xml:space="preserve">
+    <value>Definición de los Beneficios es requerido</value>
+  </data>
+  <data name="rfvtxtShortDescription.Text" xml:space="preserve">
+    <value>Resumen es requerido</value>
+  </data>
+  <data name="rfvtxtSubmissionTitle.Text" xml:space="preserve">
+    <value>Titulo es requerido</value>
+  </data>
+  <data name="rfvtxtTheme.Text" xml:space="preserve">
+    <value>Debes seleccionar entre 1 y 3 temas</value>
+  </data>
+  <data name="Save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveContinue.Text" xml:space="preserve">
+    <value>Save and Continue</value>
+  </data>
+  <data name="SelectItem.Text" xml:space="preserve">
+    <value>Selecciona un Item</value>
+  </data>
+  <data name="ShortDescription.Text" xml:space="preserve">
+    <value>Propuesta de valor</value>
+  </data>
+  <data name="ShortDescriptionDesc.Text" xml:space="preserve">
+    <value>Mensaje claro y conciso de por qué la solución urbana es única e innovadora.</value>
+  </data>
+  <data name="SolutionSettings.Text" xml:space="preserve">
+    <value>Asistente para crear soluciones</value>
+  </data>
+  <data name="SolutionSettingsMsg.Text" xml:space="preserve">
+    <value>message</value>
+  </data>
+  <data name="Step0.Text" xml:space="preserve">
+    <value>Empieza aquí</value>
+  </data>
+  <data name="Step0ShortMessage.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step0Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step1.Text" xml:space="preserve">
+    <value>Problema</value>
+  </data>
+  <data name="Step1ShortMessage.Text" xml:space="preserve">
+    <value>Toda Solución resuelve un problema.</value>
+  </data>
+  <data name="Step1Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step2.Text" xml:space="preserve">
+    <value>Innovación</value>
+  </data>
+  <data name="Step2ShortMessage.Text" xml:space="preserve">
+    <value>Toda Solución tiene una innovación.</value>
+  </data>
+  <data name="Step2Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step3.Text" xml:space="preserve">
+    <value>Impacto</value>
+  </data>
+  <data name="Step3ShortMessage.Text" xml:space="preserve">
+    <value>Toda Solución beneficia a alguien más.</value>
+  </data>
+  <data name="Step3Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step4.Text" xml:space="preserve">
+    <value>Implementación</value>
+  </data>
+  <data name="Step4ShortMessage.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step4Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step5.Text" xml:space="preserve">
+    <value>Evidencias</value>
+  </data>
+  <data name="Step5ShortMessage.Text" xml:space="preserve">
+    <value>Review your solution before publishing</value>
+  </data>
+  <data name="Step5Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Step6.Text" xml:space="preserve">
+    <value>Publicar</value>
+  </data>
+  <data name="Step6ShortMessage.Text" xml:space="preserve">
+    <value>Tu solucion has sido publicada con exito.</value>
+  </data>
+  <data name="Step6Title.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SubmissionTitle.Text" xml:space="preserve">
+    <value>Nombre de la solución</value>
+  </data>
+  <data name="SubmissionTitleDesc.Text" xml:space="preserve">
+    <value>Nombre de la solución urbana. El nombre debe ser corto, atractivo y reflejar la idea central de la propuesta.</value>
+  </data>
+  <data name="SupportDocuments.Text" xml:space="preserve">
+    <value>Documentos de Apoyo  (Opcional y es visible a toda la comunidad)</value>
+  </data>
+  <data name="SupportDocumentsDesc.Text" xml:space="preserve">
+    <value>De manera opcional, podrán subir aquí la información o documentos de soporte con las evidencias de planes o proyectos en la región que les hayan servido de referencia o inspiración para abordar la problemática planteada. Esta información será de utilidad para ampliar el conocimiento de autoridades, técnicos y especialistas locales sobre referencias similares exitosas en ALC.</value>
+  </data>
+  <data name="TermsAcceptMessage.Text" xml:space="preserve">
+    <value>I understand that in order to have my submission listed in NEXSO I must meet the Submission Guidelines and I must meet eligibility requirements.</value>
+  </data>
+  <data name="TermsMessage.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Theme.Text" xml:space="preserve">
+    <value>Temas relacionados con el problema</value>
+  </data>
+  <data name="ThemeDesc.Text" xml:space="preserve">
+    <value>Seleccionen los principales temas de desarrollo urbano que se relacionan al problema identificado por el equipo (pueden seleccionar entre 1 y 3 temas)</value>
+  </data>
+  <data name="TitlePopUp.Text" xml:space="preserve">
+    <value>Eliminar Solución</value>
+  </data>
+  <data name="Verification.Text" xml:space="preserve">
+    <value>Gracias por verificar tu cuenta. Ahora puede crear tu soluciön.</value>
+  </data>
+  <data name="lblMessage.Text" xml:space="preserve">
+    <value>&lt;div class="row confirmation-page no-sidebar"&gt;
+&lt;div class="content-wrapper"&gt;
+&lt;header class="intro"&gt;&lt;div class="confirmation-page"&gt;&lt;h1&gt;Lo sentimos, es demasiado tarde.&lt;/h1&gt;
+&lt;h1&gt;Este desafío se ha cerrado.&lt;/h1&gt;&lt;/div&gt;&lt;/header&gt;&lt;/div&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="Maxlength.Text" xml:space="preserve">
+    <value>{r} palabras disponibles de {m}</value>
+  </data>
+  <data name="hlExplore.Text" xml:space="preserve">
+    <value>Busque y mire el trabajo de otros</value>
+  </data>
+  <data name="hlViewDetails.Text" xml:space="preserve">
+    <value>Ver más detalles</value>
+  </data>
+  <data name="hlViewSolution.Text" xml:space="preserve">
+    <value>Ver Solución</value>
+  </data>
+  <data name="hlWhatIsNexso.Text" xml:space="preserve">
+    <value>Qué es NEXSO?</value>
+  </data>
+  <data name="lbHeader.Text" xml:space="preserve">
+    <value>&lt;div class="row confirmation-page no-sidebar"&gt;
+&lt;div class="content-wrapper"&gt;
+&lt;header class="intro"&gt;
+&lt;div class="confirmation-page"&gt;
+&lt;h1&gt;¡Muchas gracias!&lt;/h1&gt;
+&lt;p class="lead"&gt;&lt;strong&gt;Ha entrado automáticamente al desafío actual de NEXSO. &lt;/strong&gt;&lt;/p&gt;
+&lt;p class="lead"&gt;Estaremos en contacto con usted si su entrada ha sido selecionada por el jurado.&lt;/p&gt;
+&lt;h1 class="icon-star"&gt;&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/header&gt;
+&lt;h2&gt;Qué hacer a continuación&lt;/h2&gt;
+&lt;ul class="toc"&gt;
+    &lt;li style="display: none;"&gt;&lt;a href="OutUrl"&gt;Ver más detalles&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/es-es/solprofile/sl/"&gt;Ver Solución&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/es-es/explorar"&gt;Busque y mire el trabajo de otros&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/es-es/¿quéesnexso"&gt;Qué es NEXSO?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReUse.Text" xml:space="preserve">
+    <value>Reutiliza una solución</value>
+  </data>
+  <data name="InvalidFormat.Text" xml:space="preserve">
+    <value>Formato inválido</value>
+  </data>
+</root>

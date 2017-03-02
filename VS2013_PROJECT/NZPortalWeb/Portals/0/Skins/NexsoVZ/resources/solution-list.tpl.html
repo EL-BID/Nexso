@@ -1,0 +1,17 @@
+﻿<ul id="latest-solutions-list" class="cards-list featured-list">
+    {{#solutions}}
+    <li class="card-wrapper">
+        {{>solution}}
+    </li>
+    {{/solutions}}
+
+    {{#times placeholders}}
+    <li class="card-wrapper">
+        {{>solution-placeholder}}
+    </li>
+    {{/times}}
+</ul>
+
+{{#if showLoadMore}}
+<button class="bttn bttn-default bttn-m js-load-more">Load</button>
+{{/if}}

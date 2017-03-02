@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountSettings.Text" xml:space="preserve">
+    <value>Instituição</value>
+  </data>
+  <data name="AccountSettingsMsg.Text" xml:space="preserve">
+    <value>Criar ou editar suas informações organização, observando que os campos obrigatórios estão disponíveis para visualização pública.</value>
+  </data>
+  <data name="Address.Text" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="Biografy.Text" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="BiografyDesc.Text" xml:space="preserve">
+    <value>Descreva aqui brevemente a história, a missão e a visão de sua organização ou negócio.</value>
+  </data>
+  <data name="Cancel.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="City.Text" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="Country.Text" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="CreateNew.Text" xml:space="preserve">
+    <value>Criar Novo Perfil</value>
+  </data>
+  <data name="EditProfile.Text" xml:space="preserve">
+    <value>Editar Perfil</value>
+  </data>
+  <data name="Email.Text" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmailDesc.Text" xml:space="preserve">
+    <value>Por favor, forneça o endereço de e-mail institucional e não um email pessoal.</value>
+  </data>
+  <data name="Facebook.Text" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="FacebookDesc.Text" xml:space="preserve">
+    <value>Por favor, forneça o nome de usuário do Facebook. (opcional).</value>
+  </data>
+  <data name="FirstName.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Google.Text" xml:space="preserve">
+    <value>Google+</value>
+  </data>
+  <data name="GoogleDesc.Text" xml:space="preserve">
+    <value>Por favor, forneça o nome de usuário do Google+. (opcional).</value>
+  </data>
+  <data name="ImageInfo.Text" xml:space="preserve">
+    <value>Logotipo</value>
+  </data>
+  <data name="ImageInfoDesc.Text" xml:space="preserve">
+    <value>Fazer upload de um logotipo para a marca de suas soluções.</value>
+  </data>
+  <data name="InstitutionalInformation.Text" xml:space="preserve">
+    <value>Informações sobre a Organização</value>
+  </data>
+  <data name="InstitutionCategory.Text" xml:space="preserve">
+    <value>Organização Categoria</value>
+  </data>
+  <data name="LastName.Text" xml:space="preserve">
+    <value>Sobrenome</value>
+  </data>
+  <data name="LinkedIn.Text" xml:space="preserve">
+    <value>LinkedIn</value>
+  </data>
+  <data name="LinkedInDesc.Text" xml:space="preserve">
+    <value>Por favor, forneça o nome de usuário do Linkedin.(opcional).</value>
+  </data>
+  <data name="Location.Text" xml:space="preserve">
+    <value>Localizaçào</value>
+  </data>
+  <data name="LocationDesc.Text" xml:space="preserve">
+    <value>Por favor, digite o nome da sua cidade ou região Nome e endereço Street. Ele vai aparecer no mapa quando você encontra o endereço.</value>
+  </data>
+  <data name="Organization.Text" xml:space="preserve">
+    <value>organização</value>
+  </data>
+  <data name="OrganizationInfo.Text" xml:space="preserve">
+    <value>Detalhes da organização</value>
+  </data>
+  <data name="OrganizationName.Text" xml:space="preserve">
+    <value>Nome da organização</value>
+  </data>
+  <data name="OrganizationNameDesc.Text" xml:space="preserve">
+    <value>Por favor, digite o nome da organização.</value>
+  </data>
+  <data name="OtherCity.Text" xml:space="preserve">
+    <value>Outra Cidade</value>
+  </data>
+  <data name="OtherCountry.Text" xml:space="preserve">
+    <value>Outra País</value>
+  </data>
+  <data name="OtherSocial.Text" xml:space="preserve">
+    <value>Outros Rede Social</value>
+  </data>
+  <data name="OtherState.Text" xml:space="preserve">
+    <value>Outro Estado</value>
+  </data>
+  <data name="Phone.Text" xml:space="preserve">
+    <value>Telefone (com o código do pais)</value>
+  </data>
+  <data name="Phone2.Text" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="PhoneDesc.Text" xml:space="preserve">
+    <value>Por favor, forneça um número de telefone da Organização e não de um telefone pessoal.</value>
+  </data>
+  <data name="PhysicalAddress.Text" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="ProfilePicture.Text" xml:space="preserve">
+    <value>Foto de Perfil</value>
+  </data>
+  <data name="revDescription.Text" xml:space="preserve">
+    <value>Mínimo de 100 e máximo de 800 caracteres necessários.</value>
+  </data>
+  <data name="revEmail.Text" xml:space="preserve">
+    <value>E-mail inválido</value>
+  </data>
+  <data name="revEmail2.Text" xml:space="preserve">
+    <value>São permitidos no máximo 100 caracteres.</value>
+  </data>
+  <data name="revFacebook.Text" xml:space="preserve">
+    <value>São permitidos no máximo 50 caracteres.</value>
+  </data>
+  <data name="revGoogle.Text" xml:space="preserve">
+    <value>São permitidos no máximo 50 caracteres.</value>
+  </data>
+  <data name="revInstitutionName.Text" xml:space="preserve">
+    <value>São permitidos no máximo 100 caracteres.</value>
+  </data>
+  <data name="revLinkedIn.Text" xml:space="preserve">
+    <value>São permitidos no máximo 50 caracteres.</value>
+  </data>
+  <data name="revPhone.Text" xml:space="preserve">
+    <value>São permitidos no máximo 50 caracteres.</value>
+  </data>
+  <data name="revPhysicalAddress.Text" xml:space="preserve">
+    <value>São permitidos no máximo 200 caracteres.</value>
+  </data>
+  <data name="revPostalCode.Text" xml:space="preserve">
+    <value>São permitidos no máximo 50 caracteres.</value>
+  </data>
+  <data name="revSkype.Text" xml:space="preserve">
+    <value>São permitidos no máximo 50 caracteres.</value>
+  </data>
+  <data name="revTwitter.Text" xml:space="preserve">
+    <value>São permitidos no máximo 50 caracteres.</value>
+  </data>
+  <data name="rfvDescription.Text" xml:space="preserve">
+    <value>Descrição é um campo de preenchimento obrigatório.</value>
+  </data>
+  <data name="rfvEmail.Text" xml:space="preserve">
+    <value>E-mail é um campo de preenchimento obrigatório.</value>
+  </data>
+  <data name="rfvInstitutionName.Text" xml:space="preserve">
+    <value>Nome organização é necessária.</value>
+  </data>
+  <data name="rfvPhone.Text" xml:space="preserve">
+    <value>Telefone é um campo de preenchimento obrigatório.</value>
+  </data>
+  <data name="rfvPhysicalAddress.Text" xml:space="preserve">
+    <value>Endereço físico é necessário.</value>
+  </data>
+  <data name="rfvPostalCode.Text" xml:space="preserve">
+    <value>Código Postal é necessária.</value>
+  </data>
+  <data name="SaveProfile.Text" xml:space="preserve">
+    <value>Salve Perfil</value>
+  </data>
+  <data name="Skype.Text" xml:space="preserve">
+    <value>Skype</value>
+  </data>
+  <data name="SkypeDesc.Text" xml:space="preserve">
+    <value>Por favor, forneça o nome de usuário do Skype. (opcional).</value>
+  </data>
+  <data name="SocialInformation.Text" xml:space="preserve">
+    <value>Redes Sociais</value>
+  </data>
+  <data name="State.Text" xml:space="preserve">
+    <value>Estado / Província</value>
+  </data>
+  <data name="StateRegion.Text" xml:space="preserve">
+    <value>Estado / Região</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>Título</value>
+  </data>
+  <data name="Twitter.Text" xml:space="preserve">
+    <value>Twitter</value>
+  </data>
+  <data name="TwitterDesc.Text" xml:space="preserve">
+    <value>Por favor, forneça o nome de usuário do Twitter (opcional).</value>
+  </data>
+  <data name="revPhoneFormat.Text" xml:space="preserve">
+    <value>Por favor insira um número de telefone válido.</value>
+  </data>
+  <data name="EditModule.Text" xml:space="preserve">
+    <value>Edit Module</value>
+  </data>
+  <data name="InvalidFormat.Text" xml:space="preserve">
+    <value>Formato inválido</value>
+  </data>
+</root>

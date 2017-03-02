@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta http-equiv='Content-Style-Type' content='text/css' />
+	<meta http-equiv='Content-Script-Type' content='text/javascript' />
+	<link rel="stylesheet" type="text/css" href="../static/flowplayer/skin/minimalist.css">
+	<script type='text/javascript' src='../js/eds1.8.2.js'></script>
+	<script type='text/javascript' src='../static/flowplayer/flowplayer.min.js'></script>
+	<title></title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+		}
+
+		html {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+	<script type='text/javascript'>
+		function getQuerystring(key, default_) {
+			if (default_ == null) default_ = "";
+			key = key.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+			var regex = new RegExp("[\\?&]" + key + "=([^&#]*)");
+			var qs = regex.exec(window.location.href);
+			if (qs == null)
+				return default_;
+			else
+				return qs[1];
+		}
+
+		function infob(fullscr2) {
+			if (fullscr2 == "on") {
+				return "true";
+			}
+			else {
+				return "false";
+			}
+		}
+
+		var flashvars = {};
+		var params = {};
+		var attributes = {};
+		var vw = parseInt(getQuerystring('videowidth'));
+		var vh = parseInt(getQuerystring('videoheight'));
+		var vu = getQuerystring('videourl');
+		var fullscr = getQuerystring('fullscreen');
+
+	</script>
+
+</head>
+<body>
+	<div id="videoHolder" class="flowplayer" data-embed="false" data-swf="../static/flowplayer/flowplayer.swf"></div>
+	<script type='text/javascript'>
+		eds1_8("#videoHolder").width(vw);
+		eds1_8("#videoHolder").height(vh);
+		eds1_8("#videoHolder").html(
+		'<video width="' + vw + '" height="' + vh + '" autoplay>' +
+		'<source src="'+vu+'" type="video/mp4" />' +
+	'</video>');
+	</script>
+</body>
+</html>
+
+

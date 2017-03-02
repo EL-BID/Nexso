@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Activate.Text">
+    <value xml:space="preserve">Activar</value>
+  </data>
+  <data name="ActivateButtonText.Text">
+    <value xml:space="preserve">Activar</value>
+  </data>
+  <data name="ActivatedMessageHtml.Text">
+    <value xml:space="preserve">&lt;p class="{0}"&gt;Se ha activado Premium Data.&lt;/p&gt;</value>
+  </data>
+  <data name="ActivateInstructionsHtml.Text">
+    <value xml:space="preserve">&lt;p&gt;Introduzca su clave de licencia para Premium Data en la caja de texto. Seleccione "Activar" para utilizar la licencia en esta web.&lt;/p&gt;</value>
+  </data>
+  <data name="ActivationDataInvalidHtml.Text">
+    <value xml:space="preserve">&lt;div class="{0}"&gt;&lt;p&gt;El origen de datos proporcionado no contiene datos válidos.&lt;/p&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="ActivationFailureCouldNotUpdateConfigHtml.Text">
+    <value xml:space="preserve">&lt;div class="{0}"&gt;&lt;p&gt;El elemento "fiftyOne/detection" del archivo de configuración '{1}' no se ha podido añadir. Verifique que el siguiente texto está presente entre las etiquetas "fiftyOne" y vuelva a intentar activar la licencia de nuevo.&lt;/p&gt;
+&lt;br/&gt;
+&lt;span style="margin-left: 0px !important;"&gt;&lt;code style="color: #000000;"&gt;&amp;lt;&lt;/code&gt;&lt;code&gt;&lt;span style="color: #006699;"&gt;&lt;strong&gt;detection&lt;/strong&gt;&lt;/span&gt;&lt;/code&gt;&amp;nbsp;&lt;code style="color: #808080;"&gt;binaryFilePath&lt;/code&gt;&lt;code style="color: #000000;"&gt;=&lt;/code&gt;&lt;code style="color: blue;"&gt;"~/App_Data/51Degrees-Premium.dat"&lt;/code&gt;&lt;code&gt;&lt;span style="color: #000000;"&gt;/&amp;gt;&lt;/span&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="ActivationFailureCouldNotWriteDataFileHtml.Text">
+    <value xml:space="preserve">&lt;div class="{0}"&gt;
+&lt;p&gt;El archivo de datos de dispositivos '{1}' no se ha podido guardar. Verique que el usuario '{2}' tiene permisos de escritura en la carpeta correspondiente, o cambie la carpeta por una donde tenga permisos de escritura.&lt;/p&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="ActivationFailureCouldNotWriteLicenceFileHtml.Text">
+    <value xml:space="preserve">&lt;div class="{0}"&gt;&lt;p&gt;El archivo de licencia '{1}' no se ha podido guardar en la carpeta bin de esta web '{2}'. Cree un archivo de texto con extensión '.lic', copie la clave de licencia en el archivo y guárdelo en la carpeta bin.&lt;/p&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="ActivationFailureGenericHtml.Text">
+    <value xml:space="preserve">&lt;div class="{0}"&gt;&lt;p&gt;Se ha producido un error al activar la licencia. Póngase en &lt;a href="http://51degrees.mobi/AboutUs/ContactUs.aspx"&gt;contacto con nosotros&lt;/a&gt; con más información sobre su web para poder ayudarle an la activación de la licencia.&lt;/p&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="ActivationFailureHttpHtml.Text">
+    <value xml:space="preserve">&lt;div class="{0}"&gt;&lt;p&gt;No se ha podido acceder a la web de validación de licencias de 51Degrees.mobi en '{1}'. Pueder ser debido a una de las siguientes razones:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+La web se está ejecutando en el modo "Medium Trust" y el atributo 
+&lt;a href="http://msdn.microsoft.com/en-us/library/system.web.configuration.trustsection.originurl(v=VS.80).aspx"&gt;originUrl&lt;/a&gt; 
+en el archivo web.config no permite el acceso a '{1}'. Modifique originUrl para incluir '{1}'. Puede incluir múltiples servidores separados por el símbolo '|'.&lt;/li&gt;
+&lt;li&gt;
+El cortafuegos del servidor o otro cortafuegos está bloqueando el acceso al servidor o al puerto SSL 443. Verifique la configuración del cortafuegos.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cuando haya comprobado estos puntos vuelva a intentar la activación de nuevo.&lt;/p&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="ActivationFailureInvalidHtml.Text">
+    <value xml:space="preserve">&lt;div class="{0}"&gt;&lt;p&gt;La validación de la licencia ha fallado. Verifique con su proeedor que la licencia es válida.&lt;/p&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="ActivationStreamFailureHtml.Text">
+    <value xml:space="preserve">&lt;div class="{0}"&gt;&lt;p&gt;No se puede leer el origen de datos proporcionado.&lt;/p&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="ActivationSuccessHtml.Text">
+    <value xml:space="preserve">&lt;div class="{0}"&gt;&lt;p&gt;Activación correcta. Seleccione el botón "Actualizar" para recargar la página web y comenzar a usar Premium Device Data.  Nota: se puede producir un tiempo de demora mientras la aplicación se reinicia.&lt;/p&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="AutoUpdatesEnabled.Help">
+    <value xml:space="preserve">Activa o desactiva la actualización automática de los archivos de datos.</value>
+  </data>
+  <data name="AutoUpdatesEnabled.Text">
+    <value xml:space="preserve">¿Permitir actualizaciones automáticas?</value>
+  </data>
+  <data name="BackButtonDevicesText.Text">
+    <value xml:space="preserve">Otros fabricantes</value>
+  </data>
+  <data name="BackButtonDeviceText.Text">
+    <value xml:space="preserve">Otros dispositivos {0}</value>
+  </data>
+  <data name="BackToExplorer.Text">
+    <value xml:space="preserve">Volver al explorador de dispositivos</value>
+  </data>
+  <data name="BrowserList.Header">
+    <value xml:space="preserve">Navegador</value>
+  </data>
+  <data name="ContentList.Header">
+    <value xml:space="preserve">Contenido</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Detección de dispositivos</value>
+  </data>
+  <data name="DeviceDetectionEnabled.Help">
+    <value xml:space="preserve">Activa o desactiva la detección de dispositivos.</value>
+  </data>
+  <data name="DeviceDetectionEnabled.Text">
+    <value xml:space="preserve">¿Activar la detección de dispositivos?</value>
+  </data>
+  <data name="DeviceExplorer.Header">
+    <value xml:space="preserve">Explorador de dispositivos</value>
+  </data>
+  <data name="DeviceExplorerDeviceInstructionsHtml.Text">
+    <value xml:space="preserve">&lt;p&gt;Puede utilizar los iconos de ayuda para ver más información sobre una propiedad o valor.&lt;/p&gt;</value>
+  </data>
+  <data name="DeviceExplorerModelsInstructionsHtml.Text">
+    <value xml:space="preserve">&lt;p&gt;Seleccione un modelo para ver sus capacidades, navegador y software.&lt;/p&gt;</value>
+  </data>
+  <data name="DeviceExplorerVendorsHtml.Text">
+    <value xml:space="preserve">&lt;p&gt;Seleccione un fabricante para ver los modelos de dispositivos que proporciona.&lt;/p&gt;</value>
+  </data>
+  <data name="DeviceSearchRequired.Text">
+    <value xml:space="preserve">Obligatorio</value>
+  </data>
+  <data name="GetLatestData.Text">
+    <value xml:space="preserve">Obtener datos actualizados</value>
+  </data>
+  <data name="Glossary.Header">
+    <value xml:space="preserve">Ayuda &gt; Glosario</value>
+  </data>
+  <data name="Glossary.Text">
+    <value xml:space="preserve">* La propiedad de incluye solo en la opción Premium Data.</value>
+  </data>
+  <data name="HardwareList.Header">
+    <value xml:space="preserve">Hardware</value>
+  </data>
+  <data name="Help.Text">
+    <value xml:space="preserve">Ayuda</value>
+  </data>
+  <data name="HelpLink.Text">
+    <value xml:space="preserve">Ayuda</value>
+  </data>
+  <data name="Introduction.Header">
+    <value xml:space="preserve">Navegador del dispositivo</value>
+  </data>
+  <data name="Introduction.Text">
+    <value xml:space="preserve">Debajo puede ver una lista de las propiedades disponibles por cada categoria.</value>
+  </data>
+  <data name="LicenseType_CMS.Text">
+    <value xml:space="preserve">CMS</value>
+  </data>
+  <data name="LicenseType_Lite.Text">
+    <value xml:space="preserve">Lite</value>
+  </data>
+  <data name="LicenseType_Premium.Text">
+    <value xml:space="preserve">Premium</value>
+  </data>
+  <data name="Lite.Header">
+    <value xml:space="preserve">Gracias por usar la versión Lite de datos de dispositivos</value>
+  </data>
+  <data name="LiteSearchResults.Header">
+    <value xml:space="preserve">Resultados de la búsqueda</value>
+  </data>
+  <data name="LiteSearchResults.Text">
+    <value xml:space="preserve">Seleccione un fabricante para ver los modelos que proporciona.</value>
+  </data>
+  <data name="LiteUpgrade.Label">
+    <value xml:space="preserve">Actualizar a la versión Premium Data:</value>
+  </data>
+  <data name="ManualUpdates.Text">
+    <value xml:space="preserve">Actualizaciones manuales:</value>
+  </data>
+  <data name="NoResultsFound.Text">
+    <value xml:space="preserve">No han encontrado coincidencias con su búsqueda.</value>
+  </data>
+  <data name="Premium.Header">
+    <value xml:space="preserve">Gracias por usar la versión {0} de datos de dispositivos</value>
+  </data>
+  <data name="PremiumIntro.Text">
+    <value xml:space="preserve">La versión {0} contiene miles de dispositivos, incluyendo consolas de juego, lectores eBook, tabletas, smartphones y teléfons móviles. Cada dispositivo tiene asociado una amplia gama de propiedades, desde tamaño de pantalla y capacidades de entrada hasta sistemas operativos, navegadores y hardware.</value>
+  </data>
+  <data name="PremiumUploadError.Text">
+    <value xml:space="preserve">Se ha producido un error al cargar los datos.</value>
+  </data>
+  <data name="PremiumUploadSuccess.Text">
+    <value xml:space="preserve">Los datos se han cargado correctamente.</value>
+  </data>
+  <data name="PurchaseInfo.Text">
+    <value xml:space="preserve">Para obtener los datos Premium puede comprar una licencia en  </value>
+  </data>
+  <data name="PurchaseInfoEnd.Text">
+    <value xml:space="preserve">, o bién actualizar a una las &lt;a href="http://store.dotnetnuke.com/home/product-details/dotnetnuke-professional-and-enterprise-edition-subscriptions" target="_blank"&gt;Ediciones comerciales&lt;/a&gt;.</value>
+  </data>
+  <data name="PurchaseInfoLink.Href">
+    <value xml:space="preserve">http://store.dotnetnuke.com/home/product-details/premium-mobile-device-data-51degreesmobi</value>
+  </data>
+  <data name="PurchaseInfoLink.Text">
+    <value xml:space="preserve">DotNetNuke Store</value>
+  </data>
+  <data name="RefreshButtonText.Text">
+    <value xml:space="preserve">Actualizar</value>
+  </data>
+  <data name="SearchButton.Text">
+    <value xml:space="preserve">Buscar dispositivos</value>
+  </data>
+  <data name="SearchLite.Header">
+    <value xml:space="preserve">Búsqueda agente de usuario</value>
+  </data>
+  <data name="SearchLite.Text">
+    <value xml:space="preserve">Introduzca el agente de usuario que quiera probar y clique en Buscar dispositivos.</value>
+  </data>
+  <data name="SearchPremium.Header">
+    <value xml:space="preserve">Buscar dispositivos</value>
+  </data>
+  <data name="SearchPremium.Text">
+    <value xml:space="preserve">Introduzca el término de búsqueda y pulse Buscar dispositivos. Puede buscar por nombre de fabricante, modelo, dispositivo, navegador y sistema operativo.</value>
+  </data>
+  <data name="ShareUsageEnabled.Help">
+    <value xml:space="preserve">Utilize esta opción para activar o desactivar en envío de información de uso a 51Degrees.</value>
+  </data>
+  <data name="ShareUsageEnabled.Text">
+    <value xml:space="preserve">¿Activar envío de datos de uso?</value>
+  </data>
+  <data name="SoftwareList.Header">
+    <value xml:space="preserve">Software</value>
+  </data>
+  <data name="StatsHtml.Text">
+    <value xml:space="preserve">&lt;div class="{0}"&gt;&lt;span&gt;Versión: &lt;strong&gt;{1}&lt;/strong&gt;&lt;/span&gt; &lt;span&gt;Publicado: &lt;strong&gt;{2:d}&lt;/strong&gt;&lt;/span&gt; &lt;span&gt;Propiedades: &lt;strong&gt;{3}&lt;/strong&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="StatsRefreshButton.Text">
+    <value xml:space="preserve">Actualizar</value>
+  </data>
+  <data name="UpgradePoint1.Text">
+    <value xml:space="preserve">Redirecciona automaticamente los usuarios a páginas optimizadas, permitiendo la creación de sitios separados para tabletas y smartphones y teléfonos móviles.</value>
+  </data>
+  <data name="UpgradePoint2.Text">
+    <value xml:space="preserve">Añade a las propiedades 'es móvil' y 'tamaño de pantalla' de la versión Lite más de 50 propiedades adicionales de dispositivos tales como 'es tableta', 'tamaño de pantalla en milímetros', 'fabricante', 'modelo', 'detalles de plataforma', 'capacidades de entrada' y 'nivel de soporte de JavaScript'.</value>
+  </data>
+  <data name="UpgradePoint3.Text">
+    <value xml:space="preserve">Actualizaciones semanales regulares de datos</value>
+  </data>
+  <data name="UpgradePoint4.Text">
+    <value xml:space="preserve">Instalación automática de nuevas actualizaciones</value>
+  </data>
+  <data name="UploadButtonText.Text">
+    <value xml:space="preserve">Cargar</value>
+  </data>
+  <data name="UploadData.Text">
+    <value xml:space="preserve">Cargar datos</value>
+  </data>
+  <data name="UploadInstructionsHtml.Text">
+    <value xml:space="preserve">&lt;p&gt;Puede cargar un archivo con datos Premium mediante los botones 'Examinar' y 'Cargar'.&lt;/p&gt;</value>
+  </data>
+  <data name="ValidationFileErrorText.Text">
+    <value xml:space="preserve">Utilize el botón 'Examinar' para seleccionar un archivo de datos Premium para cargar.</value>
+  </data>
+  <data name="ValidationRegExErrorText.Text">
+    <value xml:space="preserve">La clave de licencia solo puede contener caráteres en mayúsculas o números.</value>
+  </data>
+  <data name="ValidationRequiredErrorText.Text">
+    <value xml:space="preserve">Tiene que proporcionar la clave de licencia.</value>
+  </data>
+  <data name="ViewLicenseAgreement.Text">
+    <value xml:space="preserve">Mostrar el acuerdo de licencia</value>
+  </data>
+  <data name="WhyUpgrade.Text">
+    <value xml:space="preserve">Por qué actualizar a la versión Premium Data</value>
+  </data>
+</root>

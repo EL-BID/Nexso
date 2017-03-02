@@ -1,0 +1,40 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsNewTags]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsNewTags]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsNewTags]', N'{objectQualifier}EasyDNNNewsNewTags', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsItemTags', N'PK_{objectQualifier}EasyDNNNewsItemTags', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsItemTags', N'IX_{objectQualifier}EasyDNNNewsItemTags', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsNewTags_DateCreated', N'DF_{objectQualifier}EasyDNNNewsNewTags_DateCreated', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagsLocalization]') AND type in (N'U'))
+BEGIN
+CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagsLocalization](
+	[TagID] [int] NOT NULL,
+	[LocaleCode] [nvarchar](20) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	CONSTRAINT [PK_{objectQualifier}EasyDNNNewsTagsLocalization] PRIMARY KEY CLUSTERED ([TagID] ASC,[LocaleCode] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF))
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsTagsLocalization_EasyDNNNewsNewTags]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagsLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagsLocalization]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsTagsLocalization_EasyDNNNewsNewTags] FOREIGN KEY([TagID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNewsNewTags] ([TagID]) ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsTagsLocalization_EasyDNNNewsNewTags]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagsLocalization]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsTagsLocalization] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsTagsLocalization_EasyDNNNewsNewTags]

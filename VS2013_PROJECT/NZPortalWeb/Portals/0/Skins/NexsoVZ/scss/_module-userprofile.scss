@@ -1,0 +1,17 @@
+﻿/* ==========================================================================
+   User profile - user profile styles for Nexso 2
+   ========================================================================== */
+
+.user {
+  .step-navigation h1 {display: none;}
+	header.intro {
+		@include grid-column(12);
+		text-align: center;
+	}
+  .edit-form {
+    @include grid-column(12);
+    @media #{$medium-up} {
+		  @include grid-column(8,$offset:2);
+    }
+	}
+}

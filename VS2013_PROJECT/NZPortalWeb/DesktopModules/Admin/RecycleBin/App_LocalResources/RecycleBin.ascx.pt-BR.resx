@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Tabs.Text">
+    <value xml:space="preserve">Páginas</value>
+  </data>
+  <data name="cmdRestoreTab.Help">
+    <value xml:space="preserve">Restaurar as páginas selecionadas.</value>
+  </data>
+  <data name="cmdDeleteTab.Help">
+    <value xml:space="preserve">Excluir as páginas selecionadas.</value>
+  </data>
+  <data name="Modules.Text">
+    <value xml:space="preserve">Módulos</value>
+  </data>
+  <data name="cmdRestoreModule.Help">
+    <value xml:space="preserve">Recuperar os módulos selecionados</value>
+  </data>
+  <data name="cmdDeleteModule.Help">
+    <value xml:space="preserve">Excluir permanentemente o módulo selecionado</value>
+  </data>
+  <data name="cmdEmpty.Text">
+    <value xml:space="preserve">Esvaziar a lixeira</value>
+  </data>
+  <data name="DeleteTab.Text">
+    <value xml:space="preserve">Tem certeza que quer excluir permanentemente esta página?</value>
+  </data>
+  <data name="DeleteModule.Text">
+    <value xml:space="preserve">Tem certeza que quer excluir permanentemente este módulo?</value>
+  </data>
+  <data name="DeleteAll.Text">
+    <value xml:space="preserve">Tem certeza de que quer excluir permanentemente todas as páginas e módulos?</value>
+  </data>
+  <data name="ParentTab.ErrorMessage">
+    <value xml:space="preserve">Página '&lt;b&gt;{0}&lt;/b&gt;' não pode ser excluída enquanto existirem páginas filhas que não forem excluídas primeiro!</value>
+  </data>
+  <data name="ChildTab.ErrorMessage">
+    <value xml:space="preserve">A página '&lt;b&gt;{0}&lt;/b&gt;' não pode ser recuperada enquanto a página pai não for recuperada primeiro!</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Lixeira</value>
+  </data>
+  <data name="cmdRestoreTab.Text">
+    <value xml:space="preserve">Restaurar página selecionada</value>
+  </data>
+  <data name="cmdDeleteTab.Text">
+    <value xml:space="preserve">Excluir página selecionada</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre a Lixeira&lt;/h1&gt;&lt;p&gt;A lixeira fornece uma interface para recuperar ou permanentemente excluir páginas e módulos.&lt;/p&gt;</value>
+  </data>
+  <data name="allLocales.Text">
+    <value xml:space="preserve">Mostrar páginas e módulos de todos os idiomas</value>
+  </data>
+  <data name="singleLocale.Text">
+    <value xml:space="preserve">Exibir páginas e módulos apenas no idioma atual</value>
+  </data>
+  <data name="cmdDeleteModule.Text">
+    <value xml:space="preserve">Excluir módulo selecionado</value>
+  </data>
+  <data name="cmdRestoreModule.Text">
+    <value xml:space="preserve">Restaurar módulo selecionado</value>
+  </data>
+  <data name="TabDeleted.ErrorMessage">
+    <value xml:space="preserve">O módulo '&lt;b&gt;{0}&lt;/b&gt;' não pode ser restaurado até que a página no qual este módulo pertence não for restaurada primeiro!</value>
+  </data>
+</root>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cmdExecute.Text">
+    <value xml:space="preserve">Mesclar</value>
+  </data>
+  <data name="cmdUpload.Text">
+    <value xml:space="preserve">Enviar</value>
+  </data>
+  <data name="ERROR_Merge.Text">
+    <value xml:space="preserve">O sistema encontrou um erro ao aplicar as mudanças de configuração especificadas. Por favor reveja os registros de eventos para detalhes do erro.</value>
+  </data>
+  <data name="plScript.Help">
+    <value xml:space="preserve">Selecione um programa XML Merge para enviar. Uma vez enviado o programa pode ser editado e então executado.</value>
+  </data>
+  <data name="plScript.Text">
+    <value xml:space="preserve">Programa pra mesclar:</value>
+  </data>
+  <data name="cmdLoad.Text">
+    <value xml:space="preserve">Carregar</value>
+  </data>
+  <data name="plConfig.Help">
+    <value xml:space="preserve">Selecione um arquivo de configuração para edição.</value>
+  </data>
+  <data name="plConfig.Text">
+    <value xml:space="preserve">Arquivo de configuração</value>
+  </data>
+  <data name="SaveWarning.Text">
+    <value xml:space="preserve">Alterar o arquivo web.config fará com que seu portal recarregue e pode diminuir sua performance até que a aplicação seja recarregada pelo servidor. Você quer continuar?</value>
+  </data>
+  <data name="ERROR_ConfigurationFormat.Text">
+    <value xml:space="preserve">Seu arquivo de configuração não é um arquivo XML válido. Por favor corrija o problema da formatação e salve novamente o arquivo.&lt;br&gt;Erro: {0}</value>
+  </data>
+  <data name="LoadConfigWarning.Text">
+    <value xml:space="preserve">Você perderá suas mudanças atuais se carregar um novo arquivo de configuração!</value>
+  </data>
+  <data name="MergeConfirm.Text">
+    <value xml:space="preserve">Você tem certeza de que quer mesclar essas mudanças neste arquivo de configuração?</value>
+  </data>
+  <data name="SaveConfirm.Text">
+    <value xml:space="preserve">Você tem certeza de que quer salvar as mudanças deste arquivo de configuração?</value>
+  </data>
+  <data name="SelectConfig.Text">
+    <value xml:space="preserve">Selecione um arquivo de configuração...</value>
+  </data>
+  <data name="Success.Text">
+    <value xml:space="preserve">As alterações foram feitas com sucesso.</value>
+  </data>
+  <data name="cmdSave.Text">
+    <value xml:space="preserve">Salvar alterações</value>
+  </data>
+  <data name="fileLabel.Help">
+    <value xml:space="preserve">Você pode modificar o arquivo antes de realizar alterações.</value>
+  </data>
+  <data name="fileLabel.Text">
+    <value xml:space="preserve">Arquivo:</value>
+  </data>
+  <data name="scriptLabel.Help">
+    <value xml:space="preserve">Você pode editar o programa de mesclagem antes de executá-lo.</value>
+  </data>
+  <data name="scriptLabel.Text">
+    <value xml:space="preserve">Programa:</value>
+  </data>
+</root>

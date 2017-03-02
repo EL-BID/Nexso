@@ -1,0 +1,330 @@
+/*
+
+RadTreeView Web20 skin
+
+* For notes on the CSS class names, please check RadTreeView common skin file *
+
+*/
+
+/* general styles */
+
+.RadTreeView_Web20,
+.RadTreeView_Web20 a.rtIn,
+.RadTreeView_Web20 .rtEdit .rtIn input
+{
+	font:12px tahoma,verdana,sans-serif;
+	color:#000;
+	line-height:2em;
+}
+
+.RadTreeView_Web20 .rtTop, 
+.RadTreeView_Web20 .rtMid, 
+.RadTreeView_Web20 .rtBot
+{
+	padding: 0 0 0 28px;
+}
+
+.RadTreeView_Web20 .rtUL .rtLI .rtUL
+{
+	padding-left: 24px;
+}
+
+.RadTreeView_Web20_rtl .rtUL .rtLI .rtUL
+{
+	padding-right: 24px;
+	padding-left: 0;
+}
+
+.RadTreeView_Web20 .rtPlus, 
+.RadTreeView_Web20 .rtMinus
+{
+	margin:4px 7px 0pt -24px;
+	width:18px;
+	height:18px;
+}
+
+.RadTreeView_Web20 .rtPlus
+{
+	background: transparent url(Images/PlusMinus.gif) no-repeat 0 0;
+}
+
+.RadTreeView_Web20 .rtMinus
+{
+	background: transparent url(Images/PlusMinus.gif) no-repeat 0 -18px;
+}
+
+.RadTreeView_Web20 .rtSp
+{
+	height:24px;
+}
+
+.RadTreeView_Web20 .rtChk
+{
+	margin: 0 2px;
+	padding:0;
+	width:13px;
+	height:13px;
+}
+
+.RadTreeView_Web20 .rtIn
+{
+	margin-left:0;
+	padding: 0;
+}
+
+/* endof general styles */
+
+/*Three state checkboxes*/
+.RadTreeView_Web20 .rtLI .rtIndeterminate,
+.RadTreeView_Web20 .rtLI .rtChecked,
+.RadTreeView_Web20 .rtLI .rtUnchecked
+{
+	height: 15px;
+	width: 17px;
+}
+
+.RadTreeView_Web20 .rtIndeterminate
+{
+    background: transparent url(Images/TriState.gif) no-repeat 0 -30px;
+}
+
+.RadTreeView_Web20 .rtChecked
+{
+    background: transparent url(Images/TriState.gif) no-repeat 0 0;
+}
+
+.RadTreeView_Web20 .rtUnchecked
+{
+    background: transparent url(Images/TriState.gif) no-repeat 0 -15px ;
+}
+/* node states */
+
+.RadTreeView_Web20 .rtHover .rtIn
+{
+	text-decoration: underline;
+}
+
+.RadTreeView_Web20 .rtSelected .rtIn
+{
+	color:#333;
+	background:#dcfc5c;
+	font-weight: bold;
+}
+
+.RadTreeView_Web20_disabled .rtIn,
+.RadTreeView_Web20 .rtDisabled .rtIn
+{
+	color:#ccc;
+}
+
+.RadTreeView_Web20 .rtSelected .rtLoadingBelow
+{
+	color: #333;
+}
+
+/* endof node states */
+
+
+/* in-line editing */
+
+.RadTreeView_Web20 .rtLI .rtEdit .rtIn
+{
+	border:1px solid black;
+	padding: 1px;
+	height: 1.83em;
+	background: #fff;
+}
+
+.RadTreeView_Web20 .rtEdit .rtIn input
+{
+	height:1.67em;
+	line-height:1.67em;
+	border:0;
+	margin:0;
+	padding:0;
+	background:transparent;
+}
+
+/* endof in-line editing */
+
+
+/* drop targets */
+
+.rtDropAbove_Web20,
+.rtDropBelow_Web20
+{
+    border: 1px dotted black;
+    font-size: 3px;
+    line-height: 3px;
+    height: 3px;
+}
+
+.rtDropAbove_Web20
+{
+    border-bottom: 0;
+}
+
+.rtDropBelow_Web20
+{
+    border-top: 0;
+}
+
+/* endof drop targets */
+
+
+/* node lines */
+
+.RadTreeView_Web20 .rtLines .rtLI
+{
+	background:url(Images/NodeSpan.gif) repeat-y 0 0;
+}
+.RadTreeView_Web20_rtl .rtLines .rtLI
+{
+	background:url(Images/NodeSpan_rtl.gif) repeat-y 100% 0;
+}
+
+.RadTreeView_Web20 .rtLines .rtFirst
+{
+    background:url(Images/FirstNodeSpan.gif) no-repeat 0 1.273em;
+}
+.RadTreeView_Web20_rtl .rtLines .rtFirst
+{
+    background:url(Images/FirstNodeSpan_rtl.gif) no-repeat 100% 1.273em;
+}
+
+.RadTreeView_Web20 .rtLines .rtFirst .rtUL
+{
+	background:url(Images/FirstNodeSpan.gif) repeat-y 0 1.273em;
+}
+
+.RadTreeView_Web20_rtl .rtLines .rtFirst .rtUL
+{
+	background:url(Images/FirstNodeSpan_rtl.gif) repeat-y 100% 1.273em;
+}
+
+.RadTreeView_Web20 .rtLines .rtLast,
+.RadTreeView_Web20 .rtLines .rtLast .rtUL
+{
+	background:none;
+}
+
+.RadTreeView_Web20 .rtLines .rtTop
+{
+	background:url(Images/TopLine.gif) 0 0 no-repeat;
+}
+.RadTreeView_Web20_rtl .rtLines .rtTop
+{
+	background:url(Images/TopLine_rtl.gif) 100% 0 no-repeat;
+}
+
+.RadTreeView_Web20 .rtLines .rtLast .rtTop
+{
+	background:url(Images/SingleLine.gif) 0 0 no-repeat;
+}
+
+.RadTreeView_Web20_rtl .rtLines .rtLast .rtTop
+{
+	background:url(Images/SingleLine_rtl.gif) 100% 0 no-repeat;
+}
+
+.RadTreeView_Web20 .rtLines .rtMid
+{
+	background:url(Images/MiddleLine.gif) 0 0 no-repeat;
+}
+.RadTreeView_Web20_rtl .rtLines .rtMid
+{
+	background:url(Images/MiddleLine_rtl.gif) 100% 0 no-repeat;
+}
+
+.RadTreeView_Web20 .rtLines .rtBot
+{
+	background:url(Images/BottomLine.gif) 0 0 no-repeat;
+}
+.RadTreeView_Web20_rtl .rtLines .rtBot
+{
+	background:url(Images/BottomLine_rtl.gif) 100% 0 no-repeat;
+}
+
+/* endof node lines */
+
+
+/* rtl-specific styles */
+
+/* firefox */
+.RadTreeView_Web20_rtl .rtPlus,
+.RadTreeView_Web20_rtl .rtMinus,
+x:-moz-any-link
+{
+	margin-right:-11px;
+	right:-13px;
+}
+
+.RadTreeView_Web20_rtl .rtPlus,
+.RadTreeView_Web20_rtl .rtMinus,
+x:-moz-any-link, x:default
+{
+	margin-right:0;
+	right:-18px;
+}
+
+* html .RadTreeView_Web20_rtl .rtPlus,
+* html .RadTreeView_Web20_rtl .rtMinus
+{
+	margin-right:-18px;
+	right:0;
+}
+
+*+html .RadTreeView_Web20_rtl .rtPlus,
+*+html .RadTreeView_Web20_rtl .rtMinus
+{
+	margin-right:-18px;
+	right:0;
+}
+
+.RadTreeView_Web20_rtl .rtTop,
+.RadTreeView_Web20_rtl .rtMid, 
+.RadTreeView_Web20_rtl .rtBot
+{
+	padding: 0 20px 2px 0;
+	margin:0;
+}
+
+/* endof rtl-specific styles */
+
+
+/* hacks for Opera & Safari */
+@media screen and (min-width:550px)
+{
+	/* fixes for opera (changes the paddings/margins automatically in rtl mode) */
+	html:first-child .RadTreeView_Web20_rtl .rtUL .rtLI .rtUL
+	{
+		padding-left: 24px;
+		padding-right: 0;
+	}
+
+	html:first-child .RadTreeView_Web20_rtl .rtPlus,
+	html:first-child .RadTreeView_Web20_rtl .rtMinus,
+	html:first-child .RadTreeView_Web20_rtl .rtFirst .rtLI .rtPlus,
+	html:first-child .RadTreeView_Web20_rtl .rtFirst .rtLI .rtMinus
+	{
+		margin:4px 6px 0 -18px;
+		right:0;
+	}
+	
+	/* fix for safari bug (inline-block positioned elements in rtl mode get no width) */
+	:root .RadTreeView_Web20_rtl .rtPlus,
+	:root .RadTreeView_Web20_rtl .rtMinus
+	{
+		right: 0;
+		margin-right: -18px;
+		margin-left: 7px;
+	}
+}
+
+/* endof hacks */
+.RadTreeView_Web20_designtime .rtPlus,
+.RadTreeView_Web20_designtime .rtMinus
+{
+	left:3px;
+	top:4px;
+}

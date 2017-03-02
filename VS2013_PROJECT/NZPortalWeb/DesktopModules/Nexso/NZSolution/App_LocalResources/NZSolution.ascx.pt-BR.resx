@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdditionalCost.Text" xml:space="preserve">
+    <value>Custo Adicional</value>
+  </data>
+  <data name="Anonimous.Text" xml:space="preserve">
+    <value>Anônimo</value>
+  </data>
+  <data name="Approach.Text" xml:space="preserve">
+    <value>Inovação</value>
+  </data>
+  <data name="AvailableResources.Text" xml:space="preserve">
+    <value>Recursos Disponíveis</value>
+  </data>
+  <data name="Beneficiaries.Text" xml:space="preserve">
+    <value>Beneficiários</value>
+  </data>
+  <data name="By.Text" xml:space="preserve">
+    <value>por</value>
+  </data>
+  <data name="Challenge.Text" xml:space="preserve">
+    <value>Problema</value>
+  </data>
+  <data name="Cost.Text" xml:space="preserve">
+    <value>Custo</value>
+  </data>
+  <data name="CostDetails.Text" xml:space="preserve">
+    <value>Custos</value>
+  </data>
+  <data name="DeliveryFormat.Text" xml:space="preserve">
+    <value>Formato de Entrega</value>
+  </data>
+  <data name="Description.Text" xml:space="preserve">
+    <value>Informações adicionais</value>
+  </data>
+  <data name="Duration.Text" xml:space="preserve">
+    <value>Duração</value>
+  </data>
+  <data name="DurationDetails.Text" xml:space="preserve">
+    <value>Duração</value>
+  </data>
+  <data name="Format.Text" xml:space="preserve">
+    <value>formato</value>
+  </data>
+  <data name="FromMail.Text" xml:space="preserve">
+    <value>jairoa@iadb.org</value>
+  </data>
+  <data name="ImplementationDetails.Text" xml:space="preserve">
+    <value>Detalhes de implementação</value>
+  </data>
+  <data name="pnlLocations.Text" xml:space="preserve">
+    <value>Locais de Teste</value>
+  </data>
+  <data name="PrivateDocuments.Text" xml:space="preserve">
+    <value>Documentos Privados (apenas Proprietário Visível e Juízes)</value>
+  </data>
+  <data name="PublishedBy.Text" xml:space="preserve">
+    <value>Publicado por</value>
+  </data>
+  <data name="ReportSpam.Text" xml:space="preserve">
+    <value>Reportar como spam</value>
+  </data>
+  <data name="ReportSpamTemplate.Text" xml:space="preserve">
+    <value>Relatório de Spam Template.Text Solução Id {0}, Relatado por {1}</value>
+  </data>
+  <data name="Results.Text" xml:space="preserve">
+    <value>Impacto</value>
+  </data>
+  <data name="SolutionReported.Text" xml:space="preserve">
+    <value>Solução Relatado</value>
+  </data>
+  <data name="SolutionSettings.Text" xml:space="preserve">
+    <value>Detalhe Solution</value>
+  </data>
+  <data name="SolutionSettingsMsg.Text" xml:space="preserve">
+    <value>Mensagem solução</value>
+  </data>
+  <data name="Submitted.Text" xml:space="preserve">
+    <value>Enviado:</value>
+  </data>
+  <data name="SupportingDocuments.Text" xml:space="preserve">
+    <value>Documentos de Apoio</value>
+  </data>
+  <data name="Themes.Text" xml:space="preserve">
+    <value>Temas</value>
+  </data>
+  <data name="TimeFrameDetails.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ToComplete.Text" xml:space="preserve">
+    <value>Para completar</value>
+  </data>
+  <data name="ToMail.Text" xml:space="preserve">
+    <value>hh</value>
+  </data>
+  <data name="Unpublish.Text" xml:space="preserve">
+    <value>Edição</value>
+  </data>
+  <data name="EmptyLocation.Text" xml:space="preserve">
+    <value>Esta solução ainda não foi testada.</value>
+  </data>
+  <data name="RateSolution.Text" xml:space="preserve">
+    <value>Qualificar</value>
+  </data>
+  <data name="CustomInformation.Text" xml:space="preserve">
+    <value>Esta seção é apenas visível para os juízes</value>
+  </data>
+  <data name="DeleteSolution.Text" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="MessageConfirmation.Text" xml:space="preserve">
+    <value>Tem certeza de que deseja excluir esta solução?</value>
+  </data>
+  <data name="btnCancelBanner.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="btnEnableBannerUploader.Text" xml:space="preserve">
+    <value>Alterar foto da capa</value>
+  </data>
+  <data name="btnSaveBanner.Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="btnUploadBanner.Text" xml:space="preserve">
+    <value>Escolha Arquivo</value>
+  </data>
+  <data name="dropboxMessage.Text" xml:space="preserve">
+    <value>&lt;span class="message"&gt;Largue as imagens aqui para fazer o upload.
+                    &lt;br /&gt;
+                        &lt;i&gt;(Visível para todos)&lt;/i&gt;&lt;/span&gt;</value>
+  </data>
+  <data name="FeedBack.Text" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="FeedBackToolTip.Text" xml:space="preserve">
+    <value>Ir para opções de feedback</value>
+  </data>
+  <data name="Locations.Text" xml:space="preserve">
+    <value>Locais</value>
+  </data>
+  <data name="Overview.Text" xml:space="preserve">
+    <value>Visão Global</value>
+  </data>
+  <data name="ProvidedBy.Text" xml:space="preserve">
+    <value>Apresentado por</value>
+  </data>
+  <data name="SendMessage.Text" xml:space="preserve">
+    <value>Enviar uma mensagem</value>
+  </data>
+  <data name="Share.Text" xml:space="preserve">
+    <value>Ação</value>
+  </data>
+  <data name="ShareToolTip.Text" xml:space="preserve">
+    <value>Ir para compartilhar opções</value>
+  </data>
+  <data name="btnCancelSendMessage.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="btnSendMessage.Text" xml:space="preserve">
+    <value>Enviar uma mensagem</value>
+  </data>
+  <data name="btnSendMessageTo.Text" xml:space="preserve">
+    <value>Enviar uma mensagem para</value>
+  </data>
+  <data name="SendMessageTo.Text" xml:space="preserve">
+    <value>Enviar uma mensagem para </value>
+  </data>
+  <data name="WriteAMessage.Text" xml:space="preserve">
+    <value>Escreva uma mensagem ...</value>
+  </data>
+  <data name="MessageAuthentication.Text" xml:space="preserve">
+    <value>&lt;h2&gt;
+Você deve ser um usuário cadastrado para acessar esta página &lt;/h2&gt; &lt;p&gt;&lt;a href="/Registration/tabid/1542/portalid/0/language/pt-BR/Default.aspx"&gt;&lt;strong&gt;Cadastre-se&lt;/strong&gt;&lt;/a&gt; como um novo usuário ou &lt;strong&gt;&lt;a href="/Login/tabid/1543/language/pt-BR/Default.aspx?returnurl=%2fnexso%2fpt-br%2fpromover.aspx"&gt;entre&lt;/a&gt;&lt;/strong&gt; 
+com os dados de seu perfil já cadastrado.&lt;/p&gt; &lt;p&gt; Caso você não tenha recebido um email de confirmação, por favor, use o link de &lt;strong&gt;&lt;a href="/Login/tabid/1543/ctl/SendPassword/language/pt-BR/Default.aspx?returnurl=%2fmif%2fnexso%2fen-us%2fsubmityoursolution.aspx"&gt;
+
+recuperação de senha&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="EditModule.Text" xml:space="preserve">
+    <value>Edit Module</value>
+  </data>
+  <data name="Traslate.Text" xml:space="preserve">
+    <value>Traduzir</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="btnOk.Text" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="DeleteTitle.Text" xml:space="preserve">
+    <value>Excluir Solução</value>
+  </data>
+  <data name="UnpublishTitle.Text" xml:space="preserve">
+    <value>Editar Solução</value>
+  </data>
+  <data name="ConfirmationUnPublish.Text" xml:space="preserve">
+    <value>Você gostaria de editar sua solução? &lt;br&gt;&lt;br&gt; Importante: Caso edite sua solução, você deverá publicá-la novamente para que fique visível para comunidade NEXSO. Lembre-se que somente soluções publicadas participam dos concursos da NEXSO. </value>
+  </data>
+  <data name="PopUpReportSpam.Text" xml:space="preserve">
+    <value>Obrigado !!. A nossa equipa irá rever a solução em breve. :)</value>
+  </data>
+  <data name="lblCurator.Text" xml:space="preserve">
+    <value>Com curadoria de:</value>
+  </data>
+  <data name="PublishDate.Text" xml:space="preserve">
+    <value>Publicação:</value>
+  </data>
+  <data name="SolutionVideo.Text" xml:space="preserve">
+    <value>Vídeo</value>
+  </data>
+</root>

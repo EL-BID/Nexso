@@ -1,0 +1,50 @@
+<!--TemplateGroup:newsListArticleDefault-->
+<!--ArticleTemplate-->
+<div class="article in_list span">
+	<p class="date_box">
+	[EasyDNNnews:IfNotExists:Event]
+		<span class="day">[EasyDNNnews:PublishDay]</span>
+		<span class="month">[EasyDNNnews:PublishMonthString]</span>
+		<span class="year">[EasyDNNnews:PublishYear]</span>
+	[EasyDNNnews:EndIf:Event]
+	[EasyDNNnews:IfExists:Event]
+		<span class="day">[EasyDNNnews:EventStartDay]</span>
+		<span class="month">[EasyDNNnews:EventStartMonthNameShort]</span>
+		<span class="year">[EasyDNNnews:EventStartYear]</span>
+	[EasyDNNnews:EndIf:Event]
+	</p>
+	<div class="content_wrapper">
+		<h1><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h1>
+		<div class="content">
+			[EasyDNNnews:IfExists:Image]
+			<a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]"><img class="article_image" alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]" /></a>
+			[EasyDNNnews:EndIf:Image]
+			<div class="summary">
+				[EasyDNNnews:Summary]
+			</div>
+			<div style="clear: both"></div>
+		</div>
+		<div style="clear: both"></div>
+	</div>
+	<div class="meta_text"><div class="attribute author"><strong>[EasyDNNnewsLocalizedText:Author]:</strong> [EasyDNNnews:Author:Link]</div><div class="attribute comments">[EasyDNNnews:Comments] [EasyDNNnewsLocalizedText:Comments]</div><div class="attribute rating">[EasyDNNnews:ArticleRating]</div></div>
+	[EasyDNNnews:HasArticlePermissions]
+	<div>
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="shadow_box"></div>
+</div>
+<!--ArticleEnd-->
+
+<!--ArticleRepeat:Before:-->
+<!--RepeatEnd:Before:-->
+
+<!--ArticleRepeat:After:-->
+[EasyDNNnews:IfExists:RSS]
+<div class="article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->

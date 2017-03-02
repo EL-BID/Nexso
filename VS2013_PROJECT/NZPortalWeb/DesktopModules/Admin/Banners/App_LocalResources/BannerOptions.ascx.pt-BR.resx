@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plSource.Text">
+    <value xml:space="preserve">Origem da publicidade</value>
+  </data>
+  <data name="plSource.Help">
+    <value xml:space="preserve">Especifique se quer exibir publicidades definidas no portal ou no servidor.</value>
+  </data>
+  <data name="plType.Text">
+    <value xml:space="preserve">Tipo de publicidade</value>
+  </data>
+  <data name="plType.Help">
+    <value xml:space="preserve">Especifique o tipo de publicidade.</value>
+  </data>
+  <data name="plGroup.Text">
+    <value xml:space="preserve">Grupo de publicidades</value>
+  </data>
+  <data name="plGroup.Help">
+    <value xml:space="preserve">Especifique o nome do grupo de publicidades.</value>
+  </data>
+  <data name="plCount.Text">
+    <value xml:space="preserve">Quantidade de publicidades</value>
+  </data>
+  <data name="plCount.Help">
+    <value xml:space="preserve">Espeficique o número máximo de publicidades para exibir.</value>
+  </data>
+  <data name="plOrientation.Text">
+    <value xml:space="preserve">Orientação</value>
+  </data>
+  <data name="plOrientation.Help">
+    <value xml:space="preserve">Especifique se as publicidades devem ser mostradas vertical ou horizontalmente.</value>
+  </data>
+  <data name="plBorder.Text">
+    <value xml:space="preserve">Largura da borda</value>
+  </data>
+  <data name="plBorder.Help">
+    <value xml:space="preserve">Especificar largura da borda.</value>
+  </data>
+  <data name="plBorderColor.Text">
+    <value xml:space="preserve">Cor da borda</value>
+  </data>
+  <data name="plBorderColor.Help">
+    <value xml:space="preserve">Especificar cor da borda.</value>
+  </data>
+  <data name="plRowHeight.Text">
+    <value xml:space="preserve">Altura de linha</value>
+  </data>
+  <data name="plRowHeight.Help">
+    <value xml:space="preserve">Especifique a altura de cada célula de publicidade.</value>
+  </data>
+  <data name="plColWidth.Text">
+    <value xml:space="preserve">Largura da linha</value>
+  </data>
+  <data name="plColWidth.Help">
+    <value xml:space="preserve">Especifique a largura de cada célula da publicidade.</value>
+  </data>
+  <data name="cmdUpdate.Text">
+    <value xml:space="preserve">Atualizar</value>
+  </data>
+  <data name="cmdCancel.Text">
+    <value xml:space="preserve">Cancelar</value>
+  </data>
+  <data name="ControlTitle_edit.Text">
+    <value xml:space="preserve">Editar Publicidade</value>
+  </data>
+  <data name="plPadding.Text">
+    <value xml:space="preserve">Espaçamento</value>
+  </data>
+  <data name="plPadding.Help">
+    <value xml:space="preserve">Espaço entre as publicidades e a borda.</value>
+  </data>
+  <data name="AllTypes.Text">
+    <value xml:space="preserve">&lt; todos os tipos &gt;</value>
+  </data>
+  <data name="Host.Text">
+    <value xml:space="preserve">Servidor</value>
+  </data>
+  <data name="Site.Text">
+    <value xml:space="preserve">Portal</value>
+  </data>
+  <data name="valCount.ErrorMessage">
+    <value xml:space="preserve">A quantidade de publicidades deve ser um inteiro válido!</value>
+  </data>
+  <data name="Horizontal.Text">
+    <value xml:space="preserve">Horizontal</value>
+  </data>
+  <data name="Vertical.Text">
+    <value xml:space="preserve">Vertical</value>
+  </data>
+  <data name="valBorder.ErrorMessage">
+    <value xml:space="preserve">O tamanho da borda deve ser um valor inteiro válido!</value>
+  </data>
+  <data name="valPadding.ErrorMessage">
+    <value xml:space="preserve">O espaçamento de célula deve ser um inteiro válido!</value>
+  </data>
+  <data name="valRowHeight.ErrorMessage">
+    <value xml:space="preserve">A altura da linha deve ser um inteiro válido!</value>
+  </data>
+  <data name="valColWidth.ErrorMessage">
+    <value xml:space="preserve">O tamanho da coluna deve ser um inteiro válido!</value>
+  </data>
+  <data name="plBannerClickThroughURL.Help">
+    <value xml:space="preserve">Redirecionar publicidade para uma página intermediária.</value>
+  </data>
+  <data name="plBannerClickThroughURL.Text">
+    <value xml:space="preserve">Clique na publicidade através do endereço</value>
+  </data>
+  <data name="valBannerClickThroughURL.ErrorMessage">
+    <value xml:space="preserve">Clique na publicidade por endereço deve ser um endereço válido, por favor certifique-se que seu endereço inicia com 'http://'!</value>
+  </data>
+</root>

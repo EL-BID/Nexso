@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" CodeBehind="htmluploader.ashx.cs" Class="EasyDNNSolutions.Modules.EasyDNNNews.htmluploader" %>

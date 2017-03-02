@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add.Title">
+    <value xml:space="preserve">Criar Novo Módulo</value>
+  </data>
+  <data name="Edit.Title">
+    <value xml:space="preserve">Editar Módulo</value>
+  </data>
+  <data name="cmdCreate.Text">
+    <value xml:space="preserve">Criar módulo</value>
+  </data>
+  <data name="Control.Text">
+    <value xml:space="preserve">Controle</value>
+  </data>
+  <data name="Manifest.Text">
+    <value xml:space="preserve">Manifesto</value>
+  </data>
+  <data name="New.Text">
+    <value xml:space="preserve">Novo</value>
+  </data>
+  <data name="plAddPage.Help">
+    <value xml:space="preserve">Marque esta caixa para criar uma página de teste para seu novo módulo.</value>
+  </data>
+  <data name="plAddPage.Text">
+    <value xml:space="preserve">Adicionar página de teste?</value>
+  </data>
+  <data name="plCreate.Help">
+    <value xml:space="preserve">Você pode criar um novo módulo de três formas. Selecione qual método você quer usar: Novo - cria um novo controle de módulo, Controle - cria um módulo apartir de um controle existente,  Manifesto - cria um módulo apartir de um manifesto existente.</value>
+  </data>
+  <data name="plCreate.Text">
+    <value xml:space="preserve">Criar módulo de:</value>
+  </data>
+  <data name="plDescription.Help">
+    <value xml:space="preserve">Você pode fornecer uma descrição para seu módulo.</value>
+  </data>
+  <data name="plDescription.Text">
+    <value xml:space="preserve">Descrição:</value>
+  </data>
+  <data name="plFile1.Help">
+    <value xml:space="preserve">Selecione o recurso para usar para criar seu módulo.</value>
+  </data>
+  <data name="plFile1.Text">
+    <value xml:space="preserve">Recurso:</value>
+  </data>
+  <data name="plModule1.Help">
+    <value xml:space="preserve">Esta é a pasta onde seus arquivos do módulo e as pastas serão armazenados.</value>
+  </data>
+  <data name="plModule1.Text">
+    <value xml:space="preserve">Pasta do módulo:</value>
+  </data>
+  <data name="plName.Help">
+    <value xml:space="preserve">Entre um nome amigável para seu módulo.</value>
+  </data>
+  <data name="plName.Text">
+    <value xml:space="preserve">Nome do módulo:</value>
+  </data>
+  <data name="plOwner1.Help">
+    <value xml:space="preserve">Desenvolvedores de módulo são encorajados a usar uma pasta "única" dentro da pasta DesktopModules para todo o desenvolvimento, para evitar potenciais conflitos com outros desenvolvedores. Selecione a pasta que você quer usar para desenvolver seu módulo. Nota: Pastas com controles de usuários (arquivos .ascx) e a pasta núcleo de administração estão excluídas desta lista.</value>
+  </data>
+  <data name="plOwner1.Text">
+    <value xml:space="preserve">Pasta proprietária:</value>
+  </data>
+  <data name="Template.Text">
+    <value xml:space="preserve">Modelo</value>
+  </data>
+  <data name="cmdAdd.Text">
+    <value xml:space="preserve">Adicionar pasta</value>
+  </data>
+  <data name="cmdCancel.Text">
+    <value xml:space="preserve">Voltar</value>
+  </data>
+  <data name="cmdSave.Text">
+    <value xml:space="preserve">Criar pasta</value>
+  </data>
+  <data name="CSharp.Text">
+    <value xml:space="preserve">C# (C sharp)</value>
+  </data>
+  <data name="LanguageError.Text">
+    <value xml:space="preserve">Você deve selecionar um idioma para seu controle módulo!</value>
+  </data>
+  <data name="plFile2.Help">
+    <value xml:space="preserve">Entre o nome para o novo controle de módulo.</value>
+  </data>
+  <data name="plFile2.Text">
+    <value xml:space="preserve">Nome de arquivo:</value>
+  </data>
+  <data name="VisualBasic.Text">
+    <value xml:space="preserve">Visual Basic</value>
+  </data>
+  <data name="FileExists.Text">
+    <value xml:space="preserve">O nome de arquivo que você escolheu já existe! Por favor use um nome diferente.</value>
+  </data>
+  <data name="ModuleFolder.Text">
+    <value xml:space="preserve">Você deve selecionar uma pasta de módulo! Você pode criar uma se necessário.</value>
+  </data>
+  <data name="TabExists.Text">
+    <value xml:space="preserve">O nome de página já existe. O módulo foi criado mas a página de teste não foi gerada.</value>
+  </data>
+  <data name="plModule2.Help">
+    <value xml:space="preserve">Entre um nome para a nova pasta de módulo.</value>
+  </data>
+  <data name="plModule2.Text">
+    <value xml:space="preserve">Nome da pasta:</value>
+  </data>
+  <data name="plOwner2.Help">
+    <value xml:space="preserve">Entre um nome para a nova pasta proprietária.</value>
+  </data>
+  <data name="plOwner2.Text">
+    <value xml:space="preserve">Nome da pasta:</value>
+  </data>
+  <data name="plLang.Help">
+    <value xml:space="preserve">Escolhe o idioma para usar.</value>
+  </data>
+  <data name="plLang.Text">
+    <value xml:space="preserve">Idioma:</value>
+  </data>
+  <data name="ImportControl.ErrorMessage">
+    <value xml:space="preserve">Ocorreu um erro ao importar o controle módulo! Por favor veja o registro de eventos para mais detalhes.</value>
+  </data>
+  <data name="InvalidFilename.Text">
+    <value xml:space="preserve">Nomes de arquivo não podem conter caracteres inválidos!</value>
+  </data>
+  <data name="MissingControl.Text">
+    <value xml:space="preserve">Você deve fornecer um nome de arquivo para o controle módulo!</value>
+  </data>
+  <data name="MissingFriendlyname.Text">
+    <value xml:space="preserve">Você deve fornecer um nome para o módulo!</value>
+  </data>
+  <data name="NonuniqueName.Text">
+    <value xml:space="preserve">Um pacote já existe com este nome! Por favor providencie um nome alternativo.</value>
+  </data>
+  <data name="MissingManifest.Text">
+    <value xml:space="preserve">Você deve fornecer um arquivo manifesto (arquivo .dnn ou .dnn5)!</value>
+  </data>
+  <data name="NoControl.Text">
+    <value xml:space="preserve">Você deve selecionar um controle da lista de "Recursos"!</value>
+  </data>
+</root>

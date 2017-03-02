@@ -1,0 +1,404 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUserPremissionSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUserPremissionSettings]', N'{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUserPremissionSettings', N'PK_{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionSettings_Users', N'FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Users', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'PostToSocialNetwork')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD PostToSocialNetwork bit NOT NULL DEFAULT(0)
+END
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRolePremissionSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRolePremissionSettings]', N'{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRolePremissionSettings', N'PK_{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionSettings_Roles', N'FK_{objectQualifier}EasyDNNNewsRolePremissionSettings_Roles', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'PostToSocialNetwork')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD PostToSocialNetwork bit NOT NULL DEFAULT(0)
+END
+GO
+
+/*** Kreiranje PortalSettingsa ***/
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings](
+		[PortalID] [int] NOT NULL,
+		[ArticleApproveConfirm] [bit] NOT NULL,
+		[CommentApproveConfirm] [bit] NOT NULL,
+		[TwitterConsumerKey] [nvarchar](250) NULL,
+		[TwitterConsumerSecret] [nvarchar](250) NULL,
+		[FacebookAppID] [nvarchar](250) NULL,
+		[FacebookAppSecret] [nvarchar](250) NULL,
+		[EnableTwitter] [bit] NOT NULL,
+		[TwitterAccessToken] [nvarchar](250) NULL,
+		[TwitterAccessSecret] [nvarchar](250) NULL,
+		[EnableFacebook] [bit] NOT NULL,
+		[FacebookAccessToken] [nvarchar](250) NULL,
+		[FacebookPostToIDAndToken] [nvarchar](350) NULL,
+		[EnableJournal] [bit] NOT NULL,
+		[EnableJournalComment] [bit] NOT NULL,
+		[PostSubtitleToJournal] [bit] NOT NULL,
+		[PostSummaryToJournal] [bit] NOT NULL,
+		[PostTitleToJournal] [bit] NOT NULL,
+		[PostImageToJournal] [bit] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsPortalSettings] PRIMARY KEY CLUSTERED ([PortalID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_ArticleApproveConfirm]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+Begin
+	IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_ArticleApproveConfirm]') AND type = 'D')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD  CONSTRAINT [DF_{objectQualifier}EasyDNNNewsPortalSettings_ArticleApproveConfirm] DEFAULT ((0)) FOR [ArticleApproveConfirm]
+	END
+End
+GO
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_CommentApproveConfirm]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+Begin
+	IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_CommentApproveConfirm]') AND type = 'D')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD  CONSTRAINT [DF_{objectQualifier}EasyDNNNewsPortalSettings_CommentApproveConfirm] DEFAULT ((0)) FOR [CommentApproveConfirm]
+	END
+End
+GO
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_EnableTwitter]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+Begin
+	IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_EnableTwitter]') AND type = 'D')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD  CONSTRAINT [DF_{objectQualifier}EasyDNNNewsPortalSettings_EnableTwitter]  DEFAULT ((0)) FOR [EnableTwitter]
+	END
+End
+GO
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_TwitterAccessToken]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+Begin
+	IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_TwitterAccessToken]') AND type = 'D')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD  CONSTRAINT [DF_{objectQualifier}EasyDNNNewsPortalSettings_TwitterAccessToken]  DEFAULT ('') FOR [TwitterAccessToken]
+	END
+End
+GO
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_EnableFacebook]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+Begin
+IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_EnableFacebook]') AND type = 'D')
+BEGIN
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD CONSTRAINT [DF_{objectQualifier}EasyDNNNewsPortalSettings_EnableFacebook]  DEFAULT ((0)) FOR [EnableFacebook]
+END
+
+End
+GO
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_EnableJournal]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+Begin
+	IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_EnableJournal]') AND type = 'D')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD CONSTRAINT [DF_{objectQualifier}EasyDNNNewsPortalSettings_EnableJournal]  DEFAULT ((0)) FOR [EnableJournal]
+	END
+End
+GO
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_EnableJournalComment]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+Begin
+	IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_EnableJournalComment]') AND type = 'D')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD  CONSTRAINT [DF_{objectQualifier}EasyDNNNewsPortalSettings_EnableJournalComment]  DEFAULT ((0)) FOR [EnableJournalComment]
+	END
+End
+GO
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_PostSubtitleToJournal]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+Begin
+	IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_PostSubtitleToJournal]') AND type = 'D')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD  CONSTRAINT [DF_{objectQualifier}EasyDNNNewsPortalSettings_PostSubtitleToJournal]  DEFAULT ((0)) FOR [PostSubtitleToJournal]
+	END
+End
+GO
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_PostSummaryToJournal]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+Begin
+	IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_PostSummaryToJournal]') AND type = 'D')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD  CONSTRAINT [DF_{objectQualifier}EasyDNNNewsPortalSettings_PostSummaryToJournal]  DEFAULT ((0)) FOR [PostSummaryToJournal]
+	END
+End
+GO
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_PostTitleToJournal]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+Begin
+	IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_PostTitleToJournal]') AND type = 'D')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD  CONSTRAINT [DF_{objectQualifier}EasyDNNNewsPortalSettings_PostTitleToJournal]  DEFAULT ((0)) FOR [PostTitleToJournal]
+	END
+End
+GO
+IF Not EXISTS (SELECT * FROM sys.default_constraints WHERE object_id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_PostImageToJournal]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+Begin
+	IF NOT EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[DF_{objectQualifier}EasyDNNNewsPortalSettings_PostImageToJournal]') AND type = 'D')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD  CONSTRAINT [DF_{objectQualifier}EasyDNNNewsPortalSettings_PostImageToJournal]  DEFAULT ((0)) FOR [PostImageToJournal]
+	END
+End
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsPortalSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsPortalSettings_Portals] FOREIGN KEY([PortalID])
+REFERENCES {databaseOwner}{objectQualifier}Portals ([PortalID]) ON DELETE CASCADE
+GO
+IF EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsPortalSettings_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsPortalSettings_Portals]
+GO
+
+/*** Nadogradnja modulesettingsa ***/
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsModuleSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsModuleSettings]', N'{objectQualifier}EasyDNNNewsModuleSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsModuleSettings', N'PK_{objectQualifier}EasyDNNNewsModuleSettings', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsModuleSettings', N'IX_{objectQualifier}EasyDNNNewsModuleSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsModuleSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsModuleSettings_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'EnableTwitter')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD EnableTwitter bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TwitterAccessToken')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD TwitterAccessToken [nvarchar](250) NULL
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'TwitterAccessSecret')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD TwitterAccessSecret [nvarchar](250) NULL
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'EnableFacebook')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD EnableFacebook bit NOT NULL DEFAULT(0)
+END
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'FacebookAccessToken')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD FacebookAccessToken [nvarchar](250) NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'FacebookPostToIDAndToken')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD FacebookPostToIDAndToken [nvarchar](350) NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'EnableJournal')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD EnableJournal bit NOT NULL DEFAULT(0)
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'EnableJournalComment')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD EnableJournalComment bit NOT NULL DEFAULT(0)
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'PostTitleToJournal')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD PostTitleToJournal bit NOT NULL DEFAULT(0)
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'PostSubtitleToJournal')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD PostSubtitleToJournal bit NOT NULL DEFAULT(0)
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'PostSummaryToJournal')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD PostSummaryToJournal bit NOT NULL DEFAULT(0)
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsModuleSettings' and column_name = 'PostImageToJournal')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings] ADD PostImageToJournal bit NOT NULL DEFAULT(0)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSocialSharingStatistics]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSharingStatistics](
+		[StatisticID] [int] IDENTITY(1,1) NOT NULL,
+		[ArticleID] [int] NOT NULL,
+		[UserID] [int] NULL,
+		[SocialNetwork] [tinyint] NOT NULL,
+		[PostedToAccountID] [varchar](250) NOT NULL,
+		[PostedToName] [nvarchar](350) NOT NULL,
+		[PostType] [tinyint] NOT NULL,
+		[PostDateTime] [datetime] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsSocialSharingArchive] PRIMARY KEY CLUSTERED ([StatisticID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNews]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNews]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNews]', N'{objectQualifier}EasyDNNNews', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNews', N'PK_{objectQualifier}EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsSocialSharingStatistics_EasyDNNNews]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSocialSharingStatistics]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSharingStatistics]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSocialSharingStatistics_EasyDNNNews] FOREIGN KEY([ArticleID])
+REFERENCES {databaseOwner}[{objectQualifier}EasyDNNNews] ([ArticleID])
+ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsSocialSharingStatistics_EasyDNNNews]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSocialSharingStatistics]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSharingStatistics] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSocialSharingStatistics_EasyDNNNews]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsSocialSharingStatistics_Users]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSocialSharingStatistics]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSharingStatistics]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSocialSharingStatistics_Users] FOREIGN KEY([UserID])
+REFERENCES {databaseOwner}{objectQualifier}Users ([UserID])
+ON DELETE SET NULL
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsSocialSharingStatistics_Users]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSocialSharingStatistics]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsSocialSharingStatistics] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsSocialSharingStatistics_Users]
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserNotifications]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserNotifications](
+		[UserID] [int] NOT NULL,
+		[PortalID] [int] NOT NULL,
+		[NewArticle] [bit] NOT NULL,
+		[NewEvent] [bit] NOT NULL,
+		[EditArticle] [bit] NOT NULL,
+		[ApproveArticle] [bit] NOT NULL,
+		[NewComment] [bit] NOT NULL,
+		[ApproveComment] [bit] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsUserNotifications] PRIMARY KEY CLUSTERED ([UserID] ASC,[PortalID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsUserNotifications_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserNotifications]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserNotifications]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsUserNotifications_Portals] FOREIGN KEY([PortalID])
+REFERENCES {databaseOwner}[{objectQualifier}Portals] ([PortalID])
+ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsUserNotifications_Portals]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserNotifications]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserNotifications] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsUserNotifications_Portals]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsUserNotifications_Users]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserNotifications]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserNotifications]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsUserNotifications_Users] FOREIGN KEY([UserID])
+REFERENCES {databaseOwner}[{objectQualifier}Users] ([UserID])
+ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsUserNotifications_Users]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserNotifications]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserNotifications] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsUserNotifications_Users]
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRoleNotifications]') AND type in (N'U'))
+BEGIN
+	SET ANSI_NULLS ON
+	SET QUOTED_IDENTIFIER ON
+	CREATE TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRoleNotifications](
+		[RoleID] [int] NOT NULL,
+		[NewArticle] [bit] NOT NULL,
+		[NewEvent] [bit] NOT NULL,
+		[EditArticle] [bit] NOT NULL,
+		[ApproveArticle] [bit] NOT NULL,
+		[NewComment] [bit] NOT NULL,
+		[ApproveComment] [bit] NOT NULL,
+		CONSTRAINT [PK_{objectQualifier}EasyDNNNewsRoleNotifications] PRIMARY KEY CLUSTERED ([RoleID] ASC) WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
+	)
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsRoleNotifications_Roles]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRoleNotifications]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRoleNotifications]  WITH CHECK ADD  CONSTRAINT [FK_{objectQualifier}EasyDNNNewsRoleNotifications_Roles] FOREIGN KEY([RoleID])
+REFERENCES {databaseOwner}{objectQualifier}Roles ([RoleID])
+ON DELETE CASCADE
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[FK_{objectQualifier}EasyDNNNewsRoleNotifications_Roles]') AND parent_object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRoleNotifications]'))
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRoleNotifications] CHECK CONSTRAINT [FK_{objectQualifier}EasyDNNNewsRoleNotifications_Roles]
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsNewTags]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsNewTags]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsNewTags]', N'{objectQualifier}EasyDNNNewsNewTags', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsItemTags', N'PK_{objectQualifier}EasyDNNNewsItemTags', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsItemTags', N'IX_{objectQualifier}EasyDNNNewsItemTags', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsNewTags_DateCreated', N'DF_{objectQualifier}EasyDNNNewsNewTags_DateCreated', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+
+IF EXISTS (SELECT *  FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_NAME ='IX_{objectQualifier}EasyDNNNewsItemTags')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsNewTags] DROP CONSTRAINT IX_{objectQualifier}EasyDNNNewsItemTags
+END
+
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsNewTags]
+ADD CONSTRAINT IX_{objectQualifier}EasyDNNNewsItemTags UNIQUE(PortalID, Name)

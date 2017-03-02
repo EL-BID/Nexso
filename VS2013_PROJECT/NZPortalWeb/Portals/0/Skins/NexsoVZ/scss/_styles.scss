@@ -1,0 +1,976 @@
+﻿/* ==========================================================================
+   Styles - generic styles for Nexso 2
+   ========================================================================== */
+
+/* Generic styles */
+  
+a,
+a:active,
+a:focus {
+  outline: none;
+}
+
+a, a:link, a:visited, a:active {
+  color: $primary-color;
+}
+
+h1 { @extend .title-xl; }
+h2 { @extend .title-l; }
+h3 { @extend .title-m; }
+h4 { @extend .title-s; }
+
+
+// Button styling
+.solution-button {
+  @include button($bg:$solution);
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+  	color: #fff;
+  }
+}
+
+.primary-button {
+  @include button();
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+  	color: #fff;
+  }
+}
+
+.secondary-button {
+  @include button($bg:#fff);
+  border-color: $primary-color-light;
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.tertiary-button {
+  @include button($bg:#f2f2f2);
+  border-color: $light-touch;
+  border-width: 1px;
+  color: $body-font-color;
+  font-weight: normal;
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
+
+
+
+#site-hdr {
+	padding: 1rem 0;
+	a {
+		color: $body-font-color;
+	}
+	.logo {
+		@include grid-row;
+	}
+	#site-title {
+		@include grid-column(10);
+		@extend .title-s;
+		margin: 0;
+		img {
+			vertical-align: top;
+			width: 200px;
+		}
+	}
+	.right-off-canvas-toggle {
+		@include grid-column(2);
+		height: 3rem;
+		text-align: right;
+		&:before {
+			@extend .nexso-icon;
+			@extend .icon-menu;
+			font-size: 2rem;
+			line-height: 3rem;
+		}
+	}
+	nav.primary,
+	nav.secondary {
+		font-weight: bold;
+		ul {
+			list-style: none;
+			margin: 0;
+			li {
+				list-style: none;
+			}
+			a {
+				border-bottom: 1px $body-font-color solid;
+				display: block;
+				padding: 0.5rem 0.5rem 0.5rem 1rem;
+				&:before {
+					@extend .nexso-icon;
+					display: inline-block;
+					font-size: 1.5rem;
+					margin-right: 0.5rem;
+
+					height: 2rem;
+					line-height: 2rem;
+					width: 2rem;
+				}			
+			}
+			.drop {
+				background-color: lighten($body-font-color,45%);
+				border-bottom: 1px $body-font-color solid;
+				display: none;
+				font-weight: normal;
+				li.active a {
+					background-color: lighten($primary-color,45%);
+					border-bottom: 1px $primary-color solid;
+					color: $primary-color;
+				}
+				a {
+					padding-left: 3.5rem;
+				}
+				span,
+				a {
+					display: block;
+				}
+				&:before {
+					@extend .nexso-icon;
+				}
+				span.email {
+					padding: 0.5rem 0.5rem 0.5rem 3.5rem;
+				}
+			}
+
+			@media #{$large-up} {
+				li { 
+					float: left;
+					position: relative;
+				}
+				a {
+					border-bottom: 0;
+					&:before {
+						display: block;
+						height: auto;
+						margin-right: 0;
+						width: auto;
+					}
+				}
+				.drop {
+					background-color: #fff;
+					border: 1px lighten($body-font-color,20%) solid;
+					@include border-radius(5px);
+					left: 0;
+					margin-top: 1rem;
+					padding: 1rem 0;
+					position: absolute;
+					text-align: left;
+					z-index: 1000;
+					a {
+						padding-left: 0;
+					}
+					span {
+						display: block;
+						margin: 0 1rem;
+					}
+					li {
+						float: none;
+						padding: 0;
+						&.active a {
+							border-bottom: none;
+						}
+						a {
+							color: $primary-color;
+							display: block;
+							padding: 0 1rem;
+							&:hover {
+								background-color: lighten($primary-color,45%);
+							}
+						}
+					}
+					.email {
+						border-bottom: 1px $light-touch solid;
+						margin-bottom: 0.5rem;
+						padding: 0 0 0.5rem 0;
+					}
+					&:before {
+				    content: "\e609";
+				    color: #fff;
+				    font-size: 2rem;
+				    left: 1rem;
+				    position: absolute;
+				    text-shadow: 0 -1px lighten($body-font-color,20%);
+				    top: -22px;
+				  }
+				}
+			}
+		}
+	}
+	nav.primary {
+		.browse>a:before { @extend .icon-browse; }
+		.share>a:before { @extend .icon-file; }
+		@media #{$large-up} {
+			ul {
+				float: right;
+			}
+			.share a {
+  			@include button($bg:$solution);
+				font-size: 1rem;
+				margin-bottom: 0;
+			}
+			.share,
+			.browse {
+				a {
+					line-height: 1.5;
+					padding: 0.5rem 1rem;
+				}
+				&>a:before {
+					display: none;
+				}
+			}
+			.browse a {
+				display: inline-block; // to outline it with the share button
+			}
+		}	
+	}
+	nav.secondary {		
+		.user>a:before { @extend .icon-user; }
+		.language>a:before { @extend .icon-globe; }
+		.search>a:before { @extend .icon-search; }
+		.solutions>a:before { @extend .icon-file; }
+		.search {
+			.drop {
+				padding: 0.5rem 0.5rem 0.5rem 1rem;
+				input,
+				a {
+					float: left;
+				}
+				input {				
+					width: 80%;
+				}
+				input,
+				a:before {
+					font-size: 1rem;
+					line-height: 19px;
+					padding: 0.5rem;
+				}
+				a {
+					background-color: $primary-color;
+					border: 1px $primary-color solid;
+					color: #fff;
+					display: block;
+					padding: 0;
+					text-align: center;
+					width: 20%;
+					&:before {
+						@extend .icon-search;
+					}
+				}
+			}
+		}
+		@media #{$large-up} {
+			font-weight: normal;
+			text-align: center;
+			ul .drop span.email {
+				padding: 0;
+			}
+			ul a {
+				padding: 0;
+			}
+			&>ul {
+				display: inline-block;
+			}
+			li {
+				border-right: 1px $light-touch solid;
+				padding: 0 10px;
+				&.solutions,
+				&.user {
+					border-right: none;
+				}
+				&.solutions {
+					border-left: 1px $light-touch solid;
+				}
+				&.search {
+					.drop {
+						padding: 0.5rem;
+						width: 250px;
+						a,
+						input {
+							margin: 0.5rem 0;
+						}
+					}
+				}
+			}
+			a:before {
+				display: block;
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	//On large up we are not using the off-canvas
+	@media #{$large-up} {
+		@include grid-row;
+
+		.logo {
+			@include grid-column(3);
+			#site-title {
+				float: none;
+				padding: 0;
+				width: 100%;
+			}
+		}
+		.right-off-canvas-menu {
+			background-color: transparent;
+			overflow-y: visible;
+			position: relative;
+			-webkit-transform: none;
+			-ms-transform: none;
+			-moz-transform: none;
+			-o-transform: none;
+			transform: none;
+			width: auto;
+		}
+		nav.primary {
+			@include grid-column(3,$push:6);
+		}
+		nav.secondary {
+			@include grid-column(6,$pull:3);
+		}
+		.right-off-canvas-toggle {
+			display: none;
+		}
+	}
+}
+
+main {
+	@include box-shadow(0 4px 0 0 rgba(0,0,0,0.1) inset);
+	.content {
+		@include grid-column(12);
+	}
+}
+
+#site-ftr {
+	border-top: 4px $light-touch solid;
+	font-size: 0.875rem;
+	padding: 2em 0;
+	a {
+		color: $body-font-color;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+	}
+	nav.secondary {
+		@include grid-column(6);
+		margin-bottom: 1rem;
+		h1,
+		a {
+			font-size: 0.875rem;
+		}
+		h1 {
+			font-weight: bold;
+		}
+	}
+	.project-by {
+		@include grid-column(12);
+	}
+	.project-by {
+		li {
+			float: left;
+			line-height: 60px;
+			text-align: center;
+			width: 50%;
+			&.idb img {
+				max-width: 96px;
+			}
+			&.fomin img {
+				max-width: 81px;
+			}
+		}
+		.attribution {
+			padding-top: 1rem;
+			text-align: center;
+		}
+	}
+	@media #{$medium-up} {
+		nav.secondary {
+			@include grid-column(2);
+		}
+		nav.secondary.first {
+			@include grid-column(2, $offset: 1);	
+		}
+		.project-by {
+			@include grid-column(4);
+			border-left: 1px lighten($body-font-color,20%) solid;
+		}
+	}
+}
+
+/* Styling of banner and navigation of multi-step forms like Wizard and Connect */
+
+.banner {
+	background-color: $contrast;
+	padding: 2rem 0;
+	.step-navigation {
+		@include grid-column(12);
+		text-align: center;
+		#header {
+			margin: 0;
+			margin-top: 3rem;
+			list-style: none;
+			position: relative;
+			text-align: center;
+			width: 100%;
+			&:before {
+				background-color: #ccc;
+				content: "";
+				display: block;
+				height: 4px;
+				margin: 0 auto;
+				width: 78%; // (7 * 13) - (6.5 + 6.5)
+				z-index: 0;
+			}
+			li {
+				display: inline-block;
+				margin-bottom: 2rem;
+				margin-right: -2px; // Fix quirky behaviour on inline-block
+				margin-top: -12px;
+				vertical-align: top;
+				width: 13%;
+			}
+			a {
+				color: #fff;
+				font-size: 0.875rem;
+				font-weight: bold;
+				&:before {    
+					background-color: #ccc;
+	    		@include border-radius(30px);
+	    		content: "";
+	    		display: block;
+	    		height: 20px;
+	    		margin: 0 auto 10px;
+	    		width: 20px;
+				}
+				&.prevStep:before,
+				&.currentStep:before {
+					border: 2px #fff solid;
+					height: 26px;
+					margin-top: -3px;
+					width: 26px;
+				}
+				&.prevStep:before {
+					background: $primary-color url(images/checkmark-white.png) no-repeat center center;
+				}
+				&.currentStep:before {
+					background-color: $solution;
+				}
+			}
+			.step-title {
+				display: none;
+			}
+			.currentStep .step-title {
+				color: #fff;
+				display: inline;
+			}
+			@media #{$medium-up} {
+				.step-title {
+					display: inline;
+				}
+			}
+		}
+	}
+	h1 {
+		color: #fff;
+		font-weight: bold;
+	}
+}
+
+/* Styling of multi-step forms */
+
+.connect-wizard,
+.solution-wizard {
+	table {
+		margin-bottom: 2rem;
+	}
+}
+
+.wizard-form {
+	@include grid-column(12);
+}
+	
+.edit-form,
+.wizard-form {
+	legend {
+		@extend .title-m;
+		margin-bottom: 2rem;
+	}
+	fieldset {
+		margin-bottom: 0;
+	}
+	.field {
+		margin-bottom: 2rem;
+	}
+	.field.last {
+		border-bottom: 1px lighten($body-font-color,20%) solid;
+		padding-bottom: 2rem;
+	}
+	.field.checkbox { // Override the standard checkbox styling
+		td {
+			display: block; // Have to be floated blocks because of undesired behaviour in Firefox
+			float: left;
+  	  padding: 0.5rem 0.5rem 0.5rem 1.2rem;
+			position: relative;
+	    vertical-align: top;
+	    width: 100%;
+	    @media #{$medium-up} {
+	    	width: 33%;
+	    }
+			input {
+		    left: 0;
+		    margin: 0;
+		    position: absolute;
+		    top: 0.5rem;
+		    z-index: 1;
+			}
+			label {
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+	label {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+	.field td label {
+		font-weight: normal;
+	}
+	input,
+	textarea {
+		margin-bottom: 0.5rem;
+	}
+	textarea {
+		height: 100px;
+	}
+	.maxlength-feedback,
+	.rfv,
+	.support-text,
+	.support-text p,
+	.support-text ul {
+		font-size: 0.875rem;
+		line-height: $base-line-height;
+	}
+	.maxlength-feedback {
+		float: right;
+	}
+	.maxlength-full {
+		background-color: transparent;
+	}
+	.rfv span {
+		background-color: #F04124;
+		color: #fff !important;
+		display: block;
+		font-weight: bold;
+		padding: 0.25rem;
+	}
+	.support-text {
+		display: none;
+		position: relative;
+		span {
+			background-color: $primary-color;
+			display: block;
+			color: #fff;
+			padding: 0.5rem; 
+			&:before { // construct the little arrow
+		    content: ' ';
+		    height: 0;
+		    position: absolute;
+		    width: 0;
+		    border: 10px solid transparent;
+		    border-bottom-color: $primary-color; 
+		    top: -20px;
+		    left: 10px;
+		    //margin-left: -10px; /* equal to border-width */
+		    z-index: 2;
+		  }
+		}
+		span ul {
+			margin: 1rem 0 1rem 1rem;
+		}
+		span ul li {
+			list-style: disc;
+		}
+	}
+	ul {
+		margin-left: 0;
+	}
+	.buttons {
+		padding: 1rem 0;
+		text-align: center;
+	}
+}
+
+/* Button styling of multi-step forms */
+.btn {
+	margin: 0 10px;
+}
+
+.form-cancel,
+.step-back,
+.step-cancel
+ {
+ 	@extend .secondary-button;
+}
+
+.form-save,
+.step-forward,
+.step-start,
+.step-finish {
+	@extend .primary-button;
+}
+
+/* Agressive overrides of the Telerik dropdown */
+
+.solution-wizard {
+	.RadComboBox_Default {
+		border: 1px #ccc solid;
+		font-family: $body-font-family !important;
+		width: 100% !important;
+		.rcbEmptyMessage {
+			font-style: normal !important;
+		}
+		td.rcbInputCellLeft,
+		td.rcbInputCellRight {
+			background-image: none !important;
+			background-color: #fff !important;
+		  border: none !important;
+		  box-shadow: 0 !important;
+		  color: $body-font-color !important;
+		}
+		input {
+			font-family: $body-font-family !important;
+		}
+	}
+
+	.RadComboBoxDropDown_Default {
+		.rcbItem, 
+		.rcbHovered {
+			border: 0 !important;
+			color: $body-font-color !important;
+		}
+	} 
+}
+
+/* Styling of generic pages with a banner, content area and sidebar */
+
+.sidebar-layout {
+	padding-top: 3rem;
+	.content-wrapper,
+	aside {
+		@include grid-column(12);
+		padding-bottom: 3rem;
+		padding-top: 3rem;
+	}
+	.banner-wrapper,
+	 {
+		@include grid-column(12);
+		img {
+			width: 100%;
+		}
+	}
+	.content-wrapper {
+		h1.title {
+			@extend .title-l;
+		}
+		h2.sub-title {
+			@extend .title-m;
+			font-weight: normal;
+		}
+		.buttons {
+			border-bottom: 1px $light-touch solid;
+			margin: 1rem 0;
+			.actions {
+				float: right;
+				input {
+					@extend .tertiary-button;
+					font-size: 0.875rem;
+				}
+			}
+		}
+	}
+	aside {
+		h1 {
+			@extend .title-s;
+		}
+		dl,
+		ul,
+		p {
+			font-size: 0.875rem;
+		}
+		ul {
+			list-style: none;
+			margin: 0;
+		}
+		div {
+			margin-bottom: 3rem;
+		}
+	}
+	@media #{$medium-up} {
+		.content-wrapper {
+			@include grid-column(7);
+		}
+		aside {
+			@include grid-column(4, $offset:1);
+		}
+	}
+}
+
+/* Styling of the pages without sidebar (eg. About Nexso) */
+
+.no-sidebar {
+	.content-wrapper {
+		@include grid-column(12);
+		margin-bottom: 3rem;
+		margin-top: 3rem;	
+		@media #{$medium-up} {
+			@include grid-column(8,$offset:2);
+		}
+		h1,
+		p.lead {
+			text-align: center;
+		}
+		.flex-video {
+			margin: 2rem 0;
+		}
+		ul {
+			margin-left: 2rem;
+		}
+		li {
+			list-style: disc;
+		}
+		ul.toc {													// Table of content
+			margin: 2rem 0;
+			li {
+				list-style: none;
+			}
+			a {
+				border-bottom: 1px solid $light-touch;
+				display: block;
+				margin-bottom: 0.5rem;
+				padding-bottom: 0.5rem;
+			}
+		}
+		dl.examples {
+			background-color: #e9e9e9;
+			padding: 1rem;
+		}
+	}
+}
+
+// Styling of the full width sections, for example used on the frontpage, or the login form
+// Since this section spans the full width, inside of it needs to be a .row and something
+// to which is applied the grid-columns.
+section.stripe {
+	@include box-shadow(0 4px 0 0 rgba(0,0,0,0.1) inset);
+	padding: 4rem 0;
+	h1 {
+		margin-bottom: 2rem;
+	}
+	p {
+		font-size: 1.25rem;
+	}
+	.content {
+		@include grid-column(12);
+		&.dark-bg {
+			color: #fff;
+			h1,
+			a,
+			label {
+			color: #fff;
+			}
+		}	
+	}
+	ul.three li {
+		@include grid-column(10, $offset:1);
+		margin: 2rem 0;
+		p {
+			line-height: $base-line-height !important; 
+		}
+	}
+	@media #{$medium-up} {
+		padding: 6rem 0;
+		.content.left {
+			@include grid-column(5);
+		}
+		.content.right {
+			@include grid-column(5,$offset:7);
+		}
+		.content.full {
+			@include grid-column(8, $offset:2);
+		}
+		ul.three li {
+			@include grid-column(4,$offset:0);
+		}
+	}
+	&.intro {
+		@include box-shadow(none);
+		background-color: #0071bc;
+		text-align: center;
+		h1 {
+			@extend .title-xl;
+		}
+		@media #{$medium-up} {
+			background: #0071bc url(images/banner-top.png) no-repeat center center;
+			background-size: cover;
+			p {
+				font-size: 2rem;
+			}
+			h1 {
+				font-size: rem-calc(80);
+	  		letter-spacing: -1px;
+	  		line-height: 1.2;
+			}
+		}
+	}
+}
+
+// Login page
+.login section.intro {
+	h1 {
+		font-size: 3rem;
+	}
+	// Resetting default DNN styles
+	.dnnFormItem {
+		text-align: center;
+	}
+	.dnnFormItem > label.dnnFormLabel {
+    display: block;
+    margin: 0 0 0.5rem 0;
+    text-align: left;
+    width: 100%;
+	}
+
+	// Redeclaring the standard Nexso (Foundation) form style
+	// since DNN is aggressively setting this.
+	.dnnFormItem input[type="text"],
+	.dnnFormItem input[type="password"] {
+	  background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-family: inherit;
+    font-size: 0.875rem;
+    height: 2.3125rem;
+    margin: 0 0 1rem;
+    max-width: 100%;
+    padding: 0.5rem;
+    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+    width: 100%;
+	}
+	.LoginPanel {
+		float: none;
+		margin: 0 auto;
+		padding: 0;
+		width: 100%;
+		@media #{$medium-up} {
+			width: 450px;
+		}
+	}
+	// Login button
+	.dnnPrimaryAction {
+		@extend .primary-button;
+		background: $primary-color;
+		box-shadow: none;
+		margin-top: 1rem;
+		text-shadow: none;
+	}
+	// Container with the register + recover links
+	.dnnLoginActions {
+		display: block;
+		text-align: center;
+	}
+	// Register + request password button
+	.dnnSecondaryAction {
+		background: none;
+		border: none;
+		box-shadow: none;
+		font-weight: normal;
+		margin: 0;
+		text-decoration: underline;
+		text-shadow: none;
+	}
+}
+
+
+.comment-wrapper { // Used on the solution page, therefore it follows the width of the content area of the sidebar layout 
+	@include grid-column(12);
+	@media #{$medium-up} {
+		@include grid-column(7);
+	}
+	.comments {
+		border-top: 1px $light-touch solid;
+		margin-top: 2rem;
+		padding-top: 2rem;
+	}
+}
+
+/* Styling of the introduction headers (eg. on Browse and Contact page */
+
+header.intro {
+	@include grid-column(12);
+	margin: 3rem 0;
+	text-align: center;
+}
+
+/* Styling of the contact page. */
+
+.contact-form {
+	@include grid-column(12);
+	@media #{$medium-up} {
+		@include grid-column(8,$offset:2);
+	}
+
+	/* resetting default DNN styles */
+
+	.dnnClear { // Send button
+		text-align: center;
+	}
+
+	h2.dnnFormSectionHead {
+		@extend .title-m;
+		border-bottom: none;
+		margin-bottom: 2rem;
+		text-align: left;
+	}
+
+	.dnnLabel {
+		float: none;
+		text-align: left;
+		label {
+			font-weight: bold;
+		}
+	}
+	.dnnFormItem input,
+	.dnnFormItem textarea,
+	.dnnFormItem select {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+	a.dnnPrimaryAction {
+		@extend .primary-button;
+		// Reset the style DNN gives the button
+		background-image: none;
+		box-shadow: none;
+		text-shadow: none;
+		&:hover {
+			background-image: none;
+		}
+	}
+	.dnnFormItem.Feedback_CharCount {
+		text-align: right;
+	}
+	.dnnForm.FeedbackForm .dnnFormItem .dnnLabel {
+		width: auto;
+	}
+}

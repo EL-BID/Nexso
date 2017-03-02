@@ -1,0 +1,55 @@
+﻿BEGIN TRY
+IF EXISTS (SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{objectQualifier}EasyDNNNews' AND COLUMN_NAME = 'CleanArticleData' AND DATA_TYPE = 'ntext')
+BEGIN
+	DECLARE @defaultColumnName NVARCHAR(128);
+	SET @defaultColumnName = (SELECT [name] FROM sys.default_constraints WHERE parent_object_id  = object_id('{objectQualifier}EasyDNNNews') AND col_name(parent_object_id, parent_column_id) = 'CleanArticleData')
+	IF @defaultColumnName IS NOT NULL AND @defaultColumnName <> ''
+	BEGIN
+		EXECUTE(N'ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] DROP CONSTRAINT ' + @defaultColumnName)
+		EXECUTE(N'ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ALTER COLUMN [CleanArticleData] NVARCHAR(MAX) NOT NULL')
+		EXECUTE(N'ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD CONSTRAINT DF_{objectQualifier}EasyDNNNews_CleanArticleData DEFAULT '''' FOR [CleanArticleData]')
+	END
+	ELSE
+	BEGIN
+		EXECUTE(N'ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD CONSTRAINT DF_{objectQualifier}EasyDNNNews_CleanArticleData DEFAULT '''' FOR [CleanArticleData]')
+	END
+END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRoleNotifications' and column_name = 'EventRegistration')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRoleNotifications] ADD EventRegistration BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsRoleNotifications_EventRegistrations DEFAULT(0) NOT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserNotifications' and column_name = 'EventRegistration')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserNotifications] ADD EventRegistration BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsUserNotifications_EventRegistration DEFAULT(0) NOT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsPortalSettings' and column_name = 'SendEventRegistrationInfoToArticleAuthor')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings] ADD SendEventRegistrationInfoToArticleAuthor BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsPortalSettings_SendEventRegistrationInfoToArticleAuthor DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'EnabledEventRegistration')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD EnabledEventRegistration BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsRolePremissionSettings_EnabledEventRegistration DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'EnabledEventRegistration')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD EnabledEventRegistration BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsUserPremissionSettings_EnabledEventRegistration DEFAULT(1) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'CalendarUserIDInLink')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD CalendarUserIDInLink BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsCalendarSettings_CalendarUserIDInLink DEFAULT(0) NOT NULL
+END
+GO
+IF NOT EXISTS  (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCalendarSettings' and column_name = 'UpcomingEventsUserIDInLink')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings] ADD UpcomingEventsUserIDInLink BIT CONSTRAINT DF_{objectQualifier}EasyDNNNewsCalendarSettings_UpcomingEventsUserIDInLink DEFAULT(0) NOT NULL
+END
+GO

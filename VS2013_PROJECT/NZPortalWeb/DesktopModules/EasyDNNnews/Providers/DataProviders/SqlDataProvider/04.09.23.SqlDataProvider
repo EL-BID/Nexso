@@ -1,0 +1,152 @@
+﻿/****** Created script for delete duplicates from EasyDNNNewsGallery table and insert into EasyDNNNewsArticleGalleryItems table ******/
+/****** Created script for delete duplicates from EasyDNNNewsGallery table ******/
+/****** Created script for insert lightbox settings from old newsgallery items table ******/
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNews]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNews]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNews]', N'{objectQualifier}EasyDNNNews', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNews', N'PK_{objectQualifier}EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNews_EasyGallery', N'FK_{objectQualifier}EasyDNNNews_EasyGallery', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyGallery]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyGallery]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyGallery]', N'{objectQualifier}EasyGallery', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyGallery', N'PK_{objectQualifier}EasyGallery', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyGallery_EasyGalleryCategory', N'FK_{objectQualifier}EasyGallery_EasyGalleryCategory', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGallery]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsGallery]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsGallery]', N'{objectQualifier}EasyDNNNewsGallery', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsGallery', N'PK_{objectQualifier}EasyDNNNewsGallery', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsGallery_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsGallery_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsGallery_EasyGallery', N'FK_{objectQualifier}EasyDNNNewsGallery_EasyGallery', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArticleGalleryItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsArticleGalleryItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsArticleGalleryItems]', N'{objectQualifier}EasyDNNNewsArticleGalleryItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsArticleGalleryItems', N'PK_{objectQualifier}EasyDNNNewsArticleGalleryItems', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArticleGalleryItems_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsArticleGalleryItems_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArticleGalleryItems_EasyGallery', N'FK_{objectQualifier}EasyDNNNewsArticleGalleryItems_EasyGallery', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+;WITH cte AS
+	(SELECT ROW_NUMBER() OVER (PARTITION BY ArticleID, GalleryID ORDER BY ( SELECT 0)) AS RN FROM {databaseOwner}[{objectQualifier}EasyDNNNewsGallery])
+DELETE FROM cte WHERE  RN > 1
+END TRY
+BEGIN CATCH
+END CATCH
+
+DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNewsGallery] WHERE ArticleID NOT IN (SELECT ArticleID From {databaseOwner}[{objectQualifier}EasyDNNNews]);
+DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNewsGallery] WHERE GalleryID NOT IN (SELECT GalleryID From {databaseOwner}[{objectQualifier}EasyGallery]);
+
+BEGIN TRY
+SET NOCOUNT ON;
+With cte As
+	(
+	SELECT ArticleID, GalleryID, ROW_NUMBER() OVER (PARTITION BY ArticleID ORDER BY ItenID ASC) AS Position FROM {databaseOwner}[{objectQualifier}EasyDNNNewsGallery]
+	)
+	INSERT INTO {databaseOwner}[{objectQualifier}EasyDNNNewsArticleGalleryItems] (ArticleID, GalleryID, Position) SELECT ArticleID, GalleryID, Position FROM cte
+END TRY
+BEGIN CATCH
+END CATCH;
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLightboxSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsLightboxSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsLightboxSettings]', N'{objectQualifier}EasyDNNNewsLightboxSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsLightboxSettings', N'PK_{objectQualifier}EasyDNNNewsLightboxSettings', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsLightboxSettings', N'IX_{objectQualifier}EasyDNNNewsLightboxSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsLightboxSettings_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsLightboxSettings_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsLightboxSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsLightboxSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsLightboxSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsLightboxSettings_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+INSERT INTO {databaseOwner}[{objectQualifier}EasyDNNNewsLightboxSettings] 
+SELECT DISTINCT n.PortalID
+	  ,null AS ModuleID
+	  ,ng.[ArticleID]
+      ,ng.[ThumbWidth] AS ThumbWidth
+      ,ng.[ThumbHeight] AS ThumbHeight
+      ,ng.[Param1] AS ItemsPerPage
+      ,ng.[Param2] AS NumOfColumns
+      ,ng.[Param3] AS PagerType
+      ,ng.[Param4] AS GalleryTheme
+      ,'light_rounded' AS LightboxTheme
+      ,CAST(ng.[ShowTitle] AS Bit) AS ShowTitle
+      ,CAST(ng.[ShowDescription] AS Bit) AS ShowDescription
+      ,CAST(ng.[ShowLightBoxTitle] AS Bit) AS ShowLightBoxTitle
+      ,CAST(ng.[ShowLightBoxDescription] AS Bit) AS ShowLightBoxDescription
+      ,CAST(ng.[Responsive] AS Bit) AS Responsive
+  FROM {databaseOwner}[{objectQualifier}EasyDNNNewsGallery] as ng INNER JOIN {databaseOwner}[{objectQualifier}EasyDNNNews] as n ON ng.ArticleID = n.ArticleID
+END TRY
+BEGIN CATCH
+END CATCH

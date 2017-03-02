@@ -1,0 +1,1 @@
+sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt

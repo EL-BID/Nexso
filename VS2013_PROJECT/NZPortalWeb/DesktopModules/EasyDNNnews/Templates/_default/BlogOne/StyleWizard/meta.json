@@ -1,0 +1,4085 @@
+{
+  "name": "BlogOne",
+  "assetsClientPath": "",
+  "customFontFamilies": [
+    {
+      "name": "Bree Serif",
+      "importUrl": "//fonts.googleapis.com/css?family=Bree+Serif&subset=latin,latin-ext"
+    },
+    {
+      "name": "Kite One",
+      "importUrl": "//fonts.googleapis.com/css?family=Kite+One&subset=latin,latin-ext"
+    },
+    {
+      "name": "Fauna One",
+      "importUrl": "//fonts.googleapis.com/css?family=Fauna+One&subset=latin,latin-ext"
+    },
+    {
+      "name": "Acme",
+      "importUrl": "//fonts.googleapis.com/css?family=Acme&subset=latin,latin-ext"
+    },
+    {
+      "name": "Oregano",
+      "importUrl": "//fonts.googleapis.com/css?family=Oregano:400,400italic&subset=latin,latin-ext"
+    },
+    {
+      "name": "Fjalla One",
+      "importUrl": "//fonts.googleapis.com/css?family=Fjalla+One&subset=latin,latin-ext"
+    },
+    {
+      "name": "Tauri",
+      "importUrl": "//fonts.googleapis.com/css?family=Tauri&subset=latin,latin-ext"
+    },
+    {
+      "name": "Shadows Into Light",
+      "importUrl": "//fonts.googleapis.com/css?family=Shadows+Into+Light&subset=latin,latin-ext"
+    },
+    {
+      "name": "Prosto One",
+      "importUrl": "//fonts.googleapis.com/css?family=Prosto+One&subset=latin,latin-ext"
+    },
+    {
+      "name": "Ubuntu Condensed",
+      "importUrl": "//fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,latin-ext"
+    },
+    {
+      "name": "Cutive",
+      "importUrl": "//fonts.googleapis.com/css?family=Cutive&subset=latin,latin-ext"
+    }
+  ],
+  "styleDefinitions": {
+    "properties": {
+      "articleTitleFont": {
+        "type": "text",
+        "name": "Article Title",
+        "subCollection": "news",
+        "show": [
+          "newsListArticleDefault",
+          "newsListArticleDefaultNormalDate",
+          "newsListArticleSimpleImageLeftRight",
+          "newsListArticleMulti",
+          "newsListCatalogDefault",
+          "newsCatalogDefaultSimple",
+          "newsListABox"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .article h1 a",
+              " .article.multi_layout h1.title a"
+            ],
+            "name": "Normal"
+          },
+          {
+            "id": "hover",
+            "selectors": [
+              " .article h1 a:hover",
+              " .article.multi_layout h1.title a:hover"
+            ],
+            "forbidden": [
+              "fontFamily",
+              "size",
+              "style",
+              "weight",
+              "lineHeight",
+              "transform"
+            ],
+            "name": "Hover"
+          }
+        ]
+      },
+      "multiArticleImageTitleFont": {
+        "type": "text",
+        "name": "Big Image Article Title",
+        "subCollection": "news",
+        "show": [
+          "newsListArticleMulti"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .in_article_image.has_article .image_wrapper .article_container h1 a"
+            ],
+            "name": "Normal"
+          },
+          {
+            "id": "hover",
+            "selectors": [
+              " .in_article_image.has_article .image_wrapper .article_container h1 a:hover"
+            ],
+            "forbidden": [
+              "fontFamily",
+              "size",
+              "style",
+              "weight",
+              "lineHeight",
+              "transform"
+            ],
+            "name": "Hover"
+          }
+        ]
+      },
+      "multiArticleTitleFontSmallImages": {
+        "type": "text",
+        "name": "Small Images Article Title",
+        "subCollection": "news",
+        "show": [
+          "newsListArticleMulti",
+          "newsListArticleMulti2colSmallImages",
+          "newsListArticleMultiWithoutBigImage"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .article.multi_layout.two_collumn.small h1 a"
+            ],
+            "name": "Normal"
+          },
+          {
+            "id": "hover",
+            "selectors": [
+              " .article.multi_layout.two_collumn.small h1 a:hover"
+            ],
+            "forbidden": [
+              "fontFamily",
+              "size",
+              "style",
+              "weight",
+              "lineHeight",
+              "transform"
+            ],
+            "name": "Hover"
+          }
+        ]
+      },
+      "articleDetailsTitleFont": {
+        "type": "text",
+        "name": "Article Title",
+        "subCollection": "news",
+        "show": [
+          "newsDetailsArticleDefault",
+          "newsDetailsArticleGalleryAboveTitleSimple",
+          "newsDetailsArticleAboveTitle",
+          "newsDetailsArticleDefaultSimple",
+          "newsDetailsCatalogDefaultSimple",
+          "newsDetailsCatalogDefault"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .article.standalone > h1"
+            ],
+            "name": "Normal"
+          }
+        ]
+      },
+      "articleSubtitleFont": {
+        "type": "text",
+        "name": "Article Subtitle",
+        "subCollection": "news",
+        "hide": [
+          "newsListArticleSidebarBox",
+          "newsListArticleMulti2colSmallImages"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .article h2"
+            ],
+            "forbidden": [
+              "transform",
+              "decorations"
+            ],
+            "name": "Normal"
+          }
+        ]
+      },
+      "eventDateAndLocation": {
+        "type": "text",
+        "name": "Event Date & Location",
+        "subCollection": "news",
+        "show": [
+          "newsDetailsArticleDefault",
+          "newsDetailsArticleDefaultSimple",
+          "newsDetailsCatalogDefault",
+          "newsDetailsCatalogDefaultSimple",
+          "newsDetailsArticleGalleryAboveTitleSimple",
+          "newsDetailsArticleAboveTitle"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .article.standalone .event_date",
+              " .article.standalone .event_location"
+            ],
+            "name": "Normal"
+          }
+        ]
+      },
+      "articleStats": {
+        "type": "text",
+        "name": "Article Stats",
+        "subCollection": "news",
+        "show": [
+          "newsDetailsArticleDefault",
+          "newsDetailsArticleAboveTitle",
+          "newsDetailsCatalogDefault",
+          "newsDetailsCatalogDefaultSimple",
+          "newsListArticleDefault",
+          "newsListArticleDefaultNormalDate",
+          "newsListCatalogDefault"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .article .stats span",
+              " .article.standalone .rate_article"
+            ],
+            "name": "Normal",
+            "forbidden": [
+              "lineHeight",
+              "decorations"
+            ]
+          }
+        ]
+      },
+      "textFont": {
+        "type": "text",
+        "name": "Text",
+        "subCollection": "news",
+        "hide": [
+          "newsListArticleSidebarBox",
+          "newsListArticleMulti2colSmallImages"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .article .content",
+              " .article .content p"
+            ],
+            "name": "Normal",
+            "forbidden": [
+              "transform",
+              "decorations"
+            ]
+          }
+        ]
+      },
+      "bigImageTextFont": {
+        "type": "text",
+        "name": "Big Image Text",
+        "subCollection": "news",
+        "show": [
+          "newsListArticleMulti"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .in_article_image.has_article .image_wrapper .article_container .content"
+            ],
+            "name": "Normal",
+            "forbidden": [
+              "transform",
+              "decorations"
+            ]
+          }
+        ]
+      },
+      "catalogBreadcrumbs": {
+        "type": "text",
+        "name": "Breadcrumbs",
+        "subCollection": "news",
+        "show": [
+          "newsListCatalogDefault",
+          "newsCatalogDefaultSimple"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .bread_crumbs",
+              " .bread_crumbs a"
+            ],
+            "name": "Normal"
+          },
+          {
+            "id": "hover",
+            "selectors": [
+              " .bread_crumbs a:hover"
+            ],
+            "name": "Hover",
+            "forbidden": [
+              "fontFamily",
+              "size",
+              "style",
+              "weight",
+              "lineHeight",
+              "transform"
+            ]
+          }
+        ]
+      },
+      "sidebarBoxModuleTitleBackground": {
+        "type": "background",
+        "name": "Module Title Background",
+        "subcollection": "news",
+        "show": [
+          "newsListArticleSidebarBox"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " h1.edn_module_title"
+            ],
+            "name": "Normal",
+            "forbidden": [
+              "attachment"
+            ]
+          }
+        ]
+      },
+      "sidebarBoxModuleTitleFont": {
+        "type": "text",
+        "name": "Module Title",
+        "subcollection": "news",
+        "show": [
+          "newsListArticleSidebarBox"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " h1.edn_module_title span"
+            ],
+            "name": "Normal"
+          }
+        ]
+      },
+      "sidebarBoxArticleTitleFont": {
+        "type": "text",
+        "name": "Article Title",
+        "subCollection": "news",
+        "show": [
+          "newsListArticleSidebarBox"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .article.sidebar_box h1 a"
+            ],
+            "name": "Normal"
+          },
+          {
+            "id": "hover",
+            "selectors": [
+              " .article.sidebar_box h1 a:hover"
+            ],
+            "forbidden": [
+              "fontFamily",
+              "size",
+              "style",
+              "weight",
+              "lineHeight",
+              "transform"
+            ],
+            "name": "Hover"
+          }
+        ]
+      },
+      "sidebarboxArticleBackgroundColor": {
+        "type": "background",
+        "name": "Article Background Color",
+        "subCollection": "news",
+        "show": [
+          "newsListArticleSidebarBox"
+        ],
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .article.sidebar_box"
+            ],
+            "name": "Even",
+            "forbidden": [
+              "image",
+              "repeat",
+              "attachment",
+              "position"
+            ]
+          },
+          {
+            "id": "odd",
+            "selectors": [
+              " .article.sidebar_box.odd"
+            ],
+            "name": "Odd",
+            "forbidden": [
+              "image",
+              "repeat",
+              "attachment",
+              "position"
+            ]
+          }
+        ]
+      },
+      "tagCloudModuleTitleBackground": {
+        "type": "background",
+        "name": "Module Title Background",
+        "subcollection": "tagCloud",
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " h1.edn_module_title"
+            ],
+            "name": "Normal",
+            "forbidden": [
+              "attachment"
+            ]
+          }
+        ]
+      },
+      "tagCloudModuleTitleFont": {
+        "type": "text",
+        "name": "Module Title",
+        "subcollection": "tagCloud",
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " h1.edn_module_title span"
+            ],
+            "name": "Normal"
+          }
+        ]
+      },
+      "tagStyle": {
+        "type": "text",
+        "name": "Tag Style",
+        "subcollection": "tagCloud",
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .tags a"
+            ],
+            "name": "Normal",
+            "forbidden": [
+              "size",
+              "lineHeight",
+              "transform"
+            ]
+          },
+          {
+            "id": "hover",
+            "selectors": [
+              " .tags a:hover"
+            ],
+            "name": "Hover",
+            "forbidden": [
+              "fontFamily",
+              "size",
+              "style",
+              "weight",
+              "lineHeight",
+              "transform",
+              "shadows"
+            ]
+          }
+        ]
+      },
+      "articleCount": {
+        "type": "text",
+        "name": "Article Count",
+        "subcollection": "tagCloud",
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " .tags a span"
+            ],
+            "name": "Normal",
+            "forbidden": [
+              "transform",
+              "lineHeight",
+              "decorations"
+            ]
+          }
+        ]
+      },
+      "categoryMenuModuleTitleBackground": {
+        "type": "background",
+        "name": "Module Title Background",
+        "subcollection": "categoryMenu",
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " h1.edn_module_title"
+            ],
+            "name": "Normal",
+            "forbidden": [
+              "attachment"
+            ]
+          }
+        ]
+      },
+      "categoryMenuModuleTitleFont": {
+        "type": "text",
+        "name": "Module Title",
+        "subcollection": "categoryMenu",
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " h1.edn_module_title span"
+            ],
+            "name": "Normal"
+          }
+        ]
+      },
+      "categoryMenuItemsBackgroundColor": {
+        "type": "background",
+        "name": "Items Background Color",
+        "subcollection": "categoryMenu",
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " ul.edn_category_menu_wrapper li.level_0 > div"
+            ],
+            "name": "First Level",
+            "forbidden": [
+              "image",
+              "repeat",
+              "attachment",
+              "position"
+            ]
+          },
+          {
+            "id": "otherLevels",
+            "selectors": [
+              " ul.edn_category_menu_wrapper li div"
+            ],
+            "name": "Other Levels",
+            "forbidden": [
+              "image",
+              "repeat",
+              "attachment",
+              "position"
+            ]
+          }
+        ]
+      },
+      "categoryMenuItemsFont": {
+        "type": "text",
+        "name": "Items Font",
+        "subcollection": "categoryMenu",
+        "states": [
+          {
+            "id": "default",
+            "selectors": [
+              " ul.edn_category_menu_wrapper li div a"
+            ],
+            "name": "Normal",
+            "forbidden": [
+              "lineHeight"
+            ]
+          },
+          {
+            "id": "hover",
+            "selectors": [
+              " ul.edn_category_menu_wrapper li div a:hover"
+            ],
+            "name": "Hover",
+            "forbidden": [
+              "fontFamily",
+              "size",
+              "style",
+              "weight",
+              "lineHeight",
+              "transform",
+              "shadows"
+            ]
+          }
+        ]
+      }
+    },
+    "sections": {
+      "articleImage": {
+        "name": "Article Image",
+        "properties": {
+          "imageBackgroundColor": {
+            "type": "background",
+            "name": "Background Color",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .in_article_image .image_wrapper img"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "image",
+                  "repeat",
+                  "attachment",
+                  "position"
+                ]
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .in_article_image .image_wrapper a img:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "image",
+                  "repeat",
+                  "attachment",
+                  "position"
+                ]
+              }
+            ]
+          },
+          "imageBorder": {
+            "type": "border",
+            "name": "Border",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .in_article_image .image_wrapper img"
+                ],
+                "name": "Normal",
+                "important": [
+                  "width",
+                  "style",
+                  "color"
+                ]
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .in_article_image .image_wrapper a img:hover"
+                ],
+                "name": "Hover",
+                "important": [
+                  "width",
+                  "style",
+                  "color"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "articleDate": {
+        "name": "Article Date",
+        "properties": {
+          "dayBackgroundColor": {
+            "type": "background",
+            "name": "Day Background Color",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListArticleMulti",
+              "newsListArticleMultiWithoutBigImage",
+              "newsListABox"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .date_box"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "image",
+                  "repeat",
+                  "attachment",
+                  "position"
+                ]
+              }
+            ]
+          },
+          "yearBackgroundColor": {
+            "type": "background",
+            "name": "Year Background Color",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListArticleMulti",
+              "newsListArticleMultiWithoutBigImage",
+              "newsListABox"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .date_box p.year"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "image",
+                  "repeat",
+                  "attachment",
+                  "position"
+                ]
+              }
+            ]
+          },
+          "textFont": {
+            "type": "text",
+            "name": "Text Font",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListArticleMulti",
+              "newsListArticleMultiWithoutBigImage",
+              "newsListABox"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .date_box p"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "color",
+                  "size",
+                  "style",
+                  "weight",
+                  "lineHeight",
+                  "transform",
+                  "decorations",
+                  "shadows"
+                ]
+              }
+            ]
+          },
+          "dayTextColor": {
+            "type": "text",
+            "name": "Day Text Color",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListArticleMulti",
+              "newsListArticleMultiWithoutBigImage",
+              "newsListABox"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .date_box p"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "weight",
+                  "lineHeight",
+                  "transform",
+                  "decorations"
+                ]
+              }
+            ]
+          },
+          "yearTextColor": {
+            "type": "text",
+            "name": "Year Text Color",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListArticleMulti",
+              "newsListArticleMultiWithoutBigImage",
+              "newsListABox"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .date_box p.year"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "weight",
+                  "lineHeight",
+                  "transform",
+                  "decorations"
+                ]
+              }
+            ]
+          },
+          "normalDateFont": {
+            "type": "text",
+            "name": "Text Font",
+            "subCollection": "news",
+            "hide": [
+              "newsListCatalogDefault",
+              "newsListArticleSimpleImageLeftRight",
+              "newsListArticleSidebarBox",
+              "newsListArticleMultiWithoutBigImage",
+              "newsListArticleMulti2colSmallImages",
+              "newsListArticleMulti",
+              "newsListArticleDefault",
+              "newsListABox"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .publish_date"
+                ],
+                "name": "Normal"
+              }
+            ]
+          }
+        }
+      },
+      "eventDetails": {
+        "name": "Event Details",
+        "properties": {
+          "text": {
+            "type": "text",
+            "name": "Text",
+            "subCollection": "news",
+            "show": [
+              "newsDetailsArticleDefault",
+              "newsDetailsArticleDefaultSimple",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsArticleGalleryAboveTitleSimple",
+              "newsDetailsCatalogDefault",
+              "newsDetailsCatalogDefaultSimple"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .edn_registerEventDetails"
+                ],
+                "name": "Normal"
+              }
+            ]
+          }
+        },
+        "sections": {
+          "registerButton": {
+            "name": "Register Button",
+            "show": [
+              "newsDetailsArticleDefault",
+              "newsDetailsArticleDefaultSimple",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsArticleGalleryAboveTitleSimple",
+              "newsDetailsCatalogDefault",
+              "newsDetailsCatalogDefaultSimple"
+            ],
+            "properties": {
+              "background": {
+                "type": "background",
+                "name": "Background",
+                "subCollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .eds_openModal"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "attachment"
+                    ]
+                  },
+                  {
+                    "id": "hover",
+                    "selectors": [
+                      " eds_openModal:hover"
+                    ],
+                    "name": "Hover",
+                    "forbidden": [
+                      "attachment"
+                    ]
+                  }
+                ]
+              },
+              "text": {
+                "type": "text",
+                "name": "Text",
+                "subCollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " eds_openModal"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "lineHeight"
+                    ]
+                  },
+                  {
+                    "id": "hover",
+                    "selectors": [
+                      " eds_openModal:hover"
+                    ],
+                    "name": "Hover",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "style",
+                      "weight",
+                      "lineHeight",
+                      "transform"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "articleAuthor": {
+        "name": "Article Author",
+        "properties": {
+          "background": {
+            "type": "background",
+            "name": "Background",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListCatalogDefault",
+              "newsListArticleDefaultNormalDate",
+              "newsDetailsArticleDefault",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsCatalogDefault"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .author_box span",
+                  " .article .details p.author span"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "repeat",
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "text": {
+            "type": "text",
+            "name": "Text",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListCatalogDefault",
+              "newsListArticleDefaultNormalDate",
+              "newsDetailsArticleDefault",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsCatalogDefault"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .author_box span",
+                  " .article .author_box a",
+                  " .article .details p.author span",
+                  " .article .details p.author span a"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "lineHeight",
+                  "transform",
+                  "decorations"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "articleCategories": {
+        "name": "Article Categories",
+        "properties": {
+          "background": {
+            "type": "background",
+            "name": "Background",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListCatalogDefault",
+              "newsListArticleDefaultNormalDate",
+              "newsDetailsArticleDefault",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsCatalogDefault"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .details p.categories span"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "repeat",
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "text": {
+            "type": "text",
+            "name": "Text",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListCatalogDefault",
+              "newsListArticleDefaultNormalDate",
+              "newsDetailsArticleDefault",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsCatalogDefault"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .details p.categories span",
+                  " .article .details p.categories span a"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "lineHeight",
+                  "transform",
+                  "decorations"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "articleTags": {
+        "name": "Article Tags",
+        "properties": {
+          "background": {
+            "type": "background",
+            "name": "Background",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListCatalogDefault",
+              "newsListArticleDefaultNormalDate",
+              "newsDetailsArticleDefault",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsCatalogDefault"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .details p.tags span"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "repeat",
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "text": {
+            "type": "text",
+            "name": "Text",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListCatalogDefault",
+              "newsListArticleDefaultNormalDate",
+              "newsDetailsArticleDefault",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsCatalogDefault"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .details p.tags span",
+                  " .article .details p.tags span a"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "lineHeight",
+                  "transform",
+                  "decorations"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "readMoreButton": {
+        "name": "Read More Button",
+        "properties": {
+          "background": {
+            "type": "background",
+            "name": "Background",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListArticleDefaultNormalDate",
+              "newsListArticleMulti",
+              "newsListCatalogDefault"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " a.open_article_btn"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "attachment"
+                ]
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " a.open_article_btn:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "text": {
+            "type": "text",
+            "name": "Text",
+            "subCollection": "news",
+            "show": [
+              "newsListArticleDefault",
+              "newsListArticleDefaultNormalDate",
+              "newsListArticleMulti",
+              "newsListCatalogDefault"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " a.open_article_btn"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "lineHeight"
+                ]
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " a.open_article_btn:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "weight",
+                  "lineHeight",
+                  "transform"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "pagination": {
+        "name": "Pagination",
+        "properties": {
+          "backgroundColor": {
+            "type": "background",
+            "name": "Background Color",
+            "subCollection": "news",
+            "hide": [
+              "newsDetailsCatalogDefaultSimple",
+              "newsDetailsCatalogDefault",
+              "newsDetailsArticleGalleryAboveTitleSimple",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsArticleDefaultSimple",
+              "newsDetailsArticleDefault"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article_pager"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "image",
+                  "repeat",
+                  "attachment",
+                  "position"
+                ]
+              }
+            ]
+          },
+          "border": {
+            "type": "border",
+            "name": "Border",
+            "subCollection": "news",
+            "hide": [
+              "newsDetailsCatalogDefaultSimple",
+              "newsDetailsCatalogDefault",
+              "newsDetailsArticleGalleryAboveTitleSimple",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsArticleDefaultSimple",
+              "newsDetailsArticleDefault"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article_pager"
+                ],
+                "name": "Normal"
+              }
+            ]
+          }
+        },
+        "sections": {
+          "paginationItems": {
+            "name": "Pagination Items",
+            "properties": {
+              "backgroundColor": {
+                "type": "background",
+                "name": "Background Color",
+                "subCollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .article_pager a.page",
+                      " .article.standalone .article_pagination table td a",
+                      " .article.standalone .article_pagination table td span"
+                    ],
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ],
+                    "name": "Normal"
+                  },
+                  {
+                    "id": "hover",
+                    "selectors": [
+                      " .article_pager a.page:hover",
+                      " .article.standalone .article_pagination table td a:hover"
+                    ],
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ],
+                    "name": "Hover"
+                  },
+                  {
+                    "id": "active",
+                    "selectors": [
+                      " .article_pager a.page.active",
+                      " .article.standalone .article_pagination table td span"
+                    ],
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ],
+                    "name": "Active"
+                  }
+                ]
+              },
+              "text": {
+                "type": "text",
+                "name": "Text",
+                "subCollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .article_pager a.page",
+                      " .article.standalone .article_pagination table td a",
+                      " .article.standalone .article_pagination table td span"
+                    ],
+                    "forbidden": [
+                      "transform"
+                    ],
+                    "name": "Normal"
+                  },
+                  {
+                    "id": "hover",
+                    "selectors": [
+                      " .article_pager a.page:hover",
+                      " .article.standalone .article_pagination table td a:hover"
+                    ],
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "style",
+                      "weight",
+                      "lineHeight",
+                      "transform"
+                    ],
+                    "name": "Hover"
+                  },
+                  {
+                    "id": "active",
+                    "selectors": [
+                      " .article_pager a.page.active",
+                      " .article.standalone .article_pagination table td span"
+                    ],
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "style",
+                      "lineHeight",
+                      "transform"
+                    ],
+                    "name": "Active"
+                  }
+                ]
+              },
+              "border": {
+                "type": "border",
+                "name": "Border",
+                "subCollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .article_pager a.page",
+                      " .article.standalone .article_pagination table td a",
+                      " .article.standalone .article_pagination table td span"
+                    ],
+                    "forbidden": [
+                      "transform"
+                    ],
+                    "name": "Normal"
+                  },
+                  {
+                    "id": "hover",
+                    "selectors": [
+                      " .article_pager a.page:hover",
+                      " .article.standalone .article_pagination table td a:hover"
+                    ],
+                    "name": "Hover",
+                    "forbidden": [
+                      "width",
+                      "style"
+                    ]
+                  },
+                  {
+                    "id": "active",
+                    "selectors": [
+                      " .article_pager a.page.active",
+                      " .article.standalone .article_pagination table td span"
+                    ],
+                    "name": "Active",
+                    "forbidden": [
+                      "width",
+                      "style"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "infiniteScrollButton": {
+            "name": "Infinite Scroll Button",
+            "properties": {
+              "border": {
+                "type": "border",
+                "name": "Border",
+                "subCollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .ednMoreArticlesTriggerWrapper > button.trigger"
+                    ],
+                    "name": "Normal"
+                  },
+                  {
+                    "id": "hover",
+                    "selectors": [
+                      " .ednMoreArticlesTriggerWrapper > button.trigger:hover"
+                    ],
+                    "name": "Hover"
+                  },
+                  {
+                    "id": "loading",
+                    "selectors": [
+                      " .ednMoreArticlesTriggerWrapper.loading > button.trigger"
+                    ],
+                    "name": "Loading"
+                  }
+                ]
+              },
+              "background": {
+                "type": "background",
+                "name": "Background",
+                "subCollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .ednMoreArticlesTriggerWrapper > button.trigger"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "attachment"
+                    ]
+                  },
+                  {
+                    "id": "hover",
+                    "selectors": [
+                      " .ednMoreArticlesTriggerWrapper > button.trigger:hover"
+                    ],
+                    "name": "Hover",
+                    "forbidden": [
+                      "attachment"
+                    ]
+                  },
+                  {
+                    "id": "loading",
+                    "selectors": [
+                      " .ednMoreArticlesTriggerWrapper.loading > button.trigger > span.loadingOverlay"
+                    ],
+                    "name": "Loading",
+                    "forbidden": [
+                      "image",
+                      "position",
+                      "repeat",
+                      "attachment"
+                    ]
+                  }
+                ]
+              },
+              "loadingImage": {
+                "type": "background",
+                "name": "Loading Image",
+                "subCollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .ednMoreArticlesTriggerWrapper.loading > button.trigger > span.loadingOverlay"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "attachment",
+                      "color",
+                      "repeat"
+                    ]
+                  }
+                ]
+              },
+              "infiniteScrollButtonText": {
+                "type": "text",
+                "name": "Text",
+                "subCollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .ednMoreArticlesTriggerWrapper > button.trigger > span.actionTextContainer span"
+                    ],
+                    "name": "Normal"
+                  },
+                  {
+                    "id": "hover",
+                    "selectors": [
+                      " .ednMoreArticlesTriggerWrapper > button.trigger:hover > span.actionTextContainer span"
+                    ],
+                    "name": "Hover",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "lineHeight",
+                      "transform"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "profileBox": {
+        "name": "Profile Box",
+        "properties": {
+          "backgroundColor": {
+            "type": "background",
+            "name": "Background Color",
+            "subCollection": "news",
+            "show": [
+              "newsDetailsArticleDefault",
+              "newsDetailsCatalogDefault",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsArticleDefaultSimple",
+              "newsDetailsCatalogDefaultSimple",
+              "newsDetailsArticleGalleryAboveTitleSimple"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article.standalone .author_group_profile"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "image",
+                  "repeat",
+                  "attachment",
+                  "position"
+                ]
+              }
+            ]
+          },
+          "border": {
+            "type": "border",
+            "name": "Border",
+            "subCollection": "news",
+            "show": [
+              "newsDetailsArticleDefault",
+              "newsDetailsCatalogDefault",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsArticleDefaultSimple",
+              "newsDetailsCatalogDefaultSimple",
+              "newsDetailsArticleGalleryAboveTitleSimple"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article.standalone .author_group_profile"
+                ],
+                "name": "Normal"
+              }
+            ]
+          },
+          "profileName": {
+            "type": "text",
+            "name": "Profile Name",
+            "subCollection": "news",
+            "show": [
+              "newsDetailsArticleDefault",
+              "newsDetailsCatalogDefault",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsArticleDefaultSimple",
+              "newsDetailsCatalogDefaultSimple",
+              "newsDetailsArticleGalleryAboveTitleSimple"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article.standalone .author_group_profile .details_container h2"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "weight",
+                  "lineHeight",
+                  "transform",
+                  "decorations"
+                ]
+              }
+            ]
+          },
+          "textStyle": {
+            "type": "text",
+            "name": "Text",
+            "subCollection": "news",
+            "show": [
+              "newsDetailsArticleDefault",
+              "newsDetailsCatalogDefault",
+              "newsDetailsArticleAboveTitle",
+              "newsDetailsArticleDefaultSimple",
+              "newsDetailsCatalogDefaultSimple",
+              "newsDetailsArticleGalleryAboveTitleSimple"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article.standalone .author_group_profile .details_container .short_info"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "weight",
+                  "lineHeight",
+                  "transform",
+                  "decorations"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "listOfAttendants": {
+        "name": "List Of Attendants",
+        "show": [
+          "newsDetailsArticleDefault",
+          "newsDetailsArticleDefaultSimple",
+          "newsDetailsArticleAboveTitle",
+          "newsDetailsArticleGalleryAboveTitleSimple",
+          "newsDetailsCatalogDefault",
+          "newsDetailsCatalogDefaultSimple"
+        ],
+        "properties": {
+          "border": {
+            "type": "border",
+            "name": "Border",
+            "subcollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .edn_listOfAttendants"
+                ],
+                "name": "Normal"
+              }
+            ]
+          }
+        },
+        "sections": {
+          "tableHeadings": {
+            "name": "Header",
+            "properties": {
+              "background": {
+                "type": "background",
+                "name": "Background",
+                "subcollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edn_listOfAttendants > table tr:first-child.edn_listOfAttendantsHeader"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "attachment",
+                      "animation"
+                    ]
+                  }
+                ]
+              },
+              "border": {
+                "type": "border",
+                "name": "Bottom Border",
+                "subCollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edn_listOfAttendants > table tr:first-child th"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "topSide",
+                      "rightSide",
+                      "leftSide"
+                    ]
+                  }
+                ]
+              },
+              "text": {
+                "type": "text",
+                "name": "Text",
+                "subcollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edn_listOfAttendants > table tr:first-child th"
+                    ],
+                    "name": "Normal"
+                  }
+                ]
+              }
+            }
+          },
+          "tableData": {
+            "name": "List",
+            "properties": {
+              "background": {
+                "type": "background",
+                "name": "Background",
+                "subcollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edn_listOfAttendants > table tr:nth-child(even)"
+                    ],
+                    "name": "Even",
+                    "forbidden": [
+                      "attachment",
+                      "animation"
+                    ]
+                  },
+                  {
+                    "id": "odd",
+                    "selectors": [
+                      " .edn_listOfAttendants > table tr:nth-child(odd)"
+                    ],
+                    "name": "Odd",
+                    "forbidden": [
+                      "attachment",
+                      "animation"
+                    ]
+                  }
+                ]
+              },
+              "text": {
+                "type": "text",
+                "name": "Text",
+                "subcollection": "news",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edn_listOfAttendants > table tr td"
+                    ],
+                    "name": "Normal"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "articleDocuments": {
+        "name": "Article Documents",
+        "properties": {
+          "border": {
+            "type": "border",
+            "name": "Border",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .article_documents"
+                ],
+                "name": "Normal"
+              }
+            ]
+          },
+          "background": {
+            "type": "background",
+            "name": "Background",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .article_documents"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "articleDocumentsBoxTitle": {
+            "type": "text",
+            "name": "Box Title",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .article_documents > h2"
+                ],
+                "name": "Normal"
+              }
+            ]
+          },
+          "articleDocumentsTitle": {
+            "type": "text",
+            "name": "Title",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .article_documents ul li a"
+                ],
+                "name": "Normal"
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .article .article_documents ul li a:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "lineHeight",
+                  "transform"
+                ]
+              }
+            ]
+          },
+          "articleDocumentsDescription": {
+            "type": "text",
+            "name": "Description",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .article_documents ul li span"
+                ],
+                "name": "Normal"
+              }
+            ]
+          }
+        }
+      },
+      "articleLinks": {
+        "name": "Article Links",
+        "properties": {
+          "border": {
+            "type": "border",
+            "name": "Border",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .edn_article_links"
+                ],
+                "name": "Normal"
+              }
+            ]
+          },
+          "background": {
+            "type": "background",
+            "name": "Background",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .edn_article_links"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "articleLinksBoxTitle": {
+            "type": "text",
+            "name": "Box Title",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .edn_article_links > h2"
+                ],
+                "name": "Normal"
+              }
+            ]
+          },
+          "articleLinksTitle": {
+            "type": "text",
+            "name": "Title",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .edn_article_links ul li a"
+                ],
+                "name": "Normal"
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .article .edn_article_links ul li a:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "lineHeight",
+                  "transform"
+                ]
+              }
+            ]
+          },
+          "articleLinksDescription": {
+            "type": "text",
+            "name": "Description",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .edn_article_links ul li span"
+                ],
+                "name": "Normal"
+              }
+            ]
+          }
+        }
+      },
+      "relatedArticles": {
+        "name": "Related Articles",
+        "properties": {
+          "border": {
+            "type": "border",
+            "name": "Border",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .related_articles"
+                ],
+                "name": "Normal"
+              }
+            ]
+          },
+          "background": {
+            "type": "background",
+            "name": "Background",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .related_articles"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "relatedArticlesBoxTitle": {
+            "type": "text",
+            "name": "Box Title",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .related_articles > h2"
+                ],
+                "name": "Normal"
+              }
+            ]
+          },
+          "relatedArticlesTitle": {
+            "type": "text",
+            "name": "Title",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article .related_articles ul li a"
+                ],
+                "name": "Normal"
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .article .related_articles ul li a:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "lineHeight",
+                  "transform"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "commentsBox": {
+        "name": "Comments Box",
+        "properties": {
+          "backgroundColor": {
+            "type": "background",
+            "name": "Background Color",
+            "subCollection": "news",
+            "show": [
+              "newsDetailsDefault",
+              "newsDetailsCatalog"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article.standalone .article_comments .add_comment .add_article_box"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "image",
+                  "repeat",
+                  "attachment",
+                  "position"
+                ]
+              }
+            ]
+          },
+          "border": {
+            "type": "border",
+            "name": "Border",
+            "subCollection": "news",
+            "show": [
+              "newsDetailsDefault",
+              "newsDetailsCatalog"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .article.details .article_comments .add_comment .add_article_box"
+                ],
+                "name": "Normal"
+              }
+            ]
+          }
+        },
+        "sections": {
+          "inputFields": {
+            "name": "Input Fields",
+            "properties": {
+              "backgroundColor": {
+                "type": "background",
+                "name": "Background Color",
+                "subCollection": "news",
+                "show": [
+                  "newsDetailsDefault",
+                  "newsDetailsCatalog"
+                ],
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .article.standalone .article_comments .add_comment .add_article_box table td.right input.text",
+                      " .article.standalone .article_comments .add_comment .add_article_box table td.right textarea"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ]
+                  }
+                ]
+              },
+              "borderColor": {
+                "type": "border",
+                "name": "Border Color",
+                "subCollection": "news",
+                "show": [
+                  "newsDetailsDefault",
+                  "newsDetailsCatalog"
+                ],
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .article.standalone .article_comments .add_comment .add_article_box table td.right input.text",
+                      " .article.standalone .article_comments .add_comment .add_article_box table td.right textarea"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "width",
+                      "style"
+                    ]
+                  }
+                ]
+              },
+              "textColor": {
+                "type": "text",
+                "name": "Text Color",
+                "subCollection": "news",
+                "show": [
+                  "newsDetailsDefault",
+                  "newsDetailsCatalog"
+                ],
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .article.details .article_comments .add_comment .add_article_box table td.right input.text",
+                      " .article.details .article_comments .add_comment .add_article_box table td.right textarea"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "style",
+                      "weight",
+                      "lineHeight",
+                      "transform",
+                      "decorations",
+                      "shadows"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "categoryDescription": {
+        "name": "Category Description",
+        "properties": {
+          "titleFont": {
+            "type": "text",
+            "name": "Title",
+            "subCollection": "news",
+            "show": [
+              "newsListCatalogDefault"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .category_info h1"
+                ],
+                "name": "Normal"
+              }
+            ]
+          },
+          "descriptionFont": {
+            "type": "text",
+            "name": "Description",
+            "subCollection": "news",
+            "show": [
+              "newsListCatalogDefault"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .category_info .description"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "transform",
+                  "decorations"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "categoryItem": {
+        "name": "Category Item",
+        "properties": {
+          "imagebackgroundColor": {
+            "type": "background",
+            "name": "Image Background Color",
+            "subCollection": "news",
+            "show": [
+              "newsListCatalogDefault",
+              "newsCatalogDefaultSimple"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .child_categories .in_article_image .image_wrapper img"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "image",
+                  "repeat",
+                  "attachment",
+                  "position"
+                ]
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .child_categories .in_article_image .image_wrapper img:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "image",
+                  "repeat",
+                  "attachment",
+                  "position"
+                ]
+              }
+            ]
+          },
+          "imageBorder": {
+            "type": "border",
+            "name": "Image border",
+            "subCollection": "news",
+            "show": [
+              "newsListCatalogDefault",
+              "newsCatalogDefaultSimple"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .child_categories .in_article_image .image_wrapper img"
+                ],
+                "name": "Normal",
+                "important": [
+                  "width",
+                  "color",
+                  "style"
+                ]
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .child_categories .in_article_image .image_wrapper img:hover"
+                ],
+                "name": "Hover",
+                "important": [
+                  "width",
+                  "color",
+                  "style"
+                ]
+              }
+            ]
+          },
+          "titleFont": {
+            "type": "text",
+            "name": "Title",
+            "subCollection": "news",
+            "show": [
+              "newsListCatalogDefault",
+              "newsCatalogDefaultSimple"
+            ],
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .child_categories .in_article_image .image_title a"
+                ],
+                "name": "Normal"
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .child_categories .in_article_image .image_title a:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "weight",
+                  "lineHeight",
+                  "transform"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "calendar": {
+        "name": "Calendar",
+        "properties": {
+          "monthBackground": {
+            "type": "background",
+            "name": "Month Background",
+            "subcollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .callendar_table_container .calendar_table .month_selection"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "calendarMonthTitleFont": {
+            "type": "text",
+            "name": "Month Title",
+            "subcollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .callendar_table_container .calendar_table .month_selection td > a"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "decorations"
+                ]
+              }
+            ]
+          },
+          "monthSelectionArrows": {
+            "type": "text",
+            "name": "Month Selection Arrows",
+            "subcollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .callendar_table_container .calendar_table .month_selection td.next_prev_months a"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "weight",
+                  "lineHeight",
+                  "transform",
+                  "decorations"
+                ],
+                "important": [
+                  "color"
+                ]
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .callendar_table_container .calendar_table .month_selection td.next_prev_months a:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "weight",
+                  "lineHeight",
+                  "transform",
+                  "decorations"
+                ],
+                "important": [
+                  "color"
+                ]
+              }
+            ]
+          }
+        },
+        "sections": {
+          "weekdays": {
+            "name": "Weekdays",
+            "properties": {
+              "backgroundColor": {
+                "type": "background",
+                "name": "Background Color",
+                "subcollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .week_days"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ]
+                  }
+                ]
+              },
+              "text": {
+                "type": "text",
+                "name": "Text",
+                "subcollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .week_days"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "lineHeight",
+                      "decorations"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "days": {
+            "name": "Days",
+            "properties": {
+              "backgroundColor": {
+                "type": "background",
+                "name": "Background Color",
+                "subcollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .day",
+                      " .callendar_table_container.advanced .calendar_table .day > span"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ]
+                  },
+                  {
+                    "id": "hasPosts",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .day.has_posts",
+                      " .callendar_table_container.advanced .calendar_table .day.has_posts > a"
+                    ],
+                    "name": "Has Posts",
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ]
+                  },
+                  {
+                    "id": "hasEvents",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .day.has_events",
+                      " .callendar_table_container.advanced .calendar_table .day.has_events > a"
+                    ],
+                    "name": "Has Events",
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ]
+                  },
+                  {
+                    "id": "today",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .day.today",
+                      " .callendar_table_container.advanced .calendar_table .day.today > span",
+                      " .callendar_table_container.advanced .calendar_table .day.today > a"
+                    ],
+                    "name": "Today",
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ]
+                  },
+                  {
+                    "id": "selected",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .day.selected",
+                      " .callendar_table_container.advanced .calendar_table .day.selected > a"
+                    ],
+                    "name": "Selected",
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ]
+                  }
+                ]
+              },
+              "text": {
+                "type": "text",
+                "name": "Text",
+                "subcollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .day > span",
+                      " .callendar_table_container .calendar_table .day > a"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "lineHeight",
+                      "transform",
+                      "decorations",
+                      "weight"
+                    ]
+                  },
+                  {
+                    "id": "hasPosts",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .day.has_posts > a"
+                    ],
+                    "name": "Has Posts",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "lineHeight",
+                      "transform",
+                      "decorations",
+                      "weight"
+                    ]
+                  },
+                  {
+                    "id": "hasEvents",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .day.has_events > a"
+                    ],
+                    "name": "Has Events",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "lineHeight",
+                      "transform",
+                      "decorations",
+                      "weight"
+                    ]
+                  },
+                  {
+                    "id": "today",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .day.today > a",
+                      " .callendar_table_container .calendar_table .day.today > span"
+                    ],
+                    "name": "Today",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "lineHeight",
+                      "transform",
+                      "decorations",
+                      "weight"
+                    ]
+                  },
+                  {
+                    "id": "selected",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .day.selected > a"
+                    ],
+                    "name": "Selected",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "lineHeight",
+                      "transform",
+                      "decorations",
+                      "weight"
+                    ]
+                  },
+                  {
+                    "id": "otherMonth",
+                    "selectors": [
+                      " .callendar_table_container .calendar_table .day.other_month > a",
+                      " .callendar_table_container .calendar_table .day.other_month > span"
+                    ],
+                    "name": "Other Month",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "lineHeight",
+                      "transform",
+                      "decorations",
+                      "weight"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "advancedCalendarArticleBox": {
+            "name": "Advanced Calendar Article Box",
+            "properties": {
+              "backgroundColor": {
+                "type": "background",
+                "name": "Background Color",
+                "subcollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .callendar_table_container.advanced .calendar_table .day > ul > li > a"
+                    ],
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ]
+                  }
+                ]
+              },
+              "borderColor": {
+                "type": "border",
+                "name": "Border Color",
+                "subcollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .callendar_table_container.advanced .calendar_table .day > ul > li > a"
+                    ],
+                    "forbidden": [
+                      "width",
+                      "style"
+                    ]
+                  }
+                ]
+              },
+              "textColor": {
+                "type": "text",
+                "name": "Text Color",
+                "subcollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .callendar_table_container.advanced .calendar_table .day > ul > li > a"
+                    ],
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "style",
+                      "weight",
+                      "lineHeight",
+                      "transform",
+                      "decorations"
+                    ],
+                    "important": [
+                      "color"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "advancedCalendarEventBox": {
+            "name": "Advanced Calendar Event Box",
+            "properties": {
+              "backgroundColor": {
+                "type": "background",
+                "name": "Background Color",
+                "subcollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .callendar_table_container.advanced .calendar_table .day > ul > li.event > a"
+                    ],
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ]
+                  }
+                ]
+              },
+              "borderColor": {
+                "type": "border",
+                "name": "Border Color",
+                "subcollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .callendar_table_container.advanced .calendar_table .day > ul > li.event > a"
+                    ],
+                    "forbidden": [
+                      "width",
+                      "style"
+                    ]
+                  }
+                ]
+              },
+              "textColor": {
+                "type": "text",
+                "name": "Text Color",
+                "subcollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .callendar_table_container.advanced .calendar_table .day > ul > li.event > a"
+                    ],
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "style",
+                      "weight",
+                      "lineHeight",
+                      "transform",
+                      "decorations"
+                    ],
+                    "important": [
+                      "color"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "calendarArchive": {
+        "name": "Calendar Archive",
+        "properties": {
+          "titleBackground": {
+            "type": "background",
+            "name": "Title Background",
+            "subcollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " h1.edn_module_title"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "calendarArchiveTitleFont": {
+            "type": "text",
+            "name": "Module Title",
+            "subcollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " h1.edn_module_title span"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "decorations"
+                ]
+              }
+            ]
+          },
+          "calendarArchiveItemsFont": {
+            "type": "text",
+            "name": "Items Text",
+            "subcollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .archive_list ul li a"
+                ],
+                "name": "Normal"
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .archive_list ul li a:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "weight",
+                  "lineHeight",
+                  "transform"
+                ]
+              },
+              {
+                "id": "active",
+                "selectors": [
+                  " .archive_list .edn_module_box .edn_archive_menu_wrapper li.active > div > .edn_archive-year",
+                  " .archive_list .edn_module_box .edn_archive_menu_wrapper li.active > div > .edn_archive-month"
+                ],
+                "name": "Active",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "lineHeight",
+                  "transform"
+                ]
+              }
+            ]
+          },
+          "calendarArchiveItemsBorder": {
+            "type": "border",
+            "name": "Items Border Color",
+            "subcollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .archive_list ul li"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "width",
+                  "style",
+                  "topSide",
+                  "leftSide",
+                  "rightSide"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "calendarEvents": {
+        "name": "Calendar Events",
+        "properties": {
+          "titleBackground": {
+            "type": "background",
+            "name": "Title Background",
+            "subcollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .archive_list.events h1.edn_module_title"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "calendarEventsTitleFont": {
+            "type": "text",
+            "name": "Module Title",
+            "subcollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .archive_list.events h1.edn_module_title span"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "decorations"
+                ]
+              }
+            ]
+          },
+          "calendarEventsItemsFont": {
+            "type": "text",
+            "name": "Items Text",
+            "subcollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .archive_list.events ul li a"
+                ],
+                "name": "Normal"
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .archive_list.events ul li a:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "weight",
+                  "lineHeight",
+                  "transform"
+                ]
+              }
+            ]
+          },
+          "calendarEventsItemsBorder": {
+            "type": "border",
+            "name": "Items Border Color",
+            "subcollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .archive_list.events ul li"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "width",
+                  "style"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "qtip": {
+        "name": "Article tooltip",
+        "properties": {
+          "backgroundColor": {
+            "type": "background",
+            "name": "Background Color",
+            "subCollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "image",
+                  "repeat",
+                  "attachment",
+                  "position"
+                ]
+              }
+            ]
+          },
+          "border": {
+            "type": "border",
+            "name": "Border",
+            "subCollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_"
+                ],
+                "name": "Normal"
+              }
+            ]
+          },
+          "articleTitle": {
+            "type": "text",
+            "name": "Article Title",
+            "subCollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ > .qtip-content > .wrapper > .article > p.title a"
+                ],
+                "name": "Normal"
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ > .qtip-content > .wrapper > .article > p.title a:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "lineHeight",
+                  "transform"
+                ]
+              }
+            ]
+          },
+          "articleListTitle": {
+            "type": "text",
+            "name": "Article List Title",
+            "subCollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ > .qtip-content > .wrapper > .article_list > li > a"
+                ],
+                "name": "Normal"
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ > .qtip-content > .wrapper > .article_list > li > a:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "lineHeight",
+                  "transform"
+                ]
+              }
+            ]
+          },
+          "articleListDate": {
+            "type": "text",
+            "name": "Article List Date",
+            "subCollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ > .qtip-content > .wrapper > .article_list > li > p"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "decorations",
+                  "transform"
+                ]
+              }
+            ]
+          },
+          "articleText": {
+            "type": "text",
+            "name": "Article Text",
+            "subCollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ .qtip-content > .wrapper > .article > .content"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "decorations"
+                ]
+              }
+            ]
+          
+          },
+          "readMore": {
+            "type": "text",
+            "name": "Read More",
+            "subCollection": "calendar",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ > .qtip-content > .wrapper > .article > a"
+                ],
+                "name": "Normal"
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ > .qtip-content > .wrapper > .article > a:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "lineHeight",
+                  "transform"
+                ]
+              }
+            ]
+          }
+        },
+        "sections": {
+          "date": {
+            "name": "Date",
+            "properties": {
+              "backgroundColor": {
+                "type": "background",
+                "name": "Background Color",
+                "subCollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ > .qtip-content > .title"
+                    ],
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ]
+                  }
+                ]
+              },
+              "bottomborderColor": {
+                "type": "border",
+                "name": "Bottom Border Color",
+                "subCollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ > .qtip-content > .title"
+                    ],
+                    "forbidden": [
+                      "width",
+                      "style"
+                    ]
+                  }
+                ]
+              },
+              "text": {
+                "type": "text",
+                "name": "Text",
+                "subCollection": "calendar",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ > .qtip-content > .title span",
+                      "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ > .qtip-content > .title span a"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "lineHeight",
+                      "transform"
+                    ]
+                  },
+                  {
+                    "id": "hover",
+                    "selectors": [
+                      "!.qtip.edn_calendarbox__-ThemeName-_._-StyleTypeAndId-_ > .qtip-content > .title span a:hover"
+                    ],
+                    "name": "Hover",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "style",
+                      "weight",
+                      "lineHeight",
+                      "transform"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "searchInput": {
+        "name": "Input",
+        "properties": {
+          "backgroundColor": {
+            "type": "background",
+            "name": "Background Color",
+            "subcollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .search_input .input"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "image",
+                  "repeat",
+                  "attachment",
+                  "position"
+                ]
+              }
+            ]
+          },
+          "border": {
+            "type": "border",
+            "name": "Border",
+            "subcollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .search_input .input"
+                ],
+                "name": "Normal"
+              }
+            ]
+          },
+          "textColor": {
+            "type": "text",
+            "name": "Text Color",
+            "subcollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .search_input .input input"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "weight",
+                  "lineHeight",
+                  "transform",
+                  "decorations"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "searchButtonInside": {
+        "name": "Button Inside",
+        "properties": {
+          "background": {
+            "type": "background",
+            "name": "Background",
+            "subcollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .search_input .do_search"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "attachment"
+                ]
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .search_input .do_search:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "border": {
+            "type": "border",
+            "name": "Border",
+            "subcollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .search_input .do_search"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "leftSide"
+                ]
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .search_input .do_search:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "leftSide"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "searchButtonOutside": {
+        "name": "Button Outside",
+        "properties": {
+          "background": {
+            "type": "background",
+            "name": "Background",
+            "subcollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .search_input.button_outside .do_search"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "attachment"
+                ]
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .search_input.button_outside .do_search:hover"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "border": {
+            "type": "border",
+            "name": "Border",
+            "subcollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .search_input.button_outside .do_search"
+                ],
+                "name": "Normal"
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .search_input.button_outside .do_search:hover"
+                ],
+                "name": "Hover"
+              }
+            ]
+          },
+          "text": {
+            "type": "text",
+            "name": "Text",
+            "subcollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .search_input.button_outside .do_search span"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "lineHeight"
+                ]
+              },
+              {
+                "id": "hover",
+                "selectors": [
+                  " .search_input.button_outside .do_search:hover span"
+                ],
+                "name": "Hover",
+                "forbidden": [
+                  "fontFamily",
+                  "size",
+                  "style",
+                  "weight",
+                  "lineHeight",
+                  "transform"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "searchAutocompletePopup": {
+        "name": "Autocomplete Popup",
+        "properties": {
+          "backgroundColor": {
+            "type": "background",
+            "name": "Background Color",
+            "subcollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  "!.EDN_search.theme__-ThemeName-_._-StyleTypeAndId-_"
+                ],
+                "forbidden": [
+                  "image",
+                  "repeat",
+                  "attachment",
+                  "position"
+                ],
+                "name": "Normal"
+              }
+            ]
+          },
+          "border": {
+            "type": "border",
+            "name": "Border",
+            "subcollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  "!.EDN_search.theme__-ThemeName-_._-StyleTypeAndId-_"
+                ],
+                "name": "Normal"
+              }
+            ]
+          }
+        },
+        "sections": {
+          "itemsList": {
+            "name": "Items List",
+            "properties": {
+              "backgroundColor": {
+                "type": "background",
+                "name": "Background Color",
+                "subcollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      "!.EDN_search.theme__-ThemeName-_._-StyleTypeAndId-_ .acSelect"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "attachment",
+                      "position"
+                    ]
+                  }
+                ]
+              },
+              "textColor": {
+                "type": "text",
+                "name": "Text Color",
+                "subcollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      "!.EDN_search.theme__-ThemeName-_._-StyleTypeAndId-_ ul li",
+                      "!.EDN_search.theme__-ThemeName-_._-StyleTypeAndId-_ ul li span a",
+                      "!.EDN_search.theme__-ThemeName-_._-StyleTypeAndId-_ .acSelect",
+                      "!.EDN_search.theme__-ThemeName-_._-StyleTypeAndId-_ .acSelect a"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "style",
+                      "weight",
+                      "lineHeight",
+                      "transform",
+                      "decorations",
+                      "shadows"
+                    ]
+                  },
+                  {
+                    "id": "hover",
+                    "selectors": [
+                      "!.EDN_search.theme__-ThemeName-_._-StyleTypeAndId-_ ul li span a:hover"
+                    ],
+                    "name": "Hover",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "style",
+                      "weight",
+                      "lineHeight",
+                      "transform",
+                      "decorations",
+                      "shadows"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "advancedSearchForm": {
+        "name": "Advanced Search Form",
+        "properties": {
+          "checkBoxes": {
+            "type": "background",
+            "name": "Checkboxes Buttons",
+            "subCollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .edncf_AdvancedSearch .edncf_container .edncf_CheckBoxList label:before",
+                  " .edncf_AdvancedSearch .edncf_container .edncf_CheckBox label:before"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "repeat",
+                  "attachment"
+                ]
+              },
+              {
+                "id": "selected",
+                "selectors": [
+                  " .edncf_AdvancedSearch .edncf_container .edncf_CheckBox input[type=\"checkbox\"]:checked + label:before"
+                ],
+                "name": "Selected",
+                "forbidden": [
+                  "repeat",
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "radioButtons": {
+            "type": "background",
+            "name": "Radio Buttons",
+            "subCollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .edncf_AdvancedSearch .edncf_container .edncf_RadioButtonList .edncf_RadioButtonGroup .edncf_RadioButton label:before"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "attachment"
+                ]
+              },
+              {
+                "id": "selected",
+                "selectors": [
+                  " .edncf_AdvancedSearch .edncf_container .edncf_RadioButtonList .edncf_RadioButtonGroup .edncf_RadioButton input[type=\"radio\"]:checked + label:before"
+                ],
+                "name": "Selected",
+                "forbidden": [
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "labels": {
+            "type": "text",
+            "name": "Labels",
+            "subCollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .edncf_AdvancedSearch .edncf_container label",
+                  " .edncf_AdvancedSearch .edncf_container .edncf_CheckBoxList label",
+                  " .edncf_AdvancedSearch .edncf_container .edncf_CheckBox label",
+                  " .edncf_AdvancedSearch .edncf_container .edncf_Text label",
+                  " .edncf_AdvancedSearch .edncf_container .edncf_RadioButtonList .edncf_RadioButtonGroup .edncf_RadioButton label"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "lineHeight",
+                  "decorations"
+                ]
+              }
+            ]
+          },
+          "customFieldsTitles": {
+            "type": "text",
+            "name": "Titles",
+            "subCollection": "search",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .edncf_AdvancedSearch .edncf_container .edncf_CheckBoxList .edncf_CheckBoxListName",
+                  " .edncf_AdvancedSearch .edncf_container .edncf_RangeSliderInput > span > span",
+                  " .edncf_AdvancedSearch .edncf_container .edncf_RadioButtonList .edncf_RadioButtonListName",
+                  " .edncf_AdvancedSearch .edncf_container .edncf_RangeSliderInput label > span"
+                ],
+                "name": "Normal"
+              }
+            ]
+          }
+        },
+        "sections": {
+          "textInput": {
+            "name": "Text Input",
+            "properties": {
+              "borderColor": {
+                "type": "border",
+                "name": "Border Color",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_Text .edncf_TextInput input[type=\"text\"]"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "width",
+                      "style"
+                    ]
+                  }
+                ]
+              },
+              "backgroundColor": {
+                "type": "background",
+                "name": "Background Color",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_Text .edncf_TextInput input[type=\"text\"]"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "position",
+                      "attachment"
+                    ]
+                  }
+                ]
+              },
+              "textInputText": {
+                "type": "text",
+                "name": "Text",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_Text .edncf_TextInput input[type=\"text\"]"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "lineHeight",
+                      "transform",
+                      "decorations"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "select": {
+            "name": "Select",
+            "properties": {
+              "borderColor": {
+                "type": "border",
+                "name": "Border Color",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_DropDownList > span",
+                      " .edncf_AdvancedSearch .edncf_container .edncf_DropDownList > span:after"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "width",
+                      "style"
+                    ]
+                  }
+                ]
+              },
+              "backgroundColor": {
+                "type": "background",
+                "name": "Background Color",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_DropDownList > span"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "position",
+                      "attachment"
+                    ]
+                  }
+                ]
+              },
+              "selectArrow": {
+                "type": "background",
+                "name": "Arrow",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_DropDownList > span"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "color",
+                      "repeat",
+                      "attachment"
+                    ]
+                  }
+                ]
+              },
+              "selectText": {
+                "type": "text",
+                "name": "Text",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_DropDownList > span select",
+                      " .edncf_AdvancedSearch .edncf_container .edncf_DropDownList > span select option"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "lineHeight",
+                      "transform",
+                      "decorations"
+                    ]
+                  },
+                  {
+                    "id": "disabled",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_DropDownList > span select:disabled"
+                    ],
+                    "name": "Disabled",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "style",
+                      "weight",
+                      "lineHeight",
+                      "transform",
+                      "decorations",
+                      "shadows"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "rangeSlider": {
+            "name": "Range Slider",
+            "properties": {
+              "backgroundColor": {
+                "type": "background",
+                "name": "Background Color",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_RangeSliderInput .irs .irs-line"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "position",
+                      "attachment"
+                    ]
+                  }
+                ]
+              },
+              "rangeSliderborderColor": {
+                "type": "border",
+                "name": "Border Color",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_RangeSliderInput .irs .irs-line"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "width",
+                      "style"
+                    ]
+                  }
+                ]
+              },
+              "rangeSliderRangeColor": {
+                "type": "background",
+                "name": "Range Color",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_RangeSliderInput .irs .irs-diapason"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "image",
+                      "repeat",
+                      "position",
+                      "attachment"
+                    ]
+                  }
+                ]
+              },
+              "rangeSliderFromToText": {
+                "type": "text",
+                "name": "From-To Text",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_RangeSliderInput .irs .irs-from",
+                      " .edncf_AdvancedSearch .edncf_container .edncf_RangeSliderInput .irs .irs-to",
+                      " .edncf_AdvancedSearch .edncf_container .edncf_RangeSliderInput .irs .irs-single"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "lineHeight",
+                      "transform",
+                      "decorations"
+                    ]
+                  }
+                ]
+              },
+              "rangeSliderMinAndMaxValue": {
+                "type": "text",
+                "name": "Min-Max Value",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_RangeSliderInput .irs .irs-min",
+                      " .edncf_AdvancedSearch .edncf_container .edncf_RangeSliderInput .irs .irs-max"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "lineHeight",
+                      "transform",
+                      "decorations"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "button": {
+            "name": "Submit Button",
+            "properties": {
+              "background": {
+                "type": "background",
+                "name": "Background",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_submitContainer .edncf_submit"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "attachment"
+                    ]
+                  },
+                  {
+                    "id": "hover",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_submitContainer .edncf_submit:hover"
+                    ],
+                    "name": "Hover",
+                    "forbidden": [
+                      "attachment"
+                    ]
+                  }
+                ]
+              },
+              "text": {
+                "type": "text",
+                "name": "Text",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_submitContainer .edncf_submit span"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "lineHeight"
+                    ]
+                  },
+                  {
+                    "id": "hover",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edncf_container .edncf_submitContainer .edncf_submit:hover span"
+                    ],
+                    "name": "Hover",
+                    "forbidden": [
+                      "fontFamily",
+                      "size",
+                      "style",
+                      "weight",
+                      "lineHeight",
+                      "transform",
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "advancedSearchModule": {
+        "name": "Advanced Search Module",
+        "sections": {
+          "title": {
+            "name": "Module Title",
+            "properties": {
+              "background": {
+                "type": "background",
+                "name": "Background",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edn_module_title"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "attachment"
+                    ]
+                  }
+                ]
+              },
+              "titleText": {
+                "type": "text",
+                "name": "Text",
+                "subCollection": "search",
+                "states": [
+                  {
+                    "id": "default",
+                    "selectors": [
+                      " .edncf_AdvancedSearch .edn_module_title > span"
+                    ],
+                    "name": "Normal",
+                    "forbidden": [
+                      "decorations"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "articleDetailsCustomFields": {
+        "name": "Custom fields",
+        "show": [
+          "newsDetailsArticleDefault",
+          "newsDetailsArticleDefaultSimple",
+          "newsDetailsArticleAboveTitle",
+          "newsDetailsArticleGalleryAboveTitleSimple",
+          "newsDetailsCatalogDefault",
+          "newsDetailsCatalogDefaultSimple"
+        ],
+        "properties": {
+          "background": {
+            "type": "background",
+            "name": "Background",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .EDN_cf_all_fields_container > table tr td"
+                ],
+                "name": "Odd",
+                "forbidden": [
+                  "attachment"
+                ]
+              },
+              {
+                "id": "even",
+                "selectors": [
+                  " .EDN_cf_all_fields_container > table tr:nth-child(2n) td"
+                ],
+                "name": "Even",
+                "forbidden": [
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "checkboxBackground": {
+            "type": "background",
+            "name": "Checkbox",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .EDN_cf_all_fields_container > table tr td.EDN_all_fields_table_value .EDN_cf_checkbox_icon"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "repeat",
+                  "attachment"
+                ]
+              },
+              {
+                "id": "selected",
+                "selectors": [
+                  " .EDN_cf_all_fields_container > table tr td.EDN_all_fields_table_value .EDN_cf_checkbox_checked .EDN_cf_checkbox_icon"
+                ],
+                "name": "Selected",
+                "forbidden": [
+                  "repeat",
+                  "attachment"
+                ]
+              }
+            ]
+          },
+          "text": {
+            "type": "text",
+            "name": "Text",
+            "subCollection": "news",
+            "states": [
+              {
+                "id": "default",
+                "selectors": [
+                  " .EDN_cf_all_fields_container > table tr td",
+                  " .EDN_cf_all_fields_container > table tr td p"
+                ],
+                "name": "Normal",
+                "forbidden": [
+                  "size",
+                  "style",
+                  "weight",
+                  "lineHeight",
+                  "transform",
+                  "decorations"
+                ],
+                "important": [
+                  "fontFamily",
+                  "color",
+                  "shadows"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

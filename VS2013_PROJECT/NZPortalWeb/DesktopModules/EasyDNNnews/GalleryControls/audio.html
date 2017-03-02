@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta http-equiv='Content-Style-Type' content='text/css' />
+	<meta http-equiv='Content-Script-Type' content='text/javascript' />
+	<link rel="stylesheet" type="text/css" href="../static/audiojs/audiogallery.css">
+	<script type='text/javascript' src='../js/eds1.8.2.js'></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type='text/javascript' src='../static/audiojs/audio.min.js'></script>
+	<title></title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+		}
+
+		html {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+	<script type='text/javascript'>
+		function getQuerystring(key, default_) {
+			if (default_ == null) default_ = "";
+			key = key.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+			var regex = new RegExp("[\\?&]" + key + "=([^&#]*)");
+			var qs = regex.exec(window.location.href);
+			if (qs == null)
+				return default_;
+			else
+				return qs[1];
+		}
+		var au = getQuerystring('audiourl');
+	</script>
+</head>
+<body>
+	<div id="audioHolder"></div>
+	<script type='text/javascript'>
+		eds1_8("#audioHolder").width(500);
+		eds1_8("#audioHolder").height(37);
+		eds1_8("#audioHolder").html(
+		'<div id="audioDiv" style="width: 500px; height: 37px">' +
+		'<audio src="' + au + '" preload="none" />' +
+		'</audio>');
+		eds1_8(document).ready(function ($) {
+			audiojs.events.ready(function () {
+				var as = audiojs.createAll(null, $('#audioHolder audio'));
+			});
+		});
+	</script>
+</body>
+</html>
+
+

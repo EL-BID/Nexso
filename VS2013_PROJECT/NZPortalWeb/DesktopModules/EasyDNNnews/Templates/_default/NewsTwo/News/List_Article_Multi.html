@@ -1,0 +1,186 @@
+<!--TemplateGroup:newsListMultiarticleDefault-->
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:1:-->
+[EasyDNNnews:IfExists:Image]
+<div class="featured-multi">
+	[EasyDNNnews:HasArticlePermissions]
+	<div class="admin_actions">
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:627:Height:327:Resize:Crop]"/>
+	<span class="newstwo-date">
+		[EasyDNNnews:IfNotExists:Event]<strong>[EasyDNNnews:PublishDay]</strong><br />[EasyDNNnews:PublishMonthString]<br />[EasyDNNnews:PublishYear][EasyDNNnews:EndIf:Event]
+		[EasyDNNnews:IfExists:Event]<strong>[EasyDNNnews:EventStartDay]</strong><br />[EasyDNNnews:EventStartMonthNameShort]<br />[EasyDNNnews:EventStartYear][EasyDNNnews:EndIf:Event]
+	</span>
+	<div class="intro">
+		<h2><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+		<div><p>[EasyDNNnews:Summary:Limit:380]</p></div>
+	</div>
+</div>
+[EasyDNNnews:EndIf:Image]
+[EasyDNNnews:IfNotExists:Image]
+<div class="featured-multi no-image">
+	[EasyDNNnews:HasArticlePermissions]
+	<div class="admin_actions">
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	<span class="newstwo-date">
+		[EasyDNNnews:IfNotExists:Event]<strong>[EasyDNNnews:PublishDay]</strong><br />[EasyDNNnews:PublishMonthString]<br />[EasyDNNnews:PublishYear][EasyDNNnews:EndIf:Event]
+		[EasyDNNnews:IfExists:Event]<strong>[EasyDNNnews:EventStartDay]</strong><br />[EasyDNNnews:EventStartMonthNameShort]<br />[EasyDNNnews:EventStartYear][EasyDNNnews:EndIf:Event]
+	</span>
+		<h2><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+		<p>[EasyDNNnews:Summary]</p>
+</div>
+[EasyDNNnews:EndIf:Image]
+
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:2:3:-->
+
+<!--Before:2:3:-->
+<div class="two-articles-row">
+<!--BeforeEnd-->
+	<div class="article-two-in-row">
+		[EasyDNNnews:IfExists:Image]
+		<a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:286:Height:187:Resize:Crop]" width="286" height="187"/></a>
+		[EasyDNNnews:EndIf:Image]
+		<h2><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+		[EasyDNNnews:HasArticlePermissions]
+		<div class="admin_actions">
+			[EasyDNNnews:ArticlePermissions:Edit]
+			[EasyDNNnews:ArticlePermissions:Publish]
+			[EasyDNNnews:ArticlePermissions:Approve]
+		</div>
+		[EasyDNNnews:HasArticlePermissionsEnd]
+		[EasyDNNnews:Summary:Limit:380]
+		<div class="date-comments"><span class="newstwo-date">
+			[EasyDNNnews:IfNotExists:Event]
+			[EasyDNNnews:FormatedDate: MMMM d, yyyy]
+			[EasyDNNnews:EndIf:Event]
+			[EasyDNNnews:IfExists:Event]
+			[EasyDNNnews:EventDate]
+			[EasyDNNnews:EndIf:Event]
+			</span>
+			<span class="newstwo-comments">[EasyDNNnews:Comments] [EasyDNNnewsLocalizedText:Comments]</span>
+		</div>
+	</div>
+<!--After:2:3:-->
+	<div class="clear"></div>
+</div>
+<!--AfterEnd-->
+
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:4:5:-->
+
+<!--Before:4:5:-->
+<div class="two-articles-row">
+<!--BeforeEnd-->
+	<div class="article-two-in-row">
+		[EasyDNNnews:IfExists:Image]
+		<a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:286:Height:187:Resize:Crop]" width="286" height="187"/></a>
+		[EasyDNNnews:EndIf:Image]
+		<h2><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+		[EasyDNNnews:HasArticlePermissions]
+		<div class="admin_actions">
+			[EasyDNNnews:ArticlePermissions:Edit]
+			[EasyDNNnews:ArticlePermissions:Publish]
+			[EasyDNNnews:ArticlePermissions:Approve]
+		</div>
+		[EasyDNNnews:HasArticlePermissionsEnd]
+		[EasyDNNnews:Summary:Limit:380]
+		<div class="date-comments">
+			<span class="newstwo-date">
+			[EasyDNNnews:IfNotExists:Event]
+			[EasyDNNnews:FormatedDate: MMMM d, yyyy]
+			[EasyDNNnews:EndIf:Event]
+			[EasyDNNnews:IfExists:Event]
+			[EasyDNNnews:EventDate]
+			[EasyDNNnews:EndIf:Event]
+			</span>
+			<span class="newstwo-comments">[EasyDNNnews:Comments] [EasyDNNnewsLocalizedText:Comments]</span>
+		</div>
+	</div>
+<!--After:4:5:-->
+	<div class="clear"></div>
+</div>
+<!--AfterEnd-->
+
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:6:7:-->
+
+<!--Before:6:7:-->
+<div class="one-article-row">
+<!--BeforeEnd-->
+	<div class="article-one-in-row">
+		[EasyDNNnews:IfExists:Image]
+		<a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:217:Height:149:Resize:Crop]" width="217" height="149"/></a>
+		[EasyDNNnews:EndIf:Image]
+		<h2><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+		[EasyDNNnews:HasArticlePermissions]
+		<div class="admin_actions">
+			[EasyDNNnews:ArticlePermissions:Edit]
+			[EasyDNNnews:ArticlePermissions:Publish]
+			[EasyDNNnews:ArticlePermissions:Approve]
+		</div>
+		[EasyDNNnews:HasArticlePermissionsEnd]
+		[EasyDNNnews:Summary:Limit:305]
+		<div class="date-comments"><span class="newstwo-date">
+			[EasyDNNnews:IfNotExists:Event]
+			[EasyDNNnews:FormatedDate: MMMM d, yyyy]
+			[EasyDNNnews:EndIf:Event]
+			[EasyDNNnews:IfExists:Event]
+			[EasyDNNnews:EventDate]
+			[EasyDNNnews:EndIf:Event]
+			</span>
+			<span class="newstwo-comments">[EasyDNNnews:Comments] [EasyDNNnewsLocalizedText:Comments]</span>
+		</div>
+	</div>
+<!--After:6:7:-->
+</div>
+<!--AfterEnd-->
+
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:8:9:10:-->
+
+<!--Before:8:9:10:-->
+<div class="three-articles-row">
+<!--BeforeEnd-->
+	<div class="article-three-in-row">
+		[EasyDNNnews:IfExists:Image]
+		<a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:197:Height:135:Resize:Crop]"  width="197" height="135"/></a>
+		[EasyDNNnews:EndIf:Image]
+		<h2><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h2>
+		[EasyDNNnews:HasArticlePermissions]
+		<div class="admin_actions">
+			[EasyDNNnews:ArticlePermissions:Edit]
+			[EasyDNNnews:ArticlePermissions:Publish]
+			[EasyDNNnews:ArticlePermissions:Approve]
+		</div>
+		[EasyDNNnews:HasArticlePermissionsEnd]
+		<p>[EasyDNNnews:Summary:Limit:217]</p>
+	</div>
+<!--After:8:9:10:-->
+	<div class="clear"></div>
+</div>
+<!--AfterEnd-->
+
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+

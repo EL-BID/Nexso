@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Cancel.Text">
+    <value xml:space="preserve">Volver</value>
+  </data>
+  <data name="chkIncludeSource.Text">
+    <value xml:space="preserve">Incluir fuente:</value>
+  </data>
+  <data name="ChooseAssemblies.Help">
+    <value xml:space="preserve">En este paso puede seleccionar los ensamblados a incluir en el paquete. Si hay un archivo de proyecto en la carpeta del paquete el asistente tratará de determinar los ensamblados a incluir pero puede añadir o eliminar ensamblados desde la lista manualmente.</value>
+  </data>
+  <data name="ChooseAssemblies.Title">
+    <value xml:space="preserve">Seleccionar ensamblados a incluir</value>
+  </data>
+  <data name="ChooseFiles.Help">
+    <value xml:space="preserve">En este paso puede seleccionar los archivos a incluir en el paquete. El asistente trata de determinar los archivos a incluir pero puede añadir o eliminar archivos de la lista. Puede también decidir si incluir los archivos fuente marcando la casilla "Incluir fuente".</value>
+  </data>
+  <data name="ChooseFiles.Title">
+    <value xml:space="preserve">Selecionar archivos a incluir</value>
+  </data>
+  <data name="cmdGetAssemblies.Text">
+    <value xml:space="preserve">Actualizar lista</value>
+  </data>
+  <data name="cmdGetFiles.Text">
+    <value xml:space="preserve">Actualizar lista de archivos</value>
+  </data>
+  <data name="Complete.Text">
+    <value xml:space="preserve">Paquete completo (zip):</value>
+  </data>
+  <data name="ControlTitle_packagewriter.Text">
+    <value xml:space="preserve">Creación de paquete</value>
+  </data>
+  <data name="CreateManifest.Help">
+    <value xml:space="preserve">En base a sus selecciones el asistente ha creado el manifiesto para el paquete. El manifiesto se visualiza en la casilla inferior. Puede editar el manifiesto antes de crear el paquete.</value>
+  </data>
+  <data name="CreateManifest.Title">
+    <value xml:space="preserve">Crear manifiesto</value>
+  </data>
+  <data name="FinalStep.Title">
+    <value xml:space="preserve">Crear paquete</value>
+  </data>
+  <data name="Introduction.Help">
+    <value xml:space="preserve">Mediante el asistente podrá crear un paquete con todos los archivos necesarios para instalar la extensión en otra instalación de DotNetNuke.</value>
+  </data>
+  <data name="Introduction.Title">
+    <value xml:space="preserve">Crear paquete</value>
+  </data>
+  <data name="InvalidManifestExtension.Text">
+    <value xml:space="preserve">Extensión del manifiesto incorrecta: la extensión del manifiesto debe ser ".dnn".</value>
+  </data>
+  <data name="InvalidPackageName.Text">
+    <value xml:space="preserve">Nombre de paquete incorrecto: el nombre del paquete debe tener la extensión ".zip".</value>
+  </data>
+  <data name="LogTitle.Text">
+    <value xml:space="preserve">Registro de creación del paquete</value>
+  </data>
+  <data name="Manifest.Text">
+    <value xml:space="preserve">Sólo el manifiesto (.dnn):</value>
+  </data>
+  <data name="ManifestHelp.Text">
+    <value xml:space="preserve">&lt;p&gt;Este asistente creará un manifiesto para la extensión. Puede configurar diferentes opciones para el manifiesto. Si ya ha creado un manifiesto (en una ejecución anterior del asistente o bién manualmente) puede seleccionar el manifiesto a usar seleccionando "Usar manifiesto existente" y seleccionando el manifiesto desde la lista desplegable de manifiestos que el sistema ha encontrado para la extensión.&lt;/p&gt;
+&lt;p&gt;Además pueda seleccionar revisar el manifiesto al final del asistente (en el caso de querer hacer cambios en el manifiesto antes de que el paquete zip sea creado).&lt;/p&gt;</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Acerca del paquete&lt;/h1&gt;&lt;p&gt;Permite la creación de paquetes.&lt;/p&gt;</value>
+  </data>
+  <data name="NoFileName.Text">
+    <value xml:space="preserve">Tiene que proporcionar un nombre de archivo para el paquete</value>
+  </data>
+  <data name="plArchiveName.Help">
+    <value xml:space="preserve">Indique el nombre a usar para el archivo (.zip).</value>
+  </data>
+  <data name="plArchiveName.Text">
+    <value xml:space="preserve">Nombre de archivo:</value>
+  </data>
+  <data name="plBasePath.Help">
+    <value xml:space="preserve">Carpeta donde pueden encontrarse los archivos del paquete</value>
+  </data>
+  <data name="plBasePath.Text">
+    <value xml:space="preserve">Carpeta</value>
+  </data>
+  <data name="plBinFolder.Help">
+    <value xml:space="preserve">Carpeta donde pueden encontrarse los ensamblados del paquete</value>
+  </data>
+  <data name="plBinFolder.Text">
+    <value xml:space="preserve">Carpeta de ensamblados</value>
+  </data>
+  <data name="plChooseManifest.Help">
+    <value xml:space="preserve">Si ha seleccionado usar un manifiesto creado previamente puede seleccionar el manifiesto aquí.</value>
+  </data>
+  <data name="plChooseManifest.Text">
+    <value xml:space="preserve">Seleccionar archivo de manifiesto:</value>
+  </data>
+  <data name="plManifest.Help">
+    <value xml:space="preserve">Marque esta casilla para crear un archivo de manifiesto.</value>
+  </data>
+  <data name="plManifest.Text">
+    <value xml:space="preserve">Crear archivo manifiesto:</value>
+  </data>
+  <data name="plManifestName.Help">
+    <value xml:space="preserve">Indique el nombre de archivo a usar para el manifiesto.</value>
+  </data>
+  <data name="plManifestName.Text">
+    <value xml:space="preserve">Nombre de archivo del manifiesto:</value>
+  </data>
+  <data name="plPackage.Help">
+    <value xml:space="preserve">Marque esta casilla para crear un archivo de paquete (.zip)</value>
+  </data>
+  <data name="plPackage.Text">
+    <value xml:space="preserve">Crear paquete:</value>
+  </data>
+  <data name="plReviewManifest.Help">
+    <value xml:space="preserve">Marca esta casilla para revisar el manifiesto antes de crear el nuevo paquete.</value>
+  </data>
+  <data name="plReviewManifest.Text">
+    <value xml:space="preserve">Revisar manifiesto:</value>
+  </data>
+  <data name="plUseManifest.Help">
+    <value xml:space="preserve">Marca esta casilla para usar un manifiesto existente para el paquete.</value>
+  </data>
+  <data name="plUseManifest.Text">
+    <value xml:space="preserve">Usar manifiesto existente:</value>
+  </data>
+  <data name="Success.Text">
+    <value xml:space="preserve">El paquete se ha creado en la carpeta "{0}"</value>
+  </data>
+  <data name="WriterResults.Help">
+    <value xml:space="preserve">En la parte inferior puede revisar los resultados de la creación del paquete.</value>
+  </data>
+  <data name="WriterResults.Title">
+    <value xml:space="preserve">Resultado de la creación del paquete</value>
+  </data>
+</root>

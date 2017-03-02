@@ -1,0 +1,81 @@
+<dotnetnuke type="Package" version="5.0">
+  <packages>
+    <package name="NZOrganization" type="Module" version="00.00.01">
+      <friendlyName>NZOrganization</friendlyName>
+      <description>NEXSO NZOrganization module</description>
+      <iconFile>Images/icon_extensions.gif</iconFile>
+      <owner>
+        <name>NEXSO</name>
+        <organization>NEXSO</organization>
+        <url>https://www.NEXSO.org</url>
+        <email>modules@NEXSO</email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <dependencies>
+        <dependency type="CoreVersion">07.00.04</dependency>
+      </dependencies>
+      
+      <components>
+
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules/Nexso/NZOrganization</basePath>
+            <resourceFile>
+              <name>Resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+
+        <component type="Module">
+          <desktopModule>
+            <moduleName>NZOrganization</moduleName>
+            <foldername>NZOrganization</foldername>
+         
+          
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>NZOrganization</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/Nexso/NZOrganization/NZOrganization.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>Edit</controlKey>
+                    <controlSrc>DesktopModules/Nexso/NZOrganization/Edit.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Edit Content</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                    <supportsPopUps>True</supportsPopUps>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>Settings</controlKey>
+                    <controlSrc>DesktopModules/Nexso/NZOrganization/Settings.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Settings</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+       
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>

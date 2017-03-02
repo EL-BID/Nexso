@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddPage.Text">
+    <value xml:space="preserve">Añadir página(s)</value>
+  </data>
+  <data name="Appearance.Tabname">
+    <value xml:space="preserve">Apariencia</value>
+  </data>
+  <data name="btnBulkCreate.Text">
+    <value xml:space="preserve">Crear página(s)</value>
+  </data>
+  <data name="BulkCreateIntro.Text">
+    <value xml:space="preserve">Esta opción le permite crear una página por linea por debajo de la página seleccionada. Para crear jerarquías, puede anteponer las lineas con "&gt;".</value>
+  </data>
+  <data name="bulkPagesLabel.Text">
+    <value xml:space="preserve">Páginas:</value>
+  </data>
+  <data name="CanNotDeleteHomeTab.Text">
+    <value xml:space="preserve">No puede borrar la página de inicio de su sitio.</value>
+  </data>
+  <data name="CanNotDeleteSpecialTab.Text">
+    <value xml:space="preserve">Esta es una página especial y no se puede borrar</value>
+  </data>
+  <data name="cmdMore.Text">
+    <value xml:space="preserve">Más configuraciones</value>
+  </data>
+  <data name="cmdUpdate.Text">
+    <value xml:space="preserve">Actualizar página</value>
+  </data>
+  <data name="Collapse.Text">
+    <value xml:space="preserve">Contraer todos los nodos</value>
+  </data>
+  <data name="Common.Tabname">
+    <value xml:space="preserve">Común</value>
+  </data>
+  <data name="ConfirmDelete.Text">
+    <value xml:space="preserve">Esta acción eliminará la página seleccionada y todas sus descendientes. ¿Está seguro que desea continuar?</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Gestión de páginas</value>
+  </data>
+  <data name="DefaultContainer.Text">
+    <value xml:space="preserve">[Container por omisión]</value>
+  </data>
+  <data name="DeletePage.Text">
+    <value xml:space="preserve">Eliminar página</value>
+  </data>
+  <data name="DisablePage.Text">
+    <value xml:space="preserve">Desactivar enlace en navegación</value>
+  </data>
+  <data name="EditPage.Text">
+    <value xml:space="preserve">Configuración de página</value>
+  </data>
+  <data name="EmptyTabName.Text">
+    <value xml:space="preserve">El nombre de la página está vacío</value>
+  </data>
+  <data name="EnablePage.Text">
+    <value xml:space="preserve">Activar enlace en navegación</value>
+  </data>
+  <data name="ExceededQuota.Text">
+    <value xml:space="preserve">No puede añadir más páginas porque excederia la cuota de páginas asignada para la web. Póngase en contacto con su proveedor para incrementar la cuota de páginas disponible.</value>
+  </data>
+  <data name="Expand.Text">
+    <value xml:space="preserve">Expandir todos los nodos</value>
+  </data>
+  <data name="HidePage.Text">
+    <value xml:space="preserve">Ocultar de la navegación</value>
+  </data>
+  <data name="Host.Text">
+    <value xml:space="preserve">Sistema</value>
+  </data>
+  <data name="InvalidTabName.Text">
+    <value xml:space="preserve">"{0}" no es un título de página válido</value>
+  </data>
+  <data name="lblAdminOnly.Text">
+    <value xml:space="preserve">Visible solo para administradores</value>
+  </data>
+  <data name="lblAllowIndex.Help">
+    <value xml:space="preserve">Indique si esta página podrá ser indexada por los buscadores. Se utilizan los valores INDEX/NOINDEX del meta tag ROBOTS.</value>
+  </data>
+  <data name="lblAllowIndex.Text">
+    <value xml:space="preserve">Permitir indexación:</value>
+  </data>
+  <data name="lblContainer.Help">
+    <value xml:space="preserve">El container seleccionado será aplicado a todos los módulos de esta página</value>
+  </data>
+  <data name="lblContainer.Text">
+    <value xml:space="preserve">Container por omisión</value>
+  </data>
+  <data name="lblDescription.Help">
+    <value xml:space="preserve">Indique aquí una descripción acerca de esta página.</value>
+  </data>
+  <data name="lblDescription.Text">
+    <value xml:space="preserve">Descripción de la página</value>
+  </data>
+  <data name="lblDisabled.Text">
+    <value xml:space="preserve">La página está desactivada</value>
+  </data>
+  <data name="lblDisabledPage.Help">
+    <value xml:space="preserve">Si la página está desactivada no estará disponible para los usuarios del sitio. Puede usar esta opción para suprimir contenido que desee mostrar más tarde.</value>
+  </data>
+  <data name="lblDisabledPage.Text">
+    <value xml:space="preserve">Desactivada</value>
+  </data>
+  <data name="lblEveryone.Text">
+    <value xml:space="preserve">La página es visible para todos los usuarios</value>
+  </data>
+  <data name="lblHidden.Text">
+    <value xml:space="preserve">La página no se muestra en el menú</value>
+  </data>
+  <data name="lblHome.Text">
+    <value xml:space="preserve">Página de inicio del sitio</value>
+  </data>
+  <data name="lblHostOnly.Text">
+    <value xml:space="preserve">Administrar:</value>
+  </data>
+  <data name="lblIconLarge.Help">
+    <value xml:space="preserve">Puede cambiar el icono grande que se usará en la consola.</value>
+  </data>
+  <data name="lblIconLarge.Text">
+    <value xml:space="preserve">Icono grande</value>
+  </data>
+  <data name="lblIconSmall.Help">
+    <value xml:space="preserve">Puede cambiar el icono que se usa en el menú.</value>
+  </data>
+  <data name="lblIconSmall.Text">
+    <value xml:space="preserve">Icono pequeño</value>
+  </data>
+  <data name="lblKeywords.Help">
+    <value xml:space="preserve">Escriba algunas palabras clave para esta página, separándolas por comas. Estas palabras clave serán usadas por los motores de búsqueda para ayudar a indizar las páginas de su sitio.</value>
+  </data>
+  <data name="lblKeywords.Text">
+    <value xml:space="preserve">Palabras clave de la página</value>
+  </data>
+  <data name="lblLegend.Text">
+    <value xml:space="preserve">Leyenda</value>
+  </data>
+  <data name="lblMetaHead.Help">
+    <value xml:space="preserve">Indique las etiquetas ("META tags") que desee incluir en la cabecera de la página (etiqueta "HEAD" del HTML de la página)</value>
+  </data>
+  <data name="lblMetaHead.Text">
+    <value xml:space="preserve">Etiquetas de cabecera de la página</value>
+  </data>
+  <data name="lblMetaRefresh.Help">
+    <value xml:space="preserve">Indique el intervalo de refresco automático de la página. (Ejemplo: indique "60" para 1 minuto o deje en blanco para desactivar)</value>
+  </data>
+  <data name="lblMetaRefresh.Text">
+    <value xml:space="preserve">Intervalo de refresco (segundos)</value>
+  </data>
+  <data name="lblName.Help">
+    <value xml:space="preserve">Este es el nombre de la página. El texto que indique se mostrará en el sistema de menús.</value>
+  </data>
+  <data name="lblName.Text">
+    <value xml:space="preserve">Nombre de la página</value>
+  </data>
+  <data name="lblNoRecords.Text">
+    <value xml:space="preserve">No hay módulos en la página seleccionada.</value>
+  </data>
+  <data name="lblPageSSL.Help">
+    <value xml:space="preserve">Indique si hay que forzar una conexión segura (SSL) para mostrar la página. Esta opción sólo se activará si el administrador ha habilitado SSL en la configuración del sitio.</value>
+  </data>
+  <data name="lblPageSSL.Text">
+    <value xml:space="preserve">Seguro</value>
+  </data>
+  <data name="lblPermanentRedirect.Help">
+    <value xml:space="preserve">Marque esta casilla para indicar a los navegadores que la página se ha movido permanentemente. Esto permitirá a los buscadores actualizar sus índices para apuntar a la nueva dirección. Esta opción no se tiene en cuenta si el tipo de enlace es ninguno.</value>
+  </data>
+  <data name="lblPermanentRedirect.Text">
+    <value xml:space="preserve">Redireccionamiento permanente</value>
+  </data>
+  <data name="lblRedirect.Text">
+    <value xml:space="preserve">Redirección de página</value>
+  </data>
+  <data name="lblRegistered.Text">
+    <value xml:space="preserve">Visible para usuarios registrados</value>
+  </data>
+  <data name="lblSecure.Text">
+    <value xml:space="preserve">Visible solo para roles específicos</value>
+  </data>
+  <data name="lblSitemapPriority.Help">
+    <value xml:space="preserve">Introduzca la prioridad deseada (entre 0 y 1.0). Esto ayuda a determinar cómo esta página ha sido calificada por Google con respecto a otras páginas en su sitio (0,5 es el valor predeterminado).</value>
+  </data>
+  <data name="lblSitemapPriority.Text">
+    <value xml:space="preserve">Prioridad en sitemap</value>
+  </data>
+  <data name="lblTags.Help">
+    <value xml:space="preserve">Seleccione los elementos de la lista desplegable para etiquetar la página.</value>
+  </data>
+  <data name="lblTags.Text">
+    <value xml:space="preserve">Etiquetas de la página</value>
+  </data>
+  <data name="lblTitle.Help">
+    <value xml:space="preserve">Escriba aquí un título para la página. El texto que escriba se mostrará en el título de la ventana del navegador.</value>
+  </data>
+  <data name="lblTitle.Text">
+    <value xml:space="preserve">Título de la página</value>
+  </data>
+  <data name="lblUrl.Help">
+    <value xml:space="preserve">Si desea que esta página se comporte como un vínculo de navegación a otro recurso, puede especificar el valor URL del enlace aquí. Tenga en cuenta que este campo es opcional.</value>
+  </data>
+  <data name="lblUrl.Text">
+    <value xml:space="preserve">Enlace</value>
+  </data>
+  <data name="lblVisible.Help">
+    <value xml:space="preserve">Tiene la opción de si incluir o no la página en el menú principal de navegación. Si una página no está incluida en el menú, puede utilizar su URL para enlazarla.</value>
+  </data>
+  <data name="lblVisible.Text">
+    <value xml:space="preserve">Incluir en el menú</value>
+  </data>
+  <data name="Link.Tabname">
+    <value xml:space="preserve">Enlace</value>
+  </data>
+  <data name="MakeHome.Text">
+    <value xml:space="preserve">Convertir en página de inicio</value>
+  </data>
+  <data name="Metatags.Tabname">
+    <value xml:space="preserve">Metaetiquetas</value>
+  </data>
+  <data name="Module.Header">
+    <value xml:space="preserve">Módulo</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Acerca de Páginas&lt;/h1&gt;&lt;p&gt;Los Administradores pueden gestionar las páginas disponibles en el sitio. Este módulo permite crear una nueva página, modificar o eliminar páginas existentes y cambiar tanto el orden como el nivel jerárquico de la página.&lt;/p&gt;</value>
+  </data>
+  <data name="Modules.Tabname">
+    <value xml:space="preserve">Módulos</value>
+  </data>
+  <data name="ModuleTitle.Header">
+    <value xml:space="preserve">Título</value>
+  </data>
+  <data name="MovePageDown.Text">
+    <value xml:space="preserve">Bajar</value>
+  </data>
+  <data name="MovePageUp.Text">
+    <value xml:space="preserve">Subir</value>
+  </data>
+  <data name="Options.Header">
+    <value xml:space="preserve">Opciones</value>
+  </data>
+  <data name="PathDuplicateWithAlias.Text">
+    <value xml:space="preserve">Hay un alias del sitio igual que el nombre de la página.</value>
+  </data>
+  <data name="Permissions.Tabname">
+    <value xml:space="preserve">Permisos</value>
+  </data>
+  <data name="root.Text">
+    <value xml:space="preserve">Raíz del sitio</value>
+  </data>
+  <data name="Search.Text">
+    <value xml:space="preserve">Buscar</value>
+  </data>
+  <data name="SEO.Tabname">
+    <value xml:space="preserve">SEO </value>
+  </data>
+  <data name="ShowHostTabs.Text">
+    <value xml:space="preserve">Páginas del sistema</value>
+  </data>
+  <data name="ShowPage.Text">
+    <value xml:space="preserve">Mostrar en la navegación</value>
+  </data>
+  <data name="ShowPortalTabs.Text">
+    <value xml:space="preserve">Páginas del sitio</value>
+  </data>
+  <data name="Site.Text">
+    <value xml:space="preserve">Sitio</value>
+  </data>
+  <data name="TabCreated.Text">
+    <value xml:space="preserve">Página {0} creada</value>
+  </data>
+  <data name="TabDeleted.Text">
+    <value xml:space="preserve">Página {0} eliminada</value>
+  </data>
+  <data name="TabDisabled.Text">
+    <value xml:space="preserve">Página {0} desactivada</value>
+  </data>
+  <data name="TabEnabled.Text">
+    <value xml:space="preserve">Página {0} activada</value>
+  </data>
+  <data name="TabExists.Text">
+    <value xml:space="preserve">El nombre de página introducido ya se utiliza en otra página del mismo nivel.</value>
+  </data>
+  <data name="TabHidden.Text">
+    <value xml:space="preserve">Página "{0}" oculta en la navegación</value>
+  </data>
+  <data name="TabMadeHome.Text">
+    <value xml:space="preserve">Página "{0}" convertida en página de inicio</value>
+  </data>
+  <data name="TabMoved.Text">
+    <value xml:space="preserve">Página "{0}" movida</value>
+  </data>
+  <data name="TabRecycled.Text">
+    <value xml:space="preserve">Existe una página con este nombre en la papelera de reciclaje. Para restaurar esta página use la papelera de reciclaje.</value>
+  </data>
+  <data name="TabShown.Text">
+    <value xml:space="preserve">Página "{0}" mostrada en la navegación</value>
+  </data>
+  <data name="TabUpdated.Text">
+    <value xml:space="preserve">Página "{0}" actualizada</value>
+  </data>
+  <data name="valName.ErrorMessage">
+    <value xml:space="preserve">El nombre de la página es obligatorio</value>
+  </data>
+  <data name="valPriority.ErrorMessage">
+    <value xml:space="preserve">El valor de la prioridad no es correcto</value>
+  </data>
+  <data name="valPriorityRequired.ErrorMessage">
+    <value xml:space="preserve">La prioridad es obligatoria</value>
+  </data>
+  <data name="valRefresh.ErrorMessage">
+    <value xml:space="preserve">Número incorrecto</value>
+  </data>
+  <data name="ViewPage.Text">
+    <value xml:space="preserve">Ver página</value>
+  </data>
+</root>

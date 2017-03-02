@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plReportType.Text">
+    <value xml:space="preserve">Tipo de relatório</value>
+  </data>
+  <data name="plReportType.Help">
+    <value xml:space="preserve">Escolha o relatório que pretende visualizar.</value>
+  </data>
+  <data name="plStartDate.Text">
+    <value xml:space="preserve">Data inicial</value>
+  </data>
+  <data name="plStartDate.Help">
+    <value xml:space="preserve">Selecione a data de início para o relatório.</value>
+  </data>
+  <data name="plEndDate.Text">
+    <value xml:space="preserve">Data final</value>
+  </data>
+  <data name="plEndDate.Help">
+    <value xml:space="preserve">Selecione a data final para o relatório.</value>
+  </data>
+  <data name="Date.Header">
+    <value xml:space="preserve">Isto é uma data</value>
+  </data>
+  <data name="LogDisabled.Text">
+    <value xml:space="preserve">O seu provedor de hospedagem desativou o recurso de registro de histórico para o seu portal.</value>
+  </data>
+  <data name="LogHistory.Text">
+    <value xml:space="preserve">O seu provedor de hospedagem limitou o seu portal a {0} dias de registro de histórico.</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">Histórico do Portal</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre o Registro do Portal&lt;/h1&gt;&lt;p&gt;Administradores podem ver os detalhes dos visitantes do seu portal. Existe uma variedade de relatórios que fornecem informação a respeito da utilização do portal, registro de membros e volumes.&lt;/p&gt;</value>
+  </data>
+  <data name="FileSystem.Text">
+    <value xml:space="preserve">Seu provedor de hospedagem desativou o recurso de visualização de histórico para seu portal. Os registros podem ser visualizados desconectado e estão disponíveis na sub-pasta \Logs\ do diretório raiz do seu portal.</value>
+  </data>
+  <data name="valDates.Text">
+    <value xml:space="preserve">&lt;br/&gt;A data final deve ser maior que a data inicial!</value>
+  </data>
+  <data name="valEndDate.Text">
+    <value xml:space="preserve">&lt;br/&gt;A data final é inválida!</value>
+  </data>
+  <data name="valStartDate.Text">
+    <value xml:space="preserve">&lt;br/&gt;A data inicial é inválida!</value>
+  </data>
+  <data name="NoRecords.Text">
+    <value xml:space="preserve">Nenhum registro encontrado.</value>
+  </data>
+</root>

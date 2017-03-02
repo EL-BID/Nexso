@@ -1,0 +1,1518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="//AboutUs.String" xml:space="preserve">
+    <value>Acerca de nosotros</value>
+  </data>
+  <data name="//AboutUs//StyleGuide.String" xml:space="preserve">
+    <value>Guía de estilo</value>
+  </data>
+  <data name="//ActivityFeed.String" xml:space="preserve">
+    <value>Actividad</value>
+  </data>
+  <data name="//ActivityFeed//Friends.String" xml:space="preserve">
+    <value>Amigos</value>
+  </data>
+  <data name="//ActivityFeed//Messages.String" xml:space="preserve">
+    <value>Mensajes</value>
+  </data>
+  <data name="//ActivityFeed//MyProfile.String" xml:space="preserve">
+    <value>Mi perfil</value>
+  </data>
+  <data name="//Admin.String" xml:space="preserve">
+    <value>Administración</value>
+  </data>
+  <data name="//Admin//AdvancedSettings.String" xml:space="preserve">
+    <value>Configuración avanzada</value>
+  </data>
+  <data name="//Admin//AdvancedURLManagement.String" xml:space="preserve">
+    <value>Gestión avanzada de URLs</value>
+  </data>
+  <data name="//Admin//ContentStaging.String" xml:space="preserve">
+    <value>Contenido provisional</value>
+  </data>
+  <data name="//Admin//DevicePreviewManagement.String" xml:space="preserve">
+    <value>Gestión de dispositivos</value>
+  </data>
+  <data name="//Admin//Extensions.String" xml:space="preserve">
+    <value>Extensiones</value>
+  </data>
+  <data name="//Admin//FileManagement.String" xml:space="preserve">
+    <value>Gestión de archivos</value>
+  </data>
+  <data name="//Admin//FileManager.String" xml:space="preserve">
+    <value>Gestión de archivos</value>
+  </data>
+  <data name="//Admin//GoogleAnalytics.String" xml:space="preserve">
+    <value>Google Analytics</value>
+  </data>
+  <data name="//Admin//GoogleAnalyticsPro.String" xml:space="preserve">
+    <value>Google Analytics Pro</value>
+  </data>
+  <data name="//Admin//Languages.String" xml:space="preserve">
+    <value>Idiomas</value>
+  </data>
+  <data name="//Admin//Lists.String" xml:space="preserve">
+    <value>Listas</value>
+  </data>
+  <data name="//Admin//LogViewer.String" xml:space="preserve">
+    <value>Visor de eventos</value>
+  </data>
+  <data name="//Admin//Newsletters.String" xml:space="preserve">
+    <value>Boletines</value>
+  </data>
+  <data name="//Admin//Pages.String" xml:space="preserve">
+    <value>Gestión de páginas</value>
+  </data>
+  <data name="//Admin//RecycleBin.String" xml:space="preserve">
+    <value>Papelera</value>
+  </data>
+  <data name="//Admin//SearchAdmin.String" xml:space="preserve">
+    <value>Indexador de contenido</value>
+  </data>
+  <data name="//Admin//SearchEngineSiteMap.String" xml:space="preserve">
+    <value>Mapa SEO del sitio</value>
+  </data>
+  <data name="//Admin//SecurityRoles.String" xml:space="preserve">
+    <value>Roles de seguridad</value>
+  </data>
+  <data name="//Admin//SharePointConnector.String" xml:space="preserve">
+    <value>Conector SharePoint </value>
+  </data>
+  <data name="//Admin//SiteLog.String" xml:space="preserve">
+    <value>Registro del sitio</value>
+  </data>
+  <data name="//Admin//SiteRedirectionManagement.String" xml:space="preserve">
+    <value>Redirecciones</value>
+  </data>
+  <data name="//Admin//SiteSettings.String" xml:space="preserve">
+    <value>Configuración del sitio</value>
+  </data>
+  <data name="//Admin//SiteWizard.String" xml:space="preserve">
+    <value>Asistente</value>
+  </data>
+  <data name="//Admin//Solutions.String" xml:space="preserve">
+    <value>Explorador de soluciones</value>
+  </data>
+  <data name="//Admin//Tabs.String" xml:space="preserve">
+    <value>Gestión de páginas</value>
+  </data>
+  <data name="//Admin//Taxonomy.String" xml:space="preserve">
+    <value>Taxonomía</value>
+  </data>
+  <data name="//Admin//UserAccounts.String" xml:space="preserve">
+    <value>Cuentas de usuarios</value>
+  </data>
+  <data name="//Admin//UserSwitcher.String" xml:space="preserve">
+    <value>Cambio de usuario</value>
+  </data>
+  <data name="//Admin//Vendors.String" xml:space="preserve">
+    <value>Anunciantes</value>
+  </data>
+  <data name="//ContactUs.String" xml:space="preserve">
+    <value>Contacto</value>
+  </data>
+  <data name="//GettingStarted.String" xml:space="preserve">
+    <value>Primeros pasos</value>
+  </data>
+  <data name="//Home.String" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="//Host.String" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="//Host//ConfigurationManager.String" xml:space="preserve">
+    <value>Archivos de configuración</value>
+  </data>
+  <data name="//Host//Dashboard.String" xml:space="preserve">
+    <value>Tablón de mandos</value>
+  </data>
+  <data name="//Host//DeviceDetectionManagement.String" xml:space="preserve">
+    <value>Detección de dispositivos</value>
+  </data>
+  <data name="//Host//Extensions.String" xml:space="preserve">
+    <value>Extensiones</value>
+  </data>
+  <data name="//Host//FileManagement.String" xml:space="preserve">
+    <value>Gestión de archivos</value>
+  </data>
+  <data name="//Host//HostSettings.String" xml:space="preserve">
+    <value>Configuración del sistema</value>
+  </data>
+  <data name="//Host//HTMLEditorManager.String" xml:space="preserve">
+    <value>Configuración del editor HTML</value>
+  </data>
+  <data name="//Host//Languages.String" xml:space="preserve">
+    <value>Idiomas</value>
+  </data>
+  <data name="//Host//Lists.String" xml:space="preserve">
+    <value>Listas</value>
+  </data>
+  <data name="//Host//ModuleDefinitions.String" xml:space="preserve">
+    <value>Definiciones de módulo</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures.String" xml:space="preserve">
+    <value>Funciones de la versión Profesional</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//ActivateYourLicense.String" xml:space="preserve">
+    <value>Active su licencia</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//AdvancedURLManagement.String" xml:space="preserve">
+    <value>Gestión URL avanzado</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//ApplicationIntegrity.String" xml:space="preserve">
+    <value>Integridad de la aplicación</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//HealthMonitoring.String" xml:space="preserve">
+    <value>Monitorización de estado</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//KnowledgeBase.String" xml:space="preserve">
+    <value>Repositorio de conocimiento</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//LicenseManagement.String" xml:space="preserve">
+    <value>Gestión de licencias</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//ManageWebServers.String" xml:space="preserve">
+    <value>Administrador de servidores web </value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//MySupportTickets.String" xml:space="preserve">
+    <value>Tickets de soporte</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//SearchCrawlerAdmin.String" xml:space="preserve">
+    <value>Administración de indexación</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//SecurityCenter.String" xml:space="preserve">
+    <value>Centro de seguridad</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//SharePointConnector.String" xml:space="preserve">
+    <value>Conector SharePoint</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//SiteGroups.String" xml:space="preserve">
+    <value>Grupos de sitios</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//SoftwareandDocumentation.String" xml:space="preserve">
+    <value>Software y documentación</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//SpecialOffers.String" xml:space="preserve">
+    <value>Ofertas especiales</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//TechnicalSupport.String" xml:space="preserve">
+    <value>Soporte técnico</value>
+  </data>
+  <data name="//Host//ProfessionalFeatures//UserSwitcher.String" xml:space="preserve">
+    <value>Cambio de usuario</value>
+  </data>
+  <data name="//Host//Schedule.String" xml:space="preserve">
+    <value>Programador</value>
+  </data>
+  <data name="//Host//SearchAdmin.String" xml:space="preserve">
+    <value>Configuración de indexación</value>
+  </data>
+  <data name="//Host//SiteManagement.String" xml:space="preserve">
+    <value>Gestión de sitios</value>
+  </data>
+  <data name="//Host//SQL.String" xml:space="preserve">
+    <value>SQL </value>
+  </data>
+  <data name="//Host//SuperuserAccounts.String" xml:space="preserve">
+    <value>Cuentas de superusuario</value>
+  </data>
+  <data name="//Host//Vendors.String" xml:space="preserve">
+    <value>Anunciantes</value>
+  </data>
+  <data name="//Host//WhatsNew.String" xml:space="preserve">
+    <value>Novedades</value>
+  </data>
+  <data name="//Modules.Text" xml:space="preserve">
+    <value>Módulos</value>
+  </data>
+  <data name="//NewsPromotions.String" xml:space="preserve">
+    <value>Noticias y promociones</value>
+  </data>
+  <data name="//OurProducts.String" xml:space="preserve">
+    <value>Nuestros productos</value>
+  </data>
+  <data name="//Pages.Text" xml:space="preserve">
+    <value>Página</value>
+  </data>
+  <data name="//SearchResults.String" xml:space="preserve">
+    <value>Resultados de búsquedas</value>
+  </data>
+  <data name="//Tools.Text" xml:space="preserve">
+    <value>Herramientas</value>
+  </data>
+  <data name="//UserProfile.String" xml:space="preserve">
+    <value>Perfil de usuario</value>
+  </data>
+  <data name="404.Error" xml:space="preserve">
+    <value>&lt;p style="height: 100%; width: 90%;"&gt;
+&lt;span style="color: red;"&gt;&lt;strong&gt;El dominio {0} no existe en la base de datos&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;
+&lt;br /&gt;
+DotNetNuke soporta m&amp;uacute;ltiples portales en una misma instalaci&amp;oacute;n/base de datos. Esto se consigue traduciendo la URL del client a un ID de portal v&amp;aacute;lido de la tabla Portals de la base de datos. Los pasos siguientes describen el proceso:
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;/p&gt;
+&lt;ol style="text-align: left; list-style-type: decimal; list-style-position: outside;"&gt;
+    &lt;li&gt;&lt;strong&gt;Proceso en el servidor web&lt;/strong&gt;&lt;br /&gt;
+    &lt;ul style="list-style-type: disc;"&gt;
+        &lt;li&gt;Cuando el servidor recibe una petici&amp;oacute;n de un cliente la compara la extensi&amp;oacute;n del nombre de archivo solicitado con las extensiones de aplicaci&amp;oacute;n mapeadas en IIS.&lt;/li&gt;
+        &lt;li&gt;En base a las coincidencias encontradas, la petici&amp;oacute;n se envia al ejecutable definido (aspnet_asapi.dll en el caso de peticiones de ASP.NET).&lt;/li&gt;
+        &lt;li&gt;El proceso aspnet_isapi.dll gestiona la petici&amp;oacute;n medieante un conjunto de eventos ordenados que empiezan con Application_BeginRequest.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;br /&gt;
+    &lt;br /&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;HttpModule.URLRewrite OnBeginRequest (UrlRewriteModule.vb)&lt;/strong&gt;&lt;br /&gt;
+    &lt;ul style="list-style-type: disc;"&gt;
+        &lt;li&gt;La petici&amp;oacute;n se analiza en base al car&amp;aacute;cter "/"&lt;/li&gt;
+        &lt;li&gt;Se construye el dominio con los elementos analizados.
+        &lt;br /&gt;
+        &lt;br /&gt;
+        Por ejemplo:
+        &lt;br /&gt;
+        &lt;br /&gt;
+        URL: http://www.domain.com/default.aspx = Nombre de dominio: www.domain.com&lt;br /&gt;
+        URL: http://209.75.24.131/default.aspx = Nombre de dominio: 209.75.24.131&lt;br /&gt;
+        URL: http://localhost/DotNetNuke/default.aspx = Nombre de dominio: localhost/DotNetNuke&lt;br /&gt;
+        URL: http://www.domain.com/virtualdirectory/default.aspx = Nombre de dominio: www.domain.com/virtualdirectory&lt;br /&gt;
+        URL: http://www.domain.com/directory/default.aspx = Nombre de dominio: www.domain.com/directory&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Con el nombre de dominio la aplicaci&amp;oacute;n consulta la tabla PortalAlias en la base de datos para encontrar una coincidencia.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul style="list-style-type: disc;"&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+Ejemplo:&lt;/p&gt;
+&lt;p&gt;URL: http://localhost/DotNetNuke/default.aspx&lt;br /&gt;
+URL: http://MACHINENAME/DotNetNuke/default.aspx&lt;br /&gt;
+URL: http://209.32.134.65/DotNetNuke/default.aspx&lt;br /&gt;
+PortalAlias: localhost/DotNetNuke,MACHINENAME/DotNetNuke,209.32.134.65/DotNetNuke &lt;br /&gt;
+&lt;br /&gt;
+Nota: Si est&amp;aacute; instalando la aplicaci&amp;oacute;n en un servidor remoto debe modificar el valor del campo PortalAlias para que sea el registro predeterminado en la tabla Portals de acuerdo con las normas establecidas antes.&lt;/p&gt;</value>
+  </data>
+  <data name="500.Error" xml:space="preserve">
+    <value>{0} </value>
+  </data>
+  <data name="ActivatingLicense.Text" xml:space="preserve">
+    <value>Activando licencia</value>
+  </data>
+  <data name="AddFollowerRequestBody.Text" xml:space="preserve">
+    <value>{0} te está siguiendo</value>
+  </data>
+  <data name="AddFollowerRequestSubject.Text" xml:space="preserve">
+    <value>{0} te está siguiendo</value>
+  </data>
+  <data name="AddFriendRequestBody.Text" xml:space="preserve">
+    <value>{0} quiere ser tu amigo</value>
+  </data>
+  <data name="AddFriendRequestSubject.Text" xml:space="preserve">
+    <value>{0} quiere ser tu amigo</value>
+  </data>
+  <data name="ApplicationUpgrades.Text" xml:space="preserve">
+    <value>Actualizaciones de la aplicación</value>
+  </data>
+  <data name="AspNetHostingPermission.Text" xml:space="preserve">
+    <value>Esta extensión necesita el permiso "Full Trust"</value>
+  </data>
+  <data name="Authentication.String" xml:space="preserve">
+    <value>Autenticación</value>
+  </data>
+  <data name="BannerType.Banner.String" xml:space="preserve">
+    <value>Banner </value>
+  </data>
+  <data name="BannerType.Block.String" xml:space="preserve">
+    <value>Bloque</value>
+  </data>
+  <data name="BannerType.Button.String" xml:space="preserve">
+    <value>Botón</value>
+  </data>
+  <data name="BannerType.MicroButton.String" xml:space="preserve">
+    <value>Microbotón</value>
+  </data>
+  <data name="BannerType.Script.String" xml:space="preserve">
+    <value>Script </value>
+  </data>
+  <data name="BannerType.Skyscraper.String" xml:space="preserve">
+    <value>Rascacielos</value>
+  </data>
+  <data name="BannerType.Text.String" xml:space="preserve">
+    <value>Texto</value>
+  </data>
+  <data name="Browse Folder.Permission" xml:space="preserve">
+    <value>Examinar archivos en carpeta</value>
+  </data>
+  <data name="Can Deploy.Permission" xml:space="preserve">
+    <value>Desplegar módulo</value>
+  </data>
+  <data name="ClearCache.Action" xml:space="preserve">
+    <value>Limpiar caché</value>
+  </data>
+  <data name="CustomUrlPathCleaned.Error" xml:space="preserve">
+    <value>La URL de la página contenía caracteres inválidos que se han eliminado. Pulse el botón Actualizar de nuevo para aceptar los cambios realizados.&lt;br/&gt;Atención. Puede ver la lista de caracteres inválidos en la siguiente lista: &lt;&gt;\?:&amp;=+|%# </value>
+  </data>
+  <data name="DeleteModule.Action" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="DeLocalize.Action" xml:space="preserve">
+    <value>Deshacer traducción</value>
+  </data>
+  <data name="DraggingHintText.Text" xml:space="preserve">
+    <value>Mueva el puntero a una zona para soltar</value>
+  </data>
+  <data name="DragModuleHint.Text" xml:space="preserve">
+    <value>Arrastre este módulo a una nueva zona</value>
+  </data>
+  <data name="DropModuleHint.Text" xml:space="preserve">
+    <value>Suelte el botón del ratón para soltar el módulo aquí.</value>
+  </data>
+  <data name="DropModuleTarget.Text" xml:space="preserve">
+    <value>Soltar el módulo aquí</value>
+  </data>
+  <data name="Edit Tab.Permission" xml:space="preserve">
+    <value>Editar página</value>
+  </data>
+  <data name="Edit.Permission" xml:space="preserve">
+    <value>Editar módulo</value>
+  </data>
+  <data name="EMAIL_AFFILIATE_NOTIFICATION_BODY.Text" xml:space="preserve">
+    <value>Apreciado [Custom:0],
+
+Su cuenta del programa de afiliados en [Portal:PortalName] ha sido creada.
+
+Para comenzar a recibir ingresos, use la siguiente URL para enlazar con nuestro sitio:
+
+[Custom:1]
+
+Gracias,
+[Portal:PortalName]</value>
+  </data>
+  <data name="EMAIL_AFFILIATE_NOTIFICATION_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] - Notificación de afiliación</value>
+  </data>
+  <data name="EMAIL_BANNER_NOTIFICATION_BODY.Text" xml:space="preserve">
+    <value>Banner: [Custom:0]
+Descripción: [Custom:1]
+Imagen: [Custom:2]
+CPM/Coste: [Custom:3]
+Impresiones: [Custom:4]
+Fecha inicio: [Custom:5]
+Fecha fin: [Custom:6]
+Vistas: [Custom:7]
+Pulsaciones: [Custom:8]</value>
+  </data>
+  <data name="EMAIL_BANNER_NOTIFICATION_SUBJECT.Text" xml:space="preserve">
+    <value>[Custom:0] </value>
+  </data>
+  <data name="EMAIL_BODY_FORMAT.Text" xml:space="preserve">
+    <value>Mensaje: {0}
+    
+{1}
+
+Por favor, no responda a este mensaje.</value>
+  </data>
+  <data name="EMAIL_BulkMailConf_Html_Body.Text" xml:space="preserve">
+    <value>&lt;h1&gt;Informe de envío masivo&lt;/h1&gt;
+           Operación iniciada: [Custom:0]&lt;br/&gt;
+           Destinatarios: [Custom:1]&lt;br/&gt;
+           Mensajes: [Custom:2]&lt;br/&gt;
+           Operación completada: [Custom:3]&lt;br/&gt;
+           [Custom:4|Número de errores:{0}&lt;br/&gt;]
+           &lt;br/&gt;
+           Estado: &lt;br/&gt;
+           &lt;pre&gt;[Custom:5]&lt;/pre&gt;
+           [Custom:6|&lt;hr/&gt;&lt;strong&gt;Destinatarios:&lt;/strong&gt;&lt;br/&gt;{0}]
+    </value>
+  </data>
+  <data name="EMAIL_BulkMailConf_Subject.Text" xml:space="preserve">
+    <value>Informe de envío masivo para '{0}'.</value>
+  </data>
+  <data name="EMAIL_BulkMailConf_Text_Body.Text" xml:space="preserve">
+    <value>Operación iniciada: [Custom:0]
+Destinatarios:      [Custom:1]
+Mensajes:        [Custom:2]
+Operación completada:  [Custom:3]
+
+[Custom:4|Número de errores:     {0}
+]Estado:
+[Custom:5]
+--------------------------------
+[Custom:6|Destinatarios:
+===========
+{0}]
+    </value>
+  </data>
+  <data name="EMAIL_BulkMailStart_Body.Text" xml:space="preserve">
+    <value>El usuario {1} ha realizado un envio masivo de '{0}' a {2} destinatarios. Revise el informe de envío para posibles errores y el buzón del emisora para correos devueltos.</value>
+  </data>
+  <data name="EMAIL_BulkMailStart_Subject.Text" xml:space="preserve">
+    <value>Correo masivo '{0}' enviado</value>
+  </data>
+  <data name="EMAIL_PASSWORD_REMINDER_BODY.Text" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+&lt;head&gt;
+&lt;meta name="viewport" content="width=device-width" /&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;title&gt;Contraseña&lt;/title&gt;
+
+
+&lt;style type="text/css"&gt;
+img {
+max-width: 100%;
+}
+body {
+-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6;
+}
+body {
+background-color: #f6f6f6;
+}
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h2 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h3 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h4 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h1 {
+    font-size: 22px !important;
+  }
+  h2 {
+    font-size: 18px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .container {
+    width: 100% !important;
+  }
+  .content {
+    padding: 10px !important;
+  }
+  .content-wrap {
+    padding: 10px !important;
+  }
+  .invoice {
+    width: 100% !important;
+  }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6; background: #fff; margin: 0; padding: 0;"&gt;
+
+&lt;table class="body-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background: #f6f6f6; margin: 0; padding: 0;"&gt;
+	&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+		&lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+		&lt;td class="container" width="600" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto; padding: 0;" valign="top"&gt;
+			&lt;div class="content" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;"&gt;
+				&lt;table class="main" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; background: #fff; margin: 0; padding: 0; border: 1px solid #e9e9e9;"&gt;
+					&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="alert alert-warning" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #333; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; border-bottom: 4px solid #e9e9e9; background: #ffffff; margin: 0; padding: 20px;" align="center" valign="top"&gt;
+							&lt;a href="http://www.nexso.org"&gt;&lt;img src="http://www.nexso.org/Portals/0/Images/logo.png" alt="Welcome to NEXSO!" width="150" height="38" style="display: block;" /&gt;&lt;/a&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="content-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px;" valign="top"&gt;
+							&lt;table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; margin: 0; padding: 0;"&gt;Estimado, [User:DisplayName],&lt;/strong&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;								
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Usuario: &lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;[Membership:UserName]&lt;/strong&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Por favor sigue el siguiente enlace para restablecer tu contraseña.
+									&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;a href="http://[Portal:URL]/default.aspx?ctl=PasswordReset&amp;amp;resetToken=[Membership:PasswordResetToken]" class="btn-primary" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background: #80b63f; margin: 0; padding: 0; border-color: #80b63f; border-style: solid; border-width: 10px 20px;"&gt;Restablecer tu contraseña&lt;/a&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Si no solicitaste el cambio de contraseña, por favor no tomes en cuenta este mensaje.
+									&lt;/td&gt;
+								&lt;/tr&gt;
+							&lt;/table&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;div class="footer" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; clear: both; color: #999; margin: 0; padding: 20px;"&gt;
+					&lt;table width="100%" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+							&lt;td class="aligncenter content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px;" align="center" valign="top"&gt;Inter-American Development Bank&lt;br/&gt; Multilateral Investment Fund&lt;br/&gt; 1300 New York Ave NW, Washington, DC 205577, USA&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/table&gt;
+				&lt;/div&gt;&lt;/div&gt;
+		&lt;/td&gt;EMAIL_USER_REGISTRAT
+		&lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="EMAIL_PASSWORD_REMINDER_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] Recordatorio de contraseña</value>
+  </data>
+  <data name="EMAIL_PASSWORD_UPDATED_BODY.Text" xml:space="preserve">
+    <value>Apreciado [User:DisplayName],
+
+Su contraseña en  [Portal:PortalName] se ha cambiado.
+
+Puede ponerse en contacto con el administrador en el email [Portal:Email]
+
+Atentamente,
+[Portal:PortalName]</value>
+  </data>
+  <data name="EMAIL_PASSWORD_UPDATED_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] Contraseña actualizada</value>
+  </data>
+  <data name="EMAIL_PORTAL_SIGNUP_BODY.Text" xml:space="preserve">
+    <value>Apreciado [User:DisplayName],
+
+Su web se ha creado correctamente. Lea detenidamente la siguiente información y asegúrese de conservar a buen recaudo este mensaje para futuras consultas.
+
+Dirección de la web: [Portal:URL]
+Usuario: [Membership:UserName]
+Código de verificación: [User:VerificationCode]
+
+Atentamente,
+[Host:HostTitle]
+	</value>
+  </data>
+  <data name="EMAIL_PORTAL_SIGNUP_SUBJECT.Text" xml:space="preserve">
+    <value>[Host:HostTitle] - Creación de portal</value>
+  </data>
+  <data name="EMAIL_PROFILE_UPDATED_BODY.Text" xml:space="preserve">
+    <value>Apreciado [User:DisplayName],
+
+Su perfil en [Portal:PortalName] ha sido actualizado correctamente.
+
+Atentamente,
+[Portal:PortalName]</value>
+  </data>
+  <data name="EMAIL_PROFILE_UPDATED_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] - Notificación de actualización de perfil</value>
+  </data>
+  <data name="EMAIL_ROLE_ASSIGNMENT_BODY.Text" xml:space="preserve">
+    <value>Apreciado [User:DisplayName],
+
+Su cuenta de usuario en [Portal:PortalName] ha sido actualizada para incluir el acceso al siguiente rol de seguridad:
+
+Rol: [Custom:0]
+Descripción: [Custom:1]
+Fecha efectiva: [Custom:2]
+Fecha de caducidad: [Custom:3]
+
+Atentamente,
+[Portal:PortalName]
+</value>
+  </data>
+  <data name="EMAIL_ROLE_ASSIGNMENT_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName]  - Actualización de cuenta de usuario</value>
+  </data>
+  <data name="EMAIL_ROLE_UNASSIGNMENT_BODY.Text" xml:space="preserve">
+    <value>Apreciado [User:DisplayName],
+
+Su cuenta de usuario en [Portal:PortalName] ha sido actualizada para restringir el acceso al siguiente rol de seguridad:
+
+Rol: [Custom:0]
+Descripción: [Custom:1]
+
+Atentamente,
+[Portal:PortalName]
+</value>
+  </data>
+  <data name="EMAIL_ROLE_UNASSIGNMENT_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] - Actualización de cuenta de usuario</value>
+  </data>
+  <data name="EMAIL_ROLE_UPDATE_BODY.Text" xml:space="preserve">
+    <value>Apreciado [User:DisplayName],
+
+Su cuenta de usuario en [Portal:PortalName] ha sido actualizada para modificar el acceso al siguiente rol de seguridad:
+
+Rol: [Custom:0]
+Descripción: [Custom:1]
+Fecha efectiva: [Custom:2]
+Fecha de caducidad: [Custom:3]
+
+Atentamente,
+[Portal:PortalName]
+</value>
+  </data>
+  <data name="EMAIL_ROLE_UPDATE_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] - Actualización de cuenta de usuario</value>
+  </data>
+  <data name="EMAIL_SMTP_TEST_SUBJECT.Text" xml:space="preserve">
+    <value>[Host:HostTitle] Prueba de configuración SMTP</value>
+  </data>
+  <data name="EMAIL_SOCIAL_FOLLOWREQUESTACTIONS.Text" xml:space="preserve">
+    <value>&lt;p&gt;&lt;a href="{0}"&gt;Seguir&lt;/a&gt; | &lt;a href="{1}"&gt;Ver perfil&lt;/a&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="EMAIL_SOCIAL_FRIENDREQUESTACTIONS.Text" xml:space="preserve">
+    <value>&lt;p&gt;&lt;a href="{0}"&gt;Acceptar&lt;/a&gt; | &lt;a href="{1}"&gt;Ver perfil&lt;/a&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="EMAIL_SUBJECT_FORMAT.Text" xml:space="preserve">
+    <value>Nuevo mensaje de {0}</value>
+  </data>
+  <data name="EMAIL_USER_LOCKOUT_BODY.Text" xml:space="preserve">
+    <value>Se ha intentado acceder a una cuenta de usuario bloqueada (Usuario: [Custom:0] ) el [Date:Current]. 
+
+Atentamente,
+[Portal:PortalName]
+</value>
+  </data>
+  <data name="EMAIL_USER_LOCKOUT_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] - Alerta. Cuenta de usuario bloqueada</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_ADMINISTRATOR_BODY.Text" xml:space="preserve">
+    <value>Fecha: [Date:Current]
+Nombre: [User:DisplayName]
+Email: [User:Email]
+</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_ADMINISTRATOR_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] - Nuevo registro de usuario</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_PRIVATE_BODY.Text" xml:space="preserve">
+    <value>Apreciado [User:DisplayName],
+
+Gracias por registrarse en [Portal:PortalName]. Lea detenidamente la siguiente información y asegúrese de conservar a buen recaudo este mensaje para futuras consultas.
+
+Dirección de la web: [Portal:URL]
+Usuario: [User:UserName]
+
+Los detalles de su cuenta serán revisadados por el Administrador del portal y recibirá una notificación cuando se active su cuenta.
+
+Atentamente,
+[Portal:PortalName]
+</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_PRIVATE_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] - Nuevo registro de usuario</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_PUBLIC_BODY.Text" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+&lt;head&gt;
+&lt;meta name="viewport" content="width=device-width" /&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;title&gt;¡Bienvenido (a) NEXSO! &lt;/title&gt;
+
+
+&lt;style type="text/css"&gt;
+img {
+max-width: 100%;
+}
+body {
+-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6;
+}
+body {
+background-color: #f6f6f6;
+}
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h2 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h3 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h4 {
+    font-weight: 600 !important; margin: 20px 0 5px !important;
+  }
+  h1 {
+    font-size: 22px !important;
+  }
+  h2 {
+    font-size: 18px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+  }
+  .container {
+    width: 100% !important;
+  }
+  .content {
+    padding: 10px !important;
+  }
+  .content-wrap {
+    padding: 10px !important;
+  }
+  .invoice {
+    width: 100% !important;
+  }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6; background: #fff; margin: 0; padding: 0;"&gt;
+
+&lt;table class="body-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background: #f6f6f6; margin: 0; padding: 0;"&gt;
+	&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+		&lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+		&lt;td class="container" width="600" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; display: block !important; max-width: 600px !important; clear: both !important; margin: 0 auto; padding: 0;" valign="top"&gt;
+			&lt;div class="content" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; max-width: 600px; display: block; margin: 0 auto; padding: 20px;"&gt;
+				&lt;table class="main" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; border-radius: 3px; background: #fff; margin: 0; padding: 0; border: 1px solid #e9e9e9;"&gt;
+					&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="alert alert-warning" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 16px; vertical-align: top; color: #333; font-weight: 500; text-align: center; border-radius: 3px 3px 0 0; border-bottom: 4px solid #e9e9e9; background: #ffffff; margin: 0; padding: 20px;" align="center" valign="top"&gt;
+							&lt;a href="http://www.nexso.org"&gt;&lt;img src="http://www.nexso.org/Portals/0/Images/logo.png" alt="Welcome to NEXSO!" width="150" height="38" style="display: block;" /&gt;&lt;/a&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="content-wrap" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 20px;" valign="top"&gt;
+							&lt;table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 20px; margin: 0; padding: 0;"&gt;[User:DisplayName] ¡Bienvenido (a) NEXSO! &lt;/strong&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;								
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Su usuario ha sido registrado en NEXSO.
+									&lt;/td&gt;
+								&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Usuario: &lt;strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;[Membership:UserName]
+&lt;/strong&gt;&lt;br/&gt;&lt;a href="http://www.nexso.org/en-us/My-Nexso" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #2993d4; text-decoration: underline; margin: 0; padding: 0;"&gt;Vista de perfil&lt;/a&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										&lt;a href="http://www.nexso.org/es-es/Promover" class="btn-primary" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background: #80b63f; margin: 0; padding: 0; border-color: #80b63f; border-style: solid; border-width: 10px 20px;"&gt;Promueve tu solución&lt;/a&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+									&lt;td class="content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"&gt;
+										Esperamos verte pronto en NEXSO.
+									&lt;/td&gt;
+								&lt;/tr&gt;
+							&lt;/table&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;td class="alert alert-warning" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; color: #fff; font-weight: 500; text-align: left; border-radius: 0 0 3px 3px; border-top: 1px solid #e9e9e9; background: #2993d4; margin: 0; padding: 20px;" align="left" valign="top"&gt;
+							&lt;a href="http://www.nexso.org/es-es/Login" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; color: #fff; text-decoration: underline; margin: 0; padding: 0;"&gt;Restablecer su contraseña&lt;/a&gt;.
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+				&lt;div class="footer" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; clear: both; color: #999; margin: 0; padding: 20px;"&gt;
+					&lt;table width="100%" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+						&lt;tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;"&gt;
+							&lt;td class="aligncenter content-block" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 12px; vertical-align: top; text-align: center; margin: 0; padding: 0 0 20px;" align="center" valign="top"&gt;Inter-American Development Bank&lt;br/&gt; Multilateral Investment Fund&lt;br/&gt; 1300 New York Ave NW, Washington, DC 20577, USA&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/table&gt;
+				&lt;/div&gt;&lt;/div&gt;
+		&lt;/td&gt;
+		&lt;td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0;" valign="top"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_PUBLIC_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] - Nuevo registro de usuario</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_VERIFIED_BODY.Text" xml:space="preserve">
+    <value>Estimado [Usuario: DisplayName],
+&lt;br/&gt;
+&lt;p style="color: 0cm 0cm 0.0001pt;"&gt; &lt;span&gt; Bienvenido a NEXSO! &lt;/span&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/ p&gt;
+&lt;p&gt; &lt;/ p&gt;
+&lt;p style="color: 0cm 0cm 0.0001pt;"&gt; &lt;span&gt; Por favor, lea atentamente la siguiente información para completar el registro, y asegúrese de guardar este mensaje para futuras consultas. &lt;/span&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/ p&gt;
+&lt;p&gt; Portal Web Site: [Portal: URL] &lt;/p&gt;
+&lt;p&gt; Nombre de usuario: [Usuario: Nombre de usuario] &lt;/p&gt;
+
+&lt;p&gt; &lt;/ p&gt;
+&lt;p&gt; &lt;span&gt; Equipo NEXSO  &lt;/span&gt; &lt;/p&gt;</value>
+  </data>
+  <data name="EMAIL_USER_REGISTRATION_VERIFIED_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] - Nuevo registro de usuario</value>
+  </data>
+  <data name="EMAIL_USER_UNREGISTER_BODY.Text" xml:space="preserve">
+    <value>Fecha: [Date:Current]
+Nombre: [Profile:FirstName]
+Apellidos: [Profile:LastName]
+Departamento: [Profile:Unit]
+Domicilio: [Profile:Street]
+Cuudad: [Profile:City]
+Provincia: [Profile:Region]
+País: [Profile:Country]
+Código postal: [Profile:PostalCode]
+Teléfono: [Profile:Telephone]
+Email: [User:Email]
+</value>
+  </data>
+  <data name="EMAIL_USER_UNREGISTER_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] - Cancelación de registro</value>
+  </data>
+  <data name="EMAIL_USER_UPDATED_OWN_PASSWORD_BODY.Text" xml:space="preserve">
+    <value>Apreciado [User:DisplayName],
+
+Su contraseña en [Portal:PortalName] se ha cambiado.
+
+Puede iniciar la sesión utilizando la siguiente información:
+
+Dirección de la web: [Portal:URL]
+Usuario:   [User:Username]
+
+Atentamente,
+[Portal:PortalName]</value>
+  </data>
+  <data name="EMAIL_USER_UPDATED_OWN_PASSWORD_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] Contraseña actualizada</value>
+  </data>
+  <data name="EMAIL_VENDOR_REGISTRATION_ADMINISTRATOR_BODY.Text" xml:space="preserve">
+    <value>Fecha: [Custom:0]
+Anunciante: [Custom:1]
+Nombre: [Custom:2]
+Apellidos: [Custom:3]
+Unidad: [Custom:4]
+Calle: [Custom:5]
+Ciudad: [Custom:6]
+Provincia: [Custom:7]
+País: [Custom:8]
+Código postal: [Custom:9]
+Teléfono: [Custom:10]
+Fax: [Custom:11]
+Móvil: [Custom:12]
+Email: [Custom:13]
+Web: [Custom:14]</value>
+  </data>
+  <data name="EMAIL_VENDOR_REGISTRATION_ADMINISTRATOR_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] - Registro de anunciante</value>
+  </data>
+  <data name="EMAIL_VENDOR_REGISTRATION_BODY.Text" xml:space="preserve">
+    <value>Apreciado [Custom:0] [Custom:1],
+ 
+[Custom:2] se ha registrado correctamente en [Portal:PortalName].
+ 
+Atentamente,
+[Portal:PortalName]</value>
+  </data>
+  <data name="EMAIL_VENDOR_REGISTRATION_SUBJECT.Text" xml:space="preserve">
+    <value>[Portal:PortalName] - Registro de anunciante</value>
+  </data>
+  <data name="EnglishName.Text" xml:space="preserve">
+    <value>Nombre inglés</value>
+  </data>
+  <data name="Error.Text" xml:space="preserve">
+    <value>Ha ocurrido un error.</value>
+  </data>
+  <data name="ExecutingScript.Text" xml:space="preserve">
+    <value>Ejecutando script</value>
+  </data>
+  <data name="ExportModule.Action" xml:space="preserve">
+    <value>Exportar contenido</value>
+  </data>
+  <data name="GeneralUpgrades.Text" xml:space="preserve">
+    <value>Realizando actualizaciones generales</value>
+  </data>
+  <data name="ImportModule.Action" xml:space="preserve">
+    <value>Importar contenido</value>
+  </data>
+  <data name="License.Text" xml:space="preserve">
+    <value>&lt;p&gt;DotNetNuke&amp;reg; - http://www.dotnetnuke.com&lt;br /&gt;
+Copyright (c) 2002-2014&lt;br/&gt;
+    by DotNetNuke Corporation&lt;/p&gt;
+    &lt;p&gt;Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation 
+the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and 
+    to permit persons to whom the Software is furnished to do so, subject to the following conditions:&lt;/p&gt;
+    &lt;p&gt;The above copyright notice and this permission notice shall be included in all copies or substantial portions 
+    of the Software.&lt;/p&gt;
+    &lt;p&gt;THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+    DEALINGS IN THE SOFTWARE.&lt;/p&gt;</value>
+  </data>
+  <data name="Localize.Action" xml:space="preserve">
+    <value>Traducir</value>
+  </data>
+  <data name="LogClicks.Text" xml:space="preserve">
+    <value>Registra el usuario, fecha y hora de cada clic</value>
+  </data>
+  <data name="LogEnd.Text" xml:space="preserve">
+    <value>Inicio </value>
+  </data>
+  <data name="LogStart.Text" xml:space="preserve">
+    <value>Final </value>
+  </data>
+  <data name="Manage.Text" xml:space="preserve">
+    <value>Administrar</value>
+  </data>
+  <data name="MESSAGE_PORTAL_PRIVACY.Text" xml:space="preserve">
+    <value>&lt;div align="left"&gt;
+        &lt;p&gt;[Portal:PortalName] is committed to protecting your privacy and developing technology
+        that gives you the most powerful and safe online experience. This Statement of Privacy
+        applies to the [Portal:PortalName] Web site and governs data collection and usage.
+        By using the [Portal:PortalName] website, you consent to the data practices described
+        in this statement.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;Collection of your Personal Information&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] collects personally identifiable information, such as your e-mail
+        address, name, home or work address or telephone number. [Portal:PortalName] also
+        collects anonymous demographic information, which is not unique to you, such as
+        your ZIP code, age, gender, preferences, interests and favorites.&lt;/p&gt;
+        &lt;p&gt;There is also information about your computer hardware and software that is automatically
+        collected by [Portal:PortalName]. This information can include: your IP address,
+        browser type, domain names, access times and referring Web site addresses. This
+        information is used by [Portal:PortalName] for the operation of the service, to
+        maintain quality of the service, and to provide general statistics regarding use
+        of the [Portal:PortalName] Web site.&lt;/p&gt;
+        &lt;p&gt;Please keep in mind that if you directly disclose personally identifiable information
+        or personally sensitive data through [Portal:PortalName] public message boards,
+        this information may be collected and used by others. Note: [Portal:PortalName]
+        does not read any of your private online communications.&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] encourages you to review the privacy statements of Web sites
+        you choose to link to from [Portal:PortalName] so that you can understand how those
+        Web sites collect, use and share your information. [Portal:PortalName] is not responsible
+        for the privacy statements or other content on Web sites outside of the [Portal:PortalName]
+        and [Portal:PortalName] family of Web sites.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;Use of your Personal Information&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] collects and uses your personal information to operate the [Portal:PortalName]
+        Web site and deliver the services you have requested. [Portal:PortalName] also uses
+        your personally identifiable information to inform you of other products or services
+        available from [Portal:PortalName] and its affiliates. [Portal:PortalName] may also
+        contact you via surveys to conduct research about your opinion of current services
+        or of potential new services that may be offered.&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] does not sell, rent or lease its customer lists to third parties.
+        [Portal:PortalName] may, from time to time, contact you on behalf of external business
+        partners about a particular offering that may be of interest to you. In those cases,
+        your unique personally identifiable information (e-mail, name, address, telephone
+        number) is not transferred to the third party. In addition, [Portal:PortalName]
+        may share data with trusted partners to help us perform statistical analysis, send
+        you email or postal mail, provide customer support, or arrange for deliveries. All
+        such third parties are prohibited from using your personal information except to
+        provide these services to [Portal:PortalName], and they are required to maintain
+        the confidentiality of your information.&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] does not use or disclose sensitive personal information, such
+        as race, religion, or political affiliations, without your explicit consent.&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] keeps track of the Web sites and pages our customers visit within
+        [Portal:PortalName], in order to determine what [Portal:PortalName] services are
+        the most popular. This data is used to deliver customized content and advertising
+        within [Portal:PortalName] to customers whose behavior indicates that they are interested
+        in a particular subject area.&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] Web sites will disclose your personal information, without notice,
+        only if required to do so by law or in the good faith belief that such action is
+        necessary to: (a) conform to the edicts of the law or comply with legal process
+        served on [Portal:PortalName] or the site; (b) protect and defend the rights or
+        property of [Portal:PortalName]; and, (c) act under exigent circumstances to protect
+        the personal safety of users of [Portal:PortalName], or the public.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;Use of Cookies&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;The [Portal:PortalName] Web site use "cookies" to help you personalize your online
+        experience. A cookie is a text file that is placed on your hard disk by a Web page
+        server. Cookies cannot be used to run programs or deliver viruses to your computer.
+        Cookies are uniquely assigned to you, and can only be read by a web server in the
+        domain that issued the cookie to you.&lt;/p&gt;
+        &lt;p&gt;One of the primary purposes of cookies is to provide a convenience feature to save
+        you time. The purpose of a cookie is to tell the Web server that you have returned
+        to a specific page. For example, if you personalize [Portal:PortalName] pages, or
+        register with [Portal:PortalName] site or services, a cookie helps [Portal:PortalName]
+        to recall your specific information on subsequent visits. This simplifies the process
+        of recording your personal information, such as billing addresses, shipping addresses,
+        and so on. When you return to the same [Portal:PortalName] Web site, the information
+        you previously provided can be retrieved, so you can easily use the [Portal:PortalName]
+        features that you customized.&lt;/p&gt;
+        &lt;p&gt;You have the ability to accept or decline cookies. Most Web browsers automatically
+        accept cookies, but you can usually modify your browser setting to decline cookies
+        if you prefer. If you choose to decline cookies, you may not be able to fully experience
+        the interactive features of the [Portal:PortalName] services or Web sites you visit.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;Security of your Personal Information&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] secures your personal information from unauthorized access,
+        use or disclosure. [Portal:PortalName] secures the personally identifiable information
+        you provide on computer servers in a controlled, secure environment, protected from
+        unauthorized access, use or disclosure. When personal information (such as a credit
+        card number) is transmitted to other Web sites, it is protected through the use
+        of encryption, such as the Secure Socket Layer (SSL) protocol.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;Changes to this Statement&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] will occasionally update this Statement of Privacy to reflect
+company and customer feedback. [Portal:PortalName] encourages you to periodically 
+        review this Statement to be informed of how [Portal:PortalName] is protecting your
+        information.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;Contact Information&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] welcomes your comments regarding this Statement of Privacy.
+        If you believe that [Portal:PortalName] has not adhered to this Statement, please
+        contact [Portal:PortalName] at &lt;a href="mailto:[Portal:Email]"&gt;[Portal:Email]&lt;/a&gt;.
+        We will use commercially reasonable efforts to promptly determine and remedy the
+        problem.&lt;/p&gt;
+    &lt;/div&gt;</value>
+  </data>
+  <data name="MESSAGE_PORTAL_TERMS.Text" xml:space="preserve">
+    <value>&lt;div align="left"&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;AGREEMENT BETWEEN USER AND [Portal:PortalName]&lt;/span&gt;&lt;p&gt;
+        &lt;p&gt;The [Portal:PortalName] Web Site is comprised of various Web pages operated by [Portal:PortalName].&lt;/p&gt;
+        &lt;p&gt;The [Portal:PortalName] Web Site is offered to you conditioned on your acceptance
+        without modification of the terms, conditions, and notices contained herein. Your
+        use of the [Portal:PortalName] Web Site constitutes your agreement to all such terms,
+        conditions, and notices.&lt;p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;MODIFICATION OF THESE TERMS OF USE&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] reserves the right to change the terms, conditions, and notices
+        under which the [Portal:PortalName] Web Site is offered, including but not limited
+        to the charges associated with the use of the [Portal:PortalName] Web Site.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;LINKS TO THIRD PARTY SITES&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;The [Portal:PortalName] Web Site may contain links to other Web Sites ("Linked Sites").
+        The Linked Sites are not under the control of [Portal:PortalName] and [Portal:PortalName]
+        is not responsible for the contents of any Linked Site, including without limitation
+        any link contained in a Linked Site, or any changes or updates to a Linked Site.
+        [Portal:PortalName] is not responsible for webcasting or any other form of transmission
+        received from any Linked Site. [Portal:PortalName] is providing these links to you
+        only as a convenience, and the inclusion of any link does not imply endorsement
+        by [Portal:PortalName] of the site or any association with its operators.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;NO UNLAWFUL OR PROHIBITED USE&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;As a condition of your use of the [Portal:PortalName] Web Site, you warrant to [Portal:PortalName]
+        that you will not use the [Portal:PortalName] Web Site for any purpose that is unlawful
+        or prohibited by these terms, conditions, and notices. You may not use the [Portal:PortalName]
+        Web Site in any manner which could damage, disable, overburden, or impair the [Portal:PortalName]
+        Web Site or interfere with any other party's use and enjoyment of the [Portal:PortalName]
+        Web Site. You may not obtain or attempt to obtain any materials or information through
+        any means not intentionally made available or provided for through the [Portal:PortalName]
+        Web Sites.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;USE OF COMMUNICATION SERVICES&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;The [Portal:PortalName] Web Site may contain bulletin board services, chat areas,
+        news groups, forums, communities, personal web pages, calendars, and/or other message
+        or communication facilities designed to enable you to communicate with the public
+        at large or with a group (collectively, "Communication Services"), you agree to
+        use the Communication Services only to post, send and receive messages and material
+        that are proper and related to the particular Communication Service. By way of example,
+        and not as a limitation, you agree that when using a Communication Service, you
+        will not:&lt;/p&gt;
+&lt;ul&gt;
+            &lt;li&gt;Defame, abuse, harass, stalk, threaten or otherwise violate the legal rights (such
+                as rights of privacy and publicity) of others.&lt;/li&gt;
+            &lt;li&gt;Publish, post, upload, distribute or disseminate any inappropriate, profane, defamatory,
+                infringing, obscene, indecent or unlawful topic, name, material or information.&lt;/li&gt;
+            &lt;li&gt;Upload files that contain software or other material protected by intellectual property
+                laws (or by rights of privacy of publicity) unless you own or control the rights
+                thereto or have received all necessary consents.&lt;/li&gt;
+            &lt;li&gt;Upload files that contain viruses, corrupted files, or any other similar software
+                or programs that may damage the operation of another's computer.&lt;/li&gt;
+            &lt;li&gt;Advertise or offer to sell or buy any goods or services for any business purpose,
+                unless such Communication Service specifically allows such messages.&lt;/li&gt;
+            &lt;li&gt;Conduct or forward surveys, contests, pyramid schemes or chain letters.&lt;/li&gt;
+            &lt;li&gt;Download any file posted by another user of a Communication Service that you know,
+                or reasonably should know, cannot be legally distributed in such manner.&lt;/li&gt;
+            &lt;li&gt;Falsify or delete any author attributions, legal or other proper notices or proprietary
+                designations or labels of the origin or source of software or other material contained
+                in a file that is uploaded.&lt;/li&gt;
+            &lt;li&gt;Restrict or inhibit any other user from using and enjoying the Communication Services.&lt;/li&gt;
+            &lt;li&gt;Violate any code of conduct or other guidelines which may be applicable for any particular Communication Service.&lt;/li&gt;
+            &lt;li&gt;Harvest or otherwise collect information about others, including e-mail addresses, without their consent.&lt;/li&gt;
+            &lt;li&gt;Violate any applicable laws or regulations.&lt;/li&gt;
+&lt;/ul&gt;
+        &lt;p&gt;[Portal:PortalName] has no obligation to monitor the Communication Services. However,
+        [Portal:PortalName] reserves the right to review materials posted to a Communication
+        Service and to remove any materials in its sole discretion. [Portal:PortalName]
+        reserves the right to terminate your access to any or all of the Communication Services
+        at any time without notice for any reason whatsoever.&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] reserves the right at all times to disclose any information
+        as necessary to satisfy any applicable law, regulation, legal process or governmental
+        request, or to edit, refuse to post or to remove any information or materials, in
+        whole or in part, in [Portal:PortalName]'s sole discretion.&lt;/p&gt;
+        &lt;p&gt;Always use caution when giving out any personally identifying information about
+        yourself or your children in any Communication Service. [Portal:PortalName] does
+        not control or endorse the content, messages or information found in any Communication
+        Service and, therefore, [Portal:PortalName] specifically disclaims any liability
+        with regard to the Communication Services and any actions resulting from your participation
+        in any Communication Service. Managers and hosts are not authorized [Portal:PortalName]
+        spokespersons, and their views do not necessarily reflect those of [Portal:PortalName].&lt;/p&gt;
+        &lt;p&gt;Materials uploaded to a Communication Service may be subject to posted limitations
+        on usage, reproduction and/or dissemination. You are responsible for adhering to
+        such limitations if you download the materials.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;MATERIALS PROVIDED TO [Portal:PortalName] OR POSTED AT ANY [Portal:PortalName]
+            WEB SITE&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] does not claim ownership of the materials you provide to [Portal:PortalName]
+        (including feedback and suggestions) or post, upload, input or submit to any [Portal:PortalName]
+        Web Site or its associated services (collectively "Submissions"). However, by posting,
+        uploading, inputting, providing or submitting your Submission you are granting [Portal:PortalName],
+        its affiliated companies and necessary sublicensees permission to use your Submission
+        in connection with the operation of their Internet businesses including, without
+        limitation, the rights to: copy, distribute, transmit, publicly display, publicly
+        perform, reproduce, edit, translate and reformat your Submission; and to publish
+        your name in connection with your Submission.&lt;/p&gt;
+        &lt;p&gt;No compensation will be paid with respect to the use of your Submission, as provided
+        herein. [Portal:PortalName] is under no obligation to post or use any Submission
+        you may provide and may remove any Submission at any time in [Portal:PortalName]'s
+        sole discretion.&lt;/p&gt;
+        &lt;p&gt;By posting, uploading, inputting, providing or submitting your Submission you warrant
+        and represent that you own or otherwise control all of the rights to your Submission
+        as described in this section including, without limitation, all the rights necessary
+        for you to provide, post, upload, input or submit the Submissions.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;LIABILITY DISCLAIMER&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;THE INFORMATION, SOFTWARE, PRODUCTS, AND SERVICES INCLUDED IN OR AVAILABLE THROUGH
+        THE [Portal:PortalName] WEB SITE MAY INCLUDE INACCURACIES OR TYPOGRAPHICAL ERRORS.
+        CHANGES ARE PERIODICALLY ADDED TO THE INFORMATION HEREIN. [Portal:PortalName] AND/OR
+        ITS SUPPLIERS MAY MAKE IMPROVEMENTS AND/OR CHANGES IN THE [Portal:PortalName] WEB
+        SITE AT ANY TIME. ADVICE RECEIVED VIA THE [Portal:PortalName] WEB SITE SHOULD NOT
+        BE RELIED UPON FOR PERSONAL, MEDICAL, LEGAL OR FINANCIAL DECISIONS AND YOU SHOULD
+        CONSULT AN APPROPRIATE PROFESSIONAL FOR SPECIFIC ADVICE TAILORED TO YOUR SITUATION.&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] AND/OR ITS SUPPLIERS MAKE NO REPRESENTATIONS ABOUT THE SUITABILITY,
+        RELIABILITY, AVAILABILITY, TIMELINESS, AND ACCURACY OF THE INFORMATION, SOFTWARE,
+        PRODUCTS, SERVICES AND RELATED GRAPHICS CONTAINED ON THE [Portal:PortalName] WEB
+        SITE FOR ANY PURPOSE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ALL SUCH
+        INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS ARE PROVIDED "AS
+        IS" WITHOUT WARRANTY OR CONDITION OF ANY KIND. [Portal:PortalName] AND/OR ITS SUPPLIERS
+        HEREBY DISCLAIM ALL WARRANTIES AND CONDITIONS WITH REGARD TO THIS INFORMATION, SOFTWARE,
+        PRODUCTS, SERVICES AND RELATED GRAPHICS, INCLUDING ALL IMPLIED WARRANTIES OR CONDITIONS
+        OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.&lt;/p&gt;
+        &lt;p&gt;TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL [Portal:PortalName]
+        AND/OR ITS SUPPLIERS BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL,
+        CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER INCLUDING, WITHOUT LIMITATION, DAMAGES
+        FOR LOSS OF USE, DATA OR PROFITS, ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE
+        USE OR PERFORMANCE OF THE [Portal:PortalName] WEB SITE, WITH THE DELAY OR INABILITY
+        TO USE THE [Portal:PortalName] WEB SITE OR RELATED SERVICES, THE PROVISION OF OR
+        FAILURE TO PROVIDE SERVICES, OR FOR ANY INFORMATION, SOFTWARE, PRODUCTS, SERVICES
+        AND RELATED GRAPHICS OBTAINED THROUGH THE [Portal:PortalName] WEB SITE, OR OTHERWISE
+        ARISING OUT OF THE USE OF THE [Portal:PortalName] WEB SITE, WHETHER BASED ON CONTRACT,
+        TORT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE, EVEN IF [Portal:PortalName] OR
+        ANY OF ITS SUPPLIERS HAS BEEN ADVISED OF THE POSSIBILITY OF DAMAGES. BECAUSE SOME
+        STATES/JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL
+        OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU. IF YOU ARE DISSATISFIED
+        WITH ANY PORTION OF THE [Portal:PortalName] WEB SITE, OR WITH ANY OF THESE TERMS
+        OF USE, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE USING THE [Portal:PortalName]
+        WEB SITE.&lt;/p&gt;
+        &lt;p&gt;SERVICE CONTACT : [Portal:Email]&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;TERMINATION/ACCESS RESTRICTION&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;[Portal:PortalName] reserves the right, in its sole discretion, to terminate your
+        access to the [Portal:PortalName] Web Site and the related services or any portion
+        thereof at any time, without notice. GENERAL To the maximum extent permitted by
+        law, this agreement is governed by the laws of the State of Washington, U.S.A. and
+        you hereby consent to the exclusive jurisdiction and venue of courts in San Mateo County,
+        California, U.S.A. in all disputes arising out of or relating to the use of the
+        [Portal:PortalName] Web Site. Use of the [Portal:PortalName] Web Site is unauthorized
+        in any jurisdiction that does not give effect to all provisions of these terms and
+        conditions, including without limitation this paragraph. You agree that no joint
+        venture, partnership, employment, or agency relationship exists between you and
+        [Portal:PortalName] as a result of this agreement or use of the [Portal:PortalName]
+        Web Site. [Portal:PortalName]'s performance of this agreement is subject to existing
+        laws and legal process, and nothing contained in this agreement is in derogation
+        of [Portal:PortalName]'s right to comply with governmental, court and law enforcement
+        requests or requirements relating to your use of the [Portal:PortalName] Web Site
+        or information provided to or gathered by [Portal:PortalName] with respect to such
+        use. If any part of this agreement is determined to be invalid or unenforceable
+        pursuant to applicable law including, but not limited to, the warranty disclaimers
+        and liability limitations set forth above, then the invalid or unenforceable provision
+        will be deemed superseded by a valid, enforceable provision that most closely matches
+        the intent of the original provision and the remainder of the agreement shall continue
+        in effect. Unless otherwise specified herein, this agreement constitutes the entire
+        agreement between the user and [Portal:PortalName] with respect to the [Portal:PortalName]
+        Web Site and it supersedes all prior or contemporaneous communications and proposals,
+        whether electronic, oral or written, between the user and [Portal:PortalName] with
+        respect to the [Portal:PortalName] Web Site. A printed version of this agreement
+        and of any notice given in electronic form shall be admissible in judicial or administrative
+        proceedings based upon or relating to this agreement to the same extent an d subject
+        to the same conditions as other business documents and records originally generated
+        and maintained in printed form. It is the express wish to the parties that this
+        agreement and all related documents be drawn up in English.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;COPYRIGHT AND TRADEMARK NOTICES:&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;All contents of the [Portal:PortalName] Web Site are: [Portal:FooterText] and/or
+        its suppliers. All rights reserved.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;TRADEMARKS&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;The names of actual companies and products mentioned herein may be the trademarks
+        of their respective owners.&lt;/p&gt;
+        &lt;p&gt;The example companies, organizations, products, people and events depicted herein
+        are fictitious. No association with any real company, organization, product, person,
+        or event is intended or should be inferred.&lt;/p&gt;
+        &lt;p&gt;Any rights not expressly granted herein are reserved.&lt;/p&gt;
+        &lt;p&gt;&lt;span class="SubHead"&gt;NOTICES AND PROCEDURE FOR MAKING CLAIMS OF COPYRIGHT INFRINGEMENT&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;Pursuant to Title 17, United States Code, Section 512(c)(2), notifications of claimed
+        copyright infringement under United States copyright law should be sent to Service
+        Provider's Designated Agent. ALL INQUIRIES NOT RELEVANT TO THE FOLLOWING PROCEDURE
+        WILL RECEIVE NO RESPONSE. See Notice and Procedure for Making Claims of Copyright
+        Infringement.&lt;/p&gt;
+    &lt;/div&gt;</value>
+  </data>
+  <data name="MESSAGE_RETRIEVEPASSWORD_INSTRUCTIONS.Text" xml:space="preserve">
+    <value>Para recuperar su contraseña, tendrá que proporcionar su nombre de usuario, y la respuesta a la Pregunta de contraseña.</value>
+  </data>
+  <data name="MESSAGE_USERNAME_CHANGED_INSTRUCTIONS.Text" xml:space="preserve">
+    <value>Por favor, verifique su cambio de email volviendo a introducir su contraseña.</value>
+  </data>
+  <data name="ModuleGenericActions.Action" xml:space="preserve">
+    <value>Administrador</value>
+  </data>
+  <data name="ModuleHelp.Action" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="ModulePermissions.Action" xml:space="preserve">
+    <value>Permisos</value>
+  </data>
+  <data name="ModuleSettings.Action" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="ModuleSpecificActions.Action" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="MoveBottom.Action" xml:space="preserve">
+    <value>Mover al final</value>
+  </data>
+  <data name="MoveDown.Action" xml:space="preserve">
+    <value>Mover abajo</value>
+  </data>
+  <data name="MovePane.Action" xml:space="preserve">
+    <value>Mover a</value>
+  </data>
+  <data name="MoveRoot.Action" xml:space="preserve">
+    <value>Mover</value>
+  </data>
+  <data name="MoveTop.Action" xml:space="preserve">
+    <value>Mover al inicio</value>
+  </data>
+  <data name="MoveToPane.Action" xml:space="preserve">
+    <value>Mover {0}</value>
+  </data>
+  <data name="MoveUp.Action" xml:space="preserve">
+    <value>Mover arriba</value>
+  </data>
+  <data name="NativeName.Text" xml:space="preserve">
+    <value>Nombre nativo</value>
+  </data>
+  <data name="NeutralCulture.Text" xml:space="preserve">
+    <value>Idioma neutro</value>
+  </data>
+  <data name="NoErrorsSending.Text" xml:space="preserve">
+    <value>No hubo errores durante el envío.</value>
+  </data>
+  <data name="NoLoginControl.Text" xml:space="preserve">
+    <value>Ha sido redireccionado a esta página de inicio por omisión porque la página de inicio para este sitio web no contiene un módulo DotNetNuke correcto de inicio de sesión, o los permisos no están correctamente configurados.</value>
+  </data>
+  <data name="OnlineHelp.Action" xml:space="preserve">
+    <value>Ayuda en línea</value>
+  </data>
+  <data name="PortalLinks.Text" xml:space="preserve">
+    <value>Enlaces del sitio</value>
+  </data>
+  <data name="PrintModule.Action" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="PurgeCacheUnsupported.Text" xml:space="preserve">
+    <value>Este proveedor de caché no requiere la función PurgeCache.</value>
+  </data>
+  <data name="ReflectionPermission.Text" xml:space="preserve">
+    <value>Esta extensión necesita el permiso "Reflection"</value>
+  </data>
+  <data name="Relationship_Added.Text" xml:space="preserve">
+    <value>Relación añadida {0}</value>
+  </data>
+  <data name="Relationship_Deleted.Text" xml:space="preserve">
+    <value>Relación eliminada {0} : ID {1}</value>
+  </data>
+  <data name="Relationship_Updated.Text" xml:space="preserve">
+    <value>Relación actualizada {0}</value>
+  </data>
+  <data name="RelationshipType_Added.Text" xml:space="preserve">
+    <value>Tipo de relación añadida {0}</value>
+  </data>
+  <data name="RelationshipType_Deleted.Text" xml:space="preserve">
+    <value>Tipo de relación eliminada {0} : ID {1}</value>
+  </data>
+  <data name="RelationshipType_Updated.Text" xml:space="preserve">
+    <value>Tipo de relación actualizada {0}</value>
+  </data>
+  <data name="Return.Text" xml:space="preserve">
+    <value>Volver al sitio</value>
+  </data>
+  <data name="SearchCrawler Admin.String" xml:space="preserve">
+    <value>Configuración de indexación</value>
+  </data>
+  <data name="SyndicateModule.Action" xml:space="preserve">
+    <value>Suscripción (RSS)</value>
+  </data>
+  <data name="TokenReplaceRestrictedProperty.Text" xml:space="preserve">
+    <value>Error de acceso [{0}:{1}], el acceso a {1} está restringido para la fuente de datos {0}.</value>
+  </data>
+  <data name="TokenReplaceUnknownObject.Text" xml:space="preserve">
+    <value>Error de acceso [{0}:{1}], {0} es un token desconocido de origen de objeto.</value>
+  </data>
+  <data name="TokenReplaceUnknownProperty.Text" xml:space="preserve">
+    <value>Error de acceso [{0}:{1}], {1} es desconocido para la fuente de datos {0}.</value>
+  </data>
+  <data name="TrackClicks.Text" xml:space="preserve">
+    <value>Rastrear el número de veces que se clica el enlace</value>
+  </data>
+  <data name="Translate.Action" xml:space="preserve">
+    <value>Marcar como traducidos</value>
+  </data>
+  <data name="UnhandledError.Text" xml:space="preserve">
+    <value>Se ha producido un error inesperado.</value>
+  </data>
+  <data name="UnTranslate.Action" xml:space="preserve">
+    <value>Marcar como no traducidos</value>
+  </data>
+  <data name="UrlPathNotUnique.Error" xml:space="preserve">
+    <value>La URL proporcionada no está disponible. Si desea aceptar la propuesta alternativa, pulse Guardar.</value>
+  </data>
+  <data name="UserRelationship_Added.Text" xml:space="preserve">
+    <value>Se ha añadido UserRelationship ID {0} para UserID {1} y RelatedUserID {2}</value>
+  </data>
+  <data name="UserRelationship_Deleted.Text" xml:space="preserve">
+    <value>Se ha eliminado UserRelationship ID {0} para UserID {1} y RelatedUserID {2}</value>
+  </data>
+  <data name="UserRelationship_Updated.Text" xml:space="preserve">
+    <value>Se ha actualizado UserRelationship ID {0} para UserID {1} y RelatedUserID {2}</value>
+  </data>
+  <data name="UserRelationshipPreference_Added.Text" xml:space="preserve">
+    <value>Se ha añadido UserRelationshipPreference ID {0} para User ID {1} y Relationship ID {2}</value>
+  </data>
+  <data name="UserRelationshipPreference_Deleted.Text" xml:space="preserve">
+    <value>Se ha eliminado UserRelationshipPreference ID {0} para User ID {1} y Relationship ID {2}</value>
+  </data>
+  <data name="UserRelationshipPreference_Updated.Text" xml:space="preserve">
+    <value>Se ha actualizado UserRelationshipPreference ID {0} para User ID {1} y Relationship ID {2}</value>
+  </data>
+  <data name="View Folder.Permission" xml:space="preserve">
+    <value>Abrir archivos en carpeta</value>
+  </data>
+  <data name="View Tab.Permission" xml:space="preserve">
+    <value>Ver página</value>
+  </data>
+  <data name="View.Permission" xml:space="preserve">
+    <value>Ver módulo</value>
+  </data>
+  <data name="ViewSource.Action" xml:space="preserve">
+    <value>Modificar módulo</value>
+  </data>
+  <data name="WebPermission.Text" xml:space="preserve">
+    <value>Esta extensión necesita el permiso "Web"</value>
+  </data>
+  <data name="Write to Folder.Permission" xml:space="preserve">
+    <value>Guardar en carpeta</value>
+  </data>
+</root>

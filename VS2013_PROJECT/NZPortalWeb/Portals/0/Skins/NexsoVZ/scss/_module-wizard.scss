@@ -1,0 +1,69 @@
+﻿/* ==========================================================================
+   Solution Wizard - wizard styles for Nexso 2
+   ========================================================================== */
+
+/* Word counter */
+
+.Counter {
+	@include grid-column(12);
+	.GlobalCounterContainer {
+	  background-color: #fafafa;
+	  border: 1px solid $light-touch;
+	  font-size: 1.5rem;
+	  margin: 2rem 0;
+	  padding-bottom: 2rem;
+	  padding-top: 2rem;
+	  text-align: center;
+	  .no {
+	  	font-weight: bold;
+	  }
+	}
+	@media #{$large-up} {
+		@include grid-column(2);
+	}
+}
+
+.solution-wizard .wizard-form {
+	.locations {
+		margin-top: 2rem;
+		.title {
+			@extend .title-s;
+		}
+		li {
+			@include clearfix();
+			display: block;
+			list-style: none;
+			margin: 0;
+			line-height: 1.5rem;
+			padding: 0.75rem 0 0.75rem 1.5rem;
+			position: relative;
+			&:before {
+				@extend .nexso-icon;
+				content: "\e610" !important;
+				position: absolute;
+				left: 0;
+			}
+		}
+	}
+	@media #{$large-up} {
+		@include grid-column(9,$offset:1);
+		p.introduction,
+		.field {
+			position: relative;
+			width: 66%
+		}
+		.support-text {
+			padding-left: 1rem;
+			position: absolute;
+			right: -50%;
+			top: 22px;
+			width: 50%;
+			span:before {
+				border: 10px solid transparent;
+		    border-right-color: $primary-color; 
+		    top: 10px;
+		    left: -4px;
+			}
+		}
+	}
+}

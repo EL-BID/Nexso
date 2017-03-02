@@ -1,0 +1,81 @@
+﻿#dvReport, #dvBtn {
+    max-width: 73.75rem;
+    margin: 0 auto;
+    z-index: 10;
+    position: relative;
+}
+
+.rgFilterRow input {
+    height: 25px !important;
+}
+
+.RadComboBox_Default .rcbReadOnly .rcbInput, .RadComboBox_Default .rcbEmptyMessage, .RadComboBox_Default .rcbFocused .rcbInput {
+    height: 20px !important;
+}
+
+
+section#formEdit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+    section#formEdit .forms .subform .inputGroup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 75%;
+        margin-top: 16px;
+    }
+
+    section#formEdit .forms {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 2em;
+        width: 80%;
+    }
+
+        section#formEdit .forms .subform {
+            flex: 1 0 33%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+            section#formEdit .forms .subform header {
+                font-size: 23px;
+                font-weight: bold;
+                margin: 15px 0;
+                width: 80%;
+            }
+
+            
+
+            section#formEdit .forms .subform .inputGroup span {
+                font-size: 18px;
+                margin-bottom: 7px;
+                height: 25px !important;
+            }
+
+                section#formEdit .forms .subform .inputGroup span input {
+                    height: 25px !important;
+                }
+
+    section#formEdit .confirm {
+        width: 72.5%;
+        margin: 20px;
+}
+
+.rfv span {
+    background-color: #F04124;
+    color: #fff !important;
+    display: block;
+    font-weight: bold;
+    padding: 0.25rem;
+    font-size: 14px;
+}

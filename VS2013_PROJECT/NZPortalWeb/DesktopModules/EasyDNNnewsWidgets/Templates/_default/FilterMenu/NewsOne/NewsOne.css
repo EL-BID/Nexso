@@ -1,0 +1,171 @@
+.edn_widget_filtermenu_box {
+  background: none repeat scroll 0 0 #f6f6f6;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px 4px 4px 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.25em;
+  margin-bottom: 10px;
+  padding: 1px;
+  vertical-align: baseline;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.edn_widget_filtermenu_box > h1.edn_module_title {
+  background: url("images/module_title_background.png") repeat-x scroll 0 0 #343434;
+  border-radius: 3px 3px 0 0;
+  margin: 0;
+  padding: 0;
+}
+.edn_widget_filtermenu_box > h1.edn_module_title span {
+  color: #f6f6f6;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.25em;
+  padding: 5px 8px 6px;
+}
+.edn_widget_filtermenu_box h2 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 1;
+  padding: 5px 8px;
+  background: url(images/module_title_background.png) repeat-x 0 0 #b1b1b1;
+  color: #4e4e4e;
+  text-shadow: 1px 1px 2px white;
+}
+.edn_widget_filtermenu_box > div select {
+  background: url(images/item_bg.png) repeat-x scroll 0 0 #f0f0f0;
+  border-color: white transparent #dedede;
+  border-image: none;
+  border-style: solid none;
+  border-width: 1px 0;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.1) inset;
+  color: #333333;
+  font-size: 13px;
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+}
+.edn_widget_filtermenu_box .edn_filter_menu {
+  padding: 0;
+  margin: 0;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li ul {
+  margin: 0;
+  padding: 0;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li ul li > div {
+  background-color: #d7d7d7;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div {
+  background: url(images/item_bg.png) repeat-x 0 0 #f0f0f0;
+  border-color: white transparent #dedede;
+  border-image: none;
+  border-left: 0 none;
+  border-right: 0 none;
+  border-style: solid none;
+  border-width: 1px 0;
+  overflow: hidden;
+  padding: 3px 4px 3px 100px;
+  position: relative;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div .expand_collapse {
+  background: url(images/expand_collapse.png) no-repeat 4px 4px;
+  height: 13px;
+  width: 21px;
+  margin: 2px 2px 0 4px;
+  cursor: pointer;
+  display: block;
+  float: right;
+  text-indent: -10000px;
+  margin: 4px 0 0;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div .expand_collapse:hover {
+  background-position: -13px 4px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div .expand_collapse.collapse {
+  background-position: 4px -8px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div .expand_collapse.collapse:hover {
+  background-position: -13px -8px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li > div label {
+  color: #333333;
+  font-size: 12px;
+  line-height: 15px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_0 > div {
+  padding-left: 10px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_1 > div {
+  padding-left: 20px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_2 > div {
+  padding-left: 30px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_3 > div {
+  padding-left: 40px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_4 > div {
+  padding-left: 50px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_5 > div {
+  padding-left: 60px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_6 > div {
+  padding-left: 70px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_7 > div {
+  padding-left: 80px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.level_8 > div {
+  padding-left: 90px;
+}
+.edn_widget_filtermenu_box .edn_filter_menu li.active > div label {
+  font-weight: bold;
+}
+.edn_widget_filtermenu_box .EDN_two-column {
+  float: left;
+  width: 49%;
+  clear: none;
+}
+.edn_widget_filtermenu_box .EDN_two-column.EDN_right {
+  float: right;
+}
+.edn_widget_filtermenu_box .EDN_button-wrapper {
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+  padding: 8px;
+}
+.edn_widget_filtermenu_box .EDN_button-wrapper .edn_filter_button {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  background: url(images/edn_filter_button.png) repeat-x 0 0 white;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  padding: 0 10px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: -1px, 0, 1px, 0, #c9c9c9;
+  color: #7e7e7e;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+}
+.edn_widget_filtermenu_box .EDN_button-wrapper .edn_filter_button:hover {
+  background-color: #e0e0e0;
+  color: #7e7e7e;
+}

@@ -1,0 +1,25 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsCategories]', N'{objectQualifier}EasyDNNNewsCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsCategories', N'PK_{objectQualifier}EasyDNNNewsCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsCategories_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsCategories_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsCategories_EasyDNNNewsCategoryList1', N'FK_{objectQualifier}EasyDNNNewsCategories_EasyDNNNewsCategoryList1', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsCategories' and column_name = 'CategoryName')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] DROP COLUMN CategoryName
+END

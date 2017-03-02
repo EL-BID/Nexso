@@ -1,0 +1,33 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGallery]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsGallery]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsGallery]', N'{objectQualifier}EasyDNNNewsGallery', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsGallery', N'PK_{objectQualifier}EasyDNNNewsGallery', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNRotatorAdvancedRSettings_EasyDNNRotatorModule', N'FK_{objectQualifier}EasyDNNRotatorAdvancedRSettings_EasyDNNRotatorModule', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNRotatorArticleLink_EasyDNNRotatorModule', N'FK_{objectQualifier}EasyDNNRotatorArticleLink_EasyDNNRotatorModule', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsGallery' and column_name = 'MainImageWidth')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsGallery] ADD MainImageWidth int NULL
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsGallery' and column_name = 'MainImageHeight')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsGallery] ADD MainImageHeight int NULL
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsGallery' and column_name = 'Template')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsGallery] ADD Template nvarchar(350) NULL
+END

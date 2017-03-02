@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddFileExtensionNotAllowed.Text">
+    <value xml:space="preserve">A extensão '{0}' não é permitida. O arquivo não foi adicionado.</value>
+  </data>
+  <data name="AddFileNoSpaceAvailable.Text">
+    <value xml:space="preserve">O portal não tem espaço disponível para armazenar o arquivo especificado. O arquivo não foi adicionado.</value>
+  </data>
+  <data name="AddFilePermissionsNotMet.Text">
+    <value xml:space="preserve">As permissões não foram atendidas. O arquivo não foi adicionado.</value>
+  </data>
+  <data name="AddFileUnderlyingSystemError.Text">
+    <value xml:space="preserve">O sistema disparou uma excessão. O arquivo não foi adicionado.</value>
+  </data>
+  <data name="AddFolderAlreadyExists.Text">
+    <value xml:space="preserve">A pasta informada já existe. A pasta não foi adicionada.</value>
+  </data>
+  <data name="AddFolderParentCannotBeFound.Text">
+    <value xml:space="preserve">A pasta pai não pôde ser achada.</value>
+  </data>
+  <data name="AddFolderUnderlyingSystemError.Text">
+    <value xml:space="preserve">O sistema disparou uma excessão. A pasta não foi adicionada.</value>
+  </data>
+  <data name="ArgumentCannotBeNullOrEmpty.Text">
+    <value xml:space="preserve">O argumento '{0}' não pode ser nulo ou vazio.</value>
+  </data>
+  <data name="CopyFileNoSpaceAvailable.Text">
+    <value xml:space="preserve">O portal não tem espaço disponível para armazenar o arquivo especificado. O arquivo não foi copiado.</value>
+  </data>
+  <data name="CopyFilePermissionsNotMet.Text">
+    <value xml:space="preserve">As permissões não combinam. O arquivo não foi copiado.</value>
+  </data>
+  <data name="CopyFileUnderlyingSystemError.Text">
+    <value xml:space="preserve">O sistema disparou uma excessão. O arquivo não foi copiado.</value>
+  </data>
+  <data name="DeleteFileUnderlyingSystemError.Text">
+    <value xml:space="preserve">O sistema disparou uma excessão. O arquivo não foi excluído.</value>
+  </data>
+  <data name="DeleteFolderUnderlyingSystemError.Text">
+    <value xml:space="preserve">O sistema disparou uma excessão. A pasta não foi excluída.</value>
+  </data>
+  <data name="InvalidZipFile.Text">
+    <value xml:space="preserve">O arquivo especificado não é um arquivo comprimido ZIP.</value>
+  </data>
+  <data name="MoveFolderCannotComplete.Text">
+    <value xml:space="preserve">A operação não pôde ser completada.</value>
+  </data>
+  <data name="MoveFolderUnderlyingSystemError.Text">
+    <value xml:space="preserve">O sistema disparou uma excessão. A operação de remanejamento não pôde ser completada. A sincronização manual de pasta pode ser necessária.</value>
+  </data>
+  <data name="NoNetworkAvailableError.Text">
+    <value xml:space="preserve">É necessária uma conexão de rede mas nenhuma rede está disponível.</value>
+  </data>
+  <data name="PropertyCannotBeNegative.Text">
+    <value xml:space="preserve">A propriedade '{1}' no objeto '{0}' não pode ser negativa.</value>
+  </data>
+  <data name="PropertyCannotBeNull.Text">
+    <value xml:space="preserve">A propriedade '{1}' no objeto '{0}' não pode ser nula.</value>
+  </data>
+  <data name="PropertyCannotBeNullOrEmpty.Text">
+    <value xml:space="preserve">A propriedade '{1}' no objeto '{0}' não pode ser nula ou vazia.</value>
+  </data>
+  <data name="RenameFileAlreadyExists.Text">
+    <value xml:space="preserve">Esta pasta já contém um arquivo com o mesmo nome. O arquivo não foi renomeado.</value>
+  </data>
+  <data name="RenameFileUnderlyingSystemError.Text">
+    <value xml:space="preserve">O sistema disparou uma excessão. O arquivo não foi renomeado.</value>
+  </data>
+  <data name="RenameFolderAlreadyExists.Text">
+    <value xml:space="preserve">A pasta de destino já existe. A pasta não foi renomeada.</value>
+  </data>
+  <data name="RenameFolderUnderlyingSystemError.Text">
+    <value xml:space="preserve">O sistema disparou uma excessão. A pasta não foi renomeada.</value>
+  </data>
+  <data name="UnderlyingSystemError.Text">
+    <value xml:space="preserve">O sistema disparou uma excessão.</value>
+  </data>
+  <data name="ValueCannotBeNegative.Text">
+    <value xml:space="preserve">O argumento '{0}' não pode ser negativo.</value>
+  </data>
+  <data name="ValueMustBeOfType.Text">
+    <value xml:space="preserve">O argumento '{0}' deve ser do tipo '{1}'.</value>
+  </data>
+  <data name="WriteFileToResponsePermissionsNotMet.Text">
+    <value xml:space="preserve">As permissões não foram atendidas. O arquivo não pôde ser baixado.</value>
+  </data>
+  <data name="UserRelationshipForSameUsersError.Text">
+    <value xml:space="preserve">Os usuários do relacionamento não podem ter o mesmo ID '{0}'.</value>
+  </data>
+  <data name="UserRelationshipForDifferentPortalError.Text">
+    <value xml:space="preserve">O ID '{0}' do portal do usuário é diferente do ID '{1}' do portal do usuário alvo.</value>
+  </data>
+  <data name="UserRelationshipBlockedError.Text">
+    <value xml:space="preserve">O usuário de destino '{0}' bloqueou a conexão '{1}' com '{2}'.</value>
+  </data>
+  <data name="UserRelationshipExistsError.Text">
+    <value xml:space="preserve">Conexão ID '{2}' já existe entre os usuários '{0}' e '{1}'.</value>
+  </data>
+  <data name="UserRelationshipDoesNotExistError.Text">
+    <value xml:space="preserve">UserRelationshipID '{0}' não existe.</value>
+  </data>
+  <data name="MsgSubjectOrBodyRequiredError.Text">
+    <value xml:space="preserve">Ambos assunto e corpo não podem ser nulos ou vazios.</value>
+  </data>
+  <data name="MsgBodyRequiredError.Text">
+    <value xml:space="preserve">O corpo não pode ser nulo ou vazio.</value>
+  </data>
+  <data name="MsgRolesOrUsersRequiredError.Text">
+    <value xml:space="preserve">Ambas listas de regras e usuários não podem ser nulas ou vazias.</value>
+  </data>
+  <data name="MsgSubjectTooBigError.Text">
+    <value xml:space="preserve">O assunto está muito grande. Máximo: {0}, atual: {1}.</value>
+  </data>
+  <data name="MsgToListTooBigError.Text">
+    <value xml:space="preserve">A lista de destinatários é muito grande. Máximo: {0}, atual: {1}.</value>
+  </data>
+  <data name="MsgEmptyToListFoundError.Text">
+    <value xml:space="preserve">Encontrada vazia a lista de destinatário ao analizar as listas de usuários e regras.</value>
+  </data>
+  <data name="MsgSenderRequiredError.Text">
+    <value xml:space="preserve">Se rementente é nulo ou seu ID é negativo.</value>
+  </data>
+  <data name="MsgThrottlingIntervalNotMet.Text">
+    <value xml:space="preserve">A mensagem não pôde ser enviada agora, o administrador do portal exige uma quantidade mínima de {0} minuto(s) entre mensagens enviadas pelo mesmo usuário.</value>
+  </data>
+  <data name="MsgAttachmentsNotAllowed.Text">
+    <value xml:space="preserve">Não são permitidos anexos.</value>
+  </data>
+  <data name="MsgMessageOrRecipientNotFound.Text">
+    <value xml:space="preserve">Se a mensagem não for encontrada ou o destinatário não está presente na mensagem.</value>
+  </data>
+  <data name="MsgRecipientLimitExceeded.Text">
+    <value xml:space="preserve">Alcançado o limite máximo de destinatários. Para enviar a mensagem, por favor remova alguns destinatários da lista.</value>
+  </data>
+  <data name="MsgMessageRequiredError.Text">
+    <value xml:space="preserve">A mensagem não pode ser nula.</value>
+  </data>
+  <data name="TabNotInPortal.Text">
+    <value xml:space="preserve">Página especificada não está neste portal.</value>
+  </data>
+  <data name="TabModuleNotExist.Text">
+    <value xml:space="preserve">Não existe a instância do módulo especificado.</value>
+  </data>
+  <data name="ControllerNotFound.Text">
+    <value xml:space="preserve">Não foi possível localizar um controlador para {0}. Procurado nos espaços de nome: {1}.</value>
+  </data>
+  <data name="AmbiguousController.Text">
+    <value xml:space="preserve">Múltiplos tipos fora encontrados que combinam com o controlador nomeado '{0}' nos espaços de nome {1}.</value>
+  </data>
+  <data name="MsgOnlyHostOrAdminOrUserInGroupCanSendToRoleError.Text">
+    <value xml:space="preserve">Apenas super usuários, administradores de portais ou usuários no grupo podem enviar mensagens para a regra.</value>
+  </data>
+</root>

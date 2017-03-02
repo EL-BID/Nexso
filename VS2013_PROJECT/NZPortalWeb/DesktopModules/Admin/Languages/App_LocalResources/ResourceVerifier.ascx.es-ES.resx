@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cmdVerify.Text">
+    <value xml:space="preserve">Verificar archivos de recursos</value>
+  </data>
+  <data name="ControlTitle_verify.Text">
+    <value xml:space="preserve">Verificador de archivos de recursos</value>
+  </data>
+  <data name="DuplicateEntries.Text">
+    <value xml:space="preserve">Archivos con entradas duplicadas:&amp;nbsp;</value>
+  </data>
+  <data name="ErrorFiles.Text">
+    <value xml:space="preserve">Archivos de recursos malformados:&amp;nbsp;</value>
+  </data>
+  <data name="Locale.Text">
+    <value xml:space="preserve">Traducir:&amp;nbsp; </value>
+  </data>
+  <data name="MissingEntries.Text">
+    <value xml:space="preserve">Archivos con entradas no encontradas:&amp;nbsp;</value>
+  </data>
+  <data name="MissingFiles.Text">
+    <value xml:space="preserve">Archivos de recursos no encontrados:&amp;nbsp;</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;p&gt;Con este m&amp;oacute;dulo puede verificar todos los paquetes de idioma del sitio y chequear el estado con el idioma por omisi&amp;oacute;n del sistema. El proceso de verificaci&amp;oacute;n mirar&amp;aacute; todos los archivos de recursos&amp;nbsp;del sistema y&amp;nbsp;los comparar&amp;aacute; con la versi&amp;oacute;n traducida de todos&amp;nbsp;los idiomas instalados.&lt;/p&gt;
+&lt;p&gt;Una vez que obtenga el informe, si encuentra incidencias, puede usar el&amp;nbsp;&lt;strong&gt;Editor de idiomas&amp;nbsp;&lt;/strong&gt;para corregir todas las traducciones pendientes.&lt;/p&gt;
+&lt;p&gt;Para cada archivo de recursos se pueden producir algunos de los siguientes casos:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;Archivo no encontrado&lt;/strong&gt;. No se encuentra la versi&amp;oacute;n traducida de un archivo de recursos. Para corregir este punto, seleccione el archivo en el editor de idiomas y podr&amp;aacute; traducirlo.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Entrada no encontrada&lt;/strong&gt;. La traducci&amp;oacute;n de un archivo de recursos no contiene alguna traducci&amp;oacute;n para alguna entrada concreta.&amp;nbsp;Para corregir este punto, seleccione el archivo en el editor de idiomas, busque la entrada pendiente y podr&amp;aacute; traducirla.&lt;/li&gt;
+    &lt;li&gt;Entrada obsoleta. La traducci&amp;oacute;n de un archivo de recursos contiene elementos que no est&amp;aacute;n presentes en la versi&amp;oacute;n del sistema; estos elementos puede borrarse.&amp;nbsp;Para corregir este punto, seleccione el archivo en el editor de idiomas y las entradas de eliminar&amp;aacute;n autom&amp;aacute;ticamente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;/p&gt;</value>
+  </data>
+  <data name="ObsoleteEntries.Text">
+    <value xml:space="preserve">Archivos con entradas obsoletas:&amp;nbsp;</value>
+  </data>
+  <data name="OldFiles.Text">
+    <value xml:space="preserve">Archivos más antiguos que el original:&amp;nbsp;</value>
+  </data>
+</root>

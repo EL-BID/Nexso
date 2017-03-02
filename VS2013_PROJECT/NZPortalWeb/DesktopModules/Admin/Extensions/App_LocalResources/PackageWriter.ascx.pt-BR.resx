@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre o criador de pacotes&lt;/h1&gt;&lt;p&gt;Permite a você criar pacotes.&lt;/p&gt;</value>
+  </data>
+  <data name="ControlTitle_packagewriter.Text">
+    <value xml:space="preserve">Criar Pacote</value>
+  </data>
+  <data name="Introduction.Help">
+    <value xml:space="preserve">Neste assistente você empacotará todos os arquivos necessários para instalar o recurso em uma instalação diferente do DotNetnuke.</value>
+  </data>
+  <data name="Introduction.Title">
+    <value xml:space="preserve">Criar pacote</value>
+  </data>
+  <data name="plBasePath.Help">
+    <value xml:space="preserve">Pasta onde os arquivos do pacote podem ser encontrados.</value>
+  </data>
+  <data name="plBasePath.Text">
+    <value xml:space="preserve">Pasta</value>
+  </data>
+  <data name="plBinFolder.Help">
+    <value xml:space="preserve">Pasta onde os programas do pacote podem ser encontrados.</value>
+  </data>
+  <data name="plBinFolder.Text">
+    <value xml:space="preserve">Pasta de programas</value>
+  </data>
+  <data name="Cancel.Text">
+    <value xml:space="preserve">Voltar</value>
+  </data>
+  <data name="ChooseFiles.Help">
+    <value xml:space="preserve">Nesta etapa você pode escolher os arquivos para incluí-los no seu pacote. O assistente tentará determinar quais arquivos para incluir, mas você ainda pode adicionar ou excluir arquivos da lista.  Além disso você decidirá se inclui ou não os arquivos de código-fonte, marcando a caixa "Incluir código-fonte".</value>
+  </data>
+  <data name="ChooseFiles.Title">
+    <value xml:space="preserve">Escolher arquivos para incluir</value>
+  </data>
+  <data name="cmdGetFiles.Text">
+    <value xml:space="preserve">Atualizar a lista de arquivos</value>
+  </data>
+  <data name="chkIncludeSource.Text">
+    <value xml:space="preserve">Incluir código fonte?</value>
+  </data>
+  <data name="ChooseAssemblies.Help">
+    <value xml:space="preserve">Nesta etapa você pode adicionar os programas para incluí-los no pacote. Se houver um arquivo de projeto na pasta do pacote, o assistente tentará determinar quais programas incluir, mas você ainda pode adicionar ou excluir programas da lista.</value>
+  </data>
+  <data name="ChooseAssemblies.Title">
+    <value xml:space="preserve">Escolha programas para incluir</value>
+  </data>
+  <data name="cmdGetAssemblies.Text">
+    <value xml:space="preserve">Atualizar a lista de programas</value>
+  </data>
+  <data name="Complete.Text">
+    <value xml:space="preserve">Pacote completo (zip):</value>
+  </data>
+  <data name="FinalStep.Title">
+    <value xml:space="preserve">Criar pacote</value>
+  </data>
+  <data name="Manifest.Text">
+    <value xml:space="preserve">Somente manifesto (dnn):</value>
+  </data>
+  <data name="plManifestName.Help">
+    <value xml:space="preserve">Entre o nome do arquivo para usar para o manifesto.</value>
+  </data>
+  <data name="plManifestName.Text">
+    <value xml:space="preserve">Nome do arquivo de manifesto:</value>
+  </data>
+  <data name="LogTitle.Text">
+    <value xml:space="preserve">Registros da criação do pacote</value>
+  </data>
+  <data name="plArchiveName.Help">
+    <value xml:space="preserve">Entre o nome do arquivo para usar no pacote ZIP.</value>
+  </data>
+  <data name="plArchiveName.Text">
+    <value xml:space="preserve">Nome do arquivo:</value>
+  </data>
+  <data name="WriterResults.Help">
+    <value xml:space="preserve">Os resultados da criação do pacote são mostrados abaixo.</value>
+  </data>
+  <data name="WriterResults.Title">
+    <value xml:space="preserve">Resultados do pacote criado</value>
+  </data>
+  <data name="CreateManifest.Help">
+    <value xml:space="preserve">Baseado nas suas seleções o assistente criou o manifesto para seu pacote. O manifesto é exibido na caixa de texto abaixo. Você pode editar o manifesto, antes de criar o pacote.</value>
+  </data>
+  <data name="CreateManifest.Title">
+    <value xml:space="preserve">Manifesto criado</value>
+  </data>
+  <data name="plManifest.Help">
+    <value xml:space="preserve">Marque esta caixa para criar um arquivo de manifesto.</value>
+  </data>
+  <data name="plManifest.Text">
+    <value xml:space="preserve">Criar arquivo de manifesto:</value>
+  </data>
+  <data name="plPackage.Help">
+    <value xml:space="preserve">Marque esta caixa para criar pacote de arquivo ZIP.</value>
+  </data>
+  <data name="plPackage.Text">
+    <value xml:space="preserve">Criar pacote:</value>
+  </data>
+  <data name="plReviewManifest.Help">
+    <value xml:space="preserve">Marque esta caixa para rever o manifesto antes de criar o novo pacote.</value>
+  </data>
+  <data name="plReviewManifest.Text">
+    <value xml:space="preserve">Rever manifesto:</value>
+  </data>
+  <data name="plUseManifest.Help">
+    <value xml:space="preserve">Marque esta caixa para usar o manifesto existente para o pacote.</value>
+  </data>
+  <data name="plUseManifest.Text">
+    <value xml:space="preserve">Usar manifesto existente:</value>
+  </data>
+  <data name="plChooseManifest.Help">
+    <value xml:space="preserve">Se você escolher usar um manifesto criado anteriormente, você pode escolher qual manifesto usar.</value>
+  </data>
+  <data name="plChooseManifest.Text">
+    <value xml:space="preserve">Escolher arquivo de manifesto:</value>
+  </data>
+  <data name="NoFileName.Text">
+    <value xml:space="preserve">Você deve fornecer um nome de arquivo para o pacote</value>
+  </data>
+  <data name="InvalidPackageName.Text">
+    <value xml:space="preserve">Nome inválido do pacote, pacotes deve ter a extensão ZIP.</value>
+  </data>
+  <data name="InvalidManifestExtension.Text">
+    <value xml:space="preserve">Extensão inválida do arquivo de manifesto, a extensão do manifesto deve ser ".dnn".</value>
+  </data>
+  <data name="Success.Text">
+    <value xml:space="preserve">O pacote foi criado e pode ser encontrado na pasta '{0}'.</value>
+  </data>
+</root>

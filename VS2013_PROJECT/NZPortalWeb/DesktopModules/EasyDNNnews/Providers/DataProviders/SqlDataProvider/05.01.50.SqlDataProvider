@@ -1,0 +1,1199 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNCategoryLocalization]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNCategoryLocalization]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNCategoryLocalization]', N'{objectQualifier}EasyDNNCategoryLocalization', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNCategoryLocalization', N'PK_{objectQualifier}EasyDNNCategoryLocalization', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNCategoryLocalization_EasyGalleryCategory', N'FK_{objectQualifier}EasyDNNCategoryLocalization_EasyGalleryCategory', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNGalleryLocalization]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNGalleryLocalization]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNGalleryLocalization]', N'{objectQualifier}EasyDNNGalleryLocalization', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNGalleryLocalization', N'PK_{objectQualifier}EasyDNNGalleryLocalization', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNGalleryLocalization_EasyGallery', N'FK_{objectQualifier}EasyDNNGalleryLocalization_EasyGallery', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNMediaLocalization]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNMediaLocalization]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNMediaLocalization]', N'{objectQualifier}EasyDNNMediaLocalization', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNMediaLocalization', N'PK_{objectQualifier}EasyDNNMediaLocalization', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNMediaLocalization_EasyGalleryPictures', N'FK_{objectQualifier}EasyDNNMediaLocalization_EasyGalleryPictures', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNews]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNews]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNews]', N'{objectQualifier}EasyDNNNews', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNews', N'PK_{objectQualifier}EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNews_EasyGallery', N'FK_{objectQualifier}EasyDNNNews_EasyGallery', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArchive]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsArchive]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsArchive]', N'{objectQualifier}EasyDNNNewsArchive', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsArchive_1', N'PK_{objectQualifier}EasyDNNNewsArchive_1', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArchive_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsArchive_EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArticleGalleryItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsArticleGalleryItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsArticleGalleryItems]', N'{objectQualifier}EasyDNNNewsArticleGalleryItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsArticleGalleryItems', N'PK_{objectQualifier}EasyDNNNewsArticleGalleryItems', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArticleGalleryItems_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsArticleGalleryItems_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArticleGalleryItems_EasyGallery', N'FK_{objectQualifier}EasyDNNNewsArticleGalleryItems_EasyGallery', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArticleGoogleMapConnection]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsArticleGoogleMapConnection]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsArticleGoogleMapConnection]', N'{objectQualifier}EasyDNNNewsArticleGoogleMapConnection', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsArticleGoogleMapConnection', N'PK_{objectQualifier}EasyDNNNewsArticleGoogleMapConnection', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArticleGoogleMapConnection_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsArticleGoogleMapConnection_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArticleGoogleMapConnection_EasyDNNnewsGoogleMapsData', N'FK_{objectQualifier}EasyDNNNewsArticleGoogleMapConnection_EasyDNNnewsGoogleMapsData', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArticleRolePermissions]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsArticleRolePermissions]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsArticleRolePermissions]', N'{objectQualifier}EasyDNNNewsArticleRolePermissions', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsArticleRolePermissions', N'PK_{objectQualifier}EasyDNNNewsArticleRolePermissions', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArticleRolePermissions_EasyDNNNewsArticleRolePermissions', N'FK_{objectQualifier}EasyDNNNewsArticleRolePermissions_EasyDNNNewsArticleRolePermissions', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArticleRolePermissions_Roles', N'FK_{objectQualifier}EasyDNNNewsArticleRolePermissions_Roles', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsArticleUserPermissions]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsArticleUserPermissions]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsArticleUserPermissions]', N'{objectQualifier}EasyDNNNewsArticleUserPermissions', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsArticleUserPermissions_1', N'PK_{objectQualifier}EasyDNNNewsArticleUserPermissions_1', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArticleUserPermissions_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsArticleUserPermissions_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsArticleUserPermissions_Users', N'FK_{objectQualifier}EasyDNNNewsArticleUserPermissions_Users', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsArticleUserPermissions', N'IX_{objectQualifier}EasyDNNNewsArticleUserPermissions', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAudioGallerySettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsAudioGallerySettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsAudioGallerySettings]', N'{objectQualifier}EasyDNNNewsAudioGallerySettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsAudioGallerySettings', N'PK_{objectQualifier}EasyDNNNewsAudioGallerySettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsAudioGallerySettings_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsAudioGallerySettings_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsAudioGallerySettings_Modules', N'FK_{objectQualifier}EasyDNNNewsAudioGallerySettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsAudioGallerySettings_Portals', N'FK_{objectQualifier}EasyDNNNewsAudioGallerySettings_Portals', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsAudioGallerySettings', N'IX_{objectQualifier}EasyDNNNewsAudioGallerySettings', 'OBJECT'
+			
+			EXECUTE sp_rename N'DF_EasyDNNNewsAudioGallerySettings_GalleryTheme', N'DF_{objectQualifier}EasyDNNNewsAudioGallerySettings_GalleryTheme', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsAudioGallerySettings_ItemsPerPage', N'DF_{objectQualifier}EasyDNNNewsAudioGallerySettings_ItemsPerPage', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsAudioGallerySettings_NumOfColumns', N'DF_{objectQualifier}EasyDNNNewsAudioGallerySettings_NumOfColumns', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsAudioGallerySettings_PagerType', N'DF_{objectQualifier}EasyDNNNewsAudioGallerySettings_PagerType', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsAudioGallerySettings_ShowDescription', N'DF_{objectQualifier}EasyDNNNewsAudioGallerySettings_ShowDescription', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsAudioGallerySettings_ShowTitle', N'DF_{objectQualifier}EasyDNNNewsAudioGallerySettings_ShowTitle', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsAudioGallerySettings_ThumbHeight', N'DF_{objectQualifier}EasyDNNNewsAudioGallerySettings_ThumbHeight', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsAudioGallerySettings_ThumbWidth', N'DF_{objectQualifier}EasyDNNNewsAudioGallerySettings_ThumbWidth', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroupImages]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsAuthorGroupImages]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsAuthorGroupImages]', N'{objectQualifier}EasyDNNNewsAuthorGroupImages', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsAuthorGroupImages', N'PK_{objectQualifier}EasyDNNNewsAuthorGroupImages', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsAuthorGroupImages_EasyDNNNewsAuthorGroups', N'FK_{objectQualifier}EasyDNNNewsAuthorGroupImages_EasyDNNNewsAuthorGroups', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsAuthorGroupImages_Modules', N'FK_{objectQualifier}EasyDNNNewsAuthorGroupImages_Modules', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorGroups]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsAuthorGroups]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsAuthorGroups]', N'{objectQualifier}EasyDNNNewsAuthorGroups', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsProfileGroups', N'PK_{objectQualifier}EasyDNNNewsProfileGroups', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsAuthorGroups_Portals', N'FK_{objectQualifier}EasyDNNNewsAuthorGroups_Portals', 'OBJECT'
+			
+			EXECUTE sp_rename N'DF_EasyDNNNewsAuthorGroups_LinkType', N'DF_{objectQualifier}EasyDNNNewsAuthorGroups_LinkType', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfile]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsAuthorProfile]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsAuthorProfile]', N'{objectQualifier}EasyDNNNewsAuthorProfile', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsAuthorProfile', N'PK_{objectQualifier}EasyDNNNewsAuthorProfile', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsAuthorProfiles_Users', N'FK_{objectQualifier}EasyDNNNewsAuthorProfiles_Users', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsAuthorProfile', N'IX_{objectQualifier}EasyDNNNewsAuthorProfile', 'OBJECT'
+			
+			-- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAuthorProfileImages]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsAuthorProfileImages]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsAuthorProfileImages]', N'{objectQualifier}EasyDNNNewsAuthorProfileImages', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsAuthorProfileImages', N'PK_{objectQualifier}EasyDNNNewsAuthorProfileImages', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsAuthorProfileImages_Modules', N'FK_{objectQualifier}EasyDNNNewsAuthorProfileImages_Modules', 'OBJECT'			
+			EXECUTE sp_rename N'FK_EasyDNNNewsAuthorProfileImages_Users', N'FK_{objectQualifier}EasyDNNNewsAuthorProfileImages_Users', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsAutorGroupItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsAutorGroupItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsAutorGroupItems]', N'{objectQualifier}EasyDNNNewsAutorGroupItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsAutorGroupItems_1', N'PK_{objectQualifier}EasyDNNNewsAutorGroupItems_1', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsAutorGroupItems_EasyDNNNewsAuthorGroups1', N'FK_{objectQualifier}EasyDNNNewsAutorGroupItems_EasyDNNNewsAuthorGroups1', 'OBJECT'			
+			EXECUTE sp_rename N'FK_EasyDNNNewsAutorGroupItems_EasyDNNNewsAuthorProfile', N'FK_{objectQualifier}EasyDNNNewsAutorGroupItems_EasyDNNNewsAuthorProfile', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCalendarSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsCalendarSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsCalendarSettings]', N'{objectQualifier}EasyDNNNewsCalendarSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsCalendarSettings', N'PK_{objectQualifier}EasyDNNNewsCalendarSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsCalendarSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsCalendarSettings_Modules', 'OBJECT'			
+			EXECUTE sp_rename N'FK_EasyDNNNewsCalendarSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsCalendarSettings_Portals', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsCalendarSettings', N'IX_{objectQualifier}EasyDNNNewsCalendarSettings', 'OBJECT'
+			
+			-- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsCategories]', N'{objectQualifier}EasyDNNNewsCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsCategories', N'PK_{objectQualifier}EasyDNNNewsCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsCategories_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsCategories_EasyDNNNews', 'OBJECT'			
+			EXECUTE sp_rename N'FK_EasyDNNNewsCategories_EasyDNNNewsCategoryList1', N'FK_{objectQualifier}EasyDNNNewsCategories_EasyDNNNewsCategoryList1', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategoryLink]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsCategoryLink]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsCategoryLink]', N'{objectQualifier}EasyDNNNewsCategoryLink', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsCategoryLink', N'PK_{objectQualifier}EasyDNNNewsCategoryLink', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsCategoryLink_EasyDNNNewsCategoryList', N'FK_{objectQualifier}EasyDNNNewsCategoryLink_EasyDNNNewsCategoryList', 'OBJECT'			
+			EXECUTE sp_rename N'FK_EasyDNNNewsCategoryLink_Modules', N'FK_{objectQualifier}EasyDNNNewsCategoryLink_Modules', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategoryList]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsCategoryList]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsCategoryList]', N'{objectQualifier}EasyDNNNewsCategoryList', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsCategoryList', N'PK_{objectQualifier}EasyDNNNewsCategoryList', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategoryLocalization]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsCategoryLocalization]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsCategoryLocalization]', N'{objectQualifier}EasyDNNNewsCategoryLocalization', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsCategoryLocalization', N'PK_{objectQualifier}EasyDNNNewsCategoryLocalization', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsCategoryLocalization_EasyDNNNewsCategoryList', N'FK_{objectQualifier}EasyDNNNewsCategoryLocalization_EasyDNNNewsCategoryList', 'OBJECT'			
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategoryMenuImages]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsCategoryMenuImages]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsCategoryMenuImages]', N'{objectQualifier}EasyDNNNewsCategoryMenuImages', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsCategoryMenuImages', N'PK_{objectQualifier}EasyDNNNewsCategoryMenuImages', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsCategoryMenuImages_EasyDNNNewsCategoryList', N'FK_{objectQualifier}EasyDNNNewsCategoryMenuImages_EasyDNNNewsCategoryList', 'OBJECT'		
+			EXECUTE sp_rename N'FK_EasyDNNNewsCategoryMenuImages_Modules', N'FK_{objectQualifier}EasyDNNNewsCategoryMenuImages_Modules', 'OBJECT'	
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsChameleonNestedSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsChameleonNestedSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsChameleonNestedSettings]', N'{objectQualifier}EasyDNNNewsChameleonNestedSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsChameleonNestedSettings', N'PK_{objectQualifier}EasyDNNNewsChameleonNestedSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsChameleonNestedSettings_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsChameleonNestedSettings_EasyDNNNews', 'OBJECT'	
+			EXECUTE sp_rename N'FK_EasyDNNNewsChameleonNestedSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsChameleonNestedSettings_Modules', 'OBJECT'		
+			EXECUTE sp_rename N'FK_EasyDNNNewsChameleonNestedSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsChameleonNestedSettings_Portals', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsChameleonNestedSettings', N'FK_{objectQualifier}EasyDNNNewsChameleonNestedSettings', 'OBJECT'
+			
+			EXECUTE sp_rename N'DF_EasyDNNNewsChameleonNestedSettings_LightboxDescription', N'DF_{objectQualifier}EasyDNNNewsChameleonNestedSettings_LightboxDescription', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsChameleonNestedSettings_MainImageResizeMode', N'DF_{objectQualifier}EasyDNNNewsChameleonNestedSettings_MainImageResizeMode', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsChameleonSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsChameleonSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsChameleonSettings]', N'{objectQualifier}EasyDNNNewsChameleonSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsChameleonSettings', N'PK_{objectQualifier}EasyDNNNewsChameleonSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsChameleonSettings_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsChameleonSettings_EasyDNNNews', 'OBJECT'		
+			EXECUTE sp_rename N'FK_EasyDNNNewsChameleonSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsChameleonSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsChameleonSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsChameleonSettings_Portals', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsChameleonSettings', N'IX_{objectQualifier}EasyDNNNewsChameleonSettings', 'OBJECT'
+			
+			EXECUTE sp_rename N'DF_EasyDNNNewsChameleonSettings_LightboxDescription', N'DF_{objectQualifier}EasyDNNNewsChameleonSettings_LightboxDescription', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsChameleonSettings_MainImageResizeMode', N'DF_{objectQualifier}EasyDNNNewsChameleonSettings_MainImageResizeMode', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsCharList]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNnewsCharList]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNnewsCharList]', N'{objectQualifier}EasyDNNnewsCharList', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNnewsCharList', N'PK_{objectQualifier}EasyDNNnewsCharList', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsComments]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsComments]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsComments]', N'{objectQualifier}EasyDNNNewsComments', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsComments', N'PK_{objectQualifier}EasyDNNNewsComments', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsComments_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsComments_EasyDNNNews', 'OBJECT'		
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsContentLocalization]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsContentLocalization]', N'{objectQualifier}EasyDNNNewsContentLocalization', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsContentLocalization', N'PK_{objectQualifier}EasyDNNNewsContentLocalization', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsContentLocalization_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsContentLocalization_EasyDNNNews', 'OBJECT'		
+		
+			-- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsData]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsData]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsData]', N'{objectQualifier}EasyDNNNewsData', 'OBJECT'
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsDocuments]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsDocuments]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsDocuments]', N'{objectQualifier}EasyDNNNewsDocuments', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsDocuments', N'PK_{objectQualifier}EasyDNNNewsDocuments', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsDocuments_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsDocuments_EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsEventsData]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsEventsData]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsEventsData]', N'{objectQualifier}EasyDNNNewsEventsData', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_easynewsEvent', N'PK_{objectQualifier}easynewsEvent', 'OBJECT'
+			EXECUTE sp_rename N'FK_easynewsEvent_EasyDNNNews', N'FK_{objectQualifier}easynewsEvent_EasyDNNNews', 'OBJECT'
+		
+		-- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsFilterByArticles]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsFilterByArticles]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsFilterByArticles]', N'{objectQualifier}EasyDNNNewsFilterByArticles', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsFilterByArticles', N'PK_{objectQualifier}EasyDNNNewsFilterByArticles', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsFilterByArticles_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsFilterByArticles_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsFilterByArticles_Modules', N'FK_{objectQualifier}EasyDNNNewsFilterByArticles_Modules', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsFilterByTagID]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsFilterByTagID]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsFilterByTagID]', N'{objectQualifier}EasyDNNNewsFilterByTagID', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsFilterByTagID', N'PK_{objectQualifier}EasyDNNNewsFilterByTagID', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsFilterByTagID_EasyDNNNewsNewTags', N'FK_{objectQualifier}EasyDNNNewsFilterByTagID_EasyDNNNewsNewTags', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsFilterByTagID_Modules', N'FK_{objectQualifier}EasyDNNNewsFilterByTagID_Modules', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsGallery]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsGallery]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsGallery]', N'{objectQualifier}EasyDNNNewsGallery', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsGallery', N'PK_{objectQualifier}EasyDNNNewsGallery', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsGallery_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsGallery_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsGallery_EasyGallery', N'FK_{objectQualifier}EasyDNNNewsGallery_EasyGallery', 'OBJECT'	
+				
+		-- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsAPI]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNnewsGoogleMapsAPI]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNnewsGoogleMapsAPI]', N'{objectQualifier}EasyDNNnewsGoogleMapsAPI', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNnewsGoogleMapsAPI', N'PK_{objectQualifier}EasyDNNnewsGoogleMapsAPI', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsGoogleMapsData]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNnewsGoogleMapsData]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNnewsGoogleMapsData]', N'{objectQualifier}EasyDNNnewsGoogleMapsData', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNnewsGoogleMapsData', N'PK_{objectQualifier}EasyDNNnewsGoogleMapsData', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsInfo]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsInfo]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsInfo]', N'{objectQualifier}EasyDNNNewsInfo', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsInfo', N'PK_{objectQualifier}EasyDNNNewsInfo', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsLightboxSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsLightboxSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsLightboxSettings]', N'{objectQualifier}EasyDNNNewsLightboxSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsLightboxSettings', N'PK_{objectQualifier}EasyDNNNewsLightboxSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsLightboxSettings_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsLightboxSettings_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsLightboxSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsLightboxSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsLightboxSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsLightboxSettings_Portals', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsLightboxSettings', N'IX_{objectQualifier}EasyDNNNewsLightboxSettings', 'OBJECT'
+			
+			EXECUTE sp_rename N'DF_EasyDNNNewsLightboxSettings_GalleryTheme', N'DF_{objectQualifier}EasyDNNNewsLightboxSettings_GalleryTheme', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsLightboxSettings_ItemsPerPage', N'DF_{objectQualifier}EasyDNNNewsLightboxSettings_ItemsPerPage', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsLightboxSettings_LightboxTheme', N'DF_{objectQualifier}EasyDNNNewsLightboxSettings_LightboxTheme', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsLightboxSettings_NumOfColumns', N'DF_{objectQualifier}EasyDNNNewsLightboxSettings_NumOfColumns', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsLightboxSettings_PagerType', N'DF_{objectQualifier}EasyDNNNewsLightboxSettings_PagerType', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsLightboxSettings_Responsive', N'DF_{objectQualifier}EasyDNNNewsLightboxSettings_Responsive', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsLightboxSettings_ShowDescription', N'DF_{objectQualifier}EasyDNNNewsLightboxSettings_ShowDescription', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsLightboxSettings_ShowLightBoxDescription', N'DF_{objectQualifier}EasyDNNNewsLightboxSettings_ShowLightBoxDescription', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsLightboxSettings_ShowLightBoxTitle', N'DF_{objectQualifier}EasyDNNNewsLightboxSettings_ShowLightBoxTitle', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsLightboxSettings_ShowTitle', N'DF_{objectQualifier}EasyDNNNewsLightboxSettings_ShowTitle', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsLightboxSettings_ThumbHeight', N'DF_{objectQualifier}EasyDNNNewsLightboxSettings_ThumbHeight', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsLightboxSettings_ThumbWidth', N'DF_{objectQualifier}EasyDNNNewsLightboxSettings_ThumbWidth', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsMenuSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsMenuSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsMenuSettings]', N'{objectQualifier}EasyDNNNewsMenuSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsMenuSettings', N'PK_{objectQualifier}EasyDNNNewsMenuSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsMenuSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsMenuSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsMenuSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsMenuSettings_Portals', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsMenuSettings', N'IX_{objectQualifier}EasyDNNNewsMenuSettings', 'OBJECT'
+		
+		
+		-- def no name
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_AutoAddChildCategories', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_AutoAddChildCategories', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_CategoryMenuType', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_CategoryMenuType', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_DetailsModule', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_DetailsModule', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_DisplayAllAuthors', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_DisplayAllAuthors', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_DisplayHeader', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_DisplayHeader', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_DisplayStyle', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_DisplayStyle', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_ExpandAll', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_ExpandAll', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_HTMLTemplate', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_HTMLTemplate', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_IsSocialInstance', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_IsSocialInstance', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_ModuleTheme', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_ModuleTheme', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_nodeExpandLevel', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_nodeExpandLevel', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_nodeExpandToLevel', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_nodeExpandToLevel', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_PassAuthorUserID', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_PassAuthorUserID', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_PermissionSource', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_PermissionSource', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_PermissionSourceID', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_PermissionSourceID', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_ShowAllCategories', N'DF_{objectQualifier}EasyDNNNewsMenuSettings_ShowAllCategories', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsMenuSettings_WhereToOpen', N'DF_EasyDNNNewsMenuSettings_WhereToOpen', 'OBJECT'
+			EXECUTE sp_rename N'EDS_Imported_df', N'EDS_{objectQualifier}Imported_df', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleAuthorsItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsModuleAuthorsItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsModuleAuthorsItems]', N'{objectQualifier}EasyDNNNewsModuleAuthorsItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsModuleAuthorsItems', N'PK_{objectQualifier}EasyDNNNewsModuleAuthorsItems', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleAuthorsItems_Modules', N'FK_{objectQualifier}EasyDNNNewsModuleAuthorsItems_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleAuthorsItems_Users', N'FK_{objectQualifier}EasyDNNNewsModuleAuthorsItems_Users', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleCategoryItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsModuleCategoryItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsModuleCategoryItems]', N'{objectQualifier}EasyDNNNewsModuleCategoryItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsModuleCategoryItems', N'PK_{objectQualifier}EasyDNNNewsModuleCategoryItems', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleCategory_EasyDNNNewsCategoryList', N'FK_{objectQualifier}EasyDNNNewsModuleCategory_EasyDNNNewsCategoryList', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleGroupItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsModuleGroupItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsModuleGroupItems]', N'{objectQualifier}EasyDNNNewsModuleGroupItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsModuleGroupItems', N'PK_{objectQualifier}EasyDNNNewsModuleGroupItems', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleGroupItems_EasyDNNNewsAuthorGroups', N'FK_{objectQualifier}EasyDNNNewsModuleGroupItems_EasyDNNNewsAuthorGroups', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleGroupItems_Modules', N'FK_{objectQualifier}EasyDNNNewsModuleGroupItems_Modules', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleSearchable]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsModuleSearchable]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsModuleSearchable]', N'{objectQualifier}EasyDNNNewsModuleSearchable', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsModuleSearchable', N'PK_{objectQualifier}EasyDNNNewsModuleSearchable', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+		IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsModuleSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsModuleSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsModuleSettings]', N'{objectQualifier}EasyDNNNewsModuleSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsModuleSettings', N'PK_{objectQualifier}EasyDNNNewsModuleSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsModuleSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsModuleSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsModuleSettings_Portals', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsModuleSettings', N'IX_{objectQualifier}EasyDNNNewsModuleSettings', 'OBJECT'	
+		
+		-- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsNewTags]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsNewTags]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsNewTags]', N'{objectQualifier}EasyDNNNewsNewTags', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsItemTags', N'PK_{objectQualifier}EasyDNNNewsItemTags', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsItemTags', N'IX_{objectQualifier}EasyDNNNewsItemTags', 'OBJECT'
+			EXECUTE sp_rename N'DF_EasyDNNNewsNewTags_DateCreated', N'DF_{objectQualifier}EasyDNNNewsNewTags_DateCreated', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalAuthorsItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsPortalAuthorsItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsPortalAuthorsItems]', N'{objectQualifier}EasyDNNNewsPortalAuthorsItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsPortalAuthorsItems', N'PK_{objectQualifier}EasyDNNNewsPortalAuthorsItems', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalAuthorsItems_Portals', N'FK_{objectQualifier}EasyDNNNewsPortalAuthorsItems_Portals', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalAuthorsItems_Users', N'FK_{objectQualifier}EasyDNNNewsPortalAuthorsItems_Users', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalCategoryItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsPortalCategoryItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsPortalCategoryItems]', N'{objectQualifier}EasyDNNNewsPortalCategoryItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsPortalCategoryItems', N'PK_{objectQualifier}EasyDNNNewsPortalCategoryItems', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalCategoryItems_EasyDNNNewsCategoryList', N'FK_{objectQualifier}EasyDNNNewsPortalCategoryItems_EasyDNNNewsCategoryList', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalCategoryItems_Portals', N'FK_{objectQualifier}EasyDNNNewsPortalCategoryItems_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalCategoryLink]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsPortalCategoryLink]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsPortalCategoryLink]', N'{objectQualifier}EasyDNNNewsPortalCategoryLink', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsPortalCategoryLink', N'PK_{objectQualifier}EasyDNNNewsPortalCategoryLink', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalCategoryLink_EasyDNNNewsCategoryList', N'FK_{objectQualifier}EasyDNNNewsPortalCategoryLink_EasyDNNNewsCategoryList', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalCategoryLink_Modules', N'FK_{objectQualifier}EasyDNNNewsPortalCategoryLink_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalCategoryLink_Portals', N'FK_{objectQualifier}EasyDNNNewsPortalCategoryLink_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalFilterByArticles]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsPortalFilterByArticles]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsPortalFilterByArticles]', N'{objectQualifier}EasyDNNNewsPortalFilterByArticles', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsPortalFilterByArticles', N'PK_{objectQualifier}EasyDNNNewsPortalFilterByArticles', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalArticlesFilter_Portals', N'FK_{objectQualifier}EasyDNNNewsPortalArticlesFilter_Portals', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalFilterByArticles_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsPortalFilterByArticles_EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalFilterByTagID]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsPortalFilterByTagID]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsPortalFilterByTagID]', N'{objectQualifier}EasyDNNNewsPortalFilterByTagID', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsPortalFilterByTagID', N'PK_{objectQualifier}EasyDNNNewsPortalFilterByTagID', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalFilterByTagID_EasyDNNNewsNewTags', N'FK_{objectQualifier}EasyDNNNewsPortalFilterByTagID_EasyDNNNewsNewTags', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalFilterByTagID_Portals', N'FK_{objectQualifier}EasyDNNNewsPortalFilterByTagID_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalGroupItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsPortalGroupItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsPortalGroupItems]', N'{objectQualifier}EasyDNNNewsPortalGroupItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsPortalGroupItems', N'PK_{objectQualifier}EasyDNNNewsPortalGroupItems', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalGroupItems_EasyDNNNewsAuthorGroups', N'FK_{objectQualifier}EasyDNNNewsPortalGroupItems_EasyDNNNewsAuthorGroups', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalRoleItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsPortalRoleItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsPortalRoleItems]', N'{objectQualifier}EasyDNNNewsPortalRoleItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsPortalRoleItems', N'PK_{objectQualifier}EasyDNNNewsPortalRoleItems', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalRoleItems_Portals', N'FK_{objectQualifier}EasyDNNNewsPortalRoleItems_Portals', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalRoleItems_Roles', N'FK_{objectQualifier}EasyDNNNewsPortalRoleItems_Roles', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsPortalSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsPortalSettings]', N'{objectQualifier}EasyDNNNewsPortalSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsPortalSettings', N'PK_{objectQualifier}EasyDNNNewsPortalSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsPortalSettings_Portals', 'OBJECT'
+
+		-- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsPortalSharing]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsPortalSharing]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsPortalSharing]', N'{objectQualifier}EasyDNNNewsPortalSharing', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsPortalSharing', N'PK_{objectQualifier}EasyDNNNewsPortalSharing', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsPortalSharing_Portals1', N'FK_{objectQualifier}EasyDNNNewsPortalSharing_Portals1', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRoleNotifications]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRoleNotifications]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRoleNotifications]', N'{objectQualifier}EasyDNNNewsRoleNotifications', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRoleNotifications', N'PK_{objectQualifier}EasyDNNNewsRoleNotifications', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRoleNotifications_Roles', N'FK_{objectQualifier}EasyDNNNewsRoleNotifications_Roles', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRolePremissionsAddToCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRolePremissionsAddToCategories]', N'{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRolePremissionsAddToCategories', N'PK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList1', N'FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList1', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings1', N'FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings1', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRolePremissionSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRolePremissionSettings]', N'{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRolePremissionSettings', N'PK_{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsRolePremissionSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionSettings_Roles', N'FK_{objectQualifier}EasyDNNNewsRolePremissionSettings_Roles', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsRolePremissionSettings', N'IX_{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			
+			-- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsShowCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRolePremissionsShowCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRolePremissionsShowCategories]', N'{objectQualifier}EasyDNNNewsRolePremissionsShowCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRolePremissionsShowCategories', N'PK_{objectQualifier}EasyDNNNewsRolePremissionsShowCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList', N'FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings', N'FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRSSArticle]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRSSArticle]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRSSArticle]', N'{objectQualifier}EasyDNNNewsRSSArticle', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRSSArticle', N'PK_{objectQualifier}EasyDNNNewsRSSArticle', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRSSArticle_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsRSSArticle_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRSSArticle_EasyDNNNewsRSSFeedImport', N'FK_{objectQualifier}EasyDNNNewsRSSArticle_EasyDNNNewsRSSFeedImport', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRSSFeedImport]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRSSFeedImport]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRSSFeedImport]', N'{objectQualifier}EasyDNNNewsRSSFeedImport', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRSSFeedImport', N'PK_{objectQualifier}EasyDNNNewsRSSFeedImport', 'OBJECT'
+
+			-- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSaveInfo]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsSaveInfo]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsSaveInfo]', N'{objectQualifier}EasyDNNNewsSaveInfo', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsSaveInfo', N'PK_{objectQualifier}EasyDNNNewsSaveInfo', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSearchSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsSearchSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsSearchSettings]', N'{objectQualifier}EasyDNNNewsSearchSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsSearchSettings', N'PK_{objectQualifier}EasyDNNNewsSearchSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsSearchSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsSearchSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsSearchSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsSearchSettings_Portals', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsSearchSettings', N'IX_{objectQualifier}EasyDNNNewsSearchSettings', 'OBJECT'		
+			
+			-- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSocialGroupItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsSocialGroupItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsSocialGroupItems]', N'{objectQualifier}EasyDNNNewsSocialGroupItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsSocialGroupItems', N'PK_{objectQualifier}EasyDNNNewsSocialGroupItems', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsSocialGroupItems_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsSocialGroupItems_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsSocialGroupItems_Roles', N'FK_{objectQualifier}EasyDNNNewsSocialGroupItems_Roles', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSocialSecurity]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsSocialSecurity]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsSocialSecurity]', N'{objectQualifier}EasyDNNNewsSocialSecurity', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsSocialSecurity', N'PK_{objectQualifier}EasyDNNNewsSocialSecurity', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsSocialSecurity_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsSocialSecurity_EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSocialSharingStatistics]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsSocialSharingStatistics]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsSocialSharingStatistics]', N'{objectQualifier}EasyDNNNewsSocialSharingStatistics', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsSocialSharingArchive', N'PK_{objectQualifier}EasyDNNNewsSocialSharingArchive', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsSocialSharingStatistics_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsSocialSharingStatistics_EasyDNNNews', 'OBJECT'
+		    EXECUTE sp_rename N'FK_EasyDNNNewsSocialSharingStatistics_Users', N'FK_{objectQualifier}EasyDNNNewsSocialSharingStatistics_Users', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSocialSharingTemp]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsSocialSharingTemp]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsSocialSharingTemp]', N'{objectQualifier}EasyDNNNewsSocialSharingTemp', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsSocialSharingTemp', N'PK_{objectQualifier}EasyDNNNewsSocialSharingTemp', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsSocialSharingTemp_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsSocialSharingTemp_EasyDNNNews', 'OBJECT'
+		    EXECUTE sp_rename N'FK_EasyDNNNewsSocialSharingTemp_Modules', N'FK_{objectQualifier}EasyDNNNewsSocialSharingTemp_Modules', 'OBJECT'
+		    EXECUTE sp_rename N'FK_EasyDNNNewsSocialSharingTemp_Roles', N'FK_{objectQualifier}EasyDNNNewsSocialSharingTemp_Roles', 'OBJECT'
+		    
+		    -- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsSystemTokens]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsSystemTokens]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsSystemTokens]', N'{objectQualifier}EasyDNNNewsSystemTokens', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNSystemTokens', N'PK_{objectQualifier}EasyDNNSystemTokens', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagCloudSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsTagCloudSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsTagCloudSettings]', N'{objectQualifier}EasyDNNNewsTagCloudSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsTagCloudSettings', N'PK_{objectQualifier}EasyDNNNewsTagCloudSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsTagCloudSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsTagCloudSettings_Modules', 'OBJECT'
+		    EXECUTE sp_rename N'FK_EasyDNNNewsTagCloudSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsTagCloudSettings_Portals', 'OBJECT'
+		    EXECUTE sp_rename N'IX_EasyDNNNewsTagCloudSettings', N'IX_{objectQualifier}EasyDNNNewsTagCloudSettings', 'OBJECT'
+		    
+		    -- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagsItems]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsTagsItems]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsTagsItems]', N'{objectQualifier}EasyDNNNewsTagsItems', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsTagsItems', N'PK_{objectQualifier}EasyDNNNewsTagsItems', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsTagsItems_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsTagsItems_EasyDNNNews', 'OBJECT'
+		    EXECUTE sp_rename N'FK_EasyDNNNewsTagsItems_EasyDNNNewsNewTags', N'FK_{objectQualifier}EasyDNNNewsTagsItems_EasyDNNNewsNewTags', 'OBJECT'
+		    
+		    EXECUTE sp_rename N'DF_EasyDNNNewsTagsItems_DateAdded', N'DF_{objectQualifier}EasyDNNNewsTagsItems_DateAdded', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTagsLocalization]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsTagsLocalization]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsTagsLocalization]', N'{objectQualifier}EasyDNNNewsTagsLocalization', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsTagsLocalization', N'PK_{objectQualifier}EasyDNNNewsTagsLocalization', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsTagsLocalization_EasyDNNNewsNewTags', N'FK_{objectQualifier}EasyDNNNewsTagsLocalization_EasyDNNNewsNewTags', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTokens]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsTokens]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsTokens]', N'{objectQualifier}EasyDNNNewsTokens', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsTokens', N'PK_{objectQualifier}EasyDNNNewsTokens', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsTreeView]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsTreeView]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsTreeView]', N'{objectQualifier}EasyDNNNewsTreeView', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsTreeView', N'PK_{objectQualifier}EasyDNNNewsTreeView', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsTreeView_Modules', N'FK_{objectQualifier}EasyDNNNewsTreeView_Modules', 'OBJECT'
+			
+			EXECUTE sp_rename N'EDS_NewsTreeView_Imported_df', N'EDS_{objectQualifier}NewsTreeView_Imported_df', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUpdate]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUpdate]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUpdate]', N'{objectQualifier}EasyDNNNewsUpdate', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUpdate', N'PK_{objectQualifier}EasyDNNNewsUpdate', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserNotifications]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUserNotifications]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUserNotifications]', N'{objectQualifier}EasyDNNNewsUserNotifications', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUserNotifications', N'PK_{objectQualifier}EasyDNNNewsUserNotifications', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserNotifications_Portals', N'FK_{objectQualifier}EasyDNNNewsUserNotifications_Portals', 'OBJECT'			
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserNotifications_Users', N'FK_{objectQualifier}EasyDNNNewsUserNotifications_Users', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUserPremissionsAddToCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUserPremissionsAddToCategories]', N'{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUserPremissionsAddToCategories', N'PK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList1', N'FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList1', 'OBJECT'			
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsUserPremissionSettings1', N'FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsUserPremissionSettings1', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUserPremissionSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUserPremissionSettings]', N'{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUserPremissionSettings', N'PK_{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionSettings_Modules', N'FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionSettings_Portals', N'FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Portals', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionSettings_Users', N'FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Users', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsUserPremissionSettings', N'IX_{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			
+		-- def no name
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsShowCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUserPremissionsShowCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUserPremissionsShowCategories]', N'{objectQualifier}EasyDNNNewsUserPremissionsShowCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUserPremissionsShowCategories', N'PK_{objectQualifier}EasyDNNNewsUserPremissionsShowCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList', N'FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList', 'OBJECT'			
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsUserPremissionSettings', N'FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsVideoGallerySettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsVideoGallerySettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsVideoGallerySettings]', N'{objectQualifier}EasyDNNNewsVideoGallerySettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsVideoGallerySettings', N'PK_{objectQualifier}EasyDNNNewsVideoGallerySettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsVideoGallerySettings_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsVideoGallerySettings_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsVideoGallerySettings_Modules', N'FK_{objectQualifier}EasyDNNNewsVideoGallerySettings_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsVideoGallerySettings_Portals', N'FK_{objectQualifier}EasyDNNNewsVideoGallerySettings_Portals', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsVideoGallerySettings', N'IX_{objectQualifier}EasyDNNNewsVideoGallerySettings', 'OBJECT'
+			
+		    EXECUTE sp_rename N'DF_EasyDNNNewsVideoGallerySettings_GalleryTheme', N'DF_{objectQualifier}EasyDNNNewsVideoGallerySettings_GalleryTheme', 'OBJECT'
+		    EXECUTE sp_rename N'DF_EasyDNNNewsVideoGallerySettings_ItemsPerPage', N'DF_{objectQualifier}EasyDNNNewsVideoGallerySettings_ItemsPerPage', 'OBJECT'
+		    EXECUTE sp_rename N'DF_EasyDNNNewsVideoGallerySettings_NumOfColumns', N'DF_{objectQualifier}EasyDNNNewsVideoGallerySettings_NumOfColumns', 'OBJECT'
+		    EXECUTE sp_rename N'DF_EasyDNNNewsVideoGallerySettings_PagerType', N'DF_{objectQualifier}EasyDNNNewsVideoGallerySettings_PagerType', 'OBJECT'
+		    EXECUTE sp_rename N'DF_EasyDNNNewsVideoGallerySettings_ShowDescription', N'DF_{objectQualifier}EasyDNNNewsVideoGallerySettings_ShowDescription', 'OBJECT'
+		    EXECUTE sp_rename N'DF_EasyDNNNewsVideoGallerySettings_ShowTitle', N'DF_{objectQualifier}EasyDNNNewsVideoGallerySettings_ShowTitle', 'OBJECT'
+		    EXECUTE sp_rename N'DF_EasyDNNNewsVideoGallerySettings_ThumbHeight', N'DF_{objectQualifier}EasyDNNNewsVideoGallerySettings_ThumbHeight', 'OBJECT'
+		    EXECUTE sp_rename N'DF_EasyDNNNewsVideoGallerySettings_ThumbWidth', N'DF_{objectQualifier}EasyDNNNewsVideoGallerySettings_ThumbWidth', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNnewsWidgets]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNnewsWidgets]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNnewsWidgets]', N'{objectQualifier}EasyDNNnewsWidgets', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNnewsWidgets', N'PK_{objectQualifier}EasyDNNnewsWidgets', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNnewsWidgets_Modules', N'FK_{objectQualifier}EasyDNNnewsWidgets_Modules', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNnewsWidgets_Portals', N'FK_{objectQualifier}EasyDNNnewsWidgets_Portals', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	-- gallery tables
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNThumbs]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNThumbs]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNThumbs]', N'{objectQualifier}EasyDNNThumbs', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNThumbs', N'PK_{objectQualifier}EasyDNNThumbs', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNThumbs_EasyGallery', N'FK_{objectQualifier}EasyDNNThumbs_EasyGallery', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNThumbs_Modules', N'FK_{objectQualifier}EasyDNNThumbs_Modules', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyGallery]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyGallery]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyGallery]', N'{objectQualifier}EasyGallery', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyGallery', N'PK_{objectQualifier}EasyGallery', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyGallery_EasyGalleryCategory', N'FK_{objectQualifier}EasyGallery_EasyGalleryCategory', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyGalleryCategory]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyGalleryCategory]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyGalleryCategory]', N'{objectQualifier}EasyGalleryCategory', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyGalleryCategory', N'PK_{objectQualifier}EasyGalleryCategory', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyGalleryPictures]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyGalleryPictures]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyGalleryPictures]', N'{objectQualifier}EasyGalleryPictures', 'OBJECT'
+			BEGIN TRY
+				EXECUTE sp_rename N'PK_EasyGalleryPictures', N'PK_{objectQualifier}EasyGalleryPictures', 'OBJECT'
+				EXECUTE sp_rename N'FK_EasyGalleryPictures_EasyGallery', N'FK_{objectQualifier}EasyGalleryPictures_EasyGallery', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH

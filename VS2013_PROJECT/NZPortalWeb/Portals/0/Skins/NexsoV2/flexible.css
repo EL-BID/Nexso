@@ -1,0 +1,484 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+/* ==========================================================================
+   Page styles for Mentoring For Women Entrepreneurs 2015 Challenge - added 04072015
+   ========================================================================== */
+
+
+   .mfwe2015 > .no-sidebar > .content-wrapper > h1 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+          font-size: 44px;
+          letter-spacing:1px;
+          color: #00A7E0;   
+        }
+ .mfwe2015 > .no-sidebar > .content-wrapper > h2 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+          font-size: 30px;
+          letter-spacing:1px;
+          color: #00A7E0;
+          margin-top: 2rem;
+          }
+ .mfwe2015 > .no-sidebar > .content-wrapper > h3, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > h3 {
+            font-family: 'Lato', sans-serif;
+            font-size: 30px;
+            letter-spacing:1px;
+            font-weight: 400;
+          color: #00A7E0;
+          }
+.mfwe2015 > .no-sidebar > .content-wrapper > .top-spacer {
+margin-top: 2rem;
+}
+ .mfwe2015 > .no-sidebar > .content-wrapper > p, .mfwe2015 > .no-sidebar > .content-wrapper > ul, .mfwe2015 > .no-sidebar > .content-wrapper > li,  .mfwe2015 > .no-sidebar > .content-wrapper > ol, .mfwe2015 > .no-sidebar > .content-wrapper > dd, .mfwe2015 > .no-sidebar > .content-wrapper > dt, .mfwe2015 > .no-sidebar > .content-wrapper > dl,  .mfwe2015 > .no-sidebar > .content-wrapper > .row > .columns > p, .mfwe2015 > .no-sidebar > .content-wrapper > .row > .columns > h1, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > p, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > ul, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > li, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > dd, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > dt, .mfwe2015 > .no-sidebar > .content-wrapper > .partners > .columns > dl {
+            font-family: 'Lato', sans-serif;
+            line-height: 175%;
+            font-weight: 400;
+          }
+ .mfwe2015 > .no-sidebar > .content-wrapper > .row > .columns > .round {
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+        }
+ .mfwe2015 > .confirmation > .content-wrapper > header {
+            padding: 2rem;
+          }
+
+.mfwe2015 > .contain-to-grid, .mfwe2015 > .contain-to-grid > .top-bar, .mfwe2015 > .contain-to-grid > .top-bar > .top-bar-section, .mfwe2015 > .contain-to-grid > .top-bar > .top-bar-section li:not(.has-form) a:not(.button), .mfwe2015 > .contain-to-grid > .top-bar > .top-bar-section > ul {
+background: #00A7E0;
+}
+
+/* ==========================================================================
+   Homepage - homepage styles for Mentoring For Women Entrepreneurs 2015 Challenge - added 04072015
+   ========================================================================== */
+
+.mfwe2015 > header {
+      text-align: center !important;
+      background: #4EC8B5;
+      padding: 0;
+      visibility:hidden;
+      }
+
+.mfwe2015 > header > .row {
+        max-width: none;
+        margin: 0;
+        }
+
+.mfwe2015 > header > .row > .image-container {
+        padding: 0 !important;
+        position:relative;
+        width:100%;
+      }
+
+.mfwe2015  nav.top-bar {
+    text-align: center !important;
+    overflow:visible;
+    }
+.mfwe2015 nav.top-bar section.top-bar-section {
+display: inline-block;
+}
+
+.mfwe2015 nav.top-bar section.top-bar-section ul>li>a {
+    font-family:'Lato', sans-serif;
+font-size: 1rem;
+    }
+
+.mfwe2015 > section.call {
+    padding: 6rem 0;
+    text-align: center !important;
+    }
+
+.mfwe2015 section.call p {
+      color: #808080;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      }
+
+.mfwe2015  section.call  p.text-justify {
+        text-align:justify;
+      }
+
+.mfwe2015  section.call  p.highlight {
+        color: #001D95;
+font-weight: 700;
+      }
+
+
+.mfwe2015  section.call h1 {
+      color:#001D95;
+      font-family:'Lato', sans-serif;
+      font-weight:400;
+      letter-spacing:1px;
+      }
+
+.mfwe2015 > section.timeline {
+    background: #f2f2f2;
+    padding: 6rem 0;
+    text-align: center !important;
+    font-weight: normal;
+    }
+
+.mfwe2015 > section.timeline > .row > .columns > .banner {
+background-color: #f2f2f2;
+}
+
+.mfwe2015 > section.timeline > .row > .columns > .banner .step-navigation #header a, .mfwe2015 > section.timeline > .row > .columns > .banner .step-navigation  #header .currentStep  .step-title {
+  color: #001D95;
+font-family: 'Lato', sans-serif;
+}
+
+.mfwe2015 section.timeline h1 {
+      color: #00a7e0;
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing:1px;
+font-size: 44px;
+    }
+
+.mfwe2015 > section.timeline > .row > .columns > .banner > .row > .step-navigation > #header:before {
+        width: 54%;
+      }
+.mfwe2015 > section.timeline > .row > .columns > .banner > .row > .step-navigation > .step-title {
+        font-size: 0.9rem;
+        font-weight: normal;
+        font-family: 'Lato', sans-serif;
+        color: #001d95;
+      }
+
+.mfwe2015 section.foursquare:before,.mfwe2015 section.foursquare ul.pages:before,.mfwe2015 section.foursquare:after,.mfwe2015 section.foursquare ul.pages:after {
+      content:" ";
+      display:table;
+      }
+
+.mfwe2015 section.foursquare:after,.mfwe2015 section.foursquare ul.pages:after {
+clear:both;
+}
+
+.mfwe2015 > section.foursquare {
+    clear: both;
+    background: #fff;
+    zoom:1;
+    }
+
+.mfwe2015 > section.foursquare > ul {
+      margin: 0 !important;
+        list-style: none;
+    }
+
+.mfwe2015 > section.foursquare > ul.pages {
+      clear: both;
+      zoom:1;
+      }
+
+.mfwe2015 > section.foursquare > ul.pages > li {
+        list-style: none;
+        padding: 2rem 1rem;
+        text-align: center !important;
+        color: #fff;
+        position:relative;
+        width:100%;
+        float:left;
+}
+
+.mfwe2015 > section.foursquare > ul.pages > li > .icons {
+          font-size: 2rem;
+            color: #001D95;
+        }
+
+.mfwe2015 > section.foursquare > ul.pages > li > h1 {
+              font-family: 'Lato', sans-serif;
+              font-size: 24px;
+              color: #001D95;
+              font-weight: normal;
+              letter-spacing:1px;
+text-transform: uppercase;
+            }
+.mfwe2015 section.foursquare ul.pages li p {
+              color: #fff;
+              font-family: 'Lato', sans-serif;
+              font-size: 1rem;
+              line-height: 1.4rem;
+}
+
+.mfwe2015 > section.foursquare > ul.pages > li > p a.view-more {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #fff;
+}
+
+.mfwe2015 > section.foursquare > ul.pages > li > a {
+                color: #fff;
+            border-bottom: 1px #fff dotted;
+            padding-bottom: 2px;
+              }
+.mfwe2015 > section.foursquare > ul.pages > li.one {
+        background-color: #00a7e0;
+      }
+.mfwe2015 > section.foursquare > ul.pages > li.two {
+        background-color: #4ec8b5;
+      }
+.mfwe2015 > section.foursquare > ul.pages > li.three {
+        background-color: #b3c8e6;
+      }
+.mfwe2015 > section.foursquare > ul.pages > li.four {   
+        background-color: #808080;
+      }
+.mfwe2015 > section.judges {
+    background: #fff;
+    text-align: center !important;
+    }
+.mfwe2015 > section.judges > .icons {
+      font-size: 3rem;
+        color: #00A7E0;
+    }
+.mfwe2015 > section.judges > h1 {
+      font-family: 'Lato', sans-serif;
+      color: #00A7E0;
+      font-weight: 700;
+      font-size: 44px;
+      margin-top:1.5rem;
+      margin-bottom:0;
+      letter-spacing:0;
+text-transform: uppercase;
+    }
+
+.mfwe2015 > section.judges > h1 > a {
+      color:#00A7E0;
+      }
+
+.mfwe2015 > section.judges > .row > ul > li > a > img.round {
+          -webkit-border-radius:75px;
+          border-radius: 75px;
+          border: 5px solid #fff;
+          width: 150px;
+          }
+.mfwe2015 > section.judges > .row > ul > li > h1 {
+        font-family: 'Lato', sans-serif;
+        font-size:1.3rem;
+        font-weight: 400;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        letter-spacing:1px;
+text-transform: uppercase;
+        }
+.mfwe2015 > section.judges > .row > ul > li > h1 > a {
+          color: #4EC8B5;
+        }
+
+.mfwe2015 > section.judges > .row > ul > li > h2, .mfwe2015 > section.judges > .row > ul > li > h3 {
+        font-family: 'Lato', sans-serif;
+        color: #001D95;
+        font-size: 0.9rem;
+        font-weight: 400;
+letter-spacing: 1px;
+        line-height: 1.4rem;
+        margin-bottom: 0rem;
+      }
+
+.mfwe2015 > nav.top-bar > section.top-bar-section {
+        display:inline-block;
+        }
+
+.mfwe2015 > section.participa {
+text-align: center;
+margin-top: 2rem;
+}
+
+@media screen and (min-width: 40.063em) {
+
+.mfwe2015 > header {
+visibility:visible;
+}
+
+.mfwe2015 > nav.top-bar {
+overflow:hidden;
+}
+
+.mfwe2015 > section.foursquare > ul.pages > li {
+height:21.25rem;
+position:relative;
+  padding-left: 3rem;
+  padding-right: 3rem;
+width:50%;
+float:left;
+}
+
+}
+
+@media screen and (min-width: 60.063em) {
+
+.mfwe2015 > section.foursquare > ul.pages > li {
+height:18rem;
+}
+
+}
+
+/* Borrow single solution Google translate style to create notification panel */
+.single-alert {position: relative; padding-left: 1rem; padding-right: 1rem; width: 100%; float: left;}
+.notification-panel {display: block;border-radius: 0.25rem;padding: 0.5rem 1rem;background: rgba(0,0,0,0.092);font-style: italic;margin-top: 3rem;}
+.jpo-select-form {margin-top: 3rem;}
+.jpo-select-form .dnnFormItem {margin-bottom: 2rem;}
+.jpo-select-form label {
+font-size: 1rem;
+font-weight: bold;
+}
+.jpo-select-form td label {
+font-weight: normal;
+}
+
+/* Re center Load More button of browse page */
+#browse #show-more-trigger, #latest_solutions #show-more-trigger, #featured_solutions #show-more-trigger {display: block !important; margin: 0 auto 4rem auto; } 
+
+/* Temp styles for static foromic blog page */
+.blog-image, .blog-image img { border-radius: 0.125rem; margin: 2rem 0;}
+.blog-meta {padding-bottom: 1rem;margin-bottom: 1rem;}
+.blog-meta .card {border: 0; background: none; box-shadow: none; padding: 0;}
+.blog-meta .card .card-details dd {border-top: 0px;}
+
+/* Overwrite Be A Partner page scss styles compiled in skin.css */
+.challenge-partners section.partner ul.partner-grid li.partner article.wrapper p {font-size: 1rem;}
+.challenge-partners section.partner ul.partner-grid li.partner article.wrapper h1 {letter-spacing: 0px;}
+.challenge-partners section.partner ul.partner-grid li.partner article.wrapper p.darker {color: #333;}
+.challenge-partners section.sponsor {
+background: #9FB08D url(../../Images/partner-banner2@2x.jpg) no-repeat left bottom/100%;
+
+/* Temporary fix for user profile page links */
+#profile-links {
+	padding: 40px 0 20px 0;
+	z-index: 900;
+	position: relative;
+	box-shadow: 0 4px 0 0 rgba(0,0,0,0.08);
+}
+#profile-links > ul {
+	display: inline-block;
+}
+#profile-links > ul > li.edit, #profile-links > ul > li.pwd {
+	float: left;
+	position: relative;
+	padding: 0 10px;
+	font-weight: bold;
+	color: #3786bd;
+}
+.profile-icon {
+	color: #9bc3df;
+	padding: 0 5px;
+}
+
+/* Temporary styling of MyMessages */
+.my-messages > .content-wrapper {
+	margin-top: 0rem;
+}
+.userContainer {
+border-bottom: 1px solid rgba(0,0,0,0.16);
+padding: 1rem;
+cursor: pointer;
+}
+.messageBlock {
+border: 1px solid rgba(0,0,0,0.16);
+box-shadow: 0 4px 0 0 rgba(0,0,0,0.08);
+background: rgba(255,255,255,0.8);
+border-radius: 0.25rem;
+}
+.userPicture {
+border-radius: 0.25rem;
+border: 1px solid rgba(0,0,0,0.16);
+}
+.userName {
+font-size: 1.25rem;
+line-height: 1.5rem;
+font-weight: bold;
+margin: 0 0 1.25rem 0;
+color: #333;
+letter-spacing: normal;
+margin-left: 1rem;
+}
+.messageContainer {
+padding: 1rem;
+background-color: #fff;
+border-bottom: 1px solid rgba(0,0,0,0.16);
+}
+.messageBox {
+position:relative;
+}
+.messageFrom {
+	float:left;
+	width: 20%;
+	text-align:right;
+	display: block;
+}
+.message {
+display: block;
+margin-bottom: 1rem;
+border-radius: 0.25rem;
+background-color: #f2f2f2;
+margin-left:25%;
+padding: 1rem;	
+width: 50%;
+}
+.messageDate {
+display: block;
+font-size: 0.8rem;
+position: relative;
+text-align: center;
+width: 100%;
+margin-bottom: 1rem;
+}
+.messageInput {
+margin-left: 25% !important;
+width: 50% !important;
+padding: 1rem !important;
+border: 1px solid #e5e5e5 !important;
+border-radius: 0.25rem !important;
+background-color: #fff !important;
+font-size: 1rem;
+}
+.messageButton {
+background-color: #7fb53e;
+color: #fff;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+font-size: 1.25rem;
+padding: 0.625rem 1.5rem;
+min-height: 2.75rem;
+display: inline-block;
+font-family: "Open Sans",sans-serif;
+font-weight: bold;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+border-radius: 0.25rem;
+border: 0;
+background-image: none;
+-moz-user-select: -moz-none;
+-ms-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+line-height: 1.5rem;
+box-shadow: inset 0 -4px 0 0 rgba(0,0,0,0.16),inset 0 0 0 1px rgba(0,0,0,0.16),0 4px 0 0 rgba(0,0,0,0.08);
+text-shadow: none;
+-moz-transition-property: background-color;
+-webkit-transition-property: background-color;
+transition-property: background-color;
+-moz-transition-duration: 0.2s;
+-webkit-transition-duration: 0.2s;
+transition-duration: 0.2s;
+-moz-transition-timing-function: ease;
+-webkit-transition-timing-function: ease;
+transition-timing-function: ease;
+-moz-transition-delay: 0;
+-webkit-transition-delay: 0;
+transition-delay: 0;
+margin-left: 60%;
+}
+.noMessage {
+border: 1px solid rgba(0,0,0,0.16);
+padding: 1rem;
+box-shadow: 0 4px 0 0 rgba(0,0,0,0.08);
+border-radius: 0.25rem;
+}
+
+.test__{
+	
+}

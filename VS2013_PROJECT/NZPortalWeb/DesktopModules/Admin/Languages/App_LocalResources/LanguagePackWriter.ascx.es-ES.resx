@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuthSystem.LangPackType">
+    <value xml:space="preserve">Sistema de autenticación</value>
+  </data>
+  <data name="cmdCreate.Text">
+    <value xml:space="preserve">Crear</value>
+  </data>
+  <data name="ControlTitle_packagewriter.Text">
+    <value xml:space="preserve">Crear paquete de idioma</value>
+  </data>
+  <data name="Core.LangPackType">
+    <value xml:space="preserve">Núcleo</value>
+  </data>
+  <data name="Download.Text">
+    <value xml:space="preserve">Descargar "{0}"</value>
+  </data>
+  <data name="Failure.Text">
+    <value xml:space="preserve">Debe crear los archivos de recursos antes de poder crear el paquete de idioma</value>
+  </data>
+  <data name="Full.LangPackType">
+    <value xml:space="preserve">Completo</value>
+  </data>
+  <data name="lblName.Help">
+    <value xml:space="preserve">Puede cambiar el nombre del paquete de recursos generado. Observe que una parte del nombre es fija.</value>
+  </data>
+  <data name="lblName.Text">
+    <value xml:space="preserve">Nombre del paquete de recursos:</value>
+  </data>
+  <data name="lbLocale.Help">
+    <value xml:space="preserve">Seleccione el idioma para el cual desea crear el paquete de idioma</value>
+  </data>
+  <data name="lbLocale.Text">
+    <value xml:space="preserve">Recursos:</value>
+  </data>
+  <data name="lblType.Help">
+    <value xml:space="preserve">Seleccione el tipo de paquete de recursos a generar</value>
+  </data>
+  <data name="lblType.Text">
+    <value xml:space="preserve">Tipo de paquete de recursos:</value>
+  </data>
+  <data name="LOG.MESSAGE.Error">
+    <value xml:space="preserve">&lt;p&gt;Se ha producido un error creando el paquete de recursos. Revise el registro para obtener más detalles.&lt;/p&gt;</value>
+  </data>
+  <data name="LOG.MESSAGE.Success">
+    <value xml:space="preserve">&lt;p&gt;Paquete de recursos creado satisfactoriamente:  {0}&lt;/p&gt;</value>
+  </data>
+  <data name="LogTitle.Text">
+    <value xml:space="preserve">Registro de creación del paquete de idioma</value>
+  </data>
+  <data name="Module.LangPackType">
+    <value xml:space="preserve">Módulo</value>
+  </data>
+  <data name="Provider.LangPackType">
+    <value xml:space="preserve">Proveedor</value>
+  </data>
+  <data name="SelectModules.Text">
+    <value xml:space="preserve">Seleccione los módulos que desea incluir en el paquete de recursos:</value>
+  </data>
+  <data name="SelectProviders.Text">
+    <value xml:space="preserve">Seleccione los proveedores que desea incluir en el paquete de recursos:</value>
+  </data>
+  <data name="Success.Text">
+    <value xml:space="preserve">El paquete de idioma se ha creado y puede encontrarlo en la carpeta "{0}/Install/Language"</value>
+  </data>
+</root>

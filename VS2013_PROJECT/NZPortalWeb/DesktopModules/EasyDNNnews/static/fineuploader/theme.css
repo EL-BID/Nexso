@@ -1,0 +1,294 @@
+.EDS_simpleFineUploader > .uploader {
+  display: none !important;
+}
+.EDS_simpleFineUploader > .uploadControls {
+  display: block;
+  margin: 0 58px;
+  padding: 12px;
+  border: 0;
+  text-slign: center;
+  position: relative;
+}
+.EDS_simpleFineUploader > .uploadControls > .actions {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  line-height: 0;
+}
+.EDS_simpleFineUploader > .uploadControls > .actions .action {
+  margin: 0 20px 0 0;
+  padding: 17px 13px 15px 63px;
+  border: 1px solid #c6dbea;
+  display: inline-block;
+  font: 12px/1 Arial !important;
+  box-sizing: content-box;
+  cursor: pointer;
+  background: no-repeat 0 6px #6eafd7;
+}
+.EDS_simpleFineUploader > .uploadControls > .actions .action > span {
+  color: white;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: bold 15px/1.3 Arial;
+  box-sizing: content-box;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.EDS_simpleFineUploader > .uploadControls > .actions .action:hover {
+  background: no-repeat 0 6px #3d89b8;
+}
+.EDS_simpleFineUploader > .uploadControls > .actions .action.upload {
+  background-image: url(images/galleryUploadIcon.png);
+  background-position: 3px 6px;
+  padding-left: 70px;
+}
+.EDS_simpleFineUploader > .uploadControls > .actions .action.fileSelection {
+  background-image: url(images/gallerySelectFilesIcon.png);
+  position: relative;
+}
+.EDS_simpleFineUploader > .uploadControls > .actions .action.fileSelection > span.dnnInputFileWrapper {
+  display: block !important;
+  position: absolute !important;
+  bottom: auto !important;
+  left: auto !important;
+  top: 0 !important;
+  right: 0 !important;
+  float: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+}
+.EDS_simpleFineUploader > .uploadControls > .actions .action.fileSelection > span.dnnInputFileWrapper > input {
+  position: absolute !important;
+  bottom: auto !important;
+  left: auto !important;
+  top: 0 !important;
+  right: 0 !important;
+  float: none !important;
+  width: auto !important;
+  height: auto !important;
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  font: 118px/1 Arial !important;
+  transform: none !important;
+}
+.EDS_simpleFineUploader > .uploadControls > .dndContainer {
+  border: 3px solid #c1deeb !important;
+  background: rgba(150, 206, 232, 0.82);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  display: none;
+}
+.EDS_simpleFineUploader > .uploadControls > .dndContainer > p {
+  font: bold 16px Arial;
+  line-height: 1.3;
+  color: white;
+  text-align: center;
+  display: display-block;
+  vertical-align: middle;
+  line-height: normal;
+  padding: 0;
+  margin: -10px 0 0;
+  border: 0;
+  position: absolute;
+  top: 50%;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: auto;
+}
+.EDS_simpleFineUploader > .uploadControls > .dndContainer > p > span {
+  font: bold 16px Arial;
+  line-height: 1.3;
+  color: white;
+  display: inline;
+}
+.EDS_simpleFineUploader > .uploadControls > .dndContainer.dragEntered {
+  background: rgba(90, 187, 78, 0.54);
+}
+.EDS_simpleFineUploader > .uploadDetails {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  display: block;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList {
+  margin: 0 71px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  display: block;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li {
+  margin: 5px 6px 0 0;
+  padding: 5px;
+  overflow: hidden;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 103, 228, 0.49);
+  display: block;
+  list-style: none;
+  background: whitesmoke;
+  position: relative;
+  min-height: 54px;
+  width: 280px;
+  float: left;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li > .thumbnail {
+  margin: 0 5px 0 0;
+  padding: 2px;
+  overflow: hidden;
+  border: 1px dotted #545454 !important;
+  width: 68px;
+  height: 68px;
+  background: #dddddd;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle !important;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li > .thumbnail > img {
+  max-width: 68px;
+  max-height: 68px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: middle !important;
+  font-size: 0;
+  line-height: 0;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li > .thumbnail.noPreview > p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: black;
+  font: bold 10px/1.3 Arial;
+  max-height: 68px;
+  max-width: 68px;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li > .details {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  display: block;
+  float: right;
+  width: 100%;
+  height: 74px;
+  position: relative;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li > .details > p {
+  font: 11px/1.3 Arial;
+  color: #444444;
+  margin: 0 0 3px;
+  padding: 0;
+  border: 0;
+  text-align: left;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li > .details > p.filename {
+  font-weight: bold;
+  text-shadow: 1px 1px 0 white;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li > .details > p.uploadInfo {
+  font-style: italic;
+  color: #666666;
+  text-shadow: 1px 1px 0 white;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li > .details > .progress {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  height: 5px;
+  background: #bfbfbf;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li > .details > .progress > div {
+  margin: 0;
+  padding: 0;
+  border: 0 !important;
+  display: block;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  background: #1f9cd6;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li > .details > .actions {
+  margin: 0 4px 0 0;
+  padding: 0;
+  border: 0;
+  display: block;
+  text-align: right;
+  position: absolute;
+  top: auto !important;
+  left: auto !important;
+  bottom: 0;
+  right: 0;
+  line-height: 1.3;
+  font-size: 12px;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li > .details > .actions span {
+  font: bold 12px/1.3 Arial;
+  color: #444444;
+  margin: 0 0 0 10px;
+  padding: 0;
+  border: 0;
+  text-shadow: 0 1px 0 white;
+  cursor: pointer;
+  transition: text-shadow 200ms ease;
+  -webkit-transition: text-shadow 200ms ease;
+  -o-transition: text-shadow 200ms ease;
+  -moz-transition: text-shadow 200ms ease;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li > .details > .actions span:hover {
+  text-shadow: 0 0 2px #828282;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li.failed {
+  background: #c20000;
+  border-bottom: 1px solid #770000;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li.failed > .thumbnail {
+  background: #ad0000;
+  border-color: black !important;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li.failed > .details > p.uploadInfo {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.14);
+  color: #ff7676;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li.failed > .details > p.filename {
+  text-shadow: 1px 1px 0 #880000;
+  color: white;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li.failed > .details > .actions span {
+  text-shadow: 0 1px 0 #780000;
+  color: white;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li.failed > .details > .actions span:hover {
+  color: white;
+  text-shadow: 0 1px 0 #780000, 0 0 3px white;
+}
+.EDS_simpleFineUploader > .uploadDetails > ol.fileUploadList > li.hasThumb > .details {
+  width: 201px;
+}

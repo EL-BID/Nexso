@@ -1,0 +1,198 @@
+<!--TemplateGroup:newsListArticleMulti-->
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:1:-->
+
+<div class="article in_list in_picture" style="max-width:690px">
+	[EasyDNNnews:IfExists:Image]
+	<a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]"><img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:690:Height:400:Resize:Crop]" width="690" height="400" /></a>
+	[EasyDNNnews:EndIf:Image]
+	<div class="content">
+		<h1><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h1>
+		<div class="summary">[EasyDNNnews:Summary:Limit:150]</div>
+	</div>
+	<p class="date_box">
+	[EasyDNNnews:IfNotExists:Event]
+		<span class="day">[EasyDNNnews:PublishDay]</span>
+		<span class="month">[EasyDNNnews:PublishMonthString]</span>
+		<span class="year">[EasyDNNnews:PublishYear]</span>
+	[EasyDNNnews:EndIf:Event]
+	[EasyDNNnews:IfExists:Event]
+		<span class="day">[EasyDNNnews:EventStartDay]</span>
+		<span class="month">[EasyDNNnews:EventStartMonthNameShort]</span>
+		<span class="year">[EasyDNNnews:EventStartYear]</span>
+	[EasyDNNnews:EndIf:Event]
+	</p>
+	[EasyDNNnews:HasArticlePermissions]
+	<div class="admin_actions">
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+</div>
+
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:2:3:-->
+
+<!--Before:2:3:-->
+<div class="articles_row" style="max-width:700px">
+<!--BeforeEnd-->
+
+<div class="article in_list big box">
+	[EasyDNNnews:IfExists:Image]
+	<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:287:Height:155:Resize:Crop]" width="287" height="155" />
+	[EasyDNNnews:EndIf:Image]
+	<h1><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h1>
+	<div class="summary">[EasyDNNnews:Summary:Limit:150]</div>
+	<p class="date_box">
+	[EasyDNNnews:IfNotExists:Event]
+		<span class="day">[EasyDNNnews:PublishDay]</span>
+		<span class="month">[EasyDNNnews:PublishMonthString]</span>
+		<span class="year">[EasyDNNnews:PublishYear]</span>
+	[EasyDNNnews:EndIf:Event]
+	[EasyDNNnews:IfExists:Event]
+		<span class="day">[EasyDNNnews:EventStartDay]</span>
+		<span class="month">[EasyDNNnews:EventStartMonthNameShort]</span>
+		<span class="year">[EasyDNNnews:EventStartYear]</span>
+	[EasyDNNnews:EndIf:Event]
+	</p>
+	[EasyDNNnews:HasArticlePermissions]
+	<div class="admin_actions">
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="shadow_box"></div>
+</div>
+
+<!--After:2:3:-->
+	<div style="clear: both"></div>
+</div>
+<!--AfterEnd-->
+
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:4:5:-->
+
+<!--Before:4:5:-->
+<!--BeforeEnd-->
+
+<div class="article in_list span compact">
+	<p class="date_box">
+	[EasyDNNnews:IfNotExists:Event]
+		<span class="day">[EasyDNNnews:PublishDay]</span>
+		<span class="month">[EasyDNNnews:PublishMonthString]</span>
+		<span class="year">[EasyDNNnews:PublishYear]</span>
+	[EasyDNNnews:EndIf:Event]
+	[EasyDNNnews:IfExists:Event]
+		<span class="day">[EasyDNNnews:EventStartDay]</span>
+		<span class="month">[EasyDNNnews:EventStartMonthNameShort]</span>
+		<span class="year">[EasyDNNnews:EventStartYear]</span>
+	[EasyDNNnews:EndIf:Event]
+	</p>
+	<div class="content_wrapper">
+		<div class="content">
+			[EasyDNNnews:IfExists:Image]
+			<img class="article_image" alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image]" />
+			[EasyDNNnews:EndIf:Image]
+			<h1><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h1>
+			<div class="summary">
+				[EasyDNNnews:Summary]
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	[EasyDNNnews:HasArticlePermissions]
+	<div class="admin_actions">
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+	<div class="shadow_box"></div>
+	<div style="clear: both"></div>
+</div>
+
+<!--After:4:5:-->
+<!--AfterEnd-->
+
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:6:7:-->
+
+<!--Before:6:7:-->
+<div class="articles_row" style="max-width:700px">
+<!--BeforeEnd-->
+
+<div class="article in_list small box">
+	[EasyDNNnews:IfExists:Image]
+	<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:135:Height:80:Resize:Crop]" width="135" height="80" />
+	[EasyDNNnews:EndIf:Image]
+	<h1><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h1>
+	[EasyDNNnews:HasArticlePermissions]
+	<div class="admin_actions">
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+</div>
+
+<!--After:6:7:-->
+	<div style="clear: both"></div>
+</div>
+<!--AfterEnd-->
+
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:8:9:-->
+
+<!--Before:8:9:-->
+<div class="articles_row" style="max-width:700px">
+<!--BeforeEnd-->
+
+<div class="article in_list small box">
+	[EasyDNNnews:IfExists:Image]
+	<img alt="[EasyDNNnews:Title]" src="[EasyDNNnews:Image:Width:135:Height:80:Resize:Crop]" width="135" height="80" />
+	[EasyDNNnews:EndIf:Image]
+	<h1><a href="[EasyDNNnews:Title:Link]" target="[EasyDNNnews:DetailTarget]">[EasyDNNnews:Title]</a></h1>
+	[EasyDNNnews:HasArticlePermissions]
+	<div class="admin_actions">
+		[EasyDNNnews:ArticlePermissions:Edit]
+		[EasyDNNnews:ArticlePermissions:Publish]
+		[EasyDNNnews:ArticlePermissions:Approve]
+	</div>
+	[EasyDNNnews:HasArticlePermissionsEnd]
+</div>
+
+<!--After:8:9:-->
+	<div style="clear: both"></div>
+</div>
+<!--AfterEnd-->
+
+<!--RepeatEnd-->
+<!--MultiArticleEnd-->
+
+<!--MultiArticleTemplate-->
+<!--ArticleRepeat:After:-->
+[EasyDNNnews:IfExists:RSS]
+<div class="article_rss_wrapper">
+	<a href="[EasyDNNnews:RSSLink]" target="_blank"><span></span>[EasyDNNnewsLocalizedText:RSSLinkText]</a>
+</div>
+[EasyDNNnews:EndIf:RSS]
+<!--RepeatEnd:After:-->
+<!--MultiArticleEnd-->

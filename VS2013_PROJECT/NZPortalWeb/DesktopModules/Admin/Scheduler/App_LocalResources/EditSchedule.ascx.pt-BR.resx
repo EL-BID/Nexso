@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ContentOptions.Action">
+    <value xml:space="preserve">Ver situação da agenda</value>
+  </data>
+  <data name="ScheduleHistory.Action">
+    <value xml:space="preserve">Ver histórico de agendamento</value>
+  </data>
+  <data name="plType.Text">
+    <value xml:space="preserve">Nome completo da classe e programa:</value>
+  </data>
+  <data name="plEnabled.Text">
+    <value xml:space="preserve">Agendamento está ativo?</value>
+  </data>
+  <data name="Minutes.Text">
+    <value xml:space="preserve">minuto(s)</value>
+  </data>
+  <data name="Days.Text">
+    <value xml:space="preserve">dia(s)</value>
+  </data>
+  <data name="Hours.Text">
+    <value xml:space="preserve">hora(s)</value>
+  </data>
+  <data name="plRetainHistoryNum.Text">
+    <value xml:space="preserve">Manter histórico da agenda:</value>
+  </data>
+  <data name="plRetainHistoryNum.Help">
+    <value xml:space="preserve">Exemplo: Selecione "10" para manter as dez linhas mais recentes no histórico da agenda.</value>
+  </data>
+  <data name="plAttachToEvent.Text">
+    <value xml:space="preserve">Executar no evento:</value>
+  </data>
+  <data name="plAttachToEvent.Help">
+    <value xml:space="preserve">Exemplo: Selecione "APPLICATION_START" para executar este evento quando a aplicação Web começar. Por favor observe,  eventos que executam em "APPLICATION_END" podem não executar fielmente em alguns servidores.</value>
+  </data>
+  <data name="None.Text">
+    <value xml:space="preserve">Nenhum</value>
+  </data>
+  <data name="APPLICATION_START.Text">
+    <value xml:space="preserve">APPLICATION_START</value>
+  </data>
+  <data name="plCatchUpEnabled.Text">
+    <value xml:space="preserve">Recuperação está ativa?</value>
+  </data>
+  <data name="plCatchUpEnabled.Help">
+    <value xml:space="preserve">Se selecionado e o servidor Web estiver fora de serviço, quando o servidor Web voltar ao serviço este evento irá ocorrer uma vez para cada vez que foi perdida.</value>
+  </data>
+  <data name="plObjectDependencies.Text">
+    <value xml:space="preserve">Dependências de objeto:</value>
+  </data>
+  <data name="plObjectDependencies.Help">
+    <value xml:space="preserve">Entre as tabelas ou outros objetos dos quais este evento é dependente. Por exemplo: "SiteLog,Users,UsersOnline"</value>
+  </data>
+  <data name="UpdateSuccess.Text">
+    <value xml:space="preserve">As suas alterações foram salvas.</value>
+  </data>
+  <data name="DeleteSuccess.Text">
+    <value xml:space="preserve">O item agendado foi excluído.</value>
+  </data>
+  <data name="ControlTitle_edit.Text">
+    <value xml:space="preserve">Editar Agenda</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre Agenda&lt;/h1&gt;&lt;p&gt;Permite agendar tarefas para serem executadas em intervalos pré-definidos&lt;/p&gt;</value>
+  </data>
+  <data name="plType.Help">
+    <value xml:space="preserve">Este é o nome completo da classe seguido pelo nome do assembly. Exemplo: "DotNetNuke.Entities.Users.PurgeUsersOnline, DOTNETNUKE"</value>
+  </data>
+  <data name="plServers.Text">
+    <value xml:space="preserve">Executar nos servidores:</value>
+  </data>
+  <data name="Seconds.Text">
+    <value xml:space="preserve">segundo(s)</value>
+  </data>
+  <data name="plEnabled.Help">
+    <value xml:space="preserve">Marque para ativar o agendamento.</value>
+  </data>
+  <data name="plFriendlyName.Help">
+    <value xml:space="preserve">Entre um nome para a tarefa agendada.</value>
+  </data>
+  <data name="plFriendlyName.Text">
+    <value xml:space="preserve">Nome amigável:</value>
+  </data>
+  <data name="cmdRun.Text">
+    <value xml:space="preserve">Executar agora</value>
+  </data>
+  <data name="RunNow.Text">
+    <value xml:space="preserve">Item adicionado na agenda com execução imediata</value>
+  </data>
+  <data name="TypeRequired.Text">
+    <value xml:space="preserve">O tipo do item de agenda é obrigatório!</value>
+  </data>
+</root>

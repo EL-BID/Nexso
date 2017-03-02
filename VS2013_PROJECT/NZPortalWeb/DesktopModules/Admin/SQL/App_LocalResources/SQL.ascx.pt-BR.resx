@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cmdExecute.Text">
+    <value xml:space="preserve">Executar</value>
+  </data>
+  <data name="QueryError.Text">
+    <value xml:space="preserve">Ocorreu um erro na sua instrução SQL!</value>
+  </data>
+  <data name="QuerySuccess.Text">
+    <value xml:space="preserve">A instrução SQL foi completada com sucesso!</value>
+  </data>
+  <data name="ControlTitle_.Text">
+    <value xml:space="preserve">SQL</value>
+  </data>
+  <data name="ModuleHelp.Text">
+    <value xml:space="preserve">&lt;h1&gt;Sobre o SQL&lt;/h1&gt;&lt;p&gt;O Super Usuário pode executar instruções SQL na base de dados.&lt;/p&gt;</value>
+  </data>
+  <data name="plSqlScript.Text">
+    <value xml:space="preserve">Arquivo SQL:</value>
+  </data>
+  <data name="plSqlScript.Help">
+    <value xml:space="preserve">Envie um arquivo para a janela SQL Query (opcional).</value>
+  </data>
+  <data name="cmdUpload.Text">
+    <value xml:space="preserve">Carregar</value>
+  </data>
+  <data name="cmdUpload.ToolTip">
+    <value xml:space="preserve">Carregar o arquivo selecionado.</value>
+  </data>
+  <data name="plConnection.Text">
+    <value xml:space="preserve">Conexão</value>
+  </data>
+  <data name="plConnection.Help">
+    <value xml:space="preserve">Selecione a instrução de conexão que você quer usar (obtida da lista de conexões no arquivo web.config).</value>
+  </data>
+  <data name="NoDataReturned.Text">
+    <value xml:space="preserve">A instrução não retornou nenhum dado.</value>
+  </data>
+</root>

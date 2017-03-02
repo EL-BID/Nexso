@@ -1,0 +1,483 @@
+﻿if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsComments]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsComments]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsComments]', N'{objectQualifier}EasyDNNNewsComments', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsComments', N'PK_{objectQualifier}EasyDNNNewsComments', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsComments_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsComments_EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+BEGIN TRY
+	if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsComments' and column_name = 'AnonymName')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsComments] ALTER Column AnonymName nvarchar(128)
+	END
+	if exists (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsComments' and column_name = 'ReplayCommentID')
+	BEGIN
+		ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsComments] ALTER Column ReplayCommentID int
+	END
+END TRY
+BEGIN CATCH
+END CATCH;
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsContentLocalization]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsContentLocalization]', N'{objectQualifier}EasyDNNNewsContentLocalization', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsContentLocalization', N'PK_{objectQualifier}EasyDNNNewsContentLocalization', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsContentLocalization_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsContentLocalization_EasyDNNNews', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsContentLocalization' and column_name = 'MainImageTitle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] ADD MainImageTitle nvarchar(500) NULL
+END
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsContentLocalization' and column_name = 'MainImageDescription')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsContentLocalization] ADD MainImageDescription nvarchar(2000) NULL
+END
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNews]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNews]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNews]', N'{objectQualifier}EasyDNNNews', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNews', N'PK_{objectQualifier}EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNews_EasyGallery', N'FK_{objectQualifier}EasyDNNNews_EasyGallery', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'MainImageTitle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD MainImageTitle nvarchar(500) NULL
+END
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'MainImageDescription')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD MainImageDescription nvarchar(2000) NULL
+END
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNews' and column_name = 'HideDefaultLocale')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNews] ADD HideDefaultLocale bit NOT NULL DEFAULT(0)
+END
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRolePremissionSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRolePremissionSettings]', N'{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRolePremissionSettings', N'PK_{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionSettings_Roles', N'FK_{objectQualifier}EasyDNNNewsRolePremissionSettings_Roles', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsRolePremissionSettings', N'IX_{objectQualifier}EasyDNNNewsRolePremissionSettings', 'OBJECT' -- od verzije 4.9.14
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'SubTitle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD SubTitle bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'SEO')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD SEO bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'Summary')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD Summary bit NOT NULL DEFAULT(1)
+END
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'Text')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD Text bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'Page')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD Page bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'File')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD [File] bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'Link')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD Link bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'None')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD None bit NOT NULL DEFAULT(1)
+END
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'Tags')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD Tags bit NOT NULL DEFAULT(1)
+END
+
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'ArticleGallery')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD ArticleGallery bit NOT NULL DEFAULT(1)
+END
+
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'GoogleMap')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD GoogleMap bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'ChangeTemplate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD ChangeTemplate bit NOT NULL DEFAULT(1)
+END
+
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'Events')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD Events bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'AllowComments')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD AllowComments bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'Featured')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD Featured bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsRolePremissionSettings' and column_name = 'PublishExpire')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings] ADD PublishExpire  bit NOT NULL DEFAULT(1)
+END
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUserPremissionSettings]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUserPremissionSettings]', N'{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUserPremissionSettings', N'PK_{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionSettings_Users', N'FK_{objectQualifier}EasyDNNNewsUserPremissionSettings_Users', 'OBJECT'
+			EXECUTE sp_rename N'IX_EasyDNNNewsUserPremissionSettings', N'IX_{objectQualifier}EasyDNNNewsUserPremissionSettings', 'OBJECT' -- od verzije 4.9.14
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'SubTitle')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD SubTitle bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'SEO')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD SEO bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'Summary')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD Summary bit NOT NULL DEFAULT(1)
+END
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'Text')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD Text bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'Page')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD Page bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'File')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD [File] bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'Link')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD Link bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'None')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD None bit NOT NULL DEFAULT(1)
+END
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'Tags')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD Tags bit NOT NULL DEFAULT(1)
+END
+
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'ArticleGallery')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD ArticleGallery bit NOT NULL DEFAULT(1)
+END
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'GoogleMap')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD GoogleMap bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'ChangeTemplate')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD ChangeTemplate bit NOT NULL DEFAULT(1)
+END
+
+
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'Events')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD Events bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'AllowComments')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD AllowComments bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'Featured')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD Featured bit NOT NULL DEFAULT(1)
+END
+IF NOT EXISTS (select * from INFORMATION_SCHEMA.columns where table_name = '{objectQualifier}EasyDNNNewsUserPremissionSettings' and column_name = 'PublishExpire')
+BEGIN
+	ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings] ADD PublishExpire  bit NOT NULL DEFAULT(1)
+END
+
+
+/****** CleanUp Categories table tj items of articles and categories ******/
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsCategories]', N'{objectQualifier}EasyDNNNewsCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsCategories', N'PK_{objectQualifier}EasyDNNNewsCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsCategories_EasyDNNNews', N'FK_{objectQualifier}EasyDNNNewsCategories_EasyDNNNews', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsCategories_EasyDNNNewsCategoryList1', N'FK_{objectQualifier}EasyDNNNewsCategories_EasyDNNNewsCategoryList1', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsRolePremissionsAddToCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsRolePremissionsAddToCategories]', N'{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsRolePremissionsAddToCategories', N'PK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList1', N'FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsCategoryList1', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings1', N'FK_{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories_EasyDNNNewsRolePremissionSettings1', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+if '{objectQualifier}' <> ''
+BEGIN TRY
+	IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories]') AND type in (N'U'))
+	BEGIN
+		IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}[EasyDNNNewsUserPremissionsAddToCategories]') AND type in (N'U'))
+		BEGIN
+			EXECUTE sp_rename N'{databaseOwner}[EasyDNNNewsUserPremissionsAddToCategories]', N'{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories', 'OBJECT'
+			BEGIN TRY
+			EXECUTE sp_rename N'PK_EasyDNNNewsUserPremissionsAddToCategories', N'PK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList1', N'FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsCategoryList1', 'OBJECT'
+			EXECUTE sp_rename N'FK_EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsUserPremissionSettings1', N'FK_{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories_EasyDNNNewsUserPremissionSettings1', 'OBJECT'
+			END TRY
+			BEGIN CATCH
+			END CATCH
+		END
+	END
+END TRY
+BEGIN CATCH
+END CATCH
+GO
+
+DELETE FROM {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] WHERE [CategoryID] IS NULL
+ALTER TABLE {databaseOwner}[{objectQualifier}EasyDNNNewsCategories] ALTER COLUMN [CategoryID] int not null
+
+DECLARE @EditAllCategories bit;
+SET @EditAllCategories = 0;
+DECLARE @RowsToProcessByRole int;
+DECLARE @CurrentRowByRole int;
+DECLARE @PremissionSettingsID int;
+
+IF OBJECT_ID('tempdb..#RolePermissions') IS NOT NULL
+BEGIN
+DROP TABLE #RolePermissions;
+END
+CREATE TABLE #RolePermissions
+( 
+	RowID int not null primary key identity(1,1),
+	PremissionSettingsID int not null,
+	AddArticleToAll bit not null
+)
+
+INSERT INTO #RolePermissions SELECT PremissionSettingsID, AddArticleToAll FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings];
+SET @RowsToProcessByRole=@@ROWCOUNT;
+
+BEGIN TRY
+SET NOCOUNT ON;
+SET @CurrentRowByRole = 0;
+WHILE @CurrentRowByRole < @RowsToProcessByRole
+BEGIN
+	SET @CurrentRowByRole = @CurrentRowByRole + 1;
+	SELECT @PremissionSettingsID = PremissionSettingsID, @EditAllCategories = AddArticleToAll FROM #RolePermissions WHERE RowID=@CurrentRowByRole;
+
+	IF @EditAllCategories <> 1
+	BEGIN
+	IF NOT EXISTS (SELECT [PremissionSettingsID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionsAddToCategories] WHERE PremissionSettingsID = @PremissionSettingsID)
+		BEGIN
+			UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsRolePremissionSettings]
+			   SET [ShowSharedGallery] = 0
+				  ,[ShowCustomGallery] = 0
+				  ,[AddPerArticle] = 0
+				  ,[PostToSocialNetwork] = 0
+				  ,[SubTitle] = 0
+				  ,[SEO] = 0
+				  ,[Summary] = 0
+				  ,[Text] = 0
+				  ,[Page] = 0
+				  ,[File] = 0
+				  ,[Link] = 0
+				  ,[None] = 0
+				  ,[Tags] = 0
+				  ,[ArticleGallery] = 0
+				  ,[GoogleMap] = 0
+				  ,[Events] = 0
+				  ,[Featured] = 0
+				  ,[PublishExpire] = 0
+				  ,[ChangeTemplate] = 0
+				  ,[AllowComments] = 0
+			 WHERE PremissionSettingsID = @PremissionSettingsID
+		END
+	END
+END
+IF OBJECT_ID('tempdb..#RolePermissions') IS NOT NULL
+BEGIN
+DROP TABLE #RolePermissions;
+END
+
+END TRY
+BEGIN CATCH
+END CATCH;
+
+SET @EditAllCategories = 0;
+DECLARE @RowsToProcessByUser int;
+DECLARE @CurrentRowByUser int;
+
+IF OBJECT_ID('tempdb..#UserPermissions') IS NOT NULL
+BEGIN
+DROP TABLE #UserPermissions;
+END
+CREATE TABLE #UserPermissions
+( 
+	RowID int not null primary key identity(1,1),
+	PremissionSettingsID int not null,
+	AddArticleToAll bit not null
+)
+
+INSERT INTO #UserPermissions SELECT PremissionSettingsID, AddArticleToAll FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings];
+SET @RowsToProcessByUser=@@ROWCOUNT;
+
+BEGIN TRY
+SET NOCOUNT ON;
+SET @CurrentRowByUser = 0;
+WHILE @CurrentRowByUser < @RowsToProcessByUser
+BEGIN
+    SET @CurrentRowByUser = @CurrentRowByUser + 1;
+	SELECT @PremissionSettingsID = PremissionSettingsID, @EditAllCategories = AddArticleToAll FROM #UserPermissions WHERE RowID=@CurrentRowByUser;
+
+	IF @EditAllCategories <> 1
+	BEGIN
+	IF NOT EXISTS (SELECT [PremissionSettingsID] FROM {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionsAddToCategories] WHERE PremissionSettingsID = @PremissionSettingsID)
+		BEGIN
+			UPDATE {databaseOwner}[{objectQualifier}EasyDNNNewsUserPremissionSettings]
+			   SET [ShowSharedGallery] = 0
+				  ,[ShowCustomGallery] = 0
+				  ,[AddPerArticle] = 0
+				  ,[PostToSocialNetwork] = 0
+				  ,[SubTitle] = 0
+				  ,[SEO] = 0
+				  ,[Summary] = 0
+				  ,[Text] = 0
+				  ,[Page] = 0
+				  ,[File] = 0
+				  ,[Link] = 0
+				  ,[None] = 0
+				  ,[Tags] = 0
+				  ,[ArticleGallery] = 0
+				  ,[GoogleMap] = 0
+				  ,[Events] = 0
+				  ,[Featured] = 0
+				  ,[PublishExpire] = 0
+				  ,[ChangeTemplate] = 0
+				  ,[AllowComments] = 0
+			 WHERE PremissionSettingsID = @PremissionSettingsID
+		END
+	END
+END
+IF OBJECT_ID('tempdb..#UserPermissions') IS NOT NULL
+BEGIN
+DROP TABLE #UserPermissions;
+END
+
+END TRY
+BEGIN CATCH
+END CATCH;
