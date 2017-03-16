@@ -83,7 +83,6 @@ Identificamos varios puntos para mejorar NEXSO.
 
 ### Más información
 ---
-## Análisis de calidad
 
 ## Evaluación de calidad
 
@@ -99,7 +98,7 @@ De acuerdo al sistema de evaluación de software definido en la guía de ciclo d
 Más información en [este link.](https://el-bid.github.io/software-life-cycle-guide/delivery/evaluation-matrix/)
 
 ## Licencias de terceros
----
+
 Para los siguientes componentes de terceros lea cuidadosamente antes de descargar y ejecute el código correctamente.
 
 Licencias de propietarios
@@ -126,9 +125,8 @@ Apache
 
 
 ## Licencia
----
 
-Licencia MIT
+[Licencia MIT](https://github.com/EL-BID/Nexso/blob/master/LICENSE)
 
 ## Autores
 ---
