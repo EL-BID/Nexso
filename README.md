@@ -2,8 +2,7 @@
 
 ### Descripción
 ---
-
-NEXSO es la comunidad del Fondo Multilateral de Inversiones que pretende aumentar el impacto social y económico para el desarrollo de América Latina y el Caribe. NEXSO conecta a los diseñadores de proyectos con soluciones probadas, GeoData y organizaciones para mejorar la calidad y el impacto de los proyectos financiados por el FOMIN. Está compuesto de cuatro herramientas que se integran en una única plataforma en línea. Desde una perspectiva de desarrollo tecnológico, cada herramienta representa un centro de negocios. Una base de datos común permite que todas las herramientas sean integradas permitiendole al usuario una experiencia fluida y amigable.
+Plataforma de innovación abierta para organizaciones. Con esta herramienta digital puedes gestionar todos los retos de innovación abierta desde un mismo portal. Puedes gestionar los registros, las normas, el jurado, los tiempos. Los participantes pueden publicitar sus proyectos, buscar financiación y conectarse entre ellos. Nexso permite gestionar todas las fases de un reto de innovación abierta desde una sola plataforma.
 
 ### Arquitectura de aplicación
 ---
@@ -37,7 +36,7 @@ Servicios Adicionales: es un conjunto de objetos auxiliares para consumir servic
 
 ### Vamos más allá, hacer que sea de código abierto social
 ---
-Razón por la que estamos abriendo el código fuente ....
+El software es una herramienta fundamental para el diseño e implementación de proyectos y programas. Esta herramienta se abre bajo el programa de [Código para el Desarrollo](code.iadb.org) del BID, que busca consolidar su compromiso con el uso y promoción del conocimiento abierto, así como acelerar el diálogo sobre cómo la tecnología puede impulsar el desarrollo de América Latina y el Caribe.
 
 ### Requisitos de desarrollo
 ---
@@ -63,15 +62,9 @@ Licencia:
 
 > Para ejecutar el blog, el usuario debe obtener una licencia para Easy DNN News. Las Dll se han removido de la aplicación.
 
-###Desarrollo
+### Desarrollo
 ---
 Durante el desarrollo, debe utilizar Visual Studio y SQL Server 2012
-
-
-### Análisis de calidad
----
-
-El BID hizo una evaluación de calidad de terceros de este código con el fin de informar a los problemas de la comunidad a resolver. Este código está clasificado como XXXX. Significa, que no es funcional y requiere un trabajo de mejora antes de ser considerado código de desarrollo.
 
 ### Por hacer
 ---
@@ -88,8 +81,24 @@ Identificamos varios puntos para mejorar NEXSO.
 9. Mejorar estilos
 10. Implementar HTML5
 
+### Más información
+---
+## Análisis de calidad
 
-### Licencias de terceros
+## Evaluación de calidad
+
+De acuerdo al sistema de evaluación de software definido en la guía de ciclo de vida de desarrollo de software, esta herramienta ha obtenido la siguiente evaluación en los siguientes ámbitos:
+
+* Blocker issues: 0 (> 0) **Hard** 
+* Duplicated lines: 15.8% (< 25%) **Standard**
+* Critical issues: 6 (< 10) **Standard**
+* Public documented API: 42.3% (< 50%) **Standard**
+* Technical debt: 63d (> 60d) **Low**
+* Test coverage: 0% (< 10%) **Hard**
+
+Más información en [este link.](https://el-bid.github.io/software-life-cycle-guide/delivery/evaluation-matrix/)
+
+## Licencias de terceros
 ---
 Para los siguientes componentes de terceros lea cuidadosamente antes de descargar y ejecute el código correctamente.
 
@@ -116,20 +125,12 @@ Apache
 - ImageProcessor https://github.com/JimBobSquarePants/ImageProcessor
 
 
-### Licencia
+## Licencia
 ---
 
 Licencia MIT
 
-Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software y de los archivos de documentación asociados (el "Software"), para utilizar el Software sin restricción, incluyendo sin limitación los derechos a usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar, y/o vender copias del Software, y a permitir a las personas a las que se les proporcione el Software a hacer lo mismo, sujeto a las siguientes condiciones:
-
-El aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.
-EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑOS U OTRAS RESPONSABILIDADES, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, QUE SURJA DE O EN CONEXIÓN CON EL SOFTWARE O EL USO U OTRO TIPO DE ACCIONES EN EL SOFTWARE.
-
->Está no es una traducción oficial, favor referirse a la licencia original en ingles, https://opensource.org/licenses/MIT
-
-
-### Autores
+## Autores
 ---
 BID
 
@@ -151,7 +152,7 @@ Sinapsis Innovación
 - Juliana Manrique
 - Gonzalo Isaza
 
-### Otros enlaces
+## Otros enlaces
 
 Http://server.arcgis.com/en/
 
