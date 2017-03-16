@@ -1,6 +1,6 @@
 ## NEXSO SmartMap
 
-###Descripción
+### Descripción
 ---
 
 NEXSO es la comunidad del Fondo Multilateral de Inversiones que pretende aumentar el impacto social y económico para el desarrollo de América Latina y el Caribe. NEXSO conecta a los diseñadores de proyectos con soluciones probadas, GeoData y organizaciones para mejorar la calidad y el impacto de los proyectos financiados por el FOMIN. Está compuesto de cuatro herramientas que se integran en una única plataforma en línea. Desde una perspectiva de desarrollo tecnológico, cada herramienta representa un centro de negocios. Una base de datos común permite que todas las herramientas sean integradas permitiendole al usuario una experiencia fluida y amigable.
@@ -45,7 +45,7 @@ Razón por la que estamos abriendo el código fuente ....
 - .NET 4.5
 - Visual Studio 2013 o superior
 
-###Comenzar ahora
+### Comenzar ahora
 ---
 
 1. Abre la solución NZPortalWeb.sln con Visual Studio 2013 o superior
@@ -73,7 +73,7 @@ Durante el desarrollo, debe utilizar Visual Studio y SQL Server 2012
 
 El BID hizo una evaluación de calidad de terceros de este código con el fin de informar a los problemas de la comunidad a resolver. Este código está clasificado como XXXX. Significa, que no es funcional y requiere un trabajo de mejora antes de ser considerado código de desarrollo.
 
-###Por hacer
+### Por hacer
 ---
 
 Identificamos varios puntos para mejorar NEXSO.
@@ -116,7 +116,7 @@ Apache
 - ImageProcessor https://github.com/JimBobSquarePants/ImageProcessor
 
 
-###Licencia
+### Licencia
 ---
 
 Licencia MIT
