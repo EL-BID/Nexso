@@ -1,4 +1,4 @@
-## NEXSO SmartMap
+## NEXSO
 
 ### Descripción
 ---
