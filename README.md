@@ -44,7 +44,7 @@ El software es una herramienta fundamental para el diseño e implementación de 
 - .NET 4.5
 - Visual Studio 2013 o superior
 
-### Comenzar ahora
+### Cómo instalar
 ---
 
 1. Abre la solución NZPortalWeb.sln con Visual Studio 2013 o superior
@@ -64,36 +64,32 @@ Licencia:
 
 ### Desarrollo
 ---
-Durante el desarrollo, debe utilizar Visual Studio y SQL Server 2012
+Durante el desarrollo, debe utilizar Visual Studio y SQL Server 2012.
 
-### Por hacer
+### Cómo contribuir
 ---
 
-Identificamos varios puntos para mejorar NEXSO.
-
-1. Corregir errores en el código.
-2. Actualizar la aplicación a .NET Core
-3. Implementar el Proyecto de BD (contacta al dueño del repositorio)
-4. Sustituir los componentes de componentes de código abierto
-5. Retirar los componentes que ya no son necesarios
-6. Actualizar la Web.Api
-7. Implementar MVC en algunos módulos
-9. Mejorar estilos
-10. Implementar HTML5
+1. Actualizar la aplicación a .NET Core
+2. Implementar el Proyecto de BD (contacta al dueño del repositorio)
+3. Sustituir los componentes de componentes de código abierto
+4. Retirar los componentes que ya no son necesarios
+5. Actualizar la Web.Api
+6. Implementar MVC en algunos módulos
+7. Mejorar estilos
+8. Implementar HTML5
 
 ### Más información
 ---
+## Análisis de calidad
 
-## Evaluación de calidad
+De acuerdo al sistema de evaluación de software definido en la guía de ciclo de vida de desarrollo de software, el análisis de esta herramienta ha generado la siguiente evaluación
 
-De acuerdo al sistema de evaluación de software definido en la guía de ciclo de vida de desarrollo de software, esta herramienta ha obtenido la siguiente evaluación en los siguientes ámbitos:
-
-* Blocker issues: 0 (> 0) **Hard** 
+* Blocker issues: 0 (> 0) **Low** 
 * Duplicated lines: 15.8% (< 25%) **Standard**
 * Critical issues: 6 (< 10) **Standard**
 * Public documented API: 42.3% (< 50%) **Standard**
 * Technical debt: 63d (> 60d) **Low**
-* Test coverage: 0% (< 10%) **Hard**
+* Test coverage: 0% (< 10%) **Low**
 
 Más información en [este link.](https://el-bid.github.io/software-life-cycle-guide/delivery/evaluation-matrix/)
 
