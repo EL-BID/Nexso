@@ -1,5 +1,6 @@
 language: csharp
-solution: VS2013_PROJECT/NZPortalWeb.sln
+solution: ./VS2013_PROJECT/NZPortalWeb.sln
+mono: latest
 
 # safelist
 branches:
