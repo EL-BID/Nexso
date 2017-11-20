@@ -1,5 +1,6 @@
 language: csharp
 solution: ./VS2013_PROJECT/NZPortalWeb.sln
+sudo: enabled
 mono: latest
 
 before_install:
