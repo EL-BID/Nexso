@@ -1,13 +1,20 @@
 language: csharp
 solution: ./VS2013_PROJECT/NZPortalWeb.sln
+dist: trusty
 sudo: enabled
-mono: latest
+
+dotnet: latest
+mono: none
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y libclucene-contribs1 libclucene-core1 libclucene-dev
+#  - sudo apt-get install -y libclucene-contribs1 libclucene-core1 libclucene-dev
 
 # safelist
 branches:
   only:
   - master
+  
+script:
+	- dotnet add package Lucene.Net --version 3.0.3	
+	- nuget restore ./VS2013_PROJECT/NZPortalWeb.sln
