@@ -5,7 +5,7 @@ mono: latest
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y libclucene
+  - sudo apt-get install -y libclucene-contribs1 libclucene-core1 libclucene-dev
 
 # safelist
 branches:
