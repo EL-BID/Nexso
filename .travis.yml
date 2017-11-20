@@ -1,14 +1,13 @@
 language: csharp
 solution: ./VS2013_PROJECT/NZPortalWeb.sln
+
+dotnet: 1.0.1
+mono: none
 dist: trusty
 sudo: enabled
 
-dotnet: latest
-mono: none
-
 before_install:
   - sudo apt-get -qq update
-#  - sudo apt-get install -y libclucene-contribs1 libclucene-core1 libclucene-dev
 
 # safelist
 branches:
