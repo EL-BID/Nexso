@@ -15,5 +15,5 @@ branches:
   - master
   
 script:
-	- dotnet add package Lucene.Net --version 3.0.3	
-	- nuget restore ./VS2013_PROJECT/NZPortalWeb.sln
+  - dotnet add package Lucene.Net --version 3.0.3	
+  - nuget restore ./VS2013_PROJECT/NZPortalWeb.sln
