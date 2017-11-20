@@ -1,2 +1,7 @@
 language: csharp
 solution: NZPortalWeb.sln
+
+# safelist
+branches:
+  only:
+  - master
