@@ -1,9 +1,9 @@
 language: csharp
 solution: ./VS2013_PROJECT/NZPortalWeb.sln
 
-dotnet: 1.0.1
-mono: none
-dist: trusty
+#dotnet: 1.0.1
+mono: latest
+#dist: trusty
 sudo: enabled
 
 before_install:
@@ -15,5 +15,5 @@ branches:
   - master
   
 script:
-  - dotnet add package Lucene.Net --version 3.0.3	
+  - paket add Lucene.Net --version 3.0.3	
   - nuget restore ./VS2013_PROJECT/NZPortalWeb.sln
