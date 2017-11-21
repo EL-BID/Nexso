@@ -10,7 +10,7 @@ sudo: enabled
 # safelist
 branches:
   only:
-  - master
+  - gmv
 
 before_install:
   - sudo apt-get -qq update
