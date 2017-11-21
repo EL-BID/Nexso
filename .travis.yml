@@ -1,5 +1,5 @@
 language: csharp
-solution: ./VS2013_PROJECT/NZPortalWeb.sln
+solution: VS2013_PROJECT/NZPortalWeb.sln
 
 #dotnet: 1.0.1
 mono: latest
@@ -14,6 +14,7 @@ branches:
   only:
   - master
   
-script:
-  - paket add Lucene.Net --version 3.0.3	
-  - nuget restore ./VS2013_PROJECT/NZPortalWeb.sln
+#script:
+#  - paket add Lucene.Net --version 3.0.3	
+#  - nuget restore VS2013_PROJECT/NZPortalWeb.sln
+   - xbuild /p:Configuration=Release /reference:../DLLSNEXSO/DotNetNuke.dll VS2013_PROJECT/NZPortalWeb.sln
