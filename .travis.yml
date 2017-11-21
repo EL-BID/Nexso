@@ -6,15 +6,17 @@ mono: latest
 #dist: trusty
 sudo: enabled
 
-before_install:
-  - sudo apt-get -qq update
 
 # safelist
 branches:
   only:
   - master
 
+before_install:
+  - sudo apt-get -qq update
+
+install:
+  - nuget restore VS2013_PROJECT/NZPortalWeb.sln
+
 script:
-#  - paket add Lucene.Net --version 3.0.3	
-#  - nuget restore VS2013_PROJECT/NZPortalWeb.sln
-   - xbuild /p:Configuration=Release /reference:../DLLSNEXSO/DotNetNuke.dll VS2013_PROJECT/NZPortalWeb.sln
+   - xbuild /p:Configuration=Release VS2013_PROJECT/NZPortalWeb.sln
