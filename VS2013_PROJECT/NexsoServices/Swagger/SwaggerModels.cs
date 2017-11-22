@@ -6,7 +6,6 @@ using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using Newtonsoft.Json;
-using Newtonsoft.Json.JsonPropertyAttribute;
 using System.Text;
 
 
@@ -214,7 +213,7 @@ namespace Swagger.Net
         public DataType items { get; set; }
         public string format { get; set; }
 
-        [JsonProperty("enum")]
+        [Newtonsoft.Json.JsonPropertyAttribute.JsonProperty("enum")]
         public IList<string> Enum { get; set; }
     }
 
