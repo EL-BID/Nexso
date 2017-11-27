@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Web;
@@ -213,7 +212,7 @@ namespace Swagger.Net
         public DataType items { get; set; }
         public string format { get; set; }
 
-        [Newtonsoft.Json.JsonPropertyAttribute.JsonProperty("enum")]
+        [JsonProperty("enum")]
         public IList<string> Enum { get; set; }
     }
 
