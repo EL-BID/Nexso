@@ -1,6 +1,7 @@
 *Esta herramienta digital está publicada en página web de la iniciativa [Código para el Desarrollo](http://code.iadb.org/es/repositorio/19/nexso)*
 ## NEXSO
 [![Analytics](https://gabeacon.irvinlim.com/UA-4677001-16/Nexso/readme?useReferer)](https://github.com/EL-BID/Nexso)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=EL-BID_Nexso&metric=alert_status)](https://sonarcloud.io/dashboard?id=EL-BID_Nexso)
 
 ### Descripción
 ---
