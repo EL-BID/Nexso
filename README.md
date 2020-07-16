@@ -1,5 +1,6 @@
 *Esta herramienta digital está publicada en página web de la iniciativa [Código para el Desarrollo](http://code.iadb.org/es/repositorio/19/nexso)*
 ## NEXSO
+[![Analytics](https://gabeacon.irvinlim.com/UA-4677001-16/Nexso/readme?useReferer)](https://github.com/EL-BID/Nexso)
 
 ### Descripción
 ---
