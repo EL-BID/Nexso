@@ -1,8 +1,8 @@
 *Esta herramienta digital está publicada en página web de la iniciativa [Código para el Desarrollo](http://code.iadb.org/es/repositorio/19/nexso)*
 ## NEXSO
-[![Analytics](https://gabeacon.irvinlim.com/UA-4677001-16/Nexso/readme?useReferer)](https://github.com/EL-BID/Nexso)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=EL-BID_Nexso&metric=alert_status)](https://sonarcloud.io/dashboard?id=EL-BID_Nexso)
-
+![analytics image (flat)](https://raw.githubusercontent.com/vitr/google-analytics-beacon/master/static/badge-flat.gif)
+![analytics](https://www.google-analytics.com/collect?v=1&cid=555&t=pageview&ec=repo&ea=open&dp=/Nexso/readme&dt=&tid=UA-4677001-16)
 ### Descripción
 ---
 Plataforma de innovación abierta para organizaciones. Con esta herramienta digital puedes gestionar todos los retos de innovación abierta desde un mismo portal. Puedes gestionar los registros, las normas, el jurado, los tiempos. Los participantes pueden publicitar sus proyectos, buscar financiación y conectarse entre ellos. Nexso permite gestionar todas las fases de un reto de innovación abierta desde una sola plataforma.
